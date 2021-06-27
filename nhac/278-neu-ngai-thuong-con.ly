@@ -29,8 +29,8 @@ global = {
   \time 4/4
 }
 
-% Soprano music
-musicSoprano = \relative c'' {
+% Nhạc phiên khúc
+nhacPhienKhucSop = \relative c'' {
   r1 |
   r1 |
   r1 |
@@ -96,34 +96,7 @@ musicSoprano = \relative c'' {
   c1 \bar "|."
 }
 
-% Soprano lyrics
-lyricsSoprano = \lyrics {
-  Nếu Ngài luôn thương mến phù giúp con,
-  sao hững hờ mãi trong cơn nguy khốn cùng cực này
-  vẫn chưa ra tay độ trì.
-  Ngài chẳng ra tay độ trì
-  Ngài chẳng ra tay độ trì
-  Ngài chẳng ra tay độ trì.
-  Nếu Ngài luôn thương mến phù giúp con sao hững hờ mãi
-  trong cơn nguy khốn cùng cực này vẫn chưa ra tay độ trì
-  Ngài chưa ra tay độ trì
-  Ngài chẳng ra "tay (i)" cứu nguy.
-  Ngài chẳng ra tay độ trì.
-  Ngài chẳng ra tay độ trì
-  Sao Ngài chẳng ra tay cứu con khi con gặp gian nguy.
-  Ngài chẳng ra tay độ trì
-  Ngài chẳng ra tay độ trì,
-  Ngài chẳng ra tay độ trì
-  Nếu Ngài luôn thương mến phù giúp con,
-  sao hững hờ mãi trong cơn nguy khốn cùng cực này
-  vẫn chưa ra tay độ trì.
-  Ngài chẳng ra tay độ trì,
-  vẫn chẳng ra "tay (i)" cứu nguy phù giúp trong cơn cùng cực này
-  Ngài chưa ra tay độ trì.
-}
-
-% Alto music
-musicAlto = \relative c'' {
+nhacPhienKhucAlto = \relative c'' {
   r1 |
   r1 |
   r1 |
@@ -189,36 +162,7 @@ musicAlto = \relative c'' {
   g1
 }
 
-% Alto lyrics
-lyricsAlto = \lyrics {
-  Nếu Ngài luôn thương mến phù giúp con sao hững hờ mãi,
-  trong cơn nguy khốn cùng cực này vẫn chưa ra tay độ trì,
-  vẫn chưa độ "trì (i)"
-  vẫn chưa ra tay độ trì.
-  Ngài chẳng ra tay,
-  Ngài chẳng ra tay,
-  ra tay độ trì
-  Nếu Ngài luôn thương mến phù giúp con,
-  sao hững hờ mãi trong cơn nguy khốn cùng cực này vẫn chưa ra tay độ trì.
-  Ngài hằng thương mến phù giúp đời con sao hững hờ mãi trong cơn cơ cùng,
-  Ngài sao vẫn chưa ra tay độ trì,
-  Ngài chưa ra tay độ trì.
-  Ngài chưa ra tay độ trì,
-  nếu thương con sao mãi hững hờ
-  Ngài chưa ra tay độ trì lúc con gặp cơn nguy nan,
-  Ngài ơi sao Ngài chẳng ra tay độ trì con, sao mãi hững hờ
-  Ngài ơi Ngài chẳng ra tay độ trì
-  Ngài chẳng ra tay độ trì,
-  Nếu Ngài luôn thương yêu phù giúp con sao hững hờ mãi
-  trong cơn nguy nan cơ cực này chưa ra tay độ trì.
-  Ngài chẳng ra tay độ trì,
-  Ngài chẳng ra "tay (i)" phù giúp cứu nguy giữa cơn cùng cực
-  Ngài chưa ra tay độ trì.
-}
-
-
-% Tenor music
-musicTenor = \relative c' {
+nhacPhienKhucTenor = \relative c' {
   r1 |
   r1 |
   r1 |
@@ -284,41 +228,7 @@ musicTenor = \relative c' {
   ef1
 }
 
-% Tenor lyrics
-lyricsTenor = \lyrics {
-  Nếu Ngài luôn thương mến phù giúp con,
-  sao hững hờ mãi, trong cơn nguy khốn cùng cực này
-  vẫn chưa ra tay độ trì.
-  Ngài luôn thương mến
-  Nếu Ngài thương con sao hững hờ mãi lúc con khốn cùng
-  sao Ngài vẫn chưa ra tay độ trì,
-  nếu mến thương "con (i)" sao hững hờ mãi
-  giữa cơn rất cùng khốn này chẳng ra tay
-  Ngài chẳng ra tay độ trì.
-  Ngài chẳng ra tay độ trì,
-  nếu Ngài "hằng (ư)" thương mến đời con sao hững hờ mãi
-  trong cơn cơ cùng Ngài sao vẫn chưa ra tay độ trì.
-  Nếu Ngài luôn thương mến, trong lúc khốn cùng này sao vẫn chưa độ trì con,
-  lúc cùng khốn này sao vẫn chẳng ra tay độ trì,
-  Ngài chưa ra tay độ trì.
-  Nếu Ngài luôn thương mến phù giúp con,
-  sao mãi hững hờ,
-  Ngài chưa ra tay độ trì
-  Nào Ngài chẳng ra tay cứu giúp lúc con nguy nan,
-  Ngài ơi nào Ngài chẳng ra tay độ trì con,
-  sao hững hờ mãi, hững hờ Chúa ơi
-  Ngài chưa ra tay độ trì
-  Ngài chẳng ra tay độ trì lúc con cùng "khốn (ơ)"
-  sao chẳng ra tay độ trì.
-  Ngài chẳng ra tay độ trì,
-  Ngài chẳng ra tay độ trì,
-  cứ hững hờ "mãi (i)" chẳng ra tay cứu độ giữa cơn cùng cực này
-  Ngài chưa ra tay độ trì.
-}
-
-
-% Basso music
-musicBass = \relative c' {
+nhacPhienKhucBass = \relative c' {
   r4 g4 ^\f c, d8 d |
   ef c f4.( ef16 d) ef8 f |
   g ef af4 r8 g g g |
@@ -387,8 +297,90 @@ musicBass = \relative c' {
   c1
 }
 
-% Basso lyrics
-lyricsBass = \lyrics {
+% Lời phiên khúc
+loiPhienKhucSop = \lyrics {
+  Nếu Ngài luôn thương mến phù giúp con,
+  sao hững hờ mãi trong cơn nguy khốn cùng cực này
+  vẫn chưa ra tay độ trì.
+  Ngài chẳng ra tay độ trì
+  Ngài chẳng ra tay độ trì
+  Ngài chẳng ra tay độ trì.
+  Nếu Ngài luôn thương mến phù giúp con sao hững hờ mãi
+  trong cơn nguy khốn cùng cực này vẫn chưa ra tay độ trì
+  Ngài chưa ra tay độ trì
+  Ngài chẳng ra "tay (i)" cứu nguy.
+  Ngài chẳng ra tay độ trì.
+  Ngài chẳng ra tay độ trì
+  Sao Ngài chẳng ra tay cứu con khi con gặp gian nguy.
+  Ngài chẳng ra tay độ trì
+  Ngài chẳng ra tay độ trì,
+  Ngài chẳng ra tay độ trì
+  Nếu Ngài luôn thương mến phù giúp con,
+  sao hững hờ mãi trong cơn nguy khốn cùng cực này
+  vẫn chưa ra tay độ trì.
+  Ngài chẳng ra tay độ trì,
+  vẫn chẳng ra "tay (i)" cứu nguy phù giúp trong cơn cùng cực này
+  Ngài chưa ra tay độ trì.
+}
+
+loiPhienKhucAlto = \lyrics {
+  Nếu Ngài luôn thương mến phù giúp con sao hững hờ mãi,
+  trong cơn nguy khốn cùng cực này vẫn chưa ra tay độ trì,
+  vẫn chưa độ "trì (i)"
+  vẫn chưa ra tay độ trì.
+  Ngài chẳng ra tay,
+  Ngài chẳng ra tay,
+  ra tay độ trì
+  Nếu Ngài luôn thương mến phù giúp con,
+  sao hững hờ mãi trong cơn nguy khốn cùng cực này vẫn chưa ra tay độ trì.
+  Ngài hằng thương mến phù giúp đời con sao hững hờ mãi trong cơn cơ cùng,
+  Ngài sao vẫn chưa ra tay độ trì,
+  Ngài chưa ra tay độ trì.
+  Ngài chưa ra tay độ trì,
+  nếu thương con sao mãi hững hờ
+  Ngài chưa ra tay độ trì lúc con gặp cơn nguy nan,
+  Ngài ơi sao Ngài chẳng ra tay độ trì con, sao mãi hững hờ
+  Ngài ơi Ngài chẳng ra tay độ trì
+  Ngài chẳng ra tay độ trì,
+  Nếu Ngài luôn thương yêu phù giúp con sao hững hờ mãi
+  trong cơn nguy nan cơ cực này chưa ra tay độ trì.
+  Ngài chẳng ra tay độ trì,
+  Ngài chẳng ra "tay (i)" phù giúp cứu nguy giữa cơn cùng cực
+  Ngài chưa ra tay độ trì.
+}
+
+loiPhienKhucTenor = \lyrics {
+  Nếu Ngài luôn thương mến phù giúp con,
+  sao hững hờ mãi, trong cơn nguy khốn cùng cực này
+  vẫn chưa ra tay độ trì.
+  Ngài luôn thương mến
+  Nếu Ngài thương con sao hững hờ mãi lúc con khốn cùng
+  sao Ngài vẫn chưa ra tay độ trì,
+  nếu mến thương "con (i)" sao hững hờ mãi
+  giữa cơn rất cùng khốn này chẳng ra tay
+  Ngài chẳng ra tay độ trì.
+  Ngài chẳng ra tay độ trì,
+  nếu Ngài "hằng (ư)" thương mến đời con sao hững hờ mãi
+  trong cơn cơ cùng Ngài sao vẫn chưa ra tay độ trì.
+  Nếu Ngài luôn thương mến, trong lúc khốn cùng này sao vẫn chưa độ trì con,
+  lúc cùng khốn này sao vẫn chẳng ra tay độ trì,
+  Ngài chưa ra tay độ trì.
+  Nếu Ngài luôn thương mến phù giúp con,
+  sao mãi hững hờ,
+  Ngài chưa ra tay độ trì
+  Nào Ngài chẳng ra tay cứu giúp lúc con nguy nan,
+  Ngài ơi nào Ngài chẳng ra tay độ trì con,
+  sao hững hờ mãi, hững hờ Chúa ơi
+  Ngài chưa ra tay độ trì
+  Ngài chẳng ra tay độ trì lúc con cùng "khốn (ơ)"
+  sao chẳng ra tay độ trì.
+  Ngài chẳng ra tay độ trì,
+  Ngài chẳng ra tay độ trì,
+  cứ hững hờ "mãi (i)" chẳng ra tay cứu độ giữa cơn cùng cực này
+  Ngài chưa ra tay độ trì.
+}
+
+loiPhienKhucBass = \lyrics {
   Nếu Ngài luôn thương mến phù giúp con,
   sao hững hờ mãi, trong cơn nguy khốn cùng cực này vẫn chưa ra tay độ trì.
   Nếu luôn thương mến, nếu Ngài thương con sao hững hờ mãi,
@@ -413,36 +405,36 @@ lyricsBass = \lyrics {
   Ngài chưa ra tay độ trì.
 }
 
-% 10. Layout
+% Dàn trang
 \score {
   \new ChoirStaff <<
     \new Staff \with {
       instrumentName = #"S"
       %\magnifyStaff #(magstep +1)
     } <<
-      \new Voice = "beSop" { \clef treble \global \musicSoprano }
-      \new Lyrics \lyricsto beSop \lyricsSoprano
+      \new Voice = "beSop" { \clef treble \global \nhacPhienKhucSop }
+      \new Lyrics \lyricsto beSop \loiPhienKhucSop
     >>
     \new Staff \with {
       instrumentName = #"A"
       %\magnifyStaff #(magstep +1)
     } <<
-      \new Voice = "beAlto" { \clef treble \global \musicAlto }
-      \new Lyrics \lyricsto beAlto \lyricsAlto
+      \new Voice = "beAlto" { \clef treble \global \nhacPhienKhucAlto }
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
     >>
     \new Staff \with {
       instrumentName = #"T"
       %\magnifyStaff #(magstep +1)
     } <<
-      \new Voice = "beTenor" { \clef "violin_8" \global \musicTenor }
-      \new Lyrics \lyricsto beTenor \lyricsTenor
+      \new Voice = "beTenor" { \clef "violin_8" \global \nhacPhienKhucTenor }
+      \new Lyrics \lyricsto beTenor \loiPhienKhucTenor
     >>
     \new Staff \with {
       instrumentName = #"B"
       %\magnifyStaff #(magstep +1)
     } <<
-      \new Voice = "beBass" { \clef bass \global \musicBass }
-      \new Lyrics \lyricsto beBass \lyricsBass
+      \new Voice = "beBass" { \clef bass \global \nhacPhienKhucBass }
+      \new Lyrics \lyricsto beBass \loiPhienKhucBass
     >>
   >>
   \layout {
