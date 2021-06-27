@@ -233,18 +233,18 @@ nhacPhienKhucBass = \relative c' {
   ef c f4.( ef16 d) ef8 f |
   g ef af4 r8 g g g |
   c f, f f r af g f |
-  ef4 ef c r |
+  ef4 d c r |
   r8 ef d d g4 r8 a! |
-  d, fs g af bf g c c |
+  d, fs g a! bf g c c |
   f,4. bf8 ef,4. ef8 |
-  d fs g d d4 fs |
-  g8 f ef d ef4 g8( g) |
-  c4 r r2 |
+  d fs g c, d4 fs |
+  g8 f ef d ef4 f8( g) |
+  c,4 r r2 |
   r1 |
   r1 |
-  r4 g c, c8 d |
+  r4 g' c, c8 d |
   ef4 d8( c) g'( bf) a!( g) |
-  fs4 g8 af bf g c c |
+  fs4 g8 a! bf g c c |
   f, f bf bf ef,4. ef8 |
   d2 r8 d d' c |
   b!8. a!16 g4 r8 g c bf |
@@ -346,7 +346,7 @@ loiPhienKhucAlto = \lyrics {
   trong cơn nguy nan cơ cực này chưa ra tay độ trì.
   Ngài chẳng ra tay độ trì,
   Ngài chẳng ra "tay (i)" phù giúp cứu nguy giữa cơn cùng cực
-  Ngài chưa ra tay độ trì.
+  sao chưa ra tay độ trì.
 }
 
 loiPhienKhucTenor = \lyrics {
@@ -372,7 +372,7 @@ loiPhienKhucTenor = \lyrics {
   Ngài ơi nào Ngài chẳng ra tay độ trì con,
   sao hững hờ mãi, hững hờ Chúa ơi
   Ngài chưa ra tay độ trì
-  Ngài chẳng ra tay độ trì lúc con cùng "khốn (ơ)"
+  Ngài chẳng ra tay độ trì lúc con cùng khốn
   sao chẳng ra tay độ trì.
   Ngài chẳng ra tay độ trì,
   Ngài chẳng ra tay độ trì,
@@ -383,7 +383,7 @@ loiPhienKhucTenor = \lyrics {
 loiPhienKhucBass = \lyrics {
   Nếu Ngài luôn thương mến phù giúp con,
   sao hững hờ mãi, trong cơn nguy khốn cùng cực này vẫn chưa ra tay độ trì.
-  Nếu luôn thương mến, nếu Ngài thương con sao hững hờ mãi,
+  Nếu luôn thương mến, nếu Ngài thương con sao hững hờ mãi
   lúc con khốn cùng sao Ngài vẫn chưa hạ tay độ trì,
   vẫn chưa hạ tay độ trì.
   Nếu Ngài hằng thương mến và luôn cứu trợ con,
@@ -397,12 +397,12 @@ loiPhienKhucBass = \lyrics {
   Nếu Ngài luôn thương mến phù giúp con sao hững hờ mãi
   trong cơn nguy nan cùng cực này sao chẳng ra tay độ trì.
   Ngài chẳng ra tay độ trì.
-  Ngài chẳng hạ tay độ trì lúc con cùng "khổ (ơ)"
+  Ngài chẳng hạ tay độ trì lúc con cùng khổ
   Sao Ngài luôn cứ hững hờ.
   Ngài ơi sao chưa ra tay độ trì.
   Nếu Ngài luôn thương mến phù giúp con,
   sao hững hờ mãi, chưa ra tay giữa cơn cùng cực này.
-  Ngài chưa ra tay độ trì.
+  vẫn chưa hạ tay độ trì.
 }
 
 % Dàn trang
