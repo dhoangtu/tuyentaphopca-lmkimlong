@@ -4,8 +4,10 @@
 
 \header {
   title = "Nếu Ngài Thương Con"
-  subtitle = "(oratorio The Messiah, phần 2, đoạn 28)"
+  subtitle = "(He trusted in God that he would deliver him)"
+  subsubtitle = "(Trích ORATORIO The Messiah, phần 2, đoạn 28)"
   composer = "Nhạc: G. F. Handel"
+  arranger = "Lời Việt: Lm. Kim Long"
   tagline = ##f
 }
 
