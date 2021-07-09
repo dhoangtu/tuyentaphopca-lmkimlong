@@ -13,8 +13,8 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 15\mm
+  top-margin = 20\mm
+  bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -171,7 +171,7 @@ nhacPhienKhucTenor = \relative c' {
   r1 |
   r2 r4 c ^\f |
   g a!8 a bf g c4( |
-  c8 bf16 af) bf8 c d bf ef4 |
+  c8 bf16 a!) bf8 c d bf ef4 |
   r8 d d d g c, c c |
   r ef d c bf4 a! |
   g r r8 g a! b! |
