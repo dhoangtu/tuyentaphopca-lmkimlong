@@ -176,11 +176,151 @@ nhacPhienKhucAlto = \relative c'' {
 }
 
 nhacPhienKhucTenor = \relative c' {
-  
+  r4 fs2 e4 |
+  d4. d8 d2 |
+  e4 a, cs2 |
+  r4 e e4. e8 |
+  d4. d8 d4 d8 d |
+  cs2 d4 cs |
+  cs2 r8 as as as |
+  b b r cs e e r e |
+  d d r fs e4 r8 e |
+  a, a r a b b r b |
+  cs4 cs r2 |
+  r4 e2 e4 |
+  cs4. cs8 e2 |
+  b4 e e2 |
+  r4 e, gs4. cs8 |
+  cs4. cs8 cs4 fs |
+  d2. fs8 fs |
+  fs2 es4. cs8 |
+  cs2 r8 fs fs fs |
+  e e r e d d r fs |
+  d d r g e4 r8 fs |
+  fs d r d e e r e |
+  fs4 fs r2 |
+  a,4. b16 cs d8 d d d |
+  d d d d d cs16( b) a8 g |
+  fs4 r8 a b16( a) g( fs) e8 a |
+  d, d'4 cs8 b a b8. a16 |
+  a4 r r2 |
+  r1
+  r2 r4 r8 a |
+  b16( a) g( fs) e8 a d, d'4 cs8 |
+  fs, b gs8. gs16 a4 r |
+  r8 cs d cs16 b d8 a16 b cs8 b16 a |
+  e'8 e r4 r8 e fs e16 d |
+  cs8 a r4 r8 fs' gs fs16 e |
+  a8 (gs16 fs e d cs b a8) a r4 |
+  r1|
+  r2 r4 r8 e' |
+  fs16( e) d( cs) b8 e e4 r |
+  r1
+  r2 r4 a,8 b16 cs |
+  d8 d d d d cs16( b) a8 g |
+  fs4 r8 fs g a a cs |
+  d4 r r2 |
+  r1
+  r1
+  r2 r4 a8 cs16 d |
+  e8 e e e e e e8. d16 |
+  cs4 cs8 d16 e fs8 fs fs fs |
+  fs fs d d cs2 |
+  cs cs4 d8 e16 fs |
+  g8 g g g g g g g |
+  fs fs e e a,4 a8 b16 cs |
+  d8 d d d d d d d |
+  d cs16( b) a8 g a4 r |
+  fs'8 d r4 fs8 d r4 |
+  fs8 d r8 fs fs fs d g |
+  fs4 r r2 |
+  r4 r8 e fs16( e d cs) b8 e |
+  a, a r fs' fs( d) d d |
+  d4 r8 fs g16( fs e d) cs8 cs |
+  d d r d cs cs r cs |
+  b b r cs a a r d |
+  d a r b b16( a g fs) e8 cs' |
+  cs16( b a g) fs8 d' d16( cs b a) g8 e' |
+  e16( d cs b) a8 fs' fs b, r cs |
+  cs16( b a b) cs8 e d4 d8 d |
+  d4( cs) fs r8 e |
+  fs2 e4 e |
+  fs2( d) |
+  e1
 }
 
 nhacPhienKhucBass = \relative c' {
-  
+  r4 d2 cs4 |
+  b4. b8 fs2 |
+  e4 d a'2 |
+  r4 g fs4. fs8 |
+  b4. b8 b4 b8 b |
+  a2 g4. g8 |
+  fs2 r8 fs fs fs |
+  b b r b cs cs r cs |
+  d d, r d e4 r8 e |
+  fs fs r fs gs gs r gs |
+  a4 a, r2 |
+  r4 a'2 g4 |
+  fs4. fs8 cs'2 |
+  b4 a e2 |
+  r4 d cs4. cs8 |
+  fs4. fs8 fs4 fs |
+  b2. fs8 fs |
+  cs'2 cs,4. cs8 |
+  fs2 r8 d d d |
+  e e r e fs fs r fs |
+  g8 g r g a4 r8 a |
+  b b r b cs cs r cs |
+  d4 d, r2 |
+  a'4. b16 cs d8 d d d |
+  d d d d d cs16( b) a8 g |
+  fs4 r8 a b16( a) g( fs) e8 a |
+  d, d'4 cs8 b a b8. a16 |
+  a4 r r2 |
+  r1 |
+  r
+  r
+  r
+  r
+  r4 e8 fs16 gs a8 a a a |
+  a a a a a gs16( fs) e8 d |
+  cs4 r8 e fs16( e d cs) b8 e |
+  a,( a'4 gs) fs8 e8. e16 |
+  d8 d e8. e16 fs8.( gs16 a8) a |
+  d, d e e a,4 a'8 b16 cs |
+  d8 d d d d cs16( b) a8 g |
+  fs4 r8 b a a r4 |
+  r1
+  r2 r4 r8 a |
+  b16( a) g( fs) e8 a d, (e16 fs g8 fs16 e |
+  fs8 g16 a b a b cs d8 a d4 |
+  d cs b) a |
+  d,8 d e e fs4. fs8 |
+  gs4 a8 a e2 |
+  a,4 a'8 b16 cs d8 d d d |
+  d d d d e,4 fs |
+  cs2 fs4 r |
+  r1
+  r2 r4 a8 b16 cs |
+  d8 d d d d d d d |
+  d cs16( b) a8 g a4 r |
+  d8 d, r4 d'8 d, r4 |
+  d'8 d, r d' d d b g |
+  d'4 r r r8 a |
+  b16( a g fs) e8 a d,4( a' |
+  a8) fs16 e fs8 d b' b b a16( g) |
+  d'4 r r r8 fs, |
+  b b r e, a a r d, |
+  g g r e fs fs r fs |
+  fs16( e d cs) b8 g' g16( fs e d) cs8 a' |
+  a16( g fs e) d8 b' b16( a g fs) e8 cs' |
+  cs16( b a g) fs8 d' d16( cs b a g fs e d |
+  cs8) cs r cs' d4 b8 g |
+  a2 d,4 r8 a' |
+  d2 cs4 cs |
+  b1 |
+  a
 }
 
 % Lời phiên khúc
@@ -212,7 +352,7 @@ loiPhienKhucSop = \lyrics {
   Sáng Danh Chúa thống lãnh khắp mọi nơi.
   Vinh Danh Con Vua Trời đã ra đời
   cứu độ ủi an chúng nhân khắp nơi.
-  Vinh dự, vinh dự, vinh dự dâng Vua Giê -- su Ki -- tô
+  Vinh dự, vinh dự, vinh dự dâng Vua "Giê -" su "Ki -" tô
   xưa chính Ngài đã đổ máu mình trên Can -- vê chuộc cả thế giới.
   Chúa thống trị khắp thế trần
   Chúa thống trị cả thế giới
@@ -282,8 +422,8 @@ loiPhienKhucTenor = \lyrics {
   Xin hãy hiển trị khắp hoàn vũ với cả cõi trời mọi nơi.
   Xin hãy cai trị khắp cả thế giới khắp cả thế giới.
   Xin hãy cai trị vũ hoàn
-  xin hãy cai trik "cõi (i)" trời
-  khắp cõi đất mọi nơi.
+  xin hãy cai trị "cõi (i)" trời
+  khắp cõi đất trời mọi nơi.
   Rạng Danh Con Chúa chí ái cứu rỗi ủi an muôn người.
   Xin hãy hiển trị trần gian.
   Rạng Danh Con Chúa chí ái Đấng thống lãnh khắp cung trời.
@@ -315,7 +455,7 @@ loiPhienKhucBass = \lyrics {
   Rạng Danh Con Chúa chí ái
   Đấng đã giáng thế cữu rỗi ủi an muôn người.
   Xin hãy hiển trị khắp hoàn vũ với cung trời tới muôn nơi.
-  Rạng Danh COn Chúa chí ái
+  Rạng Danh Con Chúa chí ái
   Đấng đã giáng thế cứu rỗi ủi an muôn người.
   Xin hiển trị khắp cả vũ hoàn.
   Xin Ngài hiển trị hoàn vũ khắp mọi tầng trời nơi nơi.
@@ -373,5 +513,6 @@ loiPhienKhucBass = \lyrics {
   >>
   \layout {
     %\override Lyrics.LyricText.font-size = #+2.5
+    \override Lyrics.LyricSpace.minimum-distance = #0.5
   } 
 }

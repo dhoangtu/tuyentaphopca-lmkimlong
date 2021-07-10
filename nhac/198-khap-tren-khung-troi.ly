@@ -296,5 +296,6 @@ loiPhienKhucBass = \lyrics {
   >>
   \layout {
     %\override Lyrics.LyricText.font-size = #+2.5
+    \override Lyrics.LyricSpace.minimum-distance = #1.2
   } 
 }
