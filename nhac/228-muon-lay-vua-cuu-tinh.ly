@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = "Muôn Lạy Vua Cứu Tinh"
+  title = \markup { \fontsize #5 "Muôn Lạy Vua Cứu Tinh" }
   subtitle = "(Worthy is the Lamb)"
   subsubtitle = "(Trích ORATORIO The Messiah, phần 3, đoạn 53)"
   composer = "Nhạc: G. F. Handel"
@@ -13,7 +13,7 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20\mm
+  top-margin = 15\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm

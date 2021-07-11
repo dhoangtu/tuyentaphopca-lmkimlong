@@ -3,16 +3,18 @@
 \include "english.ly"
 
 \header {
-  title = "Khắp Trên Khung Trời"
-  subtitle = "(Trong Oratorio The Messiah)"
+  title = \markup { \fontsize #5 "Khắp Trên Khung Trời" }
+  subtitle = "(Glory to God in the highest)"
+  subsubtitle = "(Trích ORATORIO The Messiah, phần 1, đoạn 17)"
   composer = "Nhạc: G. F. Handel"
+  arranger = "Lời Việt: Lm. Kim Long"
   tagline = ##f
 }
 
 \paper {
   #(set-paper-size "a4")
   top-margin = 15\mm
-  bottom-margin = 15\mm
+  bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0

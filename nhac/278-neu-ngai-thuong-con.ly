@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = "Nếu Ngài Thương Con"
+  title = \markup { \fontsize #5 "Nếu Ngài Thương Con" }
   subtitle = "(He trusted in God that he would deliver him)"
   subsubtitle = "(Trích ORATORIO The Messiah, phần 2, đoạn 28)"
   composer = "Nhạc: G. F. Handel"

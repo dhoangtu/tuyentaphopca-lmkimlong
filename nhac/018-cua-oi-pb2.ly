@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Cửa Ơi" }
+  title = \markup { \fontsize #5 "Cửa Ơi" }
   composer = "Ý: Tv. 23"
   arranger = "Nhạc: Lm. Kim Long"
   tagline = ##f
@@ -27,7 +27,7 @@ nhacDiepKhucSop = \relative c'' {
   a, r16 a f'8 e |
   
   d8 d d d |
-  e2( |
+  e2 ^( |
   e4)
   <e gs,>8 <e gs,> |
   a,8. a16 <d a>8 <d a d,> |
@@ -72,7 +72,7 @@ nhacDiepKhucAlto = \relative c'' {
   f r16 f16 a8 c |
   
   b b a a |
-  gs2 ( |
+  gs2 _( |
   gs4)
   
   \skip 4
@@ -152,8 +152,8 @@ nhacPhienKhucSop = \relative c'' {
   r g8 g |
   a4 (c8 d) |
   e2 |
-  c8 c e ( d16 c) |
-  g8 g a16( g) e( d) |
+  c8 c e _( d16 c) |
+  g8 g a16 _( g) e _( d) |
   g2 ^( |
   g2 |
   g8) g a b |
