@@ -4,32 +4,11 @@
 
 \header {
   title = \markup { \fontsize #5 "Vua Hiển Vinh" }
-  subtitle = "(Lift up your heads, O ye gates)"
+  %subtitle = "(Lift up your heads, O ye gates)"
   subsubtitle = "(Trích ORATORIO The Messiah, phần 2, đoạn 33)"
   composer = "Nhạc: G. F. Handel"
   arranger = "Lời Việt: Lm. Kim Long"
   tagline = ##f
-}
-
-\paper {
-  #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 20\mm
-  left-margin = 20\mm
-  right-margin = 20\mm
-  indent = #0
-  #(define fonts
-	 (make-pango-font-tree "Liberation Serif"
-	 		       "Liberation Serif"
-			       "Liberation Serif"
-			       (/ 20 20)))
-  print-page-number = ##f
-}
-
-TongNhip = {
-  \key f \major \time 4/4
-  \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/4)
 }
 
 % Nhạc phiên khúc
@@ -38,23 +17,26 @@ nhacPhienKhucSop = \relative c'' {
   c4 d8 e16( f) e4 r8 c |
   bf bf bf8. c16 c4 r8 e |
   f8. e16 f8. g16 c,4 f8 f |
-  f4. f8 f c f, d' |
-  c16( bf) a8 r4 r2 |
+  f4. f8 f c
+  \stemDown f,
+  _\markup "chí    ái       hiển      vinh"
+  d' |
+  c16 _(bf) a8 \stemNeutral r4 r2 |
   r1
-  r1
-  r1
-  r1
+  r
+  r
+  r
   r2 r4 r8 c |
   f4 f8. e16 d4 r8 d |
   g4 g8. f16 e4 e8. f16 |
   d8 d e8. f16 e8 c r4 |
   r1
-  r1
-  r1
-  r1
-  r1
-  r1
-  r1
+  r
+  r
+  r
+  r
+  r
+  r
   r2 r4 r8 c |
   d8. c16 d8 e f c r c |
   d8. c16 d8 e f c r4 |
@@ -105,6 +87,23 @@ nhacPhienKhucSop = \relative c'' {
   r2 c |
   d1 |
   c \bar "|."
+}
+
+nhacPhienKhucSopPhu = \relative c'' {
+  a4 bf8. bf16 c8 c r4 |
+  c4 bf8. a16 g4 r8 e |
+  f f f8. g16 g4 r8 c |
+  c8. c16 bf8. bf16 a4 a8 c |
+  c16 (bf a4) d8 c16 (bf) a8 \stemUp f' f |
+  f f r4 r2 |
+  r1
+  r
+  r
+  r
+  r2 r4 r8 a, |
+  d4 c8. c16 b!4 r8 b |
+  g4 a8. b!16 c4 c8. c16 |
+  c8 c b!8. b16 c8 g r4
 }
 
 nhacPhienKhucAlto = \relative c' {
@@ -263,7 +262,72 @@ nhacPhienKhucBass = \relative c {
   r
   r
   r2 r4 r8 c |
-  
+  d8. c16 d8 e f c r4 |
+  r2 r4 r8 c |
+  d4 r8 e f4 r8 f |
+  bf8. a16 bf8 g a f r f |
+  bf8. a16 bf8 g a f r4 |
+  r1
+  r
+  r
+  c4 d8. d16 e8 e r4 |
+  e4 f8. f16 g4 r8 g |
+  a8. a16 a8. b!16 b4 r8 g |
+  a8. g16 a8. b!16 c4 c,8. f16 |
+  e16 (d c4) f8 e16 (d) c8 c f |
+  e16 (d) c8 r4 r f8 bf |
+  a16 (g f4) bf8 a16 (g) f8 f bf |
+  a16 (g) f8 r4 r2 |
+  r1
+  r2 r4 r8 f |
+  e8. f16 bf,8. bf16 f4 r |
+  r2 r4 r8 a' |
+  g4 f c' r |
+  r2 r4 r8 f, |
+  f g16 (a) bf8 bf a f r f |
+  f g16 (a) bf8 bf a f r f |
+  f g16 (a) bf8 bf g f r4 |
+  r1
+  r
+  r8 c c c f4 r8 f |
+  e e e e d (e16 f g8 g, |
+  c c' d a bf g c bf |
+  a4) f r2 |
+  r1
+  r
+  r
+  r
+  r8 f f f bf4 r8 bf |
+  a a a a g a16 (bf c8 c,) |
+  f4 r8 f e (f16 g a8 a, |
+  d e16 f g8 g, c d16 e f8 g16 a |
+  bf8 bf, bf'2 a4 |
+  g8 f g4) f r8 f |
+  f g16 (a) bf8. bf16 a8 f r f |
+  f g16 (a) bf8. bf16 a8 f r4 |
+  r2 r8 c c c |
+  f4 r r8 d d d |
+  g4 r r8 e e e |
+  a4 r r8 f f f |
+  c'4 r8 c bf bf bf bf |
+  a (b!16 c d8 d, g a16 b c8 c, |
+  f f, f'2 e4 |
+  d8 c d4) c r8 c |
+  c d16 (e) f8 f e c r c |
+  c d16 (e) f8 f e c r4 |
+  r2 r8 c' c c |
+  d4 r r8 d, d d |
+  e4 r r8 f f f |
+  bf4 r8 bf a a a a |
+  g16 (a bf8 c c, f g16 a bf8 bf, |
+  e8 f16 g a8 g, d' e16 f g8 g, |
+  c d) e c f4 bf, |
+  c2 f4 r8 f |
+  f g16 (a) bf8 bf a f r f |
+  f g16 (a) bf8 bf a f r4 |
+  r2 f |
+  bf1 |
+  f
 }
 
 % Lời phiên khúc
@@ -271,10 +335,7 @@ loiPhienKhucSop = \lyrics {
   Hỡi cửa điện ngọc ngà, cửa thiên quốc ơi!
   Mau nhịp nhàng mở tung ra,	
   mau chiếu soi lên sáng ngời
-  hãy kính bái, kính bái Vua
-  
-  từ ái hiển vinh.
-  
+  hãy kính bái, kính bái Vua từ ái hiển vinh.
   Là Chúa các cơ binh, Thượng Đế rất uy linh,
   Vua khải hoàn ngự trị cõi thiên đình.
   Hỏi ai là Vua hiển vinh vậy?
@@ -411,20 +472,65 @@ loiPhienKhucBass = \lyrics {
 }
 
 % Dàn trang
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 15\mm
+  bottom-margin = 20\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
+  indent = #0
+  %{{
+  #(define fonts
+	 (make-pango-font-tree "Liberation Serif"
+	 		       "Liberation Serif"
+			       "Liberation Serif"
+			       (/ 20 20)))
+  %}
+  print-page-number = ##f
+}
+
+TongNhip = {
+  \key f \major \time 4/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+}
+
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
+
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-      instrumentName = #"S"
-      %\magnifyStaff #(magstep +1)
-    } <<
-      \new Voice = "beSop" {
-        \clef treble \TongNhip \nhacPhienKhucSop
+    \new Staff = diepKhuc \with {
+        \consists "Merge_rests_engraver"
+        printPartCombineTexts = ##f
       }
-      \new Lyrics \lyricsto beSop \loiPhienKhucSop
-    >>
+      <<
+      \new Voice \TongNhip \partCombine 
+        \nhacPhienKhucSop
+        \notBePhu -3 { \nhacPhienKhucSopPhu }
+      \new NullVoice = "beSop" \nhacPhienKhucSop
+      \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto "beSop" \loiPhienKhucSop
+      >>
     \new Staff \with {
       instrumentName = #"A"
-      %\magnifyStaff #(magstep +1)
     } <<
       \new Voice = "beAlto" {
         \clef treble \TongNhip \nhacPhienKhucAlto
@@ -433,7 +539,6 @@ loiPhienKhucBass = \lyrics {
     >>
     \new Staff \with {
       instrumentName = #"T"
-      %\magnifyStaff #(magstep +1)
     } <<
       \new Voice = "beTenor" {
         \clef "violin_8" \TongNhip \nhacPhienKhucTenor
@@ -442,7 +547,6 @@ loiPhienKhucBass = \lyrics {
     >>
     \new Staff \with {
       instrumentName = #"B"
-      %\magnifyStaff #(magstep +1)
     } <<
       \new Voice = "beBass" {
         \clef bass \TongNhip \nhacPhienKhucBass
@@ -452,6 +556,6 @@ loiPhienKhucBass = \lyrics {
   >>
   \layout {
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1
+    \override Lyrics.LyricSpace.minimum-distance = #0.6
   } 
 }
