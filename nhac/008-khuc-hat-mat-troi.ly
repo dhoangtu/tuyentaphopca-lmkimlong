@@ -75,7 +75,7 @@ nhacPhienKhucAltoMot = \relative c' {
   e
 }
 
-nhacPhienKhucBas = \relative c' {
+nhacPhienKhucBasMot = \relative c' {
   \partial 4 g4 |
   c8. g16 a8 (g) |
   d2 ~ |
@@ -105,6 +105,59 @@ nhacPhienKhucBas = \relative c' {
   <c c,> <g c,>8 <g c,> |
   <a f>4 <af f> |
   <g c,>
+}
+
+nhacPhienKhucSopHai = \relative c'' {
+  \partial 4 r4
+  r2
+  r4 g8 g |
+  e4. _(d8) g4 r |
+  r c8 ^(b) |
+  c4 a8 a |
+  g4 d'16 (e d c) |
+  a8 a a (c) |
+  d d d16 (e d c) |
+  g2 ~ |
+  g4 r |
+  r8 g e16 (g e d) |
+  c2 ~ |
+  c4 f8 c' |
+  c8. g16 d (f) g8 |
+  
+}
+
+nhacPhienKhucAltoHai = \relative c' {
+  \partial 4 r4
+  r2
+  r4 e8 e |
+  \skip 2 |
+  b4 r |
+  r e8 _(f) |
+  e4 f8 f |
+  e4 d'16 (e d c) |
+  r8 r r e, |
+  g g f4 |
+  e d8 c |
+  b4 r |
+  \skip 2
+  \skip 2
+  \skip 2
+  
+}
+
+nhacPhienKhucBasHai = \relative c' {
+  g8 c |
+  a8. f16 g (f) d8 |
+  c2 ~ |
+  c4 r |
+  r g8 g |
+  a4. (g8) |
+  c2 ~ |
+  c4 r |
+  r2
+  r
+  r
+  
 }
 
 % Lời phiên khúc
@@ -174,6 +227,10 @@ loiPhienKhucSopHai = \lyrics {
   (vô phúc người chết còn vương tội lỗi).
   Hạnh phúc thay người khi hấp hối biết tuân phục thánh ý Chúa tôi
   vì người ấy không chết đời đời.
+}
+
+loiPhienKhucAltoHai = \lyrics {
+
 }
 
 loiPhienKhucBasHai = \lyrics {
@@ -286,9 +343,35 @@ notBePhu =
     >>
     \new Staff <<
       \new Voice = "beBass" {
-        \clef bass \TongNhip \nhacPhienKhucBas
+        \clef bass \TongNhip \nhacPhienKhucBasMot
       }
       \new Lyrics \lyricsto beBass \loiPhienKhucBasMot
+    >>
+  >>
+  \layout {
+    \override Lyrics.LyricText.font-size = #+2
+    \override Lyrics.LyricSpace.minimum-distance = #0.6
+  } 
+}
+
+\score {
+  \new ChoirStaff <<
+    \new Staff = diepKhuc \with {
+        \consists "Merge_rests_engraver"
+        printPartCombineTexts = ##f
+      }
+      <<
+     \new Voice \TongNhip \partCombine 
+          \nhacPhienKhucSopHai
+          \notBePhu -3 { \nhacPhienKhucAltoHai }
+        \new NullVoice = nhacThamChieuPhienKhucSopHai \nhacPhienKhucSopHai
+        \new Lyrics \lyricsto nhacThamChieuPhienKhucSopHai \loiPhienKhucSopHai
+      >>
+    \new Staff <<
+      \new Voice = "beBass" {
+        \clef bass \TongNhip \nhacPhienKhucBasHai
+      }
+      \new Lyrics \lyricsto beBass \loiPhienKhucBasHai
     >>
   >>
   \layout {
