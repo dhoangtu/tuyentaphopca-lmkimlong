@@ -123,6 +123,40 @@ nhacPhienKhucSopHai = \relative c'' {
   c2 ~ |
   c4 f8 c' |
   c8. g16 d (f) g8 |
+  a4 r8 g |
+  c4. _(a16 g) |
+  f8 a d, f |
+  g4. g8 |
+  c4 b8 c |
+  d e16 (d) c4 |
+  d2 ~ |
+  d4 r |
+  r2
+  r
+  r4 r8 a
+  e'4. c8 d d d16 (e d c) |
+  a4 r |
+  r2
+  r
+  r4 e8 b |
+  e e a16 (g) a8 |
+  b4 b8 e, |
+  c' b a a |
+  e'2 ~ |
+  e4 c16 (d) e8 |
+  e, b' c b |
+  a2 ~ |
+  a4 r |
+  r g8 g16 g |
+  c4 r |
+  r c8 c16 c |
+  f4 e8 e |
+  a,4 b |
+  c e, | \break
+  
+  \time 3/4
+  f4. e8 d4 |
+  g2 e4 |
   
 }
 
@@ -157,6 +191,45 @@ nhacPhienKhucBasHai = \relative c' {
   r2
   r
   r
+  g'8 f g g |
+  d g e16 (g e d) |
+  c2 ~ |
+  c4 r |
+  r2
+  r4 r8 g' c4. (a16 g) |
+  f8 a d, f |
+  g4. f8 |
+  e4 e8 e |
+  d d a'4 |
+  <b g>2 ~ |
+  <b g>4 c, |
+  f8 e4 e8 |
+  d4 g |
+  a2 ~ |
+  a4 r |
+  r2
+  r
+  r
+  r
+  r4 e8 b |
+  e e a16 (g) a8 |
+  b4 b8 e, |
+  c' b a f |
+  e2 ~ |
+  e4 a8 g |
+  a d, e e |
+  a,2 ~ |
+  a8 c g c16 (d) |
+  e2 ~ |
+  e8 c' g c16 (d) |
+  e2 ( |
+  d4) c8 c |
+  d4 g, |
+  c r |
+  
+  \time 3/4
+  r2 r4 |
+  r2 c,4 |
   
 }
 
@@ -194,11 +267,10 @@ loiPhienKhucBasMot = \lyrics {
 loiPhienKhucSopHai = \lyrics {
   Anh phân ngày đêm ánh sáng chiếu khắp nơi.
   Anh đẹp và hào quang anh chiếu rạng
-  (anh chiếu rạng) Chúa cao vời.
+  Chúa cao vời.
   Lạy Chúa tôi, tôi ngợi khen Chúa vì Chúa dựng các chị trăng sao
   đẹp tươi và lấp lánh giữa trời cao.
   Vì Chúa dựng nên anh Gió trời.
-  Anh mây và bát tiết với tứ thời.
   Anh Trời quang và anh Không Khí,
   Chúa đặt các anh là vật quý để giữ gìn nuôi dưỡng sinh linh.
   Lạy vạn lạy Chúa,
