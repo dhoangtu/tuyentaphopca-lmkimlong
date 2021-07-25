@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #5 "Khúc Hát Mặt Trời" }
+  title = \markup { \fontsize #3 "Khúc Hát Mặt Trời" }
   composer = " "
   arranger = "Lm. Kim Long"
   tagline = ##f
@@ -292,13 +292,11 @@ loiPhienKhucBasBa = \lyrics {
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
-  %{{
   #(define fonts
-	 (make-pango-font-tree "Liberation Serif"
-	 		       "Liberation Serif"
-			       "Liberation Serif"
+	 (make-pango-font-tree "Deja Vu Serif Condensed"
+	 		       "Deja Vu Serif Condensed"
+			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
-  %}
   print-page-number = ##f
 }
 
@@ -349,7 +347,7 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricText.font-size = #+2
+    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #0.6
   } 
 }
@@ -375,7 +373,7 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricText.font-size = #+2
+    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #0.6
   } 
 }

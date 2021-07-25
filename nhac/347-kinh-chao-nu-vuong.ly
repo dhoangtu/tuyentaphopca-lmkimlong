@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #5 "Kính Chào Nữ Vương" }
+  title = \markup { \fontsize #3 "Kính Chào Nữ Vương" }
   composer = " "
   arranger = " "
   tagline = ##f
@@ -18,9 +18,9 @@
   indent = #0
   #(define fonts
     (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
+      "Deja Vu Serif Condensed"
+      "Deja Vu Serif Condensed"
+      "Deja Vu Serif Condensed"
       (/ 20 20)))
   page-count = #1
 }
@@ -122,7 +122,7 @@ loiPhienKhucBa = \lyricmode {
     >>
   >>
   \layout {
-    \override Lyrics.LyricText.font-size = #+2.2
+    %\override Lyrics.LyricText.font-size = #+2.2
     \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -143,7 +143,7 @@ loiPhienKhucBa = \lyricmode {
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2.2
+    %\override Lyrics.LyricText.font-size = #+2.2
     \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t

@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #5 "Khắp Trên Khung Trời" }
+  title = \markup { \fontsize #3 "Khắp Trên Khung Trời" }
   subtitle = "(Glory to God in the highest)"
   subsubtitle = "(Trích ORATORIO The Messiah, phần 1, đoạn 17)"
   composer = "Nhạc: G. F. Handel"
@@ -19,9 +19,9 @@
   right-margin = 20\mm
   indent = #0
   #(define fonts
-	 (make-pango-font-tree "Liberation Serif"
-	 		       "Liberation Serif"
-			       "Liberation Serif"
+	 (make-pango-font-tree "Deja Vu Serif Condensed"
+	 		       "Deja Vu Serif Condensed"
+			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
   print-page-number = ##f
 }
@@ -298,6 +298,6 @@ loiPhienKhucBass = \lyrics {
   >>
   \layout {
     %\override Lyrics.LyricText.font-size = #+2.5
-    \override Lyrics.LyricSpace.minimum-distance = #1.2
+    \override Lyrics.LyricSpace.minimum-distance = #2
   } 
 }

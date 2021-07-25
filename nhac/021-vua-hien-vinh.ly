@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #5 "Vua Hiển Vinh" }
+  title = \markup { \fontsize #3 "Vua Hiển Vinh" }
   %subtitle = "(Lift up your heads, O ye gates)"
   subsubtitle = "(Trích ORATORIO The Messiah, phần 2, đoạn 33)"
   composer = "Nhạc: G. F. Handel"
@@ -19,7 +19,7 @@ nhacPhienKhucSop = \relative c'' {
   f8. e16 f8. g16 c,4 f8 f |
   f4. f8 f c
   \stemDown f,
-  _\markup "chí    ái       hiển      vinh"
+  _\markup "chí ái  hiển    vinh"
   d' |
   c16 _(bf) a8 \stemNeutral r4 r2 |
   r1
@@ -479,13 +479,11 @@ loiPhienKhucBass = \lyrics {
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
-  %{{
   #(define fonts
-	 (make-pango-font-tree "Liberation Serif"
-	 		       "Liberation Serif"
-			       "Liberation Serif"
+	 (make-pango-font-tree "Deja Vu Serif Condensed"
+	 		       "Deja Vu Serif Condensed"
+			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
-  %}
   print-page-number = ##f
 }
 
@@ -555,7 +553,7 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.6
+    %\override Lyrics.LyricText.font-size = #+2
+    \override Lyrics.LyricSpace.minimum-distance = #1
   } 
 }

@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #5 "Nếu Ngài Thương Con" }
+  title = \markup { \fontsize #3 "Nếu Ngài Thương Con" }
   subtitle = "(He trusted in God that he would deliver him)"
   subsubtitle = "(Trích ORATORIO The Messiah, phần 2, đoạn 28)"
   composer = "Nhạc: G. F. Handel"
@@ -19,9 +19,9 @@
   right-margin = 20\mm
   indent = #0
   #(define fonts
-	 (make-pango-font-tree "Liberation Serif"
-	 		       "Liberation Serif"
-			       "Liberation Serif"
+	 (make-pango-font-tree "Deja Vu Serif Condensed"
+	 		       "Deja Vu Serif Condensed"
+			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
   print-page-number = ##f
 }
