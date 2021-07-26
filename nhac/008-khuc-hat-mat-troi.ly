@@ -108,6 +108,7 @@ nhacPhienKhucBasMot = \relative c' {
 }
 
 nhacPhienKhucSopHai = \relative c'' {
+  \set Score.currentBarNumber = #29
   \partial 4 r4
   r2
   r4 g8 g |
@@ -189,7 +190,7 @@ nhacPhienKhucSopHai = \relative c'' {
   
   \key f \major
   r4 c, |
-  a' (bf8 a) |
+  a' ^(bf8 a) |
   g4 g8 f |
   g2 |
   a4 f8 a |
@@ -208,7 +209,7 @@ nhacPhienKhucSopHai = \relative c'' {
   g2 ~ |
   g4 g |
   c a |
-  a8 g c (d) |
+  a8 g c _(d) |
   e2 |
   c4 d8 (c) |
   g4 e8 e |
@@ -222,9 +223,54 @@ nhacPhienKhucSopHai = \relative c'' {
   r
   r
   r
-  c4. af8 |
-  af af bf4 |
+  c4. af8 ^>|
+  af ^> af ^> bf4 |
+  g2 ~ |
+  g4 r |
+  d'4. b8 ^> |
+  d ^> d ^> c4 |
+  g e8 (d) |
+  c4. f8 |
+  e2 |
+  c'4. a8 |
+  g g c d |
+  e2 ~ |
+  e8 e d4 ~ |
+  d e8 e |
+  a, ([g a]) b |
+  c2 ~ |
+  c4 r |
+  c, c' |
+  af g8 d |
+  g2 |
+  af4 g |
+  d g8 g |
+  d' (ef) d (c) |
+  c4 c8 c |
+  d4 c |
+  af8. af16 c8 (af) |
+  g2 ~ |
+  g4 r |
+  r2
+  r
+  g4 c |
+  a a8 (g) |
+  c4 d |
+  e2 |
+  d8 (e) d (c) |
+  g4 a8 (c) |
+  d (e) d4 |
+  c2 |
+  g4. g8 |
+  af4 g |
+  c4. c,8 |
+  c2 ~ |
+  c4 r |
   
+  \time 3/4
+  r2 r4
+  
+  \time 2/4
 }
 
 nhacPhienKhucAltoHai = \relative c' {
@@ -235,15 +281,146 @@ nhacPhienKhucAltoHai = \relative c' {
   b4 r |
   r e8 _(f) |
   e4 f8 f |
-  e4 d'16 (e d c) |
-  r8 r r e, |
+  e4 \skip 4 |
+  r4 r8 e |
   g g f4 |
   e d8 c |
   b4 r |
   \skip 2
   \skip 2
   \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  g'4 g8 g |
+  fs f! e ^(d) |
+  g2 ~ |
+  g4 r |
+  r2
+  r2
+  \skip 2
+  \skip 2
+  \skip 2
+  r4 r8 b |
+  b4 a8 c |
+  c c b16 (c b a) |
+  e4 r |
+  \skip 2
+  \skip 2
+  \skip 2
+  gs2 ~ |
+  gs4 a8 e16 ^(d) |
+  c8 f e d |
+  c2 ~ |
+  c4 r |
+  r c8 c16 c |
+  e4 r |
+  r g8 g16 g |
+  a4 c8 a |
+  f4 g8 (f) |
+  e4 \skip 4
+  \skip 2.
+  \skip 2.
+  \skip 2 fs4
   
+  g2 ~ |
+  g4 b16 (d b a) |
+  \stemDown g4 d |
+  e8. e16 e8 (g) |
+  fs2 ~ |
+  fs4 r |
+  r a8 e |
+  fs4 r |
+  r2
+  r
+  r
+  r4 f |e8 e d e |
+  g2 ~ |
+  g |
+  g4 r |
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  g4. e8 |
+  e e e4 |
+  d e8 f |
+  e4 e8 f |
+  e4 r8 g |
+  c c16 c bf8 g |
+  
+  f4 \skip 4 |
+  f _(d8 f) |
+  e4 e8 d |
+  c4 ^(d8 e) |
+  f4 \skip 4 |
+  \skip 2
+  \skip 2
+  r4 c8 c |
+  a' f bf (a) |
+  g2 ~ |
+  g4 r
+  \skip 2
+  \skip 2
+  \skip 4 c,4 |
+  c c |
+  b2 ~ |
+  b4 \skip 4
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  c4 f8 ^(e) |
+  d8. d16 \stemDown g4 |
+  a8 (c) a (g) |
+  g2 ~ |
+  g4 r
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 4. d8 |
+  c2 |
+  e4. f8 |
+  e e e g |
+  c2 ~ |
+  c8 c b c |
+  a4 g8 g |
+  f4. f8 |
+  e2 ~ |
+  e4 r |
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  \skip 2
+  g4 ef8 g |
+  d ef c d |
+  g,2 |
+  g' |
+  \skip 2
+  \skip 2
+  a4 a |
+  gs2 |
+  a4 a |
+  d, e |
+  g g |
+  a2
 }
 
 nhacPhienKhucBasHai = \relative c' {
@@ -330,7 +507,148 @@ nhacPhienKhucBasHai = \relative c' {
   \key f \major
   r
   r
+  r
+  r
+  r
+  r
+  r
+  r4 c,8 c |
+  f d g (f) |
+  <e c>2 ~ |
+  <e c>4 r |
+  r2 \bar "||"
   
+  \key c \major
+  e8 (d) e (g) |
+  c,4 e |
+  f f |
+  g2 ~ |
+  g4 r |
+  r2
+  r
+  r8 c, e g |
+  c e, f4 |
+  e8 (d) c c |
+  e4 (d8 e) |
+  f2 |
+  f2 ~ |
+  f4 e |
+  f f |
+  g2 |
+  c,4 ef8 (d) |
+  c4 c8 c |
+  d (ef) f (af) |
+  g2 ~ |
+  g4 r |
+  r2
+  ef'4. c8 ^> |
+  c ^> c ^> d4 |
+  g,2 ~ |
+  g4 r |
+  r8 g c, d |
+  e (f) g (g,) |
+  c2 ~ |
+  c4 r |
+  r2
+  r4 c g'4. g8 |
+  c4 c8 c, |
+  f ([e d]) g, |
+  c2 ~ |
+  c4 r |
+  c c' |
+  af g8 d |
+  g2 |
+  af4 g |
+  d' g,8 g |
+  d' (ef) d (c) |
+  c4 c8 c |
+  d4 c |
+  af8. af16 c8 (af) |
+  g2 ~ |
+  g4 r |
+  r2
+  r
+  g4 c |
+  a a8 (g) |
+  f4 f |
+  e2 |
+  f4 f |
+  g g |
+  g e |
+  f2 |
+  g4. g8 |
+  af4 g |
+  c4. c,8 |
+  c2 ~ |
+  c4 g' |
+  
+  \time 3/4
+  c8. c16 g8 g a (g)
+  
+  \time 2/4
+}
+
+nhacPhienKhucSopBa = \relative c'' {
+  \time 2/4
+  \set Score.currentBarNumber = #180
+  \bar ""
+  r4 d |
+  d8 c d4 |
+  e2 |
+  d4. (e16 d) |
+  c8 c d (c) |
+  g2 ~ |
+  g4 r |
+  r g8 c |
+  b8. b16 a8 b |
+  c4. a8 |
+  e'4 g,8 g |
+  \afterGrace d'2 ({\stemDown e16 d)} |
+  c2 ~ |
+  c ~ |
+  c ~ |
+  c ~ |
+  c4 \fermata  \bar "|."
+}
+
+nhacPhienKhucAltoBa = \relative c' {
+  r4 f |
+  f8 e f4 |
+  g2 ~ |
+  g4 f8 (g16 f) |
+  c8 c c4 |
+  b2 ~ |
+  b4 r |
+  r e8 g16 (a) |
+  g8. g16 f8 f |
+  e4. f8 |
+  g4 e8 e |
+  a (af) g (f) |
+  e4 e8 e |
+  f4 f |
+  e e8 e |
+  f4 f |
+  e \fermata
+}
+
+nhacPhienKhucBasBa = \relative c {
+  d2 ~ |
+  d4 d |
+  c8 c c g16 c |
+  d8 d d c16 d |
+  e8 e f fs |
+  g2 ~ |
+  g4 d8 f |
+  e8. e16 c8 e |
+  g4. g8 |
+  a g c (d |
+  c4) r8 c |
+  <c f,>4 <b g> |
+  <c c,> <g c,>8 <g c,> |
+  <a f>4 <a f> |
+  <g c,> <g c,>8 <g c,> |
+  <a f>4 <af f> |
+  <g c,> \fermata
 }
 
 % Lời phiên khúc
@@ -391,16 +709,34 @@ loiPhienKhucSopHai = \lyrics {
   Vẫn một lòng mà vui chịu,
   vẫn một lòng mà vui chịu, vui chịu trước sau.
   Phúc cho người bình an vững chí.
-  Chúa ơi (Chúa ơi) Chúa sẽ thưởng triều thiên.
+  Chúa ơi Chúa sẽ thưởng triều thiên.
   Lạy Chúa tôi, tôi ngợi khen Chúa vì Chúa dựng chị chết
   chúng tôi ai mong thoát tay chị ở trên đời
-  (vô phúc người chết còn vương tội lỗi).
   Hạnh phúc thay người khi hấp hối biết tuân phục thánh ý Chúa tôi
   vì người ấy không chết đời đời.
 }
 
 loiPhienKhucAltoHai = \lyrics {
-
+  \override LyricText.font-shape = #'italic
+  _ _ _ _ _ _ _ _ _ _ _ _ _
+  (anh chiếu rạng)
+  _ _ _ _ _ _ _
+  Anh Mây và bát tiết với tứ thời
+  _ _ _ _ _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _ _ _
+  Nước cần,
+  _ _ _ _ _
+  (nước đầy vơi).
+  _ _ _ _ _ _ _ _ _ _ _ _ _
+  (anh dễ coi)
+  _ _ _ (Đàn...)
+  _ _ _ _ _ _ _ _ _ _ _ _
+  (Mẹ bồng bế, mẹ dưỡng nuôi).
+  _ _ _ _ _ (sẵn sàng mà tha thứ cho nhau).
+  _ _ _ _ _ _ _ _ _ _ _ (Chúa ơi)
+  _ _ _ _ _ _
+  (vô phúc người chết còn vương tội lỗi)
+  
 }
 
 loiPhienKhucBasHai = \lyrics {
@@ -531,15 +867,48 @@ notBePhu =
       <<
      \new Voice \TongNhip \partCombine 
           \nhacPhienKhucSopHai
-          \notBePhu -3 { \nhacPhienKhucAltoHai }
+          \notBePhu -2 { \nhacPhienKhucAltoHai }
         \new NullVoice = nhacThamChieuPhienKhucSopHai \nhacPhienKhucSopHai
         \new Lyrics \lyricsto nhacThamChieuPhienKhucSopHai \loiPhienKhucSopHai
+        \new NullVoice = nhacThamChieuPhienKhucAltoHai \nhacPhienKhucAltoHai
+        \new Lyrics \lyricsto nhacThamChieuPhienKhucAltoHai \loiPhienKhucAltoHai
       >>
     \new Staff <<
       \new Voice = "beBass" {
         \clef bass \TongNhip \nhacPhienKhucBasHai
       }
       \new Lyrics \lyricsto beBass \loiPhienKhucBasHai
+    >>
+  >>
+  \layout {
+    %\override Lyrics.LyricText.font-size = #+2
+    \override Lyrics.LyricSpace.minimum-distance = #0.6
+  } 
+}
+
+\score {
+  \new ChoirStaff <<
+    \new Staff = diepKhuc \with {
+        \consists "Merge_rests_engraver"
+        printPartCombineTexts = ##f
+      }
+      <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacPhienKhucSopBa
+      }
+      \new Lyrics \lyricsto "beSop" \loiPhienKhucSopBa
+      >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacPhienKhucAltoBa
+      }
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoBa
+    >>
+    \new Staff <<
+      \new Voice = "beBass" {
+        \clef bass \TongNhip \nhacPhienKhucBasBa
+      }
+      \new Lyrics \lyricsto beBass \loiPhienKhucBasBa
     >>
   >>
   \layout {
