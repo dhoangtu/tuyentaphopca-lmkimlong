@@ -157,6 +157,73 @@ nhacPhienKhucSopHai = \relative c'' {
   \time 3/4
   f4. e8 d4 |
   g2 e4 |
+  a4. g8 c4 |
+  
+  \time 2/4
+  b2 ~ |
+  b4 r |
+  r b16 (d b a) |
+  g8. g16 a8 (c) |
+  d4 d8 b |
+  d (b16 a) e8 (g) |
+  a2 ~ |
+  a4 r |
+  r2
+  r
+  r
+  r4 a |
+  g8 c b c |
+  d2 ~ |
+  d ~ |
+  d4 r |
+  c4. g8 |
+  g _> g _> a (g) |
+  d4 r |
+  r2
+  e'4. c8 c c d (c) |
+  g2 ~ |
+  g4 g8 a |
+  g4 r |
+  
+  r2 \bar "||"
+  
+  \key f \major
+  r4 c, |
+  a' (bf8 a) |
+  g4 g8 f |
+  g2 |
+  a4 f8 a |
+  g (a) c8. c16 |
+  a8 (c) d f |
+  c2 ~ |
+  c ~ |
+  c4 r8 bf |
+  c c bf c16 (bf) |
+  g2 \bar "||"
+  
+  \key c \major
+  e8 (d) e (g) |
+  c,4 g' |
+  a8 (g) a (c) |
+  g2 ~ |
+  g4 g |
+  c a |
+  a8 g c (d) |
+  e2 |
+  c4 d8 (c) |
+  g4 e8 e |
+  a4. (g8) |
+  a2 |
+  a ~ |
+  a4 r |
+  r2
+  r
+  r
+  r
+  r
+  r
+  c4. af8 |
+  af af bf4 |
   
 }
 
@@ -230,6 +297,39 @@ nhacPhienKhucBasHai = \relative c' {
   \time 3/4
   r2 r4 |
   r2 c,4 |
+  f4. e8 d4 |
+  
+  \time 2/4
+  g2 ~ |
+  g4 r |
+  b16 (d b a) g4 |
+  c4. e8 |
+  d2 ~ |
+  d4 r |
+  r a8 a, |
+  d4 d |
+  g (fs8 e) |
+  a4. (b16 a) |
+  g8 g e g |
+  c2 ~ |
+  c4 r |
+  r g8 b16 (a) |
+  g8 (a) b8. a16 |
+  b8 d a4 ~ |
+  a r |
+  r2
+  g4. d8 ^> |
+  d ^> d ^> e (d) |
+  c4 r |
+  r r8 c' |
+  b8. b16 c8 d |
+  c2 ~ |
+  c4 r |
+  r2
+  
+  \key f \major
+  r
+  r
   
 }
 
@@ -276,20 +376,18 @@ loiPhienKhucSopHai = \lyrics {
   Lạy vạn lạy Chúa,
   lạy vạn lạy Chúa tôi, tôi ngợi khen Chúa
   vì Chúa đã dựng nên dòng nước chị chúng tôi.
-  Nước cần, nước cần (mà) nước quý,
-  nước trong trắng đầy vơi (nước đầy vơi).
+  nước cần (mà) nước quý,
+  nước trong trắng đầy vơi
   Chúa tôi, tôi ngợi khen Chúa.
   Anh hùng mạnh và anh đẹp.
-  Anh hùng mạnh và anh đẹp (anh dễ coi) anh dễ coi.
-  (Đàn...)
+  Anh hùng mạnh và anh đẹp anh dễ coi.
   Lạy Chúa tôi, tôi ngợi khen Chúa
   vì Chúa dựng nên (đây) Mẹ Đất chúng tôi
-  (Mẹ bồng bế, mẹ dưỡng nuôi).
   Mẹ sinh hoa đồng cỏ nội.
   và bốn mùa sinh trái tốt tươi.
   Lạy Chúa tôi, tôi ngợi khen Chúa
   vì bao người một lòng mến Chúa.
-  Hằng (sẵn sàng mà tha thứ cho nhau).
+  Hằng
   Vẫn một lòng mà vui chịu,
   vẫn một lòng mà vui chịu, vui chịu trước sau.
   Phúc cho người bình an vững chí.
