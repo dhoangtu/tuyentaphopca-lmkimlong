@@ -4,8 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Khúc Hát Mặt Trời" }
-  composer = " "
-  arranger = "Lm. Kim Long"
+  arranger = "Nhạc: Lm. Kim Long"
+  composer = "Thơ: Xuân Ly Băng"
   tagline = ##f
 }
 
@@ -26,13 +26,78 @@ nhacPhienKhucSopMot = \relative c'' {
   a2 ~ |
   a4 r |
   r2
-  d2 |
-  d4 e8 d |
-  cs4. d8 |
-  bf2 |
-  a4 \tuplet 3/2 { d8 cs d } |
-  e4 r8 a, |
   
+  <<
+    {
+      d2 |
+      d4 e8 d |
+      cs4. d8 |
+      bf2 |
+      a4 \tuplet 3/2 { d8 cs d } |
+      e4
+    }
+    \\
+    {
+      a,2 |
+      bf |
+      a |
+      g |
+      e4 \tuplet 3/2 { f8 a bf } |
+      a4
+    }
+  >>
+  r8 a | \break
+  
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
+  \key d \major
+  d d fs, (g) |
+  a8. b16 d,8 (e) |
+  fs2 |
+  d8. g16 g8 g |
+  b8 b4 a8 |
+  a2 |
+  a8. d16 d8 d |
+  d fs4 cs8 |
+  b2 |
+  g8. d'16 b8 a |
+  e g4 cs,8 |
+  d2 ~ |
+  d4 r |
+  r8 cs' cs d |
+  b4 r8 g' |
+  e e fs4 |
+  cs8. cs16 cs8 d |
+  a a4 as8 |
+  b2 |
+  gs8. gs16 a8 a |
+  e g4 fs8 |
+  fs2 |
+  d8. fs16 e8 g |
+  a a4 cs,8 |
+  d2 ~ |
+  
+  \key f \major
+  d8 d4 f16 (g) |
+  a4. a8 |
+  a g4 g16 (a) |
+  d4 cs16 (d) e8 |
+  a,2 |
+  e8. g16 bf8 a |
+  a2 ~ |
+  a8 a f'16 (e) d8 |
+  e4. \slashedGrace { \stemDown e8 ^(} d8) |
+  bf a a4 |
+  r8 f4 g8 |
+  e4 r8 d |
+  g g f (g) |
+  a2 ~ |
+  a4 r8 a \bar "||"
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
 }
 
 nhacPhienKhucAltoMot = \relative c'' {
@@ -56,13 +121,59 @@ nhacPhienKhucAltoMot = \relative c'' {
   g4 f8 e |
   d4 e8 d |
   cs4 \tuplet 3/2 { d8 e e } |
-  cs4 r8 a |
+  cs4 r8 a | \break
   
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
+  \key d \major
+  a' fs d4 |
+  cs8. _> d16 a8 (cs) |
+  d2 |
+  b8. b16 d8 d |
+  g g4 d8 |
+  cs2 |
+  d8. fs16 a8 a |
+  b as4 as8 |
+  fs2 |
+  e8. fs16 d8 d |
+  cs cs4 a8 |
+  a2 ~ |
+  a4 r |
+  r8 e' e fs |
+  d4 r8 b' |
+  a a cs4 |
+  a8. a16 a8 g |
+  fs e4 e8 |
+  ds2 |
+  e8. d16 cs8 cs |
+  b e4 d8 |
+  cs2 |
+  d8. d16 b8 d |
+  cs cs4 a8 |
+  a2 ~ | \break
+  
+  \key f \major
+  a8 d4 f16 (g) |
+  a4. a8 |
+  a g4 g16 (a) |
+  d4 r |
+  r8 fs,16 fs e8 fs |
+  bf,4 r |
+  r8 f'16 f g8 f 
+  e4 r |
+  r8 a4 f8 |
+  g f e4 |
+  r8 f4 g8 |
+  e4 r8 d |
+  d e d4 |
+  cs2 ~ |
+  cs4 r8 a'
 }
 
 nhacPhienKhucBasMot = \relative c' {
   \key f \major \time 2/4
   \partial 8 r8 |
+  
   a4 r8 bf |
   bf2 |
   a4 r |
@@ -81,8 +192,53 @@ nhacPhienKhucBasMot = \relative c' {
   a4. a8 |
   g'8. f16 g8 a |
   a2 ~ |
-  a4 r8 a |
+  a4 r8 a | \break
   
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
+  \key d \major
+  fs a b4 |
+  a8. ^> g16 fs8 (e) |
+  d2 |
+  g8. g16 b8 g |
+  e e4 g8 |
+  a2 |
+  fs8. fs16 fs8 fs |
+  g fs4 e8 |
+  d2 |
+  g8. fs16 g8 g |
+  a4 <e a,>8 <g a,> |
+  <fs d>2 ~ |
+  <fs d>8 b, b cs |
+  a2 |
+  r8 g' e e |
+  a2 ~ |
+  a8 a a b |
+  d cs4 cs8 |
+  b2 |
+  e,8. es16 fs8 fs |
+  g <b e,>4 <b e,>8 |
+  <as fs>2 |
+  b8. a16 g8 b |
+  a4 <e a,>8 <g a,> |
+  <fs d>2 ~ | \break
+  
+  \key f \major
+  <fs d>8 d4 f16 (g) |
+  a4. a8 |
+  a g4 g16 (a) |
+  d4 r |
+  r8 d,16 d cs8 d |
+  g4 r |
+  r8 <d' d,>16 <d d,> <e cs,>8 <d d,> |
+  <cs a,>4 r |
+  r8 cs4 d8 |
+  <d g,> <d g,> <cs a>4 |
+  r2
+  r8 cs,4 d8 |
+  bf2 |
+  a2 ~ |
+  a4 r8 a'
 }
 
 % Lời phiên khúc
@@ -118,7 +274,7 @@ loiPhienKhucAltoMot = \lyrics {
   Ngài từ bi hơn trời biển bao la.
   Và nhân hậu trên muôn muôn lòng mẹ.
   Lạy Thiên Chúa đêm đêm lìa khỏi xác.
-  Đêm về với Ngài hồn say đắm mê ly.
+  Đêm đêm về với Ngài hồn say đắm mê ly.
   Ta ý cảm tràn trề.
   Vì siêu việt Người ơi siêu việt lạ.
   Ngoại...
@@ -160,6 +316,8 @@ loiPhienKhucBasMot = \lyrics {
 			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
   print-page-number = ##f
+  page-count = 3
+  systems-per-page = 4
 }
 
 TongNhip = {
