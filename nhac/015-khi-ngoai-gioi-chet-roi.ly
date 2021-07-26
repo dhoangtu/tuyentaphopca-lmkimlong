@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Khúc Hát Mặt Trời" }
+  title = \markup { \fontsize #3 "Khi Ngoại Giới Chết Rồi" }
   arranger = "Nhạc: Lm. Kim Long"
   composer = "Thơ: Xuân Ly Băng"
   tagline = ##f
@@ -29,6 +29,7 @@ nhacPhienKhucSopMot = \relative c'' {
   
   <<
     {
+      \voiceOne
       d2 |
       d4 e8 d |
       cs4. d8 |
@@ -36,8 +37,9 @@ nhacPhienKhucSopMot = \relative c'' {
       a4 \tuplet 3/2 { d8 cs d } |
       e4
     }
-    \\
-    {
+    
+    \new Voice = "splitpart" {
+      \voiceTwo
       a,2 |
       bf |
       a |
@@ -46,6 +48,7 @@ nhacPhienKhucSopMot = \relative c'' {
       a4
     }
   >>
+  \oneVoice
   r8 a | \break
   
   \once \override Score.RehearsalMark.font-size = #0.1
@@ -102,10 +105,25 @@ nhacPhienKhucSopMot = \relative c'' {
 
 nhacPhienKhucAltoMot = \relative c'' {
   \key f \major \time 2/4
-  \partial 8 d8 |
-  cs4 r8 d16 bf |
-  g8. e16 g8 g |
-  a4 r |
+  \partial 8
+  <<
+    {
+      \voiceOne
+      d8 |
+      cs4 r8 d16 bf |
+      g8. e16 g8 g |
+      a4
+    }
+    \new Voice = "altoMot" {
+      \voiceTwo
+      r8 |
+      \once \stemUp <a g e>4 r8 f |
+      e8. d16 e4 |
+      e
+    }
+  >>
+  \oneVoice
+  r |
   f4. g8 |
   d2 ~ |
   d4 cs |
@@ -173,19 +191,50 @@ nhacPhienKhucAltoMot = \relative c'' {
 nhacPhienKhucBasMot = \relative c' {
   \key f \major \time 2/4
   \partial 8 r8 |
-  
-  a4 r8 bf |
-  bf2 |
-  a4 r |
-  d c |
-  bf c8 bf |
-  a4. g8 |
-  f2 ~ |
-  f8 fs g4 ^> ~ |
+  <<
+    {
+      \voiceOne
+      a4 r8 bf |
+      bf2 |
+      a4 r |
+      d c |
+      bf c8 bf |
+      a4. g8 |
+      f2 ~ |
+      f8 fs
+    }
+    
+    \new Voice = "basMot" {
+      \voiceTwo
+      a,4 d |
+      d e8 d |
+      c16 a cs e a e a cs |
+      d,2 |
+      g |
+      a4 a, |
+      d2 ~ |
+      d8 d
+    }
+  >>
+  \oneVoice
+  g4 ^> ~ |
   g8 g \staccato g \staccato f \staccato |
   a4 r |
-  r8 g a g |
-  f4 r8 g16 ^> g ^> |
+  r8
+  <<
+    {
+      \voiceOne
+      g a g |
+      f4
+    }
+    \new Voice = "basHai" {
+      \voiceTwo
+      a,8 a cs |
+      d4
+    }
+  >>
+  \oneVoice
+  r8 g16 ^> g ^> |
   g4. f8 |
   f a4 f8 |
   e4 e16 (f) d (d) |
@@ -301,6 +350,9 @@ loiPhienKhucBasMot = \lyrics {
   Ngoại...
 }
 
+loiBasHai = \lyrics {
+  tụa lá trời đêm
+}
 
 % Dàn trang
 \paper {
@@ -364,6 +416,7 @@ notBePhu =
         \clef bass \nhacPhienKhucBasMot
       }
       \new Lyrics \lyricsto beBass \loiPhienKhucBasMot
+      \new Lyrics \lyricsto basHai \loiBasHai
     >>
   >>
   \layout {
