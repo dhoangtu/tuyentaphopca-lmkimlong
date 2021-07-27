@@ -17,20 +17,91 @@ nhacPhienKhucSopAMot = \relative c' {
   b4. b8 \tuplet 3/2 { c b a } |
   e4. a8 \tuplet 3/2 { b a g } |
   d4. e16 (d) \tuplet 3/2 { b8 d g } |
-  g2 r4 |
-  
+  g2
+}
+
+nhacPhienKhucTenorAMot = \relative c' {
+  \key g \major \time 3/4
+  \partial 4 r4 |
+  \tuplet 3/2 { b8 b c } d4 r |
+  \tuplet 3/2 { g,8 g a } b4 r |
+  \tuplet 3/2 { b8 c b } a4. a8 |
+  fs g a2 |
+  \stemDown b2
 }
 
 nhacPhienKhucBasAMot = \relative c' {
-  
+  \key g \major \time 3/4
+  \partial 4 r4 |
+  \tuplet 3/2 { g8 g a } b4 r |
+  \tuplet 3/2 { e,8 e fs } g4 r |
+  \tuplet 3/2 { g8 a g } c,4. cs8 |
+  d b d2 |
+  <d g,>2 \bar "||"
 }
 
-nhacPhienKhucSopBMot = \relative c'' {
-  
+nhacPhienKhucSopB = \relative c'' {
+  \set Score.currentBarNumber = #6
+  \key g \major \time 2/4
+  \partial 4 r4 |
+  r2
+  r8 g fs g |
+  a4 b8 a ~ |
+  a4 r |
+  r4 fs8 (g) |
+  a4 g8 (a) |
+  b a -> \stemUp b ^> c ^> |
+  d2 ~ |
+  d8 e e cs |
+  d2 ~ |
+  d8 c c a |
+  b2 ~ |
+  b8 c -> r c -> |
+  r c -> fs, fs |
+  g2 ~ |
+  g4 \bar "|."
 }
 
-nhacPhienKhucBasBMot = \relative c' {
-  
+nhacPhienKhucAltoB = \relative c' {
+  \key g \major \time 2/4
+  \partial 4 r4 |
+  r2
+  r8 e8 d b |
+  e4 g8 fs ~ |
+  fs4 r |
+  r fs8 (g) |
+  r8 e g4 |
+  fs r |
+  r8 fs -> g -> a -> |
+  b2 ~ |
+  b8 g g e |
+  fs2 ~ |
+  fs8 a a fs |
+  g4 \stemDown fs ^> |
+  e d8 d |
+  b2 ~ |
+  b4
+}
+
+nhacPhienKhucBasB = \relative c' {
+  \key g \major \time 2/4
+  \partial 4 b8 c |
+  d4 b8 g ~ |
+  g4 d8 (e) |
+  cs4 cs8 d ~ |
+  d d e fs |
+  g4 r |
+  r8 c, e4 |
+  d r |
+  r8 d -> e -> fs -> |
+  g2 ~ |
+  g8 b b g |
+  a2 ~ |
+  a8 fs fs ds |
+  e4 d |
+  c -> d8 d |
+  <g g,>2 ~ |
+  <g g,>4
 }
 
 % Lời phiên khúc
@@ -43,19 +114,19 @@ loiPhienKhucSopAMot = \lyrics {
 }
 
 loiPhienKhucSopAHai = \lyrics {
-  Bạn tình ta ơi
+  - - - -
   Kìa bạn đi tới
   Như ánh dương huy hoàng
   Chân bước trên cung đàn
-  Hỡi bạn tình ta ơi
+  - - - - -
 }
 
 loiPhienKhucSopABa = \lyrics {
-  Bạn tình ta ơi
+  - - - -
   Lời bạn êm ái
   Tha thiết như cung đàn
   Cao vút trên mây ngàn
-  Hỡi bạn tình ta ơi
+  - - - - -
 }
 
 loiPhienKhucBasAMot = \lyrics {
@@ -66,35 +137,37 @@ loiPhienKhucBasAMot = \lyrics {
 }
 
 loiPhienKhucBasAHai = \lyrics {
-  Bạn tình ta ơi
+  - - - -
   Kìa bạn đi tới
   Như ánh huy hoàng
-  Hỡi bạn tình ta ơi
+  - - - - -
 }
 
 loiPhienKhucBasABa = \lyrics {
-  Bạn tình ta ơi
+  - - - -
   Lời bạn êm ái
   Tha thiết cung đàn
-  Hỡi bạn tình ta ơi
+  - - - - -
 }
 
-loiPhienKhucSopBMot = \lyrics {
-  Nương trổ hoa thắm tươi
+loiPhienKhucSopB = \lyrics {
+  Nương đồi trổ hoa thắm tươi
   Bạn ơi
   Bạn ơi
   Nào ta đi tới
   Hãy tới cùng ta
   Hãy tới cùng ta
-  Hỡi Hỡi hỡi bạn tình ta
+  Hỡi Hỡi hỡi bạn tình ta.
 }
 
-loiPhienKhucSopBHai = \lyrics {
+loiPhienKhucAltoB = \lyrics {
+  \override LyricText.font-shape = #'italic
+  _ _ _ _ _ _ _
   Này bạn hỡi
   Nào mau đi tới
   Hãy tới cùng ta
   Hãy tới cùng ta
-  Hỡi Hỡi
+  Hỡi Hỡi bạn tình ta.
 }
 
 loiPhienKhucBasB = \lyrics {
@@ -122,6 +195,7 @@ loiPhienKhucBasB = \lyrics {
 			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
   print-page-number = ##f
+  page-count = 1
 }
 
 TongNhip = {
@@ -156,12 +230,14 @@ notBePhu =
         \new Lyrics \lyricsto beSopA \loiPhienKhucSopABa
       >>
     \new Staff <<
-      \new Voice = "beBassA" {
-        \clef bass \TongNhip \nhacPhienKhucBasAMot
+      \new Voice {
+        \clef bass
+          \TongNhip \partCombine \nhacPhienKhucTenorAMot \nhacPhienKhucBasAMot
       }
-      \new Lyrics \lyricsto beBassA \loiPhienKhucBasAMot
-      \new Lyrics \lyricsto beBassA \loiPhienKhucBasAHai
-      \new Lyrics \lyricsto beBassA \loiPhienKhucBasABa
+      \new NullVoice = nhacThamChieuTenorAMot \nhacPhienKhucTenorAMot
+      \new Lyrics \lyricsto nhacThamChieuTenorAMot \loiPhienKhucBasAMot
+      \new Lyrics \lyricsto nhacThamChieuTenorAMot \loiPhienKhucBasAHai
+      \new Lyrics \lyricsto nhacThamChieuTenorAMot \loiPhienKhucBasABa
     >>
   >>
   \layout {
@@ -172,17 +248,23 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff <<
+    \new Staff \with {
+        \consists "Merge_rests_engraver"
+      } <<
         \new Voice = "beSopB" {
-          \clef treble \TongNhip \nhacPhienKhucSopBMot
+          \voiceOne \nhacPhienKhucSopB
         }
-        \new Lyrics \lyricsto beSopB \loiPhienKhucSopBMot
+        \new Voice= "beAltoB" {
+          \voiceTwo \nhacPhienKhucAltoB
+        }
+        \new Lyrics \lyricsto beSopB \loiPhienKhucSopB
+        \new Lyrics \lyricsto beAltoB \loiPhienKhucAltoB
       >>
     \new Staff <<
       \new Voice = "beBassB" {
-        \clef bass \TongNhip \nhacPhienKhucBasAMot
+        \clef bass \TongNhip \nhacPhienKhucBasB
       }
-      \new Lyrics \lyricsto beBassB \loiPhienKhucBasAMot
+      \new Lyrics \lyricsto beBassB \loiPhienKhucBasB
     >>
   >>
   \layout {
