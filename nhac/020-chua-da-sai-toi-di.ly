@@ -31,8 +31,6 @@ nhacIntroBas = \relative c {
 nhacPhienKhucSopMot = \relative c'' {
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
-  %intro
-  
   \partial 4 d8. d16 |
   b8 b b4 ~ |
   b8 a b g |
@@ -104,7 +102,6 @@ nhacPhienKhucAltoMot = \relative c' {
 }
 
 nhacPhienKhucBasMot = \relative c {
-  %intro
   \partial 4 d8. d16 |
   g8 g g4 ~ |
   g8 a g g |
@@ -339,6 +336,10 @@ notBePhu =
     %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override Staff.VerticalAxisGroup.staff-staff-spacing =
+        #'((basic-distance . 8)
+	   (minimum-distance . 8)
+	   (padding . 1))
   }
 }
 
