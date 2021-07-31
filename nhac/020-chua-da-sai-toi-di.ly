@@ -9,6 +9,24 @@
   tagline = ##f
 }
 
+nhacIntroSop = \relative c'' {
+  r8 d16 d b8 <b a fs> |
+  <b g e> c16 c a8 <a g e> |
+  <a fs d>4. <g d>8 |
+  <fs d c> <g d b>4 <a fs d>8 |
+  <b g d>4 <e b g>8 <cs a g> |
+  <d a fs>4 <d fs,>8. <d fs,>16
+}
+
+nhacIntroBas = \relative c {
+  r8 r r <ds ds,> |
+  <e e,> r r <cs cs,> |
+  <d d,> <a a,> <g g,> r |
+  r4 <e e,>8 r |
+  r <g' g,> <e e,> <a a,> |
+  d,4 d8. d16
+}
+
 % Nhạc phiên khúc
 nhacPhienKhucSopMot = \relative c'' {
   \once \override Score.RehearsalMark.font-size = #0.1
@@ -43,9 +61,9 @@ nhacPhienKhucSopMot = \relative c'' {
   b8. b16 b8 d ~ |
   d d c d |
   a2 ~ |
-  a8 a fs16 e a8 |
-  d4. d8 |
-  a4 a |
+  a8 a fs16 (e) a8 |
+  d,4. d8 |
+  a'4 a |
   g2 ~ |
   g4 r \bar "|."
 }
@@ -56,7 +74,33 @@ nhacPhienKhucAltoMot = \relative c' {
   d8 c d b |
   a4. b16 c |
   d8 d4 fs8 |
-  
+  g4 g8 g |
+  d4. g8 |
+  fs2 ~ |
+  fs4 r |
+  r2
+  r8 d g g |
+  fs fs16 fs g8 g |
+  fs4. (a8 |
+  g4) d8. d16 |
+  ds8 e e f! |
+  e8 e ~ e4 |
+  e8. e16 d8 g |
+  a g fs fs ~ |
+  fs2 ~ |
+  fs4 r |
+  r r8 g a8. a16 a8 bf |
+  fs2 ~ |
+  fs4 r |
+  r2
+  g8. g16 g8 b ~ |
+  b b a g |
+  fs2 ~ |
+  fs8 e cs cs |
+  d4. d8 |
+  e4 fs |
+  d2 ~ |
+  d4 r
 }
 
 nhacPhienKhucBasMot = \relative c {
@@ -221,12 +265,13 @@ loiPhienKhucSopBa = \lyrics {
 			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
   print-page-number = ##f
-  system-system-spacing = #'((basic-distance . 14)
-                             (minimum-distance . 14)
+  system-system-spacing = #'((basic-distance . 13)
+                             (minimum-distance . 13)
                              (padding . 2))
-  score-system-spacing = #'((basic-distance . 14)
-                             (minimum-distance . 14)
+  score-system-spacing = #'((basic-distance . 13)
+                             (minimum-distance . 13)
                              (padding . 2))
+  %page-count = 2
 }
 
 TongNhip = {
@@ -252,6 +297,24 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
+    \new Staff<<
+     \new Voice = "beSop" {
+       \clef treble \TongNhip \nhacIntroSop
+     }
+     >>
+    \new Staff <<
+      \new Voice = "beBass" {
+        \clef bass \TongNhip \nhacIntroBas
+      }
+    >>
+  >>
+  \layout {
+    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+  }
+}
+
+\score {
+  \new ChoirStaff <<
     \new Staff = diepKhuc \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f
@@ -274,7 +337,7 @@ notBePhu =
   >>
   \layout {
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.6
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
   }
 }
@@ -296,7 +359,7 @@ notBePhu =
   >>
   \layout {
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.6
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Staff.TimeSignature.transparent = ##t
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
   } 
