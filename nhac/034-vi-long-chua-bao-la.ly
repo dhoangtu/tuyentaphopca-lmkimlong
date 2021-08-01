@@ -94,7 +94,9 @@ nhacDiepKhucBas = \relative c {
 }
 
 nhacPhienKhucSop = \relative c'' {
-  bf8 r r4 |
+  bf8
+  ^\tweak control-points #'((-2 . 3) (-1 . 3.1) (0 . 3.2) (1 . 2.4)) ( <> )
+  r r4 |
   r2
   r
   r8 bf bf8. bf16 |
@@ -113,7 +115,9 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c' {
-  d8 r r4 |
+  d8
+  ^\tweak control-points #'((-2 . 3) (-1 . 3.1) (0 . 3.2) (1 . 2.4)) ( <> )
+  r r4 |
   r2
   r
   r8 d d8. d16 |
