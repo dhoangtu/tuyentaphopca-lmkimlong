@@ -113,9 +113,10 @@ nhacPhienKhucSopMot = \relative c' {
   g8 d r f |
   e (f) g a ~ |
   a bf4 a8 |
-  a2 \bar "||"
+  a2 \bar "||" \break
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
   \key d \major
   fs8 (a) fs e |
   d g4 b8 |
@@ -130,6 +131,7 @@ nhacPhienKhucSopMot = \relative c' {
   g (a4) e8 |
   d2 | \break
   
+  \oneVoice \voiceOne \stemNeutral
   \key f \major
   \override NoteHead.font-size = #-2
   r8 d16
@@ -137,9 +139,39 @@ nhacPhienKhucSopMot = \relative c' {
   c d8 a |
   f' f16 e f8 d |
   
+  \revert NoteHead.font-size
   a4 \tuplet 3/2 { a'8 e \afterGrace d (e8) } |
   f4 \tuplet 3/2 { e8 d g } |
+  g2 ~ |
+  g8 g \tuplet 3/2 { bf d e } |
+  e4. e8 |
+  f cs4 d8 |
+  d2 ~ |
   
+  \voiceOne
+  d4 r | \break
+  
+  \key g \major
+  b4 r8 d |
+  g, (a) b g |
+  d2 ~ | \break
+  d4 g8 g |
+  fs4 (g8 a) |
+  b2 |
+  e8 cs4 cs8 |
+  d2 |
+  
+  \set Staff.printKeyCancellation = ##t
+  \set Staff.explicitKeySignatureVisibility = #all-invisible
+  \override Staff.KeySignature #'break-visibility = #all-invisible
+  \key f \major
+  \oneVoice \stemNeutral
+  r8 d16
+  _\markup { \lower #3.3 \halign #-0.3 \italic "(Đàn)" }
+  c d8 g, |  \break
+  a a16 g a8 d, |
+  e f16 e d c d e |
+  a,4 r8 
 }
 
 nhacPhienKhucAltoMot = \relative c' {
@@ -224,7 +256,23 @@ nhacPhienKhucAltoMot = \relative c' {
   b4. cs8 |
   d2 |
   
-  \key f \major
+  \repeat unfold 9 { \skip 2 }
+  
+  \voiceTwo
+  r8 d16
+  _\markup { \lower #3.3 \halign #-0.3 \italic "(Đàn)" }
+  d \stemDown g8 a |
+  
+  \key g \major
+  d,4 r8 c |
+  g' (a) d, b |
+  a2 ~ a4 e'8 e |
+  d2 |
+  d2 |
+  b'8 a4 g8 |
+  fs2 |
+  
+  \repeat unfold 3 { \skip 2 }
   
 }
 
@@ -308,6 +356,7 @@ nhacPhienKhucBasMot = \relative c {
   a2
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
   \key d \major
   d,4 d8 fs |
   g4 g |
@@ -320,9 +369,21 @@ nhacPhienKhucBasMot = \relative c {
   gs2 |
   a8. a16 g8 a |
   e4 fs8 (a) |
-  d2 |
+  d,2 |
   
-  \key f \major
+  \repeat unfold 10 { \skip 2 }
+  \key g \major
+  g4 r8 fs |
+  g4 g8 g |
+  fs8. e16 a8 g |
+  fs4 e8 e |
+  d4 (e8 d) |
+  g2 |
+  g8 (a) a, a |
+  d2 ~ |
+  
+  
+  d4 r
   
 }
 
@@ -368,7 +429,11 @@ loiPhienKhucSopMot = \lyrics {
   \repeat unfold 9 { _ }
   \set stanza = "Êlia:"
   Nhớ làm chi cảnh ấy cho lòng nao nao
-  làm chi nông nổi ấy cho tháng ngày lao dao.
+  làm chi nông nổi ấy cho tháng ngày lao đao.
+  
+  Không, đã thỏa chí anh hào
+  cho thiên hạ biết Chúa nào thực hư.
+  
 }
 
 loiPhienKhucBasMot = \lyrics {
@@ -399,6 +464,10 @@ loiPhienKhucBasMot = \lyrics {
   đốt thiêu bàn thờ của lễ cháy tan tiêu
   trong tiếng tung hô ý chan hòa.
   Bao tay địch thủ từng tiêu điều.
+  
+  Không, đã thỏa chí anh hào,
+  thỏa chí anh hào cho thiên hạ biết
+  Chúa nào thực hư.
 }
 
 
