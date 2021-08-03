@@ -90,7 +90,7 @@ nhacPhienKhucSopMot = \relative c' {
   g8 r16 a e8 d16 e |
   f2 ~ |
   f8 d g f16 (g) |
-  a8 a16 a d8 e |
+  a8 a16 a d8 e | \break
   e2 ~ |
   e8
   
@@ -101,7 +101,7 @@ nhacPhienKhucSopMot = \relative c' {
   a4 \tuplet 3/2 { d,8 e f } |
   g4 r8
   
-  \revert NoteHead.font-size
+  \override NoteHead.font-size = #0
   g |
   g8. g16 \tuplet 3/2 { a8 e c } |
   d4 r8 f16 e |
@@ -113,6 +113,32 @@ nhacPhienKhucSopMot = \relative c' {
   g8 d r f |
   e (f) g a ~ |
   a bf4 a8 |
+  a2 \bar "||"
+  
+  \set Staff.printKeyCancellation = ##f
+  \key d \major
+  fs8 (a) fs e |
+  d g4 b8 |
+  a4 r8 a |
+  a4 cs8 (d) |
+  e fs4 e8 |
+  e2 |
+  cs8. e16 cs8 b ~ |
+  b fs4 a8 |
+  b2 |
+  a8. a16 b8 e, |
+  g (a4) e8 |
+  d2 | \break
+  
+  \key f \major
+  \override NoteHead.font-size = #-2
+  r8 d16
+  _\markup { \lower #3.3 \halign #-0.3 \italic "(Đàn)" }
+  c d8 a |
+  f' f16 e f8 d |
+  
+  a4 \tuplet 3/2 { a'8 e \afterGrace d (e8) } |
+  f4 \tuplet 3/2 { e8 d g } |
   
 }
 
@@ -172,7 +198,7 @@ nhacPhienKhucAltoMot = \relative c' {
   bf4 g8 f |
   e4 r |
   g8 (bf a g) |
-  <d' f,>2 ~ |
+  <d' f,>2 ^~ |
   <d f,>4 r |
   
   \repeat unfold 12 { \skip 2 }
@@ -182,6 +208,23 @@ nhacPhienKhucAltoMot = \relative c' {
   bf8 bf r d |
   c (d) e f ~ |
   f d4 e8 |
+  cs2
+  
+  \key d \major
+  fs8 (a) d, cs |
+  b b4 g'8 |
+  fs4 r8 fs |
+  e4 cs'8 (d) |
+  b8 a4 a8 |
+  gs2 |
+  e8. e16 e8 ds ~ |
+  ds ds4 e8 |
+  e2 |
+  cs8. cs16 d8 cs  |
+  b4. cs8 |
+  d2 |
+  
+  \key f \major
   
 }
 
@@ -262,6 +305,24 @@ nhacPhienKhucBasMot = \relative c {
   g8 g r d |
   g (f) e d ~ |
   d g4 f8 |
+  a2
+  
+  \set Staff.printKeyCancellation = ##f
+  \key d \major
+  d,4 d8 fs |
+  g4 g |
+  d r8 d'8 |
+  cs4 a |
+  gs8 a4 a8 |
+  e2 |
+  a8. a16 a8 b ~ |
+  b b4 a8 |
+  gs2 |
+  a8. a16 g8 a |
+  e4 fs8 (a) |
+  d2 |
+  
+  \key f \major
   
 }
 
@@ -299,7 +360,15 @@ loiPhienKhucSopMot = \lyrics {
   
   Ôi ngày huyết lệ,
   ôi ngày huyết lệ máu đỏ lênh láng suối Ki -- sông.
+  Lửa bởi trên trời,
+  lửa đốt thiêu bàn thờ của lễ cháy tan tiêu
+  trong tiếng tung hô Vị Chân Chúa.
+  Bao tay đối thủ đứng tiêu điều.
   
+  \repeat unfold 9 { _ }
+  \set stanza = "Êlia:"
+  Nhớ làm chi cảnh ấy cho lòng nao nao
+  làm chi nông nổi ấy cho tháng ngày lao dao.
 }
 
 loiPhienKhucBasMot = \lyrics {
@@ -323,6 +392,13 @@ loiPhienKhucBasMot = \lyrics {
   Người đi về đâu, đi về đâu.
   Thần Chúa dịu dàng đến trong mơ
   đánh thức tiên tri dậy thẫn thờ.
+  
+  Ôi ngày huyết lệ,
+  ôi ngày tuyệt lệ màu đỏ lên tràn suối Ki -- sông.
+  Lửa bới trên tới
+  đốt thiêu bàn thờ của lễ cháy tan tiêu
+  trong tiếng tung hô ý chan hòa.
+  Bao tay địch thủ từng tiêu điều.
 }
 
 
