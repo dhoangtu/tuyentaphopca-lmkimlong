@@ -82,9 +82,7 @@ nhacPhienKhucSopMot = \relative c' {
   e d |
   cs r |
   e4. (	cs8) |
-  r4 r8 a
-  ^\markup { \raise #3.3 \halign #-0.3 \bold "Thiên thần:" }
-  |
+  r4 r8 a |
   a4 (bf8) g | \break
   
   g8 r16 a e8 d16 e |
@@ -116,7 +114,7 @@ nhacPhienKhucSopMot = \relative c' {
   a2 \bar "||" \break
   
   \set Staff.printKeyCancellation = ##f
-  \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
+  %\set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
   \key d \major
   fs8 (a) fs e |
   d g4 b8 |
@@ -161,17 +159,55 @@ nhacPhienKhucSopMot = \relative c' {
   e8 cs4 cs8 |
   d2 |
   
-  \set Staff.printKeyCancellation = ##t
-  \set Staff.explicitKeySignatureVisibility = #all-invisible
-  \override Staff.KeySignature #'break-visibility = #all-invisible
+  %\set Staff.explicitKeySignatureVisibility = #all-visible
+  \override NoteHead.font-size = #-2
+  \oneVoice
   \key f \major
-  \oneVoice \stemNeutral
-  r8 d16
-  _\markup { \lower #3.3 \halign #-0.3 \italic "(Đàn)" }
-  c d8 g, |  \break
+  r8 d16 _\markup { \lower #4.5 \halign #-0.3 \italic "(Đàn)" }
+  \stemNeutral
+  c d8 g, | \break
   a a16 g a8 d, |
   e f16 e d c d e |
-  a,4 r8 
+  a,4 r8
+  \revert NoteHead.font-size
+  a16 a |
+  f'4. d8 |
+  bf'4. g16 g |
+  a4 r8 d16 d |
+  d4 d8 bf16 bf |
+  bf4 \tuplet 3/2 { g8 g g } |
+  a4 r8 g16 g |
+  g4 r8 g16 a |
+  a8 a,4 a8 |
+  d4 r8 f16 f |
+  f4 r8 e |
+  e g4 a8 |
+  \stemDown a2 ~ |
+  a4 r4 |
+  \skip 2
+  \skip 4.
+  
+  \oneVoice
+  \voiceOne
+  \stemNeutral  
+  g8 |
+  g4 f8 e ~ |
+  e a g4 |
+  bf b8\rest bf |
+  e,4 g8 g ~ |
+  g f f4 |
+  a r8 a |
+  a d d8. bf16 |
+  g8 a r g |
+  a e g8. a16 |
+  f8 d4. \bar "||" \break
+  
+  \key d \major
+  r2
+  r
+  r8 e e g |
+  bf4 gs8 a ~ |
+  a2
 }
 
 nhacPhienKhucAltoMot = \relative c' {
@@ -272,7 +308,26 @@ nhacPhienKhucAltoMot = \relative c' {
   b'8 a4 g8 |
   fs2 |
   
-  \repeat unfold 3 { \skip 2 }
+  \repeat unfold 16 { \skip 2 }
+  \stemUp
+  e'8
+  ^\markup { \halign #1 \italic "(Đàn)" }
+  f16 e d8 e16 d |
+  a4 \tuplet 3/2 { d8 e f } |
+  g4 r8 \skip 8 |
+  \repeat unfold 5 { \skip 2 }
+  a,4 r8 a |
+  g g f8. g16 |
+  e8 f r e |
+  d c e8. c16 |
+  d8 d4. |
+  
+  \key d \major
+  r2
+  r
+  r8 e e e |
+  fs4 e8 cs ~ |
+  cs2 |
   
 }
 
@@ -356,7 +411,7 @@ nhacPhienKhucBasMot = \relative c {
   a2
   
   \set Staff.printKeyCancellation = ##f
-  \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
+  %\set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
   \key d \major
   d,4 d8 fs |
   g4 g |
@@ -371,6 +426,7 @@ nhacPhienKhucBasMot = \relative c {
   e4 fs8 (a) |
   d,2 |
   
+  \key f \major  
   \repeat unfold 10 { \skip 2 }
   \key g \major
   g4 r8 fs |
@@ -382,8 +438,17 @@ nhacPhienKhucBasMot = \relative c {
   g8 (a) a, a |
   d2 ~ |
   
-  
+  %\set Staff.explicitKeySignatureVisibility = #all-visible
+  \key f \major
+  \oneVoice \stemNeutral
   d4 r
+  
+  \repeat unfold 28 { \skip 2 }
+  \key d \major
+  r8 d d fs |
+  a4 fs8 g ~ |
+  g4 r8 e |
+  ds4 e8 r |
   
 }
 
@@ -403,19 +468,20 @@ loiPhienKhucSopMot = \lyrics {
   
   xăm, xa xăm.
   
-  \set stanza = "Êlia:"
+  \set stanza = "(Êlia)"
   Chúa tôi ơi, Chúa tôi ơi!
   Thôi đã đủ rồi cho tôi về cõi đời
   đời phận tôi có tốt hơn người xưa đâu.
   Gió hú rừng sâu sương mờ cát trắng.
   Dưới gốc cây Người nằm im lặng.
   Ơ __ _ _ _ Ơ __ 
+  \set stanza = "(Thiên thần)"
   Con ơi, con ơi!
   Ngồi lên mà ăn uống
   này đây bình nước và này đây tấm bánh.
   
   \repeat unfold 10 { _ }
-  \set stanza = "Người kể:"
+  \set stanza = "(Người kể)"
   Tiên tri ăn uống đoạn lại nằm
   bắt tay lên nghĩ chuyện gần xa.
   
@@ -427,13 +493,26 @@ loiPhienKhucSopMot = \lyrics {
   Bao tay đối thủ đứng tiêu điều.
   
   \repeat unfold 9 { _ }
-  \set stanza = "Êlia:"
+  \set stanza = "(Êlia)"
   Nhớ làm chi cảnh ấy cho lòng nao nao
   làm chi nông nổi ấy cho tháng ngày lao đao.
   
   Không, đã thỏa chí anh hào
   cho thiên hạ biết Chúa nào thực hư.
   
+  \repeat unfold 17 { _ }
+  Một lần nữa Thần Chúa lại hiện ra.
+  Ê -- li -- a, hỡi Ê -- li -- a!
+  Này đường còn xa. Ăn đi con kìa
+  bãi cát dài và rộng.
+  Ăn đi con này thần lương sức sống.
+  
+  Tiên tri vội vàng nghe lời Chúa
+  thức dậy an tâm vào dùng bữa.
+  Liền được sức mới bởi thần lương
+  hăng hái làm sao bước lên đường.
+  
+  Đường dài vạn lý đường ơi!
 }
 
 loiPhienKhucBasMot = \lyrics {
@@ -468,6 +547,9 @@ loiPhienKhucBasMot = \lyrics {
   Không, đã thỏa chí anh hào,
   thỏa chí anh hào cho thiên hạ biết
   Chúa nào thực hư.
+  
+  Đường dài vạn lý đường ơi vạn nẻo đường,
+  đường dài vạn lý.
 }
 
 
