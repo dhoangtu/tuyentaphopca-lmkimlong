@@ -14,9 +14,25 @@
 nhacPhienKhucSopMot = \relative c' {
   \repeat volta 2 {
   %intro
+  \partial 8 r8 |
+  r <a' f>16 <g e> <a f>8 r |
+  r <g d bf>16 <f c a> <g d bf>8 r |
+  r8
+  \stemUp
+  d'16 c d8
+  f16
+  _\markup { \rest #"8" }
+  e |
+  f8 a16
+  _\markup { \rest #"8" }
+  g a8 d16
+  _\markup { \rest #"8" }
+  c | \break
+  \once \stemDown <d a>8
   
-  \partial 4. r8 r4 |
-  r \tuplet 3/2 { f8 e d } |
+  \stemNeutral
+  r8 r4 |
+  r \tuplet 3/2 { f,,8 e d } |
   e4 r |
   r \tuplet 3/2 { bf'8 a g } |
   a4 r |
@@ -203,18 +219,58 @@ nhacPhienKhucSopMot = \relative c' {
   f8 d4. \bar "||" \break
   
   \key d \major
-  r2
-  r
-  r8 e e g |
-  bf4 gs8 a ~ |
-  a2
+  \repeat volta 2 {
+    \bar ".|:"
+    r2
+    r
+    r8 e e g |
+    bf4 gs8 a ~ |
+    a2 |
+    e'8. d16 d8 cs |
+    r d b a |
+    a2 ~ |
+    a4 r |
+    r2
+    r8 e e g |
+    b4 gs8 a ~ |
+    a2 |
+    \once \stemUp fs'8. e16 g8 g |
+    r e e cs |
+  }
+  \alternative {
+   {
+     d2
+   }
+   {
+     <<
+     \new Voice = "splitpart" {
+       \voiceTwo
+       \stemUp d2 ~ |
+       d ~ |
+       d4 r \bar "|."
+     }
+     {
+       \voiceOne
+       \stemDown
+       \override NoteHead.font-size = #-2
+       fs,4 e8\rest fs |
+       g4 \tuplet 3/2 { g8 g e } |
+       fs4 r
+     }
+     >>
+   }
+  }
 }
 
 nhacPhienKhucAltoMot = \relative c' {
   %intro
-  
-  \partial 4. r8 r4 |
-  r \tuplet 3/2 { d8 a d } |
+  \skip 8
+  \skip 2
+  \skip 2
+  r4 <bf' g>8 r |
+  <d c a> r <g e> r |
+  <f d> r r4 |
+  r \tuplet 3/2 { d,8 a d } |
   as4 r |
   r \tuplet 3/2 { g'8 f e } |
   f4 r |
@@ -296,8 +352,10 @@ nhacPhienKhucAltoMot = \relative c' {
   
   \voiceTwo
   r8 d16
-  _\markup { \lower #3.3 \halign #-0.3 \italic "(Đàn)" }
-  d \stemDown g8 a |
+  _\markup { \lower #3 \halign #1.5 \italic "(Đàn)" }
+  d \stemDown g8
+  ^\markup { \rest #"4" }
+  a |
   
   \key g \major
   d,4 r8 c |
@@ -323,18 +381,46 @@ nhacPhienKhucAltoMot = \relative c' {
   d8 d4. |
   
   \key d \major
+  \repeat volta 2 {
   r2
   r
   r8 e e e |
   fs4 e8 cs ~ |
   cs2 |
-  
+  e8. a16 g8 e |
+  r a g g |
+  fs2 ~ |
+  fs4 r |
+  r2
+  r8 e e e 
+  fs4 e8 cs ~ |
+  cs2 |
+  d8. e16 b'8 b |
+  r a g g |
+  }
+  \alternative {
+    {
+      fs2
+    }
+    {
+      
+    }
+  }
 }
 
-nhacPhienKhucBasMot = \relative c {
+nhacPhienKhucBasMot = \relative c' {
   %intro
-  
-  \partial 4. r8 a a16 g |
+  \partial 8 d8
+  _\markup { \lower #3.3 \halign #-0.3 \italic "(Intro)" }
+  |
+  d,4 r8 c |
+  f4 r8 f |
+  bf4 g8 r |
+  d' r a r |
+  <d a d,>8
+  r8
+  \once \override NoteColumn.X-offset = 1
+  a, a16 g |
   a2 ~ |
   a8 r d d16 c |
   d2 ~ |
@@ -443,17 +529,41 @@ nhacPhienKhucBasMot = \relative c {
   \oneVoice \stemNeutral
   d4 r
   
+  
   \repeat unfold 28 { \skip 2 }
   \key d \major
+  \repeat volta 2 {
   r8 d d fs |
   a4 fs8 g ~ |
   g4 r8 e |
   ds4 e8 r |
-  
+  a,8. a16 cs8 e |
+  g8. fs16 g8 a |
+  r fs g (a) |
+  d,2 ~ |
+  d8 d d fs |
+  a4 fs8 g ~ |
+  g4 r8 e |
+  ds4 e8 r |
+  a,8. a16 cs8 e |
+  d8. a'16 e8 g |
+  r a a a |
+  }
+  \alternative {
+    {
+      d,2
+    }
+    {
+      <a' d,>4 r8 <a d,> |
+      <b g>4 \tuplet 3/2 { <b g>8 <b g> <bf g> } |
+      <a d,>4 r
+    }
+  }
 }
 
 % Lời phiên khúc
 loiPhienKhucSopMot = \lyrics {
+  \repeat unfold 18 { _ }
   Đất đây là đâu?
   Đất đây là đâu?
   Lòng lữ thứ lên cơn sầu thê thiết.
@@ -513,9 +623,17 @@ loiPhienKhucSopMot = \lyrics {
   hăng hái làm sao bước lên đường.
   
   Đường dài vạn lý đường ơi!
+  Bốn mươi đêm trọn, bốn mươi ngày ròng.
+  Mịt mù Hô -- rép rừng phong
+  có ai dấn bước đi trong bụi mờ.
+  
+  mờ
+  \override LyricText.font-shape = #'italic
+  (kìa ai đi trong bụi mờ).
 }
 
 loiPhienKhucBasMot = \lyrics {
+  \repeat unfold 10 { _ }
   Đây, đây là đâu?
   Đây, đây là đâu?
   Chiều sương lành lạnh gió gieo sầu,
@@ -550,6 +668,13 @@ loiPhienKhucBasMot = \lyrics {
   
   Đường dài vạn lý đường ơi vạn nẻo đường,
   đường dài vạn lý.
+  Bốn mươi đêm trót và ngày ròng.
+  Mịt mù Hô -- rép rừng phong
+  ô đẹp rừng.
+  Mịt mù Hô -- rép kìa ai lần bước
+  đi trong tối mờ.
+  
+  mờ kìa ai đi trong tối mờ.
 }
 
 
@@ -567,6 +692,7 @@ loiPhienKhucBasMot = \lyrics {
 			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
   print-page-number = ##f
+  page-count = 5
 }
 
 TongNhip = {
