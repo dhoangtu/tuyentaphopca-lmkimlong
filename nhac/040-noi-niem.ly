@@ -22,11 +22,14 @@ nhacPhienKhucSopMot = \relative c' {
   \stemUp
   d'16 c d8
   f16
+  \tweak extra-offset #'(0 . 3)
   _\markup { \rest #"8" }
   e |
   f8 a16
+  \tweak extra-offset #'(0 . 3)
   _\markup { \rest #"8" }
   g a8 d16
+  \tweak extra-offset #'(0 . 3)
   _\markup { \rest #"8" }
   c | \break
   \once \stemDown <d a>8
@@ -361,6 +364,7 @@ nhacPhienKhucAltoMot = \relative c' {
   r8 d16
   _\markup { \lower #3 \halign #1.5 \italic "(Đàn)" }
   d \stemDown g8
+  \tweak extra-offset #'(0 . -2)
   ^\markup { \rest #"4" }
   a |
   
