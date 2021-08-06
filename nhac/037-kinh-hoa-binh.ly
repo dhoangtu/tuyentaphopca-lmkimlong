@@ -19,8 +19,12 @@ nhacPhienKhucSopMot = \relative c' {
   e c c d |
   e4 c8 b |
   a2 ~ |
-  a4 e |
-  e' e |
+  a4 e
+  _\markup { \rest #"4" }
+  |
+  e'
+  _\markup { \rest #"8" }
+  e |
   f4. d8 |
   e4 d8 e |
   c4 a |
@@ -47,7 +51,9 @@ nhacPhienKhucAltoMot = \relative c'' {
   gs4 gs8 gs |
   a4 f8 f |
   e4 r4 |
-  r8 gs8 a a |
+  r8
+  \once \override NoteColumn.X-offset = 1
+  gs8 a a |
   a4 af |
   g g8 g |
   g4 g |
@@ -251,7 +257,10 @@ nhacPhienKhucTenorBa = \relative c' {
   r8 b c c |
   d4 b |
   c2 |
-  r8 c \stemUp d e |
+  r8 c \stemUp d
+  \tweak extra-offset #'(0 . 3)
+  -\markup { \raise #5 \rest #"4" }
+  e |
   a,4. e8 |
   \stemNeutral
   a a a (g) |
@@ -262,7 +271,9 @@ nhacPhienKhucTenorBa = \relative c' {
   d' d c (b) |
   c2 ~ |
   c4 r |
-  r8 a b c |
+  r8
+  \once \override NoteColumn.X-offset = 1
+  a b c |
   d4 ds |
   e2 ~ |
   e4 r |
@@ -305,13 +316,19 @@ nhacPhienKhucBasBa = \relative c {
   d4 a8 a |
   b2 |
   r
-  r8 a b c |
+  r8
+  \stemDown
+  a b c |
   d4 g,8 g |
   c2 |
-  r8 c
+  r8
   \stemDown
-  d e |
-  a,4. a'8 |
+  c d
+  ^\markup { \rest #"4" }
+  e |
+  a,4.
+  ^\markup { \rest #"8" }
+  a'8 |
   f d b4 |
   e2 ~ |
   e4 r |
