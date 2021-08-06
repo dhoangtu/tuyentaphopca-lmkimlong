@@ -12,9 +12,10 @@
 
 % Nhạc phiên khúc
 nhacPhienKhucSopMot = \relative c' {
+  \partial 8 r8 |
   \repeat volta 2 {
   %intro
-  \partial 8 r8 |
+  \bar ".|:"
   r <a' f>16 <g e> <a f>8 r |
   r <g d bf>16 <f c a> <g d bf>8 r |
   r8
@@ -106,6 +107,7 @@ nhacPhienKhucSopMot = \relative c' {
   f8 d g f16 (g) |
   a8 a16 a d8 e | \break
   e2 ~ |
+  \stemNeutral
   e8
   
   \override NoteHead.font-size = #-2
@@ -130,7 +132,6 @@ nhacPhienKhucSopMot = \relative c' {
   a2 \bar "||" \break
   
   \set Staff.printKeyCancellation = ##f
-  %\set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
   \key d \major
   fs8 (a) fs e |
   d g4 b8 |
@@ -149,12 +150,14 @@ nhacPhienKhucSopMot = \relative c' {
   \key f \major
   \override NoteHead.font-size = #-2
   r8 d16
-  _\markup { \lower #3.3 \halign #-0.3 \italic "(Đàn)" }
+  _\markup { \lower #4.5 \halign #-0.3 \italic "(Đàn)" }
   c d8 a |
   f' f16 e f8 d |
   
   \revert NoteHead.font-size
-  a4 \tuplet 3/2 { a'8 e \afterGrace d (e8) } |
+  a4
+  ^\markup { \raise #1 \halign #-0.3 \bold "(Êlia)" }
+  \tuplet 3/2 { a'8 e \afterGrace d _(e8) } |
   f4 \tuplet 3/2 { e8 d g } |
   g2 ~ |
   g8 g \tuplet 3/2 { bf d e } |
@@ -175,7 +178,6 @@ nhacPhienKhucSopMot = \relative c' {
   e8 cs4 cs8 |
   d2 |
   
-  %\set Staff.explicitKeySignatureVisibility = #all-visible
   \override NoteHead.font-size = #-2
   \oneVoice
   \key f \major
@@ -185,11 +187,14 @@ nhacPhienKhucSopMot = \relative c' {
   a a16 g a8 d, |
   e f16 e d c d e |
   a,4 r8
+  ^\markup { \raise #1 \bold "(Người kể)" }
   \revert NoteHead.font-size
   a16 a |
   f'4. d8 |
   bf'4. g16 g |
-  a4 r8 d16 d |
+  a4 r8
+  ^\markup { \raise #1 \bold "(Thiên thần)" }
+  d16 d |
   d4 d8 bf16 bf |
   bf4 \tuplet 3/2 { g8 g g } |
   a4 r8 g16 g |
@@ -206,7 +211,9 @@ nhacPhienKhucSopMot = \relative c' {
   \oneVoice
   \voiceOne
   \stemNeutral  
-  g8 |
+  g8
+  ^\markup { \raise #1 \halign #0 \bold "(Người kể)" }
+  |
   g4 f8 e ~ |
   e a g4 |
   bf b8\rest bf |
@@ -369,7 +376,7 @@ nhacPhienKhucAltoMot = \relative c' {
   \repeat unfold 16 { \skip 2 }
   \stemUp
   e'8
-  ^\markup { \halign #1 \italic "(Đàn)" }
+  ^\markup { \raise #1 \halign #1 \italic "(Đàn)" }
   f16 e d8 e16 d |
   a4 \tuplet 3/2 { d8 e f } |
   g4 r8 \skip 8 |
@@ -381,7 +388,6 @@ nhacPhienKhucAltoMot = \relative c' {
   d8 d4. |
   
   \key d \major
-  \repeat volta 2 {
   r2
   r
   r8 e e e |
@@ -397,15 +403,8 @@ nhacPhienKhucAltoMot = \relative c' {
   cs2 |
   d8. e16 b'8 b |
   r a g g |
-  }
-  \alternative {
-    {
-      fs2
-    }
-    {
-      
-    }
-  }
+
+  fs2
 }
 
 nhacPhienKhucBasMot = \relative c' {
@@ -497,7 +496,6 @@ nhacPhienKhucBasMot = \relative c' {
   a2
   
   \set Staff.printKeyCancellation = ##f
-  %\set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
   \key d \major
   d,4 d8 fs |
   g4 g |
@@ -524,7 +522,6 @@ nhacPhienKhucBasMot = \relative c' {
   g8 (a) a, a |
   d2 ~ |
   
-  %\set Staff.explicitKeySignatureVisibility = #all-visible
   \key f \major
   \oneVoice \stemNeutral
   d4 r
@@ -603,7 +600,6 @@ loiPhienKhucSopMot = \lyrics {
   Bao tay đối thủ đứng tiêu điều.
   
   \repeat unfold 9 { _ }
-  \set stanza = "(Êlia)"
   Nhớ làm chi cảnh ấy cho lòng nao nao
   làm chi nông nổi ấy cho tháng ngày lao đao.
   
