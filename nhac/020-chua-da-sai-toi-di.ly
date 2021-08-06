@@ -63,7 +63,23 @@ nhacPhienKhucSopMot = \relative c'' {
   d,4. d8 |
   a'4 a |
   g2 ~ |
-  g4 r \bar "|."
+  g4 r \bar "|." \break
+  
+  d'8. b16 b8 d |
+  c c4 b8 |
+  a2 |
+  a8. fs16 fs8 a |
+  g g4 e8 |
+  d4 r8 d |
+  a'8. gs16 a8 b |
+  c c r c |
+  a8. a16 b8 c |
+  d d r fs, |
+  fs8. fs16 a8 fs |
+  g4
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "|."
 }
 
 nhacPhienKhucAltoMot = \relative c' {
@@ -98,7 +114,20 @@ nhacPhienKhucAltoMot = \relative c' {
   d4. d8 |
   e4 fs |
   d2 ~ |
-  d4 r
+  d4 r | \break
+  
+  b'8. g16 g8 b |
+  a a4 g8 |
+  fs2 |
+  cs8. d16 ds8 e |
+  e e4 cs8 |
+  d4 r8 d |
+  cs8. e16 d8 g! |
+  e e r a |
+  d,8. d16 g8 a |
+  fs fs r e |
+  d8. d16 cs8 d |
+  b4
 }
 
 nhacPhienKhucBasMot = \relative c {
@@ -185,9 +214,16 @@ loiPhienKhucSopMot = \lyrics {
   Ân phúc thắp sáng hy vọng
   Nào người người hãy nắm tay hát mừng
   nắm tay hát mừng trời đất kết duyên.
+  
+  \set stanza = "1."
+  Xin Ngài một ý thơ hay cung nhạc
+  Cho chỉ là tiếng kêu trong sa mạc
+  Để tôi hòa lên câu hát mới
+  suốt đời truyền rao cho thế giới
+  Tình Ngài nhuần thấm muôn nơi.
 }
 
-loiPhienKhucSopMotA = \lyrics {
+loiPhienKhucSopHai = \lyrics {
   \set stanza = "2."
   Chúa đã sai tôi đi loan báo Tin mừng
   loan Tin mừng tình thương Chúa cho nhân loại mọi nơi
@@ -197,6 +233,14 @@ loiPhienKhucSopMotA = \lyrics {
   Thung lũng hãy lấp cho đầy
   Và mọi người sẽ thấy ơn Cứu độ
   thấy ơn Cứu độ của Chúa chúng ta.
+  
+  \set stanza = "2."
+  Xin được làm chứng nhân
+  luôn trung thực đâu sợ gì khó nguy
+  hay cơ cực
+  Nhìn gian trần đi trong bóng tối
+  Lấy tình Ngài tôi xin dẫn lối
+  Tựa vầng Hồng mãi rạng soi.
 }
 
 loiPhienKhucBasMot = \lyrics {
@@ -229,25 +273,6 @@ loiPhienKhucBasHai = \lyrics {
   thấy ơn Cứu độ Chúa chúng ta.
 }
 
-loiPhienKhucSopHai = \lyrics {
-  \set stanza = "1."
-  Xin Ngài một ý thơ hay cung nhạc
-  Cho chỉ là tiếng kêu trong sa mạc
-  Để tôi hòa lên câu hát mới
-  suốt đời truyền rao cho thế giới
-  Tình Ngài nhuần thấm muôn nơi.
-}
-
-loiPhienKhucSopBa = \lyrics {
-  \set stanza = "2."
-  Xin được làm chứng nhân
-  luôn trung thực đâu sợ gì khó nguy
-  hay cơ cực
-  Nhìn gian trần đi trong bóng tối
-  Lấy tình Ngài tôi xin dẫn lối
-  Tựa vầng Hồng mãi rạng soi.
-}
-
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
@@ -268,7 +293,7 @@ loiPhienKhucSopBa = \lyrics {
   score-system-spacing = #'((basic-distance . 13)
                              (minimum-distance . 13)
                              (padding . 2))
-  %page-count = 2
+  page-count = 2
 }
 
 TongNhip = {
@@ -322,7 +347,7 @@ notBePhu =
           \notBePhu -2 { \nhacPhienKhucAltoMot } }
         \new NullVoice = nhacThamChieuPhienKhucSopMot \nhacPhienKhucSopMot
         \new Lyrics \lyricsto nhacThamChieuPhienKhucSopMot \loiPhienKhucSopMot
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucSopMot \loiPhienKhucSopMotA
+        \new Lyrics \lyricsto nhacThamChieuPhienKhucSopMot \loiPhienKhucSopHai
       >>
     \new Staff <<
       \new Voice = "beBass" {
@@ -340,28 +365,9 @@ notBePhu =
         #'((basic-distance . 8)
 	   (minimum-distance . 8)
 	   (padding . 1))
+    \context {
+      \Staff \RemoveEmptyStaves
+      \override VerticalAxisGroup.remove-first = ##t
+    }
   }
-}
-
-\score {
-  \new ChoirStaff <<
-    \new Staff = diepKhuc \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-     \new Voice \TongNhip \partCombine 
-          \nhacPhienKhucSopHai
-          \notBePhu -2 { \nhacPhienKhucBasHai }
-        \new NullVoice = nhacThamChieuPhienKhucSopHai \nhacPhienKhucSopHai
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucSopHai \loiPhienKhucSopHai
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucSopHai \loiPhienKhucSopBa
-      >>
-  >>
-  \layout {
-    %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
-    \override Staff.TimeSignature.transparent = ##t
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-  } 
 }
