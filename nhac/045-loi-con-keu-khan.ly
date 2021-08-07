@@ -98,6 +98,7 @@ nhacPhienKhucBas = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhucSop = \lyricmode {
+  \override LyricText.extra-offset = #'(0 . -1)
   Tựa trầm hương thơm ngát.
   Tỏa bay về Tôn nhan Chúa Chúa ơi.
   Tay con vươn lên
@@ -106,6 +107,7 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiDiepKhucBas = \lyricmode {
+  \override LyricText.extra-offset = #'(0 . -1)
   Nguyện lời con kêu khấn
   Tỏa bay tới Tôn nhan Ngài
   lạy Chúa cho bàn tay con vươn lên
@@ -222,7 +224,11 @@ notBePhu =
           \nhacPhienKhucSop
           \notBePhu -2 { \nhacPhienKhucBas } }
         \new NullVoice = nhacThamChieuPhienKhucSop \nhacPhienKhucSop
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucSop \loiPhienKhucSopMot
+        \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.5
+        }
+        \lyricsto nhacThamChieuPhienKhucSop \loiPhienKhucSopMot
         \new Lyrics \lyricsto nhacThamChieuPhienKhucSop \loiPhienKhucSopHai
         \new Lyrics \lyricsto nhacThamChieuPhienKhucSop \loiPhienKhucSopBa
       >>
