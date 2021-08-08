@@ -510,9 +510,10 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff = diepKhuc \with {
+    \new Staff \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f
+        instrumentName = #"S"
       }
       <<
       \new Voice \TongNhip \partCombine 
