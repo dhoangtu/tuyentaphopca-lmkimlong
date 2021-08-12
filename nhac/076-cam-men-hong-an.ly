@@ -35,6 +35,29 @@ nhacDiepKhucSop = \relative c'' {
   c4 r |
   r4. c16 c |
   b8 a g a |
+  e2 ~ |
+  e4 r |
+  r4. e16 e |
+  c'8 c a c |
+  b2 ~ |
+  b4 r |
+  r8 b16 b c8 a |
+  e4 c8 (d) \bar ":|."
+  <>^\markup { \halign #0.1 \fontsize #1 \bold "ĐỂ KẾT" }
+  e4 r8 b' |
+  c8. c16 a8 a |
+  b4. g8 \bar "||"
+  
+  \key a \major
+  a4 r |
+  r8 a a a |
+  d4. d8 |
+  e4. cs8 |
+  d e cs (b) |
+  a2 ~ |
+  a ~ |
+  a ~ |
+  a4 \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c'' {
@@ -62,7 +85,28 @@ nhacDiepKhucAlto = \relative c'' {
   a4 r |
   r4. a16 a |
   gs8 e e d |
+  c2 ~ |
+  c4 r |
+  r4. c16 c |
+  e8 a f a |
+  <g e>2 ~ |
+  <g e>4 r |
+  r8 b16 b c8 a |
+  e4 c8 (d) |
+  e4 r8 gs |
+  a8. a16 f8 a |
+  gs4 e8 (d) |
   
+  \key a \major
+  cs8 cs cs cs |
+  fs4. gs8 |
+  fs4. fs8 |
+  b4. a8 |
+  fs fs e (d) |
+  cs4 cs8 cs |
+  fs4. d8 |
+  e2 ~ |
+  e4
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -89,7 +133,41 @@ nhacDiepKhucBas = \relative c' {
   c b4 d8 |
   e2 ~ |
   e4 r |
+  r4. e,8 |
+  a8. f16 d8 g |
+  c,2 ~ |
+  c4 r |
+  r2
+  r8 d'16 d e8 c |
+  a2 ~ |
+  a8 gs16 gs a8 f |
+  e d e4 |
+  a, f' |
+  e8 e e e |
   
+  \key a \major
+  a2 ~ |
+  a4 fs8 (e) |
+  d d a' b16 (a) |
+  gs4 e8 (fs) |
+  <<
+    {
+      \voiceOne
+      b8 b a (gs) |
+      a4 a8 a |
+      d4. b8 |
+      cs2 ~ |
+      cs4
+    }
+    \new Voice = "splitpart" {
+      \voiceTwo
+      b,4 e |
+      a,2 ~ |
+      a ~ |
+      a ~ |
+      a4
+    }
+  >>
 }
 
 % Lời điệp khúc
@@ -137,10 +215,10 @@ loiDiepKhucBas = \lyricmode {
   thành muối mặn nồng ướp đời.
   Nên con biết lấy gì, nên con biết lấy
   
-  gì cảm mến Ngày Chúa ơi.
+  gì cảm mến Ngài Chúa ơi.
   Trọn một vầng tim.
   Trọn một vầng tim sắt son
-  mến yêu trọn đời
+  mến yêu Chúa trọn đời
   mà cảm mến hồng ân.
 }
 
