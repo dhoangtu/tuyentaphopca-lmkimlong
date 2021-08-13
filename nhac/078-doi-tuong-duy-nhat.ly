@@ -23,7 +23,18 @@ nhacDiepKhucSop = \relative c' {
   r r8 d |
   b'8 b16 b b8 c |
   a4. d,8 |
-  
+  a' a16 a a4 ~ |
+  a8 a g a |
+  b2 ~ |
+  b4 e8 e |
+  e8. d16 c8 c |
+  e a,4 b16 (a) |
+  g4 r |
+  r2
+  r8 e a a |
+  a8. e16 d8 a' |
+  a g4. ~ |
+  g4 r \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -40,6 +51,18 @@ nhacDiepKhucAlto = \relative c' {
   r r8 d |
   g8 g16 g g8 a |
   fs4. d8 |
+  cs cs16 cs d4 |
+  d8 d e fs |
+  g2 ~ |
+  g4 c8 c |
+  c8. b16 a8 a |
+  g fs4 fs8 |
+  g4 r |
+  r2
+  r8 e d d |
+  c8. c16 b8 c |
+  c b4. ~ |
+  b4 r
 }
 
 nhacDiepKhucBas = \relative c {
@@ -56,15 +79,48 @@ nhacDiepKhucBas = \relative c {
   a8. ef16 fs8 fs |
   g4 r8 a, |
   d8 d16 d d4 |
-  
+  r8 e fs fs16 fs |
+  fs8 fs e d |
+  g,8. d'16 b8 d 
+  g2 ~ |
+  g4 r |
+  r r8 d |
+  b' b b8. a16 |
+  g8 g b e, ~ |
+  e4 r8 c |
+  a4 d8 <fs d> |
+  <fs d> <g g,>4. ~ |
+  <g g,>4 r
 }
 
 nhacPhienKhucSop = \relative c'' {
-  
+  g8 g fs b |
+  e,8. e16 g8 a |
+  d,4. b'8 |
+  c8. b16 a8 d |
+  d d4 c16 c |
+  e8 c a4 ~ |
+  a8 c a c |
+  b2 |
+  r8 b8 c c |
+  a4. d,16 d |
+  b'8 a4 a8 |
+  g4 r8 \bar "||"
 }
 
 nhacPhienKhucBas = \relative c' {
-  
+  \skip 2
+  \skip 2
+  d4. g8 |
+  a8. g16 fs8 a |
+  g fs4 a16 a |
+  c8 g fs4 ~ |
+  fs8 a fs a |
+  g2 |
+  r8 g e c |
+  d4. b16 b |
+  d8 c4 c8 |
+  b4 r8
 }
 
 % Lời điệp khúc
