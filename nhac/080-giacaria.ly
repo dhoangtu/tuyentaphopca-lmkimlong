@@ -12,12 +12,39 @@
 
 nhacIntroSop = \relative c'' {
   \key bf \major \time 2/4
-  
+  <<
+    {
+      \voiceOne
+      bf8. bf16 a8 g |
+      a2 |
+      ef'8. ef16 d8 c |
+      d2 |
+      c8. d16 g,8 g |
+      bf8. a16 \tuplet 3/2 { f8 f f } |
+      g4
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+	    g8. g16 f8 ef |
+	    d2 |
+	    bf'8. c16 bf8 a |
+	    g2 |
+	    ef2 |
+	    d4 \tuplet 3/2 { c8 c c } |
+	    bf4
+    }
+  >>
 }
 
 nhacIntroBas = \relative c {
   \key bf \major \time 2/4
-
+  R2
+  r4 \tuplet 3/2 { d8 f fs } |
+  g2 |
+  r4 \tuplet 3/2 { g8 bf b! } |
+  c4. c,8 |
+  d4 \tuplet 3/2 { d8 d d } |
+  <g g,>4 \bar "||"
 }
 
 % Nhạc phiên khúc
