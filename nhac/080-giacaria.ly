@@ -12,28 +12,25 @@
 
 nhacIntroSop = \relative c'' {
   \key bf \major \time 2/4
+  <bf g>8. <bf g>16 <a f>8 <g ef> |
+  <a d,>2 |
+  <ef' bf>8. <ef a,>16 <d bf>8 <c a> |
+  <d g>2 |
   <<
     {
       \voiceOne
-      bf8. bf16 a8 g |
-      a2 |
-      ef'8. ef16 d8 c |
-      d2 |
       c8. d16 g,8 g |
-      bf8. a16 \tuplet 3/2 { f8 f f } |
-      g4
+      bf8. a16
     }
     \new Voice = "splitpart" {
 	    \voiceTwo
-	    g8. g16 f8 ef |
-	    d2 |
-	    bf'8. c16 bf8 a |
-	    g2 |
 	    ef2 |
-	    d4 \tuplet 3/2 { c8 c c } |
-	    bf4
+	    d4
     }
   >>
+  \oneVoice
+  \tuplet 3/2 { <f c>8 <f c> <f c> } |
+  <g bf,>4 \bar "||"
 }
 
 nhacIntroBas = \relative c {
@@ -108,7 +105,11 @@ nhacPhienKhucSop = \relative c' {
   \partial 4 d4 \bar "||" \break
   
   \key bf \major
-  \partial 4 r4 |
+  \partial 4
+  <>^\markup {
+    \halign #-0.5 \bold "Não bạt, trống chiêng vang lên giữa hương trầm nghi ngút"
+  }
+  r4 |
   r \tuplet 3/2 { g8 g g } |
   bf4 r |
   r \tuplet 3/2 { a8 a a } |
