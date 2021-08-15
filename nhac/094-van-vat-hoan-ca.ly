@@ -35,13 +35,13 @@ nhacIntroBas = \relative c {
 % Nhạc phiên khúc
 nhacPhienKhucSolo = \relative c'' {
   \time 2/4
-  R2*82
-  
+  R2*81
+  r4
   \time 3/4
   R2.*15
   
   \time 2/4
-  R2*26 r4
+  R2*27
   \key f \major
   c4. a16 (g) |
   f8. (e16 f8 g) |
@@ -71,6 +71,23 @@ nhacPhienKhucSolo = \relative c'' {
   c2 ~ |
   c4 r
   
+  R2*27
+  \key af \major
+  <>^\markup {
+    \raise #3 \halign #0.8
+    \fontsize #2 \bold "Chị Chết"
+  }
+  c'4. af16 (g) |
+  f4 r8 c |
+  g'2 ~ |
+  g ~ |
+  g4 r |
+  R2
+  bf8. g16 bf8 b! |
+  c4. bf16 (c) |
+  af4 g8 af16 (g) |
+  f2 ~ |
+  f4 r |
   
 }
 
@@ -80,7 +97,11 @@ nhacPhienKhucSop = \relative c'' {
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1)
-  \partial 4 c8. a16 |
+  \partial 4
+  <>^\markup {
+    \raise #3 \halign #1 \fontsize #2 \bold "Khai Đề"
+  }
+  c8. a16 |
   g2 ~ |
   g ~ |
   g8 g e' (d) |
@@ -102,7 +123,12 @@ nhacPhienKhucSop = \relative c'' {
   c2 ~ |
   c4 \bar "|." \break
   
-  \partial 4 r4
+  \partial 4
+  <>^\markup {
+    \raise #3 \halign #-0.3
+    \fontsize #2 \bold "Tôn Huynh Mặt Trời"
+  }
+  r4
   \repeat volta 2
   {
     R2
@@ -141,6 +167,10 @@ nhacPhienKhucSop = \relative c'' {
   }
   \break
   
+  <>^\markup {
+    \raise #3 \halign #-0.3
+    \fontsize #2 \bold "Chị Trăng, Chị Sao"
+  }
   c4. g8 |
   \repeat volta 2
   {
@@ -166,12 +196,16 @@ nhacPhienKhucSop = \relative c'' {
       d8 c4 b8 |
       c2 ~ |
       c ~ |
-      c8 \fermata
+      c8 \fermata \bar "||" \break
     }
   }
-  \bar "|" \break
+  
   
   \key ef \major
+  <>^\markup {
+    \raise #3 \halign #-0.2
+    \fontsize #2 \bold "Anh Gió, Chị Mây"
+  }
   r4. |
   \repeat volta 2
   {
@@ -209,6 +243,10 @@ nhacPhienKhucSop = \relative c'' {
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1)
+  <>^\markup {
+    \raise #3 \halign #-0.3
+    \fontsize #2 \bold "Chị Nước Mênh Mông"
+  }
   R2. |
   r4 r8 g' e'8. d16 |
   d4 d8 g, d'8. c16 |
@@ -227,6 +265,10 @@ nhacPhienKhucSop = \relative c'' {
   
   \key f \major \time 2/4
   \set Timing.beatStructure = #'(1 1)
+  <>^\markup {
+    \raise #3 \halign #-0.3
+    \fontsize #2 \bold "Anh Lửa Rạng Ngời"
+  }
   R2*2
   d16 (e) d8 c bf |
   a4 a8 g |
@@ -252,6 +294,10 @@ nhacPhienKhucSop = \relative c'' {
   g2 ~ |
   g4 \bar "|." \break
   
+  <>^\markup {
+    \raise #3 \halign #-0.3
+    \fontsize #2 \bold "Mẹ Hiền Trái Đất"
+  }
   % đàn
   c,8. c16 |
   e8 f r a |
@@ -274,7 +320,128 @@ nhacPhienKhucSop = \relative c'' {
   r8 c r bf |
   c4 g8 c |
   a (g) e (f) |
+  \slashedGrace { a8 ( } g2 ~ ) |
+  g8 c g g |
+  c4 c8 a |
+  c a16 (g) r8 e16 (f) |
+  g4 r |
+  r8 a g r |
+  r a r a |
+  g4 r \bar "|." \break
   
+  <>^\markup {
+    \raise #3 \halign #-0.3
+    \fontsize #2 \bold "Người Tha Thứ Cho Người"
+  }
+  f8. g16 a8 g |
+  f f r d' |
+  c d r f |
+  c2 ~ |
+  c4 r |
+  R2
+  bf8. g16 bf8 c |
+  d4. c8 |
+  bf8. (g16) bf8 c |
+  c2 ~ |
+  c4 r |
+  R2
+  c16 (d) c8 a16 (g) a8 |
+  c4. a8 |
+  bf bf r g |
+  a4 r8 f |
+  g g r e |
+  f2 ~ |
+  f4 r |
+  r r8 c |
+  a'8. g16 g8 f |
+  \slashedGrace { \stemDown f16 ^(a \stemNeutral } bf4.) g8 |
+  \slashedGrace { \stemDown g16^(bf \stemNeutral } c2) |
+  f8 f r d |
+  d b!4 b8 |
+  c2 ~ |
+  c4 r \bar "|." \break
+  
+  \key af \major
+  R2*2
+  r4 r8 g |
+  f g r g16 (f) |
+  ef4 r8 f |
+  df (c) f f |
+  g2 ~ |
+  g4 r8 g |
+  f4 ef |
+  f2 ~ |
+  f4 r | \break
+  R2*2
+  r8 \tiny c f g \normalsize \bar "||"
+  
+  \key f \major
+  a8. g16 g8 f |
+  bf bf r g |
+  d' c4 bf8 |
+  a2 ~ |
+  a4 r |
+  r r8 bf ~ |
+  bf a a a16 a |
+  d8 (c4) b!8 |
+  b!2 ~ |
+  b!4 r \bar "||" \break
+  
+  \key c \major
+  <>^\markup {
+    \raise #3 \halign #-0.3
+    \fontsize #2 \bold "Chung Khúc"
+  }
+  R2
+  \repeat volta 2
+  {
+    e8. d16 c8 d |
+    b2 |
+    f'8. e16 d8 e |
+    c4. c8 |
+    a4 c16 (d) c8 |
+    g2 ~ |
+    g8 g f' e |
+    d4 g8 g |
+    c,2 ~ |
+    c4 r |
+    R2
+    c8. e16 d8 d |
+    f4 \tuplet 3/2 { f8 e e } |
+    g2 |
+    f8. d16 d8 e |
+    e4. e8 |
+    d2 |
+    d8. b16 b8 c |
+    c4. d8 |
+    b b4 a16 (g) |
+    e2 ~ |
+    e4 c8 c |
+    f4 \tuplet 3/2 { e8 e e } |
+    a4. g8 |
+    g2 ~ |
+    g4 r
+  }
+  \alternative
+  {
+    {
+      r g8 g |
+      e'4 \tuplet 3/2 { c8 c c } |
+      f4. e8 |
+      d2 ~ |
+      d4 r |
+      R2
+    }
+    {
+      r4 e,8 e |
+      a4 \tuplet 3/2 { g8 g g } |
+      d'4. c8 |
+      c2 ~ |
+      c ~ |
+      c4
+    }
+  }
+  \bar "|."
 }
 
 nhacPhienKhucAlto = \relative c'' {
@@ -438,7 +605,108 @@ nhacPhienKhucAlto = \relative c'' {
   r8 g r f |
   e4 e8 e |
   f (d) c4 |
+  c2 ~ |
+  c8 g' e e |
+  f4 f8 f |
+  f4 r8 c |
+  d4 r |
+  r8 f d r |
+  r f r f |
+  e4 r
   
+  R2
+  r4 f8. g16 |
+  a8 g f bf |
+  g2 |
+  e8. d16 e8 g |
+  a4. a8 |
+  g4. g8 |
+  f4 f8 f |
+  d4 f |
+  e2 ~ |
+  e4 r |
+  g16 (a) g8 e16 (d) e8 |
+  g4 c, |
+  c4. f8 |
+  d d r c |
+  f4 r8 d |
+  c c r bf |
+  a2 ~ |
+  a4 r |
+  r4 r8 c |
+  f8. c16 c8 c |
+  bf8. f'16 g8 f |
+  e4 f8. g16 |
+  a8 d r bf |
+  a g4 f8 |
+  e2 ~ |
+  e4 r
+  
+  \key af \major
+  R2*2
+  r4 r8 df8 |
+  c df r df |
+  c4 r4 |
+  r8 bf af4 |
+  df4. df8 |
+  c4 af8 (df) |
+  c4 bf |
+  af2 ~ |
+  af4 r |
+  R2*3 \bar "||"
+  
+  \key f \major
+  f'8. e16 e8 d |
+  g g r d |
+  bf' a4 g8 |
+  f2 ~ |
+  f4 r |
+  r r8 g ~ |
+  g f f f16 f |
+  g4 f |
+  d2 ~ |
+  d4 r \bar "||" \break
+  
+  \key c \major
+  R2
+  c'8. g16 e8 f |
+  d2 |
+  d'8. c16 g8 f |
+  e4. e8 |
+  c4 c8 c |
+  b8. b16 f'8 e |
+  d4. g8 |
+  f4 d8 (f) |
+  e2 |
+  d8. f16 e8 e |
+  g2 ~ |
+  g4 r8 g |
+  c4 \tuplet 3/2 { c8 c c } |
+  b2 ~ |
+  b4 r |
+  R2
+  g8. e16 e8 f |
+  f4. f8 |
+  e8. e16 d8 c |
+  b b4 b8 |
+  c2 ~ |
+  c4 g8 g |
+  a4 \tuplet 3/2 { c8 c c } |
+  d4 (c8) c |
+  b2 ~ |
+  b4 r |
+  r e8 e |
+  g4 \tuplet 3/2 { g8 g g } |
+  a4 (d8) c |
+  b2 ~ 
+  b4 r |
+  R2
+  r4 c,8 c |
+  d4 \tuplet 3/2 { c8 c c } |
+  f4. f8 |
+  e4 e8 e |
+  f4 \tuplet 3/2 { f8 a f } |
+  e4
 }
 
 nhacPhienKhucBas = \relative c' {
@@ -606,7 +874,131 @@ nhacPhienKhucBas = \relative c' {
   r8 e r g |
   c,4 c8 c |
   f4 a8 (f) |
+  c2 ~ |
+  c8 c c' bf |
+  a4 a8 f |
+  e4 r8 a |
+  g4 r |
+  r8 d g r |
+  r f r f |
+  c4 r
   
+  R2
+  a'8. bf16 c8 bf |
+  a a r g |
+  c c r bf |
+  c2 |
+  f,8. c16 d8 f |
+  g4. e8 |
+  d8. (c16) d8 f |
+  g4. d8 |
+  c2 |
+  c'16 (d) c8 a16 (g) a8 |
+  c2 ~ |
+  c8 c, f8 f |
+  e8. e16 f8 r |
+  r bf a r |
+  r f d r |
+  r bf g c |
+  f,4 a8 c |
+  f8. e16 d8 c |
+  \slashedGrace { \stemDown c16 ^(d \stemNeutral } f2 ~) |
+  f8 r16 e e8 e |
+  d4. d8 |
+  c2 |
+  r8 bf c bf |
+  f'4 e8 g, |
+  c2 ~ |
+  c4 r
+  
+  \key af \major
+  R2*2
+  r4 r8 bf' |
+  af bf r bf, |
+  c4 r |
+  r r8 f |
+  bf,4 f'8 f |
+  ef4 f8 bf, |
+  c4 c |
+  <f f,>2 |
+  f8. ef16 ef8 df |
+  c4 r8 af |
+  df df r bf |
+  c2 ~ |
+  
+  \key f \major
+  c4 r |
+  R2*2
+  r4 r8 c f4 e8. d16 |
+  d2 ~ |
+  d4 r8 f |
+  e4 d |
+  g2 ~ |
+  <<
+    {
+      \voiceTwo g4 r
+    }
+    \new Voice = "splitpart" {
+	    \voiceOne \tiny
+	    r8
+	    <>_\markup { \lower #3 \fontsize #2 "(Đàn...)" }
+	    g16 [a8 b!] \normalsize
+    }
+  >>
+  \bar "||" \break
+  \oneVoice
+  
+  \key c \major
+  c8. g16 f8 g |
+  c,2 |
+  g'8. d16 c8 d |
+  g,2 |
+  c8. b16 a8 c |
+  f4 c8 (f) |
+  g4. c8 |
+  b4. c8 |
+  d4 b8 (g) |
+  a2 ~ |
+  a4 r |
+  b8. d16 c8 c |
+  e4. b8 |
+  a4 \tuplet 3/2 { a8 c c } |
+  g2 ~ |
+  g4 r c8. a16 a8 b |
+  b4. c16 (d) |
+  g,4 g |
+  a4. f8 |
+  g4 g, |
+  c a8 a |
+  e'2 ~ |
+  e8 d \tuplet 3/2 { a'8 a g } |
+  f4. g8 |
+  g4 r8 g |
+  d d4 e16 (d) |
+  c2 ~ |
+  c8 b \tuplet 3/2 { e8 e e } |
+  d4. d8 |
+  g2 ~ |
+  g4 r8 g |
+  c8. g16 f8 a |
+  c,2 ~ |
+  c8 a \tuplet 3/2 { e'8 e e } |
+  <<
+    {
+      \voiceOne
+      a4 b |
+      g g8 g |
+      a4 \tuplet 3/2 { a8 c a } |
+      g4
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+	    d4 g, |
+	    c2 ~ |
+	    c ~ |
+	    c4
+    }
+  >>
 }
 
 % Lời phiên khúc
@@ -619,16 +1011,8 @@ loiPhienKhucSolo = \lyrics {
   Sáng danh Chúa Mẹ ơi, sáng danh Chúa (ơ) Mẹ ơi,
   sáng danh Chúa (ơ) Mẹ ơi!
   
-  A, a ơi sáng danh Chúa, Chúa ơi!
-  Mẹ chở cả loài người.
-  A, a ơi, a ơi.
-  A, a ơi Mẹ dưỡng sinh ngũ cốc
-  sáng danh Mẹ ơi, sáng danh Chúa (ơ) Mẹ ơi,
-  sáng danh a, a ơi!
-  sáng danh Chúa (ơ) Mẹ ơi!
-  
-  Sáng danh Chúa, Chúa ơi!
-  Ai người trên dương trần thoát khỏi tay chị.
+  Hỡi Tử Thần, chị Chết.
+  Ai người trên dương thế thoát khỏi bàn tay chị.
 }
 
 loiPhienKhucSop = \lyrics {
@@ -694,6 +1078,7 @@ loiPhienKhucSop = \lyrics {
   
   Sáng danh Chúa, Chúa ơi!
   Ai người trên dương thế thoát khỏi tay chị.
+  (Đàn...) _ _
   Phúc cho ai giờ vĩnh quyết trọn ý Cha trên trời.
   Không bị hại bởi sự chết đời đời.
   
@@ -760,7 +1145,7 @@ loiPhienKhucAlto = \lyrics {
   Mẹ chở cả loài người.
   A, a ơi, a ơi.
   A, a ơi Mẹ dưỡng sinh ngũ cốc
-  sáng danh Mẹ ơi, sáng danh Chúa (ơ) Mẹ ơi,
+  sáng danh Mẹ ơi, sáng danh Chúa Mẹ ơi,
   sáng danh a, a ơi.
   
   Người tha thứ cho người, Chúa ơi!
@@ -770,7 +1155,7 @@ loiPhienKhucAlto = \lyrics {
   trung kiên vui lễ sống bình yên,
   vui lẽ sống bình yên.
   Được Chúa muôn cao trọng thưởng,
-  đây Chúa Chúa trọng thưởng triều thiên rạng chói,
+  đây Chúa trọng thưởng triều thiên rạng chói,
   sáng chói vạn triều thiên.
   
   Sáng danh Chúa, Chúa ơi!
@@ -781,9 +1166,7 @@ loiPhienKhucAlto = \lyrics {
   Hỡi muôn loài muôn vật,
   hỡi muôn loài muôn vật
   ca tụng Đức Chúa Trời
-  nào hãy ca tụng Đức Chúa Trời
-  nào hãy ca tụng
-  ca tụng Chúa Trời.
+  nào hãy ca tụng ca tụng Chúa Trời
   Lời sáng danh tôn đức, tôn đức, sáng danh tôn đức.
   Câu cảm tạ trên môi Chúa ơi
   cảm tạ suốt cuộc đời khiêm hạ.
@@ -875,9 +1258,9 @@ loiPhienKhucBas = \lyrics {
   Thờ phượng Chúa cùng thờ phượng Vua Cả Ba Ngôi.
   Suốt cuộc đời khiêm hạ
   cùng thờ phượng Vua Cả Ba Ngôi.
-  Này...
+  Này hỡi muôn loài muôn...
   hạ cùng thờ phượng Vua Cả Ba Ngôi
-  thờ phượng Chúa, Thiên Chúa Ba Ngôi.
+  (thờ phượng Chúa, Thiên Chúa Ba Ngôi).
 }
 
 % Dàn trang
