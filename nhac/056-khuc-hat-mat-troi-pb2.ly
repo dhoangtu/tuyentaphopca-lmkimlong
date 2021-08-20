@@ -4,7 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Khúc Hát Mặt Trời" }
-  composer = "Lm. Kim Long"
+  composer = "Thơ: Xuân Ly Băng"
+  arranger = "Lm. Kim Long"
   tagline = ##f
 }
 
@@ -17,22 +18,11 @@ nhacPhienKhucSop = \relative c'' {
   \mark \markup { \musicglyph #"scripts.segno" }
   c,4. a'8 |
   a4 g8 g |
-  <<
-    {
-      \voiceOne
-      c2 ^( |
-      c4) r
-    }
-    {
-      \voiceTwo
-      g2 _( |
-      g4) r
-    }
-  >>
-  \oneVoice
-  r2
-  r
-  r4 e'8. ^> e16 |
+  c2 ~ |
+  c4 r |
+  R2
+  R
+  r4 e8. ^> e16 |
   d4 f8. ^> f16 |
   e4. d8 |
   b (c) d c |
@@ -102,7 +92,7 @@ nhacPhienKhucSop = \relative c'' {
   g4. c8 |
   d2 ~ |
   d4 r |
-  r2
+  R2
   r8 e c c |
   d4 b16 (c) d8 |
   g,4 g8 g |
@@ -127,25 +117,25 @@ nhacPhienKhucAlto = \relative c'' {
   \partial 4 g8. g16 |
   c,4. c8 |
   c4 b8 b |
-  c2 ~ |
-  c4 r |
-  r2
-  r
-  r4 c'8. c16 |
-  b4 d8. d16 |
+  <g' c,>2 ~ |
+  <g c,>4 r |
+  R2
+  R
+  r4 c8. ^> c16 |
+  b4 d8. ^> d16 |
   c4. a8 |
   g4 f8 e |
   d2 ~ |
-  d4 g8. e16 |
+  d4 g8. ^> e16 |
   a4. g8 |
   f f g (f) |
   e2 ~ |
-  e4 c'8. d,16 |
+  e4 c'8. ^> d,16 |
   d4. e16 (d) |
   c8 d4 d8 |
   e2 ~ |
   e4 g8. c,16 |
-  c4 a' ~ |
+  c4 a' ^> ~ |
   a8 a c c |
   b2 ~ |
   b4 r |
@@ -155,7 +145,7 @@ nhacPhienKhucAlto = \relative c'' {
   e4 c |
   b4. c8 |
   f8 f16 e f8 e |
-  d e4 a8 |
+  d e4 ^> a8 |
   gs2 ~ |
   gs4 r4 |
   r8 a a a16 a |
@@ -173,7 +163,7 @@ nhacPhienKhucAlto = \relative c'' {
   e4 r
   
   e8 r r4 |
-  r2
+  R2
   r8
   g16 g f8 e |
   a4 a8 a |
@@ -253,7 +243,7 @@ nhacPhienKhucBas = \relative c {
   c4 r
   
   c8 r r4 |
-  r2
+  R2
   r8 e16 e d8 c |
   f4 f8 d |
   e e16 f d8 d |
@@ -267,7 +257,7 @@ nhacPhienKhucBas = \relative c {
   e4. e8 |
   d d16 d e8 fs |
   g4 r |
-  r2
+  R2
   r8 c e, e |
   g4. f8 |
   e4 e8 e |
