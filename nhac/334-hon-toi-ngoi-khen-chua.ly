@@ -116,9 +116,16 @@ nhacPhienKhucSop = \relative c' {
       f2 ~ |
       f4 r |
       R2
-      
+      a8 c16 (bf) g8 a16 (c) |
+      f,8. (e16) f8 g |
+      a4. bf8 |
+      c4 \fermata r8 c,
     }
     {
+      d'8 c d4 ~ |
+      d e |
+      f2 ~ |
+      f4 r \bar "|."
     }
   }
 }
@@ -171,7 +178,15 @@ nhacPhienKhucAlto = \relative c' {
   a2 ~ |
   a4 r |
   g'8 bf16 (a) f8 g16 (a) |
+  d,4 bf |
+  a8. (bf16) a8 c |
+  f4. f8 |
+  e4 \fermata r
   
+  a8 g f4 ~ |
+  f bf |
+  a2 ~ |
+  a4 r
 }
 
 nhacPhienKhucBas = \relative c {
@@ -208,13 +223,13 @@ nhacPhienKhucBas = \relative c {
   <<
     {
       a8 bf c4 ~ |
-      c8 d <c bf> <c bf> |
+      c8 d c c |
       f2 ~ |
       f4
     }
-    {
+    \notBePhu -2 {
       f,8 g a4 ~ |
-      a8 bf g g |
+      a8 bf <bf g> <bf g> |
       <a f>2 ~ |
       <a f>4
     }
@@ -231,7 +246,15 @@ nhacPhienKhucBas = \relative c {
   f2 |
   f8 a16 (g) e8 f16 (g) |
   c,4 d8 (c) |
+  f4 e |
+  f8. (g16) f8 (e) |
+  d4 df |
+  c \fermata r
   
+  f8 e d4 ~ |
+  d c |
+  f2 ~ |
+  f4 r
 }
 
 loiPhienKhucSopMot = \lyrics {

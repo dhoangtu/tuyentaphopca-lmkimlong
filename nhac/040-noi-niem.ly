@@ -4,43 +4,44 @@
 
 \header {
   title = \markup { \fontsize #3 "Nỗi Niềm" }
-  composer = "Thơ: Lm. Xuân Ly Băng"
-  poet = "Ý: Tv. 18-19"
-  %arranger = "Lm. Kim Long"
+  composer = "Ý: Tv. 18-19"
+  arranger = "Thơ: Lm. Xuân Ly Băng"
+  opus = "Lm. Kim Long"
   tagline = ##f
 }
 
 % Nhạc phiên khúc
-nhacPhienKhucSopMot = \relative c' {
+nhacPhienKhucSop = \relative c'' {
+  \set Staff.printKeyCancellation = ##f
   \partial 8 r8 |
   \repeat volta 2 {
   %intro
   \bar ".|:"
-  r <a' f>16 <g e> <a f>8 r |
-  r <g d bf>16 <f c a> <g d bf>8 r |
-  r8
-  \stemUp
-  d'16 c d8
-  f16
-  \tweak extra-offset #'(0 . 3)
-  _\markup { \rest #"8" }
-  e |
-  f8 a16
-  \tweak extra-offset #'(0 . 3)
-  _\markup { \rest #"8" }
-  g a8 d16
-  \tweak extra-offset #'(0 . 3)
-  _\markup { \rest #"8" }
-  c | \break
-  \once \stemDown <d a>8
+  <<
+    {
+      b8\rest <a f>16 <g e> <a f>8 b\rest |
+      r <g d bf>16 <f c a> <g d bf>8 b\rest |
+      r8 d16 c d8
+      f16 e |
+      f8 a16 g a8 d16 c |
+      \once \stemDown <d a f d>8
+    }
+    \\
+    {
+      \skip 2
+      \skip 2
+      r4 <bf,, g>8 r |
+      <d c a> r <g e> r |
+      \skip 8
+    }
+  >>
   
-  \stemNeutral
-  r8 r4 |
-  r \tuplet 3/2 { f,,8 e d } |
+  r8 \bar "" \break r4 |
+  r \tuplet 3/2 { f8 e d } |
   e4 r |
   r \tuplet 3/2 { bf'8 a g } |
   a4 r |
-  r2
+  R2
   r4 r8 d, |
   bf' bf r g16 g |
   e4. g8 |
@@ -57,12 +58,12 @@ nhacPhienKhucSopMot = \relative c' {
   e f4 e8 |
   d2 ~ |
   d4 r |
-  r2
+  R2
   a8 c4 cs8 |
   d4 \tuplet 3/2 { f8 f e } |
   e2 ~ |
   e4 r |
-  r2
+  R2
   g,8 a4 bf8 |
   bf4 \tuplet 3/2 { a8 a cs } |
   }
@@ -77,7 +78,7 @@ nhacPhienKhucSopMot = \relative c' {
       d4 r8 \bar "|."
     }
   }
-  \break
+  \pageBreak
   
   \partial 8 d16 a |
   a4 r8 bf16 g |
@@ -108,9 +109,8 @@ nhacPhienKhucSopMot = \relative c' {
   g8 r16 a e8 d16 e |
   f2 ~ |
   f8 d g f16 (g) |
-  a8 a16 a d8 e | \break
-  e2 ~ |
-  \stemNeutral
+  a8 a16 a d8 e |
+  e2 ~ | \break
   e8
   
   \override NoteHead.font-size = #-2
@@ -118,7 +118,7 @@ nhacPhienKhucSopMot = \relative c' {
   _\markup { \lower #3.3 \halign #-0.3 \italic "(Đàn)" }
   e d8 e16 d |
   a4 \tuplet 3/2 { d,8 e f } |
-  g4 r8
+  g4 r8 \bar "" \break
   
   \override NoteHead.font-size = #0
   g |
@@ -134,7 +134,6 @@ nhacPhienKhucSopMot = \relative c' {
   a bf4 a8 |
   a2 \bar "||" \break
   
-  \set Staff.printKeyCancellation = ##f
   \key d \major
   fs8 (a) fs e |
   d g4 b8 |
@@ -149,7 +148,6 @@ nhacPhienKhucSopMot = \relative c' {
   g (a4) e8 |
   d2 | \break
   
-  \oneVoice \voiceOne \stemNeutral
   \key f \major
   \override NoteHead.font-size = #-2
   r8 d16
@@ -159,17 +157,28 @@ nhacPhienKhucSopMot = \relative c' {
   
   \revert NoteHead.font-size
   a4
-  ^\markup { \raise #1 \halign #-0.3 \bold "(Êlia)" }
   \tuplet 3/2 { a'8 e \afterGrace d _(e8) } |
   f4 \tuplet 3/2 { e8 d g } |
   g2 ~ |
   g8 g \tuplet 3/2 { bf d e } |
   e4. e8 |
   f cs4 d8 |
-  d2 ~ |
+  d2 (<>) |
   
-  \voiceOne
-  d4 r | \break
+  <<
+    {
+      d4 r
+    }
+    \\
+    {
+      \override NoteHead.font-size = #-2
+      r8
+      ^\markup { \lower #3 \halign #-2 \italic "(Đàn)" }
+      d,16 d g8 a
+      \revert NoteHead.font-size
+    }
+  >>
+  \break
   
   \key g \major
   b4 r8 d |
@@ -182,21 +191,18 @@ nhacPhienKhucSopMot = \relative c' {
   d2 |
   
   \override NoteHead.font-size = #-2
-  \oneVoice
   \key f \major
-  r8 d16 _\markup { \lower #4.5 \halign #-0.3 \italic "(Đàn)" }
-  \stemNeutral
+  r8 d16
+  _\markup { \lower #4.5 \halign #-0.3 \italic "(Đàn)" }
   c d8 g, | \break
   a a16 g a8 d, |
   e f16 e d c d e |
   a,4 r8
-  ^\markup { \raise #1 \bold "(Người kể)" }
   \revert NoteHead.font-size
   a16 a |
   f'4. d8 |
   bf'4. g16 g |
-  a4 r8
-  ^\markup { \raise #1 \bold "(Thiên thần)" }
+  a4 r8 \bar "" \break
   d16 d |
   d4 d8 bf16 bf |
   bf4 \tuplet 3/2 { g8 g g } |
@@ -206,33 +212,53 @@ nhacPhienKhucSopMot = \relative c' {
   d4 r8 f16 f |
   f4 r8 e |
   e g4 a8 |
-  \stemDown a2 ~ |
-  a4 r4 |
-  \skip 2
-  \skip 4.
-  
+  a2 (<>) |
+  <<
+    {
+      \voiceTwo
+      a4 r4 |
+      \skip 2
+      \skip 4.
+    }
+    \\
+    {
+      \voiceOne
+      \override NoteHead.font-size = #-2
+      e'8
+      ^\markup { \halign #1 \italic "(Đàn)" }
+      f16 e d8 e16 d |
+      a4 \tuplet 3/2 { d,8 e f } |
+      g4 b8\rest \bar "" \break
+    }
+  >>
   \oneVoice
-  \voiceOne
-  \stemNeutral  
-  g8
-  ^\markup { \raise #1 \halign #0 \bold "(Người kể)" }
-  |
+  g8 |
   g4 f8 e ~ |
   e a g4 |
   bf b8\rest bf |
   e,4 g8 g ~ |
   g f f4 |
   a r8 a |
-  a d d8. bf16 |
-  g8 a r g |
-  a e g8. a16 |
-  f8 d4. \bar "||" \break
+  <<
+    {
+      a d d8. bf16 |
+      g8 a r g |
+      a e g8. a16 |
+      f8
+    }
+    {
+      g8 g f8. g16 |
+      e8 f r e |
+      d c e8. c16 |
+      d8
+    }
+  >>
+  d8 ~ d4 \bar "||" \break
   
   \key d \major
   \repeat volta 2 {
     \bar ".|:"
-    r2
-    r
+    R2*2
     r8 e e g |
     bf4 gs8 a ~ |
     a2 |
@@ -240,11 +266,11 @@ nhacPhienKhucSopMot = \relative c' {
     r d b a |
     a2 ~ |
     a4 r |
-    r2
+    R2
     r8 e e g |
     b4 gs8 a ~ |
     a2 |
-    \once \stemUp fs'8. e16 g8 g |
+    fs'8. e16 g8 g |
     r e e cs |
   }
   \alternative {
@@ -252,39 +278,24 @@ nhacPhienKhucSopMot = \relative c' {
      d2
    }
    {
-     <<
-     \new Voice = "splitpart" {
-       \voiceTwo
-       \stemUp d2 ~ |
-       d ~ |
-       d4 r \bar "|."
-     }
-     {
-       \voiceOne
-       \stemDown
-       \override NoteHead.font-size = #-2
-       fs,4 e8\rest fs |
-       g4 \tuplet 3/2 { g8 g e } |
-       fs4 r
-     }
-     >>
+     d2 ~ |
+     d ~ |
+     d4 r
    }
   }
+  \bar "|."
 }
 
-nhacPhienKhucAltoMot = \relative c' {
-  %intro
-  \skip 8
-  \skip 2
-  \skip 2
-  r4 <bf' g>8 r |
-  <d c a> r <g e> r |
-  <f d> r r4 |
-  r \tuplet 3/2 { d,8 a d } |
+nhacPhienKhucAlto = \relative c' {
+  \set Staff.printKeyCancellation = ##f
+  r8
+  R2*4
+  r4 r
+  r \tuplet 3/2 { d8 a d } |
   as4 r |
   r \tuplet 3/2 { g'8 f e } |
   f4 r |
-  r2
+  R2
   r4 r8 d |
   g g r d16 d |
   d4. d8 |
@@ -301,12 +312,12 @@ nhacPhienKhucAltoMot = \relative c' {
   a <d a>4 <cs g>8 |
   <a f>2 ~ |
   <a f>4 r |
-  r2
+  R2
   f8 a4 a8 |
   a4 \tuplet 3/2 { d8 d d } |
   cs2 ~ |
   cs4 r |
-  r2
+  R2
   e,8 f4 f8 |
   d4 \tuplet 3/2 { c8 d g } |
   
@@ -357,19 +368,13 @@ nhacPhienKhucAltoMot = \relative c' {
   cs8. cs16 d8 cs  |
   b4. cs8 |
   d2 |
+  \key f \major
+  R2*9
   
-  \repeat unfold 9 { \skip 2 }
-  
-  \voiceTwo
-  r8 d16
-  _\markup { \lower #3 \halign #1.5 \italic "(Đàn)" }
-  d \stemDown g8
-  \tweak extra-offset #'(0 . -2)
-  ^\markup { \rest #"4" }
-  a |
+  R2
   
   \key g \major
-  d,4 r8 c |
+  d4 r8 c |
   g' (a) d, b |
   a2 ~ a4 e'8 e |
   d2 |
@@ -377,23 +382,10 @@ nhacPhienKhucAltoMot = \relative c' {
   b'8 a4 g8 |
   fs2 |
   
-  \repeat unfold 16 { \skip 2 }
-  \stemUp
-  e'8
-  ^\markup { \raise #1 \halign #1 \italic "(Đàn)" }
-  f16 e d8 e16 d |
-  a4 \tuplet 3/2 { d8 e f } |
-  g4 r8 \skip 8 |
-  \repeat unfold 5 { \skip 2 }
-  a,4 r8 a |
-  g g f8. g16 |
-  e8 f r e |
-  d c e8. c16 |
-  d8 d4. |
+  R2*29
   
   \key d \major
-  r2
-  r
+  R2*2
   r8 e e e |
   fs4 e8 cs ~ |
   cs2 |
@@ -401,20 +393,24 @@ nhacPhienKhucAltoMot = \relative c' {
   r a g g |
   fs2 ~ |
   fs4 r |
-  r2
+  R2
   r8 e e e 
   fs4 e8 cs ~ |
   cs2 |
   d8. e16 b'8 b |
   r a g g |
 
-  fs2
+  fs2 |
+  
+  fs4 e8\rest fs |
+  g4 \tuplet 3/2 { g8 g e } |
+  fs4 r
 }
 
-nhacPhienKhucBasMot = \relative c' {
+nhacPhienKhucBas = \relative c' {
   %intro
   \partial 8 d8
-  _\markup { \lower #3.3 \halign #-0.3 \italic "(Intro)" }
+  ^\markup { \halign #-0.3 \italic "(Intro)" }
   |
   d,4 r8 c |
   f4 r8 f |
@@ -563,8 +559,7 @@ nhacPhienKhucBasMot = \relative c' {
 }
 
 % Lời phiên khúc
-loiPhienKhucSopMot = \lyrics {
-  \repeat unfold 18 { _ }
+loiPhienKhucSop = \lyrics {
   Đất đây là đâu?
   Đất đây là đâu?
   Lòng lữ thứ lên cơn sầu thê thiết.
@@ -579,20 +574,20 @@ loiPhienKhucSopMot = \lyrics {
   
   xăm, xa xăm.
   
-  \set stanza = "(Êlia)"
+  \set stanza = "Êlia:"
   Chúa tôi ơi, Chúa tôi ơi!
   Thôi đã đủ rồi cho tôi về cõi đời
   đời phận tôi có tốt hơn người xưa đâu.
   Gió hú rừng sâu sương mờ cát trắng.
   Dưới gốc cây Người nằm im lặng.
-  Ơ __ _ _ _ Ơ __ 
-  \set stanza = "(Thiên thần)"
+  Ơ __ _ _ _ Ơ
+  \set stanza = "Thiên thần:"
   Con ơi, con ơi!
   Ngồi lên mà ăn uống
   này đây bình nước và này đây tấm bánh.
   
   \repeat unfold 10 { _ }
-  \set stanza = "(Người kể)"
+  \set stanza = "Người kể:"
   Tiên tri ăn uống đoạn lại nằm
   bắt tay lên nghĩ chuyện gần xa.
   
@@ -604,6 +599,7 @@ loiPhienKhucSopMot = \lyrics {
   Bao tay đối thủ đứng tiêu điều.
   
   \repeat unfold 9 { _ }
+  \set stanza = "Êlia:"
   Nhớ làm chi cảnh ấy cho lòng nao nao
   làm chi nông nổi ấy cho tháng ngày lao đao.
   
@@ -611,12 +607,15 @@ loiPhienKhucSopMot = \lyrics {
   cho thiên hạ biết Chúa nào thực hư.
   
   \repeat unfold 17 { _ }
+  \set stanza = "Người kể:"
   Một lần nữa Thần Chúa lại hiện ra.
+  \set stanza = "Thiên thần:"
   Ê -- li -- a, hỡi Ê -- li -- a!
   Này đường còn xa. Ăn đi con kìa
   bãi cát dài và rộng.
   Ăn đi con này thần lương sức sống.
   
+  \set stanza = "Người kể:"
   Tiên tri vội vàng nghe lời Chúa
   thức dậy an tâm vào dùng bữa.
   Liền được sức mới bởi thần lương
@@ -627,12 +626,47 @@ loiPhienKhucSopMot = \lyrics {
   Mịt mù Hô -- rép rừng phong
   có ai dấn bước đi trong bụi mờ.
   
-  mờ
-  \override LyricText.font-shape = #'italic
-  (kìa ai đi trong bụi mờ).
+  mờ.
 }
 
-loiPhienKhucBasMot = \lyrics {
+loiPhienKhucAlto = \lyrics {
+  Đất đây là đâu?
+  Đất đây là đâu?
+  Lòng lữ thứ lên cơn sầu thê thiết.
+  Ca -- mê -- lô xa rồi,
+  Ca -- mê -- lô xa rồi
+  còn đâu ngày oanh liệt,
+  còn đâu ngày oanh liệt
+  Bet -- sa -- bê xứ cây dầu.
+  Chừ đây cát trắng,
+  cát trắng mênh mang.
+  Chừ đây sức yếu mà đàng xa xăm.
+  
+  xăm, xa xăm.
+  
+  Gió hú rừng sâu sương mờ cát trắng.
+  Dưới gốc cây Người nằm im lặng.
+  Ơ __ _ _ _ _ Ơ __ _
+  
+  Ôi ngày huyết lệ,
+  ôi ngày huyết lệ máu đỏ lênh láng suối Ki -- sông.
+  Lửa bởi trên trời,
+  lửa đốt thiêu bàn thờ của lễ cháy tan tiêu
+  trong tiếng tung hô Vị Chân Chúa.
+  Bao tay đối thủ đứng tiêu điều.
+  
+  Không, đã thỏa chí anh hào
+  cho thiên hạ biết Chúa nào thực hư.
+  
+  Đường dài vạn lý đường ơi!
+  Bốn mươi đêm trọn, bốn mươi ngày ròng.
+  Mịt mù Hô -- rép rừng phong
+  có ai dấn bước đi trong bụi mờ.
+  
+  mờ kìa ai đi trong bụi mờ.
+}
+
+loiPhienKhucBas = \lyrics {
   \repeat unfold 10 { _ }
   Đây, đây là đâu?
   Đây, đây là đâu?
@@ -692,7 +726,7 @@ loiPhienKhucBasMot = \lyrics {
 			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
   print-page-number = ##f
-  page-count = 5
+  page-count = 6
 }
 
 TongNhip = {
@@ -718,26 +752,26 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
+    \new Staff <<
+      \new Voice = "beSop" {
+         \clef treble \TongNhip \nhacPhienKhucSop
       }
-      <<
-      \new Voice \TongNhip \partCombine
-            \nhacPhienKhucSopMot
-            \notBePhu -2 { \nhacPhienKhucAltoMot }
-      \new NullVoice = nhacThamChieuSopMot \nhacPhienKhucSopMot
-      \new Lyrics \lyricsto nhacThamChieuSopMot \loiPhienKhucSopMot
+      \new Lyrics \lyricsto beSop \loiPhienKhucSop
     >>
     \new Staff <<
-        \new Voice = "beBas" {
-          \clef bass \TongNhip \nhacPhienKhucBasMot
-        }
-        \new Lyrics \lyricsto beBas \loiPhienKhucBasMot
-      >>
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacPhienKhucAlto
+      }
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
+    >>
+    \new Staff <<
+      \new Voice = "beBas" {
+        \clef bass \TongNhip \nhacPhienKhucBas
+      }
+      \new Lyrics \lyricsto beBas \loiPhienKhucBas
+    >>
   >>
   \layout {
-    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override LyricHyphen.minimum-distance = #1.5

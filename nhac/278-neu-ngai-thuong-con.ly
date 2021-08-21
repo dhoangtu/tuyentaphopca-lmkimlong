@@ -4,7 +4,6 @@
 
 \header {
   title = \markup { \fontsize #3 "Nếu Ngài Thương Con" }
-  subtitle = "(He trusted in God that he would deliver him)"
   subsubtitle = "(Trích ORATORIO The Messiah, phần 2, đoạn 28)"
   composer = "Nhạc: G. F. Handel"
   arranger = "Lời Việt: Lm. Kim Long"
@@ -33,19 +32,7 @@ global = {
 
 % Nhạc phiên khúc
 nhacPhienKhucSop = \relative c'' {
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
+  R1*13
   r2 r4 c ^\f |
   g a!8 a bf g c4( |
   c8 bf16 a!) bf8 c d bf ef4 |
@@ -55,10 +42,7 @@ nhacPhienKhucSop = \relative c'' {
   r8 c ^\f f ef d8. c16 bf4 |
   r8 bf c4. c8 bf4( |
   bf) a! bf r |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
+  R1*4
   r8 f f' ef d8. c16 bf4 |
   r2 r4 bf |
   ef, f8 f g ef af4( |
@@ -74,20 +58,18 @@ nhacPhienKhucSop = \relative c'' {
   r8 bf f' ef d8. c16 bf4 |
   r8 c a! bf c d ef d |
   d4 c d8. d16 d4 |
-  r1 |
-  r1 |
-  r1 |
+  R1*3
   r2 r8 d, ^\mf d' c |
   b!8. a!16 g4 r2 |
   r8 d' g f ef8. d16 c4 |
   r8 c f ef d8. c16 bf4 |
-  r1 |
+  R1 |
   r4 g' ^\f c, d8 d |
   ef c f4.( ef16 d) ef8 f |
   g ef af4 r8 g g g |
   g f f f r af g f |
   ef4 d c r |
-  r1 |
+  R1 |
   r8 bf ^\f ef d c( d16 ef d8) c |
   bf4 r r8 c bf af |
   g( ef' d c bf g g'4 |
@@ -99,15 +81,7 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c'' {
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
+  R1*9
   r4 g ^\f c, d8 d |
   ef c f4.( ef16 d) ef8 f |
   g ef af4 r8 g g g |
@@ -145,7 +119,7 @@ nhacPhienKhucAlto = \relative c'' {
   a!( f bf a g a16 bf a8 g |
   fs d g2) fs4 |
   g8 d g f ef8. d16 c4 |
-  r1 |
+  R1 |
   r2 r8 f bf af |
   g2. f4 |
   g f ef g8 g |
@@ -165,10 +139,7 @@ nhacPhienKhucAlto = \relative c'' {
 }
 
 nhacPhienKhucTenor = \relative c' {
-  r1 |
-  r1 |
-  r1 |
-  r1 |
+  R1*4
   r2 r4 c ^\f |
   g a!8 a bf g c4( |
   c8 bf16 a!) bf8 c d bf ef4 |
@@ -198,7 +169,7 @@ nhacPhienKhucTenor = \relative c' {
   f4 g ef f |
   bf8( af) g af bf4. bf8 |
   bf bf ef ef d8. c16 bf4 |
-  r1|
+  R1|
   r2 r4 r8 c |
   f,4 g8 g af f bf4( |
   bf8 af16 g) af8 bf c4. c8 |
@@ -212,7 +183,7 @@ nhacPhienKhucTenor = \relative c' {
   a! bf16 c d8 c bf4) a |
   g  r r8 g8 c c |
   b!8. a!16 g4 r2 |
-  r1 |
+  R1 |
   r8 g ef' d c( d16 ef d8) c |
   b! c d b g'4.( f8 |
   ef4 d2 c8 b! |
@@ -242,8 +213,7 @@ nhacPhienKhucBass = \relative c' {
   d fs g c, d4 fs |
   g8 f ef d ef4 f8( g) |
   c,4 r r2 |
-  r1 |
-  r1 |
+  R1*2
   r4 g' c, c8 d |
   ef4 d8( c) g'( bf) a!( g) |
   fs4 g8 a! bf g c c |
@@ -258,19 +228,12 @@ nhacPhienKhucBass = \relative c' {
   r4 r8 ef, c4 d |
   bf c f8 ef d ef |
   f4. f8 bf,4 r |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
+  R1*4
   r2 r8 bf bf' af |
   g8. f16 ef4 r2 |
   r2 r8 g c bf |
   af8. g16 f4 r2 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
+  R1*5
   r2 r4 d ^\f |
   g, a!8 a bf g c4( |
   c8 bf16 a!) bf8 c d bf ef4( |

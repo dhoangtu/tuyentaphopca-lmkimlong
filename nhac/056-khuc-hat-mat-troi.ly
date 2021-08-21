@@ -4,35 +4,25 @@
 
 \header {
   title = \markup { \fontsize #3 "Khúc Hát Mặt Trời" }
-  composer = "Lm. Kim Long"
+  composer = "Thơ: Xuân Ly Băng"
+  arranger = "Lm. Kim Long"
   tagline = ##f
 }
 
 % Nhạc phiên khúc
 nhacPhienKhucSop = \relative c'' {
   \partial 4
-  <>^\markup { \raise #2 \fontsize #6 \box \bold A }
+  <>^\markup { \raise #1 \fontsize #6 \box \bold A }
   g8. g16 \bar "||"
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
   c,4. a'8 |
   a4 g8 g |
-  <<
-    {
-      \voiceOne
-      c2 ^~ |
-      c4 r
-    }
-    {
-      \voiceTwo
-      g2 ^~ |
-      g4 r
-    }
-  >>
-  \oneVoice
-  r2
-  r
-  r4 e'8. ^> e16 |
+  c2 ~ |
+  c4 r |
+  R2
+  R
+  r4 e8. ^> e16 |
   d4 f8. ^> f16 |
   e4. d8 |
   b (c) d c |
@@ -44,8 +34,8 @@ nhacPhienKhucSop = \relative c'' {
   c4 c8. ^> d,16 |
   d4. e16 (d) |
   c8 g'4
-  \stemUp a16 (g) |
-  \stemNeutral \slashedGrace {e16 ^(} g2) ^~ |
+  a16 (g) |
+  \slashedGrace {e16 (} g2) ~ |
   g4 c8. a16 |
   a4 f' ^> ~ |
   f8 c ef d |
@@ -53,32 +43,25 @@ nhacPhienKhucSop = \relative c'' {
   d4 r |
   r8 ef8 d4 ^( |
   d8) d c b |
-  \stemUp c2 ^~ |
+  c2 ^~ |
   c8 c16 b c8 a |
-  \stemNeutral g4. c8 |
+  g4. c8 |
   d d16 c d8 c |
   b c4 ^> d8 |
   e2 ~ |
-  e4 d8\rest
-  d16
-  \tweak extra-offset #'(0 . 2)
-  _\markup { \tiny \rest #"4" }
-  d |
+  e4 r8 |
+  d16 d |
   d8 d d b16 b |
-  b4 d8\rest
-  \tweak extra-offset #'(0 . 2)
-  _\markup { \tiny \rest #"4" }
+  b4 r8 |
   c16 c |
   c8 c c a16 a |
   a2 |
-  \skip 2
-  \skip 2
+  r2
+  r
   r8 d16
-  \stemUp c c8 f ^> |
-  f ^> r \stemUp g ^>
-  \tweak extra-offset #'(0 . 3)
-  _\markup { \tiny \rest #"4" }
-  a ^> |
+  c c8 f ^> |
+  f ^> r g ^>
+  g ^> |
   r b,4 b8 |
   c2
   \tweak extra-offset #'(-3 . 0)
@@ -91,10 +74,10 @@ nhacPhienKhucSop = \relative c'' {
   ~ |
   c4 r \bar "|." \break
   
-  <>^\markup { \raise #3 \fontsize #6 \box \bold B }
-  c8
+  <>^\markup { \raise #1 \fontsize #6 \box \bold B }
+  c8 \repeatTie
   %^\tweak control-points #'((-2 . 3) (-1 . 3.1) (0 . 3.2) (1 . 2.4)) ( <> )
-  \slashedGrace { d16 (} e4
+  \slashedGrace { \once \stemDown d16 ^(} e4
   ) c8 |
   d d16 d g,8 g |
   c2 ^~ |
@@ -109,8 +92,8 @@ nhacPhienKhucSop = \relative c'' {
   g4. c8 |
   d2 ~ |
   d4 r |
-  r2
-  f8\rest e c c |
+  R2
+  r8 e c c |
   d4 b16 (c) d8 |
   g,4 g8 g |
   d'4. b8 |
@@ -134,25 +117,25 @@ nhacPhienKhucAlto = \relative c'' {
   \partial 4 g8. g16 |
   c,4. c8 |
   c4 b8 b |
-  c2 ~ |
-  c4 r |
-  r2
-  r
-  r4 c'8. c16 |
-  b4 d8. d16 |
+  <g' c,>2 ~ |
+  <g c,>4 r |
+  R2
+  R
+  r4 c8. ^> c16 |
+  b4 d8. ^> d16 |
   c4. a8 |
   g4 f8 e |
   d2 ~ |
-  d4 g8. e16 |
+  d4 g8. ^> e16 |
   a4. g8 |
   f f g (f) |
   e2 ~ |
-  e4 c'8. d,16 |
+  e4 c'8. ^> d,16 |
   d4. e16 (d) |
   c8 d4 d8 |
   e2 ~ |
   e4 g8. c,16 |
-  c4 a' ~ |
+  c4 a' ^> ~ |
   a8 a c c |
   b2 ~ |
   b4 r |
@@ -162,44 +145,38 @@ nhacPhienKhucAlto = \relative c'' {
   e4 c |
   b4. c8 |
   f8 f16 e f8 e |
-  d e4 a8 |
+  d e4 ^> a8 |
   gs2 ~ |
-  gs4 \skip 4 |
+  gs4 r4 |
   r8 a a a16 a |
   g4 \skip 4 |
   r8 g g g16 g |
-  f2 r8 g16 e
-  \tweak extra-offset #'(0 . -0.6)
-  ^\markup { \rest #"2" }
-  e8 a |
-  a4 d8
-  \tweak extra-offset #'(0 . -0.6)
-  ^\markup { \rest #"2" }
-  (c) |
-  b8.
-  \tweak extra-offset #'(0 . -1)
-  ^\markup { \rest #"8" }
-  a16 g4 |
-  a8 _> \once \stemDown a _> r4 |
+  f2 |
+  r8 g16 e e8 a |
+  a4 d8 (c) |
+  b8. a16 g4 |
+  a8 ^> a ^> r4 |
   r8 g4 f8 |
   e2 |
   
   e2 ~ |
   e4 r
   
-  e8 r r4 |
-  r2
+  e8 \repeatTie r r4 |
+  R2
   r8
   g16 g f8 e |
   a4 a8 a |
   g g16 c, f8 f |
   e2 ~ |
-  e4 \skip 4
-  \repeat unfold 5 { \skip 2 }
+  e4 g8. g16 g4. f8 |
+  ef8 (f) g ef |
+  d4. d8 |
+  \slashedGrace { d16 ( } e8.) d16 c8 c |
+  c4 r8 g'16 g |
   g4. g8 |
   fs fs16 fs g8 a |
-  b4
-  \stemDown b8 b
+  b4 b8 b
   c4 b16 (a) d8 |
   g,2 ~ |
   g8 g d b |
@@ -208,18 +185,18 @@ nhacPhienKhucAlto = \relative c'' {
   e2 ~ |
   e4 g8. g16 |
   g4. f8 |
-  e d c4 |
+  ef d c4 |
   b r |
   c b8 b |
   c f f4 |
   e2 ~ |
-  e4
+  e4 g8. g16
 }
 
 nhacPhienKhucBas = \relative c {
-  \partial 4 g8. g16 |
-  c4. g8 |
-  f'4 f8 f |
+  \partial 4 g'8. g16 |
+  c,4. f8 |
+  f4 f8 f |
   e2 ~ |
   e4 e16 (d) g8 |
   c,4. f8 |
@@ -227,7 +204,7 @@ nhacPhienKhucBas = \relative c {
   g2 ~ |
   g8 g ^> a ^> b ^> |
   c4 c,8 d |
-  e e <a\=1^( d,\=2_(> <c\=1) e,\=2)> |
+  e e <a\=1^( d,\=2_(> <c\=1) c,\=2)> |
   <b g>2 ~ |
   <b g>4 g8. ^> e16 |
   a4. cs,8 |
@@ -246,7 +223,7 @@ nhacPhienKhucBas = \relative c {
   d (g) e d |
   c2 ~ |
   c4 e8 (f) |
-  g g16 f g8 c, |
+  g g16 f g8 e |
   d4 b8 (c) |
   d a4 ^> f'8 |
   e2 ~ |
@@ -258,15 +235,15 @@ nhacPhienKhucBas = \relative c {
   r |
   r8 f16 d d8 g |
   g4 e |
-  d8 ^> d r4 |
+  d8 ^> d ^> r4 |
   g4 ^> g, |
   c2
   
   c2 ~ |
   c4 r
   
-  c8 r r4 |
-  r2
+  c8 \repeatTie r r4 |
+  R2
   r8 e16 e d8 c |
   f4 f8 d |
   e e16 f d8 d |
@@ -280,7 +257,7 @@ nhacPhienKhucBas = \relative c {
   e4. e8 |
   d d16 d e8 fs |
   g4 r |
-  r2
+  R2
   r8 c e, e |
   g4. f8 |
   e4 e8 e |
@@ -302,14 +279,14 @@ loiPhienKhucSop = \lyrics {
   Cất tiếng lên, cất tiếng lên
   rung chuyển bốn phương nào
   Ca hòa đi tuyên xưng danh Thiên Chúa.
-  Hỡi Mặt Trời oai hùng muôn ánh lửa
-  Người ngày ngày xóa màn tối âm u,
+  Hỡi mặt trời oai hùng muôn ánh lửa
+  Ngươi ngày ngày xua màn tối âm u,
   quét đi tất cả mù sương
   ngươi hiện ra huy hoàng
   hiện ra
   ngươi hiện ra huy hoàng
   tràn ý sống
-  Trên không trung cao xanh là lồng lộng,
+  Trên không trung cao xanh và lồng lộng,
   Trên không trung cao xanh và lồng lộng,
   ngươi nhịp nhàng tiến bước
   tiến bước lượng thời gian.
@@ -325,32 +302,44 @@ loiPhienKhucSop = \lyrics {
   Để giải phóng ngàn dân.
   Ta nao nao ôn nhớ đến vô vàn
   Ơn lành thánh
-  Vì Ngài ta phong phú.
+  vì Ngài ta phong phú.
   
   Hỡi vũ...
 }
 
 loiPhienKhucAlto = \lyrics {
-  \override Lyrics.LyricText.font-shape = #'italic
-  \repeat unfold 49 { _ }
+  Hỡi vũ trụ bao la và huyền bí
+  Cất tiếng lên, cất tiếng lên
+  rung chuyển bốn phương nào
+  Ca hòa đi tuyên xưng danh Thiên Chúa.
+  Hỡi mặt trời oai hùng muôn ánh lửa
+  Ngươi ngày ngày xua màn tối âm u,
+  quét đi tất cả mù sương
   ngươi hiện ra huy hoàng
-  \repeat unfold 20 { _ }
+  hiện ra
+  ngươi hiện ra huy hoàng
+  tràn ý sống
+  cao xanh và lồng lộng,
+  cao xanh và lồng lộng,
   ngươi nhịp nhàng tiến bước
-  tiến bước nhịp nhàng
-  tiến bước hướng thời gian
+  tiến bước nhịp nhàng tiến bước hướng thời gian.
   
-  gian
+  gian.
   
   _ khi đêm tàn ngày đến,
   ngươi hiện hình trên màn bạc trời đông.
-  
-  trời công bình,
+  Ta say sưa chiêm niệm sáng trong lòng
+  hình ảnh của một mặt trời,
+  một mặt trời công bình,
   một mặt trời công chính.
   Con Thiên Chúa xưa giáng trần
   lãnh việc chuộc đời
-  \repeat unfold 13 { _ }
-  Ơn lành
-  Vì Ngài ta phong phú.
+  Để giải phóng ngàn dân.
+  Ta nao nao ôn nhớ đến vô vàn
+  Ơn lành 
+  vì Ngài ta phong phú.
+  
+  Hỡi vũ...
 }
 
 loiPhienKhucBas = \lyrics {
@@ -359,8 +348,8 @@ loiPhienKhucBas = \lyrics {
   Tự muôn đời sinh dựng bởi Muôn Cao
   Nào mau lên tiếng làm rung chuyển mọi phương nao
   Ca hòa đi tuyên xưng danh hiền Chúa.
-  Hỡi Mặt Trời oai hùng muôn ánh lửa rực soi muôn lối,
-  Người ngày ngày dẹp tan mọi âm u,
+  Hỡi mặt trời oai hùng muôn ánh lửa rực soi muôn lối,
+  Ngươi ngày ngày dẹp tan mọi âm u,
   Và quét đi tất cả lạnh sương mù
   hiện ra ngươi hiện ra huy hoàng
   hiện ra tràn sống động
@@ -379,8 +368,8 @@ loiPhienKhucBas = \lyrics {
   một mặt trời công chính
   giáng trần nhận lãnh cứu đời
   Để giải phóng ngàn dân.
-  Ta nao nao ôn lại cả muôn vàn
-  Ơn lánh thánh, vì Ngài ta phong phú.
+  Ta nao nao ôn lại cả vô vàn
+  Ơn lành thánh, vì Ngài ta phong phú.
   Hỡi vũ...
 }
 
@@ -430,19 +419,18 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff = diepKhuc \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacPhienKhucSop
       }
-      <<
-     \new Voice = "beSop" { \TongNhip \partCombine 
-          \nhacPhienKhucSop
-          \notBePhu -2 { \nhacPhienKhucAlto } }
-        \new NullVoice = nhacThamChieuPhienKhucSop \nhacPhienKhucSop
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucSop \loiPhienKhucSop
-        \new NullVoice = nhacThamChieuPhienKhucAlto \nhacPhienKhucAlto
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucAlto \loiPhienKhucAlto
+      \new Lyrics \lyricsto "beSop" \loiPhienKhucSop
       >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacPhienKhucAlto
+      }
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
+    >>
     \new Staff <<
       \new Voice = "beBass" {
         \clef bass \TongNhip \nhacPhienKhucBas
@@ -452,7 +440,6 @@ notBePhu =
   >>
   \layout {
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-  }
+    \override Lyrics.LyricSpace.minimum-distance = #1
+  } 
 }

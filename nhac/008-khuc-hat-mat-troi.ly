@@ -38,78 +38,12 @@ nhacPhienKhucSopMot = \relative c'' {
   e'4 g,8 g |
   #(define afterGraceFraction (cons 1 5))
   \afterGrace d'2 ( { \stemDown e16 d ) } |
+  \stemNeutral
   c2 ~ |
   c ~ |
-  c4 \bar "||"
-}
-
-nhacPhienKhucAltoMot = \relative c' {
-  \partial 4 r4
-  r2
-  r4 f |
-  f8 e f4 |
-  g2 ~ |
-  g4 f8 g16 (f) |
-  c4 c ~( |
-  c d8 c) |
-  b2 ~ |
-  b4 r |
-  r8 d d c16 d |
-  e8 e e d16 e |
-  g2 ~ |
-  g8 e g g |
-  f (e) d (c) |
-  b4 b8 r |
-  c r c e |
-  f4. c8 |
-  f g g (f) |
-  e2 ~ |
-  e4 r |
-  r e8 g16 (a) |
-  g8. g16 f8 f |
-  e4. f8 |
-  g4 e8 e |
-  a (af) g (f) |
-  e4 e8 e |
-  f4 f |
-  e
-}
-
-nhacPhienKhucBasMot = \relative c' {
-  \partial 4 g4 |
-  c8. g16 a8 (g) |
-  d2 ~ |
-  d4 d |
-  c8 c c g16 c |
-  d8 d d c16 d |
-  e8 e f fs |
-  g2 ~ |
-  g4 r |
-  r d |
-  g8 g g e16 g |
-  c4 a |
-  b8 b b a16 b |
-  c4 c, |
-  d8 c d f |
-  g4 f8 r |
-  e r r c' |
-  f,8. g16 f8 e |
-  d4 g |
-  a2 ~ |
-  a4 d,8 f |
-  e8. d16 d8 e |
-  g4. g8 |
-  a g c (d |
-  c4) r8 c |
-  <c f,>4 <b g> |
-  <c c,> <g c,>8 <g c,> |
-  <a f>4 <af f> |
-  <g c,>
-}
-
-nhacPhienKhucSopHai = \relative c'' {
-  \set Score.currentBarNumber = #29
-  \partial 4 r4
+  c4 \bar "||" \break
+  
+  r4
   r2
   r4 g8 g |
   e4. _(d8) g4 r |
@@ -136,7 +70,9 @@ nhacPhienKhucSopHai = \relative c'' {
   r
   r4 r8 a
   e'4. c8 d d d16 (e d c) |
-  a4 r |
+  a4
+  \once \override NoteColumn.X-offset = 2 <>
+  r |
   r2
   r
   r4 e8 b |
@@ -214,7 +150,7 @@ nhacPhienKhucSopHai = \relative c'' {
   c4 d8 (c) |
   g4 e8 e |
   a4. (g8) |
-  a2 |
+  a2 ~ |
   a ~ |
   a4 r |
   r2
@@ -268,48 +204,94 @@ nhacPhienKhucSopHai = \relative c'' {
   c4 r |
   
   \time 3/4
-  r2 r4
+  r2 r4 | \break
   
   \time 2/4
+  r4 d' |
+  d8 c d4 |
+  e2 |
+  d4. (e16 d) |
+  c8 c d (c) |
+  g2 ~ |
+  g4 r |
+  r g8 c |
+  b8. b16 a8 b |
+  c4. a8 |
+  e'4 g,8 g |
+  \afterGrace d'2 ({\stemDown e16 d)} |
+  \stemNeutral
+  c2 ~ |
+  c ~ |
+  c ~ |
+  c ~ |
+  c4 \fermata  \bar "|."
 }
 
-nhacPhienKhucAltoHai = \relative c' {
+nhacPhienKhucAltoMot = \relative c' {
   \partial 4 r4
   r2
+  r4 f |
+  f8 e f4 |
+  g2 ~ |
+  g4 f8 g16 (f) |
+  c4 c ~( |
+  c d8 c) |
+  b2 ~ |
+  b4 r |
+  r8 d d c16 d |
+  e8 e e d16 e |
+  g2 ~ |
+  g8 e g g |
+  f (e) d (c) |
+  b4 b8 r |
+  c r c e |
+  f4. c8 |
+  f g g (f) |
+  e2 ~ |
+  e4 r |
+  r e8 g16 (a) |
+  g8. g16 f8 f |
+  e4. f8 |
+  g4 e8 e |
+  a (af) g (f) |
+  e4 e8 e |
+  f4 f |
+  e r4
+  r2
   r4 e8 e |
-  \skip 2 |
+  e4. (d8) |
   b4 r |
   r e8 _(f) |
   e4 f8 f |
-  e4 \skip 4 |
+  e4 r |
   r4 r8 e |
   g g f4 |
   e d8 c |
   b4 r |
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  g'4 g8 g |
+  r8 g' e16 (g e d) |
+  c2 ~ |
+  c4 f8 c' |
+  c8. g16 d (f) g8 |
+  a4 r8 g |
+  c4. _(a16 g) |
+  f8 a d, f |
+  g4. g8 |
+  g4 g8 g |
   fs f! e ^(d) |
   g2 ~ |
   g4 r |
   r2
   r2
-  \skip 2
-  \skip 2
-  \skip 2
+  r
+  r
+  r
   r4 r8 b |
   b4 a8 c |
   c c b16 (c b a) |
-  e4 r |
-  \skip 2
-  \skip 2
-  \skip 2
+  e4 e8 b |
+  e e a16 (g) a8 |
+  b4 b8 e, |
+  c' b a a |
   gs2 ~ |
   gs4 a8 e16 ^(d) |
   c8 f e d |
@@ -320,14 +302,16 @@ nhacPhienKhucAltoHai = \relative c' {
   r g8 g16 g |
   a4 c8 a |
   f4 g8 (f) |
-  e4 \skip 4
-  \skip 2.
-  \skip 2.
-  \skip 2 fs4
+  e4 e | \break
+  
+  \time 3/4
+  f4. e8 d4 |
+  g2 e4 |
+  a4. g8 fs4
   
   g2 ~ |
   g4 b16 (d b a) |
-  \stemDown g4 d |
+  g4 d |
   e8. e16 e8 (g) |
   fs2 ~ |
   fs4 r |
@@ -338,12 +322,12 @@ nhacPhienKhucAltoHai = \relative c' {
   r
   r4 f |e8 e d e |
   g2 ~ |
-  g |
+  g ~ |
   g4 r |
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
+  c4. g8 |
+  g _> g _> a (g) |
+  d4 r |
+  r2
   g4. e8 |
   e e e4 |
   d e8 f |
@@ -351,46 +335,48 @@ nhacPhienKhucAltoHai = \relative c' {
   e4 r8 g |
   c c16 c bf8 g |
   
-  f4 \skip 4 |
+  \key f \major
+  f4 c |
   f _(d8 f) |
   e4 e8 d |
   c4 ^(d8 e) |
-  f4 \skip 4 |
-  \skip 2
-  \skip 2
+  f4 r4 |
+  r2
+  r2
   r4 c8 c |
   a' f bf (a) |
   g2 ~ |
   g4 r
-  \skip 2
-  \skip 2
-  \skip 4 c,4 |
+  r2
+  \key c \major
+  e8 (d) e (g) |
+  c,4 c4 |
   c c |
   b2 ~ |
-  b4 \skip 4
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
+  b4 r4
+  r2
+  r
+  r
+  r
+  r
+  r
+  r
   c4 f8 ^(e) |
-  d8. d16 \stemDown g4 |
+  d8. d16 g4 |
   a8 (c) a (g) |
   g2 ~ |
   g4 r
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 4. d8 |
+  r2
+  r
+  r
+  c4. af8 ^>|
+  af ^> af ^> bf4 |
+  g2 ~ |
+  g4 r |
+  d'4. b8 ^> |
+  d ^> d ^> c4 |
+  g e8 (d) |
+  c4.  b8 |
   c2 |
   e4. f8 |
   e e e g |
@@ -400,31 +386,84 @@ nhacPhienKhucAltoHai = \relative c' {
   f4. f8 |
   e2 ~ |
   e4 r |
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
-  \skip 2
+  c c' |
+  af g8 d |
+  g2 |
+  af4 g |
+  d g8 g |
+  d' (ef) d (c) |
+  c4 c8 c |
+  d4 c |
+  af8. af16 c8 (af) |
   g4 ef8 g |
   d ef c d |
   g,2 |
   g' |
-  \skip 2
-  \skip 2
+  g4 c |
+  a a8 (g) |
   a4 a |
   gs2 |
   a4 a |
   d, e |
   g g |
   a2
+  g4. g8 |
+  af4 g |
+  c4. c,8 |
+  c2 ~ |
+  c4 r |
+  
+  r2 r4 |
+  
+  r4 f |
+  f8 e f4 |
+  g2 ~ |
+  g4 f8 (g16 f) |
+  c8 c c4 |
+  b2 ~ |
+  b4 r |
+  r e8 g16 (a) |
+  g8. g16 f8 f |
+  e4. f8 |
+  g4 e8 e |
+  a (af) g (f) |
+  e4 e8 e |
+  f4 f |
+  e e8 e |
+  f4 f |
+  e \fermata
 }
 
-nhacPhienKhucBasHai = \relative c' {
-  g8 c |
+nhacPhienKhucBasMot = \relative c' {
+  \partial 4 g4 |
+  c8. g16 a8 (g) |
+  d2 ~ |
+  d4 d |
+  c8 c c g16 c |
+  d8 d d c16 d |
+  e8 e f fs |
+  g2 ~ |
+  g4 r |
+  r d |
+  g8 g g e16 g |
+  c4 a |
+  b8 b b a16 b |
+  c4 c, |
+  d8 c d f |
+  g4 f8 r |
+  e r r c' |
+  f,8. g16 f8 e |
+  d4 g |
+  a2 ~ |
+  a4 d,8 f |
+  e8. d16 d8 e |
+  g4. g8 |
+  a g c (d |
+  c4) r8 c |
+  <c f,>4 <b g> |
+  <c c,> <g c,>8 <g c,> |
+  <a f>4 <af f> |
+  <g c,> g8 c |
   a8. f16 g (f) d8 |
   c2 ~ |
   c4 r |
@@ -586,52 +625,6 @@ nhacPhienKhucBasHai = \relative c' {
   c8. c16 g8 g a (g)
   
   \time 2/4
-}
-
-nhacPhienKhucSopBa = \relative c'' {
-  \time 2/4
-  \set Score.currentBarNumber = #180
-  \bar ""
-  r4 d |
-  d8 c d4 |
-  e2 |
-  d4. (e16 d) |
-  c8 c d (c) |
-  g2 ~ |
-  g4 r |
-  r g8 c |
-  b8. b16 a8 b |
-  c4. a8 |
-  e'4 g,8 g |
-  \afterGrace d'2 ({\stemDown e16 d)} |
-  c2 ~ |
-  c ~ |
-  c ~ |
-  c ~ |
-  c4 \fermata  \bar "|."
-}
-
-nhacPhienKhucAltoBa = \relative c' {
-  r4 f |
-  f8 e f4 |
-  g2 ~ |
-  g4 f8 (g16 f) |
-  c8 c c4 |
-  b2 ~ |
-  b4 r |
-  r e8 g16 (a) |
-  g8. g16 f8 f |
-  e4. f8 |
-  g4 e8 e |
-  a (af) g (f) |
-  e4 e8 e |
-  f4 f |
-  e e8 e |
-  f4 f |
-  e \fermata
-}
-
-nhacPhienKhucBasBa = \relative c {
   d2 ~ |
   d4 d |
   c8 c c g16 c |
@@ -658,6 +651,38 @@ loiPhienKhucSopMot = \lyrics {
   Chúa ơi riêng Chúa xứng muôn kinh.
   Ai dám gọi tên Chúa, gọi tên Chúa uy linh.
   Lạy Chúa tôi, tôi ngợi khen Chúa vì Chúa tạo dựng muôn loài.
+  Anh phân ngày đêm ánh sáng chiếu khắp nơi.
+  Anh đẹp và hào quang anh chiếu rạng
+  Chúa cao vời.
+  Lạy Chúa tôi, tôi ngợi khen Chúa vì Chúa dựng các chị trăng sao
+  đẹp tươi và lấp lánh giữa trời cao.
+  Vì Chúa dựng nên anh Gió trời.
+  Anh Trời quang và anh Không Khí,
+  Chúa đặt các anh là vật quý để giữ gìn nuôi dưỡng sinh linh.
+  Lạy vạn lạy Chúa,
+  lạy vạn lạy Chúa tôi, tôi ngợi khen Chúa
+  vì Chúa đã dựng nên dòng nước chị chúng tôi.
+  Nước cần (mà) nước quý,
+  nước trong trắng đầy vơi
+  Chúa tôi, tôi ngợi khen Chúa.
+  Anh hùng mạnh và anh đẹp.
+  Anh hùng mạnh và anh đẹp anh dễ coi.
+  Lạy Chúa tôi, tôi ngợi khen Chúa
+  vì Chúa dựng nên (đây) Mẹ Đất chúng tôi
+  Mẹ sinh hoa đồng cỏ nội.
+  Và bốn mùa sinh trái tốt tươi.
+  Lạy Chúa tôi, tôi ngợi khen Chúa
+  vì bao người một lòng mến Chúa.
+  Vẫn một lòng mà vui chịu,
+  vẫn một lòng mà vui chịu, vui chịu trước sau.
+  Phúc cho người bình an vững chí.
+  Chúa ơi Chúa sẽ thưởng triều thiên.
+  Lạy Chúa tôi, tôi ngợi khen Chúa vì Chúa dựng chị chết
+  chúng tôi ai mong thoát tay chị ở trên đời
+  Hạnh phúc thay người khi hấp hối biết tuân phục thánh ý Chúa tôi
+  vì người ấy không chết đời đời.
+  Ca khen tạ hơn Chúa suốt đời (mà) khiêm hạ.
+  Lạy Chúa tôi, tôi ngợi khen Chúa vì Chúa tạo dựng muôn loài.
 }
 
 loiPhienKhucAltoMot = \lyrics {
@@ -667,6 +692,43 @@ loiPhienKhucAltoMot = \lyrics {
   Ai, ai gọi tên Chúa,
   gọi tên Chúa uy linh.
   Lạy Chúa tôi, tôi ngợi khen Chúa vì Chúa tạo dựng muôn muôn loài,
+  tạo dựng muôn muôn loài.
+  Anh phân ngày đêm ánh sáng chiếu khắp nơi.
+  hào quang anh chiếu rạng anh chiếu rạng
+  Chúa cao vời.
+  Lạy Chúa tôi, tôi ngợi khen Chúa vì Chúa dựng các chị trăng sao
+  đẹp tươi và lấp lánh giữa trời cao.
+  Anh Mây và bát tiết với tứ thời
+  Anh Trời quang và anh Không Khí,
+  Chúa đặt các anh là vật quý để giữ gìn nuôi dưỡng sinh linh.
+  Lạy vạn lạy Chúa,
+  lạy vạn lạy Chúa tôi, tôi ngợi khen Chúa
+  vì Chúa đã dựng nên dòng nước chị chúng tôi.
+  Nước cần,
+  nước cần (mà) nước quý,
+  nước đầy vơi.
+  Chúa tôi, tôi ngợi khen Chúa.
+  Anh hùng mạnh và anh đẹp.
+  Anh hùng mạnh và anh đẹp,
+  anh dễ coi, anh dễ coi.
+  (Đàn) __ _ _ _ _ _ _
+  Lạy Chúa tôi, tôi ngợi khen Chúa
+  Mẹ bồng bế, mẹ dưỡng nuôi).
+  Và bốn mùa sinh trái tốt tươi.
+  Hằng sẵn sàng mà tha thứ cho nhau.
+  Vẫn một lòng mà vui chịu,
+  vẫn một lòng mà vui chịu, vui chịu trước sau.
+  Phúc cho người bình an vững chí.
+  Chúa ơi, Chúa ơi Chúa sẽ thưởng triều thiên.
+  Lạy Chúa tôi, tôi ngợi khen Chúa vì Chúa dựng chị chết
+  chúng tôi ai mong thoát tay chị ở trên đời
+  vô phúc người chết còn vương tội lỗi.
+  Hạnh phúc thay người khi hấp hối biết tuân phục thánh ý Chúa tôi
+  vì người ấy không chết đời đời.
+  Ca khen tạ ơn Chúa suốt đời (mà) khiêm hạ.
+  Lạy Chúa tôi, tôi ngợi khen Ngài
+  vì Chúa tạo dựng muôn muôn loài,
+  tạo dựng muôn muôn loài,
   tạo dựng muôn muôn loài.
 }
 
@@ -680,66 +742,6 @@ loiPhienKhucBasMot = \lyrics {
   Lạy Chúa tôi, tôi ngợi khen Chúa,
   ngợi khen vì Chúa đã dựng muôn loài,
   tạo dựng muôn muôn loài.
-}
-
-loiPhienKhucSopHai = \lyrics {
-  Anh phân ngày đêm ánh sáng chiếu khắp nơi.
-  Anh đẹp và hào quang anh chiếu rạng
-  Chúa cao vời.
-  Lạy Chúa tôi, tôi ngợi khen Chúa vì Chúa dựng các chị trăng sao
-  đẹp tươi và lấp lánh giữa trời cao.
-  Vì Chúa dựng nên anh Gió trời.
-  Anh Trời quang và anh Không Khí,
-  Chúa đặt các anh là vật quý để giữ gìn nuôi dưỡng sinh linh.
-  Lạy vạn lạy Chúa,
-  lạy vạn lạy Chúa tôi, tôi ngợi khen Chúa
-  vì Chúa đã dựng nên dòng nước chị chúng tôi.
-  nước cần (mà) nước quý,
-  nước trong trắng đầy vơi
-  Chúa tôi, tôi ngợi khen Chúa.
-  Anh hùng mạnh và anh đẹp.
-  Anh hùng mạnh và anh đẹp anh dễ coi.
-  Lạy Chúa tôi, tôi ngợi khen Chúa
-  vì Chúa dựng nên (đây) Mẹ Đất chúng tôi
-  Mẹ sinh hoa đồng cỏ nội.
-  và bốn mùa sinh trái tốt tươi.
-  Lạy Chúa tôi, tôi ngợi khen Chúa
-  vì bao người một lòng mến Chúa.
-  Hằng
-  Vẫn một lòng mà vui chịu,
-  vẫn một lòng mà vui chịu, vui chịu trước sau.
-  Phúc cho người bình an vững chí.
-  Chúa ơi Chúa sẽ thưởng triều thiên.
-  Lạy Chúa tôi, tôi ngợi khen Chúa vì Chúa dựng chị chết
-  chúng tôi ai mong thoát tay chị ở trên đời
-  Hạnh phúc thay người khi hấp hối biết tuân phục thánh ý Chúa tôi
-  vì người ấy không chết đời đời.
-}
-
-loiPhienKhucAltoHai = \lyrics {
-  \override LyricText.font-shape = #'italic
-  _ _ _ _ _ _ _ _ _ _ _ _ _
-  (anh chiếu rạng)
-  _ _ _ _ _ _ _
-  Anh Mây và bát tiết với tứ thời
-  _ _ _ _ _ _ _ _ _ _ _ _ _
-  _ _ _ _ _ _ _ _ _ _
-  Nước cần,
-  _ _ _ _ _
-  (nước đầy vơi).
-  _ _ _ _ _ _ _ _ _ _ _ _ _
-  (anh dễ coi)
-  _ _ _ (Đàn...)
-  _ _ _ _ _ _ _ _ _ _ _ _
-  (Mẹ bồng bế, mẹ dưỡng nuôi).
-  _ _ _ _ _ (sẵn sàng mà tha thứ cho nhau).
-  _ _ _ _ _ _ _ _ _ _ _ (Chúa ơi)
-  _ _ _ _ _ _
-  (vô phúc người chết còn vương tội lỗi)
-  
-}
-
-loiPhienKhucBasHai = \lyrics {
   Vì Chúa riêng dựng anh Mặt Trời,
   anh cho ánh sáng.
   Anh tượng trưng uy quyền Chúa cao vời.
@@ -764,24 +766,7 @@ loiPhienKhucBasHai = \lyrics {
   vì Chúa dựng chị chết chúng tôi ai mong thoát tay chị ở trên đời.
   Hạnh phúc thay người khi hấp hối biết tuân phục thánh ý Chúa tôi
   vì người ấy không chết đời đời.
-  Lạy Chúa chúng tôi xin chúc
-}
-
-loiPhienKhucSopBa = \lyrics {
-  Ca khen tạ hơn Chúa suốt đời (mà) khiêm hạ.
-  Lạy Chúa tôi, tôi ngợi khen Chúa vì Chúa tạo dựng muôn loài.
-}
-
-loiPhienKhucAltoBa = \lyrics {
-  Ca khen tạ ơn Chúa suốt đời (mà) khiêm hạ.
-  Lạy Chúa tôi, tôi ngợi khen Ngài
-  vì Chúa tạo dựng muôn muôn loài,
-  tạo dựng muôn muôn loài,
-  tạo dựng muôn muôn loài.
-}
-
-loiPhienKhucBasBa = \lyrics {
-  tụng,
+  Lạy Chúa chúng tôi xin chúc tụng,
   chúc tụng ca khen tạ ơn Chúa,
   ca khen tạ ơn Chúa trọn đời khiêm hạ.
   Lạy Chúa tôi, tôi ngợi khen Chúa,
@@ -854,65 +839,6 @@ notBePhu =
   >>
   \layout {
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.6
-  } 
-}
-
-\score {
-  \new ChoirStaff <<
-    \new Staff = diepKhuc \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-     \new Voice \TongNhip \partCombine 
-          \nhacPhienKhucSopHai
-          \notBePhu -2 { \nhacPhienKhucAltoHai }
-        \new NullVoice = nhacThamChieuPhienKhucSopHai \nhacPhienKhucSopHai
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucSopHai \loiPhienKhucSopHai
-        \new NullVoice = nhacThamChieuPhienKhucAltoHai \nhacPhienKhucAltoHai
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucAltoHai \loiPhienKhucAltoHai
-      >>
-    \new Staff <<
-      \new Voice = "beBass" {
-        \clef bass \TongNhip \nhacPhienKhucBasHai
-      }
-      \new Lyrics \lyricsto beBass \loiPhienKhucBasHai
-    >>
-  >>
-  \layout {
-    %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.6
-  } 
-}
-
-\score {
-  \new ChoirStaff <<
-    \new Staff = diepKhuc \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-      \new Voice = "beSop" {
-        \clef treble \TongNhip \nhacPhienKhucSopBa
-      }
-      \new Lyrics \lyricsto "beSop" \loiPhienKhucSopBa
-      >>
-    \new Staff <<
-      \new Voice = "beAlto" {
-        \clef treble \TongNhip \nhacPhienKhucAltoBa
-      }
-      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoBa
-    >>
-    \new Staff <<
-      \new Voice = "beBass" {
-        \clef bass \TongNhip \nhacPhienKhucBasBa
-      }
-      \new Lyrics \lyricsto beBass \loiPhienKhucBasBa
-    >>
-  >>
-  \layout {
-    %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.6
+    \override Lyrics.LyricSpace.minimum-distance = #1
   } 
 }

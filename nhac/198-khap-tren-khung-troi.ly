@@ -4,7 +4,6 @@
 
 \header {
   title = \markup { \fontsize #3 "Khắp Trên Khung Trời" }
-  subtitle = "(Glory to God in the highest)"
   subsubtitle = "(Trích ORATORIO The Messiah, phần 1, đoạn 17)"
   composer = "Nhạc: G. F. Handel"
   arranger = "Lời Việt: Lm. Kim Long"
@@ -37,21 +36,12 @@ nhacPhienKhucSop = \relative c'' {
   d d8. e16 fs4 fs8 fs |
   d1 |
   fs2 r2 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
+  R1*4
   a,4 a8. d16 cs4 r |
   d d8. e16 fs4 r |
   d d8. cs16 d4 d8 d |
   cs2 cs |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
+  R1*7
   a4 d4. cs16( b cs8) a |
   b4 b8 b a2 |
   r2 d4 g( |
@@ -64,8 +54,7 @@ nhacPhienKhucSop = \relative c'' {
   r r4 d, |
   d2. d4 |
   d1 |
-  r1 |
-  r1 |
+  R1*2
   a'4 d r2 |
   b4 e r2 |
   cs4 fs r2 |
@@ -81,20 +70,12 @@ nhacPhienKhucAlto = \relative c'' {
   g a8. b16 a4 a8 a |
   b1 |
   a2 r |
-  r1 |
-  r1 
-  r1 |
-  r1 |
+  R1*4
   fs4 e8. d16 a'4 r |
   fs fs8. g16 a4 r |
   b a8. g16 fs4 a8 a |
   a2 e |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
-  r1 |
+  R1*6
   e4 a4. g16( fs g8) e |
   fs4 fs8 fs e2 |
   d4 g4. fs16( e fs8) d |
@@ -128,7 +109,7 @@ nhacPhienKhucTenor = \relative c' {
   r r4 a |
   a2. a4 |
   a1 |
-  r |
+  R |
   d4 cs8. b16 a4 r |
   b a8. g16 fs4 r |
   a' fs8. e16 d4 fs8 fs |
@@ -136,8 +117,7 @@ nhacPhienKhucTenor = \relative c' {
   r r4 d |
   d2. d,4 |
   d1 |
-  r |
-  r |
+  R1*2
   r2 a'4 d( |
   d8) cs16( b cs8) a e'2 |
   d4. d8 a2 |
@@ -145,7 +125,7 @@ nhacPhienKhucTenor = \relative c' {
   %e4 a4. g16( fs g8) e |
   %d4. d8 a2 |
   
-  r1 |
+  R1 |
   e'4 a4. g16( fs e8) d |
   cs2 b |
   e4( d) e4. e8 |
@@ -169,26 +149,18 @@ nhacPhienKhucTenor = \relative c' {
 }
 
 nhacPhienKhucBass = \relative c' {
-  r1 |
-  r |
-  r |
-  r |
+  R1*4
   r2 r4 a4 |
   a2. a4 |
   a1 |
-  r |
-  r |
-  r |
-  r |
-  r |
+  R1*5
   r2 r4 d |
   d2. d,4 |
   d1 |
-  r |
+  R |
   d4 g4. fs16( e fs8) d |
   a'2 r |
-  r1 |
-  r |
+  R1*2
   r2 a4 d( |
   d8) cs16( b cs8) a b2 |
   a2. g4( |
@@ -200,8 +172,7 @@ nhacPhienKhucBass = \relative c' {
   r r4 g |
   g2. g,4 |
   g1 |
-  r |
-  r |
+  R1*2
   r2 d'4 g |
   r2 e4 a |
   r2 fs4 b |

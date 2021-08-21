@@ -4,7 +4,6 @@
 
 \header {
   title = \markup { \fontsize #5 "Muôn Lạy Vua Cứu Tinh" }
-  subtitle = "(Worthy is the Lamb)"
   subsubtitle = "(Trích ORATORIO The Messiah, phần 3, đoạn 53)"
   composer = "Nhạc: G. F. Handel"
   arranger = "Lời Việt: Lm. Kim Long"
@@ -53,10 +52,7 @@ nhacPhienKhucSop = \relative c'' {
   b b r e cs4 r8 cs |
   d d r d a a r a |
   fs'4 d r2 |
-  r1
-  r1
-  r1
-  r1
+  R1*4
   r4 a8 b16 cs d8 d d d |
   d d d d d cs16( b) a8 g |
   fs4 r8 a b16( a) g( fs) e8 a |
@@ -65,7 +61,7 @@ nhacPhienKhucSop = \relative c'' {
   cs) e fs e16 d e8 cs16 d e8 d16 cs |
   b8 b r4 e,8 (fs16 gs a b cs d |
   e a, b cs d e fs gs a8) fs r4 |
-  r1
+  R1
   r2 r4 r8 e |
   fs16( e d cs) b8 e a, d4 cs8 |
   b b b b cs4 r |
@@ -73,7 +69,7 @@ nhacPhienKhucSop = \relative c'' {
   d8 d d d d cs16( b) a8 g |
   fs4 r r a( |
   a8) g16( fs) e8 d d'4 r |
-  r1
+  R1
   r2 r4 r8 a |
   b16( a) g( fs) e8 a d, d'4 cs8 |
   d16( cs) b( a) gs8 e' e( d16 cs) d4( |
@@ -83,8 +79,7 @@ nhacPhienKhucSop = \relative c'' {
   gs2 a4 d8 d16 d |
   d8 b b d cs e cs b16( a) |
   d8 d cs d cs4 r |
-  r1
-  r1
+  R1*2
   d8 a r4 d8 a r4 |
   d8 a r d d d d d |
   d4 r8 a8 b16( a g fs) e8 a |
@@ -127,14 +122,7 @@ nhacPhienKhucAlto = \relative c'' {
   g g r b a4 r8 a |
   a g r g a a r a |
   a4 a r2 |
-  r1
-  r1
-  r1
-  r1
-  r1
-  r1
-  r1
-  r1
+  R1*8
   r2 e4. fs16 gs |
   a8 a a a a a a a |
   g gs16( fs) e8 d cs4 r |
@@ -204,7 +192,7 @@ nhacPhienKhucTenor = \relative c' {
   fs4 r8 a b16( a) g( fs) e8 a |
   d, d'4 cs8 b a b8. a16 |
   a4 r r2 |
-  r1
+  R1
   r2 r4 r8 a |
   b16( a) g( fs) e8 a d, d'4 cs8 |
   fs, b gs8. gs16 a4 r |
@@ -220,8 +208,7 @@ nhacPhienKhucTenor = \relative c' {
   d8 d d d d cs16( b) a8 g |
   fs4 r8 fs g a a cs |
   d4 r r2 |
-  r1
-  r1
+  R1*2
   r2 r4 a8 cs16 d |
   e8 e e e e e e8. d16 |
   cs4 cs8 d16 e fs8 fs fs fs |
@@ -278,11 +265,7 @@ nhacPhienKhucBass = \relative c' {
   fs4 r8 a b16( a) g( fs) e8 a |
   d, d'4 cs8 b a b8. a16 |
   a4 r r2 |
-  r1 |
-  r
-  r
-  r
-  r
+  R1*5
   r4 e8 fs16 gs a8 a a a |
   a a a a a gs16( fs) e8 d |
   cs4 r8 e fs16( e d cs) b8 e |
