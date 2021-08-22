@@ -63,7 +63,7 @@ nhacPhienKhucSop = \relative c'' {
   f ^> r g ^>
   g ^> |
   r b,4 b8 |
-  c2
+  c2 \tweak extra-offset #'(2.5 . 0) \repeatTie
   \tweak extra-offset #'(-3 . 0)
   ^\markup { \fontsize #2 \bold "qua B" }
   \bar "|."
@@ -157,7 +157,7 @@ nhacPhienKhucAlto = \relative c'' {
   b8. a16 g4 |
   a8 ^> a ^> r4 |
   r8 g4 f8 |
-  e2 |
+  e2 \tweak extra-offset #'(2.5 . 0) \repeatTie |
   
   e2 ~ |
   e4 r
@@ -237,7 +237,7 @@ nhacPhienKhucBas = \relative c {
   g4 e |
   d8 ^> d ^> r4 |
   g4 ^> g, |
-  c2
+  c2 \tweak extra-offset #'(2.5 . 0) \repeatTie
   
   c2 ~ |
   c4 r
