@@ -62,15 +62,80 @@ nhacPhienKhucSop = \relative c'' {
       d8. d16 c8 d |
       <a g c,>8 <a g c,> r a |
       <a e c>8. a16 g8 a |
-      <e d bf> <e d bf> r e |
-      c' bf g8. bf16 |
+      
+      \key c \major
+      <e d b> <e d b> r e |
+      c' b g8. b16 |
       a4 r8 e |
-      c' bf g8. bf16 | \break
+      c' b g8. b16 | \break
       a4 r |
       R2*2
+      r8 b g b |
+      a4 r |
+      R2 |
+      r8 d b d |
+      c4 r |
+      r b |
+      a d8 d |
+      c4 r |
+      R2
+      r8 d c b |
+      c4 r |
+      r8 d b d |
+      e r c r |
+      r a gs a |
+      b4 \bar "||"
+    }
+  }
+  \break
+  r4
+  R2*13
+  
+  \partial 4 g8 g |
+  g4. g8 |
+  a8 a f4 |
+  e f8. f16 |
+  d8 d r a |
+  d4 c8 (d) |
+  e2 ~ |
+  e4 \slashedGrace { e8 ( } f8) d |
+  e4. a8 |
+  a gs4 a8 |
+  b4 b8 b |
+  b4. b8 |
+  e e4 b8 |
+  a2 ~ |
+  a4 \bar "||" \break
+  
+  r4
+  R2*15
+  r4. \bar "||" \break
+  
+  \time 3/4 \key a \major
+  \repeat volta 2 {
+    \partial 4. cs8. d16 d8 |
+    b4. b8. cs16 cs8 |
+    a4. e8 fs e |
+    a4 gs8 b4. ~ |
+    b4. d8. e16 e8 |
+    cs4. cs8. d16 d8 |
+    b4. e8 fs e |
+    b4 gs8 a4. ~ |
+  }
+  \alternative {
+    {
+      a4 e8 a b
+    }
+    {
+      \time 2/4
+      \set Staff.printKeyCancellation = ##f
+      a4 \repeatTie r8 a16 a \bar "||"
+      
+      \key f \major
       
     }
   }
+  
 }
 
 nhacPhienKhucAlto = \relative c'' {
@@ -116,12 +181,70 @@ nhacPhienKhucAlto = \relative c'' {
   d2 ~ |
   d4 r |
   R2*2
+  
+  \key c \major
   r4 r8 e |
-  c' bf g8. bf16 |
+  c' b g8. b16 |
   a4 r8 c, |
   f4 e8. d16 |
   c4 r |
   R2*2
+  r8 d e d |
+  c4 r |
+  R2
+  r8 b' a gs |
+  a4 r |
+  r e8 (d) |
+  c4 f8 f |
+  e4 r |
+  R2
+  r8 f a f |
+  e4 r |
+  r8 f a a |
+  gs r a r |
+  r e d f |
+  e4
+  
+  r4
+  R2*13
+  
+  g8 g |
+  g4. g8 |
+  a a d, (c) |
+  b4 f'8. f16 |
+  d8 d r a |
+  d4 c |
+  b2 ~ |
+  b4 \slashedGrace { e8 ( } f8) d |
+  e4. e8 |
+  e e4 f8 |
+  e4 b'8 b |
+  d,8 d e d |
+  a' a4 g8 |
+  e2 ~ |
+  e4
+  
+  r4
+  R2*15
+  r4.
+  
+  \time 3/4 \key a \major
+  a8. fs16 a8 |
+  gs4. fs8. es16 gs8 |
+  fs4. cs8 cs b |
+  cs4 d8 e4 a8 |
+  gs4. fs8. b16 b8 |
+  a4. e8. a16 fs8 |
+  e4. cs8 cs cs |
+  fs (e) d cs4. ~ |
+  cs4 r4.
+  
+  \time 2/4
+  c4 \repeatTie r4
+  \set Staff.printKeyCancellation = ##f
+  
+  \key f \major
+  
   
 }
 
@@ -185,8 +308,10 @@ nhacPhienKhucBas = \relative c {
   <f d>4 r |
   a8 a, r4 |
   <a' e d a>8 r r4 |
+  
+  \key c \major
   <g e>8 <g e,> r e |
-  c' bf g8. bf16 |
+  c' b g8. b16 |
   a4 r8 a |
   <a d,>4
   <<
@@ -202,6 +327,68 @@ nhacPhienKhucBas = \relative c {
   \oneVoice
   <a a,>4 r |
   R2*2
+  r8 g e g |
+  a4 r |
+  R2
+  r8 d, f e |
+  a4 r |
+  r e |
+  f d8 d |
+  a'4 r |
+  R2
+  r8 d, f g |
+  c,4 r |
+  r8 d f f |
+  e r d r |
+  r c' b a |
+  <gs e>4
+  r4
+  R2*13
+  
+  \partial 4 g8 g |
+  g4. g8 |
+  a a <a d,>4 |
+  <gs e> f8. f16 |
+  d8 d r a' |
+  <a f>4 <a f> |
+  <gs e>2 ~ |
+  <gs e>4 \slashedGrace { e8 ( } f8) d |
+  e4. c'8 |
+  c b4 a8 |
+  gs4 r |
+  b8 a g <b f> |
+  <<
+    {
+      \voiceOne
+      c4 d
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      e,4. e8
+    }
+  >>
+  \oneVoice
+  <c' a,>2 ~ |
+  <c a,>4
+  
+  r4
+  R2*15
+  r4.
+  
+  \time 3/4 \key a \major
+  a8. d,16 d8 |
+  e4. d8. cs16 cs8 |
+  fs4. a8 a gs |
+  fs4 f!8 e8. gs16 b8 |
+  e4. b8. gs16 gs8 |
+  a4. a8. fs16 fs8 |
+  gs4. a8 a a |
+  d,4 e8 <e a,>4. ~ |
+  <e a,>4 r4.
+  <e a,>4 \repeatTie r4
+  
+  \set Staff.printKeyCancellation = ##f
+  \key f \major
   
 }
 
@@ -227,11 +414,117 @@ nhacPhienKhucSolo = \relative c' {
   e4 r |
   R2*25
   
+  \key c \major
   r4 r8 g16 a |
   f4. e8 |
   g g c, (d) |
   e4. e16 e |
-  a4. d8 |
+  a4. d,8 |
+  e a,4 a8 |
+  \slashedGrace { a ( } b4) r8 b'16 gs |
+  e4. e8 |
+  b e4 gs8 |
+  a2 ~ |
+  a4 r8 g16 c, |
+  c4. e8 |
+  e f4 d8 |
+  e4 e8 e16 (a) |
+  b4. b8 |
+  b a4 d8 |
+  e2 ~ |
+  e4
+  
+  <<
+    {
+      c8 d |
+      e4. c8 |
+      d d (c) a
+    }
+    {
+      a8 b |
+      c4. a8 |
+      b b (a) f
+    }
+  >>
+  
+  <<
+    {
+      \voiceOne
+      \slashedGrace { a8 ^( } d4) \slashedGrace { b8 ^( } c8) b16 ^(a) |
+      
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      \slashedGrace { f8 _( } e4) e8 d |
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      e4. e8 |
+      d f4 e8 |
+      a2 ~ |
+      a4 a8 b |
+      b4. b8 |
+      d c4 f8 |
+      e4
+    }
+    {
+      c,4. c8 |
+      b d4 d8 |
+      c2 ~ |
+      c4 f8 d |
+      e4. e8 |
+      b' a4 d8 |
+      c4
+    }
+  >>
+  <<
+    {
+      \voiceOne
+      d16 (c) a8 |
+      \slashedGrace { a8 ^( } c4) b16 ^(a) d,8 |
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      f8 f |
+      \slashedGrace { f8 _( } e4) d8 b |
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      e4. a8 |
+      b2
+    }
+    {
+      c,4. f8 |
+      e2 \bar "||" \break
+    }
+  >>
+  
+  r4
+  R2*13
+  r4
+  
+  e16 (f) e8 |
+  a4. d,8 |
+  d f4 e8 |
+  e4 c8 d |
+  b4. a8 |
+  a d4 e8 |
+  f2 ~ |
+  f4 f16 (a) d,8 |
+  e4. b'16 (c) |
+  b8 a4 d8 |
+  e4 r8 f16 f |
+  d4. c8 |
+  e4 c8 b |
+  b4 r8 d16 d |
+  c4. b8 |
+  b gs4 a8 |
+  e4.
+  
   
 }
 
@@ -246,7 +539,22 @@ loiPhienKhucSolo = \lyrics {
   \set stanza = "Solo Nữ:"
   Tên phá tử một đêm xưa nài nẵng
   chia cho nó phần gia tài tổ sản
-  Túi giang hồ
+  Túi giang hồ mang nặng một mai sương
+  Ươm tình đời trong hoa bướm ngàn phương
+  Lìa tổ ấm say men nồng viễn xứ.
+  
+  \set stanza = "Song ca nữ:"
+  Còn đâu nữa tình gia hương phụ tử
+  đã héo rồi trong lòng kẻ cuồng điên.
+  Một ra đi là sa đọa ngã nghiêng
+  trong vực thẳm của lòng đời đen tối.
+  
+  \set stanza = "Đơn ca nam:"
+  Bỏ nhà cha là hạnh phúc tan hoang
+  là lao đầu vào vực sâu đen tối
+  Gã rùng mình ớn lạnh triều thống hối
+  Gã nắm tay thề quyết sửa nhịp đời
+  Gã thét lên tiếng gã vọng xa vời
 }
 
 loiPhienKhucSop = \lyrics {
@@ -264,7 +572,21 @@ loiPhienKhucSop = \lyrics {
   (Đàn) __ \repeat unfold 4 { _ }
   (Đàn) __ \repeat unfold 13 { _ }
   ơ __ \repeat unfold 11 { _ }
+  ơ __ _ _ _ ơ __ _ _ _
+  Mang nặng những gió sương
+  ơ __ _ _ _ ơ __ _ _ _ ơ ơ __ _ _ _
   
+  Đêm hôm nay trong tiếng gió thở dài
+  Dưới ánh trăng khuya mờ soi lạnh lẽo
+  Gã bồi hồi tâm can buồn hắt héo
+  Ôi đau thương là kiếp sống hoang đàng.
+  
+  Tôi sẽ chỗi dậy
+  Tôi sẽ chỗi dậy và quay về cha từ ái
+  Tôi sẽ chỗi dậy
+  Tôi sẽ chỗi dậy và quay về với tình cha.
+  (Đàn) __ _ _
+  "_" (Đàn) __ _
 }
 
 loiPhienKhucAlto = \lyrics {
@@ -281,7 +603,19 @@ loiPhienKhucAlto = \lyrics {
   chiều chiều ra ngõ đứng mong chờ.
   chờ
   ơ __ \repeat unfold 10 { _ }
+  ơ __ _ _ _ ơ __ _ _ _
+  Mang nặng những gió sương
+  ơ __ _ _ _ ơ __ _ _ _ ơ ơ __ _ _ _
   
+  Đêm hôm nay trong tiếng gió thở dài
+  Dưới ánh trăng khuya mờ soi lạnh lẽo
+  Gã bồi hồi tâm can buồn hắt héo
+  Ôi đau thương đau thương là kiếp sống hoang đàng.
+  
+  Tôi sẽ chỗi dậy
+  Tôi sẽ chỗi dậy và quay về cha từ ái nhân ái.
+  Tôi sẽ chỗi dậy
+  Tôi sẽ chỗi dậy và quay về với tình cha.
 }
 
 loiPhienKhucBas = \lyrics {
@@ -299,7 +633,28 @@ loiPhienKhucBas = \lyrics {
   chờ
   \repeat unfold 5 { _ }
   ơ __ \repeat unfold 10 { _ }
+  ơ __ _ _ _ ơ __ _ _ _
+  Mang nặng từng giọt sương
+  ơ __ _ _ _ ơ __ _ _ _ ơ ơ __ _ _ _
   
+  Đêm hôm nay trong tiếng gió thở dài
+  Dưới ánh trăng khuya chiếu soi lạnh lẽo
+  Gã bồi hồi tâm can buồn hắt héo
+  Ôi đau thương kiếp sống hoang đàng.
+  
+  Tôi sẽ chỗi dậy
+  Tôi sẽ chỗi dậy và quay về nhà về nhà cha thân ái
+  Tôi sẽ chỗi dậy
+  Tôi sẽ chỗi dậy và quay về lại quê
+  <<
+    {
+      cha.
+    }
+    \new Lyrics {
+      \set associatedVoice = "beBas"
+      nhà.
+    }
+  >>
 }
 
 % Dàn trang
