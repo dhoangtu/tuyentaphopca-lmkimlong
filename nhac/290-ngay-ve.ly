@@ -124,17 +124,66 @@ nhacPhienKhucSop = \relative c'' {
   }
   \alternative {
     {
-      a4 e8 a b
+      a4 r8 e a b
     }
     {
       \time 2/4
       \set Staff.printKeyCancellation = ##f
       a4 \repeatTie r8 a16 a \bar "||"
-      
-      \key f \major
-      
     }
   }
+        
+  \key f \major
+  <g d c>8 a f8. d16 |
+  <d' g, f>8 <d g, f> r d16 d |
+  <c g e>8 d a8. d,16 |
+  <g f d bf>8 <g f d bf> r g16 a |
+  d8 \bar "" \break
+  d4 c8 |
+  d2 |
+  r8 a4 g8 |
+  a2 ~ |
+  a4 r |
+  R2 |
+  r4 \tuplet 3/2 { d8 bf g } |
+  a4 r8 a16 bf |
+  bf4 r8 g |
+  g r \tuplet 3/2 { g e g } |
+  a4 \tuplet 3/2 { e8 f e } |
+  d2 ~ |
+  d4 r |
+  r \tuplet 3/2 { c'8 c c } |
+  d4 r |
+  r8 bf a r |
+  r d c r |
+  r4 r8 c |
+  d r \tuplet 3/2 { bf bf bf } |
+  a4 r8 d |
+  d r c d |
+  a4 r8 a |
+  d,8 f4 g8 |
+  g4 r8 g |
+  g r f g |
+  d4 r8 d' |
+  a c4 d8 |
+  d2 ~ |
+  d4 r |
+  R2
+  a8 r r bf |
+  g r r d' |
+  d2 ~ |
+  \partial 4 d4 \bar "||" \break
+  
+  \key d \major
+  R2
+  r8 e16 (fs) e8 d |
+  cs4. d8 |
+  b4. a8 |
+  g e e g |
+  a bf4 bf8 |
+  a2 ~ |
+  a4 r |
+  R2*3
   
 }
 
@@ -237,14 +286,75 @@ nhacPhienKhucAlto = \relative c'' {
   a4. e8. a16 fs8 |
   e4. cs8 cs cs |
   fs (e) d cs4. ~ |
-  cs4 r4.
+  cs4 r2
   
   \time 2/4
-  c4 \repeatTie r4
+  cs4 \repeatTie r4
   \set Staff.printKeyCancellation = ##f
   
   \key f \major
+  R2*4
+  r8
+  a'4 a8 |
+  f2 |
+  r8 d4 d8 |
+  c2 ~ |
+  c4 r |
+  R2
+  r4 \tuplet 3/2 { d'8 bf g } |
+  a4 r8 a16 bf |
+  bf4 r8 g |
+  g r \tuplet 3/2 { g e g } |
+  a4 \tuplet 3/2 { e8 f e } |
+  d2 ~ |
+  d4 r |
+  r4
+  <<
+    {
+      \tuplet 3/2 { g8 g g } |
+      f4 r |
+      r8 g e r |
+      r g a r |
+      r4 r8 g |
+      a r \tuplet 3/2 { g g g } |
+      f4
+    }
+    {
+      \tuplet 3/2 { e8 e e } |
+      d4 r |
+      r8 d c r |
+      r d f r |
+      r4 r8 e |
+      f r \tuplet 3/2 { d8 c c } |
+      d4
+    }
+  >>
+  r8 g |
+  bf r a g |
+  e4 r8 c |
+  d d4 f8 |
+  e4 r8 b! |
+  c r d c |
+  b!4 r8 bf |
+  c e4 e8 |
+  d2 ~ |
+  d4 r |
+  R2
+  f8 r r f |
+  d r r g |
+  fs2 ~ |
+  \partial 4 fs4
   
+  \key d \major
+  R2
+  R2
+  r8 a fs16 (e) d8 |
+  d e b (d) |
+  e b b e |
+  fs d4 d8 |
+  cs2 ~ |
+  cs4 r |
+  R2*3
   
 }
 
@@ -384,11 +494,59 @@ nhacPhienKhucBas = \relative c {
   a4. a8. fs16 fs8 |
   gs4. a8 a a |
   d,4 e8 <e a,>4. ~ |
-  <e a,>4 r4.
+  <e a,>4 r2
   <e a,>4 \repeatTie r4
   
   \set Staff.printKeyCancellation = ##f
   \key f \major
+  <bf' g>8 r8 r4 |
+  <a d,>8 d,, r4 |
+  <a'' a,>8 r r4 |
+  a8 a, r4 |
+  r8 
+  
+  f'4 g8 |
+  d2 |
+  r8 f4 bf8 |
+  a2 ~ |
+  a4 \tuplet 3/2 { a8 g a } |
+  a4 \tuplet 3/2 { a8 f c } |
+  d2 ~ |
+  d8 <g a,> <f d> r |
+  r <d' d,> <bf g> r |
+  r <b! g> <c e,> r |
+  r <d, bf> <g cs,>4 |
+  <d bf> r8 <bf' g> |
+  <a f> r c, d |
+  a4. a8 |
+  f'4 \tuplet 3/2 { d8 bf' a } |
+  g4 r8 \slashedGrace { g8 ( } a8 ) |
+  f4. f16 e |
+  a4 \slashedGrace { g8 ( } \tuplet 3/2 { a8) f e } |
+  d2 ~ |
+  d4 r8 f |
+  g r g g |
+  a4 r8 a |
+  bf bf4 b!8 |
+  c4 r8 g |
+  d r f f |
+  g4 r8 g |
+  a a4 g8 |
+  f4 r8 g |
+  g f4 g8 |
+  e4 r8 e |
+  d r d <d' d,> |
+  <bf g> r r <bf g> |
+  <a d,>2 ~ |
+  <a d,>4
+  r8 d bf16 (a) g8 |
+  g a e (g) |
+  a4. f8 |
+  g4. f8 |
+  e g4 e8 |
+  d g4 g8 |
+  a2 ~ |
+  a8 a g a |
   
 }
 
@@ -586,7 +744,20 @@ loiPhienKhucSop = \lyrics {
   Tôi sẽ chỗi dậy
   Tôi sẽ chỗi dậy và quay về với tình cha.
   (Đàn) __ _ _
-  "_" (Đàn) __ _
+  "_" (Đàn) __ \repeat unfold 18 { _ }
+  A a A A a A
+  Bóng ai đầu thôn đi lững thững
+  tang thương như người hành khất trong vũng nắng vàng
+  A \repeat unfold 13 { a }
+  Ô hay mộng hay thực
+  đang tỉnh hay trong mê
+  Ô hay mộng hay thực
+  đang tỉnh hay trong mê
+  không
+  đúng rồi chính hắn.
+  Lão ông vội vàng
+  Lão ông vội vàng chạy lại ôm con rất thiết tha
+  
 }
 
 loiPhienKhucAlto = \lyrics {
@@ -616,6 +787,19 @@ loiPhienKhucAlto = \lyrics {
   Tôi sẽ chỗi dậy và quay về cha từ ái nhân ái.
   Tôi sẽ chỗi dậy
   Tôi sẽ chỗi dậy và quay về với tình cha.
+  
+  "_" A a A A a A
+  Bóng ai đầu thôn đi lững thững
+  tang thương như người hành khất trong vũng nắng vàng
+  A \repeat unfold 13 { a }
+  Ô hay mộng hay thực
+  đang tỉnh hay trong mê
+  Ô hay mộng hay thực
+  đang tỉnh hay trong mê
+  không đúng rồi chính hắn.
+  Lão ông vội vàng tung cửa ra
+  chạy lại ôm con rất thiết tha
+  
 }
 
 loiPhienKhucBas = \lyrics {
@@ -652,9 +836,28 @@ loiPhienKhucBas = \lyrics {
     }
     \new Lyrics {
       \set associatedVoice = "beBas"
+      \override LyricText.font-shape = #'italic
       nhà.
     }
   >>
+  \repeat unfold 7 { _ }
+  A a a A a A
+  Nắng gieo sắc tía
+  Gió rộn đầy vườn
+  A a A a A a A a a A a
+  Con chích chòe đập cánh đầu ngõ hát vang
+  Lão ông mang mục kính ngó thẳng ra đàng
+  Ô hay mộng hay thức
+  đang tỉnh hay trong mê
+  ô hay mộng hay thức
+  đang tỉnh hay trong mê
+  Ai như thằng Hai về
+  ô không
+  mà thực rồi chính hắn
+  Lão ông vội vàng tung cửa ra
+  vội vàng vội vàng tới ôm con rất thiết tha
+  Hai hàng nước mắt tuôn như suối
+  Hỡi con
 }
 
 % Dàn trang
