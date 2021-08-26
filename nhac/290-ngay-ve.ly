@@ -9,6 +9,168 @@
   tagline = ##f
 }
 
+% Nhạc
+nhacPhienKhucSolo = \relative c' {
+  \key f \major \time 2/4
+  r4
+  R2*7
+  r4 r8 d16 e |
+  f4. e8 |
+  e g4 a8 |
+  a4. g16 f |
+  e4. a,8 |
+  e' f4 e8 |
+  d2 ~ |
+  d4 r8 d16 g |
+  d4. g8 |
+  bf bf4 g8 |
+  a4. e16 e |
+  e4. f8 |
+  a, d cs (d) |
+  e2 ~ |
+  e4 r |
+  R2*25
+  
+  \key c \major
+  r4 r8 g16 a |
+  f4. e8 |
+  g g c, (d) |
+  e4. e16 e |
+  a4. d,8 |
+  e a,4 a8 |
+  \slashedGrace { a ( } b4) r8 b'16 gs |
+  e4. e8 |
+  b e4 gs8 |
+  a2 ~ |
+  a4 r8 g16 c, |
+  c4. e8 |
+  e f4 d8 |
+  e4 e8 e16 (a) |
+  b4. b8 |
+  b a4 d8 |
+  e2 ~ |
+  e4
+  
+  <<
+    {
+      c8 d |
+      e4. c8 |
+      d d (c) a
+    }
+    {
+      a8 b |
+      c4. a8 |
+      b b (a) f
+    }
+  >>
+  
+  <<
+    {
+      \voiceOne
+      \slashedGrace { a8 ^( } d4) \slashedGrace { b8 ^( } c8) b16 ^(a) |
+      
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      \slashedGrace { f8 _( } e4) e8 d |
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      e4. e8 |
+      d f4 e8 |
+      a2 ~ |
+      a4 a8 b |
+      b4. b8 |
+      d c4 f8 |
+      e4
+    }
+    {
+      c,4. c8 |
+      b d4 d8 |
+      c2 ~ |
+      c4 f8 d |
+      e4. e8 |
+      b' a4 d8 |
+      c4
+    }
+  >>
+  <<
+    {
+      \voiceOne
+      d16 (c) a8 |
+      \slashedGrace { a8 ^( } c4) b16 ^(a) d,8 |
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      f8 f |
+      \slashedGrace { f8 _( } e4) d8 b |
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      e4. a8 |
+      b2
+    }
+    {
+      c,4. f8 |
+      e2 \bar "||" \break
+    }
+  >>
+  
+  r4
+  R2*13
+  r4
+  
+  e16 (f) e8 |
+  a4. d,8 |
+  d f4 e8 |
+  e4 c8 d |
+  b4. a8 |
+  a d4 e8 |
+  f2 ~ |
+  f4 f16 (a) d,8 |
+  e4. b'16 (c) |
+  b8 a4 d8 |
+  e4 r8 f16 f |
+  d4. c8 |
+  e4 c8 b |
+  b4 r8 d16 d |
+  c4. b8 |
+  b gs4 a8 |
+  e4.
+  r4.
+  R2.*8
+  R2*55
+  r4
+  
+  \key f \major
+  r8 e a g16 (a) |
+  d,4. e16 e |
+  a2 |
+  r8 a f d |
+  e4 r8 g16 a |
+  r8 \slashedGrace { c,8 ( } d4.) \bar "||" \break
+  a'4. bf16 g |
+  g4. d'16 g, |
+  a4 \tuplet 3/2 { f'8 d d } |
+  e4. cs16 cs |
+  d2 ~ |
+  d4 r8 a16 a |
+  bf4 \tuplet 3/2 { e,8 e g } |
+  a2 |
+  r8 g f a |
+  g (f) r e16 f |
+  \slashedGrace { c8 ( } d2 ) ~ \bar "||"
+  d8 a'16 (bf) a8 a |
+  d g,4 a8 |
+  a2 |
+  r8 fs16 (e) a8 d, |
+  d \bar "||" \break
+}
+
 nhacPhienKhucSop = \relative c'' {
   \key f \major \time 2/4
   \partial 4 r8 d |
@@ -184,7 +346,43 @@ nhacPhienKhucSop = \relative c'' {
   a2 ~ |
   a4 r |
   R2*3
+  e8 e r g |
+  a2 |
+  r8 d4 b8 |
+  \slashedGrace { b8 ( } a2) |
+  r8 a4 fs8 |
+  \slashedGrace { fs8 ( } e2) \bar "||" \break
   
+  R2*21
+  r8
+  \key d \major
+  d'4 d8 |
+  \slashedGrace { b8 ( } a2) |
+  r8 a4 a8 |
+  \slashedGrace { fs8 ( } e2) ~ |
+  e4 r |
+  R2*13 \break
+  R2
+  r4 g8 fs ~ |
+  fs e4 e8 |
+  a4 a8 b
+  \repeat volta 2 {
+    b4. d8 |
+    d (b16 a) fs8 g |
+    a4 g8 g |
+    fs4. e8 |
+    cs cs4 e8
+  }
+  \alternative {
+    {
+      d4 a'8 b
+    }
+    {
+      d,2 ~ |
+      d4 r |
+      R2 
+    }
+  }
 }
 
 nhacPhienKhucAlto = \relative c'' {
@@ -355,6 +553,22 @@ nhacPhienKhucAlto = \relative c'' {
   cs2 ~ |
   cs4 r |
   R2*3
+  e8 e r g |
+  a2 |
+  r8 fs4 d8 |
+  cs2 |
+  r8 cs4 d8 |
+  b2
+  R2*21
+  r8
+  
+  \key d \major
+  a'4 b8 |
+  e,2 |
+  r8 e4 fs8 |
+  b,2 ~ |
+  b4 r |
+  R2*12
   
 }
 
@@ -539,150 +753,60 @@ nhacPhienKhucBas = \relative c {
   <bf g> r r <bf g> |
   <a d,>2 ~ |
   <a d,>4
-  r8 d bf16 (a) g8 |
+  
+  \key d \major
+  r8 d b16 (a) g8 |
   g a e (g) |
-  a4. f8 |
-  g4. f8 |
+  a4. fs8 |
+  g4. fs8 |
   e g4 e8 |
   d g4 g8 |
   a2 ~ |
   a8 a g a |
+  <d bf>2 |
+  r8 <a f!>4 <a f!>8 |
+  <bf g>2 ~ |
+  <bf g>4 r4 |
+  R2
+  r8 d,4 g8 |
+  a2 |
+  r8 <a a,>4 <a d,>8 |
+  <gs e>2
   
-}
-
-% Nhạc
-nhacPhienKhucSolo = \relative c' {
-  \key f \major \time 2/4
-  r4
-  R2*7
-  r4 r8 d16 e |
-  f4. e8 |
-  e g4 a8 |
-  a4. g16 f |
-  e4. a,8 |
-  e' f4 e8 |
+  R2*21
+  r8
+  
+  \key d \major
+  <fs' d,>4 <d g,>8 |
+  <cs a>2 |
+  r8 <cs a,>4 <a d,>8 |
+  <gs e>2 ~ |
+  <gs e>4 r8 e |
+  e4. a16 a |
+  cs,4. d16 (e) |
+  a,4 \tuplet 3/2 { cs8 d e } |
+  e4. d16 g |
+  g2 ~ |
+  g4 \tuplet 3/2 { d'8 b b } |
+  \slashedGrace { b8 ( } d4.) fs,16 g |
+  a4 \slashedGrace { a8 ( } \tuplet 3/2 { b8) g g } |
+  e4. e16 fs |
   d2 ~ |
-  d4 r8 d16 g |
-  d4. g8 |
-  bf bf4 g8 |
-  a4. e16 e |
-  e4. f8 |
-  a, d cs (d) |
-  e2 ~ |
-  e4 r |
-  R2*25
-  
-  \key c \major
-  r4 r8 g16 a |
-  f4. e8 |
-  g g c, (d) |
-  e4. e16 e |
-  a4. d,8 |
-  e a,4 a8 |
-  \slashedGrace { a ( } b4) r8 b'16 gs |
-  e4. e8 |
-  b e4 gs8 |
-  a2 ~ |
-  a4 r8 g16 c, |
-  c4. e8 |
-  e f4 d8 |
-  e4 e8 e16 (a) |
-  b4. b8 |
-  b a4 d8 |
-  e2 ~ |
-  e4
-  
-  <<
-    {
-      c8 d |
-      e4. c8 |
-      d d (c) a
-    }
-    {
-      a8 b |
-      c4. a8 |
-      b b (a) f
-    }
-  >>
-  
-  <<
-    {
-      \voiceOne
-      \slashedGrace { a8 ^( } d4) \slashedGrace { b8 ^( } c8) b16 ^(a) |
-      
-    }
-    \new Voice = "splitpart" {
-	    \voiceTwo
-      \slashedGrace { f8 _( } e4) e8 d |
-    }
-  >>
-  \oneVoice
-  <<
-    {
-      e4. e8 |
-      d f4 e8 |
-      a2 ~ |
-      a4 a8 b |
-      b4. b8 |
-      d c4 f8 |
-      e4
-    }
-    {
-      c,4. c8 |
-      b d4 d8 |
-      c2 ~ |
-      c4 f8 d |
-      e4. e8 |
-      b' a4 d8 |
-      c4
-    }
-  >>
-  <<
-    {
-      \voiceOne
-      d16 (c) a8 |
-      \slashedGrace { a8 ^( } c4) b16 ^(a) d,8 |
-    }
-    \new Voice = "splitpart" {
-	    \voiceTwo
-      f8 f |
-      \slashedGrace { f8 _( } e4) d8 b |
-    }
-  >>
-  \oneVoice
-  <<
-    {
-      e4. a8 |
-      b2
-    }
-    {
-      c,4. f8 |
-      e2 \bar "||" \break
-    }
-  >>
-  
-  r4
-  R2*13
-  r4
-  
-  e16 (f) e8 |
-  a4. d,8 |
-  d f4 e8 |
-  e4 c8 d |
-  b4. a8 |
-  a d4 e8 |
-  f2 ~ |
-  f4 f16 (a) d,8 |
-  e4. b'16 (c) |
-  b8 a4 d8 |
-  e4 r8 f16 f |
-  d4. c8 |
-  e4 c8 b |
-  b4 r8 d16 d |
-  c4. b8 |
-  b gs4 a8 |
-  e4.
-  
+  d4 r8 cs16 d |
+  b4 \tuplet 3/2 { b8 cs b } |
+  a2 \bar "||"
+  r8 cs (d) fs |
+  e4 g8 fs ~ |
+  fs e4 e8 |
+  a4 d,8 g |
+  g4. fs8 |
+  b4. bf8 |
+  a4 a8 a |
+  d,4. e8 |
+  <e a,> <a a,>4 <g a,>8 |
+  <fs d>4 d8 g |
+  <fs d>2 ~ |
+  <fs d>4 
   
 }
 
@@ -707,12 +831,25 @@ loiPhienKhucSolo = \lyrics {
   Một ra đi là sa đọa ngã nghiêng
   trong vực thẳm của lòng đời đen tối.
   
-  \set stanza = "Đơn ca nam:"
+  \set stanza = "Solo (nam):"
   Bỏ nhà cha là hạnh phúc tan hoang
   là lao đầu vào vực sâu đen tối
   Gã rùng mình ớn lạnh triều thống hối
   Gã nắm tay thề quyết sửa nhịp đời
   Gã thét lên tiếng gã vọng xa vời
+  
+  \set stanza = "Solo (nữ):"
+  Thằng Hai cảm động rưng rưng lệ
+  Quỳ trước mặt cha ấp úng kể
+  
+  \set stanza = "Solo (nam):"
+  Con đã phạm tội đến trời cao
+  đến cả lòng cha đầy tình yêu
+  Con không đang gọi là con nữa
+  Xin xử với con như đứa ở
+  Lão ông nghe nói gạt phăng ngay
+  Gọi lớn người nhà
+  
 }
 
 loiPhienKhucSop = \lyrics {
@@ -756,8 +893,21 @@ loiPhienKhucSop = \lyrics {
   không
   đúng rồi chính hắn.
   Lão ông vội vàng
-  Lão ông vội vàng chạy lại ôm con rất thiết tha
+  Lão ông vội vàng chạy lại ôm con rất thiết tha.
+  Nghẹn ngào ông nói:
+  Hỡi con cha hỡi con cha
   
+  Ớ chúng bay ớ chúng bay
+  Chúng ta cùng mừng rỡ
+  Này con ông đã chết lại hồi sinh
+  Đã mất đi nay gặp lại an bình
+  Này con
+  bình
+  Ngoài trời sắc nắng cũng thắm lên
+  Tiếng chim ríu rít dậy đầy thềm
+  (Đàn) __ _ _
+  Ngoài trời sắc nắng cũng thắm lên
+  Tiếng chim ríu rít dậy đầy thềm.
 }
 
 loiPhienKhucAlto = \lyrics {
@@ -799,7 +949,21 @@ loiPhienKhucAlto = \lyrics {
   không đúng rồi chính hắn.
   Lão ông vội vàng tung cửa ra
   chạy lại ôm con rất thiết tha
+  Nghẹn ngào ông nói:
+  Hỡi con cha
+  hỡi con cha
   
+  Ớ chúng bay ớ chúng bay
+  Chúng ta cùng mừng rỡ
+  Này con ông đã chết lại hồi sinh
+  Đã mất đi nay gặp lại an bình
+  Này con
+  bình
+  Ngoài trời sắc nắng cũng thắm lên
+  Tiếng chim ríu rít dậy đầy thềm
+  (Đàn) __ _ _
+  Ngoài trời sắc nắng cũng thắm lên
+  Tiếng chim ríu rít dậy đầy thềm.
 }
 
 loiPhienKhucBas = \lyrics {
@@ -857,7 +1021,26 @@ loiPhienKhucBas = \lyrics {
   Lão ông vội vàng tung cửa ra
   vội vàng vội vàng tới ôm con rất thiết tha
   Hai hàng nước mắt tuôn như suối
-  Hỡi con
+  Hỡi con cha
+  hỡi con cha
+  
+  Ớ chúng bay ớ chúng bay
+  \set stanza = " Solo (nam):"
+  Nhanh đi lấy áo dài hảo hạng
+  mặc cho con ông nhìn xứng đáng
+  lấy thêm đôi nhẫn xỏ vào tay
+  Lắp ngay cho cậu một đôi giầy
+  Rồi ra chuồng chọn con me bự
+  Mở yến đi Chúng ta cùng mừng rỡ
+  Này con ông đã chết tái sinh
+  Đã mất rồi nay gặp lại bình
+  an Này con
+  an
+  (Đàn) __ _ _ _ _ _ _ _
+  Ngoài trời sắc nắng cùng rực lên
+  Lời chim ríu rít thấy đầy thềm
+  Ngoài trời sắc nắng cũng rực lên
+  Lời chim ríu rít thấy đầy thềm.
 }
 
 % Dàn trang
