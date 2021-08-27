@@ -50,7 +50,7 @@ nhacPhienKhucSopB = \relative c'' {
   a4 r |
   r4 fs8 (g) |
   a4 g8 (a) |
-  b a -> \stemUp b ^> c ^> |
+  b a _> b _> c _> |
   d2 ~ |
   d8 e e cs |
   d2 ~ |
@@ -69,15 +69,15 @@ nhacPhienKhucAltoB = \relative c' {
   r8 e8 d b |
   e4 g8 fs ~ |
   fs4 r |
-  r fs8 (g) |
-  r8 e g4 |
+  R2 |
+  r8 e g4 ^> |
   fs r |
-  r8 fs -> g -> a -> |
+  r8 fs ^> g ^> a ^> |
   b2 ~ |
   b8 g g e |
   fs2 ~ |
   fs8 a a fs |
-  g4 \stemDown fs ^> |
+  g4 fs ^> |
   e d8 d |
   b2 ~ |
   b4
@@ -99,7 +99,7 @@ nhacPhienKhucBasB = \relative c' {
   a2 ~ |
   a8 fs fs ds |
   e4 d |
-  c -> d8 d |
+  c ^> d8 d |
   <g g,>2 ~ |
   <g g,>4
 }
@@ -161,8 +161,7 @@ loiPhienKhucSopB = \lyrics {
 }
 
 loiPhienKhucAltoB = \lyrics {
-  \override LyricText.font-shape = #'italic
-  _ _ _ _ _ _ _
+  Nương đồi trổ hoa thắm tươi
   Này bạn hỡi
   Nào mau đi tới
   Hãy tới cùng ta
@@ -184,8 +183,8 @@ loiPhienKhucBasB = \lyrics {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 20\mm
+  top-margin = 8\mm
+  bottom-margin = 8\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -248,18 +247,18 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-      } <<
-        \new Voice = "beSopB" {
-          \voiceOne \nhacPhienKhucSopB
-        }
-        \new Voice= "beAltoB" {
-          \voiceTwo \nhacPhienKhucAltoB
-        }
-        \new Lyrics \lyricsto beSopB \loiPhienKhucSopB
-        \new Lyrics \lyricsto beAltoB \loiPhienKhucAltoB
+    \new Staff <<
+      \new Voice = "beSopB" {
+        \clef treble \nhacPhienKhucSopB
+      }
+      \new Lyrics \lyricsto beSopB \loiPhienKhucSopB
       >>
+    \new Staff <<
+      \new Voice = "beAltoB" {
+        \clef treble \TongNhip \nhacPhienKhucAltoB
+      }
+      \new Lyrics \lyricsto beAltoB \loiPhienKhucAltoB
+    >>
     \new Staff <<
       \new Voice = "beBassB" {
         \clef bass \TongNhip \nhacPhienKhucBasB

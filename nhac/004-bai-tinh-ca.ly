@@ -13,6 +13,7 @@
 nhacPhienKhucSopMot = \relative c'' {
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
+  \set Staff.printKeyCancellation = ##f
   \partial 4 r4
   r4. a8 |
   bf8. a16 g8 a |
@@ -29,85 +30,12 @@ nhacPhienKhucSopMot = \relative c'' {
   f f4 e8 |
   e4 r8 d |
   e cs4 cs8 |
-}
-
-nhacPhienKhucAltoMot = \relative c' {
-  \partial 4 r4
-  r4. f8 |
-  g8. f16 e8 f |
-  f2 ~ |
-  f4 r8 e |
-  f8. d16 d8 d |
-  cs4 r8 a' |
-  a8. cs16 d8 a |
-  f g r bf |
-  a8. bf16 a8 f |
-  g f r d |
-  d8. a16 d8 _(c) |
-  d4 r8 a' |
-  a a4 g8 |
-  a4 r8 a |
-  bf a4 g8
-}
-
-nhacPhienKhucBasMot = \relative c' {
-  \partial 4 a8 a |
   d2 ~ |
-  d4 r |
-  r d,8 d |
-  g2 ~ |
-  g4 bf8 (g) |
-  a8. a16 a8 a |
-  d,4 r8 a' |
-  d8. d16 d8 d |
-  cs4 r8 d |
-  g,8. g16 g8 g |
-  f8. f16 f4 |
-  bf r8 a |
-  d d4 d8 |
-  cs4 r8 d |
-  g, a4 <a a,>8 |
-}
-
-nhacPhienKhucSopHai = \relative c'' {
-  \set Score.currentBarNumber = #16
-  \bar ""
-  <d \tweak font-size #-2 fs,>2 ~ \bar "|."
   
-  \set Staff.printKeyCancellation = ##f
+  d4 \bar "|." \break
+  
   \key d \major
-  <d \tweak font-size #-2 fs,>4
-  \afterGrace d8 ({\once \stemDown e8)} b |
-  a4. a8 |
-  fs8 (g) a fs |
-  e2 ~ |
-  e4 d8 (e) |
-  a8 a4 b8 |
-  a4 a8 (b) |
-  d8 d4 e8 |
-  d4 \afterGrace d8 ({e)} b |
-  a4. a8 |
-  fs' fs fs g16 (fs) |
-  e2 ~ |
-  e4 r8 e |
-  cs8. d16 e8 d |
-  b b r b |
-  gs fs e b' |
-  a2 ~ \bar "||"
-  
-  \set Staff.printKeyCancellation = ##f
-  \key f \major
-  a4 r |
-  r2
-  r4. <f' \tweak font-size #-2 d>8
-}
-
-nhacPhienKhucAltoHai = \relative c'' {
-  r2
-  
-  \set Staff.printKeyCancellation = ##f
-  \key d \major
-  r2
+  r |
   cs2 |
   d2 ~ |
   d4 e8 d |
@@ -123,74 +51,13 @@ nhacPhienKhucAltoHai = \relative c'' {
   r a8 a |
   g g r b |
   b b b d |
-  cs2 ~ \bar "||"
+  cs2 ~ |
+  cs4 \bar "|." \break
   
   \key f \major
-  cs4 r |
-  r2
-  r
-}
-
-nhacPhienKhucTenorHai = \relative c' {
-  r2
-  
-  \key d \major
-  r2
-  e |
-  d4 fs8 a |
-  b4 b8 b |
-  a4 r |
-  r fs8 g |
-  fs4 r |
-  r d8 cs |
-  d4 r |
-  r8 e e e |
-  fs4. e8 |
-  d4 e8 d |
-  cs4 r |
-  r e8 fs |
-  e e r fs |
-  e ds e f! |
-  e2 ~
-  
-  \key f \major
-  e4 r |
-  r2
-  r
-}
-
-nhacPhienKhucBasHai = \relative c' {
-  <a d,>2 ~ \bar "|."
-  
-  \set Staff.printKeyCancellation = ##f
-  \key d \major
-  <a d,>4 r |
-  a2 |
-  b4 a |
-  g gs8 gs |
-  a4 r |
-  r d8 cs |
-  d4 r |
-  r g,8 g |
-  fs4 r |
-  r8 a a a |
-  d,4. fs8 |
-  g4 g8 g |
-  a4 r |
-  r cs,8 d |
-  e e r ds |
-  e fs gs e |
-  a2 ~ \bar "||"
-  
-  \key f \major
-  a4 d,8 d16 d |
-  fs8 e d a' |
-  a2 ^( <> )
-}
-
-nhacPhienKhucSopBa = \relative c'' {
-  \set Score.currentBarNumber = #37
-  \bar "||"
+  r4 |
+  R2
+  r4 r8 f8 |
   f8. e16 f8 e |
   d4 r8 e |
   cs8. cs16 d8 d |
@@ -212,7 +79,51 @@ nhacPhienKhucSopBa = \relative c'' {
   \mark \markup { \musicglyph #"scripts.segno" }
 }
 
-nhacPhienKhucAltoBa = \relative c'' {
+nhacPhienKhucAltoMot = \relative c' {
+  \set Staff.printKeyCancellation = ##f
+  \partial 4 r4
+  r4. f8 |
+  g8. f16 e8 f |
+  f2 ~ |
+  f4 r8 e |
+  f8. d16 d8 d |
+  cs4 r8 a' |
+  a8. cs16 d8 a |
+  f g r bf |
+  a8. bf16 a8 f |
+  g f r d |
+  d8. a16 d8 _(c) |
+  d4 r8 a' |
+  a a4 g8 |
+  a4 r8 a |
+  bf a4 g8 |
+  fs2 ~ |
+  fs4
+  
+  \key d \major
+  r |
+  e2 |
+  d4 fs8 a |
+  b4 b8 b |
+  a4 r |
+  r fs8 g |
+  fs4 r |
+  r d8 cs |
+  d4 r |
+  r8 e e e |
+  fs4. e8 |
+  d4 e8 d |
+  cs4 r |
+  r e8 fs |
+  e e r fs |
+  e ds e f! |
+  e2 ~ |
+  e4
+  
+  \key f \major
+  r4 |
+  R2
+  r4 r8 d'8 |
   d8. a16 a8 g |
   f4 r8 bf |
   a8. a16 f8 f |
@@ -232,9 +143,53 @@ nhacPhienKhucAltoBa = \relative c'' {
   cs4 r
 }
 
-nhacPhienKhucBasBa = \relative c {
+nhacPhienKhucBasMot = \relative c' {
+  \set Staff.printKeyCancellation = ##f
+  \partial 4 a8 a |
+  d2 ~ |
+  d4 r |
+  r d,8 d |
+  g2 ~ |
+  g4 bf8 (g) |
+  a8. a16 a8 a |
+  d,4 r8 a' |
+  d8. d16 d8 d |
+  cs4 r8 d |
+  g,8. g16 g8 g |
+  f8. f16 f4 |
+  bf r8 a |
+  d d4 d8 |
+  cs4 r8 d |
+  g, a4 <a a,>8 |
+  <a d,>2 ~ |
+  <a d,>4
+  
+  \key d \major
+  r4 |
+  a2 |
+  b4 a |
+  g gs8 gs |
+  a4 r |
+  r d8 cs |
+  d4 r |
+  r g,8 g |
+  fs4 r |
+  r8 a a a |
+  d,4. fs8 |
+  g4 g8 g |
+  a4 r |
+  r cs,8 d |
+  e e r ds |
+  e fs gs e |
+  a2 ~ |
+  a4
+  
+  \key f \major
+  d,8 d16 d |
+  fs8 e d a' |
+  a2 ~ |
   a4 r8 cs |
-  d8. d16 d8 g |
+  d8. d16 d8 g, |
   a4 r |
   r d,8 d16 d |
   f8 e d bf' |
@@ -249,7 +204,34 @@ nhacPhienKhucBasBa = \relative c {
   b!4. d8 ( |
   d) e4 e8 |
   a2 ~ |
-  a4 r \bar "||"
+  a4 r
+}
+
+nhacPhienKhucSolo = \relative c'' {
+  \key f \major
+  r4
+  R2*16
+  r4
+  
+  \key d \major
+  \afterGrace d8 ({\once \stemDown e8)} b |
+  a4. a8 |
+  fs8 (g) a fs |
+  e2 ~ |
+  e4 d8 (e) |
+  a8 a4 b8 |
+  a4 a8 (b) |
+  d8 d4 e8 |
+  d4 \afterGrace d8 ({e)} b |
+  a4. a8 |
+  fs' fs fs g16 (fs) |
+  e2 ~ |
+  e4 r8 e |
+  cs8. d16 e8 d |
+  b b r b |
+  gs fs e b' |
+  a2 ~ |
+  a4
 }
 
 % Lời phiên khúc
@@ -259,7 +241,45 @@ loiPhienKhucSopMot = \lyrics {
   Tôi muốn rung phím tơ muôn điệu.
   Tôi muốn ươm ý thơ tuyệt diệu dệt thành bài tình ca.
   Vang thấu khắp không gian
-  kiên vững cùng thời
+  kiên vững cùng thời gian.
+  
+  \set stanza = "CORO:"
+  Hm __ _ Giữa đêm trường.
+  Đã giáng sinh.
+  Đấng Cứu Tinh.
+  Miệt mài ngàn năm
+  sầu thương những vấn vương.
+  Ánh quang hòa bình
+  đó đây chan hòa phúc vinh.
+  
+  Thánh giá cao ngất thương đau
+  máu hồng từ châu thân chảy trào.
+  Người Yêu tôi tự hiến
+  chết vì yêu tôi.
+  Không có Tình Yêu nào vĩ đại bằng chết cho người mình yêu.
+}
+
+loiPhienKhucAltoMot = \lyrics {
+  Tôi viết cho người tôi yêu.
+  Tôi hát cho người yêu tôi.
+  Tôi muốn rung phím tơ muôn điệu.
+  Tôi muốn ươm ý thơ tuyệt diệu dệt thành bài tình ca.
+  Vang thấu khắp không gian
+  kiên vững cùng thời gian.
+  
+  Hm __ _ _ _ _ Giữa đêm trường.
+  Đã giáng sinh.
+  Đấng Cứu Tinh.
+  Miệt mài ngàn năm
+  sầu thương những vấn vương.
+  Ánh quang hòa bình
+  đó đây chan hòa phúc vinh.
+  
+  Thánh giá cao ngất thương đau
+  máu hồng từ châu thân chảy trào.
+  Người Yêu tôi tự hiến
+  chết vì yêu tôi.
+  Không có Tình Yêu nào vĩ đại bằng chết cho người mình yêu.
 }
 
 loiPhienKhucBasMot = \lyrics {
@@ -268,11 +288,23 @@ loiPhienKhucBasMot = \lyrics {
   Đàn tôi xin rung muôn điệu.
   Ý thơ xin ươm dệt thành bài tình ca.
   Vang thấu khắp không gian
-  kiên vững cùng thời
+  kiên vững cùng thời gian.
+  
+  Hm __ _ _ _ Giữa đêm trường.
+  Đã giáng sinh.
+  Đấng Cứu Tinh.
+  Miệt mài tháng năm
+  sầu thương những vấn vương.
+  Ánh quang hòa bình
+  đó đây chan hòa phúc vinh.
+  Rồi một chiều nao trên dồi Can -- vê
+  Thập giá chất ngất sầu thương.
+  Ngàn lời cười chê thay dòng nước mắt.
+  Hiến thân chết bao ô nhục vì tôi.
+  Không có tình yêu nào vĩ đại bằng chết cho người mình yêu.
 }
 
-loiPhienKhucSopHai = \lyrics {
-  gian.
+loiPhienKhucSolo = \lyrics {
   \set stanza = "Solo:"
   Nhớ năm xưa trong lạnh giá đêm trường.
   Người Yêu tôi giáng sinh và lên Ngôi Cứu Tinh.
@@ -282,42 +314,6 @@ loiPhienKhucSopHai = \lyrics {
   Thánh
 }
 
-loiPhienKhucAltoHai = \lyrics {
-  \set stanza = "CORO:"
-  Hm __ _ Giữa đêm trường.
-  Đã giáng sinh.
-  Đấng Cứu Tinh.
-  Miệt mài ngàn năm
-  sầu thương những vấn vương.
-  Ánh quan hòa bình
-  đó đây chan hòa phúc vinh.
-}
-
-loiPhienKhucBasHai = \lyrics {
-  gian. Hm __ _ _ _ Giữa đêm trường.
-  Đã giáng sinh.
-  Đấng Cứu Tinh.
-  Miệt mài tháng năm
-  sầu thương những vấn vương.
-  Ánh quang hòa bình
-  đó đây chan hòa phúc vinh.
-  Rồi một chiều nao trên dồi Can -- vê.
-}
-
-loiPhienKhucSopBa = \lyrics {
-  giá cao ngất thương đau
-  máu hồng từ châu thân chảy trào.
-  Người Yêu tôi tự hiến
-  chết vì yêu tôi.
-  Không có Tình Yêu nào vĩ đại bằng chết cho người mình yêu.
-}
-
-loiPhienKhucBasBa = \lyrics {
-  _ Thập giá chất ngất sầu thương.
-  Ngàn lời cười chê thay dòng nước mắt.
-  Hiến thân chết bao ô nhục vì tôi.
-  Không có tình yêu nào vĩ đại bằng chết cho người mình yêu.
-}
 
 % Dàn trang
 \paper {
@@ -333,6 +329,7 @@ loiPhienKhucBasBa = \lyrics {
 			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
   print-page-number = ##f
+  %page-count = 3
 }
 
 TongNhip = {
@@ -358,30 +355,42 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff = diepKhuc \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-     \new Voice \TongNhip \partCombine 
-          \nhacPhienKhucSopMot
-          \notBePhu -2 { \nhacPhienKhucAltoMot }
-        \new NullVoice = nhacThamChieuPhienKhucSopMot \nhacPhienKhucSopMot
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucSopMot \loiPhienKhucSopMot
-      >>
     \new Staff <<
-      \new Voice = "beBass" {
+      \new Voice = "solo" {
+        \clef treble \TongNhip \nhacPhienKhucSolo
+      }
+      \new Lyrics \lyricsto solo \loiPhienKhucSolo
+    >>
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacPhienKhucSopMot
+      }
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacPhienKhucAltoMot
+      }
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoMot
+    >>
+    
+    \new Staff <<
+      \new Voice = "beBas" {
         \clef bass \TongNhip \nhacPhienKhucBasMot
       }
-      \new Lyrics \lyricsto beBass \loiPhienKhucBasMot
+      \new Lyrics \lyricsto beBas \loiPhienKhucBasMot
     >>
   >>
   \layout {
-    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #0.6
+    \context {
+      \Staff \RemoveEmptyStaves
+      \override VerticalAxisGroup.remove-first = ##t
+    }
   } 
 }
 
+%{
 \score {
   \new ChoirStaff <<
     \new Staff \with {
@@ -438,3 +447,4 @@ notBePhu =
     \override Lyrics.LyricSpace.minimum-distance = #0.6
   } 
 }
+%}

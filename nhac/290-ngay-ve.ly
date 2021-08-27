@@ -141,6 +141,7 @@ nhacPhienKhucSolo = \relative c' {
   c4. b8 |
   b gs4 a8 |
   e4.
+  \key a \major
   r4.
   R2.*8
   R2*55
@@ -223,6 +224,7 @@ nhacPhienKhucSop = \relative c'' {
       r4 r8 d |
       d8. d16 c8 d |
       <a g c,>8 <a g c,> r a |
+      \set Score.repeatCommands = #'((volta #f))
       <a e c>8. a16 g8 a |
       
       \key c \major
@@ -352,9 +354,10 @@ nhacPhienKhucSop = \relative c'' {
   \slashedGrace { b8 ( } a2) |
   r8 a4 fs8 |
   \slashedGrace { fs8 ( } e2) \bar "||" \break
-  
+  %\key f \major
   R2*21
   r8
+  
   \key d \major
   d'4 d8 |
   \slashedGrace { b8 ( } a2) |
@@ -381,8 +384,40 @@ nhacPhienKhucSop = \relative c'' {
       d,2 ~ |
       d4 r |
       R2 
+      \set Score.repeatCommands = #'((volta #f))
+      r8 a' a4 |
+      fs'8 fs fs g16 (fs) |
+      e4. \slashedGrace { \once \stemDown cs8 ^( } e) |
+      cs4 b8 e ~ |
+      e gs,4 a8 |
     }
   }
+  \break
+  <<
+    {
+      \voiceOne
+      a2
+      r8
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+	    \tiny
+      r8
+      \once \override NoteColumn.X-offset = 3 <>
+      cs16
+      \tweak extra-offset #'(0 . -1)
+      _\markup { \halign #-1 \fontsize #1 \italic "(Đàn)" }
+      cs b8 e |
+      a,8
+    }
+  >>
+  \oneVoice
+  a a4 |
+  fs'8 fs fs g16 (fs) |
+  e4. a8 |
+  g4 e8 a ~ |
+  a cs,4 d8 |
+  d2 \bar "|."
 }
 
 nhacPhienKhucAlto = \relative c'' {
@@ -559,6 +594,7 @@ nhacPhienKhucAlto = \relative c'' {
   cs2 |
   r8 cs4 d8 |
   b2
+  %\key f \major
   R2*21
   r8
   
@@ -568,8 +604,32 @@ nhacPhienKhucAlto = \relative c'' {
   r8 e4 fs8 |
   b,2 ~ |
   b4 r |
-  R2*12
-  
+  R2*13 \break
+  R2
+  r4 g'8 fs ~ |
+  fs e4 e8 |
+  a4 fs8 e |
+  d4. a'8 |
+  fs4 d8 d |
+  cs4 cs8 cs |
+  d4. b8 |
+  cs cs4 cs8 |
+  d4 fs8 e |
+  a,2 ~ |
+  a4 r |
+  R2
+  r8 a' a4 |
+  a8 a a b16 (a) |
+  g4. gs8 |
+  a4 e8 e ~ |
+  e e (d) cs |
+  cs2 |
+  r8 a' a4 |
+  a8 a a b16 (d) |
+  cs4. d8 |
+  b4 b8 a ( |
+  a) a (g) fs |
+  fs2
 }
 
 nhacPhienKhucBas = \relative c {
@@ -806,8 +866,29 @@ nhacPhienKhucBas = \relative c {
   <e a,> <a a,>4 <g a,>8 |
   <fs d>4 d8 g |
   <fs d>2 ~ |
-  <fs d>4 
-  
+  <<
+    {
+      <fs d>4 a4\rest
+    }
+    {
+      \stemDown a,,8\rest a'16 a d8 e |
+    }
+  >>
+  fs d16 d fs8 g |
+  a
+  \once \override NoteColumn.X-offset = 2 <>
+  a a4 |
+  d8 d d, ds |
+  e4. e8 |
+  fs4 <gs d>8 <a cs,> ~ |
+  <a cs,> <b e,>4 <a e a,>8 |
+  <a e a,>2 |
+  r8 a a4 |
+  d8 d d g, |
+  a4. fs8 |
+  g4 <b g>8 <d fs,> ~ |
+  <d fs,> <e a,>4 <d a d,>8 |
+  <d a d,>2
 }
 
 % Lời phiên khúc
@@ -905,7 +986,6 @@ loiPhienKhucSop = \lyrics {
   bình
   Ngoài trời sắc nắng cũng thắm lên
   Tiếng chim ríu rít dậy đầy thềm
-  (Đàn) __ _ _
   Ngoài trời sắc nắng cũng thắm lên
   Tiếng chim ríu rít dậy đầy thềm.
 }
@@ -961,7 +1041,6 @@ loiPhienKhucAlto = \lyrics {
   bình
   Ngoài trời sắc nắng cũng thắm lên
   Tiếng chim ríu rít dậy đầy thềm
-  (Đàn) __ _ _
   Ngoài trời sắc nắng cũng thắm lên
   Tiếng chim ríu rít dậy đầy thềm.
 }
@@ -1036,7 +1115,7 @@ loiPhienKhucBas = \lyrics {
   Đã mất rồi nay gặp lại bình
   an Này con
   an
-  (Đàn) __ _ _ _ _ _ _ _
+  (Đàn) __ _ _ _ _ _ _ _ _ _
   Ngoài trời sắc nắng cùng rực lên
   Lời chim ríu rít thấy đầy thềm
   Ngoài trời sắc nắng cũng rực lên
