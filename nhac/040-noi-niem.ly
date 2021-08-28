@@ -343,7 +343,7 @@ nhacPhienKhucAlto = \relative c' {
   bf4 g8 f |
   e4 r |
   g8 (bf a g) |
-  <d' f,>2 ^~ |
+  <d' f,>2 ~ |
   <d f,>4 r |
   
   \repeat unfold 12 { \skip 2 }

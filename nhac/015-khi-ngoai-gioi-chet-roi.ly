@@ -351,7 +351,8 @@ loiPhienKhucBasMot = \lyrics {
 }
 
 loiBasHai = \lyrics {
-  tụa lá trời đêm
+  \override Lyrics.LyricText.font-shape = #'italic
+  tựa lá trời đêm
 }
 
 % Dàn trang

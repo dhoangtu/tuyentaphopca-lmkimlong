@@ -109,10 +109,6 @@ nhacPhienKhucSop = \relative c' {
   c4 \bar "||"
 }
 
-nhacPhienKhucBas = \relative c' {
-  
-}
-
 % Lời điệp khúc
 loiDiepKhucSop = \lyricmode {
   Tôi vui mừng ớ chúng ta mau đi về,
@@ -189,7 +185,7 @@ loiPhienKhucSopBa = \lyricmode {
       (/ 20 20)))
   %page-count = #1
   print-page-number = #f
-  system-system-spacing = #'((basic-distance . 15))
+  system-system-spacing = #'((basic-distance . 12))
   %score-system-spacing = #'((basic-distance . 15))
 }
 
@@ -242,22 +238,15 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff = diepKhuc \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-     \new Voice = "beSop" { \TongNhip \partCombine 
-          \nhacPhienKhucSop
-          \notBePhu -2 { \nhacPhienKhucBas } }
-        \new NullVoice = nhacThamChieuPhienKhucSop \nhacPhienKhucSop
+    \new Staff = diepKhuc <<
+     \new Voice = "beSop" { \TongNhip \nhacPhienKhucSop }
         \new Lyrics \with {
           \override VerticalAxisGroup.
             nonstaff-relatedstaff-spacing.padding = #1.5
         }
-        \lyricsto nhacThamChieuPhienKhucSop \loiPhienKhucSopMot
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucSop \loiPhienKhucSopHai
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucSop \loiPhienKhucSopBa
+        \lyricsto beSop \loiPhienKhucSopMot
+        \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
+        \new Lyrics \lyricsto beSop \loiPhienKhucSopBa
       >>
   >>
   \layout {
