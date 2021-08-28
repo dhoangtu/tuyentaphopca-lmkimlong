@@ -14,14 +14,7 @@ nhacDiepKhucSop = \relative c' {
   \partial 8 r8 \bar "||"
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
-  r2
-  r
-  r
-  r
-  r
-  r
-  r
-  r
+  R2*8
   r8 f bf bf |
   d8. bf16 a8 g |
   r g c c |
@@ -36,19 +29,13 @@ nhacDiepKhucSop = \relative c' {
   f4. c'16 bf |
   bf8 (a4) a8 |
   bf2 ~ |
-  bf ^(<>)
+  bf ~ |
+  bf8 \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
   \partial 8 r8
-  r2
-  r
-  r
-  r
-  r
-  r
-  r
-  r
+  R2*8
   r8 f d g |
   fs8. g16 d8 bf |
   r f' ef ef |
@@ -63,7 +50,8 @@ nhacDiepKhucAlto = \relative c' {
   bf4. a16 bf |
   ef4. ef8 |
   d2 ~ |
-  d2 _(<>)
+  d ~ |
+  d8
 }
 
 nhacDiepKhucBas = \relative c {
@@ -90,15 +78,14 @@ nhacDiepKhucBas = \relative c {
   d4. ef16 d |
   c4. f8 |
   bf,2 ~ |
-  bf (<>) |
+  bf ~ |
+  bf8
 }
 
 nhacPhienKhucSop = \relative c'' {
-  bf8
-  ^\tweak control-points #'((-2 . 3) (-1 . 3.1) (0 . 3.2) (1 . 2.4)) ( <> )
-  r r4 |
+  \partial 4. r8 r4 |
   r2
-  r
+  r \break
   r8 bf bf8. bf16 |
   bf8 d bf a ~ |
   a a bf a |
@@ -115,9 +102,7 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c' {
-  d8
-  ^\tweak control-points #'((-2 . 3) (-1 . 3.1) (0 . 3.2) (1 . 2.4)) ( <> )
-  r r4 |
+  \partial 4. r8 r4 |
   r2
   r
   r8 d d8. d16 |
@@ -133,9 +118,7 @@ nhacPhienKhucAlto = \relative c' {
 }
 
 nhacPhienKhucBas = \relative c {
-  \autoBeamOff bf8
-  \once \override NoteColumn.X-offset = 3
-  d' \autoBeamOn d8. bf16 |
+  \partial 4. d'8 \autoBeamOn d8. bf16 |
   c8 c f, f ~ |
   f d ef g |
   f2 ~ |
@@ -161,14 +144,15 @@ loiDiepKhucSop = \lyrics {
 }
 
 loiDiepKhucAlto = \lyrics {
-  \override LyricText.font-shape = #'italic
-  _ _ _ _ _ _ _ _ _ _
-  _ _ _ _ 
-  cùng về đây
+  Gọi hoa muôn sắc trên nương đồi
+  Gọi bao cơn sóng giữa biển khơi cùng về đây
+  kết lời hòa khúc tân ca,
+  tung hô Chúa Trời,
+  vì lòng Chúa thiết tha,
+  mến thương ta bao la.
 }
 
 loiPhienKhucSopMot = \lyrics {
-  _
   \set stanza = "1."
   Cho tôi nương thân cánh tay Ngài
   vui sống hôm mai
@@ -179,7 +163,6 @@ loiPhienKhucSopMot = \lyrics {
 }
 
 loiPhienKhucSopHai = \lyrics {
-  _
   \set stanza = "2."
   Cho tim tôi mơ ước quê Trời tha thiết khôn ngơi
   Tựa con thơ ngoan nằm trong tay thân mẫu diệu vợi,
@@ -187,7 +170,6 @@ loiPhienKhucSopHai = \lyrics {
 }
 
 loiPhienKhucSopBa = \lyrics {
-  _
   \set stanza = "3."
   Ươm thơ mau lên ý tuôn trào
   vươn lút trăng sao
@@ -209,7 +191,6 @@ loiDiepKhucBas = \lyrics {
 }
 
 loiPhienKhucBasMot = \lyrics {
-  _
   \set stanza = "1."
   Chính Chúa dệt tôi nên hình hài
   từ khi nghén thai
@@ -219,7 +200,6 @@ loiPhienKhucBasMot = \lyrics {
 }
 
 loiPhienKhucBasHai = \lyrics {
-  _
   \set stanza = "2."
   Có Chúa cùng đi trong cuộc đời
   duổi dong khắp nơi
@@ -230,7 +210,6 @@ loiPhienKhucBasHai = \lyrics {
 }
 
 loiPhienKhucBasBa = \lyrics {
-  _
   \set stanza = "3."
   Khúc hát tình yêu ôi ngọt ngào,
   này tôi cất cao vươn lụt trăng sao
@@ -252,6 +231,7 @@ lặng hồn vào, thắm thiết biết bao. Tôi...
 			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
   print-page-number = ##f
+  page-count = 2
 }
 
 TongNhip = {
@@ -282,13 +262,15 @@ notBePhu =
         printPartCombineTexts = ##f
       }
       <<
-      \new Voice \TongNhip \partCombine
-            \nhacDiepKhucSop
-            \notBePhu -2 { \nhacDiepKhucAlto }
-      \new NullVoice = nhacThamChieuDiepKhucSop \nhacDiepKhucSop
-      \new Lyrics \lyricsto nhacThamChieuDiepKhucSop \loiDiepKhucSop
-      \new NullVoice = nhacThamChieuDiepKhucAlto \nhacDiepKhucAlto
-      \new Lyrics \lyricsto nhacThamChieuDiepKhucAlto \loiDiepKhucAlto
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacDiepKhucSop
+      }
+      \new Lyrics \lyricsto beSop \loiDiepKhucSop
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacDiepKhucAlto }
+      \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
     >>
     \new Staff <<
         \new Voice = "beBas" {
@@ -303,6 +285,8 @@ notBePhu =
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
   }
 }
+
+\markup { \vspace #1 }
 
 \score {
   \new ChoirStaff <<
@@ -332,5 +316,9 @@ notBePhu =
     %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \context {
+      \Staff \RemoveEmptyStaves
+      \override VerticalAxisGroup.remove-first = ##t
+    }
   }
 }
