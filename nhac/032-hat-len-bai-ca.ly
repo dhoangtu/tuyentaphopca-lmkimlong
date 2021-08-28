@@ -9,79 +9,147 @@
   tagline = ##f
 }
 
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
+
 nhacPhienKhucSop = \relative c'' {
-  \stemUp
   \partial 4. d8 b16 (a) g8 |
-  a2 ~ |
-  a4 d8 d |
-  b4 g |
-  a8 b16 (a) g8 a |
-  b2 ~ |
-  b8 d b16 (a) g8 |
-  a2 ~ |
-  a4 d8 d |
-  b b c b |
-  a a b a |
-  g2 ~ |
-  g8 \bar "||" \break
+  <<
+    {
+      \voiceOne
+      a2 ~ |
+      a4
+    }
+    \new Voice = "bePhuMot" \notBePhu -2 {
+	    \voiceTwo
+      c,4\rest d8 d |
+      g4
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      d'8 d |
+      b4 g |
+      
+    }
+    \notBePhu -2 {
+      fs8 fs |
+      g4 e |
+      
+    }
+  >>
+  <<
+    {
+      \voiceOne
+      a8 b16 (a)
+    }
+    \new Voice = "bePhuHai" \notBePhu -2 {
+	    \voiceTwo
+      d,8 d
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      g8 a |
+      b2 ~ |
+      b8
+    }
+    \notBePhu -2 {
+      b, d |
+      g2 ~ |
+      g8
+    }
+  >>
+  d' b16 (a) g8 |
+  <<
+    {
+      \voiceOne
+      a2 ~ |
+      a4
+    }
+    \new Voice = "bePhuBa" \notBePhu -2 {
+	    \voiceTwo
+      r4 d,8 d |
+      g4
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      d'8 d |
+      b b c b |
+      a a b a |
+      g2 ~ |
+      g8
+    }
+    \notBePhu -2 {
+      fs8 fs |
+      g g a g |
+      d d d c |
+      c2 ~ |
+      c8
+    }
+  >>
+  \bar "||" \break
   
   \partial 4. d8 g fs |
   e8 e a g |
   fs fs b a |
-  g g c b |
-  a4 a8 as |
-  b2 ~ |
-  \autoBeamOff
-  b8
-  
-  \stemDown
-  \autoBeamOn
-  b [c b] |
-  a a b a |
-  g g a g |
-  fs fs g fs |
-  e4 e8 ef |
-  d2 _~ |
-  d8 \bar "|."
-}
-
-nhacPhienKhucBas = \relative c' {
-  \partial 4. r8 r4 |
-  r4 d8 d |
-  g4 fs8 fs |
-  g4 e |
-  d8 d b d |
-  g2 ~ |
-  g8 r r4 |
-  r4 d8 d |
-  g4 fs8 fs |
-  g g a g |
-  d d d c |
-  c2 ~ |
-  c8
-  
-  d8 g fs |
-  e e a g |
-  fs fs b a |
-  g g e g |
-  d4 d8 d |
-  g2 ~ |
-  \autoBeamOff
-  g8
-  
-  \stemUp
-  \autoBeamOn
-  d' [e d] |
-  c c d c |
-  b b c b |
-  a a b a |
-  g4 g8 g |
-  a2 _\markup { \huge \italic "xa." } ^~|
-  a8
+  g g
+  <<
+    {
+      c b |
+      a4 a8 as |
+      b2 ~ |
+      b8
+    }
+    \notBePhu -2 {
+      e, g |
+      d4 d8 d |
+      g2 ~ |
+      g8
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      b [c b] |
+      a a b a |
+      g g a g |
+      fs fs g fs |
+      e4 e8 ef |
+      d2 ~ |
+      d8
+    }
+    \notBePhu -2 {
+      d' [e d] |
+      c c d c |
+      b b c b |
+      a a b a |
+      g4 g8 g |
+      a2 _\markup { \huge \italic "xa." } ~|
+      a8
+    }
+  >>
+  \bar "|."
 }
 
 nhacDiepKhucSopHai = \relative c'' {
-  ^\markup { \bold \huge \raise #4 "Điệp khúc 3 bè" }
+  <>^\markup { \halign #-0.1 \bold \huge \raise #5 "Điệp khúc 3 bè" }
   \partial 4. d8 b16 (a) g8 |
   a2 ~ |
   a4 d8 d |
@@ -150,7 +218,7 @@ loiPhienKhucSopMot = \lyrics {
       muôn khúc tân ca  mau vang hòa.
     }
     \new Lyrics {
-      \set associatedVoice = "nhacThamChieuPhienKhucSop"
+      \set associatedVoice = "beSop"
       \set stanza = "2."
       Trong bóng đêm thanh,
       tinh tú long lanh,
@@ -158,7 +226,7 @@ loiPhienKhucSopMot = \lyrics {
       muôn khúc tân ca mau vang hòa.
     }
     \new Lyrics {
-      \set associatedVoice = "nhacThamChieuPhienKhucSop"
+      \set associatedVoice = "beSop"
       \set stanza = "3."
       Trong ánh xuân sang,
       trong gió đông tan,
@@ -168,14 +236,17 @@ loiPhienKhucSopMot = \lyrics {
   >>
 }
 
-loiPhienKhucBasMot = \lyrics {
+loiBePhuMot = \lyrics {
   \override Lyrics.LyricText.font-shape = #'italic
   hỡi ngàn dân
-  _ _ _ _ _ _ _ _ _
+}
+
+loiBePhuBa = \lyrics {
+  \override Lyrics.LyricText.font-shape = #'italic
   một niềm tin
 }
 
-loiDiepKhucSopHai = \lyrics {
+loiDiepKhucSopBaBe = \lyrics {
   \set stanza = "ĐK."
   Hát lên bài ca,
   hãy hát lên bài ca chúc tụng Thiên Chúa.
@@ -184,7 +255,7 @@ loiDiepKhucSopHai = \lyrics {
   dâng Chúa thiên đình.
 }
 
-loiDiepKhucBasHai = \lyrics {
+loiDiepKhucBasBaBe = \lyrics {
   Hỡi ngàn dân
   ca lên khúc ca chúc tụng Thiên Chúa,
   hỡi ngàn dân.
@@ -222,21 +293,6 @@ TongNhip = {
   \set Timing.baseMoment = #(ly:make-moment 1/4)
 }
 
-% Đổi kích thước nốt cho bè phụ
-notBePhu =
-#(define-music-function (font-size music) (number? ly:music?)
-   (for-some-music
-     (lambda (m)
-       (if (music-is-of-type? m 'rhythmic-event)
-           (begin
-             (set! (ly:music-property m 'tweaks)
-                   (cons `(font-size . ,font-size)
-                         (ly:music-property m 'tweaks)))
-             #t)
-           #f))
-     music)
-   music)
-
 \score {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
@@ -244,14 +300,10 @@ notBePhu =
         printPartCombineTexts = ##f
       }
       <<
-     \new Voice \partCombineChords 
-          { \TongNhip \nhacPhienKhucSop }
-          \\
-          { \notBePhu -2 { \nhacPhienKhucBas } }
-        \new NullVoice = nhacThamChieuPhienKhucSop \nhacPhienKhucSop
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucSop \loiPhienKhucSopMot
-        \new NullVoice = nhacThamChieuPhienKhucBas \nhacPhienKhucBas
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucBas \loiPhienKhucBasMot
+     \new Voice = "beSop" { \TongNhip \nhacPhienKhucSop }
+        \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
+        \new Lyrics \lyricsto "bePhuMot" \loiBePhuMot
+        \new Lyrics \lyricsto "bePhuBa" \loiBePhuBa
       >>
   >>
   \layout {
@@ -264,24 +316,29 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff <<
+    \new Staff \with {
+      instrumentName = #"S"
+    } <<
       \new Voice = "beSop" {
         \clef treble \TongNhip \nhacDiepKhucSopHai
       }
-      \new Lyrics \lyricsto beSop \loiDiepKhucSopHai
+      \new Lyrics \lyricsto beSop \loiDiepKhucSopBaBe
     >>
     \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
+      instrumentName = #"T"
+    } <<
+     \new Voice = "beTenor" {
+       \clef "violin_8" \TongNhip \nhacDiepKhucTenorHai
+     }
+        \new Lyrics \lyricsto beTenor \loiDiepKhucBasBaBe
+      >>
+    \new Staff \with {
+      instrumentName = #"B"
+    } <<
      \new Voice = "beBas" {
-       \clef bass
-       \TongNhip \partCombine 
-          \nhacDiepKhucTenorHai
-          \notBePhu -2 { \nhacDiepKhucBasHai } }
-        \new NullVoice = nhacThamChieuDiepKhucBasHai \nhacDiepKhucBasHai
-        \new Lyrics \lyricsto nhacThamChieuDiepKhucBasHai \loiDiepKhucBasHai
+       \clef bass \TongNhip \nhacDiepKhucBasHai
+     }
+        \new Lyrics \lyricsto beBas \loiDiepKhucBasBaBe
       >>
   >>
   \layout {
