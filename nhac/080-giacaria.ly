@@ -48,6 +48,7 @@ nhacIntroBas = \relative c {
 nhacPhienKhucSop = \relative c' {
   \set Staff.printKeyCancellation = ##f
   \key bf \major \time 2/4
+  \once \omit Staff.TimeSignature
   \partial 4 \tuplet 3/2 { d8 f f } |
   g4. f8 |
   c8. ef16 d8 d |

@@ -32,6 +32,7 @@ nhacIntroBas = \relative c' {
 nhacPhienKhucSop = \relative c'' {
   \set Staff.printKeyCancellation = ##f
   \key c \major \time 2/4
+  \once \hide Staff.TimeSignature
   \partial 4 g4 ~ |
   g a8 (b) |
   c4 r8 e |
@@ -170,6 +171,7 @@ nhacPhienKhucSop = \relative c'' {
 nhacPhienKhucAlto = \relative c'' {
   \set Staff.printKeyCancellation = ##f
   \key c \major \time 2/4
+  \once \hide Staff.TimeSignature
   g4 ~ |
   g a8 (b) |
   c4 r8 c |
@@ -299,6 +301,7 @@ nhacPhienKhucAlto = \relative c'' {
 nhacPhienKhucBas = \relative c' {
   \set Staff.printKeyCancellation = ##f
   \key c \major \time 2/4
+  \once \hide Staff.TimeSignature
   g4 ~ |
   g a8 (b) |
   c4 r8 c |

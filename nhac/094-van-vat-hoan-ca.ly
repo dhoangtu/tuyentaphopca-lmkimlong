@@ -94,6 +94,7 @@ nhacPhienKhucSolo = \relative c'' {
 nhacPhienKhucSop = \relative c'' {
   \set Staff.printKeyCancellation = ##f
   \key c \major \time 2/4
+  \once \hide Staff.TimeSignature
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1)
@@ -447,6 +448,7 @@ nhacPhienKhucSop = \relative c'' {
 nhacPhienKhucAlto = \relative c'' {
   \set Staff.printKeyCancellation = ##f
   \key c \major \time 2/4
+  \once \hide Staff.TimeSignature
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1)
@@ -712,6 +714,7 @@ nhacPhienKhucAlto = \relative c'' {
 nhacPhienKhucBas = \relative c' {
   \set Staff.printKeyCancellation = ##f
   \key c \major \time 2/4
+  \once \hide Staff.TimeSignature
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1)
