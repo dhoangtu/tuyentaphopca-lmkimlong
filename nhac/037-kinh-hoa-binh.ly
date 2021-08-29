@@ -16,7 +16,7 @@ nhacPhienKhucSopMot = \relative c' {
   c' (b) e, (g) |
   a4 e'8 e |
   e4 f8 f |
-  e c c d |
+  e c c c |
   e4 c8 b |
   a2 ~ |
   a4 e |
@@ -41,7 +41,7 @@ nhacPhienKhucSopMot = \relative c' {
   a a8 b |
   c a b b |
   b4 c8 b |
-  a g a b |
+  a g b b |
   e,2 ~ |
   e4 e |
   e'4 c8 d |
@@ -49,7 +49,7 @@ nhacPhienKhucSopMot = \relative c' {
   e4 d8 c |
   d e e b |
   a2 ~ |
-  a4 \bar "||" \break
+  a4 \bar "|" \break
   
   e4 |
   e'4 e |
@@ -65,9 +65,9 @@ nhacPhienKhucSopMot = \relative c' {
   e2 ~ |
   e4 r |
   r r8 c |
-  a a c4 ( |
-  b2) |
-  g4 r8 e |
+  a a c4 |
+  b2 ~ |
+  b4 r8 e, |
   c'4 b8 c |
   b4. a8
   c4 a8 c16 (d) |
@@ -152,7 +152,7 @@ nhacPhienKhucAltoMot = \relative c' {
   R2
   R
   r4 r8 e,8 |
-  a4 g8 a |
+  a4 gs8 a |
   f4. e8 |
   a4 g8 g |
   c2 |
@@ -256,8 +256,8 @@ nhacPhienKhucBasMot = \relative c' {
   f4 d8 d |
   a4 r |
   r8 e' a a |
-  d,4 g, |
-  c d8 d |
+  d,4 g |
+  c, d8 d |
   e4 e |
   d g |
   c,8 b c d |
@@ -325,7 +325,7 @@ nhacPhienKhucBasMot = \relative c' {
 loiPhienKhucSopMot = \lyrics {
   Lạy Chúa từ nhân
   xin cho con biết mến yêu và phụng sự Chúa trong mọi người.
-  Lạy Chúa xin hãy dùng con như khí cụ Bình An của Chúa.
+  Lạy Chúa xin hãy dùng con như khí cụ bình an của Chúa.
   đem thứ tha vào nơi lăng nhục,
   đem an hòa vào nơi tranh chấp
   vào chốn lỗi lầm.
@@ -356,7 +356,7 @@ loiPhienKhucAltoMot = \lyrics {
   xin cho con biết mến yêu và phụng sự Chúa trong mọi người
   trong mọi người.
   Lạy Chúa xin hãy dùng
-  con như khí cụ Bình An
+  con như khí cụ bình an
   khí cụ bình an.
   Để con
   đem thứ ta vào nơi lăng nhục,
@@ -378,8 +378,8 @@ loiPhienKhucAltoMot = \lyrics {
 
 loiPhienKhucTenorMot = \lyrics {
   Xin cho con mến yêu phụng sự Chúa trong mọi người,
-  trong muôn người.
-  Lạy Chúa xin hãy dùng con như khí cụ Bình An,
+  trong mọi người.
+  Lạy Chúa xin hãy dùng con như khí cụ bình an,
   khí cụ của Chúa.
   Để con đem yêu thương vào nơi oán thù
   vào nơi lăng nhục
@@ -400,8 +400,8 @@ loiPhienKhucTenorMot = \lyrics {
 
 loiPhienKhucBasMot = \lyrics {
   Xin cho con mến yêu phụng sự Chúa trong mọi người,
-  trong muôn người.
-  Lạy Chúa xin hãy dùng con như khí cụ Bình An,
+  trong mọi người.
+  Lạy Chúa xin hãy dùng con như khí cụ bình an,
   khí cụ bình an của Chúa.
   Để con đem yêu thương vào nơi oán thù
   vào nơi lăng nhục

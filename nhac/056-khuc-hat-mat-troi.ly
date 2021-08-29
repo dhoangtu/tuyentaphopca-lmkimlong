@@ -149,7 +149,7 @@ nhacPhienKhucAlto = \relative c'' {
   gs2 ~ |
   gs4 r4 |
   r8 a a a16 a |
-  g4 \skip 4 |
+  g4 r |
   r8 g g g16 g |
   f2 |
   r8 g16 e e8 a |
@@ -299,7 +299,7 @@ loiPhienKhucSop = \lyrics {
   hình ảnh của một mặt trời,
   một mặt trời công chính
   giáng trần nhận lãnh việc cứu đời
-  Để giải phóng ngàn dân.
+  để giải phóng ngàn dân.
   Ta nao nao ôn nhớ đến vô vàn
   Ơn lành thánh
   vì Ngài ta phong phú.
@@ -334,7 +334,7 @@ loiPhienKhucAlto = \lyrics {
   một mặt trời công chính.
   Con Thiên Chúa xưa giáng trần
   lãnh việc chuộc đời
-  Để giải phóng ngàn dân.
+  để giải phóng ngàn dân.
   Ta nao nao ôn nhớ đến vô vàn
   Ơn lành 
   vì Ngài ta phong phú.
@@ -367,7 +367,7 @@ loiPhienKhucBas = \lyrics {
   một mặt trời công bình,
   một mặt trời công chính
   giáng trần nhận lãnh cứu đời
-  Để giải phóng ngàn dân.
+  để giải phóng ngàn dân.
   Ta nao nao ôn lại cả vô vàn
   Ơn lành thánh, vì Ngài ta phong phú.
   Hỡi vũ...
