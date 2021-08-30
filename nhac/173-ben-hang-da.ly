@@ -153,14 +153,15 @@ nhacPhienKhucSop = \relative c'' {
           %\mark \markup { \musicglyph #"scripts.segno" }
         }
         {
-          \context Staff = "ossia" \with {
+          \new Staff = "ossia" \with {
             alignAboveContext = #"1"
             \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 6))
             \remove "Time_signature_engraver"
+            firstClef = ##f
           } {
               \startStaff
               r4
-              ^"Đàn"
+              _"Đàn"
               r8 c |
               a f16 f g8 g
               \stopStaff

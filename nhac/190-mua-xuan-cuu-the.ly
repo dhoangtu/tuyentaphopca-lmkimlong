@@ -68,18 +68,22 @@ nhacPhienKhucSop = \relative c' {
   \tuplet 3/2 { e d g, } \tuplet 3/2 { c g e } |
   f4. fs16 fs |
   <g d b>4. <d b>8 |
-  <c a>2 |
+  
   <<
     \new Voice = "splitpart" {
 	    \voiceTwo
-      <c a>4 \skip 4
+	    <c\=1^( a\=2_(>2 |
+      <c\=1) a\=2)>4 \skip 4
     }
     {
       \voiceOne
-      b'8\rest c,4 e8
+      \skip 2
+      b'8\rest
+      \once \override NoteColumn.X-offset = 2.5 <>
+      c,4 e8
     }
   >>
-  \bar "" \break
+  \bar "|" \break
   \oneVoice
   g2 ~ |
   g ~ |
@@ -109,7 +113,40 @@ nhacPhienKhucSop = \relative c' {
   \time 3/4
   af4 (f) g |
   g2 g4 |
+  f4 ef r8 d |
+  d2. |
+  d'4 (ef) c |
+  d2 c8 (d) |
+  d4 c r8 c |
+  b2 c8 c |
   
+  \time 2/4
+  g8. g16 g8 a |
+  g e4. |
+  d'8. b16 b8 d |
+  g, e4 g8 |
+  c2 ~ |
+  c4 e8 e |
+  d8. g16 c,8 d |
+  e f4. |
+  a,8. d16 d8 e |
+  \slashedGrace { e,8 ( } g2) |
+  r8 e' (f) e |
+  d2 ~ |
+  d4 c8 c |
+  g8. g16 g8 a |
+  g e4. |
+  d'8. b16 b8 d |
+  g, e4 g8 |
+  c2 ~ |
+  c4 e8 e |
+  d8. g16 c,8 d |
+  e f4. |
+  a,8. d16 d8 e |
+  \slashedGrace { e,8 ( } g2) |
+  r8 d'4 b8 |
+  c2 ~ |
+  c4 \bar "|."
 }
 
 nhacPhienKhucAlto = \relative c' {
@@ -179,7 +216,40 @@ nhacPhienKhucAlto = \relative c' {
   \time 3/4
   c2 b4 |
   c2 c4 |
+  c4 c r8 c |
+  b2. |
+  g'2 ef4 |
+  g2 ef4 |
+  f ef r8 ef |
+  d2 e8 e |
   
+  \time 2/4
+  d8. d16 e8 c |
+  b c4. |
+  a'8. d,16 d8 b |
+  c c4 d8 |
+  e2 ~ |
+  e4 b'8 c |
+  a8. g16 e8 g |
+  g a4. |
+  e8. f16 g8 f |
+  e2 |
+  r8 g (a) c |
+  b2 ~ |
+  b4 g8 e |
+  d8. d16 e8 c |
+  b c4. |
+  a'8. d,16 d8 b |
+  c c4 d8 |
+  e2 ~ |
+  e4 b'8 c |
+  a8. g16 e8 g |
+  g8 a4.
+  e8. f16 g8 f |
+  e2 |
+  r8 f4 f8 |
+  e2 ~ |
+  e4
 }
 
 nhacPhienKhucBas = \relative c' {
@@ -279,7 +349,40 @@ nhacPhienKhucBas = \relative c' {
   \time 3/4
   f4 (af) g8 (f) |
   ef2 ef4 |
+  af af r8 f |
+  g2. |
+  c,2 c'4 |
+  b2 c4 |
+  f, af r8 c |
+  g2 c8 c |
   
+  \time 2/4
+  b8. b16 c8 f, |
+  g a4. |
+  f8. g16 g8 f |
+  e c'4 b8 |
+  a2 ~ |
+  a4 gs8 a |
+  f8. e16 a8 g |
+  c, f4. |
+  c'8. c16 b8 b |
+  c2 |
+  r8 c,4 e8 |
+  g2 ~ |
+  g4 e8 c |
+  b8. b16 c8 f |
+  g a4. |
+  f8. g16 g8 f |
+  e c'4 b8 |
+  a2 ~ |
+  a4 gs8 a |
+  f8. e16 a8 g |
+  c, f4. |
+  c'8. c16 b8 b |
+  c2 |
+  r8 <a f>4 <d g,>8 |
+  <c c,>2 ~ |
+  <c c,>4
 }
 
 % Lời phiên khúc
@@ -292,7 +395,7 @@ loiPhienKhucSop = \lyrics {
   Trăng ân tình hoa đền ngự như không.
   Nhạc thiên tiên của nước Nhược non Bồng.
   Cung réo rắt Động Đào xưa vỡ lở.
-  (Đàn) __ \repeat unfold 14 { _ }
+  \repeat unfold 14 { _ }
   Một mùa xuân một mùa xuân vạn thuở.
   Khi ra đời là nghiêng ngửa cả trăng sao.
   Hoa lá sượng sần, chim muông bỡ ngỡ.
@@ -349,7 +452,8 @@ loiPhienKhucBas = \lyrics {
   Trăng ân tình hoa đền ngự và đền ngự bằng không.
   Nhạc thiên tiên của cả nước non Bồng.
   Réo rắt Động Đào xưa vỡ lở.
-  \repeat unfold 13 { _ }
+  \tweak extra-offset #'(-10 . 0)
+  (Đàn) __ \repeat unfold 12 { _ }
   Một mùa xuân vạn thuở, vạn thuở.
   Khi ra đời là nghiêng ngửa cả trăng sao.
   Là rừng núi sông biển sẽ lao đao.
