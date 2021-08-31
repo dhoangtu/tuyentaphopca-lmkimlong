@@ -186,7 +186,7 @@ loiPhienKhucSopBa = \lyricmode {
   %page-count = #1
   print-page-number = #f
   system-system-spacing = #'((basic-distance . 12))
-  %score-system-spacing = #'((basic-distance . 15))
+  score-system-spacing = #'((basic-distance . 11))
 }
 
 TongNhip = {
