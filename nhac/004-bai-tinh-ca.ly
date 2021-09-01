@@ -318,7 +318,7 @@ loiPhienKhucSolo = \lyrics {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
+  top-margin = 20\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -330,6 +330,7 @@ loiPhienKhucSolo = \lyrics {
 			       (/ 20 20)))
   print-page-number = ##f
   %page-count = 3
+  %systems-per-page = 4
 }
 
 TongNhip = {
@@ -389,62 +390,3 @@ notBePhu =
     }
   } 
 }
-
-%{
-\score {
-  \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      } <<
-      \new Voice = "beSop" {
-        \clef treble \TongNhip \nhacPhienKhucSopHai
-      }
-      \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
-    >>
-    \new Staff   <<
-     \new Voice \TongNhip \partCombine 
-          \nhacPhienKhucAltoHai
-          \notBePhu -2 { \nhacPhienKhucTenorHai }
-        \new NullVoice = nhacThamChieuPhienKhucAltoHai \nhacPhienKhucAltoHai
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucAltoHai \loiPhienKhucAltoHai
-      >>
-    \new Staff <<
-      \new Voice = "beBass" {
-        \clef bass \TongNhip \nhacPhienKhucBasHai
-      }
-      \new Lyrics \lyricsto beBass \loiPhienKhucBasHai
-    >>
-  >>
-  \layout {
-    %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.6
-  } 
-}
-
-\score {
-  \new ChoirStaff <<
-    \new Staff = diepKhuc \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-     \new Voice \TongNhip \partCombine 
-          \nhacPhienKhucSopBa
-          \notBePhu -2 { \nhacPhienKhucAltoBa }
-        \new NullVoice = nhacThamChieuPhienKhucSopBa \nhacPhienKhucSopBa
-        \new Lyrics \lyricsto nhacThamChieuPhienKhucSopBa \loiPhienKhucSopBa
-      >>
-    \new Staff <<
-      \new Voice = "beBass" {
-        \clef bass \TongNhip \nhacPhienKhucBasBa
-      }
-      \new Lyrics \lyricsto beBass \loiPhienKhucBasBa
-    >>
-  >>
-  \layout {
-    %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.6
-  } 
-}
-%}

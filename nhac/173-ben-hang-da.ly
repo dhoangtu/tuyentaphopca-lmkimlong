@@ -159,12 +159,12 @@ nhacPhienKhucSop = \relative c'' {
             \remove "Time_signature_engraver"
             firstClef = ##f
           } {
-              \startStaff
+              %\startStaff
               r4
               _"Đàn"
               r8 c |
               a f16 f g8 g
-              \stopStaff
+              %\stopStaff
           }
         }
       >>
