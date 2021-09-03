@@ -36,6 +36,11 @@ layout
 
 #(define afterGraceFraction (cons 1 4))
 
+  \afterGrace d4 ({
+    \override Flag.stroke-style = #"grace"
+    e8)}
+  \revert Flag.stroke-style
+
   \set Staff.keyAlterations = #`(((0 . 6) . ,NATURAL)
                                  ((1 . 2) . ,NATURAL)
                                  ((0 . 5) . ,NATURAL))

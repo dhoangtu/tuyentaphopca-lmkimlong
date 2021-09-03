@@ -31,8 +31,9 @@ nhacPhienKhucSopMot = \relative c'' {
   e4 r8 d |
   e cs4 cs8 |
   d2 ~ |
-  
-  d4 \bar "|." \break
+  <>^\markup { \halign #-2 \fontsize #2 \bold "Tận" }
+  d4
+  \bar "|." \break
   
   \key d \major
   r |
@@ -42,7 +43,7 @@ nhacPhienKhucSopMot = \relative c'' {
   cs4 r |
   r d8 e |
   d4 r |
-  r b8 b |
+  r b8 ^> b |
   a4 r |
   r8 cs cs cs |
   d4. a8 |
@@ -67,7 +68,7 @@ nhacPhienKhucSopMot = \relative c'' {
   g g f (g) |
   a4. bf16 (a) |
   g8 (a) d (cs) |
-  d2 |
+  d2 \bar "||"
   r8 cs4 e8 |
   a, b! fs a |
   e4 e8 d' ~ |
@@ -108,7 +109,7 @@ nhacPhienKhucAltoMot = \relative c' {
   a4 r |
   r fs8 g |
   fs4 r |
-  r d8 cs |
+  r d8 ^> cs |
   d4 r |
   r8 e e e |
   fs4. e8 |
@@ -134,9 +135,9 @@ nhacPhienKhucAltoMot = \relative c' {
   cs4. d8 |
   e4. g8 |
   fs2 |
-  r8 \skip 4.
-  \skip 2
-  \skip 4 e8 fs ~ |
+  r8 cs'4 e8 |
+  a, b! fs a |
+  e4 e8 fs ~ |
   fs4. f!8 ~ |
   f e4 d8 |
   cs2 ~ |
@@ -172,7 +173,7 @@ nhacPhienKhucBasMot = \relative c' {
   a4 r |
   r d8 cs |
   d4 r |
-  r g,8 g |
+  r g,8 ^> g |
   fs4 r |
   r8 a a a |
   d,4. fs8 |
@@ -186,7 +187,7 @@ nhacPhienKhucBasMot = \relative c' {
   
   \key f \major
   d,8 d16 d |
-  fs8 e d a' |
+  f8 e d a' |
   a2 ~ |
   a4 r8 cs |
   d8. d16 d8 g, |
@@ -214,7 +215,12 @@ nhacPhienKhucSolo = \relative c'' {
   r4
   
   \key d \major
-  \afterGrace d8 ({\once \stemDown e8)} b |
+  \afterGrace d8 ({
+    \once \stemDown
+    \override Flag.stroke-style = #"grace"
+    e16)}
+  \revert Flag.stroke-style
+  b8 |
   a4. a8 |
   fs8 (g) a fs |
   e2 ~ |
@@ -222,7 +228,12 @@ nhacPhienKhucSolo = \relative c'' {
   a8 a4 b8 |
   a4 a8 (b) |
   d8 d4 e8 |
-  d4 \afterGrace d8 ({e)} b |
+  d4 \afterGrace d8 ({
+    \once \stemDown
+    \override Flag.stroke-style = #"grace"
+    e16)}
+  \revert Flag.stroke-style
+  b8 |
   a4. a8 |
   fs' fs fs g16 (fs) |
   e2 ~ |
@@ -239,21 +250,21 @@ loiPhienKhucSopMot = \lyrics {
   Tôi viết cho người tôi yêu.
   Tôi hát cho người yêu tôi.
   Tôi muốn rung phím tơ muôn điệu.
-  Tôi muốn ươm ý thơ tuyệt diệu dệt thành bài tình ca.
-  Vang thấu khắp không gian
-  kiên vững cùng thời gian.
+  Tôi muốn ươm ý thơ tuyệt diệu dệt thành bài tình ca
+  Vang thấu khắp không gian,
+  Kiên vững cùng thời gian.
   
   \set stanza = "CORO:"
   Hm __ _ Giữa đêm trường.
-  Đã giáng sinh.
+  đã giáng sinh.
   Đấng Cứu Tinh.
   Miệt mài ngàn năm
   sầu thương những vấn vương.
-  Ánh quang hòa bình
-  đó đây chan hòa phúc vinh.
+  ánh quang hòa bình,
+  Đó đây chan hòa phúc vinh.
   
-  Thánh giá cao ngất thương đau
-  máu hồng từ châu thân chảy trào.
+  Thánh giá cao ngất thương đau,
+  Máu hồng từ châu thân chảy trào,
   Người Yêu tôi tự hiến
   chết vì yêu tôi.
   Không có Tình Yêu nào vĩ đại bằng chết cho người mình yêu.
@@ -263,20 +274,20 @@ loiPhienKhucAltoMot = \lyrics {
   Tôi viết cho người tôi yêu.
   Tôi hát cho người yêu tôi.
   Tôi muốn rung phím tơ muôn điệu.
-  Tôi muốn ươm ý thơ tuyệt diệu dệt thành bài tình ca.
-  Vang thấu khắp không gian
-  kiên vững cùng thời gian.
+  Tôi muốn ươm ý thơ tuyệt diệu dệt thành bài tình ca
+  Vang thấu khắp không gian,
+  Kiên vững cùng thời gian.
   
   Hm __ _ _ _ _ Giữa đêm trường.
-  Đã giáng sinh.
+  đã giáng sinh.
   Đấng Cứu Tinh.
   Miệt mài ngàn năm
   sầu thương những vấn vương.
-  Ánh quang hòa bình
-  đó đây chan hòa phúc vinh.
+  ánh quang hòa bình,
+  Đó đây chan hòa phúc vinh.
   
-  Thánh giá cao ngất thương đau
-  máu hồng từ châu thân chảy trào.
+  Thánh giá cao ngất thương đau,
+  Máu hồng từ châu thân chảy trào,
   Người Yêu tôi tự hiến
   chết vì yêu tôi.
   Không có Tình Yêu nào vĩ đại bằng chết cho người mình yêu.
@@ -286,20 +297,20 @@ loiPhienKhucBasMot = \lyrics {
   Bài tình ca.
   Bài tình ca của tôi xin dâng cho Người.
   Đàn tôi xin rung muôn điệu.
-  Ý thơ xin ươm dệt thành bài tình ca.
-  Vang thấu khắp không gian
-  kiên vững cùng thời gian.
+  Ý thơ xin ươm dệt thành bài tình ca
+  Vang thấu khắp không gian,
+  Kiên vững cùng thời gian.
   
   Hm __ _ _ _ Giữa đêm trường.
-  Đã giáng sinh.
+  đã giáng sinh.
   Đấng Cứu Tinh.
   Miệt mài tháng năm
   sầu thương những vấn vương.
-  Ánh quang hòa bình
-  đó đây chan hòa phúc vinh.
+  ánh quang hòa bình,
+  Đó đây chan chứa phúc vinh.
   Rồi một chiều nao trên dồi Can -- vê
   Thập giá chất ngất sầu thương.
-  Ngàn lời cười chê thay dòng nước mắt.
+  Ngàn lời cười chê thay dòng nước mắt
   Hiến thân chết bao ô nhục vì tôi.
   Không có tình yêu nào vĩ đại bằng chết cho người mình yêu.
 }
@@ -309,8 +320,8 @@ loiPhienKhucSolo = \lyrics {
   Nhớ năm xưa trong lạnh giá đêm trường.
   Người Yêu tôi giáng sinh và lên Ngôi Cứu Tinh.
   Bóng đau thương từ bao năm qua vấn vương.
-  Xóa mờ trong ánh quang hòa bình
-  đó đây chan hòa phúc vinh.
+  Xóa mờ trong ánh quang hòa bình,
+  Đó đây chan hòa phúc vinh.
   Thánh
 }
 

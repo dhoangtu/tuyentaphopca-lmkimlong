@@ -47,8 +47,18 @@ nhacDiepKhucBas = \relative c {
   f8) f g a |
   bf4 g8 f |
   e4( d) |
-  c <c' \=1( c, \=2_( >8 <bf \=1) c, \=2) >8 |
-  <a \=1^( f, \=2( >2 |
+  c
+  <<
+    {
+      \voiceOne c'8 _(bf)
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      c,4
+    }
+  >>
+  \oneVoice
+  <a' \=1^( f, \=2_( >2 |
   <a \=1) f, \=2) >4 r
 }
 
@@ -102,17 +112,27 @@ loiDiepKhucBas = \lyricmode {
   Cùng tung hô Chúa hỡi muôn dân trên thế trần.
 }
 
+loiDiepKhucBasPhu = \lyrics {
+  \repeat unfold 15 { _ }
+  \override Lyrics.LyricText.font-shape = #'italic
+  gian
+}
+
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Vì tình Ngài yêu thương ta nồng nàn thắm thiết bao la.
-  Lòng Ngài trung trinh tín nghĩa bền vững qua muôn đời.
+  Vì tình Ngài yêu thương ta,
+  nồng nàn thắm thiết bao la.
+  Lòng Ngài trung trinh tín nghĩa
+  Bền vững qua muôn đời.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
-  Phụng mừng rạng danh Ba Ngôi từ ngàn trước tới khi nay.
-  Và ngàn sau luôn tiếp nối bền vững qua muôn đời.
+  Phụng mừng rạng danh Ba Ngôi
+  Từ ngàn trước tới khi nay
+  Và ngàn sau luôn nối tiếp
+  Bền vững qua muôn đời.
 }
 
 % Dàn trang
@@ -174,6 +194,7 @@ notBePhu =
           \TongNhip \nhacDiepKhucBas
         }
         \new Lyrics \lyricsto beBas \loiDiepKhucBas
+        \new Lyrics \lyricsto beBas \loiDiepKhucBasPhu
     >>
   >>
   \layout {
