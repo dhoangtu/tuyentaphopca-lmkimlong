@@ -3,10 +3,9 @@
 
 set GEN=".\pdf-generated"
 
-pdftk D:\01.lilypond\01.github\tuyentaphopca-lmkimlong\nhac\*.pdf cat output nhac.pdf
-
+D:\download\qpdf-10.1.0\bin\qpdf --empty --pages D:\01.lilypond\01.github\tuyentaphopca-lmkimlong\nhac\*.pdf -- nhac.pdf
 pdflatex so-trang-chan-le.tex
 
-pdftk bia-truoc.pdf blank-a4.pdf so-trang-chan-le.pdf blank-a4.pdf bia-sau-trong.pdf cat output tuyentaphopca-lmkimlong.pdf
+D:\download\qpdf-10.1.0\bin\qpdf --empty --pages bia-truoc.pdf blank-a4.pdf so-trang-chan-le.pdf blank-a4.pdf bia-sau-trong.pdf -- tuyentaphopca-lmkimlong.pdf
 
 del /s /f /q %GEN% nhac.pdf *.aux *.log so-trang-chan-le.pdf
