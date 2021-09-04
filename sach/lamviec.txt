@@ -1,4 +1,6 @@
+\compressEmptyMeasures
 
+\change Staff = "alto"
 
 <>^\markup { \halign #35 " " }
 

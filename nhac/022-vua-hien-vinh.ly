@@ -13,40 +13,33 @@
 
 % Nhạc phiên khúc
 nhacPhienKhucSop = \relative c'' {
+  \compressEmptyMeasures
+  R1*4
   f4 e8. d16 c8 c r4 |
   c4 d8 e16( f) e4 r8 c |
   bf bf bf8. c16 c4 r8 e |
   f8. e16 f8. g16 c,4 f8 f |
-  f4. f8 f c
+  f4. f8 [f c]
   \stemDown f,
-  _\markup "chí ái  hiển    vinh"
+  _\markup { \italic "chí ái  hiển    vinh" }
   d' |
   c16 _(bf) a8 \stemNeutral r4 r2 |
-  r1
-  r
-  r
-  r
+  R1*4
   r2 r4 r8 c |
   f4 f8. e16 d4 r8 d |
   g4 g8. f16 e4 e8. f16 |
   d8 d e8. f16 e8 c r4 |
-  r1
-  r
-  r
-  r
-  r
-  r
-  r
+  R1*7
   r2 r4 r8 c |
   d8. c16 d8 e f c r c |
   d8. c16 d8 e f c r4 |
-  r1
+  R1
   r2 r4 r8 c |
   d8. e16 f8. g16 e4 r |
   r2 r4 r8 c |
   c f d e f c r d |
   c f d e f c r4 |
-  r r8 f c d16 (e) f8 f |
+  r r8 f, c' d16 (e) f8 f |
   e c r  c c d16 (e) f8 f |
   e c r c c d16 (e) f8 f |
   e c r4 r8 a d r |
@@ -65,7 +58,7 @@ nhacPhienKhucSop = \relative c'' {
   bf8 a bf4) a r8 a |
   c f d8. e16 f8 c r d |
   c f d8. e16 f8 c r4 |
-  r8 f f f c4 r |
+  r8 f, f f c'4 r |
   r8 a a a d4 r |
   r8 b! b b e4 r |
   r8 c c c f4 r8 f |
@@ -90,16 +83,15 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucSopPhu = \relative c'' {
+  \compressEmptyMeasures
+  R1*4
   a4 bf8. bf16 c8 c r4 |
-  c4 bf8. a16 g4 r8 e |
+  c4 bf8. g16 g4 r8 e |
   f f f8. g16 g4 r8 c |
   c8. c16 bf8. bf16 a4 a8 c |
-  c16 (bf a4) d8 c16 (bf) a8 \stemUp f' f |
+  c16 (bf a4) d8 [c16 (bf) a8] \stemUp f' f |
   f f r4 r2 |
-  r1
-  r
-  r
-  r
+  R1*4
   r2 r4 r8 a, |
   d4 c8. c16 b!4 r8 b |
   g4 a8. b!16 c4 c8. c16 |
@@ -107,16 +99,15 @@ nhacPhienKhucSopPhu = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c' {
+  \compressEmptyMeasures
+  R1*4
   f4 g8. g16 a8 a r4 |
   a4 g8. f16 c4 r8 c |
   d d d8. e16 e4 r8 c |
   d8. c16 d8. e16 f4 f8 bf |
   a16 (g f4) bf8 a16 (g) f8 f bf |
   a16 (g) f8 r4 r2 |
-  r1
-  r
-  r
-  r
+  R1*4
   r2 r4 r8 f |
   d4 e8. f16 g4 r8 g |
   e4 f8. a16 g4 a8. f16 |
@@ -160,9 +151,9 @@ nhacPhienKhucAlto = \relative c' {
   d4 r r8 g g g |
   e4 r r8 a a a |
   g4 r8 g g4. g8 |
-  g4 f8 (e) d (g4 f16 g |
+  g4 f8 (e) d (g g f16 g |
   a2) g4 r8 g |
-  f (g) f4 g r8 e8 |
+  f (g f4) g r8 e8 |
   e f16 (g) a8 a g e r f |
   e f16 (g) a8 a g e r4 |
   r8 g g g a4 r |
@@ -181,20 +172,16 @@ nhacPhienKhucAlto = \relative c' {
 }
 
 nhacPhienKhucTenor = \relative c' {
-  r1
-  r
-  r
-  r
-  r
+  \compressEmptyMeasures
+  R1*4
+  R1*5
   r2 r4 r8 c |
   bf8. a16 bf8 c a g r4 |
   r2 r4 r8 e' |
   f4 r8 g c,4 r8 c |
   d8. c16 d8 e f c r c |
   d8. c16 d8 e f c r4 |
-  r1
-  r
-  r
+  R1*3
   c4 b!8. a16 g8 g r4 |
   c4 d8. c16 b!4 r8 b |
   c8. c16 c8. d16 d4 r8 b! |
@@ -203,7 +190,7 @@ nhacPhienKhucTenor = \relative c' {
   c c r4 r a8 d |
   c16 (bf a4) d8 c16 (bf) a8 a d |
   c16 (bf) a8 r4 r2 |
-  r1
+  R1
   r2 r4 r8 a |
   bf8. c16 d8. e16 c4 r |
   r2 r4 r8 c |
@@ -212,7 +199,7 @@ nhacPhienKhucTenor = \relative c' {
   a bf16 (c) d8 d c a r bf |
   a bf16 (c) d8 d c a r bf |
   a bf16 (c) d8 d c a r f' |
-  a, d16 (e) f8 f e c r f, |
+  c d16 (e) f8 f e c r f, |
   c' d16 (e) f8 f e e r4 |
   r8 e e e c c f d |
   d4 c d2 |
@@ -237,7 +224,7 @@ nhacPhienKhucTenor = \relative c' {
   c4 r8 c8 d4. d8 |
   e4 d8 (c) b! (c16 d e8 d16 e |
   f4. e8) d4 r8 c |
-  d (e) d4 e r8 a, |
+  d (e d4) e r8 a, |
   g c a f c' c r a |
   g c a f c' c r4 |
   r2 r8 e e e |
@@ -256,20 +243,16 @@ nhacPhienKhucTenor = \relative c' {
 }
 
 nhacPhienKhucBass = \relative c {
-  r1
-  r
-  r
-  r
-  r
+  \compressEmptyMeasures
+  R1*4
+  R1*5
   r2 r4 r8 c |
   d8. c16 d8 e f c r4 |
   r2 r4 r8 c |
   d4 r8 e f4 r8 f |
   bf8. a16 bf8 g a f r f |
   bf8. a16 bf8 g a f r4 |
-  r1
-  r
-  r
+  R1*3
   c4 d8. d16 e8 e r4 |
   e4 f8. f16 g4 r8 g |
   a8. a16 a8. b!16 b4 r8 g |
@@ -278,27 +261,23 @@ nhacPhienKhucBass = \relative c {
   e16 (d) c8 r4 r f8 bf |
   a16 (g f4) bf8 a16 (g) f8 f bf |
   a16 (g) f8 r4 r2 |
-  r1
+  R1
   r2 r4 r8 f |
-  e8. f16 bf,8. bf16 f4 r |
-  r2 r4 r8 a' |
+  e8. f16 bf,8. bf16 f'4 r |
+  r2 r4 r8 a |
   g4 f c' r |
   r2 r4 r8 f, |
   f g16 (a) bf8 bf a f r f |
   f g16 (a) bf8 bf a f r f |
   f g16 (a) bf8 bf g f r4 |
-  r1
-  r
+  R1*2
   r8 c c c f4 r8 f |
   e e e e d (e16 f g8 g, |
   c c' d a bf g c bf |
   a4) f r2 |
-  r1
-  r
-  r
-  r
+  R1*4
   r8 f f f bf4 r8 bf |
-  a a a a g a16 (bf c8 c,) |
+  a a a a g (a16 bf c8 c,) |
   f4 r8 f e (f16 g a8 a, |
   d e16 f g8 g, c d16 e f8 g16 a |
   bf8 bf, bf'2 a4 |
@@ -319,8 +298,8 @@ nhacPhienKhucBass = \relative c {
   d4 r r8 d, d d |
   e4 r r8 f f f |
   bf4 r8 bf a a a a |
-  g16 (a bf8 c c, f g16 a bf8 bf, |
-  e8 f16 g a8 g, d' e16 f g8 g, |
+  g16 (a bf8 d c, f g16 a bf8 bf, |
+  e8 f16 g a8 a, d e16 f g8 g, |
   c d) e c f4 bf, |
   c2 f4 r8 f |
   f g16 (a) bf8 bf a f r f |
@@ -332,44 +311,47 @@ nhacPhienKhucBass = \relative c {
 
 % Lời phiên khúc
 loiPhienKhucSop = \lyrics {
-  Hỡi cửa điện ngọc ngà, cửa thiên quốc ơi!
-  Mau nhịp nhàng mở tung ra,	
+  Hỡi cửa điện ngọc ngà,
+  Cửa thiên quốc ơi,
+  mau nhịp nhàng mở tung ra,	
   mau chiếu soi lên sáng ngời
   hãy kính bái, kính bái Vua từ ái hiển vinh.
   Là Chúa các cơ binh, Thượng Đế rất uy linh,
   Vua khải hoàn ngự trị cõi thiên đình.
   Hỏi ai là Vua hiển vinh vậy?
   Hỏi ai là Vua hiển vinh vậy?
-  Là Vua trên hết các vua.
+  là Vua trên hết các vua.
   Này là Vua từ ái hiển vinh,
   đây là Vua từ ái hiển vinh.
   Này đây Vua chí ái hiển vinh,
   này là Vua chí ái hiển vinh,
   này là Vua chí ái hiển vinh.
-  Này Vua, này Vua rất "hiển (i)" vinh thục hồi trần thế,
-  Đức Vua uy linh bao "hiển (i)" vinh thục hồi trần thế
+  Này Vua, này Vua rất "hiển (i)" vinh, thục hồi trần thế,
+  Đức Vua uy linh bao "hiển (i)" vinh thục hồi trần thế,
   Đức Vua uy linh bao "hiển (i)" vinh.
   Này là Vua từ ái hiển vinh, đây là Vua tứ ái hiển vinh.
   Thục hồi trần thế, thục hồi trần thế, thục hồi trần thế,
   thục hồi trần thế
-  Đức Vua, uy linh bao "hiển (i)" vinh.
+  Đức Vua uy linh bao "hiển (i)" vinh.
   Đây Vua, Vua chí ái hiển vinh,
   đây Vua, Vua chí ái hiển vinh.
-  Thục hồi tội nhân, cứu rỗi thế trần,
-  thục hồi trần thế
-  đây Ngài là Vua rất "hiển (i)" vinh, Đức Vua thật hiển vinh.
+  thục hồi tội nhân, cứu rỗi thế trần,
+  thục hồi trần thế,
+  Đây Ngài là Vua rất "hiển (i)" vinh, Đức Vua thật hiển vinh.
   Này là Vua chí ái hiển vinh,
   đây là Vua chí ái hiển vinh.
   Vua hiển vinh.
 }
 
 loiPhienKhucAlto = \lyrics {
-  Hỡi cửa điện nguy nga, cửa thiên cung ơi.
-  Mau nhịp nhàng mở tung ra, mau chiếu soi lên rạng ngời
+  Hỡi cửa điện nguy nga,
+  Cửa thiên cung ơi,
+  mau nhịp nhàng mở tung ra, mau chiếu soi lên rạng ngời
   hãy kính bái, kính bái Vua từ ái hiển vinh.
   Là Chúa cả cơ binh, Chúa Tể thật uy linh,
   Vua khải hoàn ngự trị cõi thiên đình.
-  Hỡi cửa điện nguy nga, hỡi cửa thiên tòa
+  Hỡi cửa điện nguy nga,
+  Hỡi cửa thiên tòa
   mau nhịp nhàng mở tung ra,
   hãy chiếu dọi lên sáng ngời,
   hãy kính bái Đức Vua đầy từ ái hiển vinh,
@@ -387,12 +369,12 @@ loiPhienKhucAlto = \lyrics {
   Vua uy linh "hiển (i)" vinh, thục hồi trần thế
   đó chính là Vua thật "hiển (i)"
   Vua thật "hiển (i)" vinh.
-  Này là Vua chí ái hiển vinh,
-  đây là Vua từ ái quang vinh.
-  Thục hồi trần thế cữu rỗi thế nhân,
+  Này là Vua từ ái quang vinh,
+  này là Vua từ ái quang vinh.
+  thục hồi trần thế, cữu rỗi thế nhân,
   cứu rỗi thế nhân,
-  cứu rỗi thế nhân
-  đây Vua uy linh bao "hiển (i)" vinh, bao hiển (i) vinh.
+  cứu rỗi thế nhân,
+  đây Vua uy linh bao "hiển (i)" vinh, bao "hiển (i)" vinh.
   Này là Vua chí ái hiển vinh, đây là Vua chí ái hiển vinh.
   Thục hồi tội nhân, thục hồi tội nhân
   cứu rỗi tội nhân, đây Đức Vua bao hiển vinh,
@@ -404,46 +386,50 @@ loiPhienKhucAlto = \lyrics {
 
 loiPhienKhucTenor = \lyrics {
   Hỏi ai là Vua hiển vinh vậy?
-  Là Vua hiển vinh. Hỏi ai là Vua hiển vinh vậy?
+  là Vua hiển vinh. Hỏi ai là Vua hiển vinh vậy?
   Hỏi ai là Vua hiển vinh vậy?
-  Hỡi cửa điện nguy nga, hỡi cửa thiên tòa mau nhịp nhàng mở tung ra,
+  Hỡi cửa điện nguy nga,
+  Hỡi cửa thiên tòa mau nhịp nhàng mở tung ra,
   hãy chiếu dọi lên rạng rỡ,
-  hãy kính bái đây Vua uy linh bao quang vinh,
+  hãy kính bái đây Vua uy linh bao hiển vinh,
   hãy kính bái Đức Vua đầy từ ái quang vinh.
-  Người treo trên thánh giá kia là Chúa muôn vua.
+  Người treo trên thánh giá kia là Vua muôn vua.
   Này là Vua chí ái hiển vinh,
   đây là Vua chí ái hiển vinh.
   Đây là Vua chí ái hiển vinh,
   đây là Vua chí ái hiển vinh,
   này là Vua chí ái hiển vinh,
-  đây Vua hiển vinh.
-  Này chính đây Vua thật hiển vinh
+  đây Vua hiển vinh,
+  này chính đây Vua thật hiển vinh
   thục hồi tội nhân
   Đức Vua uy linh "hiển (i)" vinh,
-  thục hồi trần thế Đức Vua uy linh bao hiển (i)
-  vinh thật "hiển (i)" vinh,
+  thục hồi trần thế,
+  Đức Vua uy linh bao hiển (i)
+  vinh, thật "hiển (i)" vinh,
   rất "hiển (i)" vinh.
   Này là Vua chí ái hiển vinh,
   đây là Vua chí ái hiển vinh.
-  Thục hồi thế hệ cứu rỗi thế nhân,
-  thục hồi tội nhân cứu rỗi thế nhân
-  đây Vua uy linh bao "hiển (i)" vinh, bao hiển (i) vinh.
+  thục hồi thế hệ, cứu rỗi thế nhân,
+  thục hồi tội nhân cứu rỗi thế nhân,
+  đây Vua uy linh bao "hiển (i)" vinh, bao "hiển (i)" vinh.
   Này là Vua chí từ quang vinh,
   đây là Vua chí từ quang vinh.
-  Cứu rỗi tội nhân, cứu rỗi thế trần thục hồi tội nhân
+  cứu rỗi thế nhân, cứu rỗi thế trần,
+  thục hồi tội nhân,
   đây Vua vĩ đại thật uy linh,
   là Vua bao "hiển (i)" vinh,
   Đức Vua rất quang vinh.
   Đây Vua (là) nhân ái hiển vinh,
-  đây Vua (là) từ ái hiển vinh.
+  đây Vua (là) nhân ái hiển vinh.
   Vua hiển vinh.
 }
 
 loiPhienKhucBass = \lyrics {
   Hỏi ai là Vua hiển vinh vậy?
-  Là Vua hiển vinh. Hỏi ai là Vua hiển vinh vậy?
+  là Vua hiển vinh. Hỏi ai là Vua hiển vinh vậy?
   Hỏi ai là Vua hiển vinh vậy?
-  Hỡi của điện nguy nga, hỡi của thiên tòa
+  Hỡi của điện nguy nga,
+  Hỡi của thiên tòa
   mau nhịp nhàng mở tung ra, hãy chiếu dọi lên rạng rỡ,
   hãy kính bái Đức Vua đầy từ ái hiển vinh,
   hãy kính bái Đức Vua đầy từ ái hiển vinh.
@@ -451,18 +437,18 @@ loiPhienKhucBass = \lyrics {
   Này là Vua chí ái hiển vinh,
   này là Vua chí ái hiển vinh.
   Đây là Vua chí ái hiển vinh,
-  Đây Vua hiển vinh
+  đây Vua hiển vinh
   Đức Vua uy linh bao "hiển (i)" vinh.
-  Thục hồi trần thế
-  Đức Vua uy linh bao hiển (i) vinh, bao "hiển (i)" vinh.
+  thục hồi trần thế,
+  Đức Vua uy linh bao "hiển (i)" vinh, bao "hiển (i)" vinh.
   Này là Vua chí ái hiển vinh,
   này là Vua chí ái hiển vinh.
-  Thục hồi trần thế cứu rỗi tội nhân,
-  thục hồi tội nhân cứu rỗi tội nhân
+  thục hồi trần thế, cứu rỗi tội nhân,
+  thục hồi tội nhân cứu rỗi tội nhân,
   Đức Vua uy linh bao "hiển (i)" vinh.
   Này là Vua chí ái hiển vinh,
   này là Vua chí ái hiển vinh.
-  Cứu rỗi tội nhân, cứu rỗi tội nhân
+  cứu rỗi tội nhân, cứu rỗi tội nhân
   thục hồi trần thế
   đây Vua uy linh bao "hiển (i)" vinh,
   vị Vua thật hiển vinh.
@@ -555,6 +541,6 @@ notBePhu =
   >>
   \layout {
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1
+    \override Lyrics.LyricSpace.minimum-distance = #0.7
   } 
 }

@@ -44,12 +44,12 @@ nhacPhienKhucSopB = \relative c'' {
   \set Score.currentBarNumber = #6
   \key g \major \time 2/4
   \partial 4 r4 |
-  r2
+  R2
   r8 g fs g |
   a4 b8 a ~ |
   a4 r |
   r4 fs8 (g) |
-  a4 g8 (a) |
+  a4 g8 ^> (a) |
   b a _> b _> c _> |
   d2 ~ |
   d8 e e cs |
@@ -65,7 +65,7 @@ nhacPhienKhucSopB = \relative c'' {
 nhacPhienKhucAltoB = \relative c' {
   \key g \major \time 2/4
   \partial 4 r4 |
-  r2
+  R2
   r8 e8 d b |
   e4 g8 fs ~ |
   fs4 r |
@@ -78,27 +78,27 @@ nhacPhienKhucAltoB = \relative c' {
   fs2 ~ |
   fs8 a a fs |
   g4 fs ^> |
-  e d8 d |
+  e ^> d8 c |
   b2 ~ |
   b4
 }
 
 nhacPhienKhucBasB = \relative c' {
   \key g \major \time 2/4
-  \partial 4 b8 c |
-  d4 b8 g ~ |
+  \partial 4 b8 ^> c ^> |
+  d4 ^> b8 g ~ |
   g4 d8 (e) |
   cs4 cs8 d ~ |
-  d d e fs |
+  d d ^> e ^> fs ^> |
   g4 r |
-  r8 c, e4 |
+  r8 c, e4 -> |
   d r |
   r8 d -> e -> fs -> |
   g2 ~ |
   g8 b b g |
   a2 ~ |
   a8 fs fs ds |
-  e4 d |
+  e4 d ^> |
   c ^> d8 d |
   <g g,>2 ~ |
   <g g,>4
@@ -106,77 +106,82 @@ nhacPhienKhucBasB = \relative c' {
 
 % Lời phiên khúc
 loiPhienKhucSopAMot = \lyrics {
+  \set stanza = "1."
   Bạn tình ta ơi
   Bạn kiều diễm lắm
-  Xinh thắm như bông hồng
-  Thơm nức muôn hương nồng
+  Xinh thắm như bông hồng,
+  thơm nức muôn hương nồng
   Hỡi bạn tình ta ơi
 }
 
 loiPhienKhucSopAHai = \lyrics {
+  \set stanza = "2."
   - - - -
   Kìa bạn đi tới
   Như ánh dương huy hoàng
-  Chân bước trên cung đàn
+  chân bước trên cung đàn
   - - - - -
 }
 
 loiPhienKhucSopABa = \lyrics {
+  \set stanza = "3."
   - - - -
   Lời bạn êm ái
   Tha thiết như cung đàn
-  Cao vút trên mây ngàn
+  cao vút trên mây ngàn
   - - - - -
 }
 
 loiPhienKhucBasAMot = \lyrics {
+  \set stanza = "1."
   Bạn tình ta ơi
   Bạn kiều diễm lắm
-  Xinh thắm bông hồng
+  xinh thắm bông hồng
   Hỡi bạn tình ta ơi
 }
 
 loiPhienKhucBasAHai = \lyrics {
+  \set stanza = "2."
   - - - -
   Kìa bạn đi tới
-  Như ánh huy hoàng
+  như ánh huy hoàng
   - - - - -
 }
 
 loiPhienKhucBasABa = \lyrics {
+  \set stanza = "3."
   - - - -
   Lời bạn êm ái
-  Tha thiết cung đàn
+  tha thiết cung đàn
   - - - - -
 }
 
 loiPhienKhucSopB = \lyrics {
   Nương đồi trổ hoa thắm tươi
-  Bạn ơi
-  Bạn ơi
-  Nào ta đi tới
+  Bạn ơi,
+  bạn ơi nào mau đi tới
   Hãy tới cùng ta
   Hãy tới cùng ta
-  Hỡi Hỡi hỡi bạn tình ta.
+  hỡi, hỡi, hỡi bạn tình ta.
 }
 
 loiPhienKhucAltoB = \lyrics {
   Nương đồi trổ hoa thắm tươi
   Này bạn hỡi
   Nào mau đi tới
-  Hãy tới cùng ta
-  Hãy tới cùng ta
-  Hỡi Hỡi bạn tình ta.
+  hãy tới cùng ta
+  hãy tới cùng ta
+  hỡi, hỡi bạn tình ta.
 }
 
 loiPhienKhucBasB = \lyrics {
   Mùa xuân đến ngang trời
   trổ hoa đẹp tươi
-  Từ Li -- ba -- nô
-  Này bạn ơi
-  Nào mau đi tới
-  Hãy tới cùng ta
-  Hãy tới cùng ta
+  Từ Li -- ba -- nô,
+  này bạn hỡi
+  nào mau đi tới
+  hãy tới cùng ta
+  hãy tới cùng ta
   hỡi hỡi bạn tình ta.
 }
 
@@ -201,6 +206,7 @@ TongNhip = {
   \key g \major
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1)
 }
 
 % Đổi kích thước nốt cho bè phụ
