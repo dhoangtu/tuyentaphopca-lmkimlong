@@ -22,7 +22,7 @@ nhacDiepKhucSop = \relative c'' {
   \time 2/4
   d2 ^( |
   d4) r |
-  r2 |
+  R2 |
   r8. e16 e8 e |
   a, r16 a f'8 e |
   
@@ -42,14 +42,14 @@ nhacDiepKhucSop = \relative c'' {
   \time 2/4
   d2 ^( |
   d4) r |
-  r2 |
+  R2 |
   r8. e16 e8 e |
   a, r16 a f'8 e |
   
   %binh vinh
   d8 d <e c> <d b> |
-  <c \=1( e \=2( >2 |
-  <c \=1) e \=2) >4 r8
+  c2 ~ |
+  c4 r8
   \once  \override Score.RehearsalMark.self-alignment-X = #RIGHT
   \once \override Score.RehearsalMark.font-shape = #'italic
   \once \override Score.RehearsalMark.font-series = #'bold
@@ -75,9 +75,9 @@ nhacDiepKhucAlto = \relative c'' {
   gs2 _( |
   gs4)
   
-  \skip 4
+  r4
   \skip 2
-  \skip 2
+  \skip 4 r4
   
   r4 r8 c c e, |
   g2 a8 _\pp f |
@@ -92,8 +92,8 @@ nhacDiepKhucAlto = \relative c'' {
   f r16 f16 a8 c |
   
   b a g f |
-  a2 ( |
-  a4) r8
+  e2 ~ |
+  e4 r8
 }
 
 nhacDiepKhucBas = \relative c {
@@ -128,8 +128,8 @@ nhacDiepKhucBas = \relative c {
   g2.( |
   g4) g8-> _\f ( [a]) f d |
   c4 e8. -> e16 e8 e |
-  f4 g8( a) c c |
-  c2 b8( a) |
+  f4 g8 (a) c c |
+  c2 b8 ^> (a) |
   
   \time 2/4
   g2 ( |
@@ -138,8 +138,8 @@ nhacDiepKhucBas = \relative c {
   g4. c,8 |
   f r16 f f8 fs |
   g8 d \stemDown g <g g,> |
-  <g \=1( c, \=2_( >2 |
-  <g \=1) c, \=2) >4 r8 \bar "|."
+  <g c,>2 ~ |
+  <g c,>4 r8 \bar "|."
 }
 
 % Nhạc phiên khúc
@@ -154,9 +154,9 @@ nhacPhienKhucSop = \relative c'' {
   e2 |
   c8 c e _( d16 c) |
   g8 g a16 _( g) e _( d) |
-  g2 ^( |
-  g2 |
-  g8) g a b |
+  g2 ~ |
+  g ~ |
+  g8 g a b |
   
   \time 3/4
   c2 r4 \bar "||"
@@ -171,24 +171,23 @@ nhacPhienKhucAlto = \relative c' {
   \skip 2
   \skip 2
   e8 e g( f) |
-  e e d c |
-  b2 _( |
-  b |
-  b8) b d f |
+  e e d b |
+  b2 ~ |
+  b ~ |
+  b8 b d f |
   e2 r4
 }
 
 nhacPhienKhucBas = \relative c {
   r8 |
-  r2 |
+  R2 |
   r4 r8 f8 |
   f e16( d) c( d) g8 |
   g4 g8 g |
   f4( e8 g) |
   c2( |
   c4) r |
-  r2 |
-  r2 |
+  R2*2
   g8 g b( a16 g) |
   d8 g f d |
   c2 c8 (d)
@@ -199,32 +198,41 @@ nhacPhienKhucBas = \relative c {
 % Lời điệp khúc
 loiDiepKhucAlto = \lyricmode {
   Hãy cất đầu lên, cất đầu lên
+  \override Lyrics.LyricText.font-shape = #'italic
   (mau vươn cao lên nữa)
+  \revert Lyrics.LyricText.font-shape
   Để Vua vinh quang ngự quá
-  Chính Chúa dũng lực Thượng Đế oai phong trong cơn chinh chiến.
+  Chính Chúa dũng lực,
+  Thượng Đế oai phong trong cơn chinh chiến.
   
   Hãy cất đầu lên, cất đầu lên
+  \override Lyrics.LyricText.font-shape = #'italic
   (mau vươn cao lên nữa)
+  \revert Lyrics.LyricText.font-shape
   Để Vua vinh quang ngự quá
-  Chính Chúa dũng lực Thượng Đế thiên binh vinh thắng muôn đời.
+  Chính Chúa dũng lực,
+  Thượng Đế thiên binh vinh thắng muôn đời.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Cửa ơi Hỡi cửa muôn đời
+  Cửa ơi hỡi cửa muôn đời
   mau vươn cao lên nữa
-  Để Vua vinh quang ngự qua
-  Vua vinh quang đó là ai
+  để Vua vinh quang ngự qua.
+  Vua vinh quang đó là ai?
   quyền lực Thượng Đế oai phong trong cơn chinh chiến.
-  (Đàn) _ _ _ _ _ _
+  \override Lyrics.LyricText.font-shape = #'italic
+  (Đàn) __ _ _ _ _ _ _
+  \revert Lyrics.LyricText.font-shape
 	Cửa ơi Hỡi cửa muôn đời
   mau vươn cao lên nữa
-  Để Vua vinh quang ngự qua
-  Vua vinh quang đó là ai
+  Để Vua vinh quang ngự qua.
+  Vua vinh quang đó là ai?
   quyền lực Thượng Đế thiên binh vinh thắng
   <<
     { muôn }
     \new Lyrics {
 	    \set associatedVoice = "beBas"
+      \override Lyrics.LyricText.font-shape = #'italic
 	    ngàn
 	  }
   >>

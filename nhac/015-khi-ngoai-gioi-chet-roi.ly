@@ -13,19 +13,17 @@
 nhacPhienKhucSopMot = \relative c'' {
   \key f \major \time 2/4
   \partial 8 r8 |
-  r2
-  r
-  r
+  R2*3
   a4. bf8 |
   g4. a8 |
   f4 \tuplet 3/2 { e8 f e } |
-  d4 r8 bf' |
+  d4 r8 d' |
   a4. a16 g |
-  \slashedGrace a8 (bf4.) g8 |
+  \slashedGrace a16 (bf4.) g8 |
   e8. g16 \tuplet 3/2 { bf8 bf a } |
   a2 ~ |
   a4 r |
-  r2
+  R2
   
   <<
     {
@@ -34,22 +32,31 @@ nhacPhienKhucSopMot = \relative c'' {
       d4 e8 d |
       cs4. d8 |
       bf2 |
-      a4 \tuplet 3/2 { d8 cs d } |
-      e4
+      a4
     }
     
     \new Voice = "splitpart" {
       \voiceTwo
-      a,2 |
+      a2 |
       bf |
       a |
       g |
-      e4 \tuplet 3/2 { f8 a bf } |
-      a4
+      e4
     }
   >>
   \oneVoice
-  r8 a | \break
+  <<
+    {
+      \tuplet 3/2 { d'8 cs d } |
+      e4
+    }
+    {
+      \tuplet 3/2 { f,8 a bf } |
+      a4
+    }
+  >>
+  
+  r8 a \bar "||" \break
   
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
@@ -61,7 +68,7 @@ nhacPhienKhucSopMot = \relative c'' {
   a8. b16 d,8 (e) |
   fs2 |
   d8. g16 g8 g |
-  b8 b4 a8 |
+  b8 a4 a8 |
   a2 |
   a8. d16 d8 d |
   d fs4 cs8 |
@@ -82,9 +89,13 @@ nhacPhienKhucSopMot = \relative c'' {
   d8. fs16 e8 g |
   a a4 cs,8 |
   d2 ~ |
-  
+  <>^\markup {
+    \halign #-1 \fontsize #2 \bold "Tận"
+  }
+  d8 \bar "||" \break
+
   \key f \major
-  d8 d4 f16 (g) |
+  d4 f16 (g) |
   a4. a8 |
   a g4 g16 (a) |
   d4 cs16 (d) e8 |
@@ -92,13 +103,13 @@ nhacPhienKhucSopMot = \relative c'' {
   e8. g16 bf8 a |
   a2 ~ |
   a8 a f'16 (e) d8 |
-  e4. \slashedGrace { \stemDown e8 ^(} d8) |
+  e4. \slashedGrace { \stemDown e16 ^(} d8) |
   bf a a4 |
   r8 f4 g8 |
   e4 r8 d |
   g g f (g) |
   a2 ~ |
-  a4 r8 a \bar "||"
+  a4 r8 a \bar "|."
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
 }
@@ -128,24 +139,24 @@ nhacPhienKhucAltoMot = \relative c'' {
   d2 ~ |
   d4 cs |
   d2 ~ |
-  d8 d d4 _> ~ |
+  d8 d d4 ^> ~ |
   d8 d \staccato d \staccato d \staccato |
   cs4 r |
   r8 e f e |
   d4 r |
-  r2
+  R2
   f |
   g ~ |
   g4 f8 e |
   d4 e8 d |
-  cs4 \tuplet 3/2 { d8 e e } |
-  cs4 r8 a | \break
+  cs4 \tuplet 3/2 { d8 e d } |
+  cs4 r8 a' | \break
   
   \set Staff.printKeyCancellation = ##f
   \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
   \key d \major
-  a' fs d4 |
-  cs8. _> d16 a8 (cs) |
+  a fs d4 |
+  cs8. ^> d16 a8 (cs) |
   d2 |
   b8. b16 d8 d |
   g g4 d8 |
@@ -168,15 +179,16 @@ nhacPhienKhucAltoMot = \relative c'' {
   cs2 |
   d8. d16 b8 d |
   cs cs4 a8 |
-  a2 ~ | \break
-  
+  a2 ~ |
+  a8
+
   \key f \major
-  a8 d4 f16 (g) |
+  d4 f16 (g) |
   a4. a8 |
   a g4 g16 (a) |
   d4 r |
   r8 fs,16 fs e8 fs |
-  bf,4 r |
+  b,!4 r |
   r8 f'16 f g8 f 
   e4 r |
   r8 a4 f8 |
@@ -195,8 +207,11 @@ nhacPhienKhucBasMot = \relative c' {
     {
       \voiceOne
       a4 r8 bf |
-      bf2 |
-      a4 r |
+      bf2 _(
+      \change Staff = "alto"
+      \once \stemDown a4)
+      \change Staff = "bas"
+      r |
       d c |
       bf c8 bf |
       a4. g8 |
@@ -237,7 +252,7 @@ nhacPhienKhucBasMot = \relative c' {
   r8 g16 ^> g ^> |
   g4. f8 |
   f a4 f8 |
-  e4 e16 (f) d (d) |
+  e4 e16 (f) e (d) |
   a4. a8 |
   g'8. f16 g8 a |
   a2 ~ |
@@ -270,10 +285,11 @@ nhacPhienKhucBasMot = \relative c' {
   <as fs>2 |
   b8. a16 g8 b |
   a4 <e a,>8 <g a,> |
-  <fs d>2 ~ | \break
+  <fs d>2 ~ |
+  <fs d>8
   
   \key f \major
-  <fs d>8 d4 f16 (g) |
+  d4 f16 (g) |
   a4. a8 |
   a g4 g16 (a) |
   d4 r |
@@ -283,7 +299,7 @@ nhacPhienKhucBasMot = \relative c' {
   <cs a,>4 r |
   r8 cs4 d8 |
   <d g,> <d g,> <cs a>4 |
-  r2
+  R2
   r8 cs,4 d8 |
   bf2 |
   a2 ~ |
@@ -292,10 +308,13 @@ nhacPhienKhucBasMot = \relative c' {
 
 % Lời phiên khúc
 loiPhienKhucSopMot = \lyrics {
-  Hm __ _ _ _ _ _ _ _ _ Bóng ai đi lặng lẽ âm thầm
+  Hm __ \repeat unfold 8 { _ }
+  Bóng ai đi lặng lẽ âm thầm
   như chiếc là rơi đêm.
-  Hm __ _ _ _ _ _ _ _ sao trời lấp lánh.
-  Ngoại giới chết rồi đây phút giờ thánh.
+  Hm __ \repeat unfold 7 { _ }
+  Sao trời lấp lánh.
+  Ngoại giới chết rồi
+  Đây phút giờ thánh.
   Hồn lâng lâng chiêm ngưỡng cõi vô biên.
   Hồn say sưa trong non nước diệu huyền.
   Và ngất ngư trong tình yêu mầu nhiệm.
@@ -303,18 +322,20 @@ loiPhienKhucSopMot = \lyrics {
   Ngài ngọt ngào hơn ngàn vạn mật hoa.
   Ngài từ bi hơn trời biển bao la.
   Và nhân hậu trên muôn muôn lòng mẹ.
-  Lạy Thiên Chúa đêm đêm lìa khỏi xác.
+  Lạy Thiên Chúa đêm đêm lìa khỏi xác
   Về với Ngài hồn say đắm mê ly.
   Lời nói chẳng ra ý cảm tràn trề.
-  Vì siêu việt Người ơi siêu việt quá.
+  Vì siêu việt Ngài ơi siêu việt quá.
   Ngoại...
 }
 
 loiPhienKhucAltoMot = \lyrics {
-  (Intro...) _ _ _ _ _ _ _ _
+  \markup { \bold "Intr." } \repeat unfold 8 { _ }
   Hm __ _ _ _ _ Kìa ai, ai đi âm thầm như lá rơi đêm.
-  Hm __ _ _ _ _ _ _ _ sao chói long lanh.
-  Ngoại giới chết rồi đây phút giờ thánh.
+  Hm __ \repeat unfold 7 { _ }
+  Sao chói long lanh.
+  Ngoại giới chết rồi
+  Đây phút giờ thánh.
   Hồn lâng lâng chiêm ngưỡng cõi vô biên.
   Hồn say sưa trong non nước diệu huyền.
   Và ngất ngư trong tình yêu mầu nhiệm.
@@ -322,30 +343,31 @@ loiPhienKhucAltoMot = \lyrics {
   Ngài ngọt ngào hơn ngàn vạn mật hoa.
   Ngài từ bi hơn trời biển bao la.
   Và nhân hậu trên muôn muôn lòng mẹ.
-  Lạy Thiên Chúa đêm đêm lìa khỏi xác.
-  Đêm đêm về với Ngài hồn say đắm mê ly.
-  Ta ý cảm tràn trề.
-  Vì siêu việt Người ơi siêu việt lạ.
+  Lạy Thiên Chúa đêm đêm lìa khỏi xác,
+  đêm đêm về với Ngài hồn say đắm mê ly.
+  ta ý cảm tràn trề.
+  Vì siêu việt Ngài ơi siêu việt lạ.
   Ngoại...
 }
 
 loiPhienKhucBasMot = \lyrics {
-  _ _ _ _
+  _ _ _
   Hm __ _ _ _ _ _ _ _
   Kìa ai, ai đi âm thầm như lá rơi đêm.
   Chung quanh đây cảnh vật đã im lìm.
   Gió lên nhẹ và sao trời soi lấp lánh.
-  Ngoại giới chết rồi đây phút giờ thánh.
+  Ngoại giới chết rồi
+  Đây phút giờ thánh.
   Hồn lâng lâng chiêm ngưỡng cõi vô biên.
   Hồn say sưa trong non nước diệu huyền.
   Và ngất ngư trong chính tình mầu nhiệm.
   Hồn gặp đây rồi Đấng hồn trìu mến.
-  Ngọt ngào hơn ngàn vạn mật hoa.
-  Ngài từ bi hơn biển trời bao la.
+  ngọt ngào hơn ngàn vạn mật hoa.
+  Ngài từ bi hơn trời biển bao la.
   Và nhân hậu trên muôn muôn lòng mẹ.
-  Lạy Thiên Chúa đêm đêm lìa khỏi xác.
-  Đêm đêm về với Chúa ôi say đắm mê ly.
-  Ta ý cảm tràn trề.
+  Lạy Thiên Chúa đêm đêm lìa khỏi xác,
+  đêm đêm về với Chúa ôi say đắm mê ly.
+  ta ý cảm tràn trề.
   Vì siêu việt lạ.
   Ngoại...
 }
@@ -396,7 +418,7 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff = diepKhuc \with {
+    \new Staff = "sop" \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f
       }
@@ -406,13 +428,13 @@ notBePhu =
       }
       \new Lyrics \lyricsto "beSop" \loiPhienKhucSopMot
       >>
-    \new Staff <<
+    \new Staff = "alto" <<
       \new Voice = "beAlto" {
         \clef treble \nhacPhienKhucAltoMot
       }
       \new Lyrics \lyricsto beAlto \loiPhienKhucAltoMot
     >>
-    \new Staff <<
+    \new Staff = "bas" <<
       \new Voice = "beBass" {
         \clef bass \nhacPhienKhucBasMot
       }
