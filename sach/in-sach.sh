@@ -2,7 +2,7 @@
 
 set -x
 
-FOLDERS="/home/dhtu/Desktop/CATH/thanhcalilypond/cadoanhienlinh-thanhvinhdapca"
+FOLDERS="/home/dhtu/Desktop/CATH/thanhcalilypond/tuyentaphopca-lmkimlong"
 lilypondcmd="/home/dhtu/bin/lilypond"
 
 GEN=./pdf-generated
@@ -45,17 +45,17 @@ do
 done
 
 # combine songs
-pdftk "${filelist[@]}" cat output songs.pdf
+qpdf --empty --pages "${filelist[@]}" -- songs.pdf
 
 # add page numbers
 pdflatex so-trang-chan-le.tex
 
 # combine all pdf files in name order
-pdftk loiphilo.pdf blank-a4.pdf so-trang-chan-le.pdf blank-a4.pdf cat output song-book.pdf
+qpdf --empty --pages loiphilo.pdf blank-a4.pdf so-trang-chan-le.pdf blank-a4.pdf -- song-book.pdf
 
 # adjust even-odd page
 pdfjam --twoside --paper a4paper --offset '0.3cm 0cm' song-book.pdf --outfile song-book-adjusted.pdf
 
-pdftk  bia-truoc.pdf blank-a4.pdf song-book-adjusted.pdf bia-sau-trong.pdf blank-a4.pdf bia-sau.pdf cat output thanhvinhdapca.pdf
+qpdf --empty --pages  bia-truoc.pdf blank-a4.pdf song-book-adjusted.pdf bia-sau-trong.pdf blank-a4.pdf bia-sau.pdf -- thanhvinhdapca.pdf
 
 rm -rf ${GEN} song-odd-even.pdf songs.pdf song-book.pdf song-book-adjusted.pdf *.aux *.log
