@@ -16,16 +16,25 @@ nhacPhienKhucSopMot = \relative c'' {
   g8. a16 d,8 f |
   g4 g8 bf |
   c4. a16 (g) |
-  \slashedGrace {d16 (f} f4) g8 g |
+  \slashedGrace {f16 (d} f4) g8 g |
   a2 |
-  d8. f16 g,8 bf |
-  c4 d,8 f |
+  d8. f16 g,8
+  \tweak extra-offset #'(0 . 1)
+  _\markup { \tiny \rest #"4" }
+  bf |
+  \once \stemUp c4
+  \tweak extra-offset #'(0 . 1)
+  _\markup { \tiny \rest #"4" }
+  d,8 f |
   g4 e16 (d) g8 |
   c,4. e8 |
-  f2 \bar "|."
+  f2
+  <>^\markup {
+    \halign #2 \fontsize #2 \bold "Tận"
+  }
+  \bar "|."
   
-  r2
-  r
+  R2*2
   r8 a a bf |
   g4. a8 |
   bf2 |
@@ -47,24 +56,23 @@ nhacPhienKhucAltoMot = \relative c' {
   f2 ~ |
   f4 r |
   r d8 d |
-  e4 c8 d |
+  e4 c8 [d] |
   a4 bf |
   a2
   
-  r
-  r
+  R2*2
   r8 f' f g |
   e4. ef8 |
   d2 |
   e4 f8. (e16) |
   d4 e8. (d16) |
-  c4 c8 c |
+  c4 c8 [c] |
   g4. g8 |
   g2
 }
 
 nhacPhienKhucBasMot = \relative c {
-  r2
+  R2
   r8 f e (d) |
   c (g) c c |
   d4 c8 c |
@@ -79,7 +87,7 @@ nhacPhienKhucBasMot = \relative c {
   d4 f16 (g f d) |
   c4 c8 g |
   c4 e8 (f) |
-  \slashedGrace { \once \stemDown a8 (} g2) ~ |
+  \slashedGrace { \once \stemDown a8 ^(} g2) ~ |
   g2 ~ |
   g4 r |
   r8 e c e |
@@ -92,7 +100,9 @@ loiPhienKhucSopMot = \lyrics {
   \set stanza = "1."
   Con muốn trọn đời con,
   trọn đời con trung thành tin yêu Chúa.
+  \override Lyrics.LyricText.font-shape = #'italic
   Con hiến trọn đời con,
+  \revert Lyrics.LyricText.font-shape
   trọn đời con theo tiếng gọi
   \once \override LyricText.self-alignment-X = #RIGHT "linh  " ân.
   Tung bay thẳng lên Núi Thánh.
@@ -104,7 +114,9 @@ loiPhienKhucSopHai = \lyrics {
   \set stanza = "2."
   Con muốn là nụ hoa,
   là nụ hoa dâng về tôn nhan Chúa.
+  \override Lyrics.LyricText.font-shape = #'italic
   Con muốn là giọng ca,
+  \revert Lyrics.LyricText.font-shape
   là giọng ca bay tới trời
   \once \override LyricText.self-alignment-X = #RIGHT "cao  " xa.
 }
@@ -116,7 +128,7 @@ loiPhienKhucBasMot = \lyrics {
   Hiến trọn đời theo lời gọi linh ân.
   Con muốn là cánh bằng
   bay thẳng lên Núi Thánh.
-  Thánh tình bên Chúa Trời cao sang.
+  thánh tình bên Chúa Trời cao sang.
 }
 
 loiPhienKhucBasHai = \lyrics {

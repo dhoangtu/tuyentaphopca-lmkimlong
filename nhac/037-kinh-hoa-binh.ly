@@ -34,7 +34,7 @@ nhacPhienKhucSopMot = \relative c' {
   b4 b8 c |
   a a c d |
   e4 r |
-  r8 c \slashedGrace { d8(} c) b |
+  r8 c \slashedGrace { d16(} c8) b |
   a4 \bar "||"\break
   
   e4 |
@@ -84,7 +84,7 @@ nhacPhienKhucSopMot = \relative c' {
   e4. c8 |
   d d e b |
   a2 ~ |
-  a4 r |
+  a4 r \bar "||"
   r c8 b |
   c4 r |
   r8 a b c |
@@ -326,7 +326,7 @@ loiPhienKhucSopMot = \lyrics {
   Lạy Chúa từ nhân
   xin cho con biết mến yêu và phụng sự Chúa trong mọi người.
   Lạy Chúa xin hãy dùng con như khí cụ bình an của Chúa.
-  đem thứ tha vào nơi lăng nhục,
+  Đem thứ tha vào nơi lăng nhục,
   đem an hòa vào nơi tranh chấp
   vào chốn lỗi lầm.
   
@@ -340,9 +340,9 @@ loiPhienKhucSopMot = \lyrics {
   Tìm hiểu biết người hơn được người hiểu biết
   hơn được người mến yêu.
   Vì chính khi hiến thân
-  là khi được nhận lãnh.
+  là khi được nhận lãnh
   Vì chính khi thứ tha
-  là khi được tha thứ.
+  là khi được tha thứ,
   Chính lúc chết đi
   là khi vui sống muôn đời.
   Ôi Thần Linh, Thần Linh thánh ái
@@ -356,10 +356,10 @@ loiPhienKhucAltoMot = \lyrics {
   xin cho con biết mến yêu và phụng sự Chúa trong mọi người
   trong mọi người.
   Lạy Chúa xin hãy dùng
-  con như khí cụ bình an
-  khí cụ bình an.
+  con như khí cụ bình an,
+  khí cụ bình an
   Để con
-  đem thứ ta vào nơi lăng nhục,
+  Đem thứ ta vào nơi lăng nhục,
   đem an hòa vào nơi tranh chấp
   vào chốn lỗi lầm.
   
@@ -367,8 +367,8 @@ loiPhienKhucAltoMot = \lyrics {
   hơn được người ủi an.
   hơn được người hiểu biết
   hơn được người mến yêu.
-  Vì chính khi hiến thân là khi được nhận lãnh.
-  Vì chính khi thứ tha là khi được tha thứ.
+  Vì chính khi hiến thân là khi được nhận lãnh
+  Vì chính khi thứ tha là khi được tha thứ,
   Chính lúc chết đi là khi vui sống muôn đời.
   Ôi Thần Linh,
   Thần Linh thánh ái mở lòng con.

@@ -1,4 +1,5 @@
 \compressEmptyMeasures
+^\markup { \rest #"4" }
 
 \change Staff = "alto"
 

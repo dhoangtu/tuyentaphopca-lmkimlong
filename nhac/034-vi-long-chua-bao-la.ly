@@ -11,7 +11,7 @@
 
 % Nhạc phiên khúc
 nhacDiepKhucSop = \relative c' {
-  \partial 8 r8 \bar "||"
+  \partial 8 r8 \bar ".|"
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
   R2*8
@@ -55,8 +55,8 @@ nhacDiepKhucAlto = \relative c' {
 }
 
 nhacDiepKhucBas = \relative c {
-  \partial 8 d8 |
-  bf'4 \tuplet 3/2 { f8 f ef } |
+  \partial 8 f8 |
+  bf4 \tuplet 3/2 { f8 f ef } |
   d4. bf8 |
   <g' ef>4 \tuplet 3/2 { <ef c>8 <bf' d,> <g ef> } |
   <f d>4. <bf d,>8 |
@@ -98,7 +98,7 @@ nhacPhienKhucSop = \relative c'' {
   c r
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
-  \bar "|."
+  \bar "||"
 }
 
 nhacPhienKhucAlto = \relative c' {
@@ -155,38 +155,39 @@ loiDiepKhucAlto = \lyrics {
 loiPhienKhucSopMot = \lyrics {
   \set stanza = "1."
   Cho tôi nương thân cánh tay Ngài
-  vui sống hôm mai
+  vui sống hôm mai,
   Từng giây canh coi
   tựa con ngươi trong mắt của Ngài,
-  dắt dìu hoài,
+  Dắt dìu hoài,
   sánh bước kề vai.
 }
 
 loiPhienKhucSopHai = \lyrics {
   \set stanza = "2."
-  Cho tim tôi mơ ước quê Trời tha thiết khôn ngơi
+  Cho tim tôi mơ ước quê trời tha thiết khôn ngơi,
   Tựa con thơ ngoan nằm trong tay thân mẫu diệu vợi,
-  thắm nụ cười, tính thác nghỉ ngơi.
+  Thắm nụ cười, tính thác nghỉ ngơi.
 }
 
 loiPhienKhucSopBa = \lyrics {
   \set stanza = "3."
   Ươm thơ mau lên ý tuôn trào
-  vươn lút trăng sao
+  vươn lút trăng sao,
   Để tôi cao rao lòng yêu thương Thiên Chúa dạt dào,
-  lắng hồn vào, thắm thiết dường bao.
+  Lắng hồn vào
+  thắm thiết dường bao.
 }
 
 loiDiepKhucBas = \lyrics {
   Tôi nắn cung tơ tuyệt vời
-  Gọi nắng rực rỡ ban mai,
-  gom mây bàng bạc khắp trời.
-  Và gọi gió lãng du mọi nơi
-  muôn mầu trên ruộng đồi
+  gọi nắng rực rỡ ban mai,
+  Gom mây bàng bạc khắp trời
+  và gọi gió lãng du mọi nơi
+  muôn mầu trên sườn đồi
   cơn sóng giữa biển khơi
-  cùng về đây hiệp lời hòa khúc tân ca,
-  tung hô Chúa Trời,
-  bời lòng Ngài thiết tha,
+  cùng về đây hiệp lời hòa khúc tân ca
+  tung hô Vua Trời,
+  bởi lòng Ngài thiết tha,
   mến thương ta bao la.
 }
 
@@ -194,27 +195,32 @@ loiPhienKhucBasMot = \lyrics {
   \set stanza = "1."
   Chính Chúa dệt tôi nên hình hài
   từ khi nghén thai
-  vui buồn hôm mai
+  vui buồn hôm mai,
   Từng giây canh coi tựa con ngươi trong mắt của Ngài,
-  dắt dìu hoài, sánh bước sát vai. Tôi...
+  Dắt dìu hoài
+  sánh bước sát vai.
+  Tôi
 }
 
 loiPhienKhucBasHai = \lyrics {
   \set stanza = "2."
   Có Chúa cùng đi trong cuộc đời
   duổi dong khắp nơi
-  xa miệt khôn ngơi
-  Tựa con thơ ngoan nằm trong tay thân mẫu diệu vợi,
-  đặm nụ cười,
-  tín thác nghỉ ngơi. Tôi...
+  xa miệt khôn ngơi.
+  Tựa con thơ ngoan nằm trong tay thân mẫu diệu vợi
+  Đặm nụ cười,
+  tín thác nghỉ ngơi.
+  Tôi
 }
 
 loiPhienKhucBasBa = \lyrics {
   \set stanza = "3."
   Khúc hát tình yêu ôi ngọt ngào,
-  này tôi cất cao vươn lụt trăng sao
+  này tôi cất cao vươn lụt trăng sao,
   Để tôi cao rao lòng yêu thương Thiên Chúa dạt dào,
-lặng hồn vào, thắm thiết biết bao. Tôi...
+  Lặng hồn vào
+  thắm thiết biết bao.
+  Tôi
 }
 
 % Dàn trang
@@ -280,7 +286,6 @@ notBePhu =
       >>
   >>
   \layout {
-    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
   }
@@ -313,7 +318,6 @@ notBePhu =
       >>
   >>
   \layout {
-    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \context {

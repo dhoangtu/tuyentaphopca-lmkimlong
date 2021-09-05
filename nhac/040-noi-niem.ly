@@ -20,7 +20,7 @@ nhacPhienKhucSop = \relative c'' {
   <<
     {
       b8\rest <a f>16 <g e> <a f>8 b\rest |
-      r <g d bf>16 <f c a> <g d bf>8 b\rest |
+      b\rest <g d bf>16 <f c a> <g d bf>8 b\rest |
       r8 d16 c d8
       f16 e |
       f8 a16 g a8 d16 c |
@@ -30,14 +30,14 @@ nhacPhienKhucSop = \relative c'' {
     {
       \skip 2
       \skip 2
-      r4 <bf,, g>8 r |
+      r4 <bf, g>8 r |
       <d c a> r <g e> r |
       \skip 8
     }
   >>
   
-  r8 \bar "" \break r4 |
-  r \tuplet 3/2 { f8 e d } |
+  r8 \bar "|" \break r4 |
+  r \tuplet 3/2 { f,8 e d } |
   e4 r |
   r \tuplet 3/2 { bf'8 a g } |
   a4 r |
@@ -106,7 +106,7 @@ nhacPhienKhucSop = \relative c'' {
   r4 r8 a |
   a4 (bf8) g | \break
   
-  g8 r16 a e8 d16 e |
+  g8 r16 a, e'8 d16 e |
   f2 ~ |
   f8 d g f16 (g) |
   a8 a16 a d8 e |
@@ -156,8 +156,9 @@ nhacPhienKhucSop = \relative c'' {
   f' f16 e f8 d |
   
   \revert NoteHead.font-size
-  a4
-  \tuplet 3/2 { a'8 e \afterGrace d _(e8) } |
+  a'4
+  \tuplet 3/2 { a,8 e'
+                \afterGrace d _(e16) } |
   f4 \tuplet 3/2 { e8 d g } |
   g2 ~ |
   g8 g \tuplet 3/2 { bf d e } |
@@ -188,7 +189,7 @@ nhacPhienKhucSop = \relative c'' {
   fs4 (g8 a) |
   b2 |
   e8 cs4 cs8 |
-  d2 |
+  d2 \bar "||"
   
   \override NoteHead.font-size = #-2
   \key f \major
@@ -197,12 +198,12 @@ nhacPhienKhucSop = \relative c'' {
   c d8 g, | \break
   a a16 g a8 d, |
   e f16 e d c d e |
-  a,4 r8
+  a,4 r8 \bar "||"
   \revert NoteHead.font-size
   a16 a |
   f'4. d8 |
   bf'4. g16 g |
-  a4 r8 \bar "" \break
+  a4 r8 \bar "||" \break
   d16 d |
   d4 d8 bf16 bf |
   bf4 \tuplet 3/2 { g8 g g } |
@@ -260,7 +261,7 @@ nhacPhienKhucSop = \relative c'' {
     \bar ".|:"
     R2*2
     r8 e e g |
-    bf4 gs8 a ~ |
+    b4 gs8 a ~ |
     a2 |
     e'8. d16 d8 cs |
     r d b a |
@@ -363,7 +364,7 @@ nhacPhienKhucAlto = \relative c' {
   b8 a4 a8 |
   gs2 |
   e8. e16 e8 ds ~ |
-  ds ds4 e8 |
+  ds! ds4 e8 |
   e2 |
   cs8. cs16 d8 cs  |
   b4. cs8 |
@@ -382,6 +383,7 @@ nhacPhienKhucAlto = \relative c' {
   b'8 a4 g8 |
   fs2 |
   
+  \key f \major
   R2*29
   
   \key d \major
@@ -410,7 +412,7 @@ nhacPhienKhucAlto = \relative c' {
 nhacPhienKhucBas = \relative c' {
   %intro
   \partial 8 d8
-  ^\markup { \halign #-0.3 \italic "(Intro)" }
+  ^\markup { \halign #-0.3 \bold "Intr." }
   |
   d,4 r8 c |
   f4 r8 f |
@@ -457,7 +459,7 @@ nhacPhienKhucBas = \relative c' {
     \new Voice {
       \voiceOne
       \override NoteHead.font-size = #-2
-      r4 r8 d'
+      r4 r8 \once \stemDown d'
       _\markup { \lower #3.3 \halign #-0.3 \italic "(Đàn)" }
     }
   >>
@@ -561,13 +563,13 @@ nhacPhienKhucBas = \relative c' {
 % Lời phiên khúc
 loiPhienKhucSop = \lyrics {
   Đất đây là đâu?
-  Đất đây là đâu?
+  đất đây là đâu?
   Lòng lữ thứ lên cơn sầu thê thiết.
   Ca -- mê -- lô xa rồi,
   Ca -- mê -- lô xa rồi
   còn đâu ngày oanh liệt,
   còn đâu ngày oanh liệt
-  Bet -- sa -- bê xứ cây dầu.
+  Bet -- sa -- bê, xứ cây dầu
   Chừ đây cát trắng,
   cát trắng mênh mang.
   Chừ đây sức yếu mà đàng xa xăm.
@@ -575,21 +577,21 @@ loiPhienKhucSop = \lyrics {
   xăm, xa xăm.
   
   \set stanza = "Êlia:"
-  Chúa tôi ơi, Chúa tôi ơi!
-  Thôi đã đủ rồi cho tôi về cõi đời
-  đời phận tôi có tốt hơn người xưa đâu.
+  Chúa tôi ơi, Chúa tôi ơi,
+  thôi đã đủ rồi cho tôi về cõi đời đời,
+  phận tôi có tốt hơn người xưa đâu.
   Gió hú rừng sâu sương mờ cát trắng.
   Dưới gốc cây Người nằm im lặng.
   Ơ __ _ _ _ Ơ
   \set stanza = "Thiên thần:"
   Con ơi, con ơi!
-  Ngồi lên mà ăn uống
-  này đây bình nước và này đây tấm bánh.
+  Ngồi lên mà ăn uống.
+  Này đây bình nước và này đây tấm bánh.
   
   \repeat unfold 10 { _ }
   \set stanza = "Người kể:"
-  Tiên tri ăn uống đoạn lại nằm
-  bắt tay lên nghĩ chuyện gần xa.
+  Tiên tri ăn uống đoạn lại nằm,
+  Bắt tay lên nghĩ chuyện gần xa.
   
   Ôi ngày huyết lệ,
   ôi ngày huyết lệ máu đỏ lênh láng suối Ki -- sông.
@@ -610,34 +612,34 @@ loiPhienKhucSop = \lyrics {
   \set stanza = "Người kể:"
   Một lần nữa Thần Chúa lại hiện ra.
   \set stanza = "Thiên thần:"
-  Ê -- li -- a, hỡi Ê -- li -- a!
-  Này đường còn xa. Ăn đi con kìa
-  bãi cát dài và rộng.
+  Ê -- li -- a, hỡi Ê -- li -- a,
+  này đường còn xa, Ăn đi con,
+  kìa bãi cát dài và rộng.
   Ăn đi con này thần lương sức sống.
   
   \set stanza = "Người kể:"
   Tiên tri vội vàng nghe lời Chúa
   thức dậy an tâm vào dùng bữa.
-  Liền được sức mới bởi thần lương
+  Liền được sức mới bởi thần lương,
   hăng hái làm sao bước lên đường.
   
   Đường dài vạn lý đường ơi!
   Bốn mươi đêm trọn, bốn mươi ngày ròng.
   Mịt mù Hô -- rép rừng phong
-  có ai dấn bước đi trong bụi mờ.
+  Có ai dấn bước đi trong bụi mờ.
   
   mờ.
 }
 
 loiPhienKhucAlto = \lyrics {
   Đất đây là đâu?
-  Đất đây là đâu?
+  đất đây là đâu?
   Lòng lữ thứ lên cơn sầu thê thiết.
   Ca -- mê -- lô xa rồi,
   Ca -- mê -- lô xa rồi
   còn đâu ngày oanh liệt,
   còn đâu ngày oanh liệt
-  Bet -- sa -- bê xứ cây dầu.
+  Bet -- sa -- bê, xứ cây dầu
   Chừ đây cát trắng,
   cát trắng mênh mang.
   Chừ đây sức yếu mà đàng xa xăm.
@@ -661,7 +663,7 @@ loiPhienKhucAlto = \lyrics {
   Đường dài vạn lý đường ơi!
   Bốn mươi đêm trọn, bốn mươi ngày ròng.
   Mịt mù Hô -- rép rừng phong
-  có ai dấn bước đi trong bụi mờ.
+  Có ai dấn bước đi trong bụi mờ.
   
   mờ kìa ai đi trong bụi mờ.
 }
@@ -679,18 +681,19 @@ loiPhienKhucBas = \lyrics {
   oanh liệt Bet -- sa -- bê còn đâu.
   Một ngày đàng heo hút im lặng
   trầm lặng mênh mang,
-  một ngày đàng heo hút gầy yếu nẻo đàng xa xăm
+  Một ngày đàng heo hút gầy yếu nẻo đàng xa xăm
   
   xăm, xa xăm.
   
   Sương mờ cát trắng,
-  cát trắng.
+  cát trắng,
   Người đi về đâu, đi về đâu.
-  Thần Chúa dịu dàng đến trong mơ
-  đánh thức tiên tri dậy thẫn thờ.
+  Thần Chúa dịu dàng đến trong mơ,
+  Đánh thức tiên tri dậy thẫn thờ.
   
   Ôi ngày huyết lệ,
-  ôi ngày tuyệt lệ màu đỏ lên tràn suối Ki -- sông.
+  ôi ngày tuyệt lệ
+  Màu đỏ lên tràn suối Ki -- sông.
   Lửa bới trên tới
   đốt thiêu bàn thờ của lễ cháy tan tiêu
   trong tiếng tung hô ý chan hòa.
@@ -701,11 +704,12 @@ loiPhienKhucBas = \lyrics {
   Chúa nào thực hư.
   
   Đường dài vạn lý đường ơi vạn nẻo đường,
-  đường dài vạn lý.
-  Bốn mươi đêm trót và ngày ròng.
+  Đường dài vạn lý
+  Bốn mươi đêm trót và ngày ròng,
   Mịt mù Hô -- rép rừng phong
   ô đẹp rừng.
-  Mịt mù Hô -- rép kìa ai lần bước
+  Mịt mù Hô -- rép
+  Kìa ai lần bước
   đi trong tối mờ.
   
   mờ kìa ai đi trong tối mờ.
@@ -773,7 +777,7 @@ notBePhu =
   >>
   \layout {
     \override Lyrics.LyricSpace.minimum-distance = #1.5
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override LyricHyphen.minimum-distance = #1.5
     \context {
       \Staff \RemoveEmptyStaves

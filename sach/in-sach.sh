@@ -2,8 +2,10 @@
 
 set -x
 
-FOLDERS="/home/dhtu/Desktop/CATH/thanhcalilypond/tuyentaphopca-lmkimlong"
-lilypondcmd="/home/dhtu/bin/lilypond"
+FOLDERS="/d/01.lilypond/01.github/tuyentaphopca-lmkimlong/test"
+lilypondcmd='lilypond.exe'
+
+export PATH=$PATH:/d/download/qpdf-10.1.0/bin:'/c/Program Files (x86)/LilyPond-2.22.1/usr/bin'
 
 GEN=./pdf-generated
 rm -rf ${GEN}
@@ -35,7 +37,7 @@ do
     #page counter
     echo "${title};${pagecounter}" >> ${CONTENT}
     # starting page of next song
-    pageno=`pdfinfo "${GEN}/${shortname}.pdf" | grep "Pages" | grep -Eo '[0-9]+'`
+    pageno=`find . -xdev -type f -name "${GEN}/${shortname}.pdf" -exec pdfinfo "{}" ";" | awk '/^Pages:/ {n += $2} END {print n}'`
     echo "${title} : ${pageno} pages"
     pagecounter=$(( $pageno + $pagecounter ))
 	
@@ -44,18 +46,10 @@ do
     echo "" 
 done
 
-# combine songs
-qpdf --empty --pages "${filelist[@]}" -- songs.pdf
+qpdf --empty --pages "${filelist[@]}" -- nhac.pdf
 
-# add page numbers
 pdflatex so-trang-chan-le.tex
 
-# combine all pdf files in name order
-qpdf --empty --pages loiphilo.pdf blank-a4.pdf so-trang-chan-le.pdf blank-a4.pdf -- song-book.pdf
+qpdf --empty --pages  bia-truoc.pdf blank-a4.pdf so-trang-chan-le.pdf bia-sau-trong.pdf -- tuyentaphopca-lmkimlong.pdf
 
-# adjust even-odd page
-pdfjam --twoside --paper a4paper --offset '0.3cm 0cm' song-book.pdf --outfile song-book-adjusted.pdf
-
-qpdf --empty --pages  bia-truoc.pdf blank-a4.pdf song-book-adjusted.pdf bia-sau-trong.pdf blank-a4.pdf bia-sau.pdf -- thanhvinhdapca.pdf
-
-rm -rf ${GEN} song-odd-even.pdf songs.pdf song-book.pdf song-book-adjusted.pdf *.aux *.log
+rm -rf ${GEN} so-trang-chan-le.pdf nhac.pdf *.aux *.log
