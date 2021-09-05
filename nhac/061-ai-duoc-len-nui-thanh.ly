@@ -11,7 +11,7 @@
 
 % Nhạc
 nhacDiepKhucSop = \relative c' {
-  r2
+  R2
   r4 r8 f |
   g a c, (d16 f) |
   g4. g8 |
@@ -26,7 +26,7 @@ nhacDiepKhucSop = \relative c' {
 }
 
 nhacDiepKhucAlto = \relative c' {
-  r2
+  R2
   r4 r8 f |
   g a c, (d16 f) |
   g4. g8 |
@@ -91,14 +91,14 @@ loiPhienKhucMot = \lyricmode {
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
-  Là những ai nhân hiền chẳng vu vạ, đổ oan.
+  Là những ai nhân hiền, chẳng vu vạ, đổ oan.
   Chẳng ghét khinh thân thuộc, chẳng mưu hại bạn hữu.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Là những ai trung thành chẳng khi nào đảo điên.
-  Mặc những ai hư hèn kinh tôn người sợ Chúa.
+  Là những ai trung thành, chẳng khi nào đảo điên.
+  Mặc những ai hư hèn, kinh tôn người sợ Chúa.
 }
 
 % Dàn trang

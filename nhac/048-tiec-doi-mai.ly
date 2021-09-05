@@ -11,15 +11,14 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
-  r2
-  r
+  R2*2
   a8. a16 a8 c |
   f,4. g16 (f) |
   e4 f16 (g) c,8 |
   bf'4. a8 |
   g2 ~ |
   g4 r |
-  r2
+  R2
   bf8. bf16 bf8 d |
   g,4. a16 (g) |
   f4 f16 (g) c,8 |
@@ -29,7 +28,7 @@ nhacDiepKhucSop = \relative c'' {
 }
 
 nhacDiepKhucAlto = \relative c'' {
-  r2
+  R2
   a8. a16 a8 c |
   f,4. e8 |
   d4. c8 |
@@ -129,7 +128,7 @@ loiDiepKhucAlto = \lyricmode {
 }
 
 loiDiepKhucBas = \lyricmode {
-  Con tin mai sẽ về, sẽ về tin mai sẽ về,
+  Con tin mai sẽ về, sẽ về, tin mai sẽ về,
   tin mai sẽ về thấy mặt yêu thương.
   Con tin mai sẽ về,
   sẽ về mai sẽ về hưởng hạnh phúc ân lộc thiên đường.
@@ -138,61 +137,67 @@ loiDiepKhucBas = \lyricmode {
 loiPhienKhucSopMot = \lyricmode {
   \set stanza = #"1."
   Đêm xưa khi vĩnh biệt
-  nghe nhắn nhủ tha thiết,
-  hẹn mai trên Nước Trời nâng chén tiệc mừng vui.
+  nghe nhắn gởi tha thiết
+  hẹn mai trên nước trời nâng chén tiệc mừng vui.
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = #"2."
   Uy nghi như núi đồi cũng có ngày chuyển lay,
-  lời xưa tuyên phán rồi không biến đổi nhạt phai.
+  Lời xưa tuyên phán rồi không biến đổi nhạt phai.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \set stanza = #"3."
-  Hôm nay rượu bánh này tiên báo tiệc đời mai,
-  làm tim con khát vọng thao thức niềm chờ mong.
+  Hôm nay rượu bánh này tiên báo tiệc đời mai
+  làm tim con khát vọng, thao thức niềm chờ mong.
 }
 
 loiPhienKhucAltoMot = \lyricmode {
   Hm __ _ _ _
-  khi vĩnh biệt nghe nhắn nhủ tha thiết,
+  \set stanza = "1."
+  Khi vĩnh biệt nghe nhắn nhủ tha thiết
   Hm __ _
   hẹn mai nâng chén tiệc mừng vui.
 }
 
 loiPhienKhucAltoHai = \lyricmode {
   _ _ _ _
-  như núi đồi cũng có ngày chuyển lay.
+  \set stanza = "2."
+  Như núi đồi cũng có ngày chuyển lay
   _ _
   lời xưa không biến đổi nhạt phai.
 }
 
 loiPhienKhucAltoBa = \lyricmode {
   _ _ _ _
-  nay bánh rượu tiên báo tiệc đời mai.
+  \set stanza = "3."
+  Nay bánh rượu tiên báo tiệc đời mai
   _ _
   làm tim thao thức niềm chờ mong.
 }
 
 loiPhienKhucBasMot = \lyricmode {
   Hm __ _ _ _
-  khi vĩnh biệt nghe nhắn nhủ tha thiết,
+  \set stanza = "1."
+  Khi vĩnh quyết nghe nhắn nhủ tha thiết
   Hm __ _
   hẹn mai dự bàn tiệc mừng vui.
 }
 
 loiPhienKhucBasHai = \lyricmode {
   _ _ _ _
-  như núi đồi cũng đổi thay chuyển lay.
-  _ _ _ _
+  \set stanza = "2."
+  Như núi đồi cũng đổi thay chuyển lay
+  _ _
   lời xưa chẳng chuyển đổi nhạt phai.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   _ _ _ _
-  nay rượu bánh tiên báo tiệc đời mai.
-  _ _ _ _
+  \set stanza = "3."
+  Nay rượu bánh tiên báo tiệc đời mai
+  _ _
   làm tim rạo rực niềm chờ mong.
 }
 
@@ -210,10 +215,11 @@ loiPhienKhucBasBa = \lyricmode {
       "Deja Vu Serif Condensed"
       "Deja Vu Serif Condensed"
       (/ 20 20)))
-  page-count = #2
+  %page-count = #2
   print-page-number = #f
-  system-system-spacing = #'((basic-distance . 15))
+  %system-system-spacing = #'((basic-distance . 15))
   %score-system-spacing = #'((basic-distance . 15))
+  systems-per-page = 3
 }
 
 TongNhip = {
@@ -283,6 +289,8 @@ notBePhu =
     \new Staff <<
       \new Voice = "beBass" { \clef bass \TongNhip \nhacPhienKhucBas }
       \new Lyrics \lyricsto beBass \loiPhienKhucBasMot
+      \new Lyrics \lyricsto beBass \loiPhienKhucBasHai
+      \new Lyrics \lyricsto beBass \loiPhienKhucBasBa
     >>
   >>
   \layout {

@@ -4,7 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Chúa Là Niềm Vui" }
-  composer = " "
+  %composer = " "
   arranger = "Lm. Kim Long"
   tagline = ##f
 }
@@ -12,7 +12,7 @@
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c' {
   \partial 8 r8 |
-  r2
+  R2
   r4 r8 d |
   e bf'4 g8 |
   a2 ~ \bar "||"
@@ -20,7 +20,7 @@ nhacDiepKhucSop = \relative c' {
   \set Staff.printKeyCancellation = ##f
   \key d \major
   a4 r \bar ".|:"
-  r2
+  R2
   r4 r8 d |
   d b cs4 |
   r8 a a b |
@@ -30,17 +30,20 @@ nhacDiepKhucSop = \relative c' {
   a4. fs8 |
   fs b4 g8 |
   a4 r8 a |
-  d d r g |
+  d d r fs |
   fs fs g fs |
   e4. a,8 |
   a b cs e |
   d2 ~ |
-  d4 r \bar "|."
+  d4 r
+  \tweak extra-offset #'(-1.5 . -0.5)
+  \mark \markup { \bold "Tận" }
+  \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c' {
   r8 |
-  r2
+  R2
   r4 r8 d e d4 d8 |
   cs2 ~ |
   
@@ -49,7 +52,7 @@ nhacDiepKhucAlto = \relative c' {
   cs4 r |
   r8 b' b g |
   a4. fs8 |
-  g4 (fs) |
+  g4 (e) |
   r8 fs fs e |
   d4 r8 e |
   a a r a |
@@ -121,9 +124,9 @@ nhacPhienKhucAlto = \relative c' {
   g4. g8 |
   fs8. fs16 g8 b |
   a2 |
-  r8 a a a |
-  g g d d |
-  cs2 ~ |
+  r8 a fs' d16 (cs) |
+  g8 g e' d16 (b) |
+  cs,2 ~ |
   cs4 r |
   r r8 cs |
   d a' b g |
@@ -182,7 +185,7 @@ loiDiepKhucBas = \lyricmode {
 % Lời phiên khúc
 loiPhienKhucSopMot = \lyricmode {
   \set stanza = #"1."
-  Hồn con reo mừng trong Chúa
+  Hồn con reo mừng trong Chúa,
   hòa lên muôn lời ngợi ca:
   Tình mến thương Ngài bền vững muôn đời,
   là thành lũy che chở con.
@@ -191,7 +194,7 @@ loiPhienKhucSopMot = \lyricmode {
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = #"2."
   Dù qua sa mạc tăm tối, dù gian nguy ngợp muôn lối,
-  miệng con tươi cười nhịp bước theo Ngài
+  Miệng con tươi cười nhịp bước theo Ngài
   ngày càng thấm sâu vào con.
 }
 
@@ -205,7 +208,7 @@ loiPhienKhucSopBa = \lyricmode {
 loiPhienKhucSopBon = \lyricmode {
   \set stanza = #"4."
   Đời con xin phụng sự Chúa thành tâm trong niềm hân hoan.
-  Được sống bên Ngài hạnh phúc cao vời
+  Được sống bên Ngài hạnh phúc cao vời,
   trầm hòa khúc ca tình yêu.
 }
 
@@ -214,7 +217,7 @@ loiPhienKhucBasMot = \lyricmode {
   Chúa đã làm cho con những điều kỳ diệu.
   Hồn con reo vui vang rền ngợi ca danh Chúa triển khai mọi nơi.
   Niềm vui của Ngài là thành lũy che chở con.
-  Chúa đã gọi...
+  Chúa đã gọi
 }
 
 loiPhienKhucBasHai = \lyricmode {
@@ -226,15 +229,15 @@ loiPhienKhucBasHai = \lyricmode {
 
 loiPhienKhucBasBa = \lyricmode {
   \set stanza = #"3."
-  Dẫu biết đường tương lai sẽ còn miệt mài.
-  Lòng con không kinh sợ gì
+  Dẫu biết đường tương lai sẽ còn miệt mài,
+  Lòng con không kinh sợ gì,
   cậy tin nơi Chúa nào phai nồng say.
   Niềm vui của Ngài dệt mộng đẹp cho ngày mai.
 }
 
 loiPhienKhucBasBon = \lyricmode {
   \set stanza = #"4."
-  Tấu khúc nhạc vang xa cất lời cảm tạ.
+  Tấu khúc nhạc vang xa, cất lời cảm tạ,
   Đời con xin cung phụng Ngài,
   phụng sự vui sướng một mai nào vơi.
   Niềm vui của Ngài trầm hòa bài ca mến yêu.
@@ -243,8 +246,8 @@ loiPhienKhucBasBon = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 15\mm
+  top-margin = 10\mm
+  bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -257,7 +260,7 @@ loiPhienKhucBasBon = \lyricmode {
   %page-count = #1
   print-page-number = #f
   system-system-spacing = #'((basic-distance . 15))
-  %score-system-spacing = #'((basic-distance . 15))
+  systems-per-page = 4
 }
 
 TongNhip = {
@@ -311,10 +314,8 @@ notBePhu =
     >>
   >>
   \layout {
-    %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
   }
 }
 
@@ -351,8 +352,7 @@ notBePhu =
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
   }
 }

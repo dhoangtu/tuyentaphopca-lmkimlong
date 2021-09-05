@@ -4,36 +4,34 @@
 
 \header {
   title = \markup { \fontsize #3 "Than Sầu Chi Mãi" }
-  composer = "Lm. Kim Long"
-  poet = "Ý: Tv. 42"
+  composer = "Ý: Tv. 42"
+  arranger = "Lm. Kim Long"
   tagline = ##f
 }
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
-  r2
-  r
-  r
+  R2*3
   a8. a16 a8 a |
   gs4. e8 |
   c'4 \tuplet 3/2 { c8 ^> b ^> c ^> } |
   e2 ~ |
   e4 r |
-  r2
+  R2
   a,8. ^> e16 g8 g |
   a4. d8 |
   c4 b |
   a r |
   r8. b16 b8 b |
   e4. gs,8 |
-  a4 \fermata
-  <> \tweak extra-offset #'(-15 . 2)
+  \once \stemDown a4 \fermata
+  <> \tweak extra-offset #'(-15 . 0.5)
   ^\markup { \fontsize #2 \bold "qua PK." }
 
   \bar "||"
   
-  <> \tweak extra-offset #'(1 . -0.5)
-  ^\markup { \fontsize #2 \bold "để Kết" }
+  <> \tweak extra-offset #'(1 . -1.5)
+  ^\markup { \fontsize #2 \bold "Kết" }
   \once \override NoteColumn.X-offset = 3 <>
   a2 ~ |
   a2 ~ |
@@ -41,16 +39,14 @@ nhacDiepKhucSop = \relative c'' {
 }
 
 nhacDiepKhucAlto = \relative c' {
-  r2
-  r
+  R2*2
   e8. e16 e8 e |
   c4 f8 f |
   e4. e8 |
   e4 \tuplet 3/2 { a8 ^> a ^> a ^> } |
   gs2 ~ |
   gs4 r |
-  r2
-  r
+  R2*2
   f8. ^> d16 e8 e |
   a8. a16 gs8 gs |
   e4 r |
@@ -65,7 +61,7 @@ nhacDiepKhucAlto = \relative c' {
 }
 
 nhacDiepKhucTenor = \relative c' {
-  r2
+  R2
   c8. c16 c8 c |
   b4 c8 b |
   a4. b8 |
@@ -79,7 +75,7 @@ nhacDiepKhucTenor = \relative c' {
   e4 r8 e'16 (d) |
   c8. c16 d8 d16 (c) |
   b4 b8 b |
-  c8 (d c) b |
+  c8 ([d c]) b |
   \partial 4 a4 \fermata
   
   \once \override NoteColumn.X-offset = 3 <>
@@ -121,7 +117,7 @@ nhacPhienKhucSop = \relative c'' {
   e4 r8 c |
   d d d16 (c) b8 |
   b4 c16 _(b) a8 |
-  e8. e16 c' _(b) a8 |
+  e8. e16 c' _([b) a8] |
   a2 \bar "||"
 }
 
@@ -137,8 +133,9 @@ nhacPhienKhucBas = \relative c'' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Sao băn khoăn ưu phiền hồn hỡi than sầu chi mãi.
-  Hãy cậy trông Thiên Chúa Đấng tôi ca ngợi.
+  Sao băn khoăn ưu phiền,
+  hồn hỡi than sầu chi mãi.
+  Hãy cậy trông Thiên Chúa Đấng tôi ca ngợi
   Ngài là Thượng Đế của tôi.
   
   tôi.
@@ -146,58 +143,61 @@ loiDiepKhucSop = \lyricmode {
 
 loiDiepKhucAlto = \lyricmode {
   Sao băn khoăn ưu phiền,
-  sao ưu phiền hồn ơi than van chi hoài.
-  Hãy cậy trông Thiên Chúa Đấng tôi ca ngợi.
+  sao ưu phiền,
+  hồn ơi than sầu chi hoài.
+  Hãy cậy trông Thiên Chúa,
+  Đấng tôi ca ngợi
   Ngài là Thượng Để của tôi.
   
-  tôi
+  tôi,
   là Thượng Đế của tôi.
 }
 
 loiDiepKhucTenor = \lyricmode {
   Sao băn khoăn ưu phiền,
-  sao ưu phiền, ưu phiền hồn ơi than sầu chi mãi.
+  sao ưu phiền, ưu phiền,
+  hồn ơi than sầu chi mãi.
   Hãy cậy trông Thiên Chúa Đấng tôi ca ngợi.
   Bởi Ngài là Đấng cứu độ,
   là Thượng Để Của tôi.
   
-  tôi
+  tôi,
   là Thượng Đế của tôi.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Sao băn khoăn ưu phiền,
-  sao ưu phiền hồn ơi
+  Sao băn khoăn ưu phiền
+  sao băn khoăn hồn ơi
   hồn hỡi ơi than van chi hoài.
-  Hãy cậy trông Thiên Chúa Đấng tôi ca ngợi.
+  Hãy cậy trông Thiên Chúa Đấng tôi ca ngợi,
   Bởi Ngài là Đấng cứu độ của tôi.
   
-  tôi
+  tôi,
   là Thượng Đế của tôi.
 }
 
 loiPhienKhucSopMot = \lyricmode {
   \set stanza = #"1."
-  Chúa là nơi con nương nhờ
-  sao Ngài nỡ xua đuổi con.
-  Để con lang thang tiều tụy
-  khiến quân thù đàn áp khôn thôi.
+  Chúa là nơi con nương nhờ,
+  Sao Ngài nỡ xua đuổi con,
+  Để con lang thang tiều tụy,
+  Khiến quân thù đàn áp khôn thôi.
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = #"2."
   Chiếu dọi quang vinh huy hoàng
-  soi đường bước con thẳng ngay.
-  Dìu con lên nơi đền vàng
-  dẫn con về đỉnh nói cao quang.
+  Soi đường bước con thẳng ngay,
+  Dìu con lên nơi đền vàng,
+  Dẫn con về Núi Thánh cao quang.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \set stanza = #"3."
   Chúa dìu con đi bên Ngài
-  lên bàn thánh vui triền miên.
-  Dọa lên cung tơ diệu huyền
-  tán dương Ngài là Chúa con luôn.
+  lên Bàn Thánh vui triền miên,
+  Dạo lên cung tơ diệu huyền
+  Tán dương Ngài là Chúa con liên.
 }
 
 % Dàn trang
@@ -261,7 +261,6 @@ notBePhu =
     >>
   >>
   \layout {
-    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
   } 
@@ -288,7 +287,6 @@ notBePhu =
       >>
   >>
   \layout {
-    %\override Lyrics.LyricText.font-size = #+2
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)

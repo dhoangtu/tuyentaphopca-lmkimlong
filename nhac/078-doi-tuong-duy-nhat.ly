@@ -30,7 +30,7 @@ nhacDiepKhucSop = \relative c' {
   e8. d16 c8 c |
   e a,4 b16 (a) |
   g4 r |
-  r2
+  R2
   r8 e a a |
   a8. e16 d8 a' |
   a g4. ~ |
@@ -51,14 +51,14 @@ nhacDiepKhucAlto = \relative c' {
   r r8 d |
   g8 g16 g g8 a |
   fs4. d8 |
-  cs cs16 cs d4 |
+  cs cs16 cs d4 ~ |
   d8 d e fs |
   g2 ~ |
   g4 c8 c |
   c8. b16 a8 a |
   g fs4 fs8 |
   g4 r |
-  r2
+  R2
   r8 e d d |
   c8. c16 b8 c |
   c b4. ~ |
@@ -76,7 +76,7 @@ nhacDiepKhucBas = \relative c {
   e4 a, |
   b r8 d' |
   b a16 (g) e8 g |
-  a8. ef16 fs8 fs |
+  a8. g16 fs8 fs |
   g4 r8 a, |
   d8 d16 d d4 |
   r8 e fs fs16 fs |
@@ -125,9 +125,8 @@ nhacPhienKhucBas = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhucSop = \lyricmode {
-  \set stanza = "ĐK:"
   Lạy Chúa Giê -- su chịu đóng đinh,
-  đổi tượng duy nhất của lòng trí con
+  đối tượng duy nhất của lòng trí con
   Chọn mến Thánh Giá của Ngài,
   Giờ đây xin hân hoan tiến lên
   Giờ đây xin trung kiên vui đời dâng hiến
@@ -145,7 +144,7 @@ loiDiepKhucBas = \lyricmode {
   giờ đây xin trung kiên vui đời dâng trọn
   vui đời dâng hiến.
   Nhờ Thánh Giá Chúa luôn là nguồn sức mạnh
-  ca hòa nhớ vững bước liên.
+  ca hòa nhờ vững bước liên.
 }
 
 % Lời phiên khúc
@@ -170,7 +169,7 @@ loiPhienKhucSopBa = \lyricmode {
   \set stanza = #"3."
   Xin dâng lời khẩn nguyện được luôn vững bền
   mau mắn thi hành thánh ý Chúa
-  và cùng với hội dòng
+  và cùng với hội dòng,
   dõi đường Chúa đi,
   cho dẫu khó nguy, Ngài nhịp bước luôn, lo gì.
 }

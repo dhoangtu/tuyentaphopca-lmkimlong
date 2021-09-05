@@ -11,7 +11,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
-  \partial 4. r4.
+  \partial 4. r8 r4
   r8 b c a |
   e4 c8 (d) |
   e4 r8 b' |
@@ -24,7 +24,7 @@ nhacDiepKhucSop = \relative c'' {
   c8. e16 c8 a |
   b2 ~ |
   b4 r |
-  r2
+  R2
   r4. c16 c |
   b8 a g a |
   e2 ~ |
@@ -57,11 +57,11 @@ nhacDiepKhucSop = \relative c'' {
   a2 ~ |
   a ~ |
   a ~ |
-  a4 \bar "|."
+  a4 r \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c'' {
-  \partial 4. r4.
+  \partial 4. r8 r4
   r8 b c a |
   e4 c8 (d) |
   e4 r8 b' |
@@ -74,7 +74,7 @@ nhacDiepKhucAlto = \relative c'' {
   a8. b16 a8 a |
   gs2 ~ |
   gs4 r |
-  r2
+  R2
   r4. a16 a |
   gs8 e e d |
   c2 ~ |
@@ -99,14 +99,14 @@ nhacDiepKhucAlto = \relative c'' {
   
   \key a \major
   cs8 cs cs cs |
-  fs4. gs8 |
+  fs4. g!8 |
   fs4. fs8 |
   b4. a8 |
   fs fs e (d) |
   cs4 cs8 cs |
   fs4. d8 |
   e2 ~ |
-  e4
+  e4 r
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -137,7 +137,7 @@ nhacDiepKhucBas = \relative c' {
   a8. f16 d8 g |
   c,2 ~ |
   c4 r |
-  r2
+  R2
   r8 d'16 d e8 c |
   a2 ~ |
   a8 gs16 gs a8 f |
@@ -168,6 +168,8 @@ nhacDiepKhucBas = \relative c' {
       a4
     }
   >>
+  \oneVoice
+  r4
 }
 
 % Lời điệp khúc
@@ -295,7 +297,7 @@ notBePhu =
   \layout {
     %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.5
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
 }

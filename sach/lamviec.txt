@@ -1,6 +1,10 @@
 \compressEmptyMeasures
 ^\markup { \rest #"4" }
 
+\mark "Tận"
+
+\mark \markup { "Tận" }
+
 \change Staff = "alto"
 
 <>^\markup { \halign #35 " " }

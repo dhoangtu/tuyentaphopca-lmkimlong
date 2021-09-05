@@ -12,27 +12,25 @@
 nhacDiepKhucSop = \relative c' {
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
-  r2
-  r
+  R2*2
   d8 d e f |
-  g4 \breathe g8 (a) |
+  g4 g8 (a) |
   c b c d |
-  e4 \breathe f8 ^(e) |
+  e4 f8 ^(e) |
   d2 ~ |
   d8 r a a |
-  b4 b \breathe |
-  b8. ^> g!16 c8 c |
-  d4 d \breathe |
+  b4 b |
+  b8. ^> g16 c8 c |
+  d4 ^> d |
   c8 d e (d16 c) |
   g4. e'8 |
-  d c b4 |
+  d d b4 |
   c2 ~ |
   c4 \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c'' {
-  r2
-  r
+  R2*2
   \repeat unfold 2 { \skip 2 }
   g8 g g g |
   g4 a8 _(c) |
@@ -43,7 +41,7 @@ nhacDiepKhucAlto = \relative c'' {
   c4 b |
   c8 d e (d16 c) |
   g4. g8 |
-  f g f4 |
+  f f f4 |
   e2 ~ |
   e4
 }
@@ -57,7 +55,7 @@ nhacDiepKhucBas = \relative c {
   c4 b8 (c) |
   g'2 |
   g8. ^> e16 a8 a |
-  d,4 e |
+  d,4 ^> e |
   r c'8 c |
   d,4 e |
   r c8 d |
@@ -70,12 +68,11 @@ nhacDiepKhucBas = \relative c {
 nhacPhienKhucSop = \relative c'' {
   \partial 4 b4 |
   c8 c a4 |
-  b \breathe a8 a |
-  d f e (d) |
-  e4 \breathe
-  e8. d16 |
+  b a8 a |
+  d, f e (d) |
+  e4 e'8. d16 |
   c8 e d c |
-  b4 \breathe a8 a |
+  b4 a8 a |
   g8. g16 d'8 d |
   c2
   \once \override Score.RehearsalMark.font-size = #0.1
@@ -99,8 +96,8 @@ nhacPhienKhucBas = \relative c' {
 % Lời điệp khúc
 loiDiepKhucSop = \lyricmode {
   \override LyricText.extra-offset = #'(0 . -1)
-  Tựa trầm hương thơm ngát.
-  Tỏa bay về Tôn nhan Chúa Chúa ơi.
+  Tựa trầm hương thơm ngát
+  tỏa bay về Tôn nhan Chúa Chúa ơi.
   Tay con vươn lên
   cho bàn tay con vươn lên được như lễ vật
   tiến dâng khi chiều rơi.
@@ -109,8 +106,9 @@ loiDiepKhucSop = \lyricmode {
 loiDiepKhucBas = \lyricmode {
   \override LyricText.extra-offset = #'(0 . -1)
   Nguyện lời con kêu khấn
-  Tỏa bay tới Tôn nhan Ngài
-  lạy Chúa cho bàn tay con vươn lên
+  tỏa bay tới Tôn nhan Ngài,
+  Ngài hỡi
+  Cho bàn tay con vươn lên,
   tay con vươn lên được như lễ vật
   hiệp dâng khi chiều rơi.
 }
@@ -118,24 +116,25 @@ loiDiepKhucBas = \lyricmode {
 % Lời phiên khúc
 loiPhienKhucSopMot = \lyricmode {
   \set stanza = #"1."
-  Xin Chúa giữ miệng con
+  Xin Chúa giữ miệng con,
   xin canh phòng cửa môi con
-  giúp con đừng vấn vương tội tình
+  Giúp con đừng vấn vương tội tình,
   cho tâm hồn được mãi thắm xinh.
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = #"2."
-  Con ngước mắt ngữa trông miên man
-  cầu Chúa dủ thương giữ cho mạng sống con
-  an toàn không sa vào dò lưới ác nhân.
+  Con ngước mắt ngữa trông,
+  miên man cầu Chúa dủ thương,
+  Giữ cho mạng sống con an toàn,
+  không sa vào dò lưới ác nhân.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \set stanza = #"3."
-  Con cất tiếng nài van
-  xin thương vội đến ủi an
-  thấy cho từng tiếng kêu cầu
+  Con cất tiếng nài van,
+  xin thương vội đến ủi an.
+  Thấu cho từng tiếng con kêu cầu,
   con trông nhờ tình Chúa thẳm sâu.
 }
 

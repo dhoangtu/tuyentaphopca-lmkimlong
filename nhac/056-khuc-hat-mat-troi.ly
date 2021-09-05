@@ -56,8 +56,7 @@ nhacPhienKhucSop = \relative c'' {
   c16 c |
   c8 c c a16 a |
   a2 |
-  r2
-  r
+  R2*2
   r8 d16
   c c8 f ^> |
   f ^> r g ^>
@@ -70,7 +69,7 @@ nhacPhienKhucSop = \relative c'' {
  
   c2
   \tweak extra-offset #'(2 . 0.5)
-  ^\markup { \fontsize #2 \bold "để Kết" }
+  ^\markup { \fontsize #2 \bold "Kết" }
   ~ |
   c4 r \bar "|." \break
   
@@ -181,7 +180,7 @@ nhacPhienKhucAlto = \relative c'' {
   g,2 ~ |
   g8 g d b |
   c4 c8 c |
-  f (g f) d |
+  f ([g f]) d |
   e2 ~ |
   e4 g8. g16 |
   g4. f8 |
@@ -232,7 +231,7 @@ nhacPhienKhucBas = \relative c {
   e4 r |
   r8 e e c16 cs |
   d2 |
-  r |
+  R2
   r8 f16 d d8 g |
   g4 e |
   d8 ^> d ^> r4 |
@@ -261,10 +260,10 @@ nhacPhienKhucBas = \relative c {
   r8 c e, e |
   g4. f8 |
   e4 e8 e |
-  f (e d) g |
+  f ([e d]) g |
   c,2 ~ |
   c4 g'8. g16 |
-  g8 (f ef) d |
+  g8 ([f ef]) d |
   c b c4 |
   g r |
   e'8 c g' f |
@@ -282,29 +281,29 @@ loiPhienKhucSop = \lyrics {
   Hỡi mặt trời oai hùng muôn ánh lửa
   Ngươi ngày ngày xua màn tối âm u,
   quét đi tất cả mù sương
-  ngươi hiện ra huy hoàng
+  Ngươi hiện ra huy hoàng
   hiện ra
   ngươi hiện ra huy hoàng
   tràn ý sống
   Trên không trung cao xanh và lồng lộng,
   Trên không trung cao xanh và lồng lộng,
-  ngươi nhịp nhàng tiến bước
+  Ngươi nhịp nhàng tiến bước
   tiến bước lượng thời gian.
   
   gian.
   
   _ Mỗi bình minh khi đêm tàn ngày đến
-  ngươi hiện hình trên màn bạc trời đông.
+  Ngươi hiện hình trên màn bạc trời đông.
   Ta say sưa chiêm niệm sáng trong lòng
   hình ảnh của một mặt trời,
   một mặt trời công chính
-  giáng trần nhận lãnh việc cứu đời
+  Giáng trần nhận lãnh việc cứu đời
   để giải phóng ngàn dân.
   Ta nao nao ôn nhớ đến vô vàn
   Ơn lành thánh
   vì Ngài ta phong phú.
   
-  Hỡi vũ...
+  Hỡi vũ
 }
 
 loiPhienKhucAlto = \lyrics {
@@ -339,19 +338,19 @@ loiPhienKhucAlto = \lyrics {
   Ơn lành 
   vì Ngài ta phong phú.
   
-  Hỡi vũ...
+  Hỡi vũ
 }
 
 loiPhienKhucBas = \lyrics {
   \override LyricText.extra-offset = #'(0 . -1)
-  Hỡi vũ trụ bao la và huyền bí
+  Hỡi vũ trụ bao la và huyền bí,
   Tự muôn đời sinh dựng bởi Muôn Cao
   Nào mau lên tiếng làm rung chuyển mọi phương nao
   Ca hòa đi tuyên xưng danh hiền Chúa.
   Hỡi mặt trời oai hùng muôn ánh lửa rực soi muôn lối,
   Ngươi ngày ngày dẹp tan mọi âm u,
   Và quét đi tất cả lạnh sương mù
-  hiện ra ngươi hiện ra huy hoàng
+  Hiện ra ngươi hiện ra huy hoàng
   hiện ra tràn sống động
   cao xanh và lồng lộng
   cao xanh và lồng lộng
@@ -366,11 +365,11 @@ loiPhienKhucBas = \lyrics {
   hình ảnh của một mặt trời,
   một mặt trời công bình,
   một mặt trời công chính
-  giáng trần nhận lãnh cứu đời
+  Giáng trần nhận lãnh cứu đời
   để giải phóng ngàn dân.
   Ta nao nao ôn lại cả vô vàn
   Ơn lành thánh, vì Ngài ta phong phú.
-  Hỡi vũ...
+  Hỡi vũ
 }
 
 % Dàn trang

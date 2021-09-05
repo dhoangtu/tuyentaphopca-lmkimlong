@@ -13,18 +13,19 @@ nhacDiepKhucSop = \relative c'' {
   \partial 4 r4 |
   r c8 c |
   b4 r |
-  r8 c r c |
+  r8 c ^> r c ^> |
   a a4 a8 |
-  g4 r8 c |
-  b b c4 |
+  g4 r8 c ^> |
+  b ^> b ^> c4 |
   d2 ~ |
-  d4 d8 f |
+  d4 d8 ^> f |
   d d16 (c) a8 (g) |
   d2 ~ |
   d4 r |
-  r g8 (c |
-  c) a a g |
-  g d'4 e8 |
+  %r g8 (c |
+  r \slashedGrace { a'16 (} c4 ~) |
+  c8 a a g |
+  g d'4 ^> e8 |
   d4 d8. (c16) |
   c2 ~ |
   c4 \bar "|."
@@ -34,19 +35,19 @@ nhacDiepKhucAlto = \relative c' {
   r4
   r e8 e |
   d4 r |
-  r8 e r e |
+  r8 e ^> r e ^> |
   f f4 f8 |
-  e4 r8 e |
-  g g g4 |
+  e4 r8 e ^> |
+  g ^> g ^> g4 |
   a2 |
-  g ~ |
-  g8 e c4 |
+  g |
+  g8 g16 (a) f8 c |
   d2 ~ |
   d4 r |
-  r8 d4 e8 |
+  r8 d4 ^> e8 |
   f4 f8 (e) |
-  d4 g ~ |
-  g8 f f f |
+  d4 g ^> ~ |
+  g8 g f f |
   e2 ~ |
   e4
 }
@@ -57,15 +58,15 @@ nhacDiepKhucTenor = \relative c' {
   g a16 (g) f8 g |
   c,2 ~ |
   c ~ |
-  c8 c' b a |
+  c8 c' ^> b ^> a ^> |
   g g c4 ~ |
   c d8 (c) |
   b2 ~ |
   b4 r |
-  r8 g4 c8 |
-  d4 f |
+  r8 g4 ^> c8 |
+  \slashedGrace { c16 (} d4) f |
   g2 ~ |
-  g4 r8 c ~ |
+  g4 r8 c ^> ~ |
   c b b c |
   d8. c16 b8 b |
   c2 ~ |
@@ -78,15 +79,15 @@ nhacDiepKhucBas = \relative c' {
   g a16 (g) f8 g |
   c,2 ~ |
   c ~ |
-  c8 c' b a |
+  c8 c' _> b _> a _> |
   g4 e8 e |
   d d4 f8 |
   g2 ~ |
   g4 r |
-  r8 g,4 c8 |
-  d4 f |
+  r8 g,4 ^> c8 |
+  \slashedGrace { c16 (} d4) f |
   g2 ~ |
-  g4 r8 c ~ |
+  g4 r8 c ^> ~ |
   c b b c |
   d8. d,16 g8 g |
   <g c,>2 ~ |
@@ -95,35 +96,49 @@ nhacDiepKhucBas = \relative c' {
 
 nhacPhienKhucSop = \relative c' {
   \partial 4 c8. d16 |
-  e8 e e4 |
+  g8 g g4 |
   g8 c c a16 (g) |
-  d8. d16 d8 g |
+  d8. d16 d8 f |
   g2 |
   e4 e |
   f16 (e) d8 c c16 (d) |
-  g4 r8 e' |
-  d8. b16 c8 d |
-  g,4. c8 |
-  b d4 c8 |
-  c2 ~ |
-  c4 \bar "||"
+  g4 r8
+  <<
+    {
+      e' |
+      d8. b16 c8 d |
+      g,4. c8 |
+      b d4 c8 |
+      c2 ~ |
+      c4
+    }
+    {
+      c8 |
+      g8. g16 a8 f |
+      e4. c8 |
+      g'8 f4 f8 |
+      e2 ~ |
+      e4
+    }
+  >>
+  \bar "|."
 }
 
 % Lời điệp khúc
 loiDiepKhucSop = \lyricmode {
-  Tôi vui mừng ớ chúng ta mau đi về,
-  đi về Nhà Thiên Chúa.
+  Tôi vui mừng Ớ chúng ta mau đi về,
+  đi về nhà Thiên Chúa.
   Chân chúng ta nay đã dừng.
   Hỡi Giê -- ru -- sa -- lem,
   hỡi Giê -- ru -- sa -- lem.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Tôi vui mừng ớ chúng ta mau đi về,
-  đi về Nhà Thiên Chúa.
-  Ta nay đã dừng.
-  Hỡi Giê -- ru -- sa -- lem,
-  hỡi Giê -- ru -- sa -- lem.
+  Tôi vui mừng Ớ chúng ta mau đi về,
+  đi về Nhà Thiên Chúa ta
+  chân chúng ta đã dừng
+  Hỡi Giê -- ru -- sa -- lem
+  Hỡi Giê -- ru -- sa -- lem.
 }
 
 loiDiepKhucTenor = \lyricmode {
@@ -135,10 +150,9 @@ loiDiepKhucTenor = \lyricmode {
 }
 
 loiDiepKhucBas = \lyricmode {
-  \set stanza = "ĐK:"
   Tôi vui mừng khi nghe có người nhủ rằng:
   Chúng ta đi về mau đi về Nhà Thiên Chúa.
-  Dừng ở của thành ngươi.
+  Dừng ở cửa thành ngươi.
   Hỡi Giê -- ru -- sa -- lem,
   Giê -- ru -- sa -- lem.
 }
@@ -156,17 +170,17 @@ loiPhienKhucSopHai = \lyricmode {
   \set stanza = #"2."
   Nguyện Giê -- ru -- sa -- lem và lớp lớp lũy thành
   đều được bình an.
-  Anh em sống trong niềm hạnh phúc
-  những lâu đài trong khắp thành
-  tôi cầu chúc khang an.
+  Anh em sống trong niềm hạnh phúc,
+  Các lâu đài trong khắp thành,
+  tôi cầu chúc an khang.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \set stanza = #"3."
   Vì yêu thương anh em
-  và quý mến cung vàng điện ngọc của Chúa.
-  Tôi xin chúc đô thành bình yên
-  tháng năm được vui thái hòa trong hồng phúc vô biên.
+  và quý mến cung vàng điện ngọc của Chúa,
+  Tôi xin chúc đô thành bình yên,
+  Tháng năm được vui thái bình trong hồng phúc vô biên.
 }
 
 % Dàn trang
