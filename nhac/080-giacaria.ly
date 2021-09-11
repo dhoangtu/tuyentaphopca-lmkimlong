@@ -4,8 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Giacaria" }
-  composer = "Lc. 1:5-25"
-  poet = "Thơ: Xuân Ly Băng"
+  composer = "Thơ: Xuân Ly Băng"
+  poet = "Lời: Lc. 1, 5-25"
   arranger = "Lm. Kim Long"
   tagline = ##f
 }
@@ -933,9 +933,8 @@ notBePhu =
     >>
   >>
   \layout {
-    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.2
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override LyricHyphen.minimum-distance = #1
     \override Staff.VerticalAxisGroup.staff-staff-spacing =
         #'((basic-distance . 8)

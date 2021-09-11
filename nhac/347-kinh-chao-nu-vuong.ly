@@ -25,13 +25,68 @@
   page-count = #1
 }
 
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
+
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c' {
-  \partial 4 f8_( e) d4. g8 |
-  f_( e) f g |
-  a4 a8 a |
-  d4 g, |
-  a f8 e |
+  \partial 4 f8_( e) d4.
+  <g \tweak font-size #-2 cs,>8 |
+  <<
+    {
+      \voiceOne
+      f8 _(e)
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      \tweak font-size #-2 d4
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      f8 g |
+      a4 a8 a |
+    }
+    \notBePhu -2 {
+      d,8 d |
+      cs4 e8 f
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      \voiceOne
+      d'4 g, |
+      a4
+    }
+    \new Voice = "splitpart" \notBePhu -2 {
+	    \voiceTwo
+      g8 ^(f) e ^(d) |
+      e ^(f)
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      f8 e |
+    }
+    \notBePhu -2 {
+      d8 cs
+    }
+  >>
   d4 \bar "||"
 }
 
@@ -80,7 +135,6 @@ loiPhienKhucMot = \lyricmode {
 }
 
 loiPhienKhucHai = \lyricmode {
-  \override Lyrics.LyricText.font-shape = #'italic
   \set stanza = #"2."
   Chúng con trong vũng lệ sầu,
   ngày thành cơ cầu,
@@ -104,10 +158,12 @@ loiPhienKhucBa = \lyricmode {
         \new Voice = beSop {
           \voiceOne \key f \major \time 2/4 \nhacDiepKhucSop
         }
+        %{
         \new Voice = beAlto {
           %\override NoteHead.font-size = #-2
           \voiceTwo \key f \major \time 2/4 \nhacDiepKhucAlto
         }
+        %}
         \new Lyrics \lyricsto beSop \loiDiepKhucSop
     >>
     \new Staff \with {
@@ -122,7 +178,6 @@ loiPhienKhucBa = \lyricmode {
     >>
   >>
   \layout {
-    %\override Lyrics.LyricText.font-size = #+2.2
     \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -143,7 +198,6 @@ loiPhienKhucBa = \lyricmode {
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    %\override Lyrics.LyricText.font-size = #+2.2
     \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
