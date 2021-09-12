@@ -42,13 +42,13 @@ nhacPhienKhucSop = \relative c'' {
   f,4 g8 g ~ |
   g g a8. f16 |
   bf8 bf4. |
-  bf16 (c) f,8 a4 ~ |
+  bf16 (c) f,8 af4 ~ |
   a8 f f g |
   g2 \bar ".|:"
   a8. gs16 a8 f |
-  f f (g) a |
+  f f ([g]) a |
   bf2 |
-  \slashedGrace { g8 ( } a8.) f16 bf8 bf |
+  \slashedGrace { g16 ( } a8.) f16 bf8 bf |
   bf a4 bf8 |
   c2 |
   c8 c c8. c16 |
@@ -59,9 +59,9 @@ nhacPhienKhucSop = \relative c'' {
   a4 r |
   R2 |
   g8 a4 c8 |
-  \slashedGrace { f,8 ( } g2) |
+  \slashedGrace { f,16 ( } g2) |
   r8 bf c d |
-  \slashedGrace { g,8 ( } a2) ~ |
+  \slashedGrace { g,16 ( } a2) ~ |
   a4 a16 (bf) a (bf) |
   c4. d8 |
   d4 bf8 d |
@@ -106,9 +106,10 @@ nhacPhienKhucSop = \relative c'' {
   e2 ~ |
   e8 b16 b e8 d |
   cs8 a4 d8 |
-  d4. e8 |
+  d4. e8 ^\ff |
   d2 ~ |
-  d4 \bar "|."
+  d4 ^\markup { \halign #-2.5 \fontsize #2 \bold "Tận" }
+  \bar "|." \break
   e,8 a |
   a8. gs16 b8 b |
   b cs4. |
@@ -159,9 +160,9 @@ nhacPhienKhucAlto = \relative c' {
   c4 r |
   R2
   e8 f4 e8 |
-  \slashedGrace { d8 ( } e2) |
+  \slashedGrace { d16 ( } e2) |
   r8 d f d |
-  \slashedGrace { c8 ( } f2) ~ |
+  \slashedGrace { c16 ( } f2) ~ |
   f4 f16 (g) f (g) |
   a4. bf8 |
   bf4 g8 bf |
@@ -205,7 +206,7 @@ nhacPhienKhucAlto = \relative c' {
   r8 b16 b cs8 a |
   gs4. gs16 gs |
   a8 e16 e fs4 ~ |
-  fs8 fs16 fs a (b) a8 |
+  fs8 fs16 ^\ff fs a (b) a8 |
   gs2 ~ |
   gs4
   
@@ -223,7 +224,7 @@ nhacPhienKhucAlto = \relative c' {
   a2 ~ |
   a4 r8 cs16 cs |
   cs8 cs cs b |
-  a b r b16 b |
+  a b r b16 a |
   gs8 gs gs a |
   a gs4.
 }
@@ -244,23 +245,13 @@ nhacPhienKhucBas = \relative c {
     }
   >>
   
-  <<
-    {
-      \voiceOne
-      f4. f8
-    }
-    \new Voice = "splitpart" {
-	    \voiceTwo
-      f,2
-    }
-  >>
-  \oneVoice
-  f'2 |
+  <f f,>4. f8 |
+  f2 |
   d4. d8 |
   g4 \tuplet 3/2 { f8 e d } |
   c2 |
   c4 df8 df ~ |
-  df bf bf4 ~ |
+  df! bf bf4 ~ |
   bf bf |
   bf8 c f r |
   e8. e16 g8 g ~ |
@@ -301,7 +292,7 @@ nhacPhienKhucBas = \relative c {
   \key c \major
   <g g,>8
   \partial 4 r8 r f16 f |
-  g8 e e e16 e |
+  f8 e e e16 e |
   f8 g16 g a4 |
   r8 c16 c b8 c |
   g4 r8 d16 d |
@@ -328,7 +319,7 @@ nhacPhienKhucBas = \relative c {
   r8 gs16 gs a8 fs |
   e4. e16 e |
   fs8 cs16 cs d4 ~ |
-  d8 b16 b fs'8 e |
+  d8 b16 -\ff b fs'8 e |
   e2 ~ |
   e4
   r |
@@ -352,41 +343,46 @@ nhacPhienKhucBas = \relative c {
 
 % Lời
 loiPhienKhucSop = \lyrics {
-  Đây Be -- lem, đây Be -- lem hoàng thành Đa -- vít.
+  Đây Be -- lem,
+  Đây Be -- lem hoàng thành Đa -- vít.
   Trời âm u mưa gió lạnh thê lương,
-  giữa đồng vắng sầu đọng hơn sương.
+  Giữa đồng vắng sầu đọng hơi sương.
   Ôi tình thương là mặt trời công chính.
-  Bỏ tòa cao thiên cung đầy quang ánh.
-  Đêm nay lên trong u tối đồng hoang.
+  Bỏ tòa cao thiên cung đầy quang ánh,
+  Đêm nay lên trong u tối đồng hoang,
   Đêm nay lên trong u tối đồng hoang.
   Ngày nay máng cỏ, ngày nay máng cỏ.
   Thổi làm chi hỡi gió đừng bay nữa mây ơi!
   Quỳ xuống đây, hãy quỳ xuống đây,
   quỳ thờ lạy Con Chúa Trời.
+  \override Lyrics.LyricText.font-shape = #'italic
   (Đàn) __ \repeat unfold 8 { _ }
+  \revert Lyrics.LyricText.font-shape
   Ngươi nghe không muôn muôn vì tinh đẩu
   đêm hôm nay náo động, đêm hôm nay náo động chốn trời cao.
   Người thấy không đường nguyệt điện xôn xao vạn thiên thần
   bay về thành Đa -- vít.
-  Nhạc sáng danh như mưa gào gió thét.
+  Nhạc sáng danh như mưa gào gió thét,
   Ca phụng thờ say đắm đến chừng mô.
-  Dồn dập tiếng tung hô mừng Ngôi Hai
+  Dồn dập tiếng tung hô,
+  Mừng Ngôi Hai
   dồn dập tiếng tung hô, mừng Ngôi Hai tung hô.
   Hồn ta ơi hòa tan trong quang ánh
-  để ngắm xem Mùa Cứu Chuộc ra hoa.
+  Để ngắm xem Mùa Cứu Chuộc ra hoa.
   Ta ước hồn biến thành mực bao la
-  để viết nên muôn bài thơ kính mến.
+  Để viết nên muôn bài thơ kính mến.
   Cho thơ say trong ngất ngư mầu nhiệm
   của Ngôi Lời nhập thể xuống trần gian.
 }
 
 loiPhienKhucAlto = \lyrics {
-  Đây Be -- lem hoàng thành Đa -- vít đây Be -- lem hoàng thành Đa -- vít.
+  Đây Be -- lem hoàng thành Đa -- vít,
+  đây Be -- lem hoàng thành Đa -- vít.
   Trời âm u mưa gió lạnh thê lương,
-  giữa đồng vắng sầu đọng hơn sương.
+  Giữa đồng vắng sầu đọng hơi sương.
   Ôi tình thương là mặt trời công chính.
-  Bỏ tòa cao thiên cung đầy quang ánh.
-  Đêm nay lên trong u tối đồng hoang.
+  Bỏ tòa cao thiên cung đầy quang ánh,
+  Đêm nay lên trong u tối đồng hoang,
   Đêm nay lên trong u tối đồng hoang.
   Ngày nay máng cỏ, ngày nay máng cỏ.
   Thổi làm chi hỡi gió đừng bay nữa mây ơi!
@@ -399,32 +395,32 @@ loiPhienKhucAlto = \lyrics {
   ngươi nghe không
   đêm hôm nay trời cao,
   đêm hôm nay náo động, náo động
-  đường nguyệt điện xôn xao ơ xôn xao ô náo động.
+  đường nguyệt điện xôn xao ơ xôn xao ô náo động,
   Vạn thiên thần bay về thành Đa -- vít.
-  Nhạc rạng danh như mưa gào gió thét.
+  Nhạc rạng danh như mưa gào gió thét,
   Ca phụng thờ say đắm đến chừng mô.
   Dồn dập tiếng tung hô,
   dồn dập tiếng tung hô,
   dồn dập tiếng, dồn dập tiếng, dồn dập tiếng tung hô
   Hồn ta ơi hòa tan trong quang ánh
-  để ngắm xem Mùa Cứu Chuộc ra hoa.
+  Để ngắm xem Mùa Cứu Chuộc ra hoa.
   Ta ước hồn biến thành mực bao la
-  để viết nên muôn bài thơ kính mến.
+  Để viết nên muôn bài thơ kính mến.
   Cho thơ say trong ngất ngư mầu nhiệm
   của Ngôi Lời nhập thể xuống trần gian.
 }
 
 loiPhienKhucBas = \lyrics {
   \repeat unfold 17 { _ }
-  Đây Be -- lem, đây Be -- lem hoàng thành Đa -- vít.
+  Đây Be -- lem, Đây Be -- lem hoàng thành Đa -- vít.
   Một đêm khuya mù mịt trời âm u
   gió mưa lạnh thê lương
-  gió mưa sầu đọng hơn sương.
+  gió mưa sầu đọng hơi sương.
   Ôi tình thương là mặt trời công chính.
-  Bỏ ngai cao thiên cung đầy quang ánh.
+  Bỏ ngai cao thiên cung đầy ánh quang,
+  Đêm nay lên trong u tối đồng hoang,
   Đêm nay lên trong u tối đồng hoang.
-  Đêm nay lên trong u tối đồng hoang.
-  Xưa kia ngai vàng, xưa kia ngai vàng.
+  Xưa kia ngai vàng, Xưa kia ngai vàng.
   Thổi làm chi, thổi gì hỡi gió.
   Đừng bay mây ơi, đừng bay mây ơi!
   Nào hãy quỳ đây, hãy quỳ đây
@@ -433,15 +429,15 @@ loiPhienKhucBas = \lyrics {
   ngươi nghe không muôn muôn vì tinh đẩu
   ngươi nghe không, ngươi nghe không đêm hôm nay nơi nào,
   đêm hôm nay náo động nghe không
-  đường nguyệt điện xôn xao ơ xôn xao ơ náo động.
+  đường nguyệt điện xôn xao ơ xôn xao ơ náo động,
   Vạn thiên thần bay về thành Đa -- vít.
-  Nhạc rạng danh như mưa gào gió thét.
-  Cung phụng thờ say đắm đến chừng mô.
+  Nhạc rạng danh như mưa gào gió thét,
+  Ca phụng thờ say đắm đến chừng mô.
   Mừng Ngôi Hai dồn dập tiếng tung hô,
   dồn dập tiếng,
   dồn dập tiếng, dồn dập tiếng tung hô.
-  Ánh quang lên để xem mùa nở hoa, nở hoa Cứu Chuộc.
-  Là thành mực để dệt nên thơ trìu mến
+  ánh quang lên để xem mùa nở hoa, nở hoa Cứu Chuộc.
+  là thành mực để dệt nên thơ trìu mến
   để thơ ngất ngư mầu nhiệm Ngôi Lời vào trần gian.
 }
 
@@ -460,7 +456,7 @@ loiPhienKhucBas = \lyrics {
 			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
   print-page-number = ##f
-  %page-count = 6
+  %page-count = 5
 }
 
 TongNhip = {
@@ -506,9 +502,9 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override LyricHyphen.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1.2
+    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override LyricHyphen.minimum-distance = #1.2
     \context {
       \Staff \RemoveEmptyStaves
       \override VerticalAxisGroup.remove-first = ##t

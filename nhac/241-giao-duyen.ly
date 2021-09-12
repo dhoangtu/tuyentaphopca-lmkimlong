@@ -4,8 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Giao Duyên" }
-  composer = " "
-  poet = "Thơ dịch: Lm. Xuân Ly Băng"
+  composer = "Thơ dịch: Lm. Xuân Ly Băng"
   arranger = "Lm. Kim Long"
   tagline = ##f
 }
@@ -353,7 +352,7 @@ nhacPhienKhucBas = \relative c {
       g8 g r4
     }
     \new Voice = "splitpart" {
-	    \voiceTwo r8 d |
+	    \voiceTwo r8 bf, |
 	    b! c cs4
     }
   >>
@@ -517,7 +516,8 @@ nhacPhienKhucBas = \relative c {
 }
 
 loiPhienKhucSop = \lyrics {
-  Intro... \repeat unfold 21 { _ }
+  \markup { \lower #3.3 \halign #-0.3 \bold "Intr." }
+  \repeat unfold 21 { _ }
   Mây nước yêu yêu
   không gian trang hoàng như lễ trọng.
   Gió hết cô liêu.

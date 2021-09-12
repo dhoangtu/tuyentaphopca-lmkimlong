@@ -41,22 +41,22 @@ nhacPhienKhucSop = \relative c'' {
   e4 g8 ^> e |
   r8 d16 (e) c8 ^> c ^> |
   f4 f8 ^> d |
-  r d16 (f) g,8 ^> g |
+  r b16 (d) g,8 ^> \slashedGrace { e16( } g8) |
   c2 | \break
   c8. a16 b8 b |
   b g4. |
   R2
-  r4. d'8 |
+  r4 r8 d'8 |
   e8. c16 d8 d |
   d b4. |
   R2
   r4. e,16 (f) |
   g8. g16 d'8 c |
-  r4 f8 ^> e |
-  r d16 (e) c8 ^> c |
+  r4 g'8 ^> e |
+  r d16 (e) c8 ^> c ^> |
   f4 f8 ^> d |
   r8 g,^_ a^_ b^_ |
-  \set Score.repeatCommands = #'((volta "1") end-repeat)
+  \set Score.repeatCommands = #'((volta "1"))
   c2 ~ |
   c4 r8 c |
   \set Score.repeatCommands = #'((volta #f) (volta "2") end-repeat)
@@ -64,10 +64,10 @@ nhacPhienKhucSop = \relative c'' {
   \set Score.repeatCommands = #'((volta #f))
   
   \time 6/8
-  c4. r4. |
-  r4. g4 g8 |
+  c4. r4 r8 |
+  r4 r8 g4 g8 |
   a4. ~ a4 r8 |
-  r4 g8 e'8. d16 c8 |
+  r4 g8 e'8. e16 c8 |
   d4. ~ d4 c8 |
   g4. d8 f16 (e) c8 \bar "||"
   
@@ -86,9 +86,10 @@ nhacPhienKhucSop = \relative c'' {
   r8 d b d |
   a'4. g16 (fs) |
   g2 ~ |
+  g4  \bar "||"
   
   \key g \major
-  g4 r |
+  \partial 4 r |
   r a8 a |
   fs g4 a8 |
   b4 r |
@@ -115,7 +116,7 @@ nhacPhienKhucSop = \relative c'' {
   a ~ |
   a4 r8 a |
   g2 |
-  d8 f! (g) b, \bar "||"
+  d8 f! ([g]) b, \bar "||"
   
   \key c \major
   c2 ~ |
@@ -126,7 +127,7 @@ nhacPhienKhucSop = \relative c'' {
   e2 |
   r8 f e d |
   g2 |
-  r8 d (e) d |
+  r8 d ([e]) e |
   c4 r8 c |
   b4. a16 a |
   g2 |
@@ -138,10 +139,10 @@ nhacPhienKhucSop = \relative c'' {
   g4 r8 b |
   c2 |
   d ~ |
-  d4 g8 e |
-  r b16 (d) b8 ^> b ^> |
-  f'4 f8 d |
-  r b16 (d) g,8 g |
+  d4 g8 ^> e |
+  r d16 (e) c8 ^> c ^> |
+  f4 f8 d |
+  r b16 (d) g,8 \slashedGrace { e16 (} g8) |
   c4 r8 a |
   a4 b8. b16 |
   g8 g4. |
@@ -150,7 +151,7 @@ nhacPhienKhucSop = \relative c'' {
   d8. e16 c8 d |
   d b4. |
   R2
-  r4. e,16 (f) |
+  r4. e,16 (g) |
   g8. ^> g16 d'8 ^> c |
   r4 g'8 e |
   r d16 (e) c8 ^> c ^> |
@@ -162,28 +163,27 @@ nhacPhienKhucSop = \relative c'' {
 
 nhacPhienKhucAlto = \relative c' {
   r4
-  R2*3
-  r4 r
+  R2*4
   r4 e8 e |
   d4 r |
   r a'8 b |
   c2 |
   g8. g16 d'8 c |
-  r b g g |
-  a4 a8 f |
-  r d d d |
+  r b g ^> g ^> |
+  a4 a8 ^> f |
+  r d d ^> d |
   e2 |
   e8. c16 g'8 g |
   d e4. |
   R2
-  r4. b'8 |
+  r4 r8 b'8 |
   c8. a16 g8 g |
   fs g4. |
   R2
   r4. e16 (f) |
   g8. g16 f8 e |
-  r4 d'8 c |
-  r b g g |
+  r4 d'8 ^> c |
+  r b g ^> g ^> |
   a4 a8 ^> f |
   r8 g ^_ f ^_ f ^_ |
   e2 ~ |
@@ -201,8 +201,8 @@ nhacPhienKhucAlto = \relative c' {
     }
   >>
   \oneVoice
-  r4. |
-  r4. e'4 e8 |
+  r4 r8 |
+  r4 r8 e'4 e8 |
   c4. (c4) r8 |
   r4 g'8 c8. b16 a8 |
   b4. ~ b4 c8 \bar ".|:"
@@ -215,21 +215,22 @@ nhacPhienKhucAlto = \relative c' {
   d4 d8 d |
   c g' g4 |
   fs2 ~ |
-  f8 f g g |
+  fs!8 fs g g |
   f4 e8 (d) |
-  e4 r8 c' \bar ":|."
+  d4 r8 c' \bar ":|."
   b4. a16 a |
   g2 |
   r8 d b d |
   e4. c8 |
-  b2 ~ \bar "||"
+  b2 ~ |
+  b4
   
   \key g \major
-  b4 g'8 g |
+  g'8 g |
   e4 c8 cs |
   d b4 d8 |
   g4 r |
-  r8 d8 d r |
+  r8 d8 ^> d ^> r |
   b'8 ^> a r d, ^> |
   d2 ~ |
   d4 r |
@@ -248,10 +249,10 @@ nhacPhienKhucAlto = \relative c' {
   r8 g4 a8 |
   b4 r |
   R2
-  e8 g4 e8 |
-  d4 r8 a |
+  e,8 g4 e8 |
+  d4 r8 a' |
   g2 |
-  d8 f! (g) d |
+  d8 f! ([g]) d |
   
   \key c \major
   c2 ~ |
@@ -275,17 +276,17 @@ nhacPhienKhucAlto = \relative c' {
   r g8 g |
   fs g4 a8 |
   b4 r |
-  r8 b g g |
+  r8 b g ^> g ^> |
   a4 a8 f |r8 d d d |
   e4. f8 |
-  f4 g8. g16 |
+  f4 g8. f16 |
   e8 e4. |
   R2
   r4. b'8 |
   b8. c16 a8 g |
   fs g4. |
   R2
-  r4. e16 (f) |
+  r4. e16 (g) |
   g8. ^> g16 f8 ^> e |
   r4 d'8 c |
   r b g ^> g ^> |
@@ -296,7 +297,9 @@ nhacPhienKhucAlto = \relative c' {
 }
 
 nhacPhienKhucBas = \relative c' {
-  g8. g16 |
+  g8.
+  ^\markup { \raise #1.5 \halign #-0.3 \bold "Intr." }
+  g16 |
   g8 ^> a ^> r c |
   a8. a16 <a a,>8 ^> <b b,> ^> |
   r <c c,> <f, f,> <g g,> |
@@ -306,7 +309,7 @@ nhacPhienKhucBas = \relative c' {
   r f8 g |
   c,8. c16 e8 g |
   c4 b8 ^> c |
-  r8 g16 (f) e8 ^> e |
+  r8 g16 (f) e8 ^> e ^> |
   d4 d8 ^> f |
   r g g ^> g |
   c,2 |
@@ -316,11 +319,11 @@ nhacPhienKhucBas = \relative c' {
   a g4. |
   R2
   r4. g8 |
-  \slashedGrace { \once \stemDown d' ^( } e8.) e,16 g8 b |
+  \slashedGrace { \once \stemDown d'16 ^( } e8.) e,16 g8 b |
   d c4. |
   r8 b b c |
   a8. a16 b8 ^> c |
-  r g16 (f) e8 ^> e |
+  r g16 (f) e8 ^> e ^> |
   d4 d8 ^> f |
   r e ^_ d ^_ g ^_ |
   <g c,>2 ~ |
@@ -350,7 +353,7 @@ nhacPhienKhucBas = \relative c' {
       g
     }
     {
-      d8 f c8. c16 |
+      d8 e c8. c16 |
       g'4 g8 g |
       e e e4 |
       d2 ~ |
@@ -365,12 +368,13 @@ nhacPhienKhucBas = \relative c' {
   r8 d b d |
   c4. d8 |
   <g g,>2 ~ |
+  <g g,>4
   
   \key g \major
-  <g g,>4 r |
+  r |
   c8 c a4 ~ |
-  a8 g e fs |
-  g4 c8 a |
+  a8 g ^> e ^> fs ^> |
+  g4 c8 ^> a |
   r8
   <<
     {
@@ -391,13 +395,13 @@ nhacPhienKhucBas = \relative c' {
   a |
   r8 a a, a |
   d4 r |
-  r8 b' a g |
-  fs4 c8 b |
+  r8 b' a ^> g ^> |
+  fs4 c'8 a |
   r
   <<
     {
-      c'8 ^> b ^> r |
-      r4. c8
+      c8 ^> b ^> r |
+      r4 r8 c8 ^>
     }
     {
       fs,8 g r |
@@ -427,7 +431,7 @@ nhacPhienKhucBas = \relative c' {
   <a c,>8 <a c,>4 <g cs,>8 |
   <fs d>4 r8 a |
   g2 |
-  d8 f! (g) b, |
+  d8 f! ([g]) b, |
   
   \key c \major
   c2 ~ |
@@ -486,46 +490,47 @@ nhacPhienKhucBas = \relative c' {
 loiPhienKhucSopMot = \lyrics {
   \repeat unfold 8 { _ }
   No -- el về nguồn vui tới.
-  Đứng lên hỡi người người ơi!
-  Đứng lên hỡi người người ơi!
+  Đứng lên hỡi người người ơi,
+  Đứng lên hỡi người người ơi.
   \set stanza = " 1."
   Những đầu xanh đang mơ mộng,
   Ôi những tuổi hoa ưa ui nhộn.
   \set stanza = "1-2."
-  Nào mau cùng hát lên hát lên hỡi người người ơi!
+  Nào mau cùng hát lên
+  Hát lên hỡi người người ơi,
   Hát cho hồn lên chơi vơi.
-  No...
+  No
   vơi.
-  Người người vui.
+  người người vui.
   Ngài đã thương mọi người.
-  Chúa ơi! Ngài đã làm người.
+  Chúa ơi, Ngài đã làm người.
   \set stanza = "1."
-  Niềm hy vọng bừng lên nơi nơi.
+  Niềm hy vọng bừng lên nơi nơi,
   Đời muộn phiền không còn nữa.
   Chỉ còn là khúc ca vui.
-  Chúa...
-  ơi! Con tin Ngài.
+  Chúa
+  ơi, con tin Ngài,
   Một nụ hồng nở trên môi.
   No -- el về nguồn vui tới.
-  Hỡi người! Đứng lên người ơi!
-  Nghe niềm vui trong ánh mắt.
-  Nghe lời mừng dội bên tai.
+  Hỡi người đứng lên, người ơi.
+  Nghe niềm vui trong ánh mắt,
+  Nghe lời mừng dội bên tai
   Hỡi ngời hát cho mọi nơi.
   Ôi tôi vui
   Ngài thương tôi
-  Chúa ơi! Ngài đã làm người.
-  Nâng dậy hòa bình khắp muôn nơi.
-  Biến đổi con người đang suy thoái.
-  Hóa nên người mới xứng danh người.
-  Chúa ơi! Con yêu Ngài
-  một nụ hồng nở trên môi.
+  Chúa ơi, Ngài đã làm người,
+  Nâng dậy hòa bình khắp mọi nơi,
+  biến đổi con người đang suy thoái
+  hóa nên người mới xứng danh người.
+  Chúa ơi con yêu Ngài
+  Một nụ hồng nở trên môi.
   No -- el về nguồn vui tới.
-  Đứng lên hỡi người người ơi!
-  Đứng lên hỡi người người ơi!
+  Đứng lên hỡi người người ơi,
+  Đứng lên hỡi người người ơi.
   Hôm nay Chúa đã làm người.
   Hôm nay khắp mọi nơi nhân trần.
-  Nào mau mau hát lên
-  hát lên hỡi người người ơi!
+  Nào mau cùng hát lên
+  Hát lên, hỡi người người ơi,
   Hát cho đời lên vui tươi.
 }
 
@@ -536,55 +541,56 @@ loiPhienKhucSopHai = \lyrics {
   Ôi những người anh đang lo buồn.
   \repeat unfold 33 { _ }
   \set stanza = "2."
-  Tình thương rầy trổ hoa xinh tươi.
+  Tình thương rầy trổ hoa xinh tươi,
   Người người gặp nhau niềm nở.
-  Thắm đẹp tình nghĩa anh em. Chúa...  
+  Thắm đẹp tình nghĩa anh em. Chúa
 }
 
 loiPhienKhucAltoMot = \lyrics {
   No -- el về nguồn vui tới.
-  Nào cùng đứng lên hỡi người người ơi!
-  Đứng lên hỡi người người ơi!
+  Nào cùng đứng lên hỡi người người ơi,
+  Đứng lên hỡi người người ơi.
   \set stanza = " 1."
   Những đầu xanh đang mơ mộng,
   Ôi những tuổi hoa ưa ui nhộn.
   \set stanza = "1-2."
-  Nào mau cùng hát lên hát lên hỡi người người ơi!
+  Nào mau cùng hát lên
+  Hát lên hỡi người người ơi,
   Hát cho hồn lên chơi vơi.
   vơi.
-  Người người vui.
+  người người vui.
   Ngài đã thương mọi người.
-  Chúa ơi! Ngài đã làm người.
+  Chúa ơi, Ngài đã làm người.
   \set stanza = "1."
-  Niềm hy vọng bừng lên nơi nơi.
+  Niềm hy vọng bừng lên nơi nơi,
   Đời muộn phiền không còn nữa.
   Chỉ còn là khúc ca vui.
-  Chúa...
-  ơi! Con tin Ngài.
+  Chúa
+  ơi, con tin Ngài,
   Một nụ hồng nở trên môi.
   No -- el về! No -- el về nguồn vui tới.
-  Hỡi người! Đứng lên người ơi!
-  Nghe niềm vui trong ánh mắt.
-  Nghe lời mừng dội bên tai.
+  Hỡi người đứng lên, người ơi.
+  Nghe niềm vui trong ánh mắt,
+  Nghe lời mừng dội bên tai
   Hỡi ngời hát cho mọi nơi.
   Hát cho muôn người.
   Tôi vui
   người người vui.
   Ngài thương mọi người.
-  Chúa ơi! Ngài đã làm người.
-  Nâng dậy hòa bình khắp muôn nơi.
-  Biến đổi con người đang suy thoái.
-  Hóa nên người mới xứng danh người.
-  Chúa ơi! Con yêu Ngài
-  một nụ hồng nở trên môi.
+  Chúa ơi, Ngài đã làm người,
+  Nâng dậy hòa bình khắp mọi nơi,
+  biến đổi con người đang suy thoái
+  hóa nên người mới xứng danh người.
+  Chúa ơi con yêu Ngài
+  Một nụ hồng nở trên môi.
   No -- el về
   No -- el về nguồn vui tới.
-  hỡi người người ơi!
-  Đứng lên hỡi người người ơi!
+  hỡi người người ơi,
+  Đứng lên hỡi người người ơi.
   Hôm nay Chúa đã làm người.
   Hôm nay khắp mọi nơi nhân trần.
-  Nào mau mau hát lên
-  hát lên hỡi người người ơi!
+  Nào mau cùng hát lên
+  Hát lên, hỡi người người ơi,
   Hát cho đời lên vui tươi.
 }
 
@@ -595,54 +601,57 @@ loiPhienKhucAltoHai = \lyrics {
   Ôi những người anh đang lo buồn.
   \repeat unfold 32 { _ }
   \set stanza = "2."
-  Tình thương rầy trổ hoa xinh tươi.
-  Người người gặp nhau niềm nở.
-  Thắm đẹp tình nghĩa anh em. Chúa...  
+  Tình thương rầy trổ hoa xinh tươi,
+  Người người gặp nhau niềm nở,
+  Thắm đẹp tình nghĩa anh em. Chúa
 }
 
 loiPhienKhucBasMot = \lyrics {
   \repeat unfold 13 { _ }
-  No -- el về nguồn vui hỡi là nguồn vui tới.
-  Vùng lên hỡi người người ơi!
-  Vùng lên hỡi người hỡi người.
+  No -- el về nguồn vui hỡi là nguồn vui tới
+  Vùng lên hỡi người người ơi,
+  Vùng lên hỡi ơi hỡi người.
   \set stanza = "1."
   Và những đầu xanh đang đắn đo.
   Cùng những tuổi già hay lắng lo.
-  Mau  mau hãy hòa lời ca lên hỡi người, hỡi người.
-  Để cho hồn lên chơi vơi.
+  Mau  mau hãy hòa lời ca lên, hỡi ơi, hỡi người
+  để cho hồn lên chơi vơi.
   vơi.
   Ôi tôi vui người người vui
   Ngài thương tôi.
-  Chúa ơi! Ngài đã làm người.
+  Chúa ơi, Ngài đã làm người.
   \set stanza = "1."
-  Niềm hy vọng bừng lên nơi nơi.
+  Niềm hy vọng bừng lên nơi nơi,
   Đời muộn phiền không còn nữa.
-  Chỉ còn là bài ca vui. Chúa...
-  ơi!
-  Con tin Nài.
+  Chỉ còn là bài ca vui. Chúa
+  ơi, con tin Ngài,
   Một nụ hồng nở trên môi.
-  No -- el về đem nguồn vui tới.
-  Đứng lên người ơi! Người ơi!
-  Nghe con tim rạo rực.
-  Nghe nụ cười trên môi.
-  Mắt đọng niềm vui.
-  Lắng nghe lời mừng hát lên người ơi!
-  Mọi nơi. Hát cho muôn người.
+  No -- el về đem nguồn vui tới,
+  đứng lên người ơi, người ơi.
+  Nghe con tim rạo rực,
+  nghe nụ cười trên môi
+  ánh mặt mừng vui.
+  Lắng nghe lời mừng,
+  Hát lên người ơi,
+  mọi nơi.
+  \override Lyrics.LyricText.font-shape = #'italic
+  (Hát cho muôn người)
+  \revert Lyrics.LyricText.font-shape
   Tôi vui người người vui.
-  Ngài thương mọi người Chúa ơi!
-  Ngài đã làm người.
-  Nâng dậy hòa bình khắp muôn nơi.
-  Biến đổi con người đang suy thoái.
-  Trở nên người mới xứng danh người.
-  Chúa ơi! Con yêu Ngài
-  một nụ hồng nở trên môi.
-  No -- el về!
+  Ngài thương mọi người Chúa ơi,
+  Ngài đã làm người,
+  Nâng dậy hòa bình khắp nơi nơi,
+  biến đổi con người đang suy thoái
+  trở nên người mới xứng danh người.
+  Chúa ơi con yêu Ngài
+  Một nụ hồng nở trên môi.
+  No -- el về
   No -- el về nguồn vui tới.
-  Hỡi người hỡi người.
-  Vùng lên hỡi người hỡi người.
+  hỡi ơi hỡi người
+  Vùng lên hỡi ơi hỡi người.
   Ngôi Lời ở giữa chúng tôi.
-  Tay bắt mặt mừng vui kết thân.
-  Mau mau lên hòa lời ca lên hỡi ơi hỡi người.
+  Tay bắt mặt mừng vui kết thân
+  mau mau lên hòa lời ca lên hỡi ơi hỡi người
   Để cho đời rền sướng vui.
 }
 
@@ -653,9 +662,9 @@ loiPhienKhucBasHai = \lyrics {
   Cùng những người chị đang héo hon.
   \repeat unfold 33 { _ }
   \set stanza = "2."
-  Tình thương rầy trổ hoa xinh tươi.
-  Người người gặp nhau niềm nở.
-  Thắm đẹp tình nghĩa anh em. Chúa...
+  Tình thương rầy trổ hoa xinh tươi,
+  Người người gặp nhau niềm nở,
+  Thắm đẹp tình nghĩa anh em. Chúa
 }
 
 
@@ -724,7 +733,7 @@ notBePhu =
   >>
   \layout {
     \override Lyrics.LyricSpace.minimum-distance = #1.5
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override LyricHyphen.minimum-distance = #1.5
     \context {
       \Staff \RemoveEmptyStaves

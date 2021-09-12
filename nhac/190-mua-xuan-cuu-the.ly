@@ -30,8 +30,8 @@ nhacPhienKhucSop = \relative c' {
     }
   >>
   \oneVoice
-  \bar "" \break
-  c4 d8 |
+  \bar "|" \break
+  c4 e8 |
   \slashedGrace { g16 _(a } g2 ~ ) |
   g2 ~ |
   g4 r8 f16 f |
@@ -53,19 +53,34 @@ nhacPhienKhucSop = \relative c' {
   d ^> d ^> r b |
   b2 |
   R2*2
-  c8. ^> c16 g8 g |
+  c8. ^> c16 g8 a |
   fs ^> fs ^> r g |
   g2 |
   g8. c16 c8 b ( |
   c) e a, af |
   g2 |
   d'8. ^> f16 f8 b, |
-  g d'4 e16 (d) |
-  \slashedGrace { b8 ( } c2) ~ |
-  c4 \bar "||" \break
+  g
+  <<
+    {
+      \voiceOne
+      \once \override NoteColumn.force-hshift = #1
+      d'4 e16 (d) |
+      \slashedGrace { \once \stemDown b16 ( } c2 ^> ) ~ |
+      c4
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      d8 ([c]) b |
+      g2 ~ |
+      g4
+    }
+  >>
+  \oneVoice
+  \bar "||" \break
   
   \tuplet 3/2 { g'8 e c } |
-  \tuplet 3/2 { e d g, } \tuplet 3/2 { c g e } |
+  \tuplet 3/2 { e c g } \tuplet 3/2 { c g e } |
   f4. fs16 fs |
   <g d b>4. <d b>8 |
   
@@ -89,7 +104,7 @@ nhacPhienKhucSop = \relative c' {
   g ~ |
   g4 r8 f16 f |
   g4. d8 |
-  \slashedGrace { d8 ( } e2) |
+  \slashedGrace { d16 ( } e2) |
   r8 a4 a8 |
   g8. g16 c8 af ( |
   c) af (g) c |
@@ -98,11 +113,11 @@ nhacPhienKhucSop = \relative c' {
   R2*2
   c8 d4 b8 |
   b2 |
-  d8 c4 e8 |
+  d8 d4 e8 |
   e2 |
   f8. d16 b8 d |
   d c4. |
-  c8 a4 af8 |
+  c8 a4 a8 |
   g2 ~ |
   g4 r |
   r g8 d' ~ |
@@ -130,7 +145,7 @@ nhacPhienKhucSop = \relative c' {
   d8. g16 c,8 d |
   e f4. |
   a,8. d16 d8 e |
-  \slashedGrace { e,8 ( } g2) |
+  \slashedGrace { e,16 ( } g2) |
   r8 e' (f) e |
   d2 ~ |
   d4 c8 c |
@@ -143,7 +158,7 @@ nhacPhienKhucSop = \relative c' {
   d8. g16 c,8 d |
   e f4. |
   a,8. d16 d8 e |
-  \slashedGrace { e,8 ( } g2) |
+  \slashedGrace { e,16 ( } g2) |
   r8 d'4 b8 |
   c2 ~ |
   c4 \bar "|."
@@ -168,9 +183,9 @@ nhacPhienKhucAlto = \relative c' {
   c4. a8 |
   g e4 g16 (f) |
   e2 |
-  e8. e16 e8 a |
+  e8. ^> e16 e8 a |
   g ^> g4. ^> |
-  e8. e16 e8 c' |
+  e8. ^> e16 e8 c' |
   a ^> a ^> r a |
   gs2 |
   a8. ^> a16 e8 f |
@@ -190,7 +205,7 @@ nhacPhienKhucAlto = \relative c' {
   R2*5
   r4 r8 d16 d |
   e4. e8 |
-  \slashedGrace { c8 ( } d2) |
+  \slashedGrace { c16 ( } d2) |
   b2 |
   c |
   r8 c4 c8 |
@@ -203,8 +218,7 @@ nhacPhienKhucAlto = \relative c' {
   d2 |
   a'8 a4 a8 |
   gs2 |
-  f'8. d16 b8 d |
-  d c4. |
+  R2*2
   g8 f4 d8 |
   d2 ~ |
   d4 r |
@@ -311,14 +325,14 @@ nhacPhienKhucBas = \relative c' {
   <e' c>4 r |
   r4 r8 b'16 b |
   c4. a8 |
-  \slashedGrace { \once \stemDown a8 ^( } g2) ~ |
+  \slashedGrace { \once \stemDown a16 ^( } g2) ~ |
   g4 g, |
   c2 |
   r8 f4 f8 |
-  g8. g16 e8 g ( |
+  g8. f16 e8 g ( |
   \once \stemDown c,) df4 df8 |
   c2 |
-  c8. d16 ef8 d |
+  c8. c16 ef8 d |
   c (d) af'8. g16 |
   g2 |
   e8 d4 e8 |
@@ -388,54 +402,56 @@ nhacPhienKhucBas = \relative c' {
 % Lời phiên khúc
 loiPhienKhucSop = \lyrics {
   \repeat unfold 15 { _ }
-  Mùa xuân ấy một mùa xuân mầu nhiệm.
-  Rất diệu huyền và rất đỗi, rất đỗi anh hoa.
+  Mùa xuân ấy một mùa xuân mầu nhiệm
+  rất diệu huyền và rất đỗi, rất đỗi anh hoa.
   Xanh hơn liễu tinh tuyền hơn lý tưởng.
   Lời cẩm tự bút ly tao ngập ngượng.
-  Trăng ân tình hoa đền ngự như không.
+  Trăng ân tình, hoa đền ngự như không.
   Nhạc thiên tiên của nước Nhược non Bồng.
   Cung réo rắt Động Đào xưa vỡ lở.
   \repeat unfold 14 { _ }
   Một mùa xuân một mùa xuân vạn thuở.
   Khi ra đời là nghiêng ngửa cả trăng sao.
-  Hoa lá sượng sần, chim muông bỡ ngỡ.
-  Gió trên cành sẽ rít lên, rít lên man rợ.
-  Từng lũ đứng bâng khuâng.
+  Hoa lá sượng sần,
+  Chim muông bỡ ngỡ.
+  Gió trên cành sẽ rít lên, rít lên man rợ,
+  từng lũ đứng bâng khuâng.
   Cả không gian sẽ im lặng tần ngần.
   Cả thời gian sẽ chết tê hoan lạc.
   Xuân ra đời cành vàng trổ hoa ngọc.
   Gió thiên lương mát rợn cả trời mê.
   Xuân ra đời chín tầng cao diễm phúc.
-  Ngọc thiên chương sáng đẹp chiếu long lanh.
-  Tôi tôn thờ tâm tư đến ngây dại.
+  Ngọc thiên chương sáng đẹp chiếu lung linh.
+  Tôi tôn thờ tâm tư đến ngây dại,
   Sáng bao la bất tuyệt rầy hòa chan.
   Xin nghiêng mình đón mùa xuân Cứu Thế.
   Nguồn ân thiêng phước lạ đã tràn lan.
 }
 
 loiPhienKhucAlto = \lyrics {
-  Một mùa xuân mầu nhiệm, mầu nhiệm.
-  Rất diệu huyền và rất đỗi, rất đỗi anh hoa.
+  Một mùa xuân mầu nhiệm, mầu nhiệm
+  rất diệu huyền và rất đỗi, rất đỗi anh hoa.
   Xanh hơn liễu tinh tuyền hơn lý tưởng.
   Lời cẩm tự bút ly tao,
-  lời cẩm tự bút ly tao ngập ngượng.
+  Lời cẩm tự bút ly tao ngập ngượng.
   Trăng ân tình hoa đền ngự,
-  trăng ân tình hoa đền ngự như không.
+  Trăng ân tình hoa đền ngự như không.
   Nhạc thiên tiên của nước Nhược non Bồng,
-  nước Nhược non Bồng
+  nước Nhược non Bồng,
   Động Đào xưa vỡ lở.
   Một mùa xuân vạn thuở, vạn thuở.
   Khi ra đời là nghiên ngửa cả trăng sao.
-  Hoa lá sượng sần, chim muông bỡ ngỡ.
-  Gió trên cành sẽ rít lên, rít lên man rợ.
-  Từng lũ đứng bâng khuâng.
+  Hoa lá sượng sần,
+  Chim muông bỡ ngỡ.
+  rít lên man rợ,
+  từng lũ đứng bâng khuâng.
   Cả không gian sẽ im lặng tần ngần.
   Cả thời gian sẽ chết tê hoan lạc.
   Xuân ra đời cành vàng trổ hoa ngọc.
   Gió thiên lương mát rợn cả trời mê.
   Xuân ra đời chín tầng cao diễm phúc.
-  Ngọc thiên chương sáng đẹp chiếu long lanh.
-  Tôi tôn thờ tâm tư đến ngây dại.
+  Ngọc thiên chương sáng đẹp chiếu lung linh.
+  Tôi tôn thờ tâm tư đến ngây dại,
   Sáng bao la bất tuyệt rầy hòa chan.
   Xin nghiêng mình đón mùa xuân Cứu Thế.
   Nguồn ân thiêng phước lạ đã tràn lan.
@@ -443,30 +459,33 @@ loiPhienKhucAlto = \lyrics {
 
 loiPhienKhucBas = \lyrics {
   \repeat unfold 14 { _ }
-  Một mùa xuân mầu nhiệm, mầu nhiệm.
-  Thật diệu huyền và thật đỗi, rất đỗi anh hoa.
-  Đẹp mê ly hơn tất cả ngọc ngà
+  Một mùa xuân mầu nhiệm, mầu nhiệm
+  thật diệu huyền và thật đỗi, thật đỗi anh hoa.
+  Đẹp mê ly hơn tất cả ngọc ngà,
   màu xanh tinh nguyên hơn ý hướng.
   Lời cẩm tự bút ly tao
   dòng ly tao ngập ngượng.
-  Trăng ân tình hoa đền ngự và đền ngự bằng không.
+  Trăng ân tình hoa đền ngự, và đền ngự bằng không.
   Nhạc thiên tiên của cả nước non Bồng.
   Réo rắt Động Đào xưa vỡ lở.
+  \override Lyrics.LyricText.font-shape = #'italic
   \tweak extra-offset #'(-10 . 0)
   (Đàn) __ \repeat unfold 12 { _ }
+  \revert Lyrics.LyricText.font-shape
   Một mùa xuân vạn thuở, vạn thuở.
-  Khi ra đời là nghiêng ngửa cả trăng sao.
+  Khi ra đời là nghiêng ngửa cả trăng sao,
   Là rừng núi sông biển sẽ lao đao.
-  Hoa cỏ sượng sần, chim muông bỡ ngỡ
-  gào lên man rợ.
+  Hoa cỏ sượng sần,
+  Chim muông bỡ ngỡ
+  gào lên man rợ,
   Mây lưng trời từng lũ, từng lũ đứng bâng khuâng.
   Cả không gian sẽ im vắng tần ngần.
   Cả thời gian sẽ liệt tê hoan lạc.
   Xuân ra đời cành vàng trổ hoa ngọc.
   Làn thiên lương mát rợn cả cõi mê.
   Xuân ra đời nghìn cõi cao diễm phúc.
-  Ngọc thiên chương rạng đẹp dọi long lanh.
-  Tôi tôn thờ tâm tư đến ngây ngất.
+  Ngọc thiên chương rạng đẹp dọi lung linh.
+  Tôi tôn thờ tâm tư đến ngây ngất,
   Rạng bao la bất tuyệt thấy chứa chan.
   Xin cúi mình chào Chúa Xuân Độ Thế.
   Muôn ân thiêng phước cả đã lan tràn.
@@ -534,7 +553,7 @@ notBePhu =
   >>
   \layout {
     \override Lyrics.LyricSpace.minimum-distance = #1.5
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override LyricHyphen.minimum-distance = #1.5
     \context {
       \Staff \RemoveEmptyStaves
