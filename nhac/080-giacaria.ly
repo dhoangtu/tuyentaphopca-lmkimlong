@@ -10,12 +10,27 @@
   tagline = ##f
 }
 
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
+
 nhacIntroSop = \relative c'' {
   \key bf \major \time 2/4
   <bf g>8. <bf g>16 <a f>8 <g ef> |
   <a d,>2 |
-  <ef' bf>8. <ef a,>16 <d bf>8 <c a> |
-  <d g>2 |
+  <ef' bf>8. <ef c>16 <d bf>8 <c a> |
+  <d g,>2 |
   <<
     {
       \voiceOne
@@ -55,7 +70,7 @@ nhacPhienKhucSop = \relative c' {
   d2 |
   ef8 d g a |
   bf8. g16 \tuplet 3/2 { c8 c c } |
-  c4 \slashedGrace { bf8( } \tuplet 3/2 { c8) a a } |
+  c4 \slashedGrace { bf16( } \tuplet 3/2 { c8) a a } |
   d4 \tuplet 3/2 { bf8 g g } |
   a2 |
   g8. g16 g8 ef |
@@ -65,6 +80,9 @@ nhacPhienKhucSop = \relative c' {
   g4 r \break
   
   \time 3/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1)
   bf2 bf4 |
   c2 d4 |
   g,2. |
@@ -90,8 +108,8 @@ nhacPhienKhucSop = \relative c' {
   \time 2/4
   g4
   
-  \tuplet 3/2 { d8 ef d } | \break
-  g4
+  \notBePhu -2 \tuplet 3/2 { d8 ef d } | \break
+  \notBePhu -2 g4
   \once \override NoteColumn.X-offset = 2 <>
   \tuplet 3/2 { g8 g g } \bar "||"
   
@@ -108,7 +126,7 @@ nhacPhienKhucSop = \relative c' {
   \key bf \major
   \partial 4
   <>^\markup {
-    \halign #-0.5 \bold "Não bạt, trống chiêng vang lên giữa hương trầm nghi ngút"
+    \halign #-0.5 \bold "Não bạt, trống chiêng vang lên, giữa hương trầm nghi ngút"
   }
   r4 |
   r \tuplet 3/2 { g8 g g } |
@@ -191,6 +209,9 @@ nhacPhienKhucSop = \relative c' {
   \oneVoice
   
   \time 3/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1)
   g2 g4 |
   c2 c4 |
   c a4. d8 |
@@ -234,7 +255,7 @@ nhacPhienKhucSop = \relative c' {
       b16 a d8 g,
     }
   >>
-  \break
+  \bar "||" \break
   \oneVoice
   
   \partial 8 a16 b |
@@ -253,7 +274,7 @@ nhacPhienKhucSop = \relative c' {
   a4 r8 \bar "||"
   
   a16 b |
-  b4 r8 \bar "" \break
+  b4 r8 \bar "||" \break
   g |
   e4. g16 a |
   a4. g16 g |
@@ -274,11 +295,11 @@ nhacPhienKhucSop = \relative c' {
   a8. b16 \tuplet 3/2 { g8 g e } |
   fs4. fs16 fs |
   fs8. fs16 \tuplet 3/2 { b8 fs b } |
-  \slashedGrace { d,8 ( } e4) r8 \bar "||" \break
+  \slashedGrace { d,16 ( } e4) r8 \bar "||" \break
   b'16 a |
   b4. b16 g |
   a4 \tuplet 3/2 { e8 e e } |
-  \slashedGrace { e8 ( } fs4) a8. a16 |
+  \slashedGrace { e16 ( } fs4) a8. a16 |
   g4 \bar "||" \break
   
   r4 |
@@ -341,10 +362,10 @@ nhacPhienKhucSop = \relative c' {
   {
     {
       g2 ~ |
-      g4 d8. d16
+      g4 d'8. d16
     }
     {
-      g2 ~ |
+      g,2 ~ |
       g4 \bar "|."
     }
   }
@@ -355,7 +376,11 @@ nhacPhienKhucAlto = \relative c'' {
   \key bf \major \time 2/4
   r4 R2*13
   
-  \time 3/4 g2 g4 |
+  \time 3/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1)
+  g2 g4 |
   g2 f4 |
   ef2. |
   d2 c4 |
@@ -434,6 +459,9 @@ nhacPhienKhucAlto = \relative c'' {
   R2*18
   
   \time 3/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1)
   g2 f!4 |
   e2 e4 |
   a g4. fs8 |
@@ -457,10 +485,10 @@ nhacPhienKhucAlto = \relative c'' {
   e4. c8 b4 |
   c a e' |
   ds2. |
-  e2 e4 |
+  e2 d4 |
   e2 g4 |
-  fs e c |
-  b2 r4 |
+  fs e fs |
+  b,2 r4 |
   
   \time 2/4
   R2
@@ -516,6 +544,9 @@ nhacPhienKhucBas = \relative c' {
   r4 R2*13
   
   \time 3/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1)
   g2 f4 |
   ef2 d4 |
   ef2. |
@@ -595,6 +626,9 @@ nhacPhienKhucBas = \relative c' {
   R2*18
   
   \time 3/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1)
   R2.*3
   c'4 b a |
   g2 r4 |
@@ -680,23 +714,25 @@ loiPhienKhucSop = \lyrics {
   I -- sa -- ve là vợ héo hắt trong tuổi già chưa một lần sinh nở.
   
   \set stanza = " Ca đoàn:"
-  Nhìn mùa đông lá rụng tiếc mùa xuân không hoa.
-  Là người công chính luật Chúa luôn trọn vẹn
+  Nhìn mùa đông lá rụng, tiếc mùa xuân không hoa.
+  là người công chính, luật Chúa luôn trọn vẹn
   không trách được điểm nào.
   Đêm đêm nhìn trăng sao hướng về Đức Chúa giơ tay cầu nguyện.
-  (Đàn...) _ _ _
+  \override Lyrics.LyricText.font-shape = #'italic
+  (Đàn) _ _ _
+  \revert Lyrics.LyricText.font-shape
   
   \set stanza = "Người kể:"
   Gia -- ca -- ri -- a ngày ấy làm lễ tiến hương
-  trong cung thánh đền thờ.
+  trong cung thánh đền thờ,
   Dân chúng tụ tập ngoài sân đang cầu nguyện chực chờ.
   
-  Giật mình hoảng hốt,
+  giật mình hoảng hốt,
   giật mình hoảng hốt,
   giật mình hoảng hốt
   vì đây một thiên sứ đã hiện ra trong ánh sáng chói lòa,
   trong ánh sáng chói lòa.
-  Đứng uy nghi, đứng uy nghi va đây là lời thiên sứ phán:
+  Đứng uy nghi, đứng uy nghi và đây là lời thiên sứ phán:
   Gia -- ca -- ri -- a ơi! Đừng sợ.
   I -- sa -- ve người hiền thê thánh thiện
   sẽ sinh hạ một trẻ nam, ngươi sẽ gọi tên nó là Gio -- an
@@ -704,18 +740,18 @@ loiPhienKhucSop = \lyrics {
   sẽ reo mừng vì con trẻ sinh ra.
   
   \set stanza = "Người kể:"
-  Nó sẽ nên cao quý trước mặt Chúa là Cha.
-  Rượu và chất men không khi nào nếm tới.
+  Nó sẽ nên cao quý trước mặt Chúa là Cha,
+  Rượu và chất men không khi nào nếm tới,
   Từ lòng mẹ ơn Thánh Thần vời vợi.
   Nó dẫn dắt nhiều con cái Ích -- diên
   về với Chúa là Thiên Chúa bình yên.
   
   \set stanza = " Ca đoàn:"
   Dọn đường Chúa, nó bước đi dõng dạc.
-  Giống Ê -- li xưa đầy thần khí và dũng lực.
-  Để hòa giải tổ phụ với cháu con.
-  Và hoán cải ngỗ nghịch những tâm hồn.
-  Trờ về với lương tri và công chính.
+  Giống Ê -- li xưa đầy thần trí và dũng lực,
+  Để hòa giải tổ phụ với cháu con,
+  Và hoán cải ngỗ nghịch những tâm hồn
+  Trở về với lương tri và công chính,
   Dọn cho Chúa một đoàn dân hoàn chỉnh.
   
   \set stanza = "Người kể:"
@@ -723,8 +759,9 @@ loiPhienKhucSop = \lyrics {
   Gia -- ca -- ri -- a đáp lại rất chân tình:
   
   \set stanza = "Giacaria:"
-  Dựa vào đâu để tin lời Ngài nói, thưa thiên sứ thân tôi đà già cỗi
-  bà nhà tôi lại cũng đà cao niên?
+  Dựa vào đâu để tin lời Ngài nói,
+  thưa thiên sứ thân tôi đã già cỗi,
+  Bà nhà tôi lại cũng đã cao niên?
   
   \set stanza = "  (Người kể)"
   Thiên sứ nói:
@@ -733,8 +770,8 @@ loiPhienKhucSop = \lyrics {
   Ta là Ga -- bri -- el hằng chầu hầu trước tòa Thiên Chúa,
   Chúa sai ta nói rõ ông biết và loan báo tin mừng để ông hay.
   Nhưng Gia -- ca -- ri -- a ơi
-  kể từ này ông bị câm sẽ không còn nói được cho đến ngày
-  mọi điều sau trước sẽ xảy ra vì ông đã không tin lời ta
+  kể từ này ông bị câm, sẽ không còn nói được cho đến ngày
+  mọi điều sau trước sẽ xẩy ra vì ông đã không tin lời ta,
   lời thực hiện vào đúng thời đúng buổi.
   
   \set stanza = "Người kể:"
@@ -747,33 +784,33 @@ loiPhienKhucSop = \lyrics {
   
   \set stanza = "Người kể:"
   Họ ngạc nhiên đến sững sờ thảng thốt và cuối cùng
-  Gia -- ca -- ri -- a xuất hiện miệng câm như hến
+  Gia -- ca -- ri -- a xuất hiện miệng câm như hến,
   hai tay chỉ rẻo tứ tung.
   
   \set stanza = " Ca đoàn:"
   Dân chúng giờ đây đã hiểu chừng.
-  Một điềm lạ đã xảy ra nơi cung thánh.
+  Một điềm lạ đã xẩy ra nơi cung thánh.
   
   \set stanza = "Người kể:"
   Sau khi thánh vụ hoàn tất rồi ông về nhà
-  và vợ ông mang thai
-  bà ẩn mình trọn thời gian năm tháng và nói rằng:
+  và vợ ông mang thai,
+  Bà ẩn mình trọn thời gian năm tháng và nói rằng:
   
   \set stanza = " Ca đoàn:"
-  Chúa đã thương thăm viếng, Chúa đã thương thăm viếng.
+  Chúa đã thương thăm viếng, Chúa đã thương thăm viếng
   Chúa đã làm cho tôi, Chúa đã làm cho tôi hết khổ nhục,
   hết khổ nhục trước mặt muôn người
-  Chúa đã...
+  Chúa đã
   người.
 }
 
 loiPhienKhucAlto = \lyrics {
-  Nhìn mùa đông là rụng tiếc mùa xuân không hoa.
-  Là người công chính luật Chúa luôn trọn vẹn không trách được điểm nào.
+  Nhìn mùa đông là rụng, tiếc mùa xuân không hoa.
+  là người công chính, luật Chúa luôn trọn vẹn không trách được điểm nào.
   Đêm đêm nhìn trăng sao hướng về Đức Chúa
   giơ tay cầu nguyện.
   
-  Giật mình hoảng hồn
+  giật mình hoảng hồn
   giật mình hoảng hốt
   giật mình hoảng hồn vì đây một thiên sứ đã hiện ra,
   đã hiện ra,
@@ -788,11 +825,11 @@ loiPhienKhucAlto = \lyrics {
   trong muôn vàn thế kỷ sẽ reo mừng,
   sẽ reo mừng vì con trẻ sinh ra.
   
-  Dọn đương Chúa, nó bước đi dõng dạc.
-  Giống Ê -- li xưa đầy thần khí và dũng lực.
+  Dọn đường Chúa, nó bước đi dõng dạc.
+  Giống Ê -- li xưa đầy thần trí và dũng lực,
   Để hòa giải tổ phụ với cháu con.
-  Và hoán cải ngỗ nghịch những tâm hồn.
-  Trở về với lương tri và công chính.
+  Và hoán cải ngỗ nghịch những tâm hồn
+  Trở về với lương tri và công chính,
   Dọn cho Chúa một đoàn dân hoàn chỉnh.
   
   Sao Gia -- ca -- ri -- a ở lại ở mãi trong đền thờ,
@@ -800,52 +837,52 @@ loiPhienKhucAlto = \lyrics {
   chúng ta phải đợi chờ đến bao giờ.
   
   Dân chúng giờ đây đã hiểu chừng.
-  Một điềm lạ đã xảy ra nơi cung thánh.
+  Một điềm lạ đã xẩy ra nơi cung thánh.
   
-  Chúa đã thương thăm viếng, Chúa đã thương thăm viếng.
+  Chúa đã thương thăm viếng, Chúa đã thương thăm viếng
   Chúa đã làm cho tôi, Chúa đã làm cho tôi hết khổ nhục,
   hết khổ nhục trước mặt muôn người
-  Chúa đã...
+  Chúa đã
   người.
 }
 
 loiPhienKhucBas = \lyrics {
-  Nhìn mùa đông là rụng tiếc mùa xuân không hoa.
+  Nhìn mùa đông là rụng, tiếc mùa xuân không hoa.
   Cả hai ông bà sống công bình rất là trọn vẹn không trách được điểm nào.
   Đêm đêm nhìn trăng sao vọng về Đức Chúa giơ tay cầu nguyện.
   
-  \set stanza = "Ca đoàn:"
   Gia -- ca -- ri -- a, Gia -- ca -- ri -- a,
-  Gia -- ca -- ri -- a hoảng hồn, hoảng hồn vì đây
+  Gia -- ca -- ri -- a hoảng hồn, hoảng hồn Vì đây
   một thiên sứ đã hiện ra, đã hiện ra trong ánh sáng chói lòa,
-  trong ánh sáng chói lòa.
+  trong ánh sáng chói lòa,
   Đứng uy nghi bên phải bàn hương án
   vì đây, bời đây là lời thiên sứ phán,
   bởi đây lời thiên sứ phán:
   Vì lời ngươi nguyện cầu đã được chấp nhận rồi,
-  người hiền thê thánh thiện sẽ sinh, sinh hạ một trẻ nam
-  tên nó là Gio -- an.
-  Lòng ngươi hoan hỉ và nhiều người trong muôn vàn thập kỷ
+  người hiền thê thánh thiện sẽ sinh, sinh hạ một trẻ nam,
+  tên nó là Gio -- an,
+  lòng ngươi hoan hỉ và nhiều người trong muôn vàn thập kỷ
   hò reo con trẻ.
   Sẽ reo mừng, sẽ reo mừng trẻ sinh ra.
   
-  Bước đi dõng dạc giống Ê -- li xưa và dũng lực.
-  Để giải hòa tổ phụ với cháu con và hòa giải những tâm hồn.
-  Trở về với lương tri và công bình.
+  Bước đi dõng dạc
+  Giống Ê -- li xưa và dũng lực,
+  Để giải hòa tổ phụ với cháu con và hòa giải những tâm hồn
+  Trở về với lương tri và công bình,
   Dọn cho Ngài một dân hoàn chỉnh.
   
   Sao Gia -- ca -- ri -- a, sao Gia -- ca -- ri -- a ở mãi trong đền thờ,
   ở lại trong đền thờ giờ ta phải trông ngóng đến bao giờ.
   
   Dân chúng giờ đây đã hiểu chừng.
-  Một điềm lạ đã xảy ra nơi cung thánh.
+  Một điềm lạ đã xẩy ra nơi cung thánh.
   
   Ngài đã thương thăm liền,
-  Ngài đã thương thăm viếng.
+  Ngài đã thương thăm viếng,
   Qua việc này Ngài đã làm cho tôi,
   Ngài đã làm cho tôi hết khổ nhục,
   hết khổ nhục trước mặt muôn người.
-  Ngài đã...
+  Ngài đã
   người.
 }
 
@@ -871,27 +908,6 @@ loiPhienKhucBas = \lyrics {
                              (padding . 2))
   page-count = 10
 }
-
-TongNhip = {
-  \key g \major \time 2/4
-  \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/4)
-}
-
-% Đổi kích thước nốt cho bè phụ
-notBePhu =
-#(define-music-function (font-size music) (number? ly:music?)
-   (for-some-music
-     (lambda (m)
-       (if (music-is-of-type? m 'rhythmic-event)
-           (begin
-             (set! (ly:music-property m 'tweaks)
-                   (cons `(font-size . ,font-size)
-                         (ly:music-property m 'tweaks)))
-             #t)
-           #f))
-     music)
-   music)
 
 \score {
   \new ChoirStaff <<

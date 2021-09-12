@@ -4,8 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Vạn Vật Hoan Ca" }
-  composer = "Lời kinh: Thánh Phanxicô"
-  poet = "Thơ dịch: Lm. Xuân Ly Băng"
+  poet = "Lời kinh: Thánh Phanxicô"
+  composer = "Thơ dịch: Lm. Xuân Ly Băng"
   arranger = "Lm. Kim Long"
   tagline = ##f
 }
@@ -18,14 +18,14 @@ nhacIntroSop = \relative c'' {
   <e c g>4. <c a f>8 |
   <d a f>4 \tuplet 3/2 { <b g f d>8 <b g f d> <b g f d> } |
   <c g e>2 ~ |
-  <c g e>4 \bar ""
+  <c g e>4 \bar "||"
 }
 
 nhacIntroBas = \relative c {
   \key c \major \time 2/4
   c8. c16 |
-  e2 |
-  \tuplet 3/2 { g8 g g } d4 |
+  g'2 |
+  \tuplet 3/2 { g,8 g g } d'4 |
   \tuplet 3/2 { c8 c c } f4 |
   \tuplet 3/2 { d8 d d } g8 g, |
   c4 \tuplet 3/2 { c8 e g } |
@@ -41,16 +41,16 @@ nhacPhienKhucSolo = \relative c'' {
   R2.*15
   
   \time 2/4
-  R2*27
+  R2*26
   \key f \major
-  c4. a16 (g) |
+  c4. (a16 g) |
   f8. (e16 f8 g) |
   c, c r a' |
-  \slashedGrace { a8 ( } g2 ~) |
+  \slashedGrace { a16 ( } g2 ~) |
   g4 r |
   R2*2
-  c,4. e16 (f) |
-  a8 g r \slashedGrace { a8 ( } g) |
+  c,4. (e16 f) |
+  a8 g r \slashedGrace { a16 ( } g8) |
   c4 c8 c |
   ef4. c16 (g) |
   g2 |
@@ -109,7 +109,7 @@ nhacPhienKhucSop = \relative c'' {
   c2 ~ |
   c4 b8. b16 |
   c4 a16 (c) a (g) |
-  \slashedGrace { e8 ( } f4.) a8 |
+  \slashedGrace { e16 ( } f4.) a8 |
   g4 \tuplet 3/2 { e'8 e e } |
   f4 \tuplet 3/2 { d8 d d } |
   e4. c8 |
@@ -122,7 +122,7 @@ nhacPhienKhucSop = \relative c'' {
   g2 |
   c8 b4 d8 |
   c2 ~ |
-  c4 \bar "|." \break
+  c4 \bar "||" \break
   
   \partial 4
   <>^\markup {
@@ -183,18 +183,17 @@ nhacPhienKhucSop = \relative c'' {
     d8 c c8. b16 |
     d8 d r d |
     d8. c16 e8 e |
+    r d d4 ~ |
   }
   \alternative
   {
     {
-      r d d4 ~ |
       d8 c4 a8 |
       b2 |
       c4. g8
     }
     {
-      r8 d d4 ~ |
-      d8 c4 b8 |
+      d'8 \repeatTie c4 b8 |
       c2 ~ |
       c ~ |
       c8 \fermata \bar "||" \break
@@ -210,7 +209,7 @@ nhacPhienKhucSop = \relative c'' {
   r4. |
   \repeat volta 2
   {
-    r8 c' r c |
+    r8 c r c |
     d b! c4 ~ |
     c r |
     r8 d16 c ef8 c |
@@ -262,7 +261,7 @@ nhacPhienKhucSop = \relative c'' {
   e,4. f8 e a |
   a4 r8 g e'8. c16 |
   d8 d r g, d'8. b16 |
-  c8 c4. r4 \bar "|." \break
+  c8 c4. r4 \bar "||" \break
   
   \key f \major \time 2/4
   \set Timing.beatStructure = #'(1 1)
@@ -321,7 +320,7 @@ nhacPhienKhucSop = \relative c'' {
   r8 c r bf |
   c4 g8 c |
   a (g) e (f) |
-  \slashedGrace { a8 ( } g2 ~ ) |
+  \slashedGrace { a16 ( } g2 ~ ) |
   g8 c g g |
   c4 c8 a |
   c a16 (g) r8 e16 (f) |
@@ -415,7 +414,7 @@ nhacPhienKhucSop = \relative c'' {
     d2 |
     d8. b16 b8 c |
     c4. d8 |
-    b b4 a16 (g) |
+    g, g4 a16 (g) |
     e2 ~ |
     e4 c8 c |
     f4 \tuplet 3/2 { e8 e e } |
@@ -513,7 +512,6 @@ nhacPhienKhucAlto = \relative c'' {
   g4 fs8 fs |
   g2 |
   R2
-  r4 r8 a |
   e4 d8 (f) |
   e4 e8. e16 |
   f8 f r f |
@@ -780,7 +778,6 @@ nhacPhienKhucBas = \relative c' {
   e4 d8 d |
   g2 |
   R2
-  r4 r8 f |
   g4 g8 <g g,> |
   <g c,>4 <g c,>8. <g c,>16 |
   <a f>8 <a f> r <af f> |
@@ -794,13 +791,13 @@ nhacPhienKhucBas = \relative c' {
   f4. f8 |
   g2 |
   r8 ef16 ef f8 r |
-  r af16 af c8 d16 c |
+  r g16 g c8 d16 c |
   b!8 r r c16 c |
   f,8 f g4 |
   r8 g16 g c,8 c |
   f4 ef |
   f8. f16 f8 g |
-  af (f) g,4 |
+  af (g) g,4 |
   c2 ~ |
   c8
   \once \override NoteColumn.X-offset = 2 <>
@@ -862,7 +859,7 @@ nhacPhienKhucBas = \relative c' {
   R2*5
   r8 e r g |
   c,4 c'8 c |
-  a (g a) bf |
+  a ([g a]) b! |
   c2 ~ |
   c4 r |
   R2
@@ -910,7 +907,7 @@ nhacPhienKhucBas = \relative c' {
   d4. d8 |
   c2 |
   r8 bf c bf |
-  f'4 e8 g, |
+  f'4 g8 g, |
   c2 ~ |
   c4 r
   
@@ -957,7 +954,7 @@ nhacPhienKhucBas = \relative c' {
   g'8. d16 c8 d |
   g,2 |
   c8. b16 a8 c |
-  f4 c8 (f) |
+  f4 e8 (f) |
   g4. c8 |
   b4. c8 |
   d4 b8 (g) |
@@ -986,18 +983,17 @@ nhacPhienKhucBas = \relative c' {
   c8. g16 f8 a |
   c,2 ~ |
   c8 a \tuplet 3/2 { e'8 e e } |
+  <a d,>4 <b g,> |
   <<
     {
       \voiceOne
-      a4 b |
       g g8 g |
       a4 \tuplet 3/2 { a8 c a } |
       g4
     }
     \new Voice = "splitpart" {
 	    \voiceTwo
-	    d4 g, |
-	    c2 ~ |
+	    c,2 ~ |
 	    c ~ |
 	    c4
     }
@@ -1007,13 +1003,14 @@ nhacPhienKhucBas = \relative c' {
 % Lời phiên khúc
 loiPhienKhucSolo = \lyrics {
   \set stanza = " Solo:"
-  Hỡi (ơ) Mẹ hiền (mà) Trái Đất.
-  Mẹ (ơ) dưỡng nuôi ôm ấp
+  "Hỡi (ơ)" Mẹ hiền (mà) Trái Đất.
+  "Mẹ (ơ)" dưỡng nuôi ôm ấp
   Mẹ chở cả loài người.
-  Mẹ sinh hoa (ơ) đồng nội tươi đẹp lắm (ơ) Mẹ ơi!
+  Mẹ sinh hoa (ơ) đồng nội tươi đẹp lắm (ơ) Mẹ ơi,
   Sáng danh Chúa Mẹ ơi, sáng danh Chúa (ơ) Mẹ ơi,
   sáng danh Chúa (ơ) Mẹ ơi!
   
+  \set stanza = "Solo:"
   Hỡi Tử Thần, chị Chết.
   Ai người trên dương thế thoát khỏi bàn tay chị.
 }
@@ -1026,26 +1023,28 @@ loiPhienKhucSop = \lyrics {
   vinh danh muôn đời.
   Kêu tên Chúa Cả, kêu tên Chúa Cả
   ai người xứng danh, ai người xứng danh?
-  Tôn huynh Mặt Trời hỡi tôn huynh Mặt Trời
-  sáng danh Chúa, Chúa ơi!
-  Mỗi ngày anh sáng soi, anh chiếu rạng huy hoàng,
-  anh chiếu rạng huy hoàng sáng đẹp khắp trần gian.
+  Tôn huynh Mặt Trời hỡi tôn huynh Mặt Trời,
+  Sáng danh Chúa, Chúa ơi!
+  Mỗi ngày anh sáng soi,
+  Anh chiếu rạng huy hoàng,
+  anh chiếu rạng huy hoàng, sáng đẹp khắp trần gian.
   Anh mang uy danh Chúa,
-  anh mang uy danh Chúa khắp cõi trời cao sang.
+  Anh mang uy danh Chúa khắp cõi trời cao sang.
   
   sang.
   
   Hỡi chị Trăng, chị Sao
   sáng danh Chúa biết bao.
   Trăng Sao kiều diễm quá, Trăng Sao kiều diễm quá
-  lung linh trên trời cao. Hỡi chị...
-  lung linh trên trời cao.
+  lung linh trên trời cao. Hỡi chị
+  _ trên trời cao.
   
   Hỡi anh Gió, chị Mây
-  sáng danh Chúa nhân thay trời cao
-  gió mây chuyển khiến trời đất vần xoay,
+  sáng danh Chúa nhân thay,
+  trời cao gió mây chuyển khiến trời đất vần xoay,
   khiến trời đất vần xoay
-  bảo toàn loài Chúa dựng anh chị giúp mỗi ngày.
+  bảo toàn loài Chúa dựng,
+  anh chị giúp mỗi ngày.
   ngày.
   
   Chị Nước mênh mông, hỡi chị Nước mênh mông
@@ -1054,45 +1053,48 @@ loiPhienKhucSop = \lyrics {
   Chị Nước mênh mông, chị trong ngần quý giá
   lợi ích thật vô song, lợi ích thật vô song.
   
-  Hỡi anh Lửa rạng ngời sáng danh Chúa, Chúa ơi!
+  Hỡi anh Lửa rạng ngời,
+  Sáng danh Chúa, Chúa ơi!
   Anh dẹp tan bóng tối,
   anh dẹp tan bóng tối,
   anh sưởi ấm bao người.
   Tinh thần anh bất khuất,
   tinh thần anh bất khuất,
-  anh đẹp rền vạn đời người người cùng ngưỡng mộ.
+  anh đẹp đến vạn đời người người cùng ngưỡng mộ.
   Hỡi anh Lửa của tôi ơi, hỡi anh Lửa của tôi ơi!
-  
-  (Đàn...) __ _ _ _ _ _ _ _
-  
-  A, a ơi sáng danh Chúa, Chúa ơi!
+  \override Lyrics.LyricText.font-shape = #'italic
+  (Đàn) __ _ _ _ _ _ _ _
+  \revert Lyrics.LyricText.font-shape
+  A, a ơi, sáng danh Chúa, Chúa ơi!
   Mẹ chở cả loài người.
-  A, a ơi, a ơi.
-  A, a ơi Mẹ dưỡng sinh ngũ cốc
-  sáng danh Mẹ ơi, sáng danh Chúa (ơ) Mẹ ơi,
-  sáng danh a, a ơi.
+  a, a ơi, a ơi.
+  a, a ơi, Mẹ dưỡng sinh ngũ cốc
+  sáng danh, Mẹ ơi, sáng danh Chúa (ơ) Mẹ ơi,
+  Sáng danh a, a ơi.
   
-  Người tha thứ cho người (mà) sáng danh Chúa, Chúa ơi!
+  Người tha thứ cho người (mà) sáng danh Chúa, Chúa ơi,
   Chỉ vì lòng mến Chúa đau khổ coi như chơi.
   Phúc cho người trung kiên vui lẽ sống bình yên,
   vui lẽ sống bình yên.
   Được Chúa muôn cao trọng thưởng,
   trọng thưởng sáng chói, sáng chói vạn triều thiên.
   
-  Sáng danh Chúa, Chúa ơi!
+  Sáng danh Chúa, Chúa ơi.
   Ai người trên dương thế thoát khỏi tay chị.
-  (Đàn...) _ _
+  \override Lyrics.LyricText.font-shape = #'italic
+  (Đàn) _ _
+  \revert Lyrics.LyricText.font-shape
   Phúc cho ai giờ vĩnh quyết trọn ý Cha trên trời.
   Không bị hại bởi sự chết đời đời.
   
   Hỡi muôn loài muôn vật,
   hỡi muôn loài muôn vật
-  ca tụng Đức Chúa Trời
+  ca tụng Đức Chúa Trời,
   nào hãy ca tụng Đức Chúa Trời.
-  Lời sáng tôn danh đức, sáng danh tôn đức.
+  Lời sáng danh tôn đức, sáng danh tôn đức,
   Câu cảm tạ trên môi, Chúa ơi!
-  Câu cảm tạ trên môi suốt cuộc đời khiêm hạ.
-  Thờ phượng Chúa, thờ phượng một Chúa Ba Ngôi.
+  Câu cảm tạ trên môi suốt cuộc đời khiêm hạ
+  thờ phượng Chúa, thờ phượng một Chúa Ba Ngôi.
   
   Thờ phượng Chúa, thờ phượng một Chúa Ba Ngôi.
   
@@ -1107,20 +1109,21 @@ loiPhienKhucAlto = \lyrics {
   vinh danh muôn đời.
   Kêu tên Chúa Cả, kêu tên Chúa Cả
   ai người xứng danh, ai người xứng danh?
-  Tôn huynh Mặt Trời hỡi tôn huynh Mặt Trời
-  sáng danh Chúa, Chúa ơi!
-  Mỗi ngày anh sáng soi, anh chiếu rạng huy hoàng,
+  Tôn huynh Mặt Trời hỡi tôn huynh Mặt Trời,
+  Sáng danh Chúa, Chúa ơi!
+  Mỗi ngày anh sáng soi,
+  Anh chiếu rạng huy hoàng,
   anh chiếu rạng huy hoàng sáng đẹp khắp trần gian.
   Anh mang uy danh Chúa,
-  anh mang uy danh Chúa khắp cõi trời cao sang.
+  Anh mang uy danh Chúa khắp cõi trời cao sang.
   
   sang.
   
   Hỡi chị Trăng, chị Sao
   sáng danh Chúa biết bao.
-  Kiều diễm quá, yêu kiều lạ
+  kiều diễm quá, yêu kiều lạ
   lung linh nền trời cao.
-  lung linh trên cao. lung linh, lung linh trên cao.
+  linh trên cao. lung linh, lung linh trên cao.
   
   Hỡi anh Gió, chị Mây
   sáng danh Chúa nhân thay tầng trời cao
@@ -1135,24 +1138,25 @@ loiPhienKhucAlto = \lyrics {
   Chị Nước mênh mông, chị trong ngần quý giá
   lợi ích thật vô song, lợi ích thật vô song.
   
-  Hỡi anh Lửa rạng ngời, chói ngời sáng danh Chúa, Chúa ơi!
+  Hỡi anh Lửa rạng ngời, chói ngời,
+  Sáng danh Chúa, Chúa ơi!
   Anh dẹp tan bóng tối,
   anh dẹp tan bóng tối,
   anh sưởi ấm bao người.
   Tinh thần anh bất khuất,
   tinh thần anh bất khuất,
-  anh đẹp rền vạn đời người người cùng ngưỡng mộ.
+  anh đẹp đến vạn đời người người cùng ngưỡng mộ.
   Hỡi anh Lửa của tôi ơi, hỡi anh Lửa của tôi ơi!
   
-  A, a ơi sáng danh Chúa, Chúa ơi!
+  A, a ơi, sáng danh Chúa, Chúa ơi!
   Mẹ chở cả loài người.
-  A, a ơi, a ơi.
-  A, a ơi Mẹ dưỡng sinh ngũ cốc
-  sáng danh Mẹ ơi, sáng danh Chúa Mẹ ơi,
-  sáng danh a, a ơi.
+  a, a ơi, a ơi.
+  a, a ơi, Mẹ dưỡng sinh ngũ cốc
+  sáng danh, Mẹ ơi, sáng danh Chúa Mẹ ơi,
+  Sáng danh a, a ơi.
   
-  Người tha thứ cho người, Chúa ơi!
-  Chỉ vì lòng mến Chúa, Chúa ơi,
+  Người tha thứ cho người, Chúa ơi,
+  chỉ vì lòng mến Chúa, Chúa ơi,
   Chúa ơi coi đau khổ như chơi.
   Phúc cho người trung kiên,
   trung kiên vui lễ sống bình yên,
@@ -1161,14 +1165,14 @@ loiPhienKhucAlto = \lyrics {
   đây Chúa trọng thưởng triều thiên rạng chói,
   sáng chói vạn triều thiên.
   
-  Sáng danh Chúa, Chúa ơi!
-  Ai người trên dương thế thoát khỏi tay chị.
+  Sáng danh Chúa, Chúa ơi.
+  Ai người trên dương trần thoát khỏi tay chị.
   Phúc cho ai giờ vĩnh quyết trọn ý Cha trên trời.
   Không bị hại bởi sự chết đời đời.
   
   Hỡi muôn loài muôn vật,
   hỡi muôn loài muôn vật
-  ca tụng Đức Chúa Trời
+  ca tụng Đức Chúa Trời,
   nào hãy ca tụng ca tụng Chúa Trời
   Lời sáng danh tôn đức, tôn đức, sáng danh tôn đức.
   Câu cảm tạ trên môi Chúa ơi
@@ -1182,31 +1186,33 @@ loiPhienKhucAlto = \lyrics {
 }
 
 loiPhienKhucBas = \lyrics {
-  Chúa muôn cao quyền năng
+  Chúa muôn cao, quyền năng,
   Ngài thánh thiện.
   Vạn lời kinh ân tình chỉ ca tụng mà thôi.
   Vinh danh tôn đức, vinh danh tôn đức muôn đời,
   vinh danh muôn đời.
-  Kêu tên Vua Cả, kêu tên Vua Cả lừng danh
-  ai người xúng danh lừng danh?
+  Kêu tên Vua Cả, kêu tên Vua Cả lừng danh,
+  ai người xứng danh, lừng danh?
   
   Hỡi tôn "huynh (i a)" Mặt Trời,
-  hỡi tôn huynh hỡi Mặt Trời vanh danh của Chúa ơi!
+  hỡi tôn huynh
+  Hỡi Mặt Trời vanh danh của Chúa ơi,
   Muôn loài Chúa tạo thành
-  ánh sáng "soi (i a)" mỗi ngày,
+  Ánh sáng "soi (i a)" mỗi ngày,
   rạng soi huy hoàng,
-  rạng soi huy hoàng sáng đẹp cả trần gian.
+  rạng soi huy hoàng, sáng đẹp cả trần gian.
   Anh mang uy danh Ngài
-  này anh mang uy danh Chúa rạng soi tới trời cao sang.
-  Hỡi tôn...
+  này Anh mang uy danh Chúa rạng soi tới trời cao sang.
+  Hỡi tôn
   sang.
   
   Hỡi chị Trăng, chị Sao sáng danh Ngài là bao.
-  Yêu kiều lạ, yêu kiều lạ
+  yêu kiều lạ, yêu kiều lạ
   lung linh nền trời cao.
-  lung linh trên trời cao, lung linh, lung linh trên cao.
+  linh trên trời cao, lung linh, lung linh trên cao.
   
-  Hỡi anh Gió, chị Mây sáng danh Chúa nhân thay,
+  Hỡi anh Gió, chị Mây,
+  Sáng danh Chúa nhân thay,
   nhân thay tầng trời cao,
   tầng trời cao gió mây chuyển khiến đất trời vần xoay,
   khiến đất trời vần xoay nhờ chị và nhờ anh giúp mỗi ngày.
@@ -1220,7 +1226,8 @@ loiPhienKhucBas = \lyrics {
   ôi chị trong ngần ích lợi vô song,
   ích lợi rất vô song.
   
-  Hỡi anh lửa rạng ngời, rạng ngời sáng danh Chúa người ơi!
+  Hỡi anh lửa rạng ngời, rạng ngời,
+  Sáng danh Chúa, người ơi!
   Anh dẹp tan bóng tối,
   anh dẹp tan bóng tối sưởi ấm bao người.
   Tinh thần anh bất khuất,
@@ -1229,15 +1236,15 @@ loiPhienKhucBas = \lyrics {
   Hỡi anh Lửa của tôi ơi,
   hỡi anh Lửa của tôi ơi!
   
-  A, a, ơi vang danh Cả Chúa ơi!
+  A, a ơi, vang danh Cả Chúa ơi!
   Mẹ chở cả loài người.
-  A, a ơi, a ơi.
-  A, a ơi Mẹ dưỡng sinh thảo mộc
-  rạng danh Mẹ ơi, sáng danh (ơ) Mẹ ơi,
-  rạng danh a, a ơi!
+  a, a ơi, a ơi.
+  a, a ơi, Mẹ dưỡng sinh thảo mộc
+  rạng danh, Mẹ ơi, sáng danh (ơ) Mẹ ơi,
+  Rạng danh a, a ơi!
   
-  Người tha thứ cho người (mà) người ơi (ơ) người ơi!
-  Chỉ vì lòng mến Chúa đau khổ coi như chơi Chúa ơi!
+  Người tha thứ cho người (mà) người ơi (ơ) người ơi,
+  Chỉ vì lòng mến Chúa đau khổ coi như chơi, Chúa ơi.
   Phúc cho người trung kiên
   người trung kiên hưởng bình yên sống vui,
   sống vui,
@@ -1246,7 +1253,7 @@ loiPhienKhucBas = \lyrics {
   muôn cao trọng thưởng, trọng thưởng
   dọi lên rạng chói ánh triều thiên.
   
-  Sáng danh Chúa người ơi!
+  Sáng danh Chúa người ơi.
   Ai người trên dương trần thoát khỏi bàn tay chị.
   Khốn cho ai tử biệt lệ thống hối chẳng rơi.
   Người ấy không bị hại bởi chết đời đời.
@@ -1255,14 +1262,15 @@ loiPhienKhucBas = \lyrics {
   hỡi muôn loài muôn vật, hỡi muôn loài ca chúc mọi nơi
   ca tụng, ca tụng Chúa Trời.
   Lời sáng danh tôn đức
-  chân thực rạng danh chân thực.
+  chân thực, rạng danh chân thực.
   Câu cảm tạ trên môi, cảm tạ trên môi
   trọn đời phục hạ.
   Thờ phượng Chúa cùng thờ phượng Vua Cả Ba Ngôi.
   Suốt cuộc đời khiêm hạ
   cùng thờ phượng Vua Cả Ba Ngôi.
-  Này hỡi muôn loài muôn...
+  Này hỡi muôn loài muôn
   hạ cùng thờ phượng Vua Cả Ba Ngôi
+  \override Lyrics.LyricText.font-shape = #'italic
   (thờ phượng Chúa, Thiên Chúa Ba Ngôi).
 }
 
@@ -1356,9 +1364,7 @@ notBePhu =
     >>
   >>
   \layout {
-    %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1.2
-    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override Lyrics.LyricSpace.minimum-distance = #0.6
     \override LyricHyphen.minimum-distance = #1
     \override Staff.VerticalAxisGroup.staff-staff-spacing =
         #'((basic-distance . 8)

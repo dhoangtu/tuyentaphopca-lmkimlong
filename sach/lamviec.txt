@@ -1,9 +1,33 @@
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
+   
+\mergeDifferentlyHeadedOn
+\mergeDifferentlyDottedOn
+
+\once \override NoteColumn.force-hshift = #1.7
+
+\mergeDifferentlyHeadedOn
+\override NoteColumn.ignore-collision = ##t
+
 \compressEmptyMeasures
 ^\markup { \rest #"4" }
 
 \mark "Tận"
 
 \mark \markup { "Tận" }
+<>^\markup { \halign #-2 \fontsize #2 \bold "Tận" }
 
 \change Staff = "alto"
 

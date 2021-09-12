@@ -4,8 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Lạy Thiên Chúa" }
-  composer = "Kinh Te Deum"
-  poet = "Bản dịch: CGKPV"
+  poet = "Kinh Te Deum"
+  composer = "Bản dịch: CGKPV"
   arranger = "Lm. Kim Long"
   tagline = ##f
 }
@@ -24,7 +24,7 @@ nhacIntroBas = \relative c' {
   r4 |
   <c c,>8 <c c,> r4 |
   r <a a,>8. <af af,>16 |
-  <g g,>8 <g g,> <g b,> <d' d,> |
+  <g g,>8 <g g,> <b b,> <d d,> |
   <g g,>4
 }
 
@@ -101,7 +101,7 @@ nhacPhienKhucSop = \relative c'' {
   g4. e'8 |
   d a4 b8 |
   c2 |
-  R2*5
+  R2*5 \bar "||"
   
   \key ef \major
   r4 r8 c16 af |
@@ -149,7 +149,7 @@ nhacPhienKhucSop = \relative c'' {
     c4. c8 |
     d8. a16 d8 c |
     b2 |
-    r4 e16 (f) e (d)
+    r4 e16 (f) e (d) \bar "||"
   }
   \alternative {
     {
@@ -180,7 +180,7 @@ nhacPhienKhucAlto = \relative c'' {
   b b8 b |
   c c4 c8 |
   c4 c8 c |
-  b b (d) f |
+  b b ([d]) f |
   f4 (g8 f |
   e4) c'8 g |
   a4 a16 (g) e8 |
@@ -264,8 +264,8 @@ nhacPhienKhucAlto = \relative c'' {
   b2 |
   
   \time 3/4
-  c2 c4 |
-  a2 f'4 |
+  c2 e8 (f) |
+  a,2 f'4 |
   e2 a4 |
   gs2. |
   gs2 a4 |
@@ -317,7 +317,7 @@ nhacPhienKhucBas = \relative c' {
   r4 c'8 b |
   c4 c8 e, |
   f4 fs |
-  f4 f8 f |
+  g4 g8 g |
   a4. a8 |
   af g4 e8 |
   f4 f8 e |
@@ -426,21 +426,21 @@ nhacPhienKhucBas = \relative c' {
 
 % Lời
 loiPhienKhucSop = \lyrics {
-  Lạy Thiên Chúa chúng con xin ca ngợi hát mừng,
+  Lạy Thiên Chúa, chúng con xin ca ngợi hát mừng,
   tuyên xưng Ngài là Đức Chúa, tuyên xưng Ngài là Đức Chúa.
   Chúa là Cha, Đấng trường tồn vạn đại,
-  hoàn vũ này kính cẩn suy tôn.
-  Trước nhan Chúa các Tổng Thần phủ phục,
+  Hoàn vũ này kính cẩn suy tôn.
+  Trước nhan Chúa, các Tổng Thần phủ phục,
   mọi thiên thần và đạo binh thiên quốc cảm tạ Cha
-  và cung chúc tôn thờ chẳng khi ngừng vang dậy tiếng tung hô:
-  Thánh, chí thánh ngàn trùng chí thánh
+  và cung chúc tôn thờ, chẳng khi ngừng vang dậy tiếng tung hô:
+  Thánh, chí thánh ngàn trùng chí thánh,
   Chúa Tể càn khôn là Đấng Thánh.
   Trời đất rạng ngời, rạng ngời vinh quang,
   rạng ngời vinh quang Chúa uy linh.
   Bao vi ngôn sứ tán dương Ngài.
   Và trải rộng khắp nơi trên trần thế,
   Hội Thánh Ngài hoan hỉ tuyên xưng:
-  Chúa là Cha lẫm liệt uy hùng
+  Chúa là Cha lẫm liệt uy hùng,
   và Con Một Ngài chí tôn, chí ái,
   cùng Thánh Thần, Đấng an ủi yêu thương.
   Đấng chẳng nề mặc lấy xác phàm,
@@ -456,25 +456,25 @@ loiPhienKhucSop = \lyrics {
   Ngài cứu chuộc bằng bửu huyết tuôn tràn.
   Xin được hợp đoàn cùng muôn thần thánh,
   thần thánh hưởng phúc vinh quang,
-  phúc miên trường, vui hưởng anh vinh quang.
+  phúc miên trường, vui hưởng ánh vinh quang.
   trường, vui hưởng ánh vinh quang.
 }
 
 loiPhienKhucAlto = \lyrics {
-  Lạy Thiên Chúa chúng con xin ca ngợi hát mừng,
+  Lạy Thiên Chúa, chúng con xin ca ngợi hát mừng,
   tuyên xưng Ngài là Đức Chúa, tuyên xưng Ngài là Đức Chúa.
   Chúa là Cha, Đấng trường tồn vạn đại,
-  hoàn vũ này kính cẩn suy tôn.
-  Trước nhan Chúa các Tổng Thần phủ phục,
+  Hoàn vũ này kính cẩn suy tôn.
+  Trước nhan Chúa, các Tổng Thần phủ phục,
   mọi thiên thần và đạo binh thiên quốc cảm tạ Cha
-  và cung chúc tôn thờ chẳng khi ngừng vang dậy tiếng tung hô:
-  Thánh, chí thánh ngàn trùng chí thánh
+  và cung chúc tôn thờ, chẳng khi ngừng vang dậy tiếng tung hô:
+  Thánh, chí thánh ngàn trùng chí thánh,
   Chúa Tể càn khôn là Đấng Thánh.
   Trời đất rạng ngời, rạng ngời vinh quang, vinh quang Chúa uy linh.
   Bao vi ngôn sứ tán dương Ngài.
   Và trải rộng khắp nơi trên trần thế,
   Hội Thánh Ngài hoan hỉ tuyên xưng:
-  Chúa là Cha lẫm liệt uy hùng
+  Chúa là Cha lẫm liệt uy hùng,
   và Con Một Ngài chí tôn, chí ái,
   cùng Thánh Thần, Đấng an ủi yêu thương.
   Đấng chẳng nề mặc lấy xác phàm,
@@ -495,12 +495,12 @@ loiPhienKhucAlto = \lyrics {
 }
 
 loiPhienKhucBas = \lyrics {
-  Lạy Thiên Chúa chúng con xin ca ngợi hát mừng,
+  Lạy Thiên Chúa, chúng con xin ca ngợi hát mừng,
   tuyên xưng Ngài là Đức Vua, tuyên xưng Ngài là Đức Vua.
   Trước nhan Chúa, các Tổng Thần phủ phục,
   mọi thiên thần và đạo binh thiên quốc cảm tạ Cha
-  và cùng phục lạy thờ chẳng khi ngừng vang dậy lời tung hô:
-  Thánh, cực thánh ngàn trùng chí thánh Vua Tể càn khôn
+  và cùng phục lạy thờ, chẳng khi ngừng vang dậy lời tung hô:
+  Thánh, cực thánh ngàn trùng chí thánh, Vua Tể càn khôn
   Chúa chí thánh, trời đất rạng ngời,
   rạng ngời vinh quang Chúa, vinh quang,
   vinh quang Chúa chí linh.
@@ -508,7 +508,7 @@ loiPhienKhucBas = \lyrics {
   Bao vị ngôn sứ tán tụng Ngài.
   Đoàn Tử Đạo quang huy hùng dũng,
   máu đàu đổ ra minh chứng về Ngài
-  Chúa Cha lẫm liệt uy hùng
+  Chúa Cha lẫm liệt uy hùng,
   và Con Một Ngài chí tôn, từ ái,
   cùng Thánh Thần vị an ủi mến thương.
   Lạy Đức Ki -- tô, Con Chúa Trời hằng sống,
@@ -523,7 +523,7 @@ loiPhienKhucBas = \lyrics {
   Xin được hợp đoàn cùng muôn thần thánh,
   thần thánh kết đoàn vinh quang hưởng phúc miên trường
   vui hưởng ánh vinh quang.
-  Xin được hợp...
+  Xin được hợp
   trường, vui hưởng ánh vinh quang.
 }
 
@@ -612,8 +612,8 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.2
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override Lyrics.LyricSpace.minimum-distance = #0.8
+    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override LyricHyphen.minimum-distance = #1
   }
 }

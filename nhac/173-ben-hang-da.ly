@@ -14,7 +14,7 @@ nhacPhienKhucSop = \relative c'' {
   \set Staff.printKeyCancellation = ##f
   \key f \major \time 2/4
   \partial 4 r8 <c e,>8 |
-  <a f> <f d>16 <f d> <g bf,>8 <g b,!> \bar "|."
+  <a f> <f d>16 <f d> <g b,!>8 <g b,> \bar "|."
   
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
@@ -23,8 +23,8 @@ nhacPhienKhucSop = \relative c'' {
   r8 f c'16 (d) b!8 |
   c4 b!8 c16 c |
   a8 c, a' f |
-  g4 r8 g8 ^> |
-  f4 r8 a ^> |
+  g4 r8 g8 |
+  f4 r8 a |
   g8 a bf4 ~ |
   bf8 g16 (a) e8 g |
   f2 ~ |
@@ -34,9 +34,9 @@ nhacPhienKhucSop = \relative c'' {
   a2 |
   g8 g4 a16 (g) |
   f4 r |
-  r8 a ^> a ^> a16 gs |
+  r8 a a a16 gs |
   a8 c c4 ~ |
-  c8 c16 b! c8 d16 (c) |
+  c8 c16 b! c8 b16 (c) |
   \slashedGrace { \stemDown a16 ^(c \stemNeutral } d2) ~ |
   d4 c8 f |
   f4 r8 e |
@@ -64,22 +64,24 @@ nhacPhienKhucSop = \relative c'' {
   % cách 2
   <<
     {
-      \slashedGrace { a16 _(g } a2) ~ |
+      \slashedGrace { a16 _(g } a2) ~ \noBreak |
       a4 r
     }
     {
       \context Staff = "ossia" \with {
         alignAboveContext = #"1"
         \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 6))
-        %fontSize = #-2
-        %\override StaffSymbol.staff-space = #(magstep -2)
+        fontSize = #-3
+        \override StaffSymbol.staff-space = #(magstep -3)
         \remove "Time_signature_engraver"
+        \remove "Clef_engraver"
+        firstClef = #f
       } {
           \startStaff
           r4
-          _"Đàn"
+          _\markup { \italic "(Đàn)" }
           r8 c |
-          a <f d>16 <f d> <g b,!>8 <g b,!>
+          a <f d>16 <f d> <g b,!>8 <g b,>
           \stopStaff
       }
     }
@@ -92,11 +94,11 @@ nhacPhienKhucSop = \relative c'' {
   \time 3/4
   \partial 4 bf8 (a) |
   g2 g4 |
-  a4. g8 f4 |
+  a4 g4. f8 |
   e2 g4 |
   g4. g8 a4 |
   a2 f4 |
-  g4. e8 e (f) |
+  g4 e4. e16 (f) |
   d2 a'4 |
   bf4. bf8 g4 |
   a2. ~ \bar "||"
@@ -104,10 +106,10 @@ nhacPhienKhucSop = \relative c'' {
   \key d \major
   \time 2/4
   a4 r |
-  r g8 ^> g ^> |
-  g4 ^> e8 ^> e ^> |
-  e ^> a ~ ^> a4 ~ |
-  a8 a ^> a ^> a ^> |
+  r g8 g |
+  g4 e8 e |
+  e a ~ a4 ~ |
+  a8 a a a |
   d2 ~ |
   d4 b8 d |
   a4. b8 |
@@ -115,9 +117,9 @@ nhacPhienKhucSop = \relative c'' {
   e2 ~ |
   e4 cs8 a' |
   a4. a8 |
-  e'4 cs8 cs \bar "||"
+  e'4 cs8 cs \bar ".|:"
   
-  \once \override Score.RehearsalMark.font-size = #1
+  \once \override Score.RehearsalMark.font-size = #2
   \mark \markup { \musicglyph #"scripts.coda" }
   <>^\markup { "Al" \bold " CODA" }
 
@@ -136,9 +138,9 @@ nhacPhienKhucSop = \relative c'' {
     d8 (c16 bf) g8 g |
     a2 ~ |
     a4 r8 a ^> |
-    a4 ^> f8 ^> f ^> |
-    f4 ^> f8 ^> f ^> |
-    bf bf ~ bf4
+    a4 ^> f8 f |
+    f4 f8 ^> f ^> |
+    bf ^> bf ^> ~ bf4
   }
   \alternative {
     {
@@ -147,7 +149,7 @@ nhacPhienKhucSop = \relative c'' {
     {
       <<
         {
-          r8 c c4 \fermata ~ |
+          r8 c ^> c4 ~ |
           c4 r
           %\once \override Score.RehearsalMark.font-size = #0.1
           %\mark \markup { \musicglyph #"scripts.segno" }
@@ -157,11 +159,13 @@ nhacPhienKhucSop = \relative c'' {
             alignAboveContext = #"1"
             \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 6))
             \remove "Time_signature_engraver"
+            fontSize = #-3
+            \override StaffSymbol.staff-space = #(magstep -3)
             firstClef = ##f
           } {
               %\startStaff
               r4
-              _"Đàn"
+              _\markup { \italic "(Đàn)" }
               r8 c |
               a f16 f g8 g
               %\stopStaff
@@ -174,10 +178,10 @@ nhacPhienKhucSop = \relative c'' {
   
   \key d \major
   \once \override Score.RehearsalMark.extra-offset = #'( -8 . 1 )
-  \once \override Score.RehearsalMark.font-size = #1
+  \once \override Score.RehearsalMark.font-size = #2
   \mark \markup { \musicglyph #"scripts.coda" }
   <>^\markup { \bold "CODA" }
-  d2 ~ |
+  d'2 ~ |
   d ~ |
   d ~ |
   d ~ |
@@ -192,17 +196,17 @@ nhacPhienKhucAlto = \relative c' {
   r8 f a16 (g) f8 |
   e4 d8 g16 g |
   c,8 c f d |
-  e4 r8 e ^> |
-  d4 r8 f ^> |
+  e4 r8 e |
+  c4 r8 f |
   e f g4 ~ |
   g8 e16 (d) c8 bf |
   a2 ~ |
-  a8 \fermata r r4
+  a8 r r4
   R2*2
   f'8 e4 e8 |
   f2 |
   e8 e4 e8 |
-  d4 r8 f ^> |
+  d4 r8 f |
   f f16 e f8 f |
   e4. a8 |
   g4 g8 g |
@@ -216,16 +220,16 @@ nhacPhienKhucAlto = \relative c' {
   c4 r |
   a'8 e f (d) |
   d (e16 d cs4) ~ |
-  cs
+  cs!
   
   \time 3/4
-  \partial 4 cs
-  e2 f4 |
-  e4. f8 d4 |
-  bf2 b!4 |
+  \partial 4 cs!
+  d2 f4 |
+  e4 f4. d8 |
+  bf2 bf4 |
   c4. d8 f4 |
   e2 d4 |
-  bf4. c8 cs4 |
+  bf4 c4. cs8 |
   d2 d8 (ef) |
   d4. d8 d4 |
   cs2. ~ |
@@ -233,10 +237,10 @@ nhacPhienKhucAlto = \relative c' {
   \key d \major
   \time 2/4
   cs4 r |
-  r g'8 ^> g ^> |
-  g4 ^> e8 ^> e ^> |
-  d ^> cs ^> ~ cs4 ~ |
-  cs8 cs ^> d ^> e ^> |
+  r g'8 g |
+  g4 e8 e |
+  d cs ~ cs4 ~ |
+  cs8 cs d e |
   fs8. fs16 fs8 fs |
   b4 r |
   d,8 d g4 |
@@ -259,11 +263,11 @@ nhacPhienKhucAlto = \relative c' {
   d8 (c16 bf) g8 g |
   a2 ~ |
   a4 r8 f ^> |
-  f4 ^> d8 ^> d ^> |
-  d4 ^> c8 ^> c ^> |
-  d8 d ~ d4 |
+  f4 ^> d8 d |
+  d4 c8 ^> c ^> |
+  d8 ^> d ^> ~ d4 |
   r8 <g e> ^> <a f> ^> r |
-  r <g e> <a f>4 \fermata ~ |
+  r <g e> ^> <a f>4 ~ |
   <a f> r |
   
   \key d \major
@@ -284,11 +288,11 @@ nhacPhienKhucBas = \relative c {
   c8 c g' e |
   f4 r |
   r8 c ^> b! ^> c ^> |
-  d ^> f ^> e ^> f ^> |
+  d f ^> e ^> f ^> |
   g4. f16 (g) |
   d8. b!16 c8 c |
   f2 ~ |
-  f8 \fermata g g a16 (g) |
+  f8 g g a16 (g) |
   d8. d16 d8 \afterGrace f ( { \stemDown g16 f ) } \stemNeutral |
   c2 ~ |
   c4 r |
@@ -313,11 +317,11 @@ nhacPhienKhucBas = \relative c {
   \time 3/4
   \partial 4 a |
   bf2 d4 |
-  cs4. d8 f4 |
+  c4 d4. f8 |
   g2 g8 (f) |
   e4. e8 d4 |
-  d cs (d) |
-  g,4. a8 a4 |
+  d (cs) d |
+  g,4 a4. a8 |
   bf2 f'4 |
   g4. f8 e (bf') |
   a2 a8 ^> a ^>
@@ -350,10 +354,10 @@ nhacPhienKhucBas = \relative c {
   r r8 f ^> |
   f4 ^> d8 d |
   d4 r8 bf' |
-  bf4 a8 a |
-  g g ~ g4 |
-  r8 c, f r |
-  r c f4 \fermata ~ |
+  bf4 a8 ^> a ^> |
+  g ^> g ^> ~ g4 |
+  r8 c, ^> f r |
+  r c ^> f4 ~ |
   f4 r |
   
   \key d \major
@@ -366,51 +370,51 @@ nhacPhienKhucBas = \relative c {
 
 % Lời
 loiPhienKhucSop = \lyrics {
-  Intr. \repeat unfold 6 { _ }
+  \markup { \bold "Intr." }  \repeat unfold 6 { _ }
   Rộng quá mười phương
-  Tình ôi miên trường rộng quá mười phương
-  Ai người Ai người dương thế hiểu gì chữ thương
+  Tình ôi miên trường rộng quá mười phương,
+  ai người, ai người dương thế hiểu gì chữ thương
   Tôi quỳ tâm chiêm bao nhiêu nỗi niềm
-  Dâng lên như đại dương dâng lên như đại dương sóng cả
+  dâng lên như đại dương dâng lên như đại dương sóng cả
   Và thân tôi run run run run run run
   như cành lá
   
-  run như cành lá Chúa ơi
-  Tôi thiết tha khấn nguyện hương kinh như ánh nến
-  sưởi ấm lại cõi lòng hiu hắt chốn rừng phong.
-  Hôm nay đây biển tình đầy ứ
-  biển tình đầy ứ
+  run như cành lá Chúa ơi,
+  con chắp tay khấn nguyện, hương kinh như ánh nến
+  Sưởi ấm lại cõi lòng, Hiu hắt chốn rừng phong.
+  Hôm nay đây biển tình đầy ứ,
+  biển tình đầy ứ,
   Cây Yes -- se đã trổ một bông vàng
   Đàn tiên tri đã thắm điệu tình tang
   Trên cánh đồng xa chiên ăn bên đàn sói
   Trẻ giỡn cùng hổ mang
   A ha là tuổi vàng của thời Cứu Thế
-  A ha a ha tang tinh tinh tang tinh tinh tinh tinh tang.
+  A ha A ha tang tinh tinh tang tinh tinh tinh tinh tang.
 }
 
 loiPhienKhucAlto = \lyrics {
   Rộng quá mười phương
-  Tình ôi miên trường rộng quá mười phương
-  Ai người Ai người dương thế hiểu gì chữ thương
+  Tình ôi miên trường rộng quá mười phương,
+  ai người, ai người dương thế hiểu gì chữ thương
   Tôi quỳ tâm chiêm bao nhiêu nỗi niềm
-  Dâng lên như đại dương dâng lên dâng lên như sóng cả
+  dâng lên như đại dương dâng lên dâng lên như sóng cả
   đại dương sóng cả run run run run run run như cành lá.
   run như sóng cả
-  Chúa ơi tôi thiết tha khấn nguyện hương kinh như ánh nến
-  sưởi ấm lại cõi lòng hiu hắt chốn rừng phong
-  Hôm nay đây biển tình đầy ứ
-  biển tình đầy ứ biển tình đầy ứ
+  Chúa ơi, con chắp tay khấn nguyện, hương kinh như ánh nến
+  Sưởi ấm lại cõi lòng, Hiu hắt chốn rừng phong
+  Hôm nay đây biển tình đầy ứ,
+  biển tình đầy ứ, biển tình đầy ứ,
   Cây Yes -- se đã trổ một bông vàng
   Đàn tiên tri đã thắm điệu tình tang tính tính tang.
   Trên cánh đồng xa chiên ăn bên đàn sói
   trẻ giỡn cùng hổ mang
   A ha là tuổi vàng của thời Cứu Thế
-  A ha a ha tang tinh tinh tang tinh tinh tinh tinh tang
+  A ha A ha tang tinh tinh tang tinh tinh tinh tinh tang
 }
 
 loiPhienKhucBas = \lyrics {
-  Tình ôi miên trường ôi miên trường rộng quá mười phương
-  Ai người dương thế ai người dương thế hiểu gì
+  Tình ôi miên trường ôi miên trường rộng quá mười phương,
+  ai người dương thế, ai người dương thế hiểu gì,
   hiểu gì tình thương
   Bên hang đá lạnh một chiều hiu quạnh
   Tôi quỳ tâm chiêm bao
@@ -419,16 +423,17 @@ loiPhienKhucBas = \lyrics {
   run run run run run run như cành lá
   
   run như sóng cả
-  người ơi tôi thiết tha khấn nguyện
-  hương kinh như ánh nến sưởi lại cả cõi lòng hiu hắt chốn rừng phong
-  Hôm nay đây biển tình đầy ứ
-  Hôm nay đây biển tình đầy ứ
+  Ngài ơi, con chắp tay khấn nguyện,
+  hương kinh như ánh nến
+  Sưởi lại cả cõi lòng, Hiu hắt chốn rừng phong
+  Hôm nay đây biển tình đầy ứ.
+  Hôm nay đây biển tình đầy ứ,
   Cây Yes -- se đã trổ một bông vàng
-  Các tiên tri ca nhằm khúc tình tang tính tính tang
+  Các tiên tri ca nhằm khúc tinh tang tinh tình tang
   Cừu nằm kề beo đói
   A ha là tuổi vàng
-  A ha của thời cứu thế
-  a ha a ha tang tinh tinh tang tinh tinh tinh tinh tang.
+  A ha của thời Cứu Thế
+  A ha A ha tang tinh tinh tang tinh tinh tinh tinh tang.
 }
 
 % Dàn trang
@@ -452,6 +457,7 @@ loiPhienKhucBas = \lyrics {
                              (minimum-distance . 13)
                              (padding . 2))
   %page-count = 4
+  systems-per-page = 4
 }
 
 TongNhip = {
@@ -518,8 +524,8 @@ notBePhu =
   >>
   \layout {
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1.2
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override Lyrics.LyricSpace.minimum-distance = #1
+    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override LyricHyphen.minimum-distance = #1
     \override Staff.VerticalAxisGroup.staff-staff-spacing =
         #'((basic-distance . 8)
