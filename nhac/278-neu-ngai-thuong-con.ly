@@ -4,7 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Nếu Ngài Thương Con" }
-  subsubtitle = "(Trích ORATORIO The Messiah, phần 2, đoạn 28)"
+  subsubtitle = "(Trích ORATORIO The Messiah, phần II, đoạn 28)"
   composer = "Nhạc: G. F. Handel"
   arranger = "Lời Việt: Lm. Kim Long"
   tagline = ##f
@@ -28,6 +28,9 @@
 global = {
   \key ef \major
   \time 4/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1 1)
 }
 
 % Nhạc phiên khúc
@@ -74,7 +77,7 @@ nhacPhienKhucSop = \relative c'' {
   bf4 r r8 c bf af |
   g( ef' d c bf g g'4 |
   g) f8( ef) d bf ef4( |
-  ef) d8 c b!8. bf16 bf4 | \break
+  ef) d8 c b!8. b16 b4 | \break
   r b! c c |
   c2 ^\fff b! |
   c1 \bar "|."
@@ -114,7 +117,7 @@ nhacPhienKhucAlto = \relative c'' {
   r2 r8 f bf bf |
   a!8. g16 f4 r8 bf g f |
   g4. g8 fs4. fs8 |
-  g4 f8 ef d( bf') a! g |
+  g4 f!?8 ef d( bf') a! g |
   fs d g a! bf4. bf8 |
   a!( f bf a g a16 bf a8 g |
   fs d g2) fs4 |
@@ -142,7 +145,7 @@ nhacPhienKhucTenor = \relative c' {
   R1*4
   r2 r4 c ^\f |
   g a!8 a bf g c4( |
-  c8 bf16 a!) bf8 c d bf ef4 |
+  c8 bf16 af) bf8 c d bf ef4 |
   r8 d d d g c, c c |
   r ef d c bf4 a! |
   g r r8 g a! b! |
@@ -190,7 +193,7 @@ nhacPhienKhucTenor = \relative c' {
   c4. d16 c bf4 g'8 f |
   ef c f ef d) d ef c |
   d4 b! c r |
-  r8 c f ef d8. c16 bf4 |
+  r8 c f ef d8. c16 bf?4 |
   r8 ef, f g af4. af8 |
   g d' c bf g'4( f |
   ef8 g f ef d4 c8 d |
@@ -208,7 +211,7 @@ nhacPhienKhucBass = \relative c' {
   c f, f f r af g f |
   ef4 d c r |
   r8 ef d d g4 r8 a! |
-  d, fs g a! bf g c c |
+  d, fs g af bf g c c |
   f,4. bf8 ef,4. ef8 |
   d fs g c, d4 fs |
   g8 f ef d ef4 f8( g) |
@@ -216,12 +219,12 @@ nhacPhienKhucBass = \relative c' {
   R1*2
   r4 g' c, c8 d |
   ef4 d8( c) g'( bf) a!( g) |
-  fs4 g8 a! bf g c c |
+  fs4 g8 af bf g c c |
   f, f bf bf ef,4. ef8 |
   d2 r8 d d' c |
   b!8. a!16 g4 r8 g c bf |
   af8. g16 f4 r2 |
-  r1 |
+  R1 |
   r4 f bf, c8 c |
   d4. d8 ef( d) ef c |
   bf bf' c bf a! f bf4 |
@@ -243,7 +246,7 @@ nhacPhienKhucBass = \relative c' {
   r2 r8 g' ^\mf c bf |
   
   %?
-  af8.
+  af?8.
   g16 f4 r2 |
   r8 ef g ef af4. af8 |
   g f ef d c( c' b! g |
@@ -251,8 +254,7 @@ nhacPhienKhucBass = \relative c' {
   ef c f) ef d bf' ef d |
   c( ef d c b! c16 b c8) f, |
   g g g f ef8. d16 c4 |
-  r1 |
-  r1 |
+  R1*2
   r4 g' ^\ff c, d8 d |
   ef c f4.( ef16 d) ef8 f |
   g ef af4. g8 g g |
@@ -311,7 +313,7 @@ loiPhienKhucAlto = \lyrics {
   trong cơn nguy nan cơ cực này chưa ra tay độ trì.
   Ngài chẳng ra tay độ trì,
   Ngài chẳng ra "tay (i)" phù giúp cứu nguy giữa cơn cùng cực
-  sao chưa ra tay độ trì.
+  Ngài chưa ra tay độ trì.
 }
 
 loiPhienKhucTenor = \lyrics {
@@ -367,7 +369,7 @@ loiPhienKhucBass = \lyrics {
   Ngài ơi sao chưa ra tay độ trì.
   Nếu Ngài luôn thương mến phù giúp con,
   sao hững hờ mãi, chưa ra tay giữa cơn cùng cực này.
-  vẫn chưa hạ tay độ trì.
+  Ngài chưa hạ tay độ trì.
 }
 
 % Dàn trang
@@ -375,34 +377,38 @@ loiPhienKhucBass = \lyrics {
   \new ChoirStaff <<
     \new Staff \with {
       instrumentName = #"S"
-      %\magnifyStaff #(magstep +1)
     } <<
-      \new Voice = "beSop" { \clef treble \global \nhacPhienKhucSop }
+      \new Voice = "beSop" {
+        \clef treble \global \nhacPhienKhucSop
+      }
       \new Lyrics \lyricsto beSop \loiPhienKhucSop
     >>
     \new Staff \with {
       instrumentName = #"A"
-      %\magnifyStaff #(magstep +1)
     } <<
-      \new Voice = "beAlto" { \clef treble \global \nhacPhienKhucAlto }
+      \new Voice = "beAlto" {
+        \clef treble \global \nhacPhienKhucAlto
+      }
       \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
     >>
     \new Staff \with {
       instrumentName = #"T"
-      %\magnifyStaff #(magstep +1)
     } <<
-      \new Voice = "beTenor" { \clef "violin_8" \global \nhacPhienKhucTenor }
+      \new Voice = "beTenor" {
+        \clef "violin_8" \global \nhacPhienKhucTenor
+      }
       \new Lyrics \lyricsto beTenor \loiPhienKhucTenor
     >>
     \new Staff \with {
       instrumentName = #"B"
-      %\magnifyStaff #(magstep +1)
     } <<
-      \new Voice = "beBass" { \clef bass \global \nhacPhienKhucBass }
+      \new Voice = "beBass" {
+        \clef bass \global \nhacPhienKhucBass
+      }
       \new Lyrics \lyricsto beBass \loiPhienKhucBass
     >>
   >>
   \layout {
-    %\override Lyrics.LyricText.font-size = #+2.5
+    %\override Lyrics.LyricSpace.minimum-distance = #0.5
   } 
 }

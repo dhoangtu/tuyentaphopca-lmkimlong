@@ -32,7 +32,7 @@ nhacPhienKhucSop = \relative c'' {
   d'4. r16 bf c4 d |
   ef8 d c bf a4 d |
   c8 (bf) a r16 bf g4 d |
-  g4. r16 a bf8. a16 bf8. g16 |
+  g4.. a16 bf8. a16 bf8. g16 |
   d'4. r16 bf c4 d |
   ef8 d c bf bf4 a |
   g4. r16 a a4 a |
@@ -50,7 +50,7 @@ nhacPhienKhucSop = \relative c'' {
   c8 (bf) a r16 bf g4 d |
   g4.. a16 bf8. a16 bf8. g16 |
   d'4. r16 bf c4 d |
-  e8 d c bf bf4 a |
+  ef8 d c bf bf4 a |
   g4. r16 a a4 a |
   bf a8. g16 a4 bf |
   c r8 bf c4 d |
@@ -95,7 +95,7 @@ nhacPhienKhucAlto = \relative c'' {
   g fs8. e!16 fs4 g |
   a4. r8 g r g r |
   \tuplet 3/2 { g f g } g r g r f r |
-  r4. r16 g g4 d |
+  g8 r r r16 g g4 d |
   g4.. a16 bf8. a16 bf8. g16 |
   d'4. r16 bf c4 d |
   ef8 d c bf a4 d |
@@ -126,15 +126,15 @@ nhacPhienKhucBas = \relative c' {
   g,4. r8 r2 |
   R1
   r4 r8. bf'16 bf8 (a) g (f) |
-  ef (d) c bf a g c cs |
+  ef (d) c bf a bf c cs |
   d4 d8 r16 d d4 d |
   g d8. bf16 d4 g8 (ef) |
   ef4. r16 d ef4 b! |
   c8 d ef d c4 d |
-  ef4. r8 r2 |
+  g4. r8 r2 |
   <<
     {
-      \tuplet 3/2 { bf'8 bf bf } bf r r2 |
+      \tuplet 3/2 { bf8 bf bf } bf r r2 |
       \tuplet 3/2 { bf8 bf bf } bf r r2 |
       \tuplet 3/2 { c8 c c } c r r4 d8 r |
       \tuplet 3/2 { d d d } d r r2 |
@@ -161,31 +161,32 @@ nhacPhienKhucBas = \relative c' {
   r r4 d''2 ~ |
   d4. r8 d2 ~ |
   d4 ef2 bf4 |
-  c r
+  c r <d g,>8 r
   <<
     {
       \voiceOne
-      d8 r c (bf) |
-      a r fs
+      c8 (bf) |
+      a a\rest fs
     }
     \\
     \new Voice = "splitpart" {
 	    \voiceTwo
-      g8 r ef r |
-      d4.
+      ef8 c\rest |
+      d4 (d8)
     }
   >>
   \oneVoice
+  r8
   <<
     {
-      r8 \tuplet 3/2 { d' d d } d r |
+      \tuplet 3/2 { d' d d } d r |
       \tuplet 3/2 { d d d } d r \tuplet 3/2 { d d d } d r |
       \tuplet 3/2 { d d d } d r g, r bf r |
       \tuplet 3/2 { c c c } c r d r d r |
       g,
     }
     {
-      r8 \tuplet 3/2 { d8 d d } d r |
+      \tuplet 3/2 { d8 d d } d r |
       \tuplet 3/2 { d d d } d r \tuplet 3/2 { d d d } d r |
       \tuplet 3/2 { d d d } d r ef r d r |
       \tuplet 3/2 { c c c } c r d r d r |
@@ -196,7 +197,7 @@ nhacPhienKhucBas = \relative c' {
   r8 r4 r r8. g'16 |
   g4 d g4.. a16 |
   bf8. a16 bf8. g16 d'4. r16 bf |
-  a4 d ef8 d c bf |
+  c4 d ef8 d c bf |
   a4 d c8 (bf) a r16 bf |
   a4 d, g4.. a16 |
   bf8. a16 bf8. g16 d'4. r16 bf |
@@ -230,88 +231,88 @@ nhacPhienKhucBas = \relative c' {
 
 
 loiPhienKhucSop = \lyrics {
-  Al -- le -- lu -- ia!
-  Đêm vắng sương tuyết lạnh giá
-  ngàn mây vương lối trăng sao u buồn khuất xa mờ.
-  Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia,
+  Đêm vắng sương tuyết lạnh giá,
+  Ngàn mây vương lối trăng sao u buồn khuất xa mờ.
+  Al -- le -- lu -- ia,
   Bao ánh quang xóa màn tối
   và muôn thiên sứ hân hoan ca vang lưng trời.
   Đây ta loan báo Tin Mừng cho mọi nơi:
   Kìa trong máng lừa một vị Cứu Tinh đã sinh ra đời.
   Tôn vinh Thiên Chúa trên trời cao hiển danh
   và nơi dương thế khang an cho ai ngay
-  Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia,
   Ta hãy nghe sứ thần Chúa
   cùng nhau đi tới Be -- lem như lời đã ban truyền.
-  Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia
   Hang đá nơi cánh đồng vắng
   giờ đây nên chính cung ngai cho Vua uy quyền.
   Hân hoan chiêm bái kia Hài Nhi nhỏ xinh
-  nằm trong máng lừa
+  nằm trong máng lừa,
   Mẹ Trinh khiết vấn trong khăn tinh tuyền.
   Tôn vinh Thiên Chúa trên trời cao hiển danh
   và nơi dương thế khang an cho ai ngay lành.
-  Al -- le -- lu -- ia!
-  Mau hãy nghiêng gối thờ kính
-  tạ ơn Con Chúa yêu thương nhân loại đến quên mình.
-  Al -- le -- lu -- ia!
-  Đêm thánh chan chứa hồng phúc
-  trời cao đất thấp nay đã hân hoan giao hòa.
-  Đau thương tan biến tâm hồn nghe thảnh thơi
-  vì Ơn Cứu Độ sẽ mở lối cho ta lên Quê Trời.
+  Al -- le -- lu -- ia
+  Mau hãy nghiêng gối thờ kính,
+  Tạ ơn Con Chúa yêu thương nhân loại đến quên mình.
+  Al -- le -- lu -- ia,
+  Đêm thánh chan chứa hồng phúc,
+  Trời cao đất thấp nay đã hân hoan giao hòa.
+  Đau thương tan biến, tâm hồn nghe thảnh thơi
+  vì Ơn Cứu Độ sẽ mở lối cho ta lên quê trời.
   Tôn vinh Thiên Chúa trên trời cao hiển danh
   và nơi dương thế khang an cho ai ngay lành.
 }
 
 loiPhienKhucAlto = \lyrics {
-  Al -- le -- lu -- ia!
-  Đêm vắng sương tuyết lạnh giá
-  ngày mây vương lối trăng sao u buồn khuất xa mờ.
-  Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia,
+  Đêm vắng sương tuyết lạnh giá,
+  Ngàn mây vương lối trăng sao u buồn khuất xa mờ.
+  Al -- le -- lu -- ia,
   Bao ánh quang xóa màn tối
   và muôn thiên sứ hân hoan ca vang lưng trời.
   Đây ta loan báo Tin Mừng cho mọi nơi:
   Kìa trong máng lừa một vị Cứu Tinh đã sinh ra đời.
   Tôn vinh Thiên Chúa trên trời cao hiển danh
   và nơi dương thế khang an cho ai ngay lành.
-  Al -- le -- lu -- ia! Al -- le -- lu -- ia!
-  Al -- le -- lu -- ia! La Al -- le -- lu -- ia!
-  Al -- le -- lu -- ia! Al -- le -- lu -- ia! La la
-  Al -- le -- lu -- ia! La la la
+  Al -- le -- lu -- ia Al -- le -- lu -- ia
+  Al -- le -- lu -- ia la Al -- le -- lu -- ia
+  Al -- le -- lu -- ia Al -- le -- lu -- ia la la
+  Al -- le -- lu -- ia la la la
   Hân hoan chiêm bái kia Hài Nhi nhỏ xinh nằm trong máng lừa.
-  La la la Tôn vinh Thiên Chúa trên trời cao hiển danh.
-  La la Al -- le -- lu -- ia!
-  La la Al -- le -- lu -- ia!
-  Mau hãy nghiêng gối thờ kính
-  tạ ơn Con Chúa yêu thương nhân loại đến quên mình.
-  Al -- le -- lu -- ia! Đêm thánh chan chứa hồng phúc
-  trời cao đất thấp nay đã hân hoan giao hòa.
-  Đau thương tan biến tâm hồn nghe thảnh thơi
-  vì ơn Cứu Độ sẽ mở lối cho ta lên Quê trời.
+  la la la Tôn vinh Thiên Chúa trên trời cao hiển danh.
+  la la Al -- le -- lu -- ia
+  la la la Al -- le -- lu -- ia
+  Mau hãy nghiêng gối thờ kính,
+  Tạ ơn Con Chúa yêu thương nhân loại đến quên mình.
+  Al -- le -- lu -- ia, Đêm thánh chan chứa hồng phúc,
+  Trời cao đất thấp nay đã hân hoan giao hòa.
+  Đau thương tan biến, tâm hồn nghe thảnh thơi
+  vì ơn Cứu Độ sẽ mở lối cho ta lên quê trời.
   Tôn vinh Thiên Chúa trên trời cao hiển danh
   và nơi dương thế khang an cho ai ngay lành.
 }
 
 loiPhienKhucBas = \lyrics {
-  Al -- le -- lu -- ia! Đêm vắng sương tuyết lạnh giá
-  ngàn mây vương lối trăng sao u buồn khuất xa mờ.
-  Al -- le -- lu -- ia! Bao ánh quang xóa màn tối
+  Al -- le -- lu -- ia, Đêm vắng sương tuyết lạnh giá,
+  Ngàn mây vương lối trăng sao u buồn khuất xa mờ.
+  Al -- le -- lu -- ia, Bao ánh quang xóa màn tối
   và muôn thiên sứ hân hoan ca vang lưng trời.
   Kìa nơi máng lừa một vị Cứu Tinh đã sinh ra đời.
   Tôn vinh Thiên Chúa trên trời cao hiển danh
   và nơi dương thế khang an cho ai ngay lành.
-  Al -- le -- lu -- ia! Al -- le -- lu -- ia!
-  Al -- le -- lu -- ia! La Al -- le -- lu -- ia!
-  Al -- le -- lu -- ia! Al -- le -- lu -- ia! La la
-  Al -- le -- lu -- ia! La la la la la la la la
-  Al -- le -- lu -- ia! Al -- le -- lu -- ia!
-  Al -- le -- lu -- ia! Al -- le -- lu -- ia! La la
-  Al -- le -- lu -- ia! La la la Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia Al -- le -- lu -- ia
+  Al -- le -- lu -- ia la Al -- le -- lu -- ia
+  Al -- le -- lu -- ia Al -- le -- lu -- ia la la
+  Al -- le -- lu -- ia la la la la la la la la la
+  Al -- le -- lu -- ia Al -- le -- lu -- ia
+  Al -- le -- lu -- ia Al -- le -- lu -- ia la la
+  Al -- le -- lu -- ia la la la Al -- le -- lu -- ia
   Mau hãy nghiêng gối thờ kính tạ ơn Con Chúa
   yêu thương nhân loại đến quên mình.
-  Al -- le -- lu -- ia! Đêm thánh chan chứa hồng phúc
-  trời cao đất thấp nay đã hân hoan giao hòa.
-  Bởi Ơn Cứu Độ sẽ mở lối cho ta lên Quê Trời.
+  Al -- le -- lu -- ia, Đêm thánh chan chứa hồng phúc,
+  Trời cao đất thấp nay đã hân hoan giao hòa.
+  Bởi Ơn Cứu Độ sẽ mở lối cho ta lên quê trời.
   Tôn vinh Thiên Chúa trên trời cao hiển danh
   và nơi dương thế khang an cho ai ngay lành.
 }
@@ -388,9 +389,9 @@ notBePhu =
   >>
   \layout {
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1.2
+    \override Lyrics.LyricSpace.minimum-distance = #1.1
     %\override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override LyricHyphen.minimum-distance = #1
+    \override LyricHyphen.minimum-distance = #0.5
     \override Staff.VerticalAxisGroup.staff-staff-spacing =
         #'((basic-distance . 8)
 	   (minimum-distance . 8)
