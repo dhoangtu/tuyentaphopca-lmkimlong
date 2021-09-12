@@ -31,7 +31,7 @@ nhacPhienKhucSopMot = \relative c'' {
   r4 r8 g,16 g |
   c2 ~ |
   c4 r8 f,16 f |
-  bf8 bf g16 g c8 |
+  bf8 bf g16 g c8 \bar "||"
   <>^\markup { "Al" \bold " CODA" }
   f,2 ~ |
   \partial 4 f4 \bar "|." \break
@@ -65,7 +65,7 @@ nhacPhienKhucSopMot = \relative c'' {
   c8. f,16 bf8 bf |
   bf g (g4) |
   d'8. ^> g,16 c8 c |
-  c \slashedGrace { bf8 ( } a) ~ a4 |
+  c \slashedGrace { bf16 ( } a8) ~ a4 |
   a8. ^> g16 a8 f |
   bf ^> bf ^> r4 |
   r c8 ^> c ~ |
@@ -74,14 +74,14 @@ nhacPhienKhucSopMot = \relative c'' {
   R2
   r8 f,16 (g) f8 f |
   bf4 \fermata r8 b! |
-  c2 ~ |
+  c2 ~ \noBreak |
   c4 r |
   
   \time 3/4
   f, f g |
   a bf2 |
-  bf4. a8 d,4 |
-  e2 f4 |
+  bf4. ^> a8 d,4 |
+  e2 ^> f4 |
   g2 d4 |
   e c4. e8 |
   f2. ~ |
@@ -102,7 +102,7 @@ nhacPhienKhucSopMot = \relative c'' {
   c \bar "|." \break
   <>^\markup {\bold "CODA" }
   f,4 ~ f8 r |
-  r d16 d g8 e16 e |
+  R2
   r8 f16 f bf8 g16 g |
   c8 d c16 c f8 |
   e4 \fermata r8 e |
@@ -115,14 +115,14 @@ nhacPhienKhucAltoMot = \relative c' {
   r8 f g g |
   f2 ~ |
   f4 r |
-  r8 d e e |
+  r8 d ^\p e e |
   d2 ~ |
   d4 r |
   r8 e f f |
   e2 ~ |
   e4 r |
   r8 bf' ^\p f bf |
-  a4 a ^> ~ |
+  a4 a ^> ^\f ~ |
   a8 a d, df |
   c2 |
   r8 d16 d g4 ~ |
@@ -155,7 +155,7 @@ nhacPhienKhucAltoMot = \relative c' {
   R2
   r8 f, f e |
   f4 f ^> ~ |
-  f8 f f4 |
+  f8 f e4 |
   % chỉ cần hiển thị 1 lần, ẩn đi từ đây
   \set Staff.shortInstrumentName = ""
   e8. e16 d8 d |
@@ -176,8 +176,8 @@ nhacPhienKhucAltoMot = \relative c' {
   \time 3/4
   c c c |
   c d2 |
-  d4. cs8 d4 |
-  c2 d4 |
+  d4. ^> cs8 d4 |
+  c2 ^> d4 |
   d2 d4 |
   c4 bf4. bf8 |
   a2. ~ |
@@ -196,7 +196,7 @@ nhacPhienKhucAltoMot = \relative c' {
   r d16 d g8 e16 e |
   a4 r8 d,16 d |
   g8 g a16 a c8 |
-  bf4 r8 <c g> |
+  bf4 \fermata r8 <c g> |
   <c f,>2 ~ |
   <c f,>4
 }
@@ -204,20 +204,32 @@ nhacPhienKhucAltoMot = \relative c' {
 nhacPhienKhucTenorMot = \relative c {
   R2
   r8 d16 d g8 e16 e |
-  a8 f16 f bf8 g16 g |
-  <c e,>4. bf16 a |
+  <<
+    {
+      \voiceOne
+      r8 f16 f bf8 g16 g |
+      c4. bf16 a
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      a4 r |
+      e4. r8
+    }
+  >>
+  \oneVoice
+  %<c e,>4. bf16 a |
   <g f d>8 <g f d> r <c e,> |
   \once \autoBeamOff
   <f, c> a bf g |
   a2 ~ |
   a4 r |
-  r8 bf bf bf |
+  r8 bf ^\p bf bf |
   bf2 ~ |
   bf4 r |
   r8 g f g |
   g4 g ^\f ^> ~ |
   g8 g bf c |
-  \slashedGrace { e,16 ( } f2) ~ |
+  \slashedGrace { e,16 ( } f2 ^\p) ~ |
   f8 f d e |
   f4 r |
   r8 e16 e a8 f16 f |
@@ -261,21 +273,21 @@ nhacPhienKhucTenorMot = \relative c {
   a8. ^> b!16 c8 a |
   g f ~ f4 |
   R2
-  bf8 bf r4 |
+  bf8 ^> bf ^> r4 |
   r bf8 ^> a ~ |
   a4 r8 a |
   a8. a16 d8 c |
   bf4. bf8 |
   a4 a |
-  bf r8 a |
+  bf \fermata r8 g |
   g2 ~ |
   g4 r |
   
   \time 3/4
   a a g |
   g f2 |
-  bf4. bf8 a4 |
-  g2 a4 |
+  bf4. ^> bf8 a4 |
+  g2 ^> a4 |
   g2 g4 |
   g e4. g8 |
   f2. ~ |
@@ -294,13 +306,15 @@ nhacPhienKhucTenorMot = \relative c {
   g8 f16 f bf8 r |
   r a16 a d8 g, |
   bf4 a |
-  g r8 bf |
+  g \fermata r8 bf |
   a2 ~ |
   a4
 }
 
 nhacPhienKhucBasMot = \relative c {
-  r8 c16 c f8 d16 d |
+  r8 c16
+  ^\markup { \raise #2 \bold "Intr." }
+  c f8 d16 d |
   g4 <bf g> |
   <c f,> <g d> |
   <g c,>8 <g g,>16 <g g,> <c c,>4 |
@@ -347,13 +361,13 @@ nhacPhienKhucBasMot = \relative c {
   % Kết thúc solo, bè Bas trở lại dòng 4
   \set Staff.shortInstrumentName = "B"
   af'8. af16 af8 g |
-  f4. \slashedGrace { d8 ( } c) |
+  f4. \slashedGrace { d16 ( } c8) |
   f f4 g8 |
   \slashedGrace { bf,16 ( } c2 ~ ) |
   % chỉ cần hiển thị 1 lần, ẩn đi từ đây
   \set Staff.shortInstrumentName = ""
   c8 r r g |
-  bf4 c8 c |
+  bf4 c8 ^> c ^> |
   f, r r a |
   c4 d8 ^> d ^> |
   f4 r |
@@ -363,15 +377,15 @@ nhacPhienKhucBasMot = \relative c {
   f8. f16 bf8 a |
   g4. g8 |
   f4 f8 (e) |
-  d4 r8 d |
+  d4 \fermata r8 d |
   c2 ~ |
   c4 r |
   
   \time 3/4
   f f e |
   e d2 |
-  g4. g8 f4 |
-  c2 c4 |
+  g4. ^> g8 f4 |
+  c2 ^> c4 |
   b!2 b4 |
   c c4. c8 |
   d2. ~ |
@@ -388,16 +402,16 @@ nhacPhienKhucBasMot = \relative c {
   g4. c8 |
   f,4. f8 |
   e8. e16 f8 f |
-  c4 c'8 c, |
+  c4 \fermata c'8 c, |
   <f f,>2 ~ |
   <f f,>4
 }
 
 % Lời
 loiPhienKhucSopMot = \lyrics {
-  No en No en No en No en
+  No -- el No -- el, No -- el No -- el,
   Mọi ánh sáng đông tây
-  No en No en No en No en
+  No -- el No -- el No -- el No -- el
   hội về đây, hội về đây đi dồn vào quỹ đạo.
 
   Rừng già lên lộc mới một màu xanh
@@ -406,101 +420,102 @@ loiPhienKhucSopMot = \lyrics {
   hoa rơi vì gió lạ từ phương mô thổi tới
   
   những đống xương khô reo hoan hỉ
-  Bỗng một đêm reo hoan hỉ
-  Bỗng một đêm reo hoan hỉ
+  bỗng một đêm reo hoan hỉ,
+  bỗng một đêm reo hoan hỉ
   Phá lên tiếng cười Ha Ha Ha Ha
-  ánh sao le lói No en
+  ánh sao le lói No -- el
   Rộng vòng tay ôm ấp bốn phương trời
   mười phương đất hợp tấu bài anh em.
-  Thái hòa lên ngôi vị
-  nắm tay nhau theo vì sao Cứu Thế tiến bước về hào quang
-  No en No
-  đạo hội về đây hội về,
-  hội về đây, hội về đây đi dồn vào quỹ đạo No en.
+  Thái hòa lên ngôi vị.
+  Nắm tay nhau theo vì sao Cứu Thế tiến bước về hào quang.
+  No -- el No
+  đạo
+  hội về đây, hội về đây đi dồn vào quỹ đạo.
+  No -- el.
 }
 
 loiPhienKhucAltoMot = \lyrics {
-  No en No en No en No en No en No en
-  No en No en đến thế mạt một ngày hội về đây
-  đi dồn vào quỹ đạo hội về đây đu dồn vào quỹ đạo
+  No -- el No -- el, No -- el No -- el No -- el No -- el
+  No -- el No -- el đến thế mạt một ngày hội về đây
+  đi dồn vào quỹ đạo hội về đây đi dồn vào quỹ đạo
   
-  No en No en A No en A No en No en
-  No en A No en A No en A No en No en No en.
+  No -- el No -- el A No -- el A No -- el No -- el
+  No -- el A No -- el A No -- el A No -- el No -- el No -- el.
   
   những đống xương khô reo hoan hỉ
-  Bỗng một đêm reo hoan hỉ
-  Bỗng một đêm reo hoan hỉ
+  bỗng một đêm reo hoan hỉ,
+  bỗng một đêm reo hoan hỉ
   Phá lên tiếng cười
   Ha Ha Ha Ha
   ánh sao le lói
-  No en
+  No -- el
   Rộng vòng tay ôm ấp bốn phương trời mười phương đất
   hợp tấu bài anh em.
-  Thái hòa lên ngôi vị
-  nắm tay nhau theo vì sao Cứu Thế
-  tiến bước về hào quang
-  No en No
+  Thái hòa lên ngôi vị.
+  Nắm tay nhau theo vì sao Cứu Thế
+  tiến bước về hào quang.
+  No -- el No
   
   đạo hội về đây hội về đây
-  hội về đây đi dồn vào quỹ đạo
-  No en.
+  hội về đây đi dồn vào quỹ đạo.
+  No -- el.
 }
 
 loiPhienKhucTenorMot = \lyrics {
-  \repeat unfold 18 { _ }
-  No en No en No en No en No en No en
+  \repeat unfold 17 { _ }
+  No -- el No -- el, No -- el No -- el No -- el No -- el
   Từ hồng hoang thái cổ
-  No en No en hội về đây hội về đây
+  No -- el No -- el hội về đây hội về đây
   hội về đây đi dồn vào quỹ đạo
   về đây dồn vào quỹ đạo.
   
-  No en No en A No en A No en no en No en A No en
-  A No en A No en No en No en
+  No -- el No -- el A No -- el A No -- el no en No -- el A No -- el
+  A No -- el A No -- el No -- el No -- el
   
   những đống xương khô reo hoan hỉ
-  Bỗng một đêm reo hoan hỉ
-  Bỗng một đêm reo hoan hỉ
-  Ha Ha Ha Ha Nhìn về đồng vắng sương rơi
+  bỗng một đêm reo hoan hỉ,
+  bỗng một đêm reo hoan hỉ
+  Ha Ha Ha Ha Nhìn về đồng vắng sương rơi,
   ánh sao le lói
-  No en
+  No -- el
   Rộng vòng tay ôm ấp bốn phương trời mười phương đất
   hợp tấu bài anh em.
-  Thái hòa lên ngôi vị
-  nắm tay nhau theo vị sao Cứu Thế
-  Tiến bước về cao quang
-  No en No
+  Thái hòa lên ngôi vị,
+  Nắm tay nhau theo vì sao Cứu Thế
+  Tiến bước về cao quang.
+  No -- el No
   
   đạo hội về đây hội về đây
-  hội về đây dồn tới quỹ đạo
-  No en.
+  hội về đây dồn tới quỹ đạo.
+  No -- el.
 }
 
 loiPhienKhucBasMot = \lyrics {
-  Intr. __ \repeat unfold 17 { _ }
-  No en No en Bao tinh hoa kim cổ
-  No en No en No en No en No en No en
-  hội về đây hội về đây
+  \repeat unfold 18 { _ }
+  No -- el No -- el, Bao tinh hoa kim cổ
+  No -- el No -- el No -- el No -- el No -- el No -- el
+  hội về đây hội về đây,
   hội về đi dồn vào quỹ đạo đi vào quỹ đạo.
   
-  No en No en A No en A No en No en No en A No en
-  A No en A No en No en No en
+  No -- el No -- el A No -- el A No -- el No -- el No -- el A No -- el
+  A No -- el A No -- el No -- el No -- el
   
   Có những đống xương khô từ xa xưa thế kỷ
   một đêm reo hoan hỉ một đêm reo hoan hỉ
   Ha Ha phá lên tiếng cười Ha Ha
-  Nhìn về đồng vắng sương rơi
+  Nhìn về đồng vắng sương rơi,
   ánh sao chói lọi
-  No en
+  No -- el
   Rộng vòng tay ôm ấp bốn phương trời
   mười phương đất hợp tấu bài anh em.
-  Thái hòa lên ngôi vị
-  nắm tay nhau theo vị sao Cứu độ
-  Tiến bước về cao quang
-  No en No
+  Thái hòa lên ngôi vị,
+  Nắm tay nhau theo vì sao Cứu độ,
+  Tiến bước về cao quang.
+  No -- el No
   
   đạo hội về đây hội về đây
-  quỹ đạo hội về đây tới quỹ đạo
-  Ơ No en.
+  quỹ đạo, hội về dồn tới quỹ đạo.
+  Ơ No -- el.
 }
 
 % Dàn trang
@@ -567,8 +582,9 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.2
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
     %\override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override LyricHyphen.minimum-distance = #1.2
     \context {
       \Staff \RemoveEmptyStaves
       \override VerticalAxisGroup.remove-first = ##t

@@ -53,7 +53,7 @@ nhacPhienKhucSop = \relative c'' {
   \key d \major
   R2
   r4 \tuplet 3/2 { b8 ^> b b } |
-  b4 c!8. ^> c16 |
+  b4 c!8. ^> _\f c16 |
   a8 a r fs' |
   e8. d16 cs8 cs |
   r e d8. cs16 |
@@ -61,7 +61,7 @@ nhacPhienKhucSop = \relative c'' {
   r8 a4 b8 |
   cs8. cs16 \tuplet 3/2 { d8 ^> cs b } |
   b2 ~ |
-  b4 f'!8. ^> f16 |
+  b4 f'!8. ^> _\ff f16 |
   d8 d r d |
   b8. (a16) e8 e |
   e4 r8 e' |
@@ -76,7 +76,7 @@ nhacPhienKhucSop = \relative c'' {
   d2 ~ |
   
   \time 6/8
-  d4 r8 r4. | \break
+  d4 r8 r4. \bar "||" \break
   \key f \major
   R2.
   r4. bf8 ^> a ^> g ^> |
@@ -87,14 +87,14 @@ nhacPhienKhucSop = \relative c'' {
   \key d \major
   a,8 ^> a ^> a ^> d4 e8 |
   fs4. e4 b8 |
-  b c a e'4 d8 |
+  b cs a e'4 d8 |
   
   \time 2/4
   d2 ~ |
   d4 a8. b16 |
   b4. a8 |
   b e,4 g8 |
-  \set Score.repeatCommands = #'((volta "1") end-repeat)
+  \set Score.repeatCommands = #'((volta "1"))
   cs,4 ( d ~ |
   d4) r \bar ":|." \break
   \set Score.repeatCommands = #'((volta #f) (volta "2") end-repeat)
@@ -126,7 +126,7 @@ nhacPhienKhucSop = \relative c'' {
   a2 ~ |
   a4 b8. b16 |
   b8 gs b gs16 (fs) |
-  d4 r8. a'16 |
+  e4 r8. a16 |
   a8 ^> e r4 |
   r8. b'16 b8 ^> a |
   r4 d8 ^> r16 d16 |
@@ -135,7 +135,10 @@ nhacPhienKhucSop = \relative c'' {
   r fs,4 gs8 |
   a2 ~ |
   a ~ |
-  a4 r8 a |
+  a4 r8
+  -\markup { \lower #3 \halign #-0.2  \bold "Solo:" }
+  %\bar "||"
+  a |
   fs4. fs8 |
   b b4 cs8 |
   d2 ~ |
@@ -150,7 +153,8 @@ nhacPhienKhucSop = \relative c'' {
   \slashedGrace { gs8 ( } b2) |
   r8 b,4 e8 |
   a2 ~ |
-  a4 r \bar ".|:"
+  a4 r
+  \bar ".|:" \break
   
   cs8. e16 e8 cs16 (b) |
   a8 b4 fs8 |
@@ -161,7 +165,7 @@ nhacPhienKhucSop = \relative c'' {
   r8 d4 ^> b8 |
   b4 r8 e8 ^> ~ |
   e a, a8. b16 |
-  e,8 cs' (d) cs |
+  e,8 cs' ([d]) cs |
   b2 \bar ":|." \break
   
   r4. a16 a |
@@ -169,7 +173,7 @@ nhacPhienKhucSop = \relative c'' {
   b8 \slashedGrace { cs,8 ( } d4) gs8 |
   a2 ~ |
   a ~ |
-  a4 \bar "|."
+  a4 r \bar "|."
 }
 
 nhacPhienKhucAlto = \relative c' {
@@ -194,8 +198,8 @@ nhacPhienKhucAlto = \relative c' {
   e2 ~ |
   e4 r |
   r8 f r f |
-  g16 (f) e8 d4 ~ |
-  d8 r4 e8 |
+  g16 (f) e8 f4 ~ |
+  f8 r4 e8 |
   r e f16 (e) cs8 |
   d4 g16 (f) e8 |
   f2 ~ |
@@ -209,7 +213,7 @@ nhacPhienKhucAlto = \relative c' {
   \key d \major
   R2
   r4 \tuplet 3/2 { g8 ^> g g } |
-  g4 c!8. ^> c16 |
+  g4 c!8. ^> _\f c16 |
   a8 a r d |
   b8. b16 a8 a |
   r gs a8. a16 |
@@ -217,7 +221,7 @@ nhacPhienKhucAlto = \relative c' {
   R2
   r8 e r d |
   r g \tuplet 3/2 { fs8 ^> e ds } |
-  e4 f!8. ^> f16 |
+  e4 f!8. ^> _\ff f16 |
   d8 d r d |
   d4 d8 d |
   cs4 r8 e |
@@ -235,14 +239,14 @@ nhacPhienKhucAlto = \relative c' {
   fs4) r8 r4. |
   
   \key f \major
-  r4. fs8 ^> e ^> d ^> |
-  fs ^> e ^> d ^> fs8. ^> fs16 fs8 |
-  e4. b'8. ^> b16 b8 |
+  r4. f8 ^> e ^> d ^> |
+  f ^> e ^> d ^> f8. ^> f16 f8 |
+  e4. bf'8. ^> bf16 bf8 |
   a r4 a8. ^> a16 a8 |
   gs4. e4 d8 |
   
   \key d \major
-  cs8 ^> d ^> g fs4 b8 |
+  cs8 ^> e ^> g fs4 b8 |
   as4. b4 e,8 |
   e e e g4 g8 |
   
@@ -290,14 +294,16 @@ nhacPhienKhucAlto = \relative c' {
   r8 d4 d8 |
   cs2 ~ |
   cs ~ |
-  cs4 r |
+  cs4 r
+  -\markup { \lower #3 \halign #-0.2  \bold "Ca đoàn:" }
+  |
   r8 <d' b> ^> <cs a> ^> r |
   r4 <d fs,>8 ^> r |
   r <b fs> <a e> <fs d> |
   <e cs>2 ~ |
   <e cs>4 r |
   r \tuplet 3/2 { <d' fs,>8 <e a,> <d fs,> } |
-  <cs e,>4 r |
+  <cs d,>4 r |
   r \tuplet 3/2 { <fs b,>8 <e cs> <fs as,> } |
   <d b>4 r |
   r \tuplet 3/2 { <d fs,>8 <fs a,> <d a> } |
@@ -316,23 +322,23 @@ nhacPhienKhucAlto = \relative c' {
   r8 a4 ^> a8 |
   gs4 r8 a ^> ~ |
   a g! fs8. e16 |
-  e8 a (b) a |
+  e8 a ([b]) a |
   gs2
   
-  <a fs>2 ~ |
+  <a fs>2 ^> ~ |
   <a fs\=2(> |
   <<
     {
-      d4. e16 d
+      d4. (e16) d
     }
     {
-      fs,4\=2) f!
+      d,4\=2) \once \stemDown f!
     }
   >>
   \oneVoice
-  <cs' e,>4 <d f,!> ^> ~ |
+  <cs' e,>4 <d f,!> ^> _\sf ~ |
   <d f,!> <cs e,> ^> ~ |
-  <cs e,> \bar "|."
+  <cs e,> r \bar "|."
 }
 
 nhacPhienKhucBas = \relative c {
@@ -358,9 +364,10 @@ nhacPhienKhucBas = \relative c {
   >>
   \oneVoice
   d8 r r4 |
-  <a' e a,>8
+  <a' e a,>8 ^>
+  %\once \override NoteColumn.X-offset = 0.5 <>
   
-  a4 ^> a,8 |
+  \slashedGrace { g16 (} a4) ^> a,8 |
   d2 ~ |
   d4 b! |
   c8. g16 c8 (cs) |
@@ -368,21 +375,21 @@ nhacPhienKhucBas = \relative c {
   a a bf (a16 g) |
   f4 r |
   r d8 f ~ |
-  f8 e4 g8 |
+  f8 e4 ^> g8 |
   a2 ~ |
   a4 a8. g16 |
   f8 (e) <a d,> <a d,> |
   <a a,>2 ~ |
   <a a,>4 r |
   r8 d r d |
-  e16 (d) cs8 d4 ~ |
+  e16 (d) c8 d4 ~ |
   d8 r4 g,8 |
   r g a16 (g) e8 |
   f4 r |
-  r a8. d16 |
+  r a8. ^\f d16 |
   g,8 g4. ~ |
   g4 r |
-  r8 d ^> g ^> d ^> |
+  r8 d ^> f ^> d ^> |
   g,4 a |
   d2 ~ |
   d8 d4 e8 |
@@ -390,7 +397,7 @@ nhacPhienKhucBas = \relative c {
   \key d \major
   fs8. fs16 \tuplet 3/2 { g8 ^> fs e } |
   e2 ~ |
-  e4 c'!8. ^> c16 |
+  e4 c'!8. ^> _\f c16 |
   a8 a r d, |
   g8. g16 a8 a |
   r e fs8. fs16 |
@@ -398,7 +405,7 @@ nhacPhienKhucBas = \relative c {
   R2
   r8 a r b |
   r e, \tuplet 3/2 { a8 ^> a a } |
-  g4 f!8. ^> f16 |
+  g4 f!8. ^> _\ff f16 |
   d8 d r d |
   g4 g8 gs |
   a4 r8 e |
@@ -431,7 +438,7 @@ nhacPhienKhucBas = \relative c {
   b4. a8 |
   b e,4 g8 |
   cs,4 (d ~ |
-  d8) d4 e8
+  d8) e4 e8
   
   cs4 (d ~ |
   d) r
@@ -442,7 +449,7 @@ nhacPhienKhucBas = \relative c {
   e8 r4 b'8 |
   r b b16 (a) fs8 |
   g4 r |
-  r b8. e16 |
+  r b8. ^\f e16 |
   a,8 a4. ~ |
   a4 r |
   r8 e ^> g ^> e ^> |
@@ -463,7 +470,11 @@ nhacPhienKhucBas = \relative c {
   a2 ~ |
   a8 a fs16 (a) fs (e) |
   #(define afterGraceFraction (cons 1 2))
-  d8 \afterGrace e4 ( { d8) } a8 |
+  d8 \afterGrace e4 ( {
+    \override Flag.stroke-style = #"grace"
+    d16) }
+  \revert Flag.stroke-style
+  a8 |
   a2 ~ |
   a4 r8 a' ^> |
   gs4. a8 |
@@ -491,10 +502,10 @@ nhacPhienKhucBas = \relative c {
   a <gs e>4 <a fs>8 |
   <a fs>2 |
   <a d,>8. <a d,>16 <gs e>8 <gs e> |
-  <a cs,> <b e,>4 <e e,>8 |
+  <a d,> <b e,>4 <e e,>8 |
   <e fs,>2 |
   r8 <fs d,>4 ^> <fs ds,>8 |
-  <e e,>4 r8 <a, cs,>8 ~ |
+  <e e,>4 r8 <a, cs,>8 ^> ~ |
   <a cs,> <a cs,> <d d,>8. <b d,>16 |
   <a cs,>8 <e' a,,>4 <e a,,>8 |
   <e e,>2
@@ -510,50 +521,50 @@ nhacPhienKhucBas = \relative c {
   >>
   \oneVoice
   <gs e>2 |
-  <a a,>4 <a d,> ^> ~ |
-  <a d,> ^> <a a,> ~ |
-  <a a,>
+  <a a,>4 <a d,> ^> _\sf ~ |
+  <a d,> <a a,> ^> ~ |
+  <a a,> r
 }
 
 loiPhienKhucSop = \lyrics {
   \markup { \lower #3.3 \halign #-0.3 \bold "Intr." }
   \repeat unfold 21 { _ }
-  Mây nước yêu yêu
+  Mây nước yêu yêu,
   không gian trang hoàng như lễ trọng.
   Gió hết cô liêu.
   Si -- on yêu kiều lòng nở hoa hy vọng.
-  Ai đến đàng xa.
+  Ai đến đàng xa,
   Sáng hơn sao xa.
-  Ai đến đàng xa. Ai ai đến đàng xa
+  Ai đến đàng xa, ai, ai đến đàng xa
   đẹp hơn trời hoa.
-  Nhanh đi em ơi! Xé bức khăn tang
+  Mau đi em ơi, Xé bức khăn tang
   thắm lên vạn nụ cười, thắm lên vạn nụ cười.
-  Này Si -- on nhanh chóng đi em ơi!
-  Xé bức khăn tang thăm lên vạn nụ cười.
-  Thắm lên vạn nụ cười
+  Nào Si -- on mau chóng đi em ơi!
+  Xé bức khăn tang thăm lên vạn nụ cười,
+  thắm lên vạn nụ cười,
   trang điểm mau đón mừng Vua cao cả.
   Đến với em cần chi xe song mã.
   Hỡi cửa thành hỡi cửa thành nâng cao mi lên,
-  nâng cao mi lên để tiến vào một triều nguyên ánh sáng.
-  Trăng hòa bình soi đồi núi Bê -- lem.
+  nâng cao mi lên để tiến vào một triều nguyên ánh sáng,
+  Trăng hòa bình soi đồi núi Be -- lem.
   Và muôn phương thôi những ngày tao loạn.
   loạn.
   Ai đến đàng xa.
   Sáng hơn sao sa.
   Ai đến đàng xa.
-  Ai ai đến đàng xa đẹp hơn trời hoa.
-  Ô ô ô kìa sống núi chảy mật ong.
-  Có suối sữa thơm ứ vạn dòng.
-  Có suối sữa thơm ứ vạn dòng.
-  Ô ô kìa ô ô kìa ô ô ô kìa
+  Ai, ai đến đàng xa đẹp hơn trời hoa.
+  Ô ô ô kìa sông núi chảy mật ong.
+  Có suối sữa thơm ứ vạn dòng,
+  có suối sữa thơm ứ vạn dòng
+  ô ô kìa ô ô kìa ô ô ô kìa
   Muôn chim thánh thót vọng trên không.
   Ai về thành đô xem ánh sáng.
-  Ngập tràn khắp nẻo chốn hoàng vương.
-  Nghe dàn thiên nhạc qua năm tháng
+  Ngập tràn khắp nẻo chốn hoàng vương,
+  nghe dàn thiên nhạc qua năm tháng
   Hòa bình là tuổi của tình thương.
   Trời Si -- on tưng bừng như mở hội.
   Hoa đăng về thắm lên tình hôn phối.
-  Hỡi loài người!
+  Hỡi loài người,
   Hỡi loài người phút trời đất giao duyên.
   
   \set stanza = "Solo:"
@@ -561,93 +572,95 @@ loiPhienKhucSop = \lyrics {
 }
 
 loiPhienKhucAlto = \lyrics {
-  Mây nước yêu yêu không gian trang hoàng như lễ trọng.
+  Mây nước yêu yêu,
+  không gian trang hoàng như lễ trọng.
   Gió hết cô liêu.
   Si -- on yêu kiều lòng nở hoa hy vọng.
-  Ai ai đến đàng xa.
-  Ai ai đến đàng xa, đến đàng xa.
-  Ai ai đến đàng xa đẹp hơn trời hoa.
-  Nhanh đi em ơi!
+  Ai, ai đến đàng xa,
+  ai, ai đến đàng xa, đến đàng xa,
+  ai, ai đến đàng xa đẹp hơn trời hoa.
+  Mau đi em ơi,
   Xé bức khăn tang thắm lên vạn nụ cười,
   đẹp lên vạn nụ cười.
-  Này này hãy mau đi em ơi!
-  Xé bức khăn tang thắm lên vạn nụ cười.
-  Thắm lên vạn nụ cười.
-  Trang điểm mau mừng Vua mừng Vua cao cả.
-  Đến với em cần chi xe song mã.
-  Hỡi cửa thành hỡi của thành nâng cao mi lên.
-  Nâng cao mi lên,
-  nâng cao mi lên để tiến vào một triều nguyên ánh sáng.
-  Trăng hòa bình soi đồi núi Bê -- lem.
+  Nào, nào hãy mau đi em ơi
+  Xé bức khăn tang thắm lên vạn nụ cười,
+  thắm lên vạn nụ cười.
+  trang điểm mau mừng Vua mừng Vua cao cả.
+  đến với em cần chi xe song mã.
+  Hỡi cửa thành, hỡi của thành nâng cao mi lên
+  nâng cao mi lên,
+  nâng cao mi lên để tiến vào một triều nguyên ánh sáng,
+  Trăng hòa bình soi đồi núi Be -- lem.
   Và muôn phương thôi những ngày tao loạn.
   loạn.
-  Ai ai đến đàng xa.
-  Ai ai đến đàng xa đến đàng xa.
-  Ai ai đến đàng xa đẹp hơn trời hoa.
-  Ô ô ô kìa ô kìa.
-  Ô kìa ô ô kìa ô ô kìa.
-  Ô ô kìa ô ô kìa.
-  Có suối sữa thơm ứ vạn dòng. Ô ô kìa ô ô kìa
+  Ai, ai đến đàng xa,
+  ai, ai đến đàng xa đến đàng xa.
+  Ai, ai đến đàng xa đẹp hơn trời hoa.
+  Ô ô ô kìa, ô kìa
+  ô kìa, ô ô kìa, ô ô kìa.
+  Ô ô kìa ô ô kìa
+  có suối sữa thơm ứ vạn dòng
+  ô ô kìa ô ô kìa
   ô ô ô kìa. Muôn chim thánh thót vọng trên không.
-  Ai về ai ai về đô thành.
-  Păng păng păng păng.
-  Păng păng păng păng.
-  Păng păng păng păng.
-  Păng păng păng păng păng.
-  Păng păng păng păng păng.
+  Ai về ai, ai về đô thành.
+  păng păng păng păng.
+  păng păng păng păng.
+  păng păng păng păng.
+  păng păng păng păng păng.
+  păng păng păng păng păng.
   Trời Si -- on tưng bừng như mở hội.
   Hoa đăng về thắm lên tình hôn phối.
-  Hỡi loài người!
+  Hỡi loài người,
   Hỡi loài người giờ trời đất giao duyên.
   
   \set stanza = " Ca đoàn:"
-  Hm Hm __ _ _ _ _ _
+  Hm __ _ _ _ _ _ _
 }
 
 loiPhienKhucBas = \lyrics {
   \repeat unfold 12 { _ }
-  Bỗng một chiều không gian mà điểm trang
+  Bỗng một chiều không gian mà điểm trang,
   không gian như lễ trọng.
   Thời gian tràn ý sống.
   Si -- on nở hoa hy vọng.
-  Ai ai đến đàng xa.
-  Ai ai đến đàng xa.
+  Ai, ai đến đàng xa,
+  ai, ai đến đàng xa.
   Hùng hơn mặt nhật.
   Ai đến kia đẹp trời hoa.
-  Nào Si -- on nhanh chóng đi em ơi!
+  Nào Si -- on mau chóng đi em ơi!
   Xé bức khăn tang
   đẹp lên vạn nụ cười, đẹp lên vạn nụ cười.
-  Này này hãy mau đi em ơi!
+  Nào, nào hãy mau đi em ơi
   Xé bức khăn tang
   đẹp lên vạn nụ cười, đẹp lên vạn nụ cười.
-  Trang điểm mau mưng, mừng Vua cao cả
-  lại cùng em đâu cần song mã.
+  trang điểm mau mừng, mừng Vua cao cả
+  về cùng em đâu cần song mã.
   Hỡi cửa thành hỡi cửa thành nâng cao mi lên.
   Hỡi cửa thánh nâng cao mi lên,
-  nâng cao mi lên để tiến vào một triều nguyên ánh sáng.
-  Trăng hòa bình soi núi đồi Bê -- lem.
+  nâng cao mi lên để tiến vào một triều nguyên ánh sáng,
+  Trăng hòa bình soi núi đồi Be -- lem.
   Và muôn phương thôi những ngày tao loạn.
-  Nào Si...
+  Nào Si --
   loạn.
-  Ai ai đến đàng xa.
-  Ai ai đến đàng xa.
+  Ai, ai đến đàng xa,
+  ai, ai đến đàng xa.
   Hùng hơn mặt nhật. Ai đến kìa đẹp trời hoa.
-  Ô ô ô kìa ô kìa ô ô kìa ô ô kìa.
-  Ô ô kìa ô ô kìa.
-  Có suối sữa thơm ứ vạn dòng.
-  Hoa cỏ tưng bừng vui đồng nội.
-  Ô kìa thanh thót vọng trên không.
-  Ai về ai về xem ánh sáng.
-  Păng păng păng păng.
-  Păng păng păng păng.
-  Păng păng păng păng.
-  Păng păng păng păng păng.
-  Păng păng păng păng păng.
+  Ô, ô ô kìa ô kìa ô ô kìa, ô ô kìa.
+  Ô ô kìa ô ô kìa
+  có suối sữa thơm ứ vạn dòng.
+  Hoa cỏ tưng bừng vui đồng nội,
+  ô kìa thanh thót vọng trên không.
+  Ai về ai, lại về nơi thánh
+  păng păng păng păng.
+  păng păng păng păng.
+  păng păng păng păng.
+  păng păng păng păng păng.
+  păng păng păng păng păng.
   Trời Si -- on tưng bừng như mở hội.
   Hoa đăng về thắm lên tình hôn phối.
-  Hỡi loài người!
+  Hỡi loài người,
   Hỡi loài người phút trời đất giao duyên.
-  Hm Hm __ _ _ _ _ _
+  Hm __ _ _ _ _ _ _
 }
 
 % Dàn trang
@@ -670,7 +683,8 @@ loiPhienKhucBas = \lyrics {
   score-system-spacing = #'((basic-distance . 13)
                              (minimum-distance . 13)
                              (padding . 2))
-  page-count = 8
+  %page-count = 8
+  systems-per-page = 4
 }
 
 TongNhip = {
@@ -716,7 +730,6 @@ notBePhu =
     >>
   >>
   \layout {
-    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.2
     %\override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override LyricHyphen.minimum-distance = #1
