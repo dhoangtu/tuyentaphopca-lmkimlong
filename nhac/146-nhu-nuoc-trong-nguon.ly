@@ -123,7 +123,14 @@ nhacPhienKhucSop = \relative c'' {
   <>^\markup { \fontsize #6 \box \bold B }
   b8. b16 \tuplet 3/2 { b8 a g } |
   g4. d8 |
-  \tuplet 3/2 { d'8 d d } \tuplet 3/2 { d e d } |
+  % giải pháp tạm thời: hiển thị nốt bè bas
+  % vì partcombine và tuplet không thể kết hợp khi quá 1 quãng 8
+  \tuplet 3/2 { 
+    <d' \tweak font-size #-2 b,>8
+    <d \tweak font-size #-2 d,>
+    <d \tweak font-size #-2 g,>
+  }
+  \tuplet 3/2 { d e d } |
   d2 |
   c8. c16 \tuplet 3/2 { c8 e c } |
   a4. \once \stemDown d,8 |
@@ -197,7 +204,9 @@ nhacPhienKhucAlto = \relative c' {
   \key g \major
   d8. d16 \tuplet 3/2 { d8 c b } |
   b4. c8 |
-  \tuplet 3/2 { b8 d g } \tuplet 3/2 { b8 c b } |
+  %\tuplet 3/2 { b8 d g }
+  \skip 4
+  \tuplet 3/2 { b'8 c b } |
   a2 |
   g8. g16 \tuplet 3/2 { g8 g g } |
   fs4. \once \stemUp fs8 |

@@ -313,10 +313,10 @@ nhacPhienKhucSop = \relative c'' {
     b4. b8. ^> cs16 cs8 |
     a4. e8 fs e |
     a4 gs8 b4. ~ |
-    b4. d8. e16 e8 |
-    cs4. cs8. d16 d8 |
-    b4. e8 fs e |
-    b4 gs8 a4. ~ |
+    b4. d8. ^> e16 e8 |
+    cs4. cs8. ^> d16 d8 |
+    b4. e,8 fs e |
+    b'4 gs8 a4. ~ |
   }
   \alternative {
     {
@@ -328,23 +328,23 @@ nhacPhienKhucSop = \relative c'' {
       a4 \repeatTie r8 a16 a \bar "||"
     }
   }
-        
+  
   \key f \major
-  <g d c>8 a f8. d16 |
-  <d' g, f>8 <d g, f> r d16 d |
+  <g d c>8\arpeggio a f8. d16 |
+  <d' g, f>8\arpeggio <d g, f> r d16 d |
   <c g e>8 d a8. d,16 |
   <g f d bf>8 <g f d bf> r g16 a |
-  d8 \bar "" \break
-  d4 c8 |
+  d8 \bar "|" \break
+  d4 ^> c8 |
   d2 |
-  r8 a4 g8 |
+  r8 a4 ^> g8 |
   a2 ~ |
   a4 r |
   R2 |
   r4 \tuplet 3/2 { d8 bf g } |
   a4 r8 a16 bf |
   bf4 r8 g |
-  g r \tuplet 3/2 { g e g } |
+  g4 \tuplet 3/2 { g8 e g } |
   a4 \tuplet 3/2 { e8 f e } |
   d2 ~ |
   d4 r |
@@ -547,8 +547,8 @@ nhacPhienKhucAlto = \relative c'' {
   gs4. fs8. ^> e16 gs8 |
   fs4. cs8 cs b |
   cs4 d8 e4 a8 |
-  gs4. fs8. b16 b8 |
-  a4. e8. a16 fs8 |
+  gs4. fs8. ^> b16 b8 |
+  a4. e8. ^> a16 fs8 |
   e4. cs8 cs cs |
   fs (e) d cs4. ~ |
   cs4 r2
@@ -560,16 +560,16 @@ nhacPhienKhucAlto = \relative c'' {
   \key f \major
   R2*4
   r8
-  a'4 a8 |
+  a'4 ^> a8 |
   f2 |
-  r8 d4 d8 |
+  r8 d4 ^> d8 |
   c2 ~ |
   c4 r |
   R2
   r4 \tuplet 3/2 { d'8 bf g } |
   a4 r8 a16 bf |
   bf4 r8 g |
-  g r \tuplet 3/2 { g e g } |
+  g4 \tuplet 3/2 { g8 e g } |
   a4 \tuplet 3/2 { e8 f e } |
   d2 ~ |
   d4 r |
@@ -796,8 +796,8 @@ nhacPhienKhucBas = \relative c {
   e4. d8. ^> cs16 cs8 |
   fs4. a8 a gs |
   fs4 f!8 e8. gs16 b8 |
-  e4. b8. gs16 gs8 |
-  a4. a8. fs16 fs8 |
+  e4. b8. ^> gs16 gs8 |
+  a4. a8. ^> fs16 fs8 |
   gs4. a8 a a |
   d,4 e8 <e a,>4. ~ |
   <e a,>4 r2
@@ -805,23 +805,23 @@ nhacPhienKhucBas = \relative c {
   
   \set Staff.printKeyCancellation = ##f
   \key f \major
-  <bf' g>8 r8 r4 |
-  <a d,>8 d,, r4 |
+  <bf' g>8\arpeggio r8 r4 |
+  <a d,>8\arpeggio d,, r4 |
   <a'' a,>8 r r4 |
-  a8 a, r4 |
+  a8 g, r4 |
   r8 
   
-  f'4 g8 |
+  f'4 ^> g8 |
   d2 |
-  r8 f4 bf8 |
+  r8 f4 ^> bf8 |
   a2 ~ |
   a4 \tuplet 3/2 { a8 g a } |
   a4 \tuplet 3/2 { a8 f c } |
   d2 ~ |
-  d8 <g a,> <f d> r |
-  r <d' d,> <bf g> r |
-  r <b! g> <c e,> r |
-  r <d, bf> <g cs,>4 |
+  d8 <g a,> ^> <f d> ^> r |
+  r <d' d,> ^> <bf g> ^> r |
+  r <bf g> ^> <c e,> ^> r |
+  r <f, d> ^> <g c,>4 ^> |
   <d bf> r8 <bf' g> |
   <a f> r c, d |
   a4. a8 |
@@ -996,10 +996,12 @@ loiPhienKhucSop = \lyrics {
   
   Tôi sẽ chỗi dậy,
   tôi sẽ chỗi dậy và quay về cha từ ái,
-  Tôi sẽ chỗi dậy
-  Tôi sẽ chỗi dậy và quay về với tình cha.
+  Tôi sẽ chỗi dậy,
+  tôi sẽ chỗi dậy và quay về với tình cha.
+  \override Lyrics.LyricText.font-shape = #'italic
   (Đàn) __ _ _
   "_" (Đàn) __ \repeat unfold 18 { _ }
+  \revert Lyrics.LyricText.font-shape
   A a A A a A
   Bóng ai đầu thôn đi lững thững
   tang thương như người hành khất trong vũng nắng vàng
@@ -1055,8 +1057,8 @@ loiPhienKhucAlto = \lyrics {
   
   Tôi sẽ chỗi dậy,
   tôi sẽ chỗi dậy và quay về cha từ ái, nhân ái.
-  Tôi sẽ chỗi dậy
-  Tôi sẽ chỗi dậy và quay về với tình cha.
+  Tôi sẽ chỗi dậy,
+  tôi sẽ chỗi dậy và quay về với tình cha.
   
   "_" A a A A a A
   Bóng ai đầu thôn đi lững thững
@@ -1113,9 +1115,9 @@ loiPhienKhucBas = \lyrics {
   Ôi đau thương kiếp sống hoang đàng.
   
   Tôi sẽ chỗi dậy,
-  tôi sẽ chỗi dậy và quay về nhà, về nhà cha thân ái
-  Tôi sẽ chỗi dậy
-  Tôi sẽ chỗi dậy và quay về lại quê
+  tôi sẽ chỗi dậy và quay về nhà, về nhà cha thân ái.
+  Tôi sẽ chỗi dậy,
+  tôi sẽ chỗi dậy và quay về lại quê
   <<
     {
       cha.
@@ -1128,7 +1130,7 @@ loiPhienKhucBas = \lyrics {
   >>
   \repeat unfold 7 { _ }
   A a a A a A
-  Nắng gieo sắc tía
+  Nắng gieo sắc tía,
   Gió rộn đầy vườn
   A a A a A a A a a A a
   Con chích chòe đập cánh đầu ngõ hát vang
@@ -1196,6 +1198,7 @@ TongNhip = {
 
 \score {
   \new ChoirStaff <<
+    \set Score.connectArpeggios = ##t
     \new Staff <<
       \new Voice = "solo" {
         \clef treble \nhacPhienKhucSolo
@@ -1232,6 +1235,10 @@ TongNhip = {
     \context {
       \Staff \RemoveEmptyStaves
       \override VerticalAxisGroup.remove-first = ##t
+    }
+    \context {
+      \Score
+      \consists "Span_arpeggio_engraver"
     }
   }
 }
