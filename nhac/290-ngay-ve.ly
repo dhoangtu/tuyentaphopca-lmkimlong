@@ -180,12 +180,12 @@ nhacPhienKhucSolo = \relative c' {
   r4
   
   \key f \major
-  r8 e a g16 (a) |
+  r8 d, a' g16 (a) |
   d,4. e16 e |
-  a2 |
-  r8 a f d |
+  a,2 |
+  r8 a f' d |
   e4 r8 g16 a |
-  r8 \slashedGrace { c,8 ( } d4.) \bar "||" \break
+  r8 \slashedGrace { c,16 ( } d4.) \bar "||" \break
   a'4. bf16 g |
   g4. d'16 g, |
   a4 \tuplet 3/2 { f'8 d d } |
@@ -196,12 +196,13 @@ nhacPhienKhucSolo = \relative c' {
   a2 |
   r8 g f a |
   g (f) r e16 f |
-  \slashedGrace { c8 ( } d2 ) ~ \bar "||"
-  d8 a'16 (bf) a8 a |
+  \slashedGrace { c16 ( } d2 ) ~ |
+  d8 \bar "||" \break
+  a'16 (bf) a8 a |
   d g,4 a8 |
   a2 |
   r8 fs16 (e) a8 d, |
-  d \bar "||" \break
+  d \bar "|." \break
 }
 
 nhacPhienKhucSop = \relative c'' {
@@ -348,53 +349,54 @@ nhacPhienKhucSop = \relative c'' {
   a4 \tuplet 3/2 { e8 f e } |
   d2 ~ |
   d4 r |
-  r \tuplet 3/2 { c'8 c c } |
+  r \tuplet 3/2 { c'8 ^> c c ^> } |
   d4 r |
-  r8 bf a r |
-  r d c r |
-  r4 r8 c |
-  d r \tuplet 3/2 { bf bf bf } |
-  a4 r8 d |
-  d r c d |
+  r8 bf ^> a ^> r |
+  r d ^> c ^> r |
+  r4 r8 c ^> |
+  d ^> r \tuplet 3/2 { bf ^> bf ^> bf ^> } |
+  a4 r8 d ^> |
+  d ^> r c d |
   a4 r8 a |
   d,8 f4 g8 |
-  g4 r8 g |
-  g r f g |
+  g4 r8 g ^> |
+  g ^> r f g |
   d4 r8 d' |
   a c4 d8 |
   d2 ~ |
   d4 r |
   R2
-  a8 r r bf |
-  g r r d' |
-  d2 ~ |
-  \partial 4 d4 \bar "||" \break
-  
+  a8 ^> r r bf ^> |
+  g ^> r r d' ^> \bar "||"
+
   \key d \major
+  d2 ~ |
+  \partial 4 d4 \bar "|" \break
+  
   R2
   r8 e16 (fs) e8 d |
-  cs4. d8 |
+  cs4. cs8 |
   b4. a8 |
   g e e g |
   a bf4 bf8 |
   a2 ~ |
   a4 r |
   R2*3
-  e8 e r g |
+  e8 ^- e ^- r g |
   a2 |
-  r8 d4 b8 |
-  \slashedGrace { b8 ( } a2) |
-  r8 a4 fs8 |
-  \slashedGrace { fs8 ( } e2) \bar "||" \break
+  r8 d4 ^> b8 |
+  \slashedGrace { b16 ( } a2) |
+  r8 a4 ^> fs8 |
+  \slashedGrace { fs16 ( } e2) \bar "||" \break
   %\key f \major
   R2*21
   r8
   
   \key d \major
-  d'4 d8 |
-  \slashedGrace { b8 ( } a2) |
-  r8 a4 a8 |
-  \slashedGrace { fs8 ( } e2) ~ |
+  d'4 ^> d8 |
+  \slashedGrace { b16 ( } a2) |
+  r8 a4 ^> a8 |
+  \slashedGrace { fs16 ( } e2) ~ |
   e4 r |
   R2*13 \break
   R2
@@ -414,12 +416,19 @@ nhacPhienKhucSop = \relative c'' {
     }
     {
       d,2 ~ |
-      d4 r |
-      R2 
+      <<
+        {
+          d4 g'\rest |
+        }
+        \notBePhu -2 {
+          a,,8\rest a16 a d8 e |
+        }
+      >>
+      \notBePhu -2 { fs d16 d fs8 g } |
       \set Score.repeatCommands = #'((volta #f))
-      r8 a' a4 |
+      r8 a ^> a4 ^> |
       fs'8 fs fs g16 (fs) |
-      e4. \slashedGrace { \once \stemDown cs8 ^( } e) |
+      e4. \slashedGrace { \once \stemDown cs16 ^( } e8) |
       cs4 b8 e ~ |
       e gs,4 a8 |
     }
@@ -438,18 +447,19 @@ nhacPhienKhucSop = \relative c'' {
       \once \override NoteColumn.X-offset = 3 <>
       cs16
       \tweak extra-offset #'(0 . -1)
-      _\markup { \halign #-1 \fontsize #1 \italic "(Đàn)" }
+      _\markup { \halign #-1 \fontsize #2 \italic "(Đàn)" }
       cs b8 e |
       a,8
     }
   >>
   \oneVoice
-  a a4 |
+  a ^> a4 ^> |
   fs'8 fs fs g16 (fs) |
   e4. a8 |
   g4 e8 a ~ |
   a cs,4 d8 |
-  d2 \bar "|."
+  d2 ~ |
+  d4 r \bar "|."
 }
 
 nhacPhienKhucAlto = \relative c'' {
@@ -576,12 +586,12 @@ nhacPhienKhucAlto = \relative c'' {
   r4
   <<
     {
-      \tuplet 3/2 { g8 g g } |
+      \tuplet 3/2 { g8 ^> g g ^> } |
       f4 r |
-      r8 g e r |
-      r g a r |
-      r4 r8 g |
-      a r \tuplet 3/2 { g g g } |
+      r8 g ^> e ^> r |
+      r g ^> a ^> r |
+      r4 r8 g ^> |
+      a ^> r \tuplet 3/2 { g ^> g ^> g ^> } |
       f4
     }
     {
@@ -594,23 +604,24 @@ nhacPhienKhucAlto = \relative c'' {
       d4
     }
   >>
-  r8 g |
-  bf r a g |
+  r8 a' ^> |
+  bf ^> r a g |
   e4 r8 c |
   d d4 f8 |
-  e4 r8 b! |
-  c r d c |
-  b!4 r8 bf |
+  e4 r8 b! ^> |
+  c ^> r d c |
+  b!4 r8 b |
   c e4 e8 |
   d2 ~ |
   d4 r |
   R2
-  f8 r r f |
-  d r r g |
+  f8 ^> r r f ^> |
+  d ^> r r g ^> |
+
+  \key d \major
   fs2 ~ |
   \partial 4 fs4
   
-  \key d \major
   R2
   R2
   r8 a fs16 (e) d8 |
@@ -620,20 +631,20 @@ nhacPhienKhucAlto = \relative c'' {
   cs2 ~ |
   cs4 r |
   R2*3
-  e8 e r g |
+  e8 _- e _- r g |
   a2 |
-  r8 fs4 d8 |
+  r8 fs4 ^> d8 |
   cs2 |
-  r8 cs4 d8 |
+  r8 cs4 ^> cs8 |
   b2
   %\key f \major
   R2*21
   r8
   
   \key d \major
-  a'4 b8 |
+  a'4 ^> b8 |
   e,2 |
-  r8 e4 fs8 |
+  r8 e4 ^> fs8 |
   b,2 ~ |
   b4 r |
   R2*13 \break
@@ -645,23 +656,24 @@ nhacPhienKhucAlto = \relative c'' {
   fs4 d8 d |
   cs4 cs8 cs |
   d4. b8 |
-  cs cs4 cs8 |
+  a a4 cs8 |
   d4 fs8 e |
   a,2 ~ |
   a4 r |
   R2
-  r8 a' a4 |
+  r8 a' ^> a4 ^> |
   a8 a a b16 (a) |
   g4. gs8 |
   a4 e8 e ~ |
-  e e (d) cs |
+  e e ([d]) cs |
   cs2 |
-  r8 a' a4 |
+  r8 a' ^> a4 ^> |
   a8 a a b16 (d) |
   cs4. d8 |
   b4 b8 a ( |
-  a) a (g) fs |
-  fs2
+  a) a ([g]) fs |
+  fs2 ~ |
+  fs4 r
 }
 
 nhacPhienKhucBas = \relative c {
@@ -822,31 +834,32 @@ nhacPhienKhucBas = \relative c {
   r <d' d,> ^> <bf g> ^> r |
   r <bf g> ^> <c e,> ^> r |
   r <f, d> ^> <g c,>4 ^> |
-  <d bf> r8 <bf' g> |
-  <a f> r c, d |
+  <f d> r8 <bf g> ^> |
+  <a f> ^> r c, d |
   a4. a8 |
   f'4 \tuplet 3/2 { d8 bf' a } |
-  g4 r8 \slashedGrace { g8 ( } a8 ) |
+  g4 r8 \slashedGrace { g16 ( } a8 ) |
   f4. f16 e |
-  a4 \slashedGrace { g8 ( } \tuplet 3/2 { a8) f e } |
+  a4 \slashedGrace { g16 ( } \tuplet 3/2 { a8) f e } |
   d2 ~ |
-  d4 r8 f |
-  g r g g |
+  d4 r8 f ^> |
+  g ^> r g g |
   a4 r8 a |
   bf bf4 b!8 |
-  c4 r8 g |
-  d r f f |
+  c4 r8 g ^> |
+  e ^> r f f |
   g4 r8 g |
   a a4 g8 |
   f4 r8 g |
   g f4 g8 |
   e4 r8 e |
-  d r d <d' d,> |
-  <bf g> r r <bf g> |
+  d ^> r d <d' d,> ^> |
+  <bf g> ^> r r <bf g> ^> |
+  
+  \key d \major
   <a d,>2 ~ |
   <a d,>4
   
-  \key d \major
   r8 d b16 (a) g8 |
   g a e (g) |
   a4. fs8 |
@@ -854,24 +867,24 @@ nhacPhienKhucBas = \relative c {
   e g4 e8 |
   d g4 g8 |
   a2 ~ |
-  a8 a g a |
+  a8 a ^> g ^> a ^> |
   <d bf>2 |
-  r8 <a f!>4 <a f!>8 |
+  r8 <a fs>4 ^> <a fs>8 |
   <bf g>2 ~ |
-  <bf g>4 r4 |
+  <bf! g>4 r4 |
   R2
-  r8 d,4 g8 |
+  r8 d,4 ^> g8 |
   a2 |
-  r8 <a a,>4 <a d,>8 |
+  r8 <a a,>4 ^> <a d,>8 |
   <gs e>2
   
   R2*21
   r8
   
   \key d \major
-  <fs' d,>4 <d g,>8 |
+  <fs' d,>4 ^> <d g,>8 |
   <cs a>2 |
-  r8 <cs a,>4 <a d,>8 |
+  r8 <cs a,>4 ^> <a d,>8 |
   <gs e>2 ~ |
   <gs e>4 r8 e |
   e4. a16 a |
@@ -880,14 +893,14 @@ nhacPhienKhucBas = \relative c {
   e4. d16 g |
   g2 ~ |
   g4 \tuplet 3/2 { d'8 b b } |
-  \slashedGrace { b8 ( } d4.) fs,16 g |
-  a4 \slashedGrace { a8 ( } \tuplet 3/2 { b8) g g } |
+  \slashedGrace { b16 ( } d4.) fs,16 g |
+  a4 \slashedGrace { a16 ( } \tuplet 3/2 { b8) g g } |
   e4. e16 fs |
   d2 ~ |
   d4 r8 cs16 d |
-  b4 \tuplet 3/2 { b8 cs b } |
+  b4 \tuplet 3/2 { b8 d b } |
   a2 \bar "||"
-  r8 cs (d) fs |
+  r8 cs ([d]) fs |
   e4 g8 fs ~ |
   fs e4 e8 |
   a4 d,8 g |
@@ -895,32 +908,26 @@ nhacPhienKhucBas = \relative c {
   b4. bf8 |
   a4 a8 a |
   d,4. e8 |
-  <e a,> <a a,>4 <g a,>8 |
+  <e a,> <g a,>4 <g a,>8 |
   <fs d>4 d8 g |
   <fs d>2 ~ |
-  <<
-    {
-      <fs d>4 a4\rest
-    }
-    {
-      \stemDown a,,8\rest a'16 a d8 e |
-    }
-  >>
-  fs d16 d fs8 g |
-  a
+  <fs d>4 a4\rest
+  R2
+  r8
   \once \override NoteColumn.X-offset = 2 <>
-  a a4 |
+  a ^> a4 ^> |
   d8 d d, ds |
   e4. e8 |
   fs4 <gs d>8 <a cs,> ~ |
   <a cs,> <b e,>4 <a e a,>8 |
   <a e a,>2 |
-  r8 a a4 |
+  r8 a ^> a4 ^> |
   d8 d d g, |
   a4. fs8 |
   g4 <b g>8 <d fs,> ~ |
   <d fs,> <e a,>4 <d a d,>8 |
-  <d a d,>2
+  <d a d,>2 ~ |
+  <d a d,>4 r
 }
 
 % Lời phiên khúc
@@ -960,7 +967,9 @@ loiPhienKhucSolo = \lyrics {
   đến cả lòng cha đầy tình yêu
   Con không đang gọi là con nữa
   Xin xử với con như đứa ở
-  Lão ông nghe nói gạt phăng ngay
+  
+  \set stanza = "Solo (nữ):"
+  Lão ông nghe nói gạt phăng ngay,
   Gọi lớn người nhà
   
 }
@@ -1007,26 +1016,29 @@ loiPhienKhucSop = \lyrics {
   tang thương như người hành khất trong vũng nắng vàng
   A \repeat unfold 13 { a }
   Ô hay mộng hay thực
-  đang tỉnh hay trong mê
+  đang tỉnh hay trong mê.
   Ô hay mộng hay thực
-  đang tỉnh hay trong mê
-  không
+  đang tỉnh hay trong mê.
+  Không,
   đúng rồi chính hắn.
-  Lão ông vội vàng
+  Lão ông vội vàng,
   Lão ông vội vàng chạy lại ôm con rất thiết tha.
-  Nghẹn ngào ông nói:
-  Hỡi con cha hỡi con cha
+  nghẹn ngào ông nói:
+  Ớ con cha Ơ con cha
   
-  Ớ chúng bay ớ chúng bay
-  Chúng ta cùng mừng rỡ
-  Này con ông đã chết lại hồi sinh
-  Đã mất đi nay gặp lại an bình
+  Ớ chúng bay, Ớ chúng bay
+  chúng ta cùng mừng rỡ
+  Này con ông đã chết lại hồi sinh,
+  đã mất đi nay gặp lại an bình.
   Này con
   bình
-  Ngoài trời sắc nắng cũng thắm lên
-  Tiếng chim ríu rít dậy đầy thềm
-  Ngoài trời sắc nắng cũng thắm lên
-  Tiếng chim ríu rít dậy đầy thềm.
+  \override Lyrics.LyricText.font-shape = #'italic
+  (Đàn) __ _ _ _ _ _ _ _ _
+  \revert Lyrics.LyricText.font-shape
+  Ngoài trời sắc nắng cũng thắm lên,
+  tiếng chim ríu rít dậy đầy thềm
+  Ngoài trời sắc nắng cũng thắm lên,
+  tiếng chim ríu rít dậy đầy thềm.
 }
 
 loiPhienKhucAlto = \lyrics {
@@ -1065,26 +1077,26 @@ loiPhienKhucAlto = \lyrics {
   tang thương như người hành khất trong vũng nắng vàng
   A \repeat unfold 13 { a }
   Ô hay mộng hay thực
-  đang tỉnh hay trong mê
+  đang tỉnh hay trong mê.
   Ô hay mộng hay thực
-  đang tỉnh hay trong mê
-  không đúng rồi chính hắn.
+  đang tỉnh hay trong mê.
+  Không, đúng rồi chính hắn.
   Lão ông vội vàng tung cửa ra
   chạy lại ôm con rất thiết tha
-  Nghẹn ngào ông nói:
-  Hỡi con cha
-  hỡi con cha
+  nghẹn ngào ông nói:
+  Ớ con cha
+  Ơ con cha
   
-  Ớ chúng bay ớ chúng bay
-  Chúng ta cùng mừng rỡ
-  Này con ông đã chết lại hồi sinh
-  Đã mất đi nay gặp lại an bình
+  Ớ chúng bay, Ớ chúng bay
+  chúng ta cùng mừng rỡ
+  Này con ông đã chết lại hồi sinh,
+  đã mất đi nay gặp lại an bình.
   Này con
   bình
-  Ngoài trời sắc nắng cũng thắm lên
-  Tiếng chim ríu rít dậy đầy thềm
-  Ngoài trời sắc nắng cũng thắm lên
-  Tiếng chim ríu rít dậy đầy thềm.
+  Ngoài trời sắc nắng cũng thắm lên,
+  tiếng chim ríu rít dậy đầy thềm
+  Ngoài trời sắc nắng cũng thắm lên,
+  tiếng chim ríu rít dậy đầy thềm.
 }
 
 loiPhienKhucBas = \lyrics {
@@ -1133,38 +1145,36 @@ loiPhienKhucBas = \lyrics {
   Nắng gieo sắc tía,
   Gió rộn đầy vườn
   A a A a A a A a a A a
-  Con chích chòe đập cánh đầu ngõ hát vang
-  Lão ông mang mục kính ngó thẳng ra đàng
+  Con chích chòe đập cánh đầu ngõ hát vang,
+  Lão ông đeo mục kính ngó thẳng ra đàng
   Ô hay mộng hay thức
-  đang tỉnh hay trong mê
-  ô hay mộng hay thức
-  đang tỉnh hay trong mê
+  đang tỉnh hay trong mê.
+  Ô hay mộng hay thực
+  đang tỉnh hay trong mê.
   Ai như thằng Hai về
-  ô không
+  Ô không
   mà thực rồi chính hắn
   Lão ông vội vàng tung cửa ra
-  vội vàng vội vàng tới ôm con rất thiết tha
+  vội vàng vội vàng tới ôm con rất thiết tha,
   Hai hàng nước mắt tuôn như suối
-  Hỡi con cha
-  hỡi con cha
+  Ơ con cha
+  Ơ con cha
   
-  Ớ chúng bay ớ chúng bay
-  \set stanza = " Solo (nam):"
+  Ớ chúng bay, Ớ chúng bay,
   Nhanh đi lấy áo dài hảo hạng
   mặc cho con ông nhìn xứng đáng
-  lấy thêm đôi nhẫn xỏ vào tay
-  Lắp ngay cho cậu một đôi giầy
+  lấy thêm đôi nhẫn xỏ vào tay,
+  Lắp ngay cho cậu một đôi giầy.
   Rồi ra chuồng chọn con me bự
-  Mở yến đi Chúng ta cùng mừng rỡ
-  Này con ông đã chết tái sinh
-  Đã mất rồi nay gặp lại bình
-  an Này con
+  Mở yến đi chúng ta cùng mừng rỡ
+  Này con ông đã chết tái sinh,
+  đã mất rồi nay gặp lại an bình.
+  Này con
   an
-  (Đàn) __ _ _ _ _ _ _ _ _ _
-  Ngoài trời sắc nắng cùng rực lên
-  Lời chim ríu rít thấy đầy thềm
-  Ngoài trời sắc nắng cũng rực lên
-  Lời chim ríu rít thấy đầy thềm.
+  Ngoài trời sắc nắng cũng đậm lên,
+  đàn chim ríu rít thấy đầy thềm
+  Ngoài trời sắc nắng cũng đậm lên,
+  đàn chim ríu rít thấy đầy thềm.
 }
 
 % Dàn trang
@@ -1187,7 +1197,7 @@ loiPhienKhucBas = \lyrics {
   score-system-spacing = #'((basic-distance . 13)
                              (minimum-distance . 13)
                              (padding . 2))
-  %page-count = 10
+  page-count = 12
 }
 
 TongNhip = {
@@ -1227,7 +1237,7 @@ TongNhip = {
   \layout {
     \override Lyrics.LyricSpace.minimum-distance = #1.2
     %\override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override LyricHyphen.minimum-distance = #1
+    \override LyricHyphen.minimum-distance = #0.6
     \override Staff.VerticalAxisGroup.staff-staff-spacing =
         #'((basic-distance . 8)
 	   (minimum-distance . 8)
