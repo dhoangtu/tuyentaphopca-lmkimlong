@@ -173,7 +173,7 @@ nhacDiepKhucBas = \relative c' {
 }
 
 % Lời điệp khúc
-loiDiepKhucSop = \lyricmode {
+loiDiepKhucSopMot = \lyricmode {
   Con biết lấy gì cảm mến, con biết lấy gì cảm mến hồng ân.
   Một triều hồng ân chan chứa Chúa nhuần thắm cả đời con.
   \set stanza = "1."
@@ -185,10 +185,18 @@ loiDiepKhucSop = \lyricmode {
   con biết lấy gì cảm mến hồng ân.
   Trọn một vầng tim son sắt,
   nguyện yêu Chúa trọn đời.
-  
 }
 
-loiDiepKhucAlto = \lyricmode {
+loiDiepKhucSopHai = \lyricmode {
+  \repeat unfold 26 { _ }
+  \set stanza = "2."
+  Lúc sướng vui khi nặng u sầu
+  Ngài hằng đổ tràn muôn ân phúc
+  giống chính con ngươi ở mắt Ngài
+  tình Ngài thắp sáng niềm miến yêu.
+}
+
+loiDiepKhucAltoMot = \lyricmode {
   Con biết lấy gì cảm mến, con biết lấy gì cảm mến hồng ân,
   một triều hồng ân hồng ân chan chứa
   Chúa nhuần thắm cả đời con.
@@ -206,7 +214,16 @@ loiDiepKhucAlto = \lyricmode {
   mà cảm mến hồng ân.
 }
 
-loiDiepKhucBas = \lyricmode {
+loiDiepKhucAltoHai = \lyricmode {
+  \repeat unfold 28 { _ }
+  \set stanza = "2."
+  Lúc sướng vui khi nặng u sầu
+  Ngài hằng đổ tràn muôn ân phúc
+  giống chính con ngươi ở mắt Ngài
+  tình Ngài thắp sáng niềm miến yêu.
+}
+
+loiDiepKhucBasMot = \lyricmode {
   Con biết lấy gì, con biết lấy gì cảm mến Ngài Chúa ơi,
   Một triều hồng ân cả triều hồng ân chan hòa
   Ngài nhuần thấm đời con.
@@ -222,6 +239,15 @@ loiDiepKhucBas = \lyricmode {
   Trọn một vầng tim sắt son
   mến yêu Chúa trọn đời
   mà cảm mến hồng ân.
+}
+
+loiDiepKhucBasHai = \lyricmode {
+  \repeat unfold 28 { _ }
+  \set stanza = "2."
+  Lần qua từng giây phút
+  Theo mỗi tiếng con khẩn cầu
+  Hồn con Ngài canh giữ
+  Dìu dắt bảo toàn sớm chiều
 }
 
 % Dàn trang
@@ -240,6 +266,7 @@ loiDiepKhucBas = \lyricmode {
       (/ 20 20)))
   %page-count = #1
   print-page-number = #f
+  systems-per-page = 4
   system-system-spacing = #'((basic-distance . 15))
   %score-system-spacing = #'((basic-distance . 15))
 }
@@ -277,21 +304,24 @@ notBePhu =
         \new Voice = beSop {
           \TongNhip \nhacDiepKhucSop
         }
-        \new Lyrics \lyricsto beSop \loiDiepKhucSop
+        \new Lyrics \lyricsto beSop \loiDiepKhucSopMot
+        \new Lyrics \lyricsto beSop \loiDiepKhucSopHai
     >>
     \new Staff <<
         \clef treble
         \new Voice = beAlto {
           \TongNhip \nhacDiepKhucAlto
         }
-        \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
+        \new Lyrics \lyricsto beAlto \loiDiepKhucAltoMot
+        \new Lyrics \lyricsto beAlto \loiDiepKhucAltoHai
     >>
     \new Staff <<
         \clef bass
         \new Voice = beBas {
           \TongNhip \nhacDiepKhucBas
         }
-        \new Lyrics \lyricsto beBas \loiDiepKhucBas
+        \new Lyrics \lyricsto beBas \loiDiepKhucBasMot
+        \new Lyrics \lyricsto beBas \loiDiepKhucBasHai
     >>
   >>
   \layout {
