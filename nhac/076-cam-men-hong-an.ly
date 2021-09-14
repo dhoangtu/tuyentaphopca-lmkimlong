@@ -14,7 +14,7 @@ nhacDiepKhucSop = \relative c'' {
   \partial 4. r8 r4
   r8 b c a |
   e4 c8 (d) |
-  e4 r8 b' |
+  e4 r8 a |
   c8. c16 a8 a \bar ".|:"
   b4. g8 |
   a4 r |
@@ -64,8 +64,8 @@ nhacDiepKhucAlto = \relative c'' {
   \partial 4. r8 r4
   r8 b c a |
   e4 c8 (d) |
-  e4 r8 b' |
-  c8. c16 a8 a |
+  e4 r8 gs |
+  a8. g16 e8 a |
   gs4 e8 (d) |
   c c c c |
   f4. e8 |
@@ -89,8 +89,8 @@ nhacDiepKhucAlto = \relative c'' {
   c4 r |
   r4. c16 c |
   e8 a f a |
-  <g e>2 ~ |
-  <g e>4 r |
+  <gs e>2 ~ |
+  <gs e>4 r |
   r8 b16 b c8 a |
   e4 c8 (d) |
   e4 r8 gs |
@@ -179,8 +179,8 @@ loiDiepKhucSop = \lyricmode {
   \set stanza = "1."
   Chúa nắn con nên hình nên dạng.
   Và mời gọi nhập Dân thánh Chúa.
-  Thánh hiến con trong Thần Linh Ngài.
-  Và thành ánh sáng rọi khắp nơi.
+  thánh hiến con trong Thần Linh Ngài.
+  Và thành ánh sáng dọi khắp nơi.
   Nên con biết lấy gì cảm mến,
   con biết lấy gì cảm mến hồng ân.
   Trọn một vầng tim son sắt,
@@ -189,14 +189,14 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Con biết lấy gì cảm mến, con biết lấy gì cảm mến hồng ân.
-  Một triều hồng ân, hồng ân chan chứa
+  Con biết lấy gì cảm mến, con biết lấy gì cảm mến hồng ân,
+  một triều hồng ân hồng ân chan chứa
   Chúa nhuần thắm cả đời con.
   \set stanza = "1."
   Chúa nắn con nên hình nên dạng.
   Và mời gọi nhập Dân thánh Chúa.
-  Thánh hiến con trong Thần Linh Ngài.
-  Và thành ánh sáng rọi khắp nơi.
+  thánh hiến con trong Thần Linh Ngài.
+  Và thành ánh sáng dọi khắp nơi.
   Nên con biết lấy gì cảm
   
   mến con biết lấy gì cảm mến hồng ân.
@@ -207,7 +207,7 @@ loiDiepKhucAlto = \lyricmode {
 }
 
 loiDiepKhucBas = \lyricmode {
-  Con biết lấy gì, con biết lấy gì cảm mến Ngài Chúa ơi.
+  Con biết lấy gì, con biết lấy gì cảm mến Ngài Chúa ơi,
   Một triều hồng ân cả triều hồng ân chan hòa
   Ngài nhuần thấm đời con.
   \set stanza = "1."

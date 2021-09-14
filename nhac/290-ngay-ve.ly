@@ -206,11 +206,22 @@ nhacPhienKhucSolo = \relative c' {
 }
 
 nhacPhienKhucSop = \relative c'' {
+  <>^\markup { \fontsize #6 \box \bold A }
   \key f \major \time 2/4
   \partial 4 r8 d |
-  <d g, f>8. d16 c8 d |
+  <<
+    {
+      \voiceOne
+      d8. d16 c8 d
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      g,8 r8 r4
+    }
+  >>
+  \oneVoice
   \repeat volta 2 {
-    <a g c,> <a g c,> r a |
+    <a g c,>8 <a g c,> r a |
     d,8. a16 d8 f |
     <g f d bf> <g f d bf> r8 \bar "|" \break
     a |
@@ -254,6 +265,9 @@ nhacPhienKhucSop = \relative c'' {
       d8. d16 c8 d
     }
     {
+      <>_\markup {
+        \fontsize #6 \box \bold B
+      }
       r4 r8 d |
       d8. d16 c8 d |
       <a g c,>8 <a g c,> r a |
@@ -326,7 +340,13 @@ nhacPhienKhucSop = \relative c'' {
     {
       \time 2/4
       \set Staff.printKeyCancellation = ##f
-      a4 \repeatTie r8 a16 a \bar "||"
+      a4 \repeatTie
+      \set Score.repeatCommands = #'((volta #f))
+      r8
+      \mark \markup {
+          \fontsize #6 \box \bold C
+        }
+      a16 a \bar "||"
     }
   }
   
