@@ -76,7 +76,7 @@ nhacPhienKhucSop = \relative c'' {
   
   a16 d |
   a4. g8 |
-  f (e) \slashedGrace { d ( } f) c |
+  f (e) \slashedGrace { d16 ( } f8) c |
   d4 r8 d16 bf |
   bf4. d8 |
   a8 a4 f'8 |
@@ -141,23 +141,41 @@ nhacPhienKhucSop = \relative c'' {
   R2
   r4 r8 a |
   a a fs (a) |
-  \slashedGrace { \once \stemDown a ^( } bf4) a8 a |
+  \slashedGrace { \once \stemDown a16 ^( } b4) a8 a |
   e'4. fs8 |
   e cs4 cs8 |
   d2 ~ |
   
   \time 6/8
-  d4 r8 \bar "||" \break
+  d4 r8 \bar "||"
+  
+  \pageBreak
   
   \key f \major
-  \partial 4. a4 bf8 |
-  bf8. bf16 g8 d'4 e8 |
-  cs4. d4 g,8 |
-  g4 a8 bf8. bf16 a8 |
-  a4. e'8 (f) d |
-  e4 cs8 cs cs d |
-  a4. f4 g8 |
-  g4 f8 e8. a16 d,8 |
+  \partial 4.
+  <<
+    {
+      a4 bf8 |
+      bf8. bf16 g8 d'4 e8 |
+      cs4. d4 g,8 |
+      g4 a8 bf8. bf16 a8 |
+      a4. e'8 (f) d |
+      e4 cs8 cs cs d |
+      a4. f4 g8 |
+      g4 f8 e8. a16
+    }
+    {
+      f4 g8 |
+      g8. g16 e8 f4 g8 |
+      a4. f4 f8 |
+      e4 f8 g8. g16 f8 |
+      f4. g8 (a) f |
+      g4 g8 a a g |
+      f4. d4 e8 |
+      e4 d8 cs8. cs16
+    }
+  >>
+  d8 |
   d4. ~ d4 r8 \break \bar ".|:"
   
   \time 2/4
@@ -174,15 +192,15 @@ nhacPhienKhucSop = \relative c'' {
     b8. cs16 d8 cs |
     b d4 ds8 |
     e2 |
-    fs8. fs16 g8 e |
-    a e4 cs8 |
+    fs8. fs16 g!?8 e |
+    a, e'4 cs8 |
   }
   \alternative {
     {
-      \slashedGrace { \once \stemDown cs8 ^( } d2)
+      \slashedGrace { \once \stemDown cs16 ^( } d2)
     }
     {
-      \slashedGrace { \once \stemDown cs8 ^( } d2) ~ |
+      \slashedGrace { \once \stemDown cs16 ^( } d2) ~ |
       d ~ |
       d4 r
     }
@@ -229,7 +247,7 @@ nhacPhienKhucAlto = \relative c'' {
   bf4 r8 f |
   f f16 f g8 g |
   a2 |
-  f16 (g) f8 e4 ~ |
+  f16 -> (g) f8 e4 ~ |
   e4 e8 (d) |
   cs2 ~ |
   cs4 g'8 f |
@@ -322,7 +340,7 @@ nhacPhienKhucAlto = \relative c'' {
   d d4 cs8 |
   d2 |
   b8. d16 cs8 cs |
-  d fs (e) d |
+  d fs ([e]) d |
   cs2 |
   g'8. g16 fs8 a |
   d, a'4 a8 |
@@ -359,7 +377,7 @@ nhacPhienKhucBas = \relative c' {
   e ([g a]) \afterGrace f ({
     \once \stemDown
     \override Flag.stroke-style = #"grace"
-    d) } |
+    d16) } |
   \autoBeamOn
   \revert Flag.stroke-style
   d4 d'8 d |
@@ -395,8 +413,8 @@ nhacPhienKhucBas = \relative c' {
   d4 bf8 f |
   g8 g16 g a4 ~ |
   a a |
-  d2 ~ |
-  d4 a16 ^> (bf) a8 |
+  d,2 ~ |
+  d4 a'16 ^> (bf) a8 |
   g4 g8 bf |
   a2 ~ |
   a4 r |
@@ -404,23 +422,39 @@ nhacPhienKhucBas = \relative c' {
   r4
   <<
     {
-      \voiceOne
       e'8 d |
       cs4 r8 cs |
-      d a4 g8 |
-      f2 ~ |
-      f4
+    }
+    {
+      g8 g |
+      a4 r8 a |
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      \voiceOne
+      d
+      \once \override NoteColumn.force-hshift = #1
+      a4 g8 |
+      
     }
     \new Voice = "beBasPhu" {
 	    \voiceTwo
-      g8 g |
-      a4 r8 a |
       g a a,4 |
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      f'2 ~ |
+      f4
+    }
+    {
       d2 ~ |
       d4
     }
   >>
-  \oneVoice
   d8 c |
   d4. d8 |
   a4 g'8 f16 (g) |
@@ -437,10 +471,10 @@ nhacPhienKhucBas = \relative c' {
   r d8 g, |
   g g16 g bf8 g |
   a4 a, |
-  d4 a8 a |
+  d4 a'8 a |
   bf4. g8 |
   f g4 a8 |
-  \slashedGrace { \stemDown d16 ^(f \stemNeutral } d4) bf8 bf |
+  \slashedGrace { \stemDown d,16 ^(f \stemNeutral } d4) bf8 bf |
   g4. a8 |
   c4 c8 c |
   f4 r |
@@ -517,7 +551,7 @@ nhacPhienKhucBas = \relative c' {
 % Lời
 loiPhienKhucSop = \lyrics {
   Hmm __ \repeat unfold 4 { _ }
-  Nói vạn lời nghĩa yêu thương của một chiều tình sử.
+  nói vạn lời nghĩa yêu thương của một chiều tình sử.
   Dâng đầy ứ khắp châu thân của ngọc thể tình yêu.
   Giữa đất trời cô lạnh.
   lạnh. Tôi thấy máu đỏ làm sao
@@ -526,116 +560,118 @@ loiPhienKhucSop = \lyrics {
   hòa lệ hòa mồ hôi lấp lánh,
   hòa lệ hòa mồ hôi lấp lánh
   chảy từng dòng từ mặt mũi miệng tai.
-  Chảy ròng ròng ôi thắm ngời Máu đỏ.
-  Theo dấu đinh Máu tràn vọt chứa chan
-  toàn thân Người là một vết tử thương.
+  chảy ròng ròng ôi thắm ngời Máu đỏ.
+  Theo dấu đinh máu tràn vọt chứa chan,
+  Toàn thân Người là một vết tử thương.
   
   Tôi thấy đây trong một buổi chiều mù
-  trang tình sử viết toàn bằng máu đỏ.
-  Máu lênh láng trên ngọn đồi hoen ố
+  Trang tình sử viết toàn bằng máu đỏ.
+  Máu lênh láng trên ngọn đồi hoen ố,
   ngợp hồn tôi dòng bửu huyết uy linh.
   
   Máu còn chảy còn chảy mãi chưa ngưng,
-  máu còn chảy mãi chưa ngưng.
-  Tôi chiêm ngưỡng khi hoàng hôn
-  ánh phủ bóng Thánh Giá in trên nền trời đỏ.
+  máu còn chảy mãi chưa ngưng,
+  Tôi chiêm ngắm khi hoàng hôn
+  ánh phủ: Bóng thánh giá in trên nền trời đỏ.
   Lưỡi đòng nhọn từ bàn tay hung ác,
   đòng nhọn từ bàn tay hung ác,
   đòng nhọn từ bàn tay hung ác
   xé không gian phầm phập phóng vào tim.
   Xác cực thánh máu trào ra cùng nước.
   Máu nói nhiều với hồn tôi rướm lệ.
-  Nghĩa yêu thương trong giờ phút uy linh.
-  Đức Chúa Cha giao phú Con Một mình cho trần thế.
-  Ôi Tình Yêu vĩ đại.
-  Cao sâu hơn trời bể bằng tình yêu hiến sinh mạng chiều nay.
+  Nghĩa yêu thương trong giờ phút uy linh
+  Đức Chúa Cha giao phú Con Một mình cho trần thế,
+  ôi tình yêu vĩ đại.
+  cao sâu hơn trời bể bằng tình yêu hiến sinh mạng chiều nay.
   
-  Tôi thấy máu, máu trào sôi nóng nảy.
-  Giữa một chiều u uất mãi khôn thôi.
-  Máu tình yêu nhỏ vạn giọt trên đồi.
+  Tôi thấy máu, máu trào sôi nóng nảy
+  Giữa một chiều u uất mãi khôn thôi
+  Máu tình yêu nhỏ vạn giọt trên đồi
   Để canh tân muôn người đến vạn đại.
   
-  Xin cho tôi muôn ngàn hòn than lửa.
+  Xin cho tôi muôn ngàn hòn than lửa
   Rửa miệng tôi cho sạch vết tội nhơ.
-  Để tôi hát cao giọng một bài thơ.
+  Để tôi hát cao giọng một bài thơ
   Say sưa lắm trong lòng tôi vạn thuở.
   thuở.
 }
 
 loiPhienKhucAlto = \lyrics {
   Hmm __ \repeat unfold 4 { _ }
-  Nói vạn lời nghĩa yêu thương của một chiều tình sử.
+  nói vạn lời nghĩa yêu thương của một chiều tình sử.
   Dâng đầy ứ khắp chây thân của ngọc thể tình yêu
   của ngọc thể tình yêu.
   Giữa đất trời cô lạnh.
-  lạnh. Ai không thấy máu ôi đỏ thắm làm sao
+  lạnh.
+  ai không thấy máu ôi thắm đỏ làm sao
   từ chân gai máu rịn dạt dào.
   Máu hòa lệ hòa mồ hôi lấp lánh,
   hòa lệ hòa mồ hôi lấp lánh,
-  chảy từng dòng mũi tai,
+  chảy từng dòng mũi tai.
   Hai bàn tay đinh đóng máu cuộn sôi
-  Ôi thắm ngời máu đỏ.
-  Theo dấu đinh Máu tràn vọt chứa chan
-  toàn thân Người là một vết tử thương.
+  ôi thắm ngời máu đỏ.
+  Theo dấu đinh máu tràn vọt chứa chan,
+  Toàn thân Người là một vết tử thương.
   
-  Máu còn chảy còn chảy mãi chưa ngưng.
-  Tôi chiêm ngưỡng khi hoàng hôn
-  ánh phủ bóng Thánh Giá in trên nền trời đỏ.
+  Máu còn chảy còn chảy mãi chưa ngưng,
+  Tôi chiêm ngắm khi hoàng hôn ánh phủ
+  Bóng thánh giá in trên nền trời đỏ.
   Lưỡi đòng nhọn từ bàn tay hung ác,
-  đòng nhọn từ bàn tay hung tàn
+  đòng nhọn từ bàn tay hung ác
   xé không gian phóng tim.
   Xác cực thánh máu trào ra cùng nước.
   Máu nói nhiều với hồn tôi rướm lệ.
-  Nghĩa yêu thương trong giờ phút uy linh.
-  Đức Chúa Cha giao phú Con Một mình cho trần thế.
-  Ôi Tình Yêu vĩ đại.
-  Cao sâu hơn trời bể bằng tình yêu hiến sinh mạng chiều nay.
+  Nghĩa yêu thương trong giờ phút uy linh
+  Đức Chúa Cha giao phú Con Một mình cho trần thế,
+  ôi tình yêu vĩ đại.
+  cao sâu hơn trời bể bằng tình yêu hiến sinh mạng chiều nay.
   
-  Xin cho tôi muôn ngàn hòn than lửa.
+  Xin cho tôi muôn ngàn hòn than lửa
   Rửa miệng tôi cho sạch vết tội nhơ.
-  Để tôi hát cao giọng một bài thơ.
+  Để tôi hát cao giọng một bài thơ
   Say sưa lắm trong lòng tôi vạn thuở.
-  thuở say sưa muôn thuở.
+  thuở. Say sưa muôn thuở.
 }
 
 loiPhienKhucBas = \lyrics {
   Hmm __ \repeat unfold 5 { _ }
   Máu đỏ nói vạn lời.
   Máu trào dâng đầy ứ, đầy ứ khắp châu thân
-  của ngọc thể tình yêu trong sầu thảm một chiều.
+  của ngọc thể tình yêu trong sầu thảm một chiều
   Giữa đất trời cô lạnh. Hmm __ _
   lạnh.
-  Ai không thấy máu ôi thắm đỏ làm sao từ chân gai.
+  ai không thấy máu ôi thắm đỏ làm sao từ chân gai
   Chảy quanh co trên tím bầm Mặt Thánh
-  máu hòa lệ hòa mồ hôi lấp lánh,
+  Máu hòa lệ hòa mồ hôi lấp lánh,
   máu hòa lệ hòa mồ hôi lấp lánh.
-  Chảy từng dùng từ mũi tai,
+  Chảy từng dòng từ mũi tai
   chảy ròng ròng ôi thắm ngời Máu đỏ.
   Hai bàn chân căng dài trên mặt gỗ
-  ôi máu hòa chan toàn thân Người là một vết tử thương.
+  Ôi máu hòa chan,
+  Toàn thân Người là một vết tử thương.
   
-  Máu còn chảy còn chảy mãi chưa ngưng nào ngưng.
-  Tôi chiêm ngưỡng khi hoàng hôn
-  ánh phủ bóng Thánh Giá in trên nền trời đỏ.
+  Máu còn chảy còn chảy mãi chưa ngưng nào ngưng,
+  Tôi chiêm ngắm khi hoàng hôn ánh phủ
+  Bóng thánh giá in trên nền trời đỏ.
   Lưỡi đòng nhọn từ bàn tay hung ác,
   lưỡi đòng nhọn từ bàn tay hung tàn
   xé không gian vào tim.
   Xác cực thánh máu trào ra cùng nước.
   Máu soi chiếu vào trong tôi đượm lệ.
-  Nghĩa mến thương trong giờ thật uy linh.
-  Thực là Cha giao phú Con Một mình cho nhân thế.
+  Nghĩa mến thương trong giờ thật uy linh
+  Thực là Cha giao phú Con Một mình cho nhân thế,
   Tình Chúa Yêu trọng đại.
   Tình yêu nào cao sâu hơn trời bể
   bằng tình yêu liều mạng chiều nay.
-  Xin cho tôi muôn ngàn hòn than lửa.
+  Xin cho tôi muôn ngàn hòn than lửa
   Rửa miệng tôi cho hết mọi tội nhơ.
-  Để tôi hòa cao mãi một bài thơ.
+  Để tôi hòa cao mãi một bài thơ
   Say sưa lắm trong lòng tôi vạn thuở.
-  thuở say sưa muôn thuở.
+  thuở. Say sưa muôn thuở.
 }
 
 loiPhienKhucBasPhu = \lyrics {
-  \repeat unfold 6 { _ }
+  \repeat unfold 2 { _ }
   \override Lyrics.LyricText.font-shape = #'italic
   màu
 }
@@ -655,7 +691,7 @@ loiPhienKhucBasPhu = \lyrics {
 			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
   print-page-number = ##f
-  %page-count = 7
+  page-count = 7
 }
 
 TongNhip = {
@@ -704,9 +740,7 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override LyricHyphen.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1.2
     \context {
       \Staff \RemoveEmptyStaves
       \override VerticalAxisGroup.remove-first = ##t

@@ -64,12 +64,12 @@ nhacPhienKhucSop = \relative c' {
   <<
     {
       c8 d |
-      e \slashedGrace { c ( } e) d16 c d8 |
+      e \slashedGrace { c16 ( } e8) d16 c d8 |
       g,4
     }
     \notBePhu -2 {
 	    e8 g |
-	    c \slashedGrace { a ( } c) g16 a f8 |
+	    c \slashedGrace { a16 ( } c8) g16 a f8 |
 	    e4
     }
   >>
@@ -94,7 +94,7 @@ nhacPhienKhucSop = \relative c' {
       e e4. \bar "||" \break
     }
   >>
-  c'8 f, f4 ~ |
+  c'8 ^> f, ^> f4 ^> ~ |
   f8 af g f |
   c2 ~ |
   c4 r |
@@ -160,7 +160,7 @@ nhacPhienKhucAlto = \relative c' {
   <d b!>4
   r4
   R2*10
-  c'8 f, f4 ~ |
+  c'8 ^> f, ^> f4 ^> ~ |
   f8 af g f |
   c2 ~ |
   c4 r |
@@ -268,7 +268,7 @@ loiPhienKhucSopMot = \lyrics {
     {
        Đấng cứu độ tôi.
        Vì Chúa đã đoái nhìn phận hèn tôi tớ của Chúa.
-       Vậy...
+       Vậy
     }
     {
       tôi thực diễm phúc.
@@ -281,15 +281,14 @@ loiPhienKhucSopMot = \lyrics {
   dành cho ai biết tôn sợ Ngài.
   
   \set stanza = "Nam:"
-  Chúa vung tay thần lực
   <<
     {
-      Chúa
+      Chúa vung tay thần lực Chúa
     }
     \new Lyrics \with { alignBelowContext = "beSop" } {
 	    \set associatedVoice = "beSop"
 	    \override Lyrics.LyricText.font-shape = #'italic
-      Ngài
+      Ngài vung tay thần lực Ngài
     }
   >>
   vung tay thần lực quất ngã
@@ -307,15 +306,15 @@ loiPhienKhucSopMot = \lyrics {
   Chúa hạ bệ những ai uy quyền.
   Người
   \repeat volta 2 {
-    thanh bần cho sung túc hồng ân.
-    Bọn sang giầu ra tay trắng, trắng tay, trắng tay
+    thanh bần nay sung túc hồng ân.
+    Bọn sang giầu ra tay trắng, trắng tay, trắng tay,
     con dân Chúa Ngài
   }
   \alternative {
     {
       cứu giúp ủi an.
       Vì Chúa đã nhớ lại lòng thương xót của Chúa.
-      Từ...
+      Từ
     }
     {
       miêu duệ ông muôn kiếp.
@@ -326,58 +325,42 @@ loiPhienKhucSopMot = \lyrics {
 loiPhienKhucSopHai = \lyrics {
   _ nên từ đây nhân thế từ đây đời qua đời
   luôn hoan chúc khắp nơi,
-  khắp nơi luôn hoan chúc rằng...
+  khắp nơi luôn hoan chúc rằng
   \repeat unfold 71 { _ }
   
   xưa Ngài ban giao ước
   đã ban cùng tổ phụ Ab -- ra -- ham đã ban,
-  đã ban, ban giao ước cùng...
+  đã ban, ban giao ước cùng
 }
 
 loiPhienKhucAltoMot = \lyrics {
-  %\repeat volta 2 {
-    Hồn tôi ngợi khen Thiên Chúa
-    khen ngợi và tâm thần tôi vui sướng,
-    mừng vui trong Thiên Chúa là
-  %}
-  %\alternative {
-  %  {
-      Đấng cứu độ tôi. Vì Chúa đã đoái nhìn,
-      đoái nhìn phận hèn tôi tớ của Ngài.
-  %  }
-  %  {
-      tôi thực diễm phúc.
-      Đã làm cho tôi những việc kỳ diệu
-      và Danh Ngài chí thánh.
-  %  }
-  %}
+  Hồn tôi ngợi khen Thiên Chúa khen ngợi
+  Và tâm thần tôi vui sướng,
+  mừng vui trong Thiên Chúa là
+  Đấng cứu độ tôi. Vì Chúa đã đoái nhìn,
+  đoái nhìn phận hèn tôi tớ của Ngài.
+  tôi thực diễm phúc.
+  Đã làm cho tôi những việc kỳ diệu
+  và Danh Ngài chí thánh.
   
   Chúa hạ bệ những ai uy quyền.
-  %\repeat volta 2 {
-    Người thanh bần cho sung túc phúc ân.
-    Bọn sang giầu ra tay trắng, tay trắng
-    con dân Chúa Ngài
-  %}
-  %\alternative {
-  %  {
-      cứu giúp ủi an.
-      Vì Chúa đã nhớ lại,
-      nhớ lại lòng thương xót của Ngài.
-  %  }
-  %  {
-      miêu duệ ông muôn kiếp.
-  %  }
-  %}
+  Người thanh bần nay sung túc phúc ân.
+  Bọn sang giầu ra tay trắng, tay trắng,
+  con dân Chúa Ngài
+  cứu giúp ủi an.
+  Vì Chúa đã nhớ lại,
+  nhớ lại lòng thương xót của Ngài.
+  miêu duệ ông muôn kiếp.
 }
 
 loiPhienKhucAltoHai = \lyrics {
   Vậy nên từ đây nhân thế muôn người đời qua đời
-  luôn hoan chúc, hoan chúc luôn hoan chúc rằng...
+  luôn hoan chúc, hoan chúc luôn hoan chúc rằng
   \repeat unfold 41 { _ }
   
   Từ xưa Ngài ban giao ước muôn đời
   cùng tổ phụ Ab -- ra -- ham đã ban,
-  ban giao ước cùng...
+  ban giao ước cùng
 }
 
 loiPhienKhucBasMot = \lyrics {
@@ -391,8 +374,8 @@ loiPhienKhucBasMot = \lyrics {
   và Danh Ngài cực thánh.
   
   Và nâng cao những ai khiêm tốn.
-  Người thanh bần cho sung túc ân lộc.
-  Bọn sang giầu ra tay trắng
+  Người thanh bần nay sung túc ân lộc.
+  Bọn sang giầu ra tay trắng,
   con dân Chúa Ngài cứu giúp ủi an.
   Vì Chúa đã nhớ lại
   đã nhớ lại lòng thương yêu của Ngài.
@@ -402,12 +385,12 @@ loiPhienKhucBasMot = \lyrics {
 
 loiPhienKhucBasHai = \lyrics {
   Vậy nên từ đây nhân thế muôn người đời qua đời
-  luôn hoan chúc, luôn hoan chúc rằng...
+  luôn hoan chúc, luôn hoan chúc rằng
   \repeat unfold 45 { _ }
   nhường.
   Từ xưa Ngài ban giao ước muôn đời
   cùng tổ phụ Ab -- ra -- ham
-  ban giao ước cùng...
+  ban giao ước cùng
 }
 
 % Dàn trang
