@@ -5,76 +5,70 @@
 \header {
   title = \markup { \fontsize #3 "Cứ Dấu Này" }
   composer = "Lm. Kim Long"
+  arranger = " "
   tagline = ##f
 }
 
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
-  \partial 2 a8 a d, (f) |
-  g4 g8 g c (d) |
-  d2. ~ |
-  d4 b!16 (d) b (a) e (g) a8 |
-  a4 a8 a c8 (d) |
-  d4 c8 c e \afterGrace d ({
-    \override Flag.stroke-style = #"grace"
-    c)} |
-  \revert Flag.stroke-style
-  a4 (g2) ~ |
-  g4 e8. e16 a8 fs16 (e) |
-  d2. ~ |
-  
-  \time 2/4
-  \partial 4. d4.
-  
-  \time 3/4
-  \once \override Score.RehearsalMark.font-size = #0.5
-  \mark \markup { \musicglyph #"scripts.coda" }
-  %<> \tweak extra-offset #'(1 . -1.5)
-  d2. ~ |
-  d2 \bar "|."
+  \partial 4 r4 |
+  R2
+  r8. g16 e'8 e |
+  d2 |
+  c8 d a16 (c) a8 |
+  g4 r8 g |
+  e'4. (f16 e) |
+  d4 g,8 b |
+  d4. (e16 d) |
+  c2 ~ |
+  c4 r |
+  R2*2
+  r4. c,8 |
+  e (f) g a |
+  g4. a8 |
+  g a c c |
+  b4 \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c'' {
-  a8 a d, (f) |
-  g4 g8 g c (d) |
-  d2. ~ |
-  d4 b!16 (d) b (a) e (g) a8 |
-  a4 a8 a g4 |
-  a a8 a g [g] |
-  c,2. ( |
-  d4) e8. e16 a8 fs16 (e) |
-  c4 bf4. bf8 |
-  a4.
-  d4 b!4. b8 |
-  a2
-}
-
-nhacDiepKhucBas = \relative c' {
-  a8 a d, (f) |
-  g4 g8 g c (d) |
-  d4 b!8 b d b16 (a) |
-  g2. ~ |
-  g4 f8 f e4 |
-  d2. ~ |
-  d4 e8 d c16 (d) g8 |
-  g4 e8. e16 a8 fs16 (e) |
-  d4 g4. g8 |
-  d4.
-  d4 g4. g8 |
-  <fs d>2
-}
-
-nhacPhienKhucSop = \relative c'' {
+  r4
+  R2
+  r8. g16 c8 c |
+  b2 |
+  g8 f c [c] |
+  b4 r8 d |
+  g2 |
+  fs4 g8 [g] |
+  f2 |
+  e2 ~ |
+  e4 r |
   R2*2
-  r4 a8 g ~ |
-  g bf g4 |
-  a2 ~ |
-  a4 r |
-  r f8 g ~ |
-  g a f e |
-  
-  \time 3/4
-  d2 \bar "|."
+  r4. c8 |
+  c (d) e f |
+  e4. f8 |
+  e f g f |
+  d4
+}
+
+nhacDiepKhucBas = \relative c {
+  e8 e16 (d) |
+  c8. c16 e8 d |
+  g2 ~ |
+  g8 d g f |
+  e d f fs |
+  g4 r8 g |
+  c,4 (b8 c) |
+  d4 e8 <g e> |
+  <a\=1^( d,\=2_(>4 <b\=1) g\=2_)>
+  <c c,>2 ~ |
+  <c c,>4 g8 a |
+  a c a (g) |
+  d8. f16 g8 e16 (d) |
+  c2 ~ |
+  c4 r8 g |
+  c (d) c (b) |
+  c4 e8 d |
+  g4
 }
 
 % Lời
@@ -85,17 +79,7 @@ loiPhienKhucSopMot = \lyricmode {
   Là hãy thương mến nhau như Thầy thương mến các con.
 }
 
-loiPhienKhucSopHai = \lyricmode {
-  \set stanza = "2."
-  Người nào yêu mến Ta thì tuân giữ lệnh truyền.
-}
-
-loiPhienKhucSopBa = \lyricmode {
-  \set stanza = "3."
-  Thầy cầu cho các con được hiệp nhất nên một.
-}
-
-loiDiepKhucBas = \lyricmode {
+loiPhienKhucBasMot = \lyricmode {
   Cứ dấu này người ta nhận biết,
   nhận biết các con là môn đệ Thầy:
   là đoàn con hằng thương mến nhau.
@@ -105,44 +89,24 @@ loiDiepKhucBas = \lyricmode {
   Là hãy thương nhau hỡi đoàn con.
 }
 
-loiPhienKhucSopMot = \lyricmode {
-  
-}
-
-loiPhienKhucSopHai = \lyricmode {
-  
-}
-
-loiPhienKhucSopBa = \lyricmode {
-  
-}
-
-loiPhienKhucSopBon = \lyricmode {
-  
-}
-
-loiPhienKhucBasMot = \lyricmode {
-  
-}
-
 loiPhienKhucBasHai = \lyricmode {
-  
+  \repeat unfold 22 { _ }
+  \set stanza = "2."
+  Người nào yêu mến Ta thì tuân giữ lệnh truyền.
 }
 
 loiPhienKhucBasBa = \lyricmode {
-  
-}
-
-loiPhienKhucBasBon = \lyricmode {
-  
+  \repeat unfold 22 { _ }
+  \set stanza = "3."
+  Thầy cầu cho các con được hiệp nhất nên một.
 }
 
 
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
+  top-margin = 15\mm
+  bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -188,19 +152,21 @@ notBePhu =
       \new Voice \TongNhip \partCombine 
         \nhacDiepKhucSop
         \notBePhu -3 { \nhacDiepKhucAlto }
-      \new NullVoice = beSop \nhacDiepKhucAlto
-      \new Lyrics \lyricsto beSop \loiDiepKhucAlto
+      \new NullVoice = beSop \nhacDiepKhucSop
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
       >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
           \TongNhip \nhacDiepKhucBas
         }
-      \new Lyrics \lyricsto beBas \loiDiepKhucBas
+      \new Lyrics \lyricsto beBas \loiPhienKhucBasMot
+      \new Lyrics \lyricsto beBas \loiPhienKhucBasHai
+      \new Lyrics \lyricsto beBas \loiPhienKhucBasBa
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
