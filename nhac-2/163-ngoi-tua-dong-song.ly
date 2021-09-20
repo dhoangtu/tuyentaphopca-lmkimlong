@@ -183,11 +183,6 @@ notBePhu =
         \new Voice \TongNhip \partCombine 
           \nhacPhienKhucSopMot
           \notBePhu -2 { \nhacPhienKhucAltoMot }
-        %{
-      \new Voice \TongNhip \partCombine
-        { \partCombineChords \nhacPhienKhucSopMot }
-        { \stemUp \notBePhu -3 \nhacPhienKhucAltoMot }
-        %}
         \new NullVoice = beSop \nhacPhienKhucSopMot
       \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
       \new Lyrics \lyricsto beSop \loiPhienKhucSopHai

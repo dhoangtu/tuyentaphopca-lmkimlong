@@ -283,7 +283,7 @@ loiPhienKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin =20\mm
+  top-margin = 15\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -296,6 +296,8 @@ loiPhienKhucBas = \lyricmode {
       (/ 20 20)))
   print-page-number = #f
   %page-count = #2
+  %ragged-bottom = ##t
+  ragged-last-bottom = ##t
 }
 
 TongNhip = {
