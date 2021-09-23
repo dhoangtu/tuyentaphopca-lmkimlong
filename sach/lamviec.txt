@@ -1,3 +1,12 @@
+  <<
+  { chết }
+  \new Lyrics {
+	  \set associatedVoice = "beBas"
+	  \override Lyrics.LyricText.font-shape = #'italic
+	  lặn
+	}
+  >>
+
 % Đổi kích thước nốt cho bè phụ
 notBePhu =
 #(define-music-function (font-size music) (number? ly:music?)
