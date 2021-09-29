@@ -1,0 +1,243 @@
+% Cài đặt chung
+\version "2.22.1"
+\include "english.ly"
+
+\header {
+  title = \markup { \fontsize #3 "Đêm Đông Sương Gió" }
+  composer = "Lm. Kim Long"
+  tagline = ##f
+}
+
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
+
+% Nhạc
+nhacPhienKhucSop = \relative c'' {
+  \set Staff.printKeyCancellation = ##f
+  \partial 4 \tuplet 3/2 { a8 a a } |
+  d4 \tuplet 3/2 { a8 a a } |
+  g4 \tuplet 3/2 { a8 a a } |
+  d,2 ~ |
+  d4 r |
+  R2*2
+  r4 r8 d' |
+  b! (a) fs (g) |
+  \slashedGrace { b!16 ( } a4.) d8 |
+  b! (a) g (fs) |
+  d2 ~ |
+  d4 r |
+  r r8 fs' |
+  e8. e16 cs8 cs |
+  d4. b!8 |
+  b! d4 b8 |
+  a4 fs'8 fs |
+  e4 cs8 cs |
+  d2 ~ |
+  d4 r |
+  r8 f, f e |
+  d a' g8. b!16 \bar "||"
+  
+  \key d \major
+  a4 r8 fs' |
+  e e fs e16 (d) |
+  b4. d8 |
+  b8. b16 d8 b |
+  a2 ~ |
+  a4 r |
+  R2
+  r4 b8 d |
+  e e e16 (fs e d) |
+  b8 a cs (e) |
+  d2 ~ |
+  d4 \bar "|."
+}
+
+nhacPhienKhucAlto = \relative c'' {
+  \set Staff.printKeyCancellation = ##f
+  \tuplet 3/2 { a8 a a } |
+  d4 \tuplet 3/2 { a8 a a } |
+  g4 \tuplet 3/2 { a8 a a } |
+  d,2 ~ |
+  d4 r |
+  R2*2
+  r4 r8 d' |
+  r8 cs,16 cs d8 r |
+  r cs16 cs d8 r |
+  r d16 d b!8 r |
+  d2 ~ |
+  d4 r |
+  r r8 d' |
+  a8. a16 g8 g |
+  fs4. fs8 |
+  g bf4 g8 |
+  fs4 a8 a |
+  bf4 a8 g |
+  fs2 ~ |
+  fs4 r |
+  r8 f f e |
+  d a' g8. b!16 |
+  
+  \key d \major
+  a4 r8 d |
+  cs cs d [a] |
+  d,4. a'8 |
+  g8. g16 e8 d |
+  cs2 ~ |
+  cs4 cs8 e |
+  fs fs fs16 (a fs e) |
+  d4. a'8 |
+  g8 a b4 |
+  e,8 e g4 |
+  fs2 ~ |
+  fs4
+}
+
+nhacPhienKhucTenor = \relative c' {
+  \set Staff.printKeyCancellation = ##f
+  r4 |
+  a2 |
+  bf4 a8 g |
+  f4 d8. d16 |
+  a8 a a a |
+  f'4 f8. f16 |
+  d8 d d d |
+  a'2 |
+  r8 a16 a a8 r |
+  r a16 g d8 r |
+  r f16 f g8 r |
+  r4 d8. d16 |
+  f8 e d a' |
+  a2 ~ |
+  a4 a8 a |
+  b!4 cs8 (d) |
+  
+}
+
+nhacPhienKhucBas = \relative c' {
+  \set Staff.printKeyCancellation = ##f
+  
+}
+
+% Lời
+loiPhienKhucSopMot = \lyricmode {
+  Đêm đông sương gió, trăng sao lu mờ, mây trôi lững lờ.
+  \set stanza = "1."
+  Bỗng đâu rực sáng khắp trên khung trời.
+  Lắng nghe đây mục đồng ơi:
+  Nơi hang đá cơ cùng Đấng Cứu Tinh vừa hạ sinh.
+  Lớp lớp thiên thần chung lời xướng ca:
+  Sáng danh Thiên Chúa trên trời,
+  sáng danh Thiên Chúa trên trời.
+  Và bình an cho những người được Chúa thương.
+}
+
+loiPhienKhucSopHai = \lyricmode {
+  \repeat unfold 12 { _ }
+  \set stanza = "2."
+  Chính Con Một Chúa giáng sinh trên đời.
+  Bóng đêm nay đã tàn phai
+  nơi nơi hết u hoài ánh sáng lên ngợp trần ai.
+  Tiếp nối muôn người luôn cùng xướng ca:
+  Sáng
+}
+
+loiPhienKhucAlto = \lyricmode {
+  \override Lyrics.LyricText.font-shape = #'italic
+  \repeat unfold 13 { _ }
+  (la la la) (la la la) (la la la)
+  \repeat unfold 38 { _ }
+  Và bình an cho những người
+  vĩnh
+}
+
+loiPhienKhucTenorMot = \lyricmode {
+  Hm __ _ _ _ _
+  Canh khuya đoàn mục đồng ngồi đó bên nhau
+  chụm ngọn lửa sưởi ấm.
+  La la la la la la la la la
+  Rộn ràng tiếng thiên thần loan tin:
+  Mục đồng ơi! (Nơi hang đá cơ cùng)
+  Đấng Cứu Tinh đã hạ sinh.
+  Rồi hàng hàng lớp lớp thiên thần chung lời xướng ca:
+  Sáng danh Thiên Chúa trên trời,
+  rạng danh Thiên Chúa trên trời.
+  Và bình an cho những người được Chúa rủ thương.
+}
+
+loiPhienKhucTenorHai = \lyricmode {
+  Qua bao ngày đợi chờ thổn thức đêm nay về dạt dào hồng phúc.
+  La la la la la la la la la
+  Trời và đất giao hòa reo vui:
+  Đã tàn phai (nơi nơi hết u hoài) ánh sáng lên ngợp trần ai.
+  Đời lại đời tiếp nối muôn người luôn cùng xướng ca:
+  Rạng
+}
+
+% Dàn trang
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 15\mm
+  bottom-margin = 15\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
+  indent = #0
+  #(define fonts
+    (make-pango-font-tree
+      "Deja Vu Serif Condensed"
+      "Deja Vu Serif Condensed"
+      "Deja Vu Serif Condensed"
+      (/ 20 20)))
+  print-page-number = #f
+  %page-count = #2
+  %systems-per-page = 5
+}
+
+TongNhip = {
+  \key f \major \time 2/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+}
+
+\score {
+  \new ChoirStaff <<
+    \new Staff \with {
+        \consists "Merge_rests_engraver"
+        printPartCombineTexts = ##f
+      }
+      <<
+      \new Voice \TongNhip \partCombine 
+        \nhacPhienKhucSop
+        \notBePhu -2 { \nhacPhienKhucAlto }
+      \new NullVoice = beSop \nhacPhienKhucSop
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
+      \new NullVoice = beAlto \nhacPhienKhucAlto
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
+      >>
+    \new Staff <<
+        \clef "bass"
+        \new Voice \TongNhip \partCombine 
+        \nhacPhienKhucTenor
+        \notBePhu -2 { \nhacPhienKhucBas }
+      \new NullVoice = beTenor \nhacPhienKhucTenor
+      \new Lyrics \lyricsto beTenor \loiPhienKhucTenorMot
+    >>
+  >>
+  \layout {
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override Score.SpacingSpanner.uniform-stretching = ##t
+  }
+}

@@ -428,13 +428,30 @@ loiDiepKhucSop = \lyricmode {
   Đêm hồng ân, đêm thánh Chúa đến cùng nhân gian.
   Đêm
   \repeat volta 2 {
-  Giáng Sinh âm thầm dâng tấc lòng tri ân.
-  Dâng tình yêu chan chứa hát kính bài vinh danh.
-  Nghe tiếng ca vang trời,
-  nghe tiếng ca vang trời nay nghe tiếng ca vang trời
-  con thấy lòng reo vui, con thấy lòng reo vui.
-  Đêm hồng ân, đêm thánh Chúa đến cùng (rầy) Chúa đến cùng,
-  Chúa đến cùng nhân
+    <<
+      {
+        Giáng Sinh âm thầm dâng tấc lòng tri ân.
+        Dâng tình yêu chan chứa hát kính bài vinh danh.
+        Nghe tiếng ca vang trời,
+        nghe tiếng ca vang trời nay nghe tiếng ca vang trời
+        con thấy lòng reo vui, con thấy lòng reo vui.
+        Đêm hồng ân, đêm thánh Chúa đến cùng (rầy) Chúa đến cùng,
+        Chúa đến cùng nhân
+      }
+      \new Lyrics = "phienKhucSopHai"
+        \with { alignBelowContext = "phienKhucSopMot" }
+        {
+	        \set associatedVoice = "beSop"
+          xuống nơi cơ hàn chung sống cùng nhân gian.
+          Đem tình yêu chân lý Chúa đón mời muôn dân.
+          Đêm Giáng Sinh tưng bừng,
+          đêm Giáng Sinh tưng bừng đây
+          đêm Giáng Sinh tưng bừng con thấy lòng lâng lâng,
+          con thấy lòng lâng lâng.
+          Đêm bình an, đêm thánh đất với trời (mà)
+          đất với trời, đất với trời hân
+        }
+    >>
   }
   \alternative {
     {
@@ -455,15 +472,41 @@ loiDiepKhucAlto = \lyricmode {
   Đêm bình an, đêm lành dất với trời, đất trời hân hoan.
   La la la la la la la la la la la la la la la la.
   Đêm muôn ân, đêm thánh Chúa đến cùng nhân gian.
-  Đêm Giáng Sinh âm thầm dâng tấc lòng tri ân.
-  Dâng tình yêu chan chứa hát kính bài vinh danh.
-  Nghe tiếng ca vang trời, vang trời
-  nghe tiếng ca vang trời nay nghe tiếng ca vang trời
-  con dậy lòng reo vui, con thấy lòng reo vui.
-  Đêm hồng ân, đêm lành Chúa đến cùng, đến cùng nhân gian,
-  Chúa đến cùng nhân gian.
-  Sinh
-  hoan đất với trời hân hoan.
+  Đêm
+  \repeat volta 2 {
+    <<
+      {
+        Giáng Sinh âm thầm dâng tấc lòng tri ân.
+        Dâng tình yêu chan chứa hát kính bài vinh danh.
+        Nghe tiếng ca vang trời, vang trời
+        nghe tiếng ca vang trời nay nghe tiếng ca vang trời
+        con dậy lòng reo vui, con thấy lòng reo vui.
+        Đêm hồng ân, đêm lành Chúa đến cùng, đến cùng nhân
+      }
+      \new Lyrics = "phienKhucAltoHai"
+        \with { alignBelowContext = "phienKhucAltoMot" }
+        {
+	        \set associatedVoice = "beAlto"
+	        xuống nơi cơ hàn chung sống cùng nhân gian.
+          Đem tình yêu chân lý Chúa đón mời muôn dân.
+          Đêm Giáng Sinh tưng bừng,
+          tưng bừng 
+          đêm Giáng Sinh tưng bừng đây đêm Giáng Sinh tưng bừng
+          con đầy lòng lâng lâng, con thấy lòng lâng lâng.
+          Đêm bình an, đêm lành đất với trời, đất trời hân
+      }
+    >>
+  }
+  \alternative {
+    {
+      gian,
+      Chúa đến cùng nhân gian.
+      Sinh
+    }
+    {
+      hoan đất với trời hân hoan.
+    }
+  }
 }
 
 loiDiepKhucBas = \lyricmode {
@@ -476,16 +519,42 @@ loiDiepKhucBas = \lyricmode {
   La la la la la la la la la la la la la la la la.
   Đêm muôn ân, đêm thánh Chúa đến với trần gian.
   Đêm
-  Giáng Sinh âm thầm dâng tấc lòng tri ân.
-  Dâng tình yêu chan hòa hát kính vài Ngài vinh danh.
-  Nghe tiếng ca vang trời, nghe tiếng ca vang trời,
-  nghe tiếng ca vang trời, nghe tiếng ca vang trời,
-  vang trời con dậy lòng reo vui, dậy lòng reo vui.
-  Đêm hồng ân, đêm lành Chúa đến cùng (rầy)
-  Chúa đến cùng (rầy) Chúa đến với trần gian,
-  Chúa đến với trần gian.
-  Sinh
-  hoan, đất với trời hân hoan.
+  \repeat volta 2 {
+  <<
+    {
+      Giáng Sinh âm thầm dâng tấc lòng tri ân.
+      Dâng tình yêu chan hòa hát kính vài Ngài vinh danh.
+      Nghe tiếng ca vang trời, nghe tiếng ca vang trời,
+      nghe tiếng ca vang trời, nghe tiếng ca vang trời,
+      vang trời con dậy lòng reo vui, dậy lòng reo vui.
+      Đêm hồng ân, đêm lành Chúa đến cùng (rầy)
+      Chúa đến cùng (rầy) Chúa đến với trần
+    }
+    \new Lyrics = "phienKhucBasHai"
+      \with { alignBelowContext = "phienKhucBasMot" }
+      {
+	      \set associatedVoice = "beBas"
+	      xuống nơi cơ hàn chung sống cùng nhân gian.
+	      Đem tình yêu chân thật Ngài mong đón mời muôn dân.
+	      Đêm Giáng Sinh tưng bừng,
+	      đêm Giáng Sinh tưng bừng, đêm Giáng Sinh tưng bừng,
+	      đêm Giáng Sinh tưng bừng,
+	      tưng bừng con đầy lòng lâng lâng, đầy lòng lâng lâng.
+	      Đêm bình an, đêm lành đất với trời (mà)
+	      đất với trời (mà) đất với trời hân
+      }
+  >>
+  }
+  \alternative {
+    {
+      gian,
+      Chúa đến với trần gian.
+      Sinh
+    }
+    {
+      hoan, đất với trời hân hoan.
+    }
+  }
 }
 
 % Dàn trang
@@ -505,6 +574,7 @@ loiDiepKhucBas = \lyricmode {
   print-page-number = #f
   %page-count = #4
   %ragged-bottom = ##f
+  systems-per-page = 4
 }
 
 TongNhip = {
@@ -521,25 +591,25 @@ TongNhip = {
         \new Voice = beSop {
           \TongNhip \nhacDiepKhucSop
         }
-      \new Lyrics \lyricsto beSop \loiDiepKhucSop
+      \new Lyrics = "phienKhucSopMot" \lyricsto beSop \loiDiepKhucSop
     >>
     \new Staff <<
         \clef treble
         \new Voice = beAlto {
           \TongNhip \nhacDiepKhucAlto
         }
-      \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
+      \new Lyrics = "phienKhucAltoMot" \lyricsto beAlto \loiDiepKhucAlto
     >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
           \TongNhip \nhacDiepKhucBas
         }
-      \new Lyrics \lyricsto beBas \loiDiepKhucBas
+      \new Lyrics = "phienKhucBasMot" \lyricsto beBas \loiDiepKhucBas
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #0.4
+    \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \context {
