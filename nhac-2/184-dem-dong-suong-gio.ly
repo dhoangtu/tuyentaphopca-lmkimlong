@@ -122,12 +122,70 @@ nhacPhienKhucTenor = \relative c' {
   a2 ~ |
   a4 a8 a |
   b!4 cs8 (d) |
+  d d ([e]) cs |
+  d4 d8 d |
+  e4 a,8 a |
+  a2 ~ |
+  a4 d,8. d16 |
+  d8 f f e |
+  d a' g8. b!16 |
   
+  \key d \major
+  a4 r8 d, |
+  a' a a as |
+  b4. fs8 |
+  g8. g16 g8 gs |
+  a2 ~ |
+  a4 r |
+  r fs8 a |
+  b b b16 (d b a) |
+  g4 fs8 (g) |
+  a2 |
+  a ~ |
+  a4
 }
 
-nhacPhienKhucBas = \relative c' {
+nhacPhienKhucBas = \relative c {
   \set Staff.printKeyCancellation = ##f
+  r4 |
+  d2 ~ |
+  d4 cs |
+  d d8. d16 |
+  a8 a a a |
+  f'4 f8. f16 |
+  d8 d d d |
+  a'2 |
+  r8 a16 a d,8 r |
+  r8 a16 a bf8 r |
+  r d16 d g,8 r |
+  r4 d'8. d16 |
+  f8 e d a' |
+  a2 ~ |
+  a4 a,8 a |
+  d2 ~ |
+  d ~ |
+  d4 d8 d |
+  g4 a8 a, |
+  d2 ~ |
+  d4 d8. d16 |
+  d8 f f e |
+  d a' g8. b!16 |
   
+  \key d \major
+  a4 r8 d, |
+  a' a a as |
+  b4. fs8 |
+  g8. g16 g8 gs |
+  a2 ~ |
+  a4 r |
+  r fs8 a |
+  b b b16 (d b a) |
+  g4 fs8 (g) |
+  a4. a,8
+  _\markup { "rủ" }
+  |
+  d2 ~ |
+  d4
 }
 
 % Lời
@@ -150,7 +208,6 @@ loiPhienKhucSopHai = \lyricmode {
   Bóng đêm nay đã tàn phai
   nơi nơi hết u hoài ánh sáng lên ngợp trần ai.
   Tiếp nối muôn người luôn cùng xướng ca:
-  Sáng
 }
 
 loiPhienKhucAlto = \lyricmode {
@@ -171,18 +228,18 @@ loiPhienKhucTenorMot = \lyricmode {
   Mục đồng ơi! (Nơi hang đá cơ cùng)
   Đấng Cứu Tinh đã hạ sinh.
   Rồi hàng hàng lớp lớp thiên thần chung lời xướng ca:
-  Sáng danh Thiên Chúa trên trời,
+  Rạng danh Thiên Chúa trên trời,
   rạng danh Thiên Chúa trên trời.
-  Và bình an cho những người được Chúa rủ thương.
+  Và bình an cho những người được Chúa thương.
 }
 
 loiPhienKhucTenorHai = \lyricmode {
+  \repeat unfold 5 { _ }
   Qua bao ngày đợi chờ thổn thức đêm nay về dạt dào hồng phúc.
   La la la la la la la la la
   Trời và đất giao hòa reo vui:
   Đã tàn phai (nơi nơi hết u hoài) ánh sáng lên ngợp trần ai.
   Đời lại đời tiếp nối muôn người luôn cùng xướng ca:
-  Rạng
 }
 
 % Dàn trang
@@ -226,13 +283,18 @@ TongNhip = {
       \new NullVoice = beAlto \nhacPhienKhucAlto
       \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
       >>
-    \new Staff <<
+    \new Staff \with {
+        \consists "Merge_rests_engraver"
+        printPartCombineTexts = ##f
+      }
+      <<
         \clef "bass"
         \new Voice \TongNhip \partCombine 
         \nhacPhienKhucTenor
         \notBePhu -2 { \nhacPhienKhucBas }
       \new NullVoice = beTenor \nhacPhienKhucTenor
       \new Lyrics \lyricsto beTenor \loiPhienKhucTenorMot
+      \new Lyrics \lyricsto beTenor \loiPhienKhucTenorHai
     >>
   >>
   \layout {
