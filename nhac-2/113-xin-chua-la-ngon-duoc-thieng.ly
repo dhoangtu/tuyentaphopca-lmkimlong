@@ -299,36 +299,3 @@ notBePhu =
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
 }
-%{
-\score {
-  \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-      \new Voice \partCombine 
-        \nhacPhienKhucSop
-        \notBePhu -2 { \nhacPhienKhucAlto }
-      \new NullVoice = beAlto \nhacPhienKhucSop
-      \new Lyrics \lyricsto beAlto \loiPhienKhucSopMot
-      \new Lyrics \lyricsto beAlto \loiPhienKhucSopHai
-      \new Lyrics \lyricsto beAlto \loiPhienKhucSopBa
-      >>
-    \new Staff <<
-      \clef bass
-      \new Voice = beBas {
-        \nhacPhienKhucBas
-      }
-      \new Lyrics \lyricsto beBas \loiPhienKhucBasMot
-      \new Lyrics \lyricsto beBas \loiPhienKhucBasHai
-      \new Lyrics \lyricsto beBas \loiPhienKhucBasBa
-    >>
-  >>
-  \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
-  }
-}
-%}
