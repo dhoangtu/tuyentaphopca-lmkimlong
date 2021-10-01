@@ -1,3 +1,7 @@
+\set Score.repeatCommands = #'((volta "1"))
+\set Score.repeatCommands = #'((volta #f) (volta "2") end-repeat)
+\set Score.repeatCommands = #'((volta #f))
+
   <<
   { chết }
   \new Lyrics {
