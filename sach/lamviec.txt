@@ -1,3 +1,9 @@
+\new Voice \TongNhip \partCombine
+{ \partCombineChords \nhacDiepKhucSop }
+{ \stemUp \notBePhu -3 \nhacDiepKhucBas }
+\new NullVoice = nhacThamChieu \nhacDiepKhucSop
+\new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
+
 \set Score.repeatCommands = #'((volta "1"))
 \set Score.repeatCommands = #'((volta #f) (volta "2") end-repeat)
 \set Score.repeatCommands = #'((volta #f))
