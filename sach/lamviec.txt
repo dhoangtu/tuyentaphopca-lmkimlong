@@ -4,6 +4,11 @@ a \(g\)
 \new Voice \TongNhip \partCombine
 { \partCombineChords \nhacDiepKhucSop }
 { \stemUp \notBePhu -3 \nhacDiepKhucBas }
+
+\new Voice \TongNhip \partCombine 
+\nhacPhienKhucSopHai
+\notBePhu -2 { \nhacPhienKhucAltoHai }
+
 \new NullVoice = nhacThamChieu \nhacDiepKhucSop
 \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
 
