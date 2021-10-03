@@ -4,8 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Reo Mừng Chúa Thống Trị" }
-  composer = "Nhạc: L. Deiss"
-  arranger = "Lm. Kim Long"
+  poet = "Nhạc: L. Deiss"
+  composer = "Lm. Kim Long"
   tagline = ##f
 }
 
@@ -25,13 +25,16 @@ nhacDiepKhucSop = \relative c'' {
   a4. a |
   e2. \bar "||" \break
   
-  \partial 4 r4 |
+  \partial 4. r4. |
   R2.*3
   e'4 e8 d ^(b d) |
   e4. ~ e |
   g,8 g g a4 a8 |
   e'4 e8 d4 (c8) |
   b4 a8 a (g fs) |
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \tweak extra-offset #'(7 . 0)
+  \mark \markup { \musicglyph #"scripts.segno" }
   e2. \break
   
   \partial 4. e8 d e |
@@ -60,7 +63,7 @@ nhacDiepKhucAlto = \relative c'' {
   a4. a |
   e2. |
   
-  r4
+  r4.
   R2.*3
   g4 a8 b _(g fs) |
   g4. ~ g |
@@ -73,12 +76,116 @@ nhacDiepKhucAlto = \relative c'' {
   cs cs cs a g a |
   b4. g4 a8 |
   b ([g fs]) g4. ~ |
-  g4.
-  
+  g4. r4. |
+  R2.*3
 }
 
-nhacDiepKhucBas = \relative c' {
+nhacDiepKhucBas = \relative c {
+  e8 |
+  g4 g8 a g a |
+  b b a e4. |
+  <e' c>4 <e c>8
+  <<
+    {
+      \voiceOne
+      fs ([e d])
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      b4.
+    }
+  >>
+  \oneVoice
+  <b e>4. ~ <b e>4 b8 |
+  d d d b4 a8 |
+  g4 g8 a a a |
+  e4 d8 e4. \bar "||" \break
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
   
+  e8 g a b (a g |
+  b4.)
+  <<
+    {
+      b8 cs d |
+      cs (b cs b4.) |
+      b4 b8 a4.
+    }
+    {
+      g8 fs e |
+      a (fs e g4.) |
+      g4 g8 fs4.
+    }
+  >>
+  <<
+    {
+      \voiceOne
+      b4. (c4. ~ |
+      c4)
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      e,4 (d8 c4. ~ |
+      c4)
+    }
+  >>
+  \oneVoice
+  r8 e4 g8 |
+  a4. a4. |
+  e2. |
+  
+  \partial 4. e8 e e |
+  <<
+    {
+      b'4 b8 a b c |
+      b a g b4 b8 |
+      e d b d4. |
+      e4 e8
+    }
+    {
+      e,4 e8 e e e |
+      e e e e4 g8 |
+      b a g b4.
+      c4 c8
+    }
+  >>
+  <<
+    {
+      \voiceOne
+      e8 ([d c])
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      b4.
+    }
+  >>
+  \oneVoice
+  <b e,>4. ~ <b e,>4. |
+  e8 e e d4 d8 |
+  c4 c8 b4 (a8) |
+  g4 d'8 c4. |
+  b2. |
+  \partial 4. b8 a b |
+  d8 d e d4 d8 |
+  e e e d d c |
+  b4. <e c>4 <e c>8 |
+  <<
+    {
+      \voiceOne
+      fs8 (e d)
+    }
+    \new Voice = "splitpart" {
+	    \voiceTwo
+      b4.
+    }
+  >>
+  \oneVoice
+  <b\=1^( e,\=2_(>4. <b\=1) e,\=2)>4. b8 b b |
+  d (b) b b (a g) |
+  e4. d4 e8 |
+  g4 b8 a4.
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
 }
 
 % Lời
@@ -104,19 +211,21 @@ loiDiepKhucBas = \lyricmode {
   Thập giá đã đánh bại hỏa ngục.
   Al -- le -- lu -- yah Al -- le -- lu -- yah
   Al -- le -- lu -- yah Ngợi khen Đấng Cứu độ
+  Này là hòn đá quân thù xưa những khinh khi từ chối
+  Rầy đã nên tuyệt luân
   Al -- le -- lu -- yah
   \set stanza = "3-4."
   Giê -- su Ki -- tô tình mến rất cao trọng cho nhân trần
-  \repeat unfold 15 { _ }
+  \repeat unfold 19 { _ }
   \set stanza = "5-6."
-  Tô môi chúng con thắm hồn Ngài đã đổ máu chiên.
+  Tô đôi môi chúng con thắm hồn Ngài đã đổ máu chiên.
 }
 
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 15\mm
+  top-margin = 10\mm
+  bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -127,7 +236,7 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #1
+  page-count = #1
 }
 
 TongNhip = {
@@ -174,8 +283,13 @@ notBePhu =
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
+    \override Lyrics.LyricSpace.minimum-distance = #1
+    \override LyricHyphen.minimum-distance = #1.2
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \context {
+      \Staff \RemoveEmptyStaves
+      \override VerticalAxisGroup.remove-first = ##t
+    }
   }
 }
