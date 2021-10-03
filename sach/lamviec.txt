@@ -1,3 +1,6 @@
+\once \phrasingSlurDashed
+a \(g\)
+
 \new Voice \TongNhip \partCombine
 { \partCombineChords \nhacDiepKhucSop }
 { \stemUp \notBePhu -3 \nhacDiepKhucBas }
@@ -264,9 +267,12 @@ Latex file
 - setup ssh key
 
 git remote remove origin
-git remote set-url origin git@github.com:dhoangtu/thanhvinhdapca-lmgbtranthanhcao.git
-git push --set-upstream origin master
+git remote set-url origin git@github.com:dhoangtu/tuyentaphopca-lmkimlong.git
+git push --set-upstream origin main
 
+add to local config file
+  [remote "origin"]
+    url = git@github.com:dhoangtu/tuyentaphopca-lmkimlong.git
 
 /home/dhtu/bin/lilypond  --output=/home/dhtu/Desktop/CATH/thanhcalilypond/cadoanhienlinh-thanhvinhdapca/107-theo-anh-sao.pdf -dno-point-and-click --pdf /home/dhtu/Desktop/CATH/thanhcalilypond/cadoanhienlinh-thanhvinhdapca/107-theo-anh-sao.ly
 
