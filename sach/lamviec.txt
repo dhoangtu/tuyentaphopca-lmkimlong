@@ -1,3 +1,10 @@
+
+===tách bè
+Nếu Chúa không xây nhà
+Mong Chúa đến
+
+
+====
 \once \phrasingSlurDashed
 a \(g\)
 

@@ -6,7 +6,7 @@
   title = \markup { \fontsize #3 "Vì Con Là Của Chúa" }
   poet = "Thơ: Thánh Têrêsa Giêsu"
   composer = "Phóng tác: Lm. Đỗ Xuân Quế"
-  arranger = "Lm. Kim Long"
+  arranger = "Nhạc: Lm. Kim Long"
   tagline = ##f
 }
 

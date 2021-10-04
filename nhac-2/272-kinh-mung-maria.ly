@@ -164,7 +164,7 @@ loiDiepKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
+  top-margin = 20\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -211,7 +211,8 @@ TongNhip = {
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #0.8
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override LyricHyphen.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
