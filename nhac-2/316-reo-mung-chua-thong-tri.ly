@@ -189,7 +189,7 @@ nhacDiepKhucBas = \relative c {
 }
 
 % Lời
-loiDiepKhucSop = \lyricmode {
+loiDiepKhucSopMot = \lyricmode {
   Al -- le -- lu -- yah
   Al -- le -- lu -- yah
   Al -- le -- lu -- yah Al -- le -- lu -- yah
@@ -203,7 +203,13 @@ loiDiepKhucSop = \lyricmode {
   Al -- le -- lu -- yah
 }
 
-loiDiepKhucBas = \lyricmode {
+loiDiepKhucSopHai = \lyricmode {
+  \repeat unfold 37 { _ }
+  \set stanza = "6."
+  Cho đoàn con được phần vui sướng liên kết với lễ chiên vượt qua mãi
+}
+
+loiDiepKhucBasMot = \lyricmode {
   Ngàn dân cùng reo mừng Thiên Chúa đến thống trị
   Al -- le -- lu -- yah
   \set stanza = "1-2."
@@ -211,6 +217,7 @@ loiDiepKhucBas = \lyricmode {
   Thập giá đã đánh bại hỏa ngục.
   Al -- le -- lu -- yah Al -- le -- lu -- yah
   Al -- le -- lu -- yah Ngợi khen Đấng Cứu độ
+  \set stanza = "3."
   Này là hòn đá quân thù xưa những khinh khi từ chối
   Rầy đã nên tuyệt luân
   Al -- le -- lu -- yah
@@ -221,11 +228,19 @@ loiDiepKhucBas = \lyricmode {
   Tô đôi môi chúng con thắm hồn Ngài đã đổ máu chiên.
 }
 
+loiDiepKhucBasHai = \lyricmode {
+  Này đây ngày vui mừng Thiên Chúa đã tác thành
+  \repeat unfold 35 { _ }
+  \set stanza = "4."
+  Việc kỳ diệu quá thương đoàn con Chúa nay đã hoàn tất
+  Nguyện Chúa luôn hiển danh
+}
+
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
+  top-margin = 20\mm
+  bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -236,7 +251,7 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  page-count = #1
+  %page-count = #1
 }
 
 TongNhip = {
@@ -271,20 +286,22 @@ notBePhu =
         \nhacDiepKhucSop
         \notBePhu -2 { \nhacDiepKhucAlto }
       \new NullVoice = beSop \nhacDiepKhucSop
-      \new Lyrics \lyricsto beSop \loiDiepKhucSop
+      \new Lyrics \lyricsto beSop \loiDiepKhucSopMot
+      \new Lyrics \lyricsto beSop \loiDiepKhucSopHai
     >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
           \TongNhip \nhacDiepKhucBas
         }
-      \new Lyrics \lyricsto beBas \loiDiepKhucBas
+      \new Lyrics \lyricsto beBas \loiDiepKhucBasMot
+      \new Lyrics \lyricsto beBas \loiDiepKhucBasHai
     >>
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricSpace.minimum-distance = #1
-    \override LyricHyphen.minimum-distance = #1.2
+    \override Lyrics.LyricSpace.minimum-distance = #1.2
+    \override LyricHyphen.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \context {
