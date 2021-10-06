@@ -14,7 +14,7 @@ nhacDiepKhucSop = \relative c'' {
   \set Staff.printKeyCancellation = ##f
   \partial 4 r4 |
   r c8 d16 (c) |
-  bf4 r |
+  b4 r |
   r d8 g, |
   d'4 ^(e8) d |
   c2 ~ |
@@ -22,8 +22,8 @@ nhacDiepKhucSop = \relative c'' {
   f4. ef8 |
   g ef4 d8 |
   c2 |
-  r4 \tuplet 3/2 { c'8 bf c } |
-  d4 \slashedGrace { bf16 ( } a8) [d] |
+  r4 \tuplet 3/2 { c'8 b c } |
+  d4 \slashedGrace { b16 ( } a8) [d] |
   g,4. fs8 |
   g2 ~ |
   g4 r8 \bar "||" \break
@@ -134,12 +134,90 @@ nhacDiepKhucAlto = \relative c' {
   b2 ~ |
   b4 e8. e16 |
   e4. a8 |
+  a gs4 e8 |
+  f4 e8. f16 |
+  d4. b8 |
+  c4 a8 c |
+  b2 ~ |
+  b4 r |
   
+  g'8. g16 g8 a ~ |
+  a a g e |
+  d2 |
+  c8. d16 b8 c ~ |
+  c c e c |
+  c2 |
+  f8. f16 f8 f |
+  e d4 c8 |
+  b4. f'8 |
+  e8. e16 d8 d |
+  e f4 f8 |
+  d2 |
+  
+  c'4. c16 c |
+  c4. b8 |
+  c a4 a8 |
+  gs4 r8 a |
+  f e4 e8 |
+  a g e g |
+  c2 |
+  a4. af8 |
+  g4. fs8 |
+  g a4 f8 |
+  e4 r8 e |
+  c f4 f8 |
+  e e d (f) |
+  e2
 }
 
 nhacDiepKhucBas = \relative c {
   \set Staff.printKeyCancellation = ##f
+  c8 c |
+  g'2 ~ |
+  g4 g8 g |
+  d'2 ~ |
+  d4 g, |
+  c,2 ~ |
+  c4 g'8 af |
+  f4. ef8 |
+  g ef4 d8 |
+  c4 c8 c |
+  g'2 ~ |
+  g8 g
+  <<
+    {
+      c8 c |
+      b4 a |
+      g2 ~ |
+      g4
+    }
+    {
+      c,8 c |
+      d4 d |
+      g,2 ~ |
+      g4
+    }
+  >>
+  r8
   
+  \key ef \major
+  r8
+  R2*13
+  
+  \key c \major
+  R2*15
+  c'8. c16 c8 f, ~ |
+  f f g c |
+  b2 |
+  a8. d,16 g8 c, ~ |
+  c e c c |
+  f2 |
+  d8. d16 d8 d |
+  d f4 fs8 |
+  g4. d8 |
+  cs8. c!16 b8 b |
+  c f ([d]) <g g,> |
+  <g c,>2
 }
 
 % Lời
@@ -190,12 +268,12 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #2
+  page-count = #2
   %systems-per-page = 5
 }
 
 TongNhip = {
-  \key f \major \time 2/4
+  \key c \major \time 2/4
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
 }
