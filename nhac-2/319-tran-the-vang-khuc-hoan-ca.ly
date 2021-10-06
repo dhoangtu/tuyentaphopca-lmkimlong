@@ -12,7 +12,7 @@
 % Nhạc
 nhacDiepKhuc = \relative c'' {
   g4 g8 b4 b8 |
-  a b a g e g |
+  a [b] a [g] e [g] |
   a4 \bar "||"
 }
 
