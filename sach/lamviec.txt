@@ -80,18 +80,18 @@ layout
       \override VerticalAxisGroup.remove-first = ##t
     }
 
-<<
-	{
-	  \voiceOne
-	  d2 |
-	}
+  <<
+    {
+      \voiceOne
+      d2 |
+    }
 
-	\new Voice = "splitpart" {
-	  \voiceTwo
-	  a,2 |
-	}
->>
-\oneVoice
+    \new Voice = "splitpart" {
+      \voiceTwo
+      a,2 |
+    }
+  >>
+  \oneVoice
   
 \set Staff.printKeyCancellation = ##f
 
