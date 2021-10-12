@@ -6,6 +6,32 @@ Mong Chúa đến
 
 ====
 
+  <<
+    {
+      r8 c ^> c4 ~ |
+      c4 r
+      %\once \override Score.RehearsalMark.font-size = #0.1
+      %\mark \markup { \musicglyph #"scripts.segno" }
+    }
+    {
+      \new Staff = "ossia" \with {
+        alignAboveContext = #"1"
+        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 6))
+        \remove "Time_signature_engraver"
+        fontSize = #-3
+        \override StaffSymbol.staff-space = #(magstep -3)
+        firstClef = ##f
+      } {
+          %\startStaff
+          r4
+          _\markup { \italic "(Đàn)" }
+          r8 c |
+          a f16 f g8 g
+          %\stopStaff
+      }
+    }
+  >>
+
 \autoPageBreaksOff
 \pageBreak
 
