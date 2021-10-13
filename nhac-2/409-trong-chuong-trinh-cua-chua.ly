@@ -80,23 +80,9 @@ nhacDiepKhucSop = \relative c' {
   g g r a |
   fs fs r g |
   fs e4 a8 |
-  <<
-    {
-      d,2 ~ |
-      d4 r8 a'
-    }
-    \new Staff = "ossia" \with {
-      alignAboveContext = #"1"
-      \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 6))
-      \remove "Time_signature_engraver"
-      fontSize = #-3
-      \override StaffSymbol.staff-space = #(magstep -3)
-      firstClef = ##f
-    } {
-      r4. d,16 a |
-      d8. e16 fs g a8
-    }
-  >>
+  d,2 ~ \bar "|."
+  d4 r8 a' | \break
+  
   d4 b16 (a) fs8 |
   g4. e8 |
   e4 a8 fs16 (e) |
@@ -164,8 +150,30 @@ nhacDiepKhucAlto = \relative c' {
   b b r e |
   d d r d |
   d cs4 cs8 |
-  d2 ~ |
-  d4 r8 a' |
+  <<
+    {
+      d2 ~ |
+      d4 r8 a' |
+    }
+    {
+      \new Staff = "ossia" \with {
+        alignAboveContext = #"1"
+        \override VerticalAxisGroup.staff-staff-spacing =
+          #'((basic-distance . 3))
+        \remove "Time_signature_engraver"
+        fontSize = #-3
+        \override StaffSymbol.staff-space = #(magstep -3)
+        firstClef = ##f
+      } {
+        \key d \major
+        r4. d,16 
+        \tweak extra-offset #'(-8 . 2)
+        _\markup { \fontsize #2 \italic "Đàn" }
+        a |
+        d8. e16 fs g a8
+      }
+    }
+  >>
   d4 b16 (a) fs8 |
   g4. e8 |
   e4 a8 fs16 (e) |
@@ -183,11 +191,89 @@ nhacDiepKhucAlto = \relative c' {
   b4 \tuplet 3/2 { g8 g gs } |
   a4. a16 g |
   fs8 e cs cs |
-  d2 ~ |
-  d4 r8 a'
+  <<
+    {
+      d2 ~ |
+      d4 r8 a'
+    }
+    {
+      \new Staff = "ossia" \with {
+        instrumentName = "Đàn"
+        alignAboveContext = #"1"
+        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 6))
+        \remove "Time_signature_engraver"
+        fontSize = #-3
+        \override StaffSymbol.staff-space = #(magstep -3)
+        firstClef = ##f
+      } {
+        \key d \major
+        r4. d,16 
+        _\markup { \fontsize #2 \italic "Đàn" }
+        a |
+        d8. e16 fs g a8
+      }
+    }
+  >>
 }
 
 nhacDiepKhucBas = \relative c {
+  d8 f16 f |
+  d8 bf' bf g |
+  a4. a16 a |
+  d2 ~ |
+  d4 r8 cs |
+  
+  \set Staff.printKeyCancellation = ##f
+  \key d \major
+  d8. b16 a8 (gs) |
+  a4. a8 |
+  fs d4 a'8 |
+  g4. g8 |
+  a4 a, |
+  d2 |
+  fs8. fs16 fs8 fs |
+  d4. d8 |
+  g8. g16 e8 a |
+  a2 |
+  r8 d, g g |
+  g4. d8 |
+  cs cs d b |
+  a4. a'8 |
+  g g gs gs |
+  a4. fs8 |
+  e4
+  <<
+    {
+      \voiceOne
+      a8 ([g])
+    }
+    \new Voice = "splitpart" {
+      \voiceTwo
+      a8 ([a,])
+    }
+  >>
+  \oneVoice
+  <fs' d>2 ~ |
+  <fs d>4 r |
+  R2*2
+  a8. a16 fs8 d |
+  b'4. g8 |
+  a a g (b) |
+  a4 r8 fs |
+  g g r cs, |
+  d d r b |
+  cs8. cs16 d8 fs |
+  g2 |
+  b8. b16 b8 a |
+  r fs fs e |
+  d4. g8 |
+  a a g (b) |
+  a4 r8 fs |
+  g g r cs, |
+  d d r e |
+  a a <g a,>4 |
+  <fs d>2 ~ |
+  <fs d>4 r |
   
 }
 
@@ -225,17 +311,18 @@ loiPhienKhucSopMot = \lyricmode {
 }
 
 loiPhienKhucSopHai = \lyricmode {
+  \repeat unfold 71 { _ }
   qua bao nhiêu ngày tháng luôn trọn vẹn nghĩa thủy chung
   mãi bên nhau, mãi yêu nhau, mãi trong ân tình của Chúa.
-  Hiệp từng lời kinh bên bàn thờ Chúa cho tình yêu đẹp xinh.
-  Chúa yêu thương muôn ơn dẫn đưa từng bước đường.
+  Hiệp từng lời kinh bên bàn thờ Chúa cho tình yêu mãi đẹp xinh.
+  Chúa yêu thương xuống muôn ơn dẫn đưa từng bước đường.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \override Lyrics.LyricText.font-shape = #'italic
-  \repeat unfold 30 { _ }
+  \repeat unfold 71 { _ }
   (mươi lăm năm rồi đó)
-  \repeat unfold 10 { _ }
+  \repeat unfold 18 { _ }
   (Rầy cùng dìu nhau lên bàn thờ Chúa dâng lời cám mến hồng ân).
 }
 
@@ -247,24 +334,25 @@ loiPhienKhucBasMot = \lyricmode {
   Lời chúc phúc đó dù hình phạt tội tổ tông,
   dù lụt hồng thủy tuôn tràn cũng không xóa được.
   Trong chương trình của Chúa đôi bạn trẻ gặp nhau,
-  đã quen nhau, đã yêu nhau, đã trao nhau hẹn ước.
+  đã quen nhau, đã yêu nhau, đã trao nhau lời hẹn ước.
   Và cùng dìu nhau lên bàn thờ Chúa
   xin Người niêm tình yêu.
   Hứa bên nhau, hứa thương nhau, hứa thủy chung trọn đời.
 }
 
 loiPhienKhucBasHai = \lyricmode {
+  \repeat unfold 56 { _ }
   qua bao nhiêu ngày tháng luôn trọn vẹn thủy chung
-  mãi bên nhau, mãi yêu nhau, mãi trong ân tình Chúa.
+  mãi bên nhau, mãi yêu nhau, mãi trong ân tình của Chúa.
   Hiệp từng lời kinh bên bàn thờ Chúa cho tình yêu đẹp xinh.
   Chúa yêu thương xuống muôn ơn dẫn đưa từng nẻo đường.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \override Lyrics.LyricText.font-shape = #'italic
-  \repeat unfold 30 { _ }
+  \repeat unfold 56 { _ }
   (mươi lăm năm rồi đó)
-  \repeat unfold 10 { _ }
+  \repeat unfold 17 { _ }
   (Rầy cùng dìu nhau lên bàn thờ Chúa dâng lời cám hồng ân).
 }
 
@@ -272,8 +360,8 @@ loiPhienKhucBasBa = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin =20\mm
-  bottom-margin = 20\mm
+  top-margin =15\mm
+  bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -285,6 +373,10 @@ loiPhienKhucBasBa = \lyricmode {
       (/ 20 20)))
   print-page-number = #f
   %page-count = #1
+  ragged-last-bottom = ##t
+  %ragged-bottom = ##t
+  %ragged-last = ##t
+  systems-per-page = 5
 }
 
 TongNhip = {
@@ -293,21 +385,6 @@ TongNhip = {
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1)
 }
-
-% Đổi kích thước nốt cho bè phụ
-notBePhu =
-#(define-music-function (font-size music) (number? ly:music?)
-   (for-some-music
-     (lambda (m)
-       (if (music-is-of-type? m 'rhythmic-event)
-           (begin
-             (set! (ly:music-property m 'tweaks)
-                   (cons `(font-size . ,font-size)
-                         (ly:music-property m 'tweaks)))
-             #t)
-           #f))
-     music)
-   music)
 
 \score {
   \new ChoirStaff <<
@@ -322,6 +399,7 @@ notBePhu =
       \new NullVoice = beSop \nhacDiepKhucSop
       \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
       \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopBa
       >>
     \new Staff <<
         \clef "bass"
@@ -330,11 +408,16 @@ notBePhu =
         }
       \new Lyrics \lyricsto beBas \loiPhienKhucBasMot
       \new Lyrics \lyricsto beBas \loiPhienKhucBasHai
+      \new Lyrics \lyricsto beBas \loiPhienKhucBasBa
     >>
   >>
   \layout {
     \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \context {
+      \Staff \RemoveEmptyStaves
+      \override VerticalAxisGroup.remove-first = ##t
+    }
   }
 }
