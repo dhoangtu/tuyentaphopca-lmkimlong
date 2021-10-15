@@ -156,7 +156,42 @@ nhacDiepKhucBas = \relative c {
   f8. g16 bf8 bf |
   c2 ~ |
   c4 r8 c, |
-  
+  c8. g'16 g8 e |
+  f2 ~ |
+  f8. e16 e8 e |
+  f4 r |
+  r8. f16 e8 f |
+  g8. e16 d8 f |
+  f4. <g d>8 |
+  <a c,> <f c> <e c> <g c,> |
+  <f c f,>2 ~ |
+  <f c f,>4 r |
+  r8 c16 c f8 r |
+  R2
+  r8 a16 a c8 c, |
+  f r r4 |
+  r8 d16 d c8 r |
+  R2
+  r8 f4 f8 |
+  f f f r |
+  r c c4 ~ |
+  c r4 |
+  r8 e f4 ~ |
+  f r |
+  r8 g c4 ~ |
+  c r |
+  r8 f, g g |
+  c,4 r8 f |
+  ef4 (c) |
+  f f8 f |
+  g4. g8 |
+  a4 f |
+  e4. c8 |
+  a d c4 |
+  d4. a'8 |
+  <a a,> <bf d,> <c c,>4 |
+  <a f>2 ~ |
+  <a f>4
 }
 
 % Lời
