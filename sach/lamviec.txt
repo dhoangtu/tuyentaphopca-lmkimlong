@@ -197,6 +197,9 @@ raiseLyrics =
 \set Score.barAlways = ##t
 ragged-last = ##f
 
+
+\once \override Score.RehearsalMark.extra-offset = #'( -2 . 1.75 )
+
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
 
