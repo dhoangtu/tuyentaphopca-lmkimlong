@@ -106,24 +106,37 @@ nhacDiepKhucSop = \relative c' {
   a2 |
   <<
     {
-      \voiceOne
       bf4 \tuplet 3/2 { d8 d g, } |
       g4. c16 c |
       a2 |
-      e4. f16 d |
+      e4. f16 d
+    }
+    {
+      g4 \tuplet 3/2 { f8 f f } |
+      e4. e16 e |
+      f2 |
+      c4. d16 b!
+    }
+  >>
+  <<
+    {
+      \voiceOne
       c4 \tuplet 3/2 { c8 c c } |
+    }
+    \new Voice = "splitpart" {
+      \voiceTwo
+      c4 \tuplet 3/2 { c8 c c } |
+    }
+  >>
+  \oneVoice
+  <<
+    {
       bf'4. bf8 |
       a4 \tuplet 3/2 { g8 g c } |
       f,2 ~ |
       f4.
     }
-    \new Voice = "splitpart" \notBePhu -2 {
-      \voiceTwo
-      g4 \tuplet 3/2 { f8 f f } |
-      e4. e16 e |
-      f2 |
-      c4. d16 b! |
-      c4 \tuplet 3/2 { c8 c c } |
+    {
       d4. e8 |
       f4 \tuplet 3/2 { c8 c bf } |
       a2 ~ |
@@ -134,15 +147,123 @@ nhacDiepKhucSop = \relative c' {
 }
 
 nhacDiepKhucAlto = \relative c' {
-  
+  c8 |
+  f4 f8 f |
+  e f g (f) |
+  e4 r8 ef |
+  d ^> d ^> r f |
+  e ^> e4. ^> f8. ^> g16 f8 e |
+  c2 ~ |
+  c4 r |
+  r4. g'16 (f) |
+  e8 ^> e ^> f4 ~ |
+  f8 r4 g8 |
+  a ^> a ^> f4 ~ |
+  f r8 f |
+  e4 f8 f |
+  d g a (c) |
+  b!4 r8 bf |
+  a ^> a ^> r c |
+  bf ^> bf4. ^> |
+  c8. ^> a16 g8 f |
+  e2 ~ |
+  e4 e |
+  f4. df8 |
+  c b!4 c8 |
+  c2 ~ |
+  c4 r |
+  r4. f8 |
+  g8. af16 g8 f |
+  df4 f8 df |
+  c4 r8 c |
+  f4 f8 f |
+  e f g (f) |
+  e4 r8 ef |
+  d ^> d ^> r f |
+  e ^> e ^> r f |
+  f8. f16 bf8 bf |
+  a2 ~ |
+  a4 r
 }
 
-nhacDiepKhucTenor = \relative c' {
-  
+nhacDiepKhucTenor = \relative c {
+  c8 |
+  f4 f8 a |
+  c c d4 |
+  c r8 a |
+  bf ^> bf ^> r b! |
+  c ^> c4. ^> |
+  c8. ^> d16 c8 bf |
+  a2 ~ |
+  a4 r8 f |
+  bf8. ^> bf16 g8 ^> g ^> |
+  c4. a8 |
+  d ^> bf ^> c ^> c ^> |
+  f,4. c8 |
+  f4 f8 f |
+  g4 a8 a |
+  g c f4 |
+  d r8 e |
+  f ^> f ^> r fs |
+  g ^> g4. ^> |
+  c,8. ^> c16 bf8 b! |
+  c2 ~ |
+  c4 r |
+  R2*2
+  r4. c,8 |
+  af'8. ^> af16 g8 g |
+  c2 ~ |
+  c4 r8 f, |
+  bf4 g8 f |
+  e4 e8 e |
+  f4 f8 a |
+  c c d4 |
+  c4 r8 a |
+  bf ^> bf ^> r8 b! |
+  c ^> c ^> r g |
+  a8. a16 bf8 c |
+  c2 ~ |
+  c4 r
 }
 
-nhacDiepKhucBas = \relative c' {
-  
+nhacDiepKhucBas = \relative c {
+  c8 |
+  f4 f8 d |
+  c c b!4 |
+  c r8 c |
+  bf ^> bf ^> r d |
+  c ^> c4. ^> |
+  a8. ^> d16 c8 c |
+  f2 ~ |
+  f4 r8 f |
+  bf8. ^> bf16 g8 ^> g ^> |
+  c4. a8 |
+  d ^> bf ^> c ^> c ^> |
+  f,4. c8 |
+  f4 f8 f |
+  c4 f8 f |
+  g e d4 |
+  g r8 g |
+  f ^> f ^> r a |
+  g ^> g4. ^> |
+  e8. ^> f16 g8 g |
+  c,2 ~ |
+  c4 r |
+  R2*2
+  r4. c8 |
+  f8. ^> f16 f8 df |
+  c2 ~ |
+  c4 r8 f |
+  bf4 bf,8 b! |
+  c4 c8 c |
+  f4 f8 d |
+  c c b!4 |
+  c r8 c |
+  bf8 ^> bf ^> r d |
+  c ^> c ^> r bf |
+  c8. c16 g8 c |
+  <c f,>2 ~ |
+  <c f,>4 r
 }
 
 % Lời
@@ -180,7 +301,7 @@ loiDiepKhucSop = \lyricmode {
 
 loiDiepKhucAlto = \lyricmode {
   Hòa ca lên, chung lời hòa ca lên.
-  Chúc mừng chiến thắng,
+  Chúc chiến thắng,
   chúc chiến thắng Vị Ki -- tô khải hoàn.
   Đánh bại thần chết đập tan gông cùm.
   Hòa ca lên, chung lời hòa ca lên.
@@ -229,7 +350,7 @@ loiDiepKhucBas = \lyricmode {
 \paper {
   #(set-paper-size "a4")
   top-margin = 15\mm
-  bottom-margin = 20\mm
+  bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -240,7 +361,7 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #4
+  page-count = #3
   %ragged-bottom = ##f
 }
 
@@ -275,7 +396,7 @@ TongNhip = {
       \new Lyrics \lyricsto beTenor \loiDiepKhucTenor
     >>
     \new Staff <<
-        \clef "bass"
+        \clef bass
         \new Voice = beBas {
           \TongNhip \nhacDiepKhucBas
         }
@@ -283,7 +404,8 @@ TongNhip = {
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #0.4
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override LyricHyphen.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \context {
