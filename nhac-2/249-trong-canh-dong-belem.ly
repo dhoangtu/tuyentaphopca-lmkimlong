@@ -37,7 +37,11 @@ nhacDiepKhucSolo = \relative c''' {
   d2 ~ |
   d |
   
-  g8 a d, g |
+  g8
+  ^\markup {
+    \halign #1  \bold "Solo"
+  }
+  a d, g |
   a4 a8 c |
   c bf a c |
   d2 ~ |

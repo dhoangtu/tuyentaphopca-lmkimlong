@@ -144,8 +144,8 @@ loiPhienKhucBasHai = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin =10\mm
-  bottom-margin = 10\mm
+  top-margin = 5\mm
+  bottom-margin = 5\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
