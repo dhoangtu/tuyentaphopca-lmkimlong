@@ -163,9 +163,14 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiDiepKhucAlto = \lyricmode {
-  \override Lyrics.LyricText.font-shape = #'italic
-  \repeat unfold 25 { _ }
-  loại nhân loại tội tình.
+  Nhạc thương trầm buông hắt hiu.
+  Đồi cao u hoài loang máu đàu.
+  Con Chúa đau thương treo trên Thập Giá
+  hiến thân vì nhân loại nhân loại tội tình.
+  Đồng công cùng con dấu yêu.
+  Vì thương nhân loại bao khốn cùng.
+  Xin dẫn đưa bao tâm hồn lạc hướng về bên Mẹ.
+  Mẹ ơi.
 }
 
 loiDiepKhucBas = \lyricmode {
@@ -244,6 +249,20 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
+    
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacDiepKhucSop
+      }
+      \new Lyrics \lyricsto beSop \loiDiepKhucSop
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacDiepKhucAlto
+      }
+      \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
+    >>
+    %{
     \new Staff \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f
@@ -257,6 +276,7 @@ notBePhu =
       \new NullVoice = beAlto \nhacDiepKhucAlto
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
     >>
+    %}
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {

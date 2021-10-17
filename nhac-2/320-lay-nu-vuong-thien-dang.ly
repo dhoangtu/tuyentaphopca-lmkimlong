@@ -12,7 +12,7 @@
 nhacDiepKhucSop = \relative c'' {
   \partial 4 r4 |
   r g ~ g8 e' d c |
-  b4 c16 (b) a8 |
+  b4 c16 (b) a8 | \break
   g4 r8 g |
   a4 c |
   b r |
@@ -26,20 +26,15 @@ nhacDiepKhucSop = \relative c'' {
   cs4 r |
   r8 g e' d16 c |
   b4. c16 (b) |
-  a4 b8 c |
+  a4 b8 c | \break
   d4 r8 g, |
   a4 c |
   b2 ~ |
   b8 b 
-  \stemUp
   e,
-  _\markup { \raise #5 \rest #"4" }
   e |
   c'4 b8
-  \tweak extra-offset #'(0 . 1.1)
-  _\markup { \rest #"2" }
   c16 (b) |
-  \stemNeutral
   a2 ~ |
   a4 r8 a |
   b4 d |
@@ -72,28 +67,19 @@ nhacDiepKhucAlto = \relative c'' {
   b4 r8 e |
   c4 g'8 (f) |
   d4
-  \stemDown
   d8 g16
-  \tweak extra-offset #'(0 . -2)
-  ^\markup { \rest #"4" }
   (a) |
   fs8 g
-  \tweak extra-offset #'(0 . -1.7)
-  ^\markup { \rest #"2" }
   a16 (b) a8 |
   a4
-  \tweak extra-offset #'(0 . -2)
-  ^\markup { \rest #"4" }
   e |
-  \stemNeutral
-  \voiceTwo
   d b'16 (c) b8 |
   a4 e8 (d) |
   cs4 r8 fs |
   d4 a'8 (f) |
   d2 ~ |
   d4 r |
-  r8 \tweak font-size #0 g c b16 a |
+  r8 g c b16 a |
   g4. g8 |
   c,4 g'8 g |
   fs4 r8 e |
@@ -114,7 +100,7 @@ nhacDiepKhucAlto = \relative c'' {
   c4 g'8 (f) |
   d4 r |
   r r8 a' |
-  d d b16 (c) \tweak font-size #0 b8 |
+  d d b16 (c) b8 |
   a4 a8 f |
   e4. e8 |
   a a a4 ~ |
@@ -192,14 +178,21 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiDiepKhucAlto = \lyricmode {
-  \override Lyrics.LyricText.font-shape = #'italic
-  \repeat unfold 12 { _ }
+  Lạy Nữ Vương Thiên Đàng hãy vui mừng.
+  Al -- le -- lu -- ia!
   Vì Đấng Mẹ đã đáng cưu mang trong
   Mẹ đáng cưu mang trong lòng.
-  \repeat unfold 18 { _ }
-  cầu cho chúng con
-  \repeat unfold 17 { _ }
+  Al -- le -- lu -- ia!
+  Người đã sống lại thật như lời đã phán hứa.
+  Al -- le -- lu -- ia!
+  cầu cho chúng con.
+  Al -- le -- lu -- ia!
+  Thánh Ma -- ri -- a hãy hỉ hoan khoái lạc.
+  Al -- le -- lu -- ia!
   Vì Chúa đã sống lại thật, sống lại thật.
+  Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia!
 }
 
 loiDiepKhucBas = \lyricmode {
@@ -261,19 +254,18 @@ notBePhu =
    music)
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacDiepKhucSop
       }
-      <<
-      \new Voice \TongNhip \partCombine 
-        \nhacDiepKhucSop
-        \notBePhu -2 { \nhacDiepKhucAlto }
-      \new NullVoice = beSop \nhacDiepKhucSop
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
-      \new NullVoice = beAlto \nhacDiepKhucAlto
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacDiepKhucAlto
+      }
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
-      >>
+    >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {

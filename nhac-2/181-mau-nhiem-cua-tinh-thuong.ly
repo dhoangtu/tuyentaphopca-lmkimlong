@@ -342,7 +342,7 @@ nhacDiepKhucBas = \relative c' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Rừng thời gian lá rụng cây tàn héo cô đơn
+  Rừng thời gian lá rụng cây tàn héo cô liêu
   Mênh mông đến lạnh hồn tháng năm sầu đơn lẻ,
   khóc dội rừng Si -- on
   Mong vì sao Cứu Thế.
