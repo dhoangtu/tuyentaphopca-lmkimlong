@@ -196,15 +196,62 @@ nhacDiepKhucBas = \relative c {
   \oneVoice
   <b g>4 r8 f16 f |
   g8 g16 g g8 g |
-  d
+  d8
   <<
     {
+      \voiceOne
+      g8 ([b])
     }
-    {
+    \new Voice = "splitpart" {
+      \voiceTwo
+      \once \override NoteColumn.force-hshift = #1
+      g4
     }
   >>
   \oneVoice
-  
+  <d' gs,>8 |
+  <c a>4. b8 ^> ~ |
+  b a a g |
+  a f4 f8 |
+  e2 ~ |
+  e4 r8 f16 f |
+  e8 e16 e e8 e |
+  f
+  <<
+    {
+      \voiceOne
+      f8 ([a])
+    }
+    \new Voice = "splitpart" {
+      \voiceTwo
+      \once \override NoteColumn.force-hshift = #1
+      f4
+    }
+  >>
+  \oneVoice
+  <c' fs,>8 |
+  <b g>4 r8 g16 g |
+  f8 f16 f f8 f |
+  g
+  <<
+    {
+      \voiceOne
+      g8 ([b])
+    }
+    \new Voice = "splitpart" {
+      \voiceTwo
+      \once \override NoteColumn.force-hshift = #1
+      g4
+    }
+  >>
+  \oneVoice
+  <d' gs,>8 |
+  <c a>4 r8 g ^> ~ |
+  g g f e |
+  d2 |
+  r8 <g g,>4 <g g,>8 |
+  <g c,>2 ~ |
+  <g c,>4 r8
 }
 
 % Lời
