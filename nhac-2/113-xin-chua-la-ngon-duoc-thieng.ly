@@ -121,13 +121,15 @@ nhacPhienKhucBas = \relative c {
 }
 
 % Lời
-% Điệp khúc Sop lấy của Alto vì Alto nhiều chữ hơn
+loiDiepKhucSop = \lyricmode {
+  Xin Chúa là ngọn đuốc thiêng tỏa ánh sáng vào đời con
+  tăm tối.
+  Chúa giúp con xông vào chiến trận cậy sức Chúa con vượt núi băng đồi.
+}
+
 loiDiepKhucAlto = \lyricmode {
   Xin Chúa là ngọn đuốc thiêng tỏa ánh sáng vào đời con
-  \override Lyrics.LyricText.font-shape = #'italic
-  (đời con)
-  \revert Lyrics.LyricText.font-shape
-  tăm tối.
+  đời con tăm tối.
   Chúa giúp con xông vào chiến trận cậy sức Chúa con vượt núi băng đồi.
 }
 
@@ -206,8 +208,8 @@ loiPhienKhucBasBa = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 15\mm
+  top-margin = 20\mm
+  bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -218,7 +220,9 @@ loiPhienKhucBasBa = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #2
+  page-count = #2
+  %systems-per-page = 4
+  %ragged-bottom = ##t
 }
 
 % Đổi kích thước nốt cho bè phụ
@@ -238,6 +242,19 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \nhacDiepKhucSop
+      }
+      \new Lyrics \lyricsto beSop \loiDiepKhucSop
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \nhacDiepKhucAlto
+      }
+      \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
+    >>
+    %{
     \new Staff \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f
@@ -249,6 +266,7 @@ notBePhu =
       \new NullVoice = beAlto \nhacDiepKhucAlto
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
       >>
+    %}
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {

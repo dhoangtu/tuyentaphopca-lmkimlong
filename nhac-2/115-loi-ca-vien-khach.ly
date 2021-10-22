@@ -259,11 +259,20 @@ loiPhienKhucSop = \lyricmode {
 }
 
 loiPhienKhucAlto = \lyricmode {
-  \override Lyrics.LyricText.font-shape = #'italic
-  \repeat unfold 12 { _ }
+  Dừng bước chi đây kìa ánh sáng ngày về
+  đang tưng bừng
   tưng bừng mến yêu vô tận.
-  \repeat unfold 52 { _ }
+  Nhưng tôi là viễn khách mang nặng tình cố hương.
+  Tàu đời lên một chuyến chở rặt mối sầu thương.
+  
+  Tôi đi trong thời gian về bến đời vĩnh viễn.
+  Hồn ơi đừng trìu mến chút cát bụi dọc đàng.
+  
+  Dừng bước chi đây kìa ánh sáng ngày về
+  đang tưng bừng
   tưng bừng mến yêu vô tận.
+  Sao dừng chi đây hồn hỡi ánh sáng ngày về,
+  ánh sáng ngày về đang tưng bừng trời mến yêu vô tận.
 }
 
 loiPhienKhucBas = \lyricmode {
@@ -283,7 +292,7 @@ loiPhienKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
+  top-margin = 17\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -295,7 +304,7 @@ loiPhienKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #2
+  page-count = #3
   %ragged-bottom = ##t
   ragged-last-bottom = ##t
 }
@@ -324,6 +333,19 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacPhienKhucSop
+      }
+      \new Lyrics \lyricsto beSop \loiPhienKhucSop
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacPhienKhucAlto
+      }
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
+    >>
+    %{
     \new Staff \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f
@@ -337,6 +359,7 @@ notBePhu =
       \new NullVoice = beAlto \nhacPhienKhucAlto
       \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
       >>
+    %}
     \new Staff <<
         \clef bass
         \new Voice = beBas {

@@ -160,8 +160,8 @@ loiPhienKhucBa = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 20\mm
+  top-margin = 8\mm
+  bottom-margin = 8\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -172,8 +172,9 @@ loiPhienKhucBa = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #2
+  page-count = #1
   %systems-per-page = 5
+  %ragged-bottom = ##t
 }
 
 TongNhip = {
@@ -199,6 +200,21 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
+    %{
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacDiepKhucSop
+      }
+      \new Lyrics \lyricsto beSop \loiDiepKhucSop
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacDiepKhucAlto
+      }
+      \new Lyrics \lyricsto beAlto \loiDiepKhucSop
+    >>
+    %}
+    
     \new Staff \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f
@@ -210,6 +226,7 @@ notBePhu =
       \new NullVoice = beSop \nhacDiepKhucSop
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
       >>
+    
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
@@ -219,13 +236,13 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
 }
 
-\pageBreak
+%\pageBreak
 
 \score {
   \new ChoirStaff <<

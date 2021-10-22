@@ -176,9 +176,14 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiDiepKhucAlto = \lyricmode {
-  \override Lyrics.LyricText.font-shape = #'italic
-  \repeat unfold 50 { _ }
-  Đàn ca lên kính Chúa và tôn vinh Ngài
+  Tôi tin tưởng và không khiếp sợ gì.
+  Vì khúc nhạc tôi ca, khúc nhạc tôi ca là chính Chúa
+  Đấng đã ban ơn Cứu Độ cho tôi.
+  Ngày ấy hãy tung hô: Cảm mến Chúa chí nhân
+  hãy loan báo khắp muôn dân bao công việc Chúa lẫy lừng.
+  Đàn ca lên kính Chúa và tôn vinh Ngài vì Chúa ra tay hùng anh
+  sự nghiệp Ngài khiến nơi nơi lừng danh,
+  hãy hân hoan reo mừng.
 }
 
 loiDiepKhucBas = \lyricmode {
@@ -235,19 +240,18 @@ notBePhu =
    music)
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacDiepKhucSop
       }
-      <<
-      \new Voice \TongNhip \partCombine 
-        \nhacDiepKhucSop
-        \notBePhu -2 { \nhacDiepKhucAlto }
-      \new NullVoice = beSop \nhacDiepKhucSop
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
-      \new NullVoice = beAlto \nhacDiepKhucAlto
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacDiepKhucAlto
+      }
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
-      >>
+    >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
@@ -257,7 +261,7 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

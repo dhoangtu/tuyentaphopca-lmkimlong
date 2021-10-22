@@ -178,7 +178,7 @@ loiPhienKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20\mm
+  top-margin = 15\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -217,6 +217,19 @@ notBePhu =
    music)
 \score {
   \new ChoirStaff <<
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacPhienKhucSop
+      }
+      \new Lyrics \lyricsto beSop \loiPhienKhucSop
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacPhienKhucAlto
+      }
+      \new Lyrics \lyricsto beAlto \loiPhienKhucSop
+    >>
+    %{
     \new Staff \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f
@@ -228,6 +241,7 @@ notBePhu =
       \new NullVoice = beSop \nhacPhienKhucSop
       \new Lyrics \lyricsto beSop \loiPhienKhucSop
       >>
+    %}
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {

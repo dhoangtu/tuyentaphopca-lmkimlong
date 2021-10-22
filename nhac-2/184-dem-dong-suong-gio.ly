@@ -72,13 +72,12 @@ nhacPhienKhucAlto = \relative c'' {
   d,2 ~ |
   d4 r |
   R2*2
-  r4 r8 d' |
-  r8 cs,16 cs d8 r |
+  R2
+  r8 cs16 cs d8 r |
   r cs16 cs d8 r |
   r d16 d b!8 r |
-  d2 ~ |
-  d4 r |
-  r r8 d' |
+  R2*2
+  r4 r8 d' |
   a8. a16 g8 g |
   fs4. fs8 |
   g bf4 g8 |
@@ -210,13 +209,24 @@ loiPhienKhucSopHai = \lyricmode {
   Tiếp nối muôn người luôn cùng xướng ca:
 }
 
-loiPhienKhucAlto = \lyricmode {
-  \override Lyrics.LyricText.font-shape = #'italic
-  \repeat unfold 13 { _ }
-  (la la la) (la la la) (la la la)
-  \repeat unfold 38 { _ }
+loiPhienKhucAltoMot = \lyricmode {
+  Đêm đông sương gió, trăng sao lu mờ, mây trôi lững lờ.
+  la la la la la la la la la
+  Lắng nghe đây mục đồng ơi:
+  Nơi hang đá cơ cùng Đấng Cứu Tinh vừa hạ sinh.
+  Lớp lớp thiên thần chung lời xướng ca:
+      
+  Sáng danh Thiên Chúa trên trời,
+  sáng danh Thiên Chúa trên trời.
   Và bình an cho những người
-  vĩnh
+  vĩnh an cho những người được Chúa thương.
+}
+
+loiPhienKhucAltoHai = \lyricmode {
+  \repeat unfold 21 { _ }
+  Bóng đêm nay đã tàn phai
+  nơi nơi hết u hoài ánh sáng lên ngợp trần ai.
+  Tiếp nối muôn người luôn cùng xướng ca:
 }
 
 loiPhienKhucTenorMot = \lyricmode {
@@ -245,8 +255,8 @@ loiPhienKhucTenorHai = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 15\mm
+  top-margin = 20\mm
+  bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -269,20 +279,20 @@ TongNhip = {
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacPhienKhucSop
       }
-      <<
-      \new Voice \TongNhip \partCombine 
-        \nhacPhienKhucSop
-        \notBePhu -2 { \nhacPhienKhucAlto }
-      \new NullVoice = beSop \nhacPhienKhucSop
       \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
       \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
-      \new NullVoice = beAlto \nhacPhienKhucAlto
-      \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
-      >>
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacPhienKhucAlto
+      }
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoMot
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoHai
+    >>
     \new Staff \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f

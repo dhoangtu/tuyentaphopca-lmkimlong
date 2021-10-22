@@ -330,7 +330,7 @@ TongNhip = {
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \context {
       \Staff \RemoveEmptyStaves

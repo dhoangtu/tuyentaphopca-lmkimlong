@@ -119,7 +119,7 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #1
+  page-count = #1
 }
 
 TongNhip = {
@@ -165,6 +165,19 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacDiepKhucSop
+      }
+      \new Lyrics \lyricsto beSop \loiDiepKhucSop
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacDiepKhucAlto
+      }
+      \new Lyrics \lyricsto beAlto \loiDiepKhucSop
+    >>
+    %{
     \new Staff \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f
@@ -176,6 +189,7 @@ notBePhu =
       \new NullVoice = beSop \nhacDiepKhucSop
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
     >>
+    %}
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {

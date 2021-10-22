@@ -155,6 +155,13 @@ loiPhienKhucSopBon = \lyricmode {
   Cho trọn niềm tin Chúa nguy khó vẫn vẹn trung.
 }
 
+loiPhienKhucAltoMot = \lyricmode {
+  Các thánh giờ đây trong Đất Hứa
+  góp chung lời hát khúc trường ca.
+  Chúng ta lòng sướng vui chan chứa
+  cùng hát vang ca khúc thái hòa.
+}
+
 loiPhienKhucBasMot = \lyricmode {
   \set stanza = "1."
   Đây đoàn người hiên ngang ra pháp trường.
@@ -199,7 +206,7 @@ loiPhienKhucBasBon = \lyricmode {
   print-page-number = #f
   %page-count = #2
   %systems-per-page = 5
-  ragged-bottom = ##t
+  %ragged-last-bottom = ##t
 }
 
 TongNhip = {
@@ -224,6 +231,22 @@ notBePhu =
    music)
 \score {
   \new ChoirStaff <<
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacPhienKhucSop
+      }
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopBa
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopBon
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacPhienKhucAlto
+      }
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoMot
+    >>
+    %{
     \new Staff \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f
@@ -238,6 +261,7 @@ notBePhu =
       \new Lyrics \lyricsto beSop \loiPhienKhucSopBa
       \new Lyrics \lyricsto beSop \loiPhienKhucSopBon
       >>
+    %}
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
