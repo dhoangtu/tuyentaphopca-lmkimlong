@@ -36,7 +36,7 @@ nhacDiepKhucSop = \relative c'' {
   \tuplet 3/2 { g8 a bf } \tuplet 3/2 { g a d } |
   e4. cs8 |
   d2 ~ |
-  d4 r \bar "||" \break
+  d4 r \bar "|." \break
   
   R2*5 \break
   
@@ -68,6 +68,8 @@ nhacDiepKhucSop = \relative c'' {
   ef4 (d) ~ |
   d8 \bar "||" \break
   
+  %\set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
+  %\once \omit Staff.KeySignature
   \key g \major
   d'8 b c |
   a g16 a e8 e |
@@ -93,7 +95,7 @@ nhacDiepKhucAlto = \relative c' {
   \set Staff.printKeyCancellation = ##f
   r8 |
   r4 r8 f |
-  e4 \tuplet 3/2 { f8 f e } |
+  e4 \tuplet 3/2 { e8 f e } |
   d4 bf' ~ |
   bf8 g a e |
   d2 |
@@ -225,7 +227,7 @@ nhacDiepKhucTenor = \relative c' {
   r c b c |
   a4 fs8 fs |
   g2 |
-  c8. ^> c16 b8 g' |
+  c8. ^> c16 b8 e |
   d16 (c) a4 g8 |
   a2 ~ |
   a4 a8 e |
@@ -318,66 +320,66 @@ nhacDiepKhucBas = \relative c' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Ta dệt bài thơ tâm tình trong những chiều ngưỡng mộ khi trí chưa bưa.
-  Khi gió lạnh về nói với hồn bao nỗi niềm bí mật.
+  Ta dệt bài thơ tâm tình trong những chiều ngưỡng mộ khi trí chưa bưa
+  khi gió lạnh về nói với hồn bao nỗi niềm bí mật.
   Về bài thơ tâm tình
-  không bao giờ em viết nổi bài thơ ấy, người ơi!
+  không bao giờ em viết nổi bài thơ ấy, người ơi.
   Dẫu biết mình bất lực đến đâu nhưng đã chôn sâu trong cõi lòng
   một khối tình bất tận.
-  Ta hát ta ca trong y huyền trầm lặng.
+  Ta hát ta ca trong u huyền trầm lặng.
   Tình thiên thu ẩm ướt quá trăng sao.
-  Đến bao giờ thơ đọng chốn trời cao.
+  Đến bao giờ thơ đọng chốn trời cao
   Là no thỏa hết tâm tình và tư tưởng.
-  Gió ơi gió ơi cho đến một ngày nào,
-  cho đến một ngày nào.
-  Thơ tâm tình sẽ sang cầu tao ngộ.
-  Hết cô liêu viết trọn bài cho ý thắm tình xanh.
+  Gió ơi gió ơi cho đến một ngày nào
+  cho đến một ngày nào
+  Thơ tâm tình sẽ sang cầu tao ngộ
+  hết cô liêu viết trọn bài thơ ý thắm tình xanh.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Ta dệt bài thơ tâm tình, ta dệt thơ tâm tình.
-  Trong những chiều ngưỡng mộ khi trí chưa bưa
+  Ta dệt bài thơ tâm tình, Ta dệt thơ tâm tình
+  trong những chiều ngưỡng mộ khi trí chưa bưa
   khi hoàng hôn đầy tràn trong khóe mắt
   khi gió lạnh về nói với hồn bao nỗi niềm bí mật.
-  Về bài thơ tâm tình nói bài thơ tâm tình
-  không bao giờ em viết nổi bài thơ ấy hỡi ơi!
+  Về bài thơ tâm tình với bài thơ tâm tình
+  không bao giờ em viết nổi bài thơ ấy hỡi ơi.
   Dẫu biết mình bất lực đến đâu nhưng đã chôn sâu trong cõi lòng
   một cuộc tình bất tận.
-  Gió ơi, gió ơi cho đến một ngày nào.
+  Gió ơi, gió ơi cho đến một ngày nào
   Thơ tâm tình hội ngộ hết kêu gào nức nở
   viết trọn bài cho ý thắm tình xanh,
   cho ý thắm tình xanh.
 }
 
 loiDiepKhucTenor = \lyricmode {
-  Ta dệt bài thơ tâm tình, thơ tâm tình.
-  Trong những chiều ngưỡng mộ khi hồn say sưa
+  Ta dệt bài thơ tâm tình, thơ tâm tình
+  trong những chiều ngưỡng mộ khi hồn say sưa,
   khi trí chưa bưa.
-  Đầy tràn trong khóe mắt khi gió lạnh về.
-  Gió nói với hồn bao nỗi niềm bí mật.
+  đầy tràn trong khóe mắt khi gió lạnh về
+  gió nói với hồn bao nỗi niềm bí mật.
   Về bài thơ tâm tình, thơ tâm tình và thêm rằng:
-  không dệt nỗi bài thơ này hỡi ơi!
+  không dệt nỗi bài thơ này hỡi ơi.
   Dẫu biết mình thật sức đến đâu
   nhưng đã chôn sâu trong cõi lòng một cuộc tình bất tận.
-  Gió ơi, gió ơi gió ơi một ngày nào.
+  Gió ơi, gió ơi gió ơi một ngày nao
   Thơ tâm tình sẽ sang cầu hội ngộ,
   qua cầu tao ngộ hết kêu gào nức nở
-  cho ý thắm tình xanh, cho ý thắm tình xanh.
+  cho ý thắm tình xanh cho ý thắm tình xanh.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Ta dệt bài thơ tâm tình bài thơ, bài thơ tâm tình.
-  Trong những chiều ngưỡng mộ khi lòng chưa bưa.
-  Đầy tràn trong khóe mắt khi gió lạnh về.
-  Gió nói với hồn bao nỗi bí mật.
-  Về bài thơ tâm tình bài thơ, bài thơ tâm tình.
-  Và thêm rằng không bao giờ em dệt nổi câu thơ này, người ơi!
-  Vâng, gió ơi! Bài thơ tâm tình hơn một lần ta đã dệt
-  thật sức đến đâu.
+  Ta dệt bài thơ tâm tình bài thơ, bài thơ tâm tình
+  trong những chiều ngưỡng mộ, khi lòng chưa bưa.
+  đầy tràn trong khóe mắt khi gió lạnh về
+  gió nói với hồn bao nỗi bí mật.
+  Về bài thơ tâm tình bài thơ, bài thơ tâm tình
+  và thêm rằng không bao giờ em dệt nổi câu thơ ấy người ơi.
+  Vâng gió ơi, Bài thơ tâm tình hơn một lần ta đã dệt
+  thật sức đến đâu,
   Là người hữu hạn đà chôn trong cõi lòng một khối tình vô tận.
-  Gió ơi! Ngày nao gió ơi gió ơi khi nào thơ tâm tình sẽ sang,
+  Gió ơi ngày nao gió ơi gió ơi khi nào thơ tâm tình sẽ sang
   sẽ sang cầu hội ngộ
-  hết kêu gào nức nở cho ý thắm tình lành, ý thắm tình lành.
+  hết kêu gào nức nở cho ý đặm tình lành ý thắm tình lành.
 }
 
 % Dàn trang

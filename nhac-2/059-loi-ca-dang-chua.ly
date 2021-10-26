@@ -53,9 +53,9 @@ nhacPhienKhuc = \relative c' {
 % Lời
 loiDiepKhucSop = \lyricmode {
   Con tiến dâng lên Ngài ngàn lời ca,
-  vì tình Chúa yêu con bao la.
-  Vì lượng từ bi Chúa hải hà,
-  con tiến dâng lên Ngài ngàn lời ca.
+  Vì tình Chúa yêu con bao la.
+  Vì lượng từ bi Chúa hải hà.
+  Con tiến dâng lên Ngài ngàn lời ca.
 }
 
 loiDiepKhucBas = \lyricmode {
@@ -67,26 +67,26 @@ loiDiepKhucBas = \lyricmode {
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = "1."
-  Lời ca con dâng Chúa là tình yêu chan chứa,
-  mỗi hơi thở mỗi nhịp tim, xin trọn câu mến tin.
+  Lời ca con dâng Chúa là tình yêu chan chứa.
+  Mỗi hơi thở, mỗi nhịp tim Xin trọn câu mến tin.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = "2."
-  Lời ca con dâng Chúa là vòng tay vươn tới,
-  nối muôn người khắp mọi nơi, chung tình yêu Chúa thôi.
+  Lời ca con dâng Chúa là vòng tay vươn tới
+  Nối muôn người khắp mọi nơi Chung tình yêu Chúa thôi.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = "3."
-  Lời ca con dâng Chúa tựa trầm hương thơm ngát,
-  muốn bay tòa tới trời cao, thay tình yêu hiến trao.
+  Lời ca con dâng Chúa tựa trầm hương thơm ngát
+  Muốn bay tỏa tới trời cao Thay tình yêu hiến trao.
 }
 
 loiPhienKhucBon = \lyricmode {
   \set stanza = "4."
   Lời ca con dâng Chúa là đời con trao hiến,
-  lúc gian khổ lúc bình yên, đoan nguyện son sắt liên.
+  Lúc gian khổ, lúc bình yên, Đoan nguyện son sắt liên.
 }
 
 % Dàn trang

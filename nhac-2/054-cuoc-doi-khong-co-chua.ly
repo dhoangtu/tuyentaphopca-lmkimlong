@@ -13,19 +13,19 @@
 % Nhạc
 nhacDiepKhucSop = \relative c' {
   \autoPageBreaksOff
-  \partial 4 r8 c |
+  \partial 8 c8 |
   e4. g16 a |
   a4. a8 |
-  f \slashedGrace { g16 (} c4) a8 |
+  f c'4 a8 |
   g4 r8 g |
-  c4. b16 e |
+  c4. c16 e |
   a,4. f8 |
-  a \slashedGrace { a16 ( } c4) a8 |
-  g2 |
+  a c4 a8 |
+  g2 \bar "||"
   <<
     {
       g8. g16 g8 e |
-      f4. fs8 |
+      f4. f8 |
       g a4 g8 |
       e2 |
       c'8. b16 c8 d |
@@ -44,21 +44,21 @@ nhacDiepKhucSop = \relative c' {
       e4
     }
   >>
-  r4 | \break
+  r8 \bar "||" \break
   
-  \partial 4 r8 e |
+  \partial 8 e8 |
   f4. f16 e |
   a4. a8 |
   f c'4 a8 |
   g2 ~ |
   g4 r8 g |
-  a4. e16 c |
+  c4. e16 c |
   b4. b8 |
-  d e4 a16 (c) |
+  d c4 a16 (c) |
   g2 ~ |
-  g4 r |
+  g4 r \bar "||"
   R2
-  c8. c16 d8 c16 (g) |
+  c8. c16 d16 (c) g8 |
   a4 c |
   b8 a b b16 c |
   b8 a e'4 ~ | \pageBreak
@@ -72,27 +72,68 @@ nhacDiepKhucSop = \relative c' {
   d8 (c) b4 |
   c2 ~ |
   c ~ |
-  c4 \bar "|."
+  c4 r \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c'' {
-  r4
-  R2*16
-  r4
-  d2 ~ |
-  d8 e16 d c4 ~ |
-  c d8 c |
-  b r16 c c8 a |
-  g4 r |
-  e e' ~ |
-  e8 d c b |
-  a2 |
-  g8 r16
+  r8
+  R2*15
+  r4.
+  r8
+  <<
+    {
+      \voiceOne
+      d2 ~ |
+      d8 e16 d c4 ~ |
+      c d8 c
+    }
+    \new Voice = "splitpart" {
+      \voiceTwo
+      f,2 ( |
+      e) ( |
+      f)
+    }
+  >>
+  \oneVoice
+  <<
+    {
+      b8 r16 c c8 a |
+      g4 r |
+    }
+    {
+      d8 r16 e e8 c |
+      b4 r
+    }
+  >>
+  <<
+    {
+      \voiceOne
+      e4 e' ~ |
+      e8 d c b |
+      a2 |
+    }
+    \new Voice = "splitpart" {
+      \voiceTwo
+      c,2 |
+      d |
+      d8 e d c
+    }
+  >>
+  \oneVoice
+  <g' b,>8 r16
   \once \override NoteColumn.X-offset = 0.5 <>
-  d' d8 d16 (e) |
-  c4 r |
+  <<
+    {
+      d' d8 d16 (e) |
+      c4 r |
+    }
+    {
+      f,16 f8 f16 (g) |
+      e4 r
+    }
+  >>
   R2*2
-  f,8. f16 g (f) c8 |
+  f8. f16 g (f) c8 |
   d4 f |
   e8 e16 a gs8 gs |
   a2 ~ |
@@ -105,13 +146,14 @@ nhacDiepKhucAlto = \relative c'' {
   e8 e16 e g8 g |
   f (d) g (f) |
   e2 ~ |
-  e4
+  e4 r
 }
 
 nhacDiepKhucBas = \relative c' {
-  r4
-  R2*16
-  r4
+  r8
+  R2*15
+  r4.
+  r8
   d2 |
   a ~ |
   a4 f |
@@ -123,12 +165,12 @@ nhacDiepKhucBas = \relative c' {
   a8 r16
   \once \override NoteColumn.X-offset = 0.5 <>
   <b g> <b g>8 <b g> |
-  <g c>4 r |
+  <g c,>4 r |
   g8. g16 a (g) d8 |
   e4 d8 (e) |
   f4 e8 (f) |
   g4 d |
-  e8 e16 d e8 e |
+  e8 e16 f e8 e |
   a2 ~ |
   a8 d c c |
   b8. g16 a8 b |
@@ -139,7 +181,7 @@ nhacDiepKhucBas = \relative c' {
   g4 g |
   <g c,>2 ~ |
   <g c,> ~ |
-  <g c,>4
+  <g c,>4 r
 }
 
 % Lời
@@ -148,35 +190,36 @@ loiDiepKhucSop = \lyricmode {
   Vì mong được thấy Ngài mà con phải tiêu hao
   Con không sao chịu nổi phải xa cách nhan Ngài
   Xin hãy mau chấm dứt nỗi lòng con bồi hồi
-  Hồn con đi tìm Chúa Chúa ẩn tránh nơi nao
-  chẳng nghe tiếng kêu gào mà đoái thương đáp lại
+  Hồn con đi tìm Chúa Chúa lẩn trốn nơi nao?
+  Chẳng nghe tiếng kêu gào mà đoái thương đáp lời.
   Xin nâng đỡ hồn con Chúa ơi
   hồn con đang khát mong tìm Chúa
-  xin bẻ tan xích xiềng
-  Cho con được hạnh phúc Chúa ơi
-  cho con được hạnh phúc Chúa ơ ơi
+  xin bẻ tan xích xiềng.
+  Cho con được hạnh phúc, Chúa ơi,
+  cho con được hạnh phúc, Chúa ơ ơi
 }
 
 loiDiepKhucAlto = \lyricmode {
   Hm __ \repeat unfold 6 { _ }
-  Chúa tránh nơi nao
+  Chúa trốn nơi nao?
   Hm __ \repeat unfold 6 { _ }
-  Xin thương đáp lại
+  xin thương đáp lời.
   Xin nâng đỡ hồn con Chúa ơi
   hồn khát mong tìm Chúa
-  bẻ tan xích xiềng bẻ tan xích xiềng
-  Cho con được hạnh phúc Chúa ơi được hạnh phúc Chúa ơi Chúa ơi.
+  bẻ tan xích xiềng, bẻ tan xích xiềng.
+  Cho con được hạnh phúc Chúa ơi, được hạnh phúc,
+  Chúa ơi, Chúa ơi.
 }
 
 loiDiepKhucBas = \lyricmode {
   Hm __ _ _ _
-  Chúa ẩn nơi nao
+  Chúa ẩn nơi nao?
   Hm __ _ _ _ _
-  Xin thương đáp lại
-  Xin nâng đỡ hồn con hồn con hồn con hồn con
+  xin thương đáp lời.
+  Xin nâng đỡ hồn con, hồn con, hồn con hồn con
   đang khát mong tìm Chúa
-  bẻ tan xích xiềng bẻ tan xiềng xích
-  cho con được hạnh phúc hạnh phúc
+  bẻ tan xích xiềng, bẻ tan xiềng xích.
+  Cho con được hạnh phúc, hạnh phúc,
   được hạnh phúc được hạnh phúc Chúa ơi.
 }
 

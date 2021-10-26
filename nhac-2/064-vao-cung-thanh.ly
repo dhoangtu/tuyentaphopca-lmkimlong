@@ -11,14 +11,14 @@
 % Nhạc
 nhacPhienKhucSop = \relative c'' {
   R2*6
-  c8. f16 d8 c |
+  c8. \(f16 d8\) c |
   g4. d'16 (c) |
   \slashedGrace { a16 ( } c4) d8 f |
   c2 ~ |
   c4 r |
   R2*2
   r4 r8 a |
-  c8. f16 d8 c |
+  c8. \(f16 d8\) c |
   a4. a8 |
   g8 g16 (c) a8 g |
   f2 ~ |
@@ -48,16 +48,16 @@ nhacPhienKhucSop = \relative c'' {
 
 nhacPhienKhucAlto = \relative c'' {
   R2*3
-  g8. c16 a8 g |
+  g8. \(c16 a8\) g |
   f4. g16 (f) |
   \slashedGrace { d16 ( } f4) g8 g |
   a4 (g) |
   f (d) |
-  c8. d16 f8 a |
+  c8. \(d16 f8\) a |
   g2 ~ |
   g4 r |
   r r8 f |
-  g8. c16 a8 g |
+  g8. \(c16 a8\) g |
   f4 g8 (f) |
   c4. d8 |
   f d f4 ~ |
@@ -70,17 +70,17 @@ nhacPhienKhucAlto = \relative c'' {
 }
 
 nhacPhienKhucBas = \relative c {
-  f8. a16 g8 f |
-  c4. g16 (f) |
+  f8. \(a16 g8\) f |
+  c4. g'16 (f) |
   d8 (f) g g |
-  c4. c8 |
+  c4. c,8 |
   d2 ~ |
   d4 c8 c |
   f4. a,8 |
-  c8. d16 f8 d |
+  c8. \(d16 f8\) d |
   a'4. a16 (g) |
   c4. c,8 |
-  f8. a16 g8 f |
+  f8. \(a16 g8\) f |
   d4 g8 (f) |
   c2 ~ |
   c8 d c (d) |
@@ -127,17 +127,17 @@ nhacPhienKhucBas = \relative c {
 
 % Lời
 loiPhienKhucSopMot = \lyricmode {
-  Con (í a) sẽ vào, sẽ vào nơi thánh cung.
+  Con (í a) sẽ vào, sẽ vào nơi cung thánh.
   Vì Chúa (í a) hoan lạc, hoan lạc tuổi xuân muôn đời.
   
   \set stanza = "1."
-  Ôi vui thay dâng hiến cuộc đời trinh trong
-  cho thắm đẹp mộng ước xuân xanh.
+  Ôi vui thay Dâng hiến cuộc đời trinh trong
+  Cho thắm đẹp mộng ước xuân xanh.
 }
 
 loiPhienKhucAltoMot = \lyricmode {
-  Con (í a) sẽ vào, sẽ vào nơi cung thánh
-  sẽ vào (í a) thánh cung.
+  Con (í a) sẽ vào, sẽ vào nơi cung thánh,
+  Sẽ vào (í a) thánh cung.
   Vì Chúa (í a) là nguồn hoan lạc tuổi xuân,
   đẹp tươi, tuổi xuân muôn đời.
 }
@@ -145,15 +145,15 @@ loiPhienKhucAltoMot = \lyricmode {
 loiPhienKhucSopHai = \lyricmode {
   \repeat unfold 22 { _ }
   \set stanza = #"2."
-  Vang cung tơ cho dẫu cuộc đời tân toan
-  xin ước nguyện đẹp mãi tin yêu.
+  Vang cung tơ Cho dẫu cuộc đời tân toan,
+  Xin ước nguyện đẹp mãi tin yêu.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \repeat unfold 22 { _ }
   \set stanza = #"3."
-  Chung tâm tư trong Chúa nguồn mạch yêu thương
-  muôn thế hệ cùng hát lên đi.
+  Chung tâm tư Trong Chúa nguồn mạch yêu thương,
+  Muôn thế hệ cùng hát lên đi.
 }
 
 loiPhienKhucBasMot = \lyricmode {
@@ -165,21 +165,23 @@ loiPhienKhucBasMot = \lyricmode {
   
   \set stanza = "1."
   Năm tháng miệt mài đợi trông
-  phút vui mừng vào nơi cung thánh
+  Phút vui mừng vào nơi cung thánh
   mộng ước xuân xanh.
 }
 
 loiPhienKhucBasHai = \lyricmode {
   \repeat unfold 40 { _ }
   \set stanza = #"2."
-  Tâm trí dạt dào hân hoan tấu cung đàn tụng ca Danh Chúa
+  Tâm trí dạt dào hân hoan,
+  Tấu cung đàn tụng ca danh Chúa
   đẹp mãi tin yêu.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \repeat unfold 40 { _ }
   \set stanza = #"3."
-  Mong ước người người muôn phương kết chung lòng
+  Mong ước người người muôn phương,
+  Kết chung lòng,
   hiệp chung tâm trí
   cùng hát lên đi.
 }
