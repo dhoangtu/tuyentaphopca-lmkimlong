@@ -4,7 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Ơn Phù Trợ" }
-  poet = "Tv. 120"
+  poet = "Ý: Tv. 120"
   composer = "Lm. Kim Long"
   tagline = ##f
 }
@@ -32,25 +32,25 @@ nhacDiepKhucSop = \relative c'' {
   a8 d cs cs |
   d4 bf8 a |
   g4 r |
-  r8 bf d (bf) |
-  a4 r8 a |
+  r8 bf ^\p d (bf) |
+  \once \stemDown a4 r8 a |
   d d b! (a) |
-  g fs (g) a |
+  g fs ([g]) a |
   d,2 ~ |
   d ~ |
-  d4 r8 \bar "|" \break
+  d4 r8 \bar "|." \break
 }
 
 nhacDiepKhucAlto = \relative c' {
   a'8 a d, g f (g) |
   a2 ~ |
-  a8 [f] e e |
+  a8 f e e |
   f4 g8 f |
   d4 r |
   r8 d <f d>4 |
   <e cs> r8 a |
   d d b! (a) |
-  g fs (g) a |
+  g fs ([g]) a |
   d,2 ~ |
   d ~ |
   d4 r8
@@ -62,7 +62,7 @@ nhacDiepKhucBas = \relative c' {
   a8. g16 f8 e |
   d4 r |
   r8 d e (f) |
-  g g e e |
+  g8. g16 ^\f e8 e |
   g4 f8 (g) |
   a4 r8 a |
   d d b! (a) |
@@ -95,27 +95,30 @@ nhacPhienKhuc = \relative c' {
   f e r a |
   g8. e16 f8 d |
   d2 ~ |
-  d4 \bar "|."
+  d4
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 % Lời
 loiDiepKhucSop = \lyricmode {
   Ngước mắt nhìn lên rặng núi.
-  Ơn phù trợ tôi bởi nơi nào? Bởi nơi nào?
+  Ơn phù trợ tôi bởi nơi nào? bởi nơi nào.
   Là Đấng đã tác tạo cả đất trời.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Ngước mắt nhìn lên rặng núi tôi tự nhủ thầm:
-  Bởi nơi nao, ơn phù trợ tôi bởi Chúa,
-  là Đấng đã tác tạo cả đất trời, cả đất trời.
+  Ngước mắt nhìn lên rặng núi tôi tự nhủ thầm,
+  bởi nơi nao, ơn phù trợ tôi bởi Chúa
+  Là Đấng đã tác tạo cả đất trời, cả đất trời.
 }
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
   Nguyện Chúa đừng để chân ngươi phải ngã quỵ,
   Đấng giữ ngươi không ngủ chập chờn.
-  Chúa phù trợ Ít -- ra -- en không ngủ gục,
+  Chúa phù trợ Is -- ra -- el không ngủ gục
   cũng không chợp mắt đành lòng.
 }
 
@@ -123,15 +126,15 @@ loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
   Nguyện bóng Ngài phủ che ngươi trọn tháng ngày,
   Đấng giữ ngươi luôn ở gần kề.
-  Suốt ngày trời nắng can chi năm canh chầy,
-  bóng trăng chẳng tác hại gì.
+  Suốt ngày trời nắng can chi,
+  năm canh chầy bóng trăng chẳng tác hại gì.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
   Nguyện Chúa hằng chở che ngươi khỏi mắc nạn,
-  Chúa giữ cho sinh mạng vẹn toàn.
-  Hết mọi nẻo bước chân ngươi luôn canh chừng,
+  Chúa giữ cho sinh mạng vẹn toàn,
+  hết mọi nẻo bước chân ngươi luôn canh chừng
   tới nay và mãi ngàn đời.
 }
 

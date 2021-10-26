@@ -4,8 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Từ Rạng Đông" }
-  composer = "Ý: Tv. 112"
-  arranger = "Lm. Kim Long"
+  composer = "Lm. Kim Long"
   tagline = ##f
 }
 
@@ -31,7 +30,7 @@ nhacDiepKhucSop = \relative c'' {
 nhacDiepKhucAlto = \relative c'' {
   r4 |
   r a8 a |
-  b4 g8 d |
+  b4 b8 d, |
   e2 ~ |
   e4 fs8 fs |
   g e a g |
@@ -109,7 +108,7 @@ nhacDiepKhucBaBeSop = \relative c'' {
   a8 a c d |
   fs,4. a8 |
   g2 ~ |
-  g4 \bar "||"
+  g4 \bar "|."
 }
 
 nhacDiepKhucBaBeTenor = \relative c' {
@@ -121,10 +120,15 @@ nhacDiepKhucBaBeTenor = \relative c' {
   a4 c8 (e) |
   d4 a8 a |
   d4 r8 g, |
-  a8. g16 e'8 (d) |
-  \once \stemDown c4. b8 |
+  a8. g16
+  e'8 (d) |
+  \once \stemDown
+  \once \override Stem.length = #9
+  c4. b8 |
   c d a c |
-  \stemDown b2 ~ |
+  \stemDown
+  \override Stem.length = #9
+  b2 ~ |
   b4
 }
 
@@ -147,43 +151,43 @@ nhacDiepKhucBaBeBas = \relative c {
 % Lời
 loiDiepKhucSop = \lyricmode {
   Từ rạng đông tới khi hoàng hôn
-  uy danh Chúa thực đáng suy tôn.
+  Uy danh Chúa thực đáng suy tôn.
   Vì Ngài siêu việt trên muôn dân
   và vinh quang Ngài vượt quá trời cao vút.
 }
 
 loiDiepKhucAlto = \lyricmode {
   Từ rạng đông tới hoàng hôn
-  uy danh Chúa thực đáng suy tôn.
+  Uy danh Chúa thực đáng suy tôn.
   Vì Ngài siêu việt trên muôn dân
   và vinh quang Ngài vượt quá cõi trời cao vút.
 }
 
 loiDiepKhucBas = \lyricmode {
   Từ rạng đông tới trời hoàng hôn
-  uy danh Chúa được suy tôn.
+  Uy danh Chúa được suy tôn.
   Vì Ngài siêu việt siêu việt trên muôn dân
   và Chúa lướt qua cõi trời cao vút.
 }
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Từ bụi đất Chúa nâng đỡ kẻ thấp hèn
-  từ phân tro Ngài cất nhắc người nghèo túng.
-  Cho ngồi chung với hàng khanh tướng,
+  Từ bụi đất Chúa nâng đỡ kẻ thấp hèn,
+  Từ phân tro, Ngài cất nhắc người nghèo túng
+  cho ngồi chung với hàng khanh tướng,
   hàng khanh tướng của dân Ngài.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
-  Nào người thế co ai sánh nổi với Ngài
-  từ cao xa Ngài ghé mắt nhìn trời đất.
-  Danh Ngài muôn thế hệ tôn kính
+  Nào người thế co ai sánh nổi với Ngài,
+  Từ cao xa Ngài ghé mắt nhìn trời đất.
+  Danh Ngài muôn thế hệ tôn kính,
   thần dân hết lời tán dương.
 }
 
 loiDiepKhucBaBeSop = \lyricmode {
-  Từ bụi đất Chúa nâng đỡ kẻ thấp hèn
+  Từ bụi đất Chúa nâng đỡ kẻ thấp hèn,
   từ phân tro Ngài cất nhắc người nghèo túng.
   Cho ngồi chung với hàng khanh tướng,
   hàng khanh tướng của dân Ngài.

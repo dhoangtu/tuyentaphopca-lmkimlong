@@ -25,9 +25,12 @@ nhacPhienKhucSop = \relative c'' {
   c2 ~ |
   c8 c d c16 (d) |
   g4. a16 (g) |
-  f2 ~ \bar "|." \break
+  f2 ~ |
   
-  f4 r |
+  f4
+  \mark \markup { \bold "Tận" }
+  r8 \bar "|." \break
+  r |
   R2
   r4 r8 c |
   e f g (a) |
@@ -37,7 +40,10 @@ nhacPhienKhucSop = \relative c'' {
   c4 r |
   r r8 c, |
   f f e16 f a8 |
-  g4 r8 \bar "||"
+  g4 r8 d'
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 nhacPhienKhucTenor = \relative c' {
@@ -68,7 +74,7 @@ nhacPhienKhucTenor = \relative c' {
   a bf4 a8 |
   d,4 r |
   r8 d' c16 c b!8 |
-  c4 r8
+  c4 r
 }
 
 nhacPhienKhucBas = \relative c {
@@ -110,6 +116,7 @@ loiPhienKhucSopMot = \lyricmode {
   \set stanza = "1."
   Tựa như em bé thơ không mưu toan việc lớn
   ngủ yên trong lòng thân mẫu luôn.
+  Hãy
 }
 
 loiPhienKhucSopHai = \lyricmode {
@@ -117,6 +124,7 @@ loiPhienKhucSopHai = \lyricmode {
   \set stanza = "2."
   Kìa trông muôn cánh chim không gieo, không gặt hái
   mà Cha trên trời luôn dưỡng nuôi.
+  Hãy
 }
 
 loiPhienKhucSopBa = \lyricmode {
@@ -124,6 +132,7 @@ loiPhienKhucSopBa = \lyricmode {
   \set stanza = "3."
   Kìa trông bao đóa hoa không se tơ, dệt gấm
   mà Cha trên trời tô thắm liên.
+  Hãy
 }
 
 loiPhienKhucBasMot = \lyricmode {
