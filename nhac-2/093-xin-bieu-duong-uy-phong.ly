@@ -16,15 +16,15 @@ nhacDiepKhucSop = \relative c' {
   a a bf16 (a) f8 |
   g2 |
   c8 b!16 (c) d8 d |
-  d e (f) d |
+  d e ([f]) d |
   c2 |
-  r4 c8 c |
+  r4 c8 ^> c ^> |
   f f4 e8 |
   d4 r8 a |
   c c4 bf8 |
   a4 c,8 c |
   g'4. g8 |
-  f2 \bar "||"
+  f2 \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -32,8 +32,8 @@ nhacDiepKhucAlto = \relative c' {
   r4 c8 f ~ |
   f f g16 (f) d8 |
   e2 |
-  e8 d16 (e) f8 f |
-  g g (a) f |
+  e8 d16 (e) f8 fs |
+  g g ([a]) f |
   e2 |
   d8 d g4 |
   a4. c8 |
@@ -52,7 +52,7 @@ nhacDiepKhucBas = \relative c {
   c8 c c' (bf) |
   a4 d, |
   g g, |
-  c c8 c |
+  c c8 ^> c ^> |
   f4. e8 |
   d4 d |
   g g8 (f) |
@@ -70,58 +70,62 @@ nhacPhienKhuc = \relative c' {
   a8 g e c |
   d2 ~ |
   d4 \tuplet 3/2 { d'8 d d } |
-  bf8. a16 \tuplet 3/2 { d8 d cs16 (d) } |
+  bf8. a16 \tuplet 3/2 { d8 d
+    \slashedGrace { cs16 (} d8) } |
   e4 r8 e16 f |
   d4. d16 e |
   c8 c bf g |
   a2 ~ |
-  a \bar "|."
+  a
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Lạy Chúa xin hãy biểu dương.
+  Lạy Chúa, xin hãy biểu dương.
   Xin biểu dương uy phong khắp cõi trời.
-  và dọi chiếu ánh Thiên Nhan,
-  dọi chiếu anh Thiên Nhan đầy mặt đất Chúa ơi.
+  Và dọi chiếu ánh thiên nhan,
+  dọi chiếu ánh thiên nhan đầy mặt đất, Chúa ơi.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Lạy Chúa xin hãy biểu dương.
+  Lạy Chúa, xin hãy biểu dương.
   Xin biểu dương uy phong khắp cõi trời.
-  Và dọi chiếu ánh Thiên Nhan,
-  dọi chiếu anh Thiên Nhan đầy mặt đất Chúa ơi.
+  Và dọi chiếu ánh thiên nhan,
+  dọi chiếu ánh thiên nhan đầy mặt đất, Chúa ơi.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Xin biểu dương uy phong khắp cõi trời.
-  Lạy Chúa xin biểu dương mọi nơi
-  và dọi chiếu chói lọi Thần Nhan
-  chói lọi Thần Nhan đầy mặt đất Chúa ơi.
+  Xin biểu dương uy phong khắp cõi trời,
+  lạy Chúa xin biểu dương mọi nơi,
+  Và dọi chiếu, dọi chiếu thần nhan,
+  chiếu lọi thần nhan đầy mặt đất Ngài ơi.
 }
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Thương con cùng lạy Chúa xin xót thương con
+  Thương con này, lạy Chúa xin xót thương con,
   này con đến nương tựa vào Ngài.
-  Dưới bóng cánh Ngài hồn con xin ẩn náu.
-  Cho tới khi qua hết muôn tai họa sầu đau.
+  Dưới bóng cánh Ngài hồn con xin ẩn náu
+  cho tới khi qua hết muôn tai họa sầu đau.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
-  Con kêu cầu lạy Chúa Thiên Chúa muôn cao
-  hãy ban xuống ơn lộc dồi dào.
-  Đây bao quân thù hằng vây quanh gầm thét.
-  Xin Chúa thương mau kíp ra tay độ trì con.
+  Con kêu cầu, lạy Chúa Thiên Chúa muôn cao,
+  hãy ban xuống ân lộc dồi dào.
+  Đây bao quân thù hằng vây quanh gầm thét,
+  xin Chúa thương mau kíp ra tay độ trì con.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Con dâng lời cảm mến ngay trước chư dân
+  Con dâng lời cảm mến ngay trước chư dân,
   từ muôn nước con họa nhịp đàn.
-  Ôi yêu thương Ngài vượt xa cung trời thẳm.
-  Đức tín trung vun vút cao hơn cả ngàn mây.
+  Ôi yêu thương Ngài vượt xa cung trời thẳm,
+  đức tín trung vun vút cao hơn cả ngàn mây.
 }
 
 % Dàn trang

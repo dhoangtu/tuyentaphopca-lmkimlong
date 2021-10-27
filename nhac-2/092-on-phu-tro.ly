@@ -70,7 +70,7 @@ nhacDiepKhucBas = \relative c' {
   d,4
   <<
     {
-      bf'4 ~ |
+      bf'?4 ~ |
       bf c8 (bf) |
       a4
     }

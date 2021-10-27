@@ -4,7 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Chúa Xét Dò Con" }
-  composer = "Tv. 138"
+  composer = "Ý: Tv. 138"
   arranger = "Lm. Kim Long"
   tagline = ##f
 }
@@ -15,21 +15,21 @@ nhacDiepKhucSop = \relative c'' {
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1)
-  \partial 2 a8 a d, (f) |
-  g4 g8 g c (d) |
+  \partial 2 a8 a d, (f)
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar ".|"
+  g4 g8 g a (c) |
   d2. ~ |
   d4 b!16 (d) b (a) e (g) a8 |
   a4 a8 a c8 (d) |
-  d4 c8 c e \afterGrace d ({
-    \override Flag.stroke-style = #"grace"
-    c)} |
-  \revert Flag.stroke-style
+  d4 c8 c e d16 (c) |
   a4 (g2) ~ |
   g4 e8. e16 a8 fs16 (e) |
   d2. ~ |
   
   \time 2/4
-  \partial 4. d4.
+  \partial 4. d4 r8 \bar "||"
   
   \time 3/4
   \once \override Score.RehearsalMark.font-size = #0.5
@@ -45,16 +45,16 @@ nhacDiepKhucAlto = \relative c'' {
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1)
   a8 a d, (f) |
-  g4 g8 g c (d) |
+  g4 g8 g a (c) |
   d2. ~ |
   d4 b!16 (d) b (a) e (g) a8 |
   a4 a8 a g4 |
   a a8 a g [g] |
   c,2. ( |
   d4) e8. e16 a8 fs16 (e) |
-  c4 bf4. bf8 |
-  a4.
-  d4 b!4. b8 |
+  c4 bf4. -> bf8 |
+  a4 r8
+  d4 b!4. _> b8 |
   a2
 }
 
@@ -64,16 +64,16 @@ nhacDiepKhucBas = \relative c' {
   \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1)
   a8 a d, (f) |
-  g4 g8 g c (d) |
+  g4 g8 g a (c) |
   d4 b!8 b d b16 (a) |
   g2. ~ |
   g4 f8 f e4 |
   d2. ~ |
   d4 e8 d c16 (d) g8 |
   g4 e8. e16 a8 fs16 (e) |
-  d4 g4. g8 |
-  d4.
-  d4 g4. g8 |
+  d4 g4. _> g8 |
+  d4 r8
+  d4 g4. _> g8 |
   <fs d>2
 }
 
@@ -85,10 +85,10 @@ nhacPhienKhucSop = \relative c'' {
   a2 ~ |
   a4 r |
   r f8 g ~ |
-  g a f e |
+  g a f e \bar "||"
   
   \time 3/4
-  d2 \bar "|."
+  d4 \bar "||"
 }
 
 nhacPhienKhucAlto = \relative c' {
@@ -100,20 +100,20 @@ nhacPhienKhucAlto = \relative c' {
   f4 r |
   r d8 e ~ |
   e f d cs |
-  d2
+  d4
 }
 
 nhacPhienKhucBas = \relative c {
   \time 2/4
-  r4. d8 ~ |
+  r4. d8 ^> ~ |
   d f f g |
-  a4. r8 |
+  a4 r |
   R2
-  r4. d8 ~ |
+  r4. d8 _> ~ |
   d d c d |
   a4. a8 |
   a,2
-  d
+  d4
 }
 
 % Lời
@@ -125,17 +125,17 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Chúa xét dò con và Ngài đã rõ.
-  Lúc con nghỉ con đi Ngài đều thấu suốt.
-  Mọi đường lối con này Ngài đều đã am tường,
+  Chúa xét dò con và Ngài đã rõ
+  Lúc con nghỉ con đi, Ngài đều thấu suốt,
+  Mọi đường bước con này, Ngài đều đã am tường,
   luôn am tường.
   \set stanza = "   (Để kết)"
   tường luôn am tường.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Chúa xét dò con và Ngài đã rõ.
-  Khi con đứng con ngồi, Ngài đều thấu được.
+  Chúa xét dò con và Ngài đã rõ
+  khi con đứng con ngồi, Ngài đều thấu được.
   Những tư tưởng thâm sâu Ngài đều đã am tường,
   luôn am tường.
   tường, luôn am tường.
@@ -143,50 +143,50 @@ loiDiepKhucBas = \lyricmode {
 
 loiPhienKhucSopMot = \lyricmode {
   \set stanza = #"1."
-  Chúa đã biết từ lâu.
+  Chúa đã biết từ xa
   Bàn tay Chúa theo con hoài.
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = #"2."
-  Xa thần trí Ngài luôn.
-  Hầu mong lánh tôn nhan Ngài.
+  Xa thần trí Ngài luôn
+  hầu mong lánh tôn nhan Ngài.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \set stanza = #"3."
-  Muôn đời Chúa ngự đây.
+  Muôn đời Chúa ngự đây
   Ngài luôn thống trị nơi này.
 }
 
 loiPhienKhucSopBon = \lyricmode {
   \set stanza = #"4."
-  Bay về phía đại dương.
+  Bay về phía đại dương
   Bàn tay Chúa luôn đưa đường.
 }
 
 loiPhienKhucBasMot = \lyricmode {
   \set stanza = #"1."
-  Điều môi con chưa nói.
+  Điều môi con chưa nói
   Khắp đó đây tứ bề có Ngài hoài.
 }
 
 loiPhienKhucBasHai = \lyricmode {
   \set stanza = #"2."
-  Tìm nơi đâu đi tới.
+  Tìm nơi đâu đi tới,
   Biết trốn đi chốn nào lánh được Ngài.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \set stanza = #"3."
-  Dù bay lên thiên quốc.
+  Dù bay lên thiên quốc,
   Dẫu xuống ngay hỏa ngục Chúa ngự đây.
 }
 
 loiPhienKhucBasBon = \lyricmode {
   \set stanza = #"4."
-  Mượn ban mai đôi cánh.
-  Chúa vẫn theo giữ gìn Chúa chỉ đường.
+  Mượn ban mai đôi cánh,
+  Chúa vẫn theo giữ gìn, Chúa chỉ đường.
 }
 
 

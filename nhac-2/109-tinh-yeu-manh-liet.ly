@@ -27,13 +27,13 @@ notBePhu =
 nhacDiepKhucSop = \relative c'' {
   \partial 8 r8 |
   R2.
-  r4 c8 c4 c8 |
-  e,4. e8 \tuplet 3/2 { c'8 c a } |
-  b2 \tuplet 3/2 { e8 e e } |
-  b4. b8 \tuplet 3/2 { d d d } |
-  a4 r8 b gs e |
+  r4 c8 _> c4 _> c8 |
+  e,4. e8 \tuplet 3/2 { c'8 _> c _> a _> } |
+  b2 \tuplet 3/2 { e8 ^> e ^> e ^> } |
+  b4. b8 \tuplet 3/2 { d _> d _> d _> } |
+  a4 r8 b ^> gs ^> e ^> |
   c'4. (b8) gs gs |
-  a2 r8 \bar "|."
+  a2 \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -42,22 +42,22 @@ nhacDiepKhucAlto = \relative c' {
   r4 e8 e4 c8 |
   b4. d8 \tuplet 3/2 { c e a } |
   gs2 \tuplet 3/2 { gs8 gs a } |
-  f4. g8 \tuplet 3/2 { f f g } |
-  e4 r8 b gs' e |
+  f4. g!?8 \tuplet 3/2 { f f g } |
+  e4 r8 b' gs e |
   a4. (f8) e d |
-  c2 r8
+  c2
 }
 
 nhacDiepKhucBas = \relative c {
   a8 |
-  e'4. f8 \tuplet 3/2 { d e d } |
-  a'4 a8 a4 a8 |
-  gs4. gs8 \tuplet 3/2 { a a f } |
-  e2 \tuplet 3/2 { e8 e c } |
-  d4. e8 \tuplet 3/2 { d8 d b } |
+  e'4. f8 \tuplet 3/2 { d ^> e ^> d ^> } |
+  a'4 a8 _> a4 _> a8 |
+  gs4. gs8 \tuplet 3/2 { a ^> a ^> f ^> } |
+  e2 \tuplet 3/2 { e8 ^> e ^> c ^> } |
+  d4. e8 \tuplet 3/2 { d8 _> d _> b _> } |
   c4 r r |
-  r8 a' f d e e |
-  <a a,>2 r8
+  r8 a' ^> f ^> d ^> e e |
+  <a a,>2
 }
 
 nhacPhienKhuc = \relative c' {
@@ -85,7 +85,7 @@ nhacPhienKhuc = \relative c' {
   b2. |
   <<
     {
-      \tuplet 3/2 { d'8 d d } \tuplet 3/2 { c c c }
+      \tuplet 3/2 { d'8 d d } \tuplet 3/2 { b c c }
       \tuplet 3/2 { b b b }
     }
     \notBePhu -2 {
@@ -93,7 +93,7 @@ nhacPhienKhuc = \relative c' {
       \tuplet 3/2 { gs gs gs }
     }
   >>
-  a2 \bar "||"
+  a2 r8 \bar "|."
 }
 
 % Lời
@@ -104,7 +104,7 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiDiepKhucBas = \lyricmode {
-  Tình yêu mãnh liệt hơn sự chết.
+  Tình yêu mãnh liệt hơn sự chết,
   Sức nóng ái tình là sức nóng lửa thiêu.
   Nước lũ thét gào, dù phong ba tuôn trào,
   cũng không dập được tình yêu.
@@ -113,30 +113,30 @@ loiDiepKhucBas = \lyricmode {
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
   Tình yêu khai sinh nơi Thượng Đế,
-  tình yêu thiên thu không tàn phế.
+  Tình yêu thiên thu không tàn phế.
   Khắp thế giới vui hân hoan nghe tin xuân về.
   Tình yêu đến biến đổi phân người,
-  tình yêu đến rắc gieo nụ cười.
+  Tình yêu đến rắc gieo nụ cười.
   Chúa giáng thế cho muôn dân trông mong lên trời.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
   Tình yêu dâng cao như ngọn sóng,
-  tình yêu thiêu con tim rực nóng.
+  Tình yêu thiêu con tim rực nóng.
   Mắt ngó mắt, tay trao tay nghe xôn xao lòng.
   Tình yêu chiếu sáng cả gian trần,
-  tình yêu đã giáng sinh một lần.
+  Tình yêu đã giáng sinh một lần.
   Kiếp sống mới nay khai hoa thơm xinh vô ngần.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
   Tình yêu lung linh như giọt nắng,
-  tình yêu lau khô bao lệ đắng.
+  Tình yêu lau khô bao lệ đắng.
   Cất tiếng hát xua đêm đen hoang mang yên lặng.
   Tình yêu xóa hết mọi u mờ,
-  tình yêu thắp sáng khi đợi chờ.
+  Tình yêu thắp sáng khi đợi chờ.
   Khắp bốn hướng muôn con tim tin yêu tôn thờ.
 }
 
@@ -144,7 +144,7 @@ loiPhienKhucBa = \lyricmode {
 \paper {
   #(set-paper-size "a4")
   top-margin = 15\mm
-  bottom-margin = 20\mm
+  bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -155,7 +155,7 @@ loiPhienKhucBa = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #2
+  page-count = #1
   %systems-per-page = 5
 }
 

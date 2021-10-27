@@ -3,14 +3,18 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Bài Hát Mới" }
+  title = \markup { \fontsize #3 "Bài Ca Mới" }
+  poet = "Ý: Tv. 97"
   composer = "Lm. Kim Long"
   tagline = ##f
 }
 
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
-  r8 d4 ^> d,8 |
+  r8
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  d4 ^> d,8 |
   e d b'4 |
   b8 b ~ b4 |
   r8 c4 ^> g8 |
@@ -35,20 +39,27 @@ nhacDiepKhucSop = \relative c'' {
   fs fs c' c |
   c2 |
   a8 ^^ b4 ^^ a8 ^^ |
-  d2 \bar "||" \break
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \tweak extra-offset #'(12 . 0)
+  \mark \markup { \musicglyph #"scripts.segno" }
+  d2
+  \bar "||" \break
   
   \partial 4 d,8 e ~ |
-  e d a'4 |
+  e d a'4 ^> |
   a b8 a ~ |
-  a g c4 |
+  a g c4 ^> |
   c2 |
   r8 a b a |
-  e'8. e16 e8^> d ^> |
+  e'8. ^> e16 e8^> d |
   r4 c8 a |
   fs4 d8 a' ~ |
   a b a a |
   g2 ~ |
-  g4 \bar "|."
+  g4
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c'' {
@@ -79,17 +90,17 @@ nhacDiepKhucAlto = \relative c'' {
   fs2
   
   d8 e ~ |
-  e d e (g) |
+  e d e ^> (g) |
   fs4 d8 e ~ |
-  e d e4 |
+  e d e4 ^> |
   e2 |
   r8 a b a |
-  gs8. a16 c8 ^> b ^> |
+  gs8. ^> a16 c8 ^> b |
   r4 e,8 c |
   d4 d8 e ~ |
   e g fs fs |
-  e2 ~ |
-  e4
+  g2 ~ |
+  g4
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -97,14 +108,14 @@ nhacDiepKhucBas = \relative c' {
   e d cs4 |
   d8 g ~ g4 |
   r8 c4 ^> g8 |
-  a fs fs4 |
+  a g fs4 |
   g8 c ~ c4 |
   r8 a4 ^> a8 |
   gs a d4 |
   c8 b4 b8 ~ |
-  b e, e d |
-  g2 ~ |
-  g4
+  b <c e,> <c e,> <c d,> |
+  <b g>2 ~ |
+  <b g>4
   
   r4
   R2
@@ -112,21 +123,21 @@ nhacDiepKhucBas = \relative c' {
   a b g e |
   d2 |
   d8 e4 d8 |
-  e4 r8 c' ~ |
+  g4 r8 c ~ |
   c c cs cs |
-  d4 r8 c ~ |
+  d4 r8 c!? ~ |
   c b bf bf |
   a2 |
   a8 ^^ e4 ^^ e8 ^^ |
   d2
   
   d8 e ~ |
-  e d c'4 |
-  d b8 c ~ |
-  c b bs4 |
+  e d c4 ^> |
+  d b'8 c ~ |
+  c b bf4 ^> |
   a2 |
   r8 fs g f! |
-  e8. c16 e8 ^> g ^> |
+  e8. ^> c16 e8 ^> g |
   r4 a8 a |
   d,4 d8 cs ~ |
   cs! cs d d |
@@ -136,16 +147,18 @@ nhacDiepKhucBas = \relative c' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Hãy hòa lên một khúc hát mới
+  Hãy hòa lên một khúc hát mới,
   Tấu nhạc vang dội khắp thế giới
-  Gọi thần thánh chung lời
-  mừng Chúa tới hiển trị đất trời
+  Cùng thần thánh chung lời
+  Mừng Chúa tới hiển trị đất trời
+  \set stanza = "1."
   Tiếng đàn dệt với cung tơ
-  Nhịp chiêng vang rền
+  nhịp chiêng vang rền
   Hòa chung niềm vui
-  Suy tôn Vua muôn vua
-  Phụng thờ Chúa các chúa
-  Quyền uy tuyệt đối
+  Suy tôn Vua muôn vua,
+  phụng thờ Chúa các chúa
+  quyền uy tuyệt đối.
+  \set stanza = "2."
   Đại dương gầm vang lên
   Núi non hãy múa hát
   Và sông lạch hỡi hãy vỗ tay
@@ -153,15 +166,15 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Hãy hòa lên một khúc hát mới
+  Hãy hòa lên một khúc hát mới,
   Tấu nhạc vang dội khắp thế giới
-  Gọi thần thánh chung lời
-  mừng Chúa tới hiển trị đất trời
-  Tiếng chiêng vang rền
+  Cùng thần thánh chung lời
+  Mừng Chúa tới hiển trị đất trời
+  trống chiêng vang rền
   Hòa chung niềm vui
-  Suy tôn Vua muôn vua
-  Phụng thờ Chúa các chúa
-  Quyền uy tuyệt đối
+  Suy tôn Vua muôn vua,
+  phụng thờ Chúa các chúa
+  quyền uy tuyệt đối.
   Đại dương gầm vang lên
   Núi non hãy múa hát
   Và sông lạch hỡi hãy vỗ tay
@@ -169,16 +182,24 @@ loiDiepKhucAlto = \lyricmode {
 }
 
 loiDiepKhucBas = \lyricmode {
-  Hãy hòa lên một bài hát mới
+  Hãy hòa lên một bài ca mới,
   Tấu nhạc vang dội cả thế giới
-  Gọi thần thánh chung tới
-  mừng Chúa tới hiển trị đất trời.
+  Cùng thần thánh chung lời
+  Mừng Chúa tới hiển trị
+  <<
+    { đất trời. }
+    \new Lyrics {
+	    \set associatedVoice = "beBas"
+	    \override Lyrics.LyricText.font-shape = #'italic
+	    mọi nơi.
+	}
+  >>
   Nhịp theo tiếng chiêng vang rền
   Hòa chung niềm vui
-  Suy tôn Vua muôn vua
-  Phụng thờ Chúa các vua
-  Uy quyền tuyệt vời
-  Đại dương gầm vang lên
+  Suy tôn Vua muôn vua,
+  phụng thờ Chúa các chúa
+  quyền uy tuyệt đối.
+  Đại dương gầm vang lên,
   Đồi non hãy múa hát
   Và sông lạch hỡi hãy vỗ tay
   Hãy reo hò mừng vui trước tôn nhan Ngài.
@@ -187,7 +208,7 @@ loiDiepKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
+  top-margin = 10\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
