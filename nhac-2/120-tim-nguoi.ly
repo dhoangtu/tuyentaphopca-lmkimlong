@@ -3,9 +3,9 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Tìm Người Yêu" }
+  title = \markup { \fontsize #3 "Tìm Người" }
   composer = "Thơ: Lm. Xuân Ly Băng"
-  arranger = "Lm. Kim Long"
+  arranger = "Nhạc: Lm. Kim Long"
   tagline = ##f
 }
 

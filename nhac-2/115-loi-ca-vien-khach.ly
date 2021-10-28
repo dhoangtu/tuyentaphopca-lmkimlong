@@ -5,15 +5,16 @@
 \header {
   title = \markup { \fontsize #3 "Lời Ca Viễn Khách" }
   poet = "Thơ: Xuân Ly Băng"
-  composer = "Lm. Kim Long"
+  composer = "Nhạc: Lm. Kim Long"
   tagline = ##f
 }
 
 % Nhạc
 nhacPhienKhucSop = \relative c' {
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \partial 4. r8 r4 |
-  r8 e b'8. a16 |
+  r8 d b'8. a16 |
   a4. g8 |
   e' e4 cs8 |
   cs4. d16 d |
@@ -23,6 +24,7 @@ nhacPhienKhucSop = \relative c' {
   a4 r8 \bar "||" \break
   
   \key bf \major
+  <>^\markup { \fontsize #3 \box \bold 1 }
   bf8 |
   bf4. a16 c |
   d4 r8 c |
@@ -30,13 +32,16 @@ nhacPhienKhucSop = \relative c' {
   g4 \tuplet 3/2 { g8 g f } |
   f8. f16 \tuplet 3/2 { g8 f f } |
   ef2 ~ |
-  ef8 bf' \tuplet 3/2 { g8 bf g } |
+  ef8 bf' \tuplet 3/2 { a8 bf g } |
   a8. g16 \tuplet 3/2 { a8 g g } |
   fs2 ~ |
   fs4 r \bar "||" \break
   
-  \key g \major b4 \tuplet 3/2 { b8 as b } |
-  c4. c8 |
+  \key g \major b4 \tuplet 3/2 { b8 as b }
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar ".|"
+  d4. c8 |
   a a4 c8 |
   b4 r8 d, |
   d g fs (g) |
@@ -55,6 +60,7 @@ nhacPhienKhucSop = \relative c' {
   g4 r8 \bar "||" \break
   
   \key bf \major
+  <>^\markup { \fontsize #3 \box \bold 2 }
   g8 |
   fs4. a8 |
   g4 \tuplet 3/2 { c8 d bf } |
@@ -62,12 +68,23 @@ nhacPhienKhucSop = \relative c' {
   g4 \tuplet 3/2 { g8 f f } |
   ef4 r8 d16 bf' |
   a8. a16 \tuplet 3/2 { g8 c d } |
-  d4. b!16 b |
-  b!4. a8 |
-  a d g,16 (a) \slashedGrace { fs16 (} g8) |
-  fs2 \bar "||" \break
+  d4. bf16 bf |
+  bf4. a8 |
+  a d g,16 (a)
+  \afterGrace g8 ({
+    \override Flag.stroke-style = #"grace"
+    fs16)}
+  \revert Flag.stroke-style
+  |
+  fs2 \bar "||"
+  \key g \major
+  <b g>4 \tuplet 3/2 { <b g>8 <a fs> <b g> }
+  | \break
   
-  \partial 8 g8 |
+  \partial 8
+  \key bf \major
+  <>^\markup { \fontsize #3 \box \bold 3 }
+  g8 |
   g4. fs16 a |
   g4. bf8 |
   a8. c16 c8 bf |
@@ -101,13 +118,15 @@ nhacPhienKhucSop = \relative c' {
   a4. d,8 |
   b' a4 a8 |
   g2 ~ |
-  g4 r \bar "|."
+  g4 r
+  ^\markup { \fontsize #2 \bold "Tận" }
+  \bar "|."
 }
 
 nhacPhienKhucAlto = \relative c' {
   \set Staff.printKeyCancellation = ##f
   r8 r4 |
-  r8 e g8. g16 |
+  r8 d g8. g16 |
   fs4. g8 |
   b b4 g8 |
   e4. g16 g |
@@ -120,12 +139,12 @@ nhacPhienKhucAlto = \relative c' {
   
   \key g \major
   g4 \tuplet 3/2 { g8 fs g } |
-  a4. a16 (g) |
+  b4. a16 (g) |
   fs8 fs4 fs8 |
   g4 r8 d |
   c b d (e) |
   c4. c8 |
-  cs d4 cs8 |
+  cs d4 c!8 |
   b2
   
   b'4 \tuplet 3/2 { b8 a g } |
@@ -141,7 +160,7 @@ nhacPhienKhucAlto = \relative c' {
   r8
   R2*10
   r8
-  R2*13
+  R2*14
   r8
   
   \key g \major
@@ -149,7 +168,7 @@ nhacPhienKhucAlto = \relative c' {
   r8 e8 g8. g16 |
   fs4. g8 |
   b b4 g8 |
-  e4. g16 g |
+  e4. d16 d |
   g8 fs e e |
   g4. g8 |
   fs2 ~ |
@@ -169,7 +188,7 @@ nhacPhienKhucBas = \relative c' {
   \set Staff.printKeyCancellation = ##f
   b8 e8. d16 |
   d2 ~ |
-  d8 d ^> d b16 (a) |
+  d8 d ^> d ^> b16 (a) |
   g4 e ^> |
   a8 a a, b |
   cs d e a, |
@@ -189,8 +208,8 @@ nhacPhienKhucBas = \relative c' {
       b8 |
       c4 c8 c |
       c4. c8 |
-      <b g>2 ~ |
-      <b g>4
+      <b fs>2 ~ |
+      <b fs>4
     }
     {
       g8 c,4 c8 c |
@@ -203,12 +222,12 @@ nhacPhienKhucBas = \relative c' {
   r8 |
   R2*10
   r8
-  R2*13
+  R2*14
   r8
   
   b'8 e8. d16 |
   d2 ~ |
-  d8 d ^> d b16 (a) |
+  d8 d ^> d ^> b16 (a) |
   g4 e ^> |
   a8 a a, b |
   cs d e a, |
@@ -231,8 +250,8 @@ loiPhienKhucSop = \lyricmode {
   Dừng bước chi đây kìa ánh sáng ngày về
   đang tưng bừng trời mến yêu vô tận.
   \set stanza = "Solo:"
-  Bâng khuâng người viễn khách lưu ly bao tháng ngày
-  với gió heo may khi lá thu rơi rụng.
+  Bâng khuâng người viễn khách lưu ly bao tháng ngày,
+  Với gió heo may khi lá thu rơi rụng,
   Với trăng sáng trời mây tô núi sông thơ mộng.
   \set stanza = "Duo:"
   Nhưng tôi là viễn khách mang nặng tình cố hương.
@@ -242,19 +261,22 @@ loiPhienKhucSop = \lyricmode {
   Hồn ơi đừng trìu mến chút cát bụi dọc đàng.
   \set stanza = "Solo:"
   Hoa đẹp lá tươi thơm ngát hương trời.
-  Muôn cánh vàng bướm ong bay lượn
-  nhạc véo von chim ngàn trong nắng sớm.
+  Muôn cánh vàng bướm ong bay lượn,
+  Nhạc véo von chim ngàn trong nắng sớm.
   Ôi bâng khuâng khi thanh sắc chảy vào hồn.
+  \set stanza = "Duo:"
+  Nhưng tôi là viễn
+  
   \set stanza = "Solo:"
   Mây ơi và gió ơi!
-  Hỡi hoa thắm là xanh tươi.
+  Hỡi hoa thắm lá xanh tươi.
   Buông ta ra này còi tàu náo động.
   Tiếng quê hương vang phương trời cao rộng.
-  Nhắc hồn ta hồn viễn khách xa quê.
+  Nhắc hồn ta, hồn viễn khách xa quê.
   
   Dừng bước chi đây kìa ánh sáng ngày về
   đang tưng bừng trời mến yêu vô tận.
-  Sao dừng chi đây hồn hỡi ánh sáng ngày về,
+  Sao dừng chi đây, Hồn hỡi ánh sáng ngày về,
   ánh sáng ngày về đang tưng bừng trời mến yêu vô tận.
 }
 
@@ -271,7 +293,7 @@ loiPhienKhucAlto = \lyricmode {
   Dừng bước chi đây kìa ánh sáng ngày về
   đang tưng bừng
   tưng bừng mến yêu vô tận.
-  Sao dừng chi đây hồn hỡi ánh sáng ngày về,
+  Sao dừng chi đây, Hồn hỡi ánh sáng ngày về,
   ánh sáng ngày về đang tưng bừng trời mến yêu vô tận.
 }
 

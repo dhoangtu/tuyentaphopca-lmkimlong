@@ -4,15 +4,15 @@
 
 \header {
   title = \markup { \fontsize #3 "Xin Chúa Là Ngọn Đuốc Thiêng" }
-  composer = "Ý: Tv. 17"
-  arranger = "Lm. Kim Long"
+  composer = "Lm. Kim Long"
+  %arranger = " "
   tagline = ##f
 }
 
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
   \key g \major \time 2/4
-  \partial 4 b4 \bar "||"
+  \partial 4 b4 \bar ".|"
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
   d2 |
@@ -71,8 +71,10 @@ nhacDiepKhucBas = \relative c {
 
 nhacPhienKhucSop = \relative c'' {
   \key bf \major \time 2/4
-  \partial 4
-  d8 bf 
+  \partial 4.
+  % thêm dấu nghỉ ẩn, để nốt hoa mỹ ko nằm ở đầu (lỗi khoảng cách)
+  \hideNotes r8 \unHideNotes
+  \slashedGrace { c16 (} d8) bf 
   g4 \tuplet 3/2 { g8 g g } |
   a4 \slashedGrace { g16 (} a8) ef |
   d4 \tuplet 3/2 { bf8 c c } |
@@ -91,6 +93,7 @@ nhacPhienKhucSop = \relative c'' {
 
 nhacPhienKhucAlto = \relative c'' {
   \key bf \major \time 2/4
+  \hideNotes r8 \unHideNotes
   r4 |
   r \tuplet 3/2 { g8 g g } |
   fs4 r4 |
@@ -107,6 +110,7 @@ nhacPhienKhucAlto = \relative c'' {
 
 nhacPhienKhucBas = \relative c {
   \key bf \major \time 2/4
+  \hideNotes r8 \unHideNotes
   r4
   r4 \tuplet 3/2 { ef8 ef ef } |
   d4 r |
@@ -124,13 +128,13 @@ nhacPhienKhucBas = \relative c {
 loiDiepKhucSop = \lyricmode {
   Xin Chúa là ngọn đuốc thiêng tỏa ánh sáng vào đời con
   tăm tối.
-  Chúa giúp con xông vào chiến trận cậy sức Chúa con vượt núi băng đồi.
+  Xin giúp con xông vào chiến trận cậy sức Chúa con vượt núi băng đồi.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Xin Chúa là ngọn đuốc thiêng tỏa ánh sáng vào đời con
+  Xin Chúa là ngọn đuốc thiêng tỏa ánh sáng vào đời con,
   đời con tăm tối.
-  Chúa giúp con xông vào chiến trận cậy sức Chúa con vượt núi băng đồi.
+  Xin giúp con xông vào chiến trận cậy sức Chúa con vượt núi băng đồi.
 }
 
 loiDiepKhucBas = \lyricmode {
@@ -141,74 +145,77 @@ loiDiepKhucBas = \lyricmode {
 
 loiPhienKhucSopMot = \lyricmode {
   \set stanza = "1."
-  Sóng tử thần dồn dập mọi nơi thác hủy diệt làm con kinh hãi.
-  Mạng lưới âm ty bao vây muôn lối bẫy tử thần giăng mắc khôn ngơi.
+  Sóng tử thần dồn dập mọi nơi, thác hủy diệt làm con kinh hãi,
+  Mạng lưới âm ty bao vây muôn lối,
+  Bẫy tử thần giăng mắc khôn ngơi.
   Xin
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = "2."
-  Đất trở mình ầm ầm chuyển rung núi đảo loạn đồi nương run rẩy.
-  Nộ khí Đức Chúa xông lên ngun ngút trút lửa giận hun hút bay cao.
+  Đất trở mình ầm ầm chuyển rung, núi đảo loạn đồi nương run rẩy,
+  Nộ khí Đức Chúa xông lên ngun ngút,
+  Trút lửa giận hun hút bay cao.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \set stanza = "3."
-  Sấm chuyển trời sầm sập đổ mưa khắp cảnh vật chìm trong u tối.
-  Kìa trước Thiên Nhan giăng muôn tia chớp rắc lửa hồng mưa đá tuôn rơi.
+  Sấm chuyển trời sầm sập đổ mưa khắp cảnh vật chìm trong u tối,
+  Kìa trước Thiên Nhan giăng muôn tia chớp,
+  Rắc lửa hồng mưa đá tuôn rơi.
 }
 
 loiPhienKhucAltoMot = \lyricmode {
   \set stanza = "1."
-  Dồn dập mọi nơi
+  dồn dập mọi nơi,
   làm con kinh hãi, kinh hãi.
-  bao vây muôn lối
+  bao vây muôn lối,
   giăng mắc khôn ngơi.
   Xin
 }
 
 loiPhienKhucAltoHai = \lyricmode {
   \set stanza = "2."
-  Ầmm ầm chuyển rung
+  ầm ầm chuyển rung,
   đồi nương run rẩy, run rẩy.
-  xông lên ngun ngút
+  xông lên ngun ngút,
   hun hút bay cao.
 }
 
 loiPhienKhucAltoBa = \lyricmode {
   \set stanza = "3."
-  Sầm sập đổ mưa
+  sầm sập đổ mưa
   chìm trong u tối, u tối.
-  giăng muôn tia chớp
+  giăng muôn tia chớp,
   mưa đá tuôn rơi.
 }
 
 loiPhienKhucBasMot = \lyricmode {
   \set stanza = "1."
-  Dồn dập mọi nơi làm con kinh hãi, kinh hãi.
-  Bao vây muôn lối giăng mắc khôn ngơi.
+  dồn dập mọi nơi, làm con kinh hãi, kinh hãi.
+  bao vây muôn lối, giăng mắc khôn ngơi.
 }
 
 loiPhienKhucBasHai = \lyricmode {
   \set stanza = "2."
-  Ầm ầm chuyển rung
+  ầm ầm chuyển rung,
   đồi nương run rẩy, run rẩy.
-  Xông lên ngun ngút
+  xông lên ngun ngút,
   hun hút bay cao.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \set stanza = "3."
-  Sầm sập đổ mưa
+  sầm sập đổ mưa
   chìm trong u tối, u tối.
-  Giăng muôn tia chớp
+  giăng muôn tia chớp,
   mưa đá tuôn rơi.
 }
 
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20\mm
+  top-margin = 15\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm

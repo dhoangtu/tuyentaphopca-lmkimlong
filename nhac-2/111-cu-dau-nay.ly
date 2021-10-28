@@ -17,9 +17,9 @@ nhacDiepKhucSop = \relative c'' {
   d2 |
   c8 d a16 (c) a8 |
   g4 r8 g |
-  e'4. (f16 e) |
+  e'4. _(f16 e) |
   d4 g,8 b |
-  d4. (e16 d) |
+  d4. _(e16 d) |
   c2 ~ |
   c4 r |
   R2*2
@@ -27,7 +27,7 @@ nhacDiepKhucSop = \relative c'' {
   e (f) g a |
   g4. a8 |
   g a c c |
-  b4 \bar "||"
+  b4 \bar "|"
 }
 
 nhacDiepKhucAlto = \relative c'' {
@@ -35,8 +35,8 @@ nhacDiepKhucAlto = \relative c'' {
   R2
   r8. g16 c8 c |
   b2 |
-  g8 f c [c] |
-  b4 r8 d |
+  g8 f a16 (c) a8 |
+  b,4 r8 d |
   g2 |
   fs4 g8 [g] |
   f2 |
@@ -61,7 +61,7 @@ nhacDiepKhucBas = \relative c {
   d4 e8 <g e> |
   <a\=1^( d,\=2_(>4 <b\=1) g\=2_)>
   <c c,>2 ~ |
-  <c c,>4 g8 a |
+  <c c,>4 g8 g |
   a c a (g) |
   d8. f16 g8 e16 (d) |
   c2 ~ |
@@ -73,7 +73,7 @@ nhacDiepKhucBas = \relative c {
 
 % Lời
 loiPhienKhucSopMot = \lyricmode {
-  Nhận biết các con là môn đệ của Thầy:
+  nhận biết các con là môn đệ của Thầy
   là các con hằng thương mến nhau.
   \set stanza = "1-3."
   Là hãy thương mến nhau như Thầy thương mến các con.
@@ -81,12 +81,12 @@ loiPhienKhucSopMot = \lyricmode {
 
 loiPhienKhucBasMot = \lyricmode {
   Cứ dấu này người ta nhận biết,
-  nhận biết các con là môn đệ Thầy:
+  nhận biết các con là môn đệ Thầy
   là đoàn con hằng thương mến nhau.
   \set stanza = "1."
   Thầy truyền cho các con điều răn mới của Thầy.
   \set stanza = "1-3."
-  Là hãy thương nhau hỡi đoàn con.
+  là hãy thương nhau hỡi đoàn con.
 }
 
 loiPhienKhucBasHai = \lyricmode {
@@ -117,7 +117,7 @@ loiPhienKhucBasBa = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  page-count = #1
+  %page-count = #1
 }
 
 TongNhip = {

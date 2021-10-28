@@ -4,8 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Chúa Xét Dò Con" }
-  composer = "Ý: Tv. 138"
-  arranger = "Lm. Kim Long"
+  poet = "Ý: Tv. 138"
+  composer = "Lm. Kim Long"
   tagline = ##f
 }
 
@@ -26,17 +26,20 @@ nhacDiepKhucSop = \relative c'' {
   d4 c8 c e d16 (c) |
   a4 (g2) ~ |
   g4 e8. e16 a8 fs16 (e) |
+  \set Score.repeatCommands = #'((volta "qua TK"))
   d2. ~ |
   
   \time 2/4
-  \partial 4. d4 r8 \bar "||"
-  
+  \partial 4. d4 r8
+  \set Score.repeatCommands = #'((volta #f) end-repeat)
+  \bar "||"
+  \set Score.repeatCommands = #'((volta "Để Kết"))
   \time 3/4
   \once \override Score.RehearsalMark.font-size = #0.5
-  \mark \markup { \musicglyph #"scripts.coda" }
-  %<> \tweak extra-offset #'(1 . -1.5)
   d2. ~ |
-  d2 \bar "|."
+  d2 r4
+  \set Score.repeatCommands = #'((volta #f) end-repeat)
+  \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c'' {
@@ -55,7 +58,7 @@ nhacDiepKhucAlto = \relative c'' {
   c4 bf4. -> bf8 |
   a4 r8
   d4 b!4. _> b8 |
-  a2
+  a2 r4
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -74,12 +77,13 @@ nhacDiepKhucBas = \relative c' {
   d4 g4. _> g8 |
   d4 r8
   d4 g4. _> g8 |
-  <fs d>2
+  <fs d>2 r4
 }
 
 nhacPhienKhucSop = \relative c'' {
   \time 2/4
-  R2*2
+  \partial 8 r8
+  R2
   r4 a8 g ~ |
   g bf g4 |
   a2 ~ |
@@ -88,12 +92,15 @@ nhacPhienKhucSop = \relative c'' {
   g a f e \bar "||"
   
   \time 3/4
-  d4 \bar "||"
+  d4
+  a'8 a d, ([f])
+  \bar "||"
 }
 
 nhacPhienKhucAlto = \relative c' {
   \time 2/4
-  R2*2
+  r8
+  R2
   r4 f8 e ~ |
   e g e4 |
   f2 ~ |
@@ -101,11 +108,12 @@ nhacPhienKhucAlto = \relative c' {
   r d8 e ~ |
   e f d cs |
   d4
+  a'8 a d, ([f])
 }
 
 nhacPhienKhucBas = \relative c {
   \time 2/4
-  r4. d8 ^> ~ |
+  d8 ^> ~ |
   d f f g |
   a4 r |
   R2
@@ -114,6 +122,7 @@ nhacPhienKhucBas = \relative c {
   a4. a8 |
   a,2
   d4
+  a'8 a d, ([f])
 }
 
 % Lời
@@ -151,6 +160,7 @@ loiPhienKhucSopHai = \lyricmode {
   \set stanza = #"2."
   Xa thần trí Ngài luôn
   hầu mong lánh tôn nhan Ngài.
+  Chúa xét dò
 }
 
 loiPhienKhucSopBa = \lyricmode {
@@ -175,6 +185,7 @@ loiPhienKhucBasHai = \lyricmode {
   \set stanza = #"2."
   Tìm nơi đâu đi tới,
   Biết trốn đi chốn nào lánh được Ngài.
+  Chúa xét dò
 }
 
 loiPhienKhucBasBa = \lyricmode {

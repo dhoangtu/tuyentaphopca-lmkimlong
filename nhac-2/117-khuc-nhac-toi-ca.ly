@@ -26,6 +26,8 @@ notBePhu =
    music)
 
 nhacDiepKhucSop = \relative c'' {
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
   R2*2
   r4 c8 c b16 (c d4) a8 |
   b ^> c ^> a4 ^> |
@@ -39,7 +41,9 @@ nhacDiepKhucSop = \relative c'' {
   f8. ^> f16 d8 d |
   g b,4 c8 |
   c2 ~ |
-  c4 r8 \bar "|." \break
+  c4 r8
+  ^\markup { \fontsize #2 \bold "Tận" }
+  \bar "|." \break
   
   r8 |
   R2*3
@@ -59,7 +63,10 @@ nhacDiepKhucSop = \relative c'' {
   b c4 c8 |
   a a a4 |
   g2 ~ |
-  g4 r \bar "||"
+  g4 r
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -91,7 +98,7 @@ nhacDiepKhucAlto = \relative c' {
   c4 r8 d16 e |
   f8 g g8. [e16] |
   a8 a gs4 |
-  a8. a16 g8 g |
+  a8. d16 g,8 g |
   a b4
   \once \tweak font-size #0
   g16
@@ -169,8 +176,9 @@ loiDiepKhucSop = \lyricmode {
   Vì khúc nhạc tôi ca, khúc nhạc tôi ca là chính Chúa
   Đấng đã ban ơn Cứu Độ cho tôi.
   Ngày ấy hãy tung hô: Cảm mến Chúa chí nhân
-  hãy loan báo khắp muôn dân bao công việc Chúa lẫy lừng.
-  đàn ca lên kính Chúa vì Chúa ra tay hùng anh
+  Hãy loan báo khắp muôn dân bao công việc Chúa lẫy lừng.
+  Đàn ca lên kính Chúa
+  Vì Chúa ra tay hùng anh,
   sự nghiệp Ngài khiến nơi nơi lừng danh,
   hãy hân hoan reo mừng.
 }
@@ -180,22 +188,27 @@ loiDiepKhucAlto = \lyricmode {
   Vì khúc nhạc tôi ca, khúc nhạc tôi ca là chính Chúa
   Đấng đã ban ơn Cứu Độ cho tôi.
   Ngày ấy hãy tung hô: Cảm mến Chúa chí nhân
-  hãy loan báo khắp muôn dân bao công việc Chúa lẫy lừng.
-  Đàn ca lên kính Chúa và tôn vinh Ngài vì Chúa ra tay hùng anh
+  Hãy loan báo khắp muôn dân bao công việc Chúa lẫy lừng.
+  Đàn ca lên kính Chúa và tôn vinh Chúa
+  vì Chúa ra tay hùng anh,
   sự nghiệp Ngài khiến nơi nơi lừng danh,
   hãy hân hoan reo mừng.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Đây Thiên Chúa là Đấng Cứu Độ tôi và tôi không khiếp sợ
-  vì sức mạnh tôi nhạc khúc tôi ca,
+  Đây Thiên Chúa là Đấng Cứu Độ tôi
+  Và tôi không khiếp sợ
+  Vì sức mạnh tôi, nhạc khúc tôi ca
   nhạc khúc tôi ca là Chúa,
   Ngài đã ban ơn để cứu tôi.
   Các ngươi sẽ hân hoan kín nước nơi dòng suối cứu độ.
-  Cảm mến Chúa từ nhân hãy loan báo khắp muôn dân
+  Cảm mến Chúa từ nhân
+  Hãy loan báo khắp muôn dân
   bao công việc Chúa lẫy lừng.
-  Đàn ca lên kính Chúa, đàn ca lên kính Ngài
-  ra tay dũng anh sự nghiệp Ngài làm nơi nơi vang danh,
+  Đàn ca lên kính Chúa,
+  Đàn ca lên kính Ngài
+  Ra tay dũng anh,
+  sự nghiệp Ngài làm nơi nơi vang danh,
   hãy hân hoan reo mừng.
 }
 
@@ -214,7 +227,7 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #2
+  page-count = #2
   %systems-per-page = 5
 }
 

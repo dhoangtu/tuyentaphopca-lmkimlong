@@ -11,7 +11,10 @@
 
 % Nhạc
 nhacDiepKhucSop = \relative c' {
-  \partial 4. e8 d c \bar "||"
+  \partial 4. e8 d c
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar ".|"
   f8. d16 d8 g |
   a4 r8 e' |
   c c d4 |
@@ -24,20 +27,25 @@ nhacDiepKhucSop = \relative c' {
   f d4 f8 |
   g4 r8 e |
   a4 ^> a8 g |
-  c4 c8 b! |
+  c4 ^> c8 b! |
   d e4 c8 |
   a4. af8 |
   g d'4 b8 |
-  c2 ~ \bar "|."
-  c4 r |
+  c2 ~ |
+  c4 \bar "|." \break
+  
+  r |
   R2*2
-  r8 e8 _> (e16) e c8 _> |
+  r8 e8. ^> e16 c8 ^> |
   c4 f8 f |
   f4 e8 ^> d ^> ~ |
   d4 c8. _> c16 |
   g8 g g af |
   g4 c,8 c ~ |
-  c e d c \bar "||"
+  c e d c
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -61,7 +69,7 @@ nhacDiepKhucAlto = \relative c' {
   e2 ~ |
   e4 r |
   R2*2
-  r8 c' ~ c16 c e,8 |
+  r8 c'8. c16 e,8 |
   e4 a8 a |
   a4 c8 b ~ |
   b4 c8. c16 |
@@ -77,14 +85,14 @@ nhacDiepKhucBas = \relative c {
   f e d4 |
   g,8. g16 a8 b |
   c4 r8 e |
-  cs4 _> d8 g |
-  e4 _> f8 g |
+  cs4 ^> d8 g |
+  e4 ^> f8 g |
   d c4 c8 |
   f4. f8 |
   d f4 a8 |
   g4 r8 e |
-  cs4 _> d8 g |
-  e4 _> f8 g |
+  cs4 ^> d8 g |
+  e4 ^> f8 g |
   d c4 c8 |
   f4. f8 |
   e d4 g8 |
@@ -103,19 +111,21 @@ nhacDiepKhucBas = \relative c {
 
 % Lời
 loiPhienKhucSopMot = \lyricmode {
-  Hát lên mừng Chúa một bài ca mới
-  tán tụng Người đi từ cùng cõi địa cầu.
+  Hát lên mừng Chúa một bài ca mới,
+  Tán tụng Ngài đi từ cùng cõi địa cầu.
   Gầm vang lên, gầm vang lên đại dương với muôn vật,
-  hải đảo cùng cư dân.
+  Hải đảo cùng cư dân.
   Gầm vang lên, gầm vang lên miền quê tới thị thành,
   sa mạc tới đồi nương.
+  \set stanza = "1."
   Khí phách bừng bừng cất tiếng thét xung phong.
   Dũng mãnh ra tay nghinh chiến bao địch thù.
   Hát lên mừng
 }
 
 loiPhienKhucSopHai = \lyricmode {
-  \repeat unfold 35 { _ }
+  \repeat unfold 49 { _ }
+  \set stanza = "2."
   Những khúc gập ghềnh sẽ uốn nắn cho ngay.
   Dẫn bước ta đi qua biết bao dặm trường.
 }
@@ -127,16 +137,16 @@ loiPhienKhucBasMot = \lyricmode {
   Gầm vang lên, gầm vang lên xóm quê và thị thành,
   sa mạc và đồi nương.
   \set stanza = "1."
-  Chúa tiến lên như trang chiến binh vào trận.
-  Bừng bừng gào thét xung phong.
+  Chúa tiến lên như trang chiến binh vào trận
+  bừng bừng gào thét xung phong.
   Dũng mãnh ra tay nghinh chiến bao địch thù.
 }
 
 loiPhienKhucBasHai = \lyricmode {
   \repeat unfold 45 { _ }
   \set stanza = "2."
-  Chúa sẽ khai quang bao lối đi mịt mùng.
-  Gập ghềnh sẽ nắn cho ngay.
+  Chúa sẽ khai quang bao lối đi mịt mùng
+  gập ghềnh sẽ nắn cho ngay.
   Dẫn bước ta đi qua biết bao dặm trường.
 }
 
@@ -144,8 +154,8 @@ loiPhienKhucBasHai = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 5\mm
-  bottom-margin = 5\mm
+  top-margin = 20\mm
+  bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -156,7 +166,7 @@ loiPhienKhucBasHai = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  page-count = #1
+  %page-count = #1
 }
 
 TongNhip = {
@@ -193,6 +203,7 @@ notBePhu =
         \notBePhu -3 { \nhacDiepKhucAlto }
       \new NullVoice = beSop \nhacDiepKhucSop
       \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
       >>
     \new Staff <<
         \clef "bass"

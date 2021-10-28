@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Tôi Đi Tìm Người Yêu" }
+  title = \markup { \fontsize #3 "Đi Tìm Người Yêu" }
   composer = "Lm. Kim Long"
   tagline = ##f
 }
@@ -22,10 +22,10 @@ nhacDiepKhucSop = \relative c'' {
   g4. g8 |
   b b c b |
   a4. a8 |
-  gs a b16 c (b8) |
+  gs a b16 (c) b8 |
   d4. e8 |
   c a fs a |
-  g2
+  g2 \bar "||"
 }
 
 nhacDiepKhucTenor = \relative c'' {
@@ -43,7 +43,7 @@ nhacDiepKhucTenor = \relative c'' {
   d8 c d c |
   b4 r4 |
   r8 b b b |
-  c4 d8 [c] |
+  c4 d8 ([c]) |
   b2
 }
 
@@ -62,7 +62,9 @@ nhacDiepKhucBas = \relative c'' {
   g8 a b a |
   e4 r |
   r8 g g gs |
-  a4. d,8 |
+  a4. d,8
+  _\markup { \halign #-1.7 \italic "sầu" }
+  |
   g2
 }
 
@@ -100,13 +102,13 @@ nhacPhienKhucBas = \relative c'' {
 % Lời
 loiDiepKhucSop = \lyricmode {
   Tôi đi tìm người yêu
-  Từ trong đêm tối cô liêu
+  từ trong đêm tối cô liêu
   qua bình minh gieo hương nắng
   tới khi trời vương bóng chiều
-  Tôi băng đồi vượt non
+  Tôi băng đồi vượt non,
   ngại chi mưa nắng phong sương
-  Sao người yêu vẫn chẳng thấy
-  trái tim mang nặng nhớ thương
+  sao người yêu vẫn chẳng thấy,
+  Trái tim mang nặng nhớ thương.
   \set stanza = "1-3."
   Này người yêu ơi mau tiến lên
   \set stanza = "1."
@@ -116,47 +118,37 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiPhienKhucSopMot = \lyricmode {
-  \set stanza = "1-3."
-  Này người yêu ơi mau tiến lên
   \set stanza = "1."
-  Mưa đã ngừng rơi mùa đông đã qua rồi
-  Đẹp màu hoa xuân trong nắng tươi
-  Bồ câu tung cánh líu lo vang khắp trời.
+  Này người yêu ơi mau tiến lên,
+  Mưa đã ngừng rơi, mùa đông đã qua rồi,
+  Đẹp màu hoa xuân trong nắng tươi,
+  Đàn chim tung cánh líu lo vang khắp trời.
 }
 
 loiPhienKhucSopHai = \lyricmode {
-  \repeat unfold 7 { _ }
   \set stanza = "2."
+  Này người yêu ơi mau tiến lên,
   Như đóa huệ tươi chẳng vương chút ô tỳ
-  Dạt dào hương thơm bay khắp nơi
-  Tuyệt luân hương sắc thế nhân ai sánh bì.
+  Dạt dào hương thơm bay khắp nơi,
+  Tuyệt luân hương sắc, thế nhân ai sánh bì.
 }
 
 loiPhienKhucSopBa = \lyricmode {
-  \repeat unfold 7 { _ }
   \set stanza = "3."
+  Này người yêu ơi mau tiến lên,
   Như ánh bình minh đẹp tươi thắm ân tình
-  Rạng ngời uy linh như thái dương
+  Rạng ngời uy linh như thái dương,
   Vâng trăng trong sáng kính tôn nâng gót vàng.
 }
 
 loiDiepKhucBas = \lyricmode {
   Tôi đi kiếm người yêu
-  đêm
-  <<
-    { tối }
-    \new Lyrics {
-	  \set associatedVoice = "beBas"
-	  \override Lyrics.LyricText.font-shape = #'italic
-	    rồi
-    }
-  >>
-  cô liêu
+  đêm tối cô liêu
   khi gieo hương nắng tới
-  khi sương chiều đã rơi
+  khi sương chiều đã rơi.
   Tôi băng núi vượt non
   mưa nắng phong sương
-  tim mang bao nỗi nhớ sầu thương.
+  tim mang bao nỗi nhớ thương.
 }
 
 

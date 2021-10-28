@@ -3,13 +3,13 @@ Tù sion được dẫn về
 hát lên mừng Chúa
 
 ====
+<>^\markup { \fontsize #6 \box \bold A }
+<>^\markup { \halign #-2 \fontsize #2 \bold "Tận" }
 
   <<
     {
       r8 c ^> c4 ~ |
       c4 r
-      %\once \override Score.RehearsalMark.font-size = #0.1
-      %\mark \markup { \musicglyph #"scripts.segno" }
     }
     {
       \new Staff = "ossia" \with {
