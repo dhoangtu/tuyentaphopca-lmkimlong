@@ -117,31 +117,33 @@ nhacPhienKhucBas = \relative c {
 % Lời
 loiPhienKhucSopMot = \lyricmode {
   \set stanza = "1."
-  Núi non mang lại thái bình.
-  Chúa xét xử dân Ngài, tế độ người nghèo khó.
-  Và nên hòa bình viên mãn,
+  Núi non đem lại thái bình.
+  Chúa xét xử dân Ngài, 
+  Tế độ người nghèo khó.
+  Và nên hòa bình viên mãn
   Sẽ triển nở trong triều đại Ngài.
-  Cho đến khi mặt trăng không còn chiếu ánh sáng.
+  cho tới khi mặt trăng không còn chiếu ánh sáng.
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = "2."
   Lắng nghe bao kẻ khó nghèo.
-  Chúa xét xử công bình, thế lực trường tồn mãi.
+  Chúa xét xử công bình, 
+  Thế lực trường tồn mãi.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \set stanza = "3."
   Các Vua suy phục kính thờ.
   Chúa thống trị muôn đời,
-  chúc tụng Ngài ngàn kiếp.
+  Chúc tụng Ngài ngàn kiếp.
 }
 
 loiPhienKhucBasMot = \lyricmode {
   \set stanza = "1."
-  Đồi nương đem về công chính.
+  Đồi nương đem về công chính
   Chúa xét xử dân Ngài.
-  Dẹp tan lũ cường quyền.
+  Đập tan lũ cường quyền.
   \set stanza = "ĐK:"
   Sự công chính, và nền hòa bình viên mãn,
   sẽ triển nở trong triều đại mãi.
@@ -150,15 +152,15 @@ loiPhienKhucBasMot = \lyricmode {
 
 loiPhienKhucBasHai = \lyricmode {
   \set stanza = "2."
-  Dủ thương bao người cô thế.
-  Chúa xét xử công bình.
+  Dủ thương bao người cô thế,
+  Chúa xét xử công bình,
   Quyền uy vững ngàn đời.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \set stanza = "3."
   Ngàn dân nghiêng mình cung kính.
-  Chúa thống trị muôn đời.
+  Chúa thống trị muôn đời
   Lừng danh khắp địa cầu.
 }
 
@@ -166,7 +168,7 @@ loiPhienKhucBasBa = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
+  top-margin = 20\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm

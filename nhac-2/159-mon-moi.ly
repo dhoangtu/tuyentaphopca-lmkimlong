@@ -6,7 +6,7 @@
   title = \markup { \fontsize #3 "Mòn Mỏi" }
   poet = "Ý: Is. 40, 8"
   composer = "Thơ: Lm. Xuân Ly Băng"
-  arranger = "Lm. Kim Long"
+  arranger = "Nhạc: Lm. Kim Long"
   tagline = ##f
 }
 
@@ -41,7 +41,7 @@ nhacDiepKhucSop = \relative c'' {
   d8 e4 d8 |
   cs2 ~ |
   cs4 r |
-  r \tuplet 3/2 { f8 e d } |
+  r \tuplet 3/2 { f8 ^> e d } |
   g2 |
   e8 ^\f f4 e8 |
   d2 ~ |
@@ -126,14 +126,15 @@ nhacDiepKhucSop = \relative c'' {
   
   \time 2/4
   g2 ~ |
-  g4 r8 \bar "|." \break
+  g4 r8 \bar "||" \break
   
+  \set Staff.explicitClefVisibility = #end-of-line-invisible
   \key bf \major
   g16 bf |
   bf4. c16 bf |
   a4. c8 |
   d4. d,16 d |
-  ef4. d8 |
+  e!4. d8 |
   bf' bf4 a8 |
   g2 ~ |
   g4 r8
@@ -154,7 +155,7 @@ nhacDiepKhucSop = \relative c'' {
       g a4 g8 |
       d4 d8 [c] |
       bf2 |
-      ef8 ef4 ef8 |
+      e!8 ef4 ef8 |
       d2 ~ |
       d4 <fs d>
     }
@@ -177,7 +178,7 @@ nhacDiepKhucAlto = \relative c' {
   f4 r8 f |
   e2 ~ |
   e4 r |
-  \tuplet 3/2 { g8 f e } a4 |
+  \tuplet 3/2 { g8 ^> f e } a4 |
   bf8 d4 bf8 |
   a4 g8 g |
   f2 ~ |
@@ -245,13 +246,13 @@ nhacDiepKhucTenor = \relative c' {
   a4 r8 a |
   a2 ~ |
   a4 r |
-  r \tuplet 3/2 { d8 c a } |
+  r \tuplet 3/2 { d8 ^> c a } |
   d2 |
   c8 d4 c8 |
   a2 ~ |
   a4 r |
   r \tuplet 3/2 { d8 d \slashedGrace { e16 (} d8) } |
-  cs2 |
+  c2 |
   r4 \tuplet 3/2 { g8 g bf } |
   a2 ~ |
   a4 r |
@@ -280,7 +281,7 @@ nhacDiepKhucTenor = \relative c' {
   
   \time 3/4
   \key g \major
-  d2 d4 |
+  d2 e4 |
   d2 d4 |
   d2. |
   e4 e e |
@@ -307,7 +308,7 @@ nhacDiepKhucBas = \relative c {
   f8 d4 f8 |
   g4 e |
   a2 |
-  g8 a4 g16 (f) |
+  g8 ^\f a4 g16 (f) |
   d2 ~ |
   d4 r8 d |
   a2 ~ |
@@ -320,7 +321,7 @@ nhacDiepKhucBas = \relative c {
   r \tuplet 3/2 { d8 d d } |
   a2 |
   r4 \tuplet 3/2 { bf8 g g } |
-  d'4. d8 |
+  d'4. d8 ^\f |
   f4 f |
   a2 |
   bf8 ^> bf4 ^> bf8 |
@@ -349,16 +350,16 @@ nhacDiepKhucBas = \relative c {
   \key g \major
   g2 g4 |
   fs2 g4 |
-  d4. d'8 c (b) |
+  d4. d'8 c ([b]) |
   a4 a a |
   gs2 a4 |
   f!2 e4 |
   d2. ~ |
   d4 r d |
-  c2 cf4 |
+  e2 ef4 |
   d2 d4 |
   cs2. |
-  c4 b b |
+  c!?4 b b |
   a2 a4 |
   d2 d4 |
   
@@ -371,9 +372,11 @@ nhacDiepKhucBas = \relative c {
 loiDiepKhucSop = \lyricmode {
   Hm __ \repeat unfold 10 { _ }
   Sông núi bâng khuâng.
-  Gió than niềm gió trăng khóc ý trăng.
+  Gió than niềm gió.
+  Trăng khóc ý trăng.
   Si -- on vàng võ mòn mỏi chờ mong.
-  Nhớ hận ngập tràn lòng Gia -- liêm vạn thuở xương núi,
+  nhớ hận ngập tràn lòng.
+  Gia -- liêm vạn thuở, xương núi
   máu sông.
   Lòng Si -- on hoang vu hơn cỏ dại.
   Sầu Si -- on sầu hơn sầu quan tài.
@@ -381,30 +384,31 @@ loiDiepKhucSop = \lyricmode {
   Nhạc Si -- on thảm hơn nhạc chinh phu.
   sông.
   Hm __ \repeat unfold 2 { _ }
-  Nghe chăng ai oán chảy tràn muôn môi.
-  Ước mong quá lắm trời ơi!
+  nghe chăng ai oán chảy tràn muôn môi.
+  Ước mong quá lắm, trời ơi
   Cho sương sa xuống ruộng đời hoang liêu.
-  Chắp tay vái đám mây chiều.
-  Mưa người công chính là điều tâm tư.
-  Sầu tâm tư đã chín rồi chưa hái.
-  Rừng thời gian bạc tóc đứng mênh mông.
-  Si -- on ơi! Lệ chãy mãi trong lòng.
-  Biết bao giờ Vua ngươi mới đến. Ước
+  Chắp tay vái đám mây chiều
+  mưa người công chính là điều tâm tư.
+  Sầu tâm tư đã chín rồi chưa hái,
+  rừng thời gian bạc tóc đứng mênh mông.
+  Si -- on ơi! Lệ chãy mãi trong lòng
+  biết bao giờ Vua ngươi mới đến. Ước
 }
 
 loiDiepKhucAlto = \lyricmode {
   Hm __ \repeat unfold 9 { _ }
   Hm __ _ _ bâng khuâng.
-  Gió than niềm gió trăng khóc ý trăng, khóc ý trăng.
-  Si -- on võ vàng mòn mỏi nhớ mong.
-  Nhớ hận ngập tràn lòng Gia -- liêm vạn thuở xương núi, máu sông.
+  gió than niềm gió trăng khóc ý trăng, khóc ý trăng.
+  Si -- on võ vàng mòn mỏi nhớ mong,
+  nhớ hận ngập tràn lòng,
+  Gia -- liêm vạn thuở, xương núi máu sông.
   sông.
   Hm __ \repeat unfold 3 { _ }
-  Nghe chăng ai oán chảy tràn muôn môi.
-  Ước mong quá lắm trời ơi!
+  nghe chăng ai oán chảy tràn muôn môi.
+  Ước mong quá lắm, trời ơi
   Cho sương sa xuống ruộng đời hoang liêu.
-  Chắp tay vái đám mây chiều.
-  Mưa người công chính là điều tâm tư.
+  Chắp tay vái đám mây chiều
+  mưa người công chính là điều tâm tư.
 }
 
 loiDiepKhucTenor = \lyricmode {
@@ -412,11 +416,12 @@ loiDiepKhucTenor = \lyricmode {
   Hm __ _ _ bâng khuâng.
   Gió than niềm gió trăng khóc ý trăng.
   Si -- on võ vàng mòn mỏi nhớ mong.
-  Nhớ hận ngập tràn lòng Gia -- liêm nay xương núi, máu sông.
+  nhớ hận ngập tràn lòng.
+  Gia -- liêm nay xương núi máu sông.
   sông.
-  Ngày đêm năm tháng dòng thời gian trôi.
-  Nghe chăng ai oán chảy muôn môi.
-  Ước mong quá lắm hỡi ơi!
+  Ngày đêm năm tháng, dòng thời gian trôi,
+  nghe chăng ai oán chảy muôn môi.
+  Ước mong quá lắm, hỡi ơi
   Cho sương sa xuống ruộng đời hoang liêu.
   Chắp tay vái đám mây chiều
   hãy mau mưa người công chính là điều tâm tư.
@@ -430,12 +435,12 @@ loiDiepKhucBas = \lyricmode {
   Đồi Ly -- băng nhớ hận ngập tràn lòng Gia -- liêm
   nay xương núi, máu sông.
   sông.
-  Ngày đêm năm tháng dòng thời gian trôi.
-  Nghe chăng ai oán tràn chày ngàn môi.
-  Ước mong quá lắm hỡi ơi!
-  Hãy mau cho sương sa xuống ruộng đời hoang liêu.
-  Chắp tay vái đám mây chiều.
-  Mưa người công bình là điều tâm tư.
+  Ngày đêm năm tháng dòng thời gian trôi,
+  nghe chăng ai oán tràn chày ngàn môi.
+  Ước mong quá lắm hỡi ơi
+  hãy mau cho sương sa xuống ruộng đời hoang liêu.
+  Chắp tay vái đám mây chiều
+  mưa người công bình là điều tâm tư.
 }
 
 % Dàn trang
