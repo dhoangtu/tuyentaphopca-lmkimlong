@@ -5,6 +5,7 @@ hát lên mừng Chúa
 ====
 <>^\markup { \fontsize #6 \box \bold A }
 <>^\markup { \halign #-2 \fontsize #2 \bold "Tận" }
+\set Staff.explicitClefVisibility = #end-of-line-invisible
 
   <<
     {

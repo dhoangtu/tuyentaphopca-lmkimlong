@@ -44,6 +44,7 @@ nhacPhienKhucSolo = \relative c'' {
 }
 
 nhacPhienKhucSop = \relative c'' {
+  \set Staff.explicitClefVisibility = #end-of-line-invisible
   <<
     {
       \voiceOne
@@ -79,7 +80,7 @@ nhacPhienKhucSop = \relative c'' {
   >>
   \oneVoice
   <c' e,>2 ~ |
-  <c e,>4 \bar "||" \break
+  <c e,>4 \bar "|" \break
   
   r4 |
   R2
@@ -145,6 +146,7 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c'' {
+  \set Staff.explicitClefVisibility = #end-of-line-invisible
   r8
   R2*5
   r4
@@ -212,6 +214,7 @@ nhacPhienKhucAlto = \relative c'' {
 }
 
 nhacPhienKhucBas = \relative c {
+  \set Staff.explicitClefVisibility = #end-of-line-invisible
   r8 |
   r d g g |
   r4 r8 c, |

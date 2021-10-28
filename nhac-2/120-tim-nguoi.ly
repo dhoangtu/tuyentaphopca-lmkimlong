@@ -12,6 +12,7 @@
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitClefVisibility = #end-of-line-invisible
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
   g8. g16 g8 a |
@@ -37,7 +38,7 @@ nhacDiepKhucSop = \relative c'' {
   c'8. a16 a8 c |
   b4. g8 |
   a a4 fs8 |
-  g2 \bar "|."
+  g2 \bar "||"
   
   \key bf \major
   R2*2
@@ -54,6 +55,7 @@ nhacDiepKhucSop = \relative c'' {
 
 nhacDiepKhucAlto = \relative c'' {
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitClefVisibility = #end-of-line-invisible
   g8. g16 g8 a |
   \slashedGrace { a16 ( } b4.) d,8 |
   g a4 g8 |
@@ -76,7 +78,7 @@ nhacDiepKhucAlto = \relative c'' {
   fs2 |
   e8. e16 e8 e |
   ds4. e8 |
-  e c4 a8 |
+  e c4 c8 |
   b2 |
   
   \key bf \major
@@ -84,13 +86,14 @@ nhacDiepKhucAlto = \relative c'' {
   d8. c16 bf8 bf |
   bf4 r8 d ^\f |
   d d4 d8 |
-  ef4. ^\ff d8 |
+  ef4. d8 ^\ff |
   g g4 fs8 |
   \slashedGrace { g16 (a } g2)
 }
 
 nhacDiepKhucBas = \relative c' {
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitClefVisibility = #end-of-line-invisible
   R2
   g8. g16 g8 a |
   \slashedGrace { a16 ( } b4) cs |
@@ -109,10 +112,10 @@ nhacDiepKhucBas = \relative c' {
       b4
     }
     {
-      a8 |
+      a,8 |
       d2 ~ |
       d4 r |
-      r8 a g f! |
+      r8 a' g f! |
       e4 r |
       r8 d d d |
       g4
@@ -122,19 +125,24 @@ nhacDiepKhucBas = \relative c' {
   r8
   <<
     {
-      \voiceOne
       a8 a a |
+    }
+    {
+      g8 g g |
+    }
+  >>
+  <<
+    {
+      \voiceOne
       a4. c8 |
-      b2
     }
     \new Voice = "splitpart" {
 	    \voiceTwo
-      g8 g g |
-      fs4 e |
-      ds2
+      fs,4 e |
     }
   >>
   \oneVoice
+  <b' ds,>2
   R2
   g8. g16 g8 g |
   c4 cs |
@@ -157,34 +165,34 @@ nhacDiepKhucBas = \relative c' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Ai cho thiên lý mã
-  cần chi cỡi thanh ngưu.
-  Tôi đi tìm người yêu trong không gian biền biệt.
-  Từ nơi kim ô chết tận xứ Nàng Nguyệt sinh.
+  Ai cho thiên lý mã,
+  cần chi cỡi thanh ngưu
+  Tôi đi tìm người yêu trong không gian biền biệt,
+  Từ nơi kim ô chết tới xứ Nàng Nguyệt sinh,
   Đi mãi trong hương tình
-  mơ màng mắt say đắm.
+  mơ màng mắt đắm say.
   Nghe xa xa văng vẳng tiếng cầm nhạc véo von.
-  Ngỡ tưởng là nước non của chư tiên quần hội.
-  Sao lý tưởng của đời
-  để chiếm hữu lấy Người nguyện hy sinh tất cả.
+  Ngỡ tưởng là non nước của chư tiên quần hội.
+  Sao lý tưởng của đời,
+  Để chiếm hữu lấy Người, nguyện hy sinh tất cả.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Ai cho thiên lý mã
-  cần chi cỡi thanh ngưu.
-  Tôi đi tìm người yêu trong không gian biền biệt.
-  Nơi kim ô lặn miền Nàng Nguyệt sinh.
-  Đi trong mơ màng say đắm.
+  Ai cho thiên lý mã,
+  cần chi cỡi thanh ngưu
+  Tôi đi tìm người yêu trong không gian biền biệt,
+  Nơi kim ô lặn miền Nàng Nguyệt sinh
+  đi trong mơ màng say đắm.
   Nghe xa xa văng vẳng tiếng cầm nhạc véo von.
   Ngỡ tưởng là nước non của chư tiên quần hội.
-  Sao lý tưởng của đời
-  để chiếm hữu lấy Người nguyện hy sinh tất cả.
+  Sao lý tưởng của đời,
+  Để chiếm hữu lấy Người nguyện hy sinh tất cả.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Ai cho thiên lý mã
-  cần chi cỡi thanh ngưu.
-  Tôi đi tìm người yêu từ không gian biền biệt.
+  Ai cho thiên lý mã,
+  cần chi cỡi thanh ngưu
+  Tôi đi tìm người yêu từ không gian biền biệt,
   Nơi kim ô
   <<
   { chết }
@@ -194,12 +202,12 @@ loiDiepKhucBas = \lyricmode {
 	  lặn
 	}
   >>
-  miền Nàng Nguyệt sinh.
-  Đi trong mơ màng say đắm.
-  Nghe xa xa văng vẳng nhạc véo von, véo von.
-  Ngỡ tưởng là non nước chư tiên quần hội.
-  Càng đi càng sáng tỏ
-  để chiếm hữu được Người nguyện hy sinh tất cả.
+  miền Nàng Nguyệt sinh
+  đi trong mơ màng say đắm.
+  Nghe xa xa văng vẳng nhạc véo von, véo von
+  ngỡ tưởng là non nước chư tiên quần hội.
+  Càng đi càng sáng tỏ,
+  Để chiếm hữu lấy Người nguyện hy sinh tất cả.
 }
 
 % Dàn trang
