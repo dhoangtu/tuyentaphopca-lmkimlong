@@ -12,21 +12,21 @@
 nhacPhienKhucSop = \relative c'' {
   c4. (d16 c) |
   a4. f8 |
-  g a16 (g) f8 (g) |
+  g [a16 (g)] f8 (g) |
   c2 ~ |
   c8 a d d16 (e) |
   \slashedGrace { d16 ( } c4.) d16 (c) |
   a2 ~ |
   a4 r |
   f4. f8 |
-  e f g g |
+  e f g a |
   g4 c8 (b!) |
   c c f, (g) |
   a4. bf8 |
   a4 g |
   f2 ~ |
-  f4 \bar "|"
-  
+  \partial 4 f4 \bar "||" \break
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \compoundMeter #'((2 3 4))
   % không kiểm tra nhịp
   % không hiển thị dấu thăng/giáng trong chú ý
@@ -56,7 +56,7 @@ nhacPhienKhucBas = \relative c'' {
   f4. a,8 |
   c f d4 |
   e2 ~ |
-  e8 f a [bf] |
+  e8 f fs [g] |
   a4. g8 |
   f2 ~ |
   f4 r |
@@ -167,66 +167,82 @@ nhacDiepKhucBaBeBas = \relative c' {
   <e c>4 r |
   r f8 (e) |
   d d d df |
-  c4 c8 (bf) |
+  c4
+  <<
+    {
+      \voiceOne
+      c8 (bf)
+    }
+    \new Voice = "splitpart" {
+      \voiceTwo
+      \once \override NoteColumn.force-hshift = #1
+      c4
+    }
+  >>
+  \oneVoice
   <a f>2 ~ |
   <a f>4
 }
 
 % Lời
 loiPhienKhucSopMot = \lyrics {
-  Chúa ơi! Hồn con hướng về Chúa,
+  Chúa ơi, Hồn con hướng về Chúa,
   tựa hoa hướng dương thắm mầu.
   Như nai vàng tìm đến suối trong
   hồn con trông đợi Chúa giữa cơn u sầu.
   \set stanza = "1."
-  Bơ vơ kiếp sống gian trần, hồn con đêm ngày thao thức,
-  Chúa ơi! Hồn con mong về bên Chúa.
+  Bơ vơ kiếp sống gian trần,
+  Hồn con đêm ngày thao thức,
+  Chúa ơi, Hồn con mong về bên Chúa.
   Tàn héo trong vũng lệ sầu,
-  đời con ê chề muôn nỗi khát mong nghỉ yên trong Chúa nhân hiền.
+  Đời con ê chề muôn nỗi, khát mong nghỉ yên trong Chúa nhân hiền.
 }
 
 loiPhienKhucSopHai = \lyrics {
   \repeat unfold 29 { _ }
   \set stanza = "2."
   Tim con mang vết thương tình,
-  từ lâu in hình cao sáng,
-  Chúa ơi! Hồn con ghi tạc tên Chúa.
+  Từ lâu in hình cao sáng,
+  Chúa ơi, Hồn con ghi tạc tên Chúa.
   Ngày tháng mơ ước thiên đường,
-  trần gian như lò nung nấy
-  đến khi nghỉ yên trong Chúa nhân từ.
+  Trần gian như lò nung nấy,
+  đến khi nghỉ yên trong Chúa nhân hậu.
 }
 
 loiPhienKhucSopBa = \lyrics {
   \repeat unfold 29 { _ }
   \set stanza = "2."
-  Lang thang trong chốn lưu đày,
-  hồn con như đàn nai khát,
-  Chúa ơi! Hồn con mong về bên Chúa.
+  Lang thang trong chốn lưu đầy,
+  Hồn con như đàn nai khát,
+  Chúa ơi, Hồn con mong về bên Chúa.
   Ngày tháng mơ suối diệu huyền,
-  vượt qua muôn đường gai đá, Chúa ơi!
-  Hồn con mong Chúa đêm ngày.
+  Vượt qua muôn đường gai đá, Chúa ơi,
+  hồn con mong Chúa đêm ngày.
 }
 
 loiDiepKhucBaBeSop = \lyrics {
-  Chúa ơi! Hồn con hướng về Chúa tựa hoa hướng dương thắm mầu.
+  Chúa ơi, hồn con hướng về Chúa
+  Tựa Hoa hướng dương thắm mầu.
   Như nai vàng tìm đến suối trong.
   Hồn con trông đợi Chúa giữa cơn u sầu.
 }
 
 loiDiepKhucBaBeAlto = \lyrics {
-  Chúa ơi! Hồn con hướng về Chúa, con hướng về,
-  về bên Chúa, hoa hướng dương thắm mầu.
+  Chúa ơi, hồn con hướng về Chúa con hướng về,
+  về bên Chúa
+  Hoa hướng dương thắm mầu.
   Như nai vàng tìm đến suối trong, đến suối trong,
   đến suối trong, đến suối trong,
   hồn con trông đợi giữa cơn u sầu.
 }
 
 loiDiepKhucBaBeBas = \lyrics {
-  Chúa ơi! Hồn con hướng về Chúa, hướng về Chúa,
-  hồn con hướng về, về bên Chúa, hoa hướng dương đẹp mầu.
+  Chúa ơi, hồn con hướng về Chúa, hướng về Chúa
+  Hồn con hướng về, về bên Chúa
+  hoa hướng dương đẹp mầu.
   Như nai vàng tìm đến suối trong,
   đến suối trong, đến suối trong,
-  hồn con trông đợi giữa cơn u sầu.
+  Hồn con trông đợi giữa cơn u sầu.
 }
 
 % Dàn trang

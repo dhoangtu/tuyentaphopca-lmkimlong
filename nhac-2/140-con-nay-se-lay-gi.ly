@@ -59,7 +59,7 @@ nhacDiepKhucSop = \relative c'' {
   e2 |
   d |
   c ~ |
-  c4 r \bar "||"
+  c4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -96,7 +96,7 @@ nhacDiepKhucBas = \relative c' {
       <e c>4
     }
   >>
-  r4 \bar "||"
+  r4
 }
 
 nhacPhienKhuc = \relative c'' {
@@ -111,7 +111,7 @@ nhacPhienKhuc = \relative c'' {
   a8 b a a |
   g4. g8 |
   g8 g g (a) |
-  c2 \bar "|."
+  c2 \bar "||"
 }
 
 % Lời
@@ -133,23 +133,30 @@ loiDiepKhucBas = \lyricmode {
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Giữa lúc con than van: Thân con khốn khổ cơ cùng.
-  Con vẫn cậy trông, khi lòng ngợp sầu thương.
+  Giữa lúc con than van: Thân con khốn khổ cơ cùng
+  Con vẫn cậy trông,
+  Khi lòng ngợp sầu thương
   Con đã tuyên ngôn rằng: Mọi người đều giả dối.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
-  Dẫu khó nguy truân chuyên, con luôn giữ lời đoan nguyền.
-  Ngay trước toàn dân, ôi thực là đẹp thay.
-  Ai chết nơi nhan Ngài, vì một lòng nghĩa tín.
+  Dẫu khó nguy truân chuyên
+  Con luôn giữ lời đoan nguyền
+  Ngay trước toàn dân,
+  Ôi thực là đẹp thay
+  Ai chết nơi nhan Ngài
+  Vì một lòng nghĩa tín.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Hiến lễ dâng tri ân, môi con khấn nguyện âm thầm.
-  Danh thánh Thượng Đế, xin thề nguyền từ nay,
-  Đi trước tôn nhan Ngài, trọn một niềm cậy tin.
+  Hiến lễ dâng tri ân,
+  Môi con khấn nguyện âm thầm
+  Danh thánh Thượng Đế,
+  Xin thề nguyền từ nay
+  Đi trước tôn nhan Ngài,
+  Trọn một niềm cậy tin.
 }
 
 % Dàn trang

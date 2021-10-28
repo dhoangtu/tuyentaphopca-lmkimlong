@@ -156,17 +156,10 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiDiepKhucAlto = \lyricmode {
+  \override Lyrics.LyricText.font-shape = #'italic
   Chúa ghé mắt dủ thương, dủ thương,
   dủ thương phận tôi mọn hèn
   vô cùng thẳm sâu.
-  
-  Ngài gọi con và hướng dẫn con từng bước,
-  Ngài chọn con và xức dầu thánh hiến con.
-  Dù con chỉ là người đầy tớ vô dụng
-  dẫu có làm được chi,
-  không phải do con nhưng do ơn Chúa trong con,
-  để cảm mến Ngài con xin suốt đời khiêm tốn
-  phục vụ Chúa và Hội Thánh Ngài.
 }
 
 loiDiepKhucBas = \lyricmode {
@@ -214,6 +207,7 @@ loiPhienKhucHai = \lyricmode {
   print-page-number = #f
   %page-count = #2
   %systems-per-page = 5
+  ragged-last-bottom = ##t
 }
 
 TongNhip = {
@@ -222,20 +216,35 @@ TongNhip = {
   \set Timing.baseMoment = #(ly:make-moment 1/4)
 }
 
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
 \score {
   \new ChoirStaff <<
-    \new Staff <<
-      \new Voice = "beSop" {
-        \clef treble \TongNhip \nhacDiepKhucSop
+    \new Staff \with {
+        \consists "Merge_rests_engraver"
+        printPartCombineTexts = ##f
       }
+      <<
+      \new Voice \TongNhip \partCombine 
+        \nhacDiepKhucSop
+        \notBePhu -2 { \nhacDiepKhucAlto }
+      \new NullVoice = beSop \nhacDiepKhucSop
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
-    >>
-    \new Staff <<
-      \new Voice = "beAlto" {
-        \clef treble \TongNhip \nhacDiepKhucAlto
-      }
+      \new NullVoice = beAlto \nhacDiepKhucAlto
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
-    >>
+      >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {

@@ -72,7 +72,7 @@ nhacDiepKhucAlto = \relative c'' {
   d8 d c b! |
   c2 |
   r8 c c f16 (e) |
-  d4. d8 |
+  d4. e8 |
   f4 a,8 c |
   f8. f16 e8 e |
   c2 ~ |
@@ -118,6 +118,7 @@ nhacDiepKhucBas = \relative c' {
 	    \voiceTwo c,4
     }
   >>
+  \oneVoice
   <a' f f,>2 ~ |
   <a f f,>4 r8
 }
@@ -139,37 +140,44 @@ nhacPhienKhuc = \relative c'' {
   d4 g,8 (bf) |
   c a16 (g) e8 g |
   f2 ~ |
-  f4 r \bar "||"
+  f4 r \bar "|."
 }
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Chúa ghé mắt dủ thương phận tôi tớ mọn hèn
-  vì tình mến thương Ngài thẳm sâu.
+  Chúa ghé mắt dủ thương phận tôi tớ mọn hèn,
+  Vì tình mến thương Ngài thẳm sâu.
   Ngài gọi con và hướng dẫn con từng bước,
   Ngài chọn con và xức dầu thánh hiến con.
-  Dù con chỉ là người đầy tớ vô dụng
+  Dù con chỉ là người đầy tớ vô dụng,
   dẫu có làm được chi,
   không phải do con nhưng do ơn Chúa trong con,
-  để cảm mến Ngài con xin suốt đời khiêm tốn
+  Để cảm mến Ngài, con xin suốt đời khiêm tốn
   phục vụ Chúa và Hội Thánh Ngài.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  \override Lyrics.LyricText.font-shape = #'italic
   Chúa ghé mắt dủ thương, dủ thương,
-  dủ thương phận tôi mọn hèn
+  dủ thương phận tôi mọn hèn.
   vô cùng thẳm sâu.
+  
+  Ngài gọi con và hướng dẫn con từng bước,
+  Ngài chọn con và xức dầu thánh hiến con.
+  Dù con chỉ là người đầy tớ vô dụng,
+  dẫu có làm được chi,
+  không phải do con nhưng do ơn Chúa trong con,
+  Để cảm mến Ngài, con xin suốt đời khiêm tốn
+  phục vụ Chúa và Hội Thánh Ngài.
 }
 
 loiDiepKhucBas = \lyricmode {
   Chúa ghé mắt dủ thương, dủ thương phận tôi tớ mọn hèn
   thẳm sâu, vô cùng thẳm sâu.
   Ngài gọi con đã hướng dẫn con từng bước,
-  Ngài chọn con đã đổ dầu thánh hiến con.
+  Ngài chọn con, đã đổ dầu thánh hiến con.
   Dù con đây vô dụng dầu có làm nổi gì
   không phải là do con một do ơn Ngài trong con,
-  để cám mến Ngài con xin trọn đời
+  Để cảm mến Ngài con xin trọn đời
   sẽ luôn khiêm hạ phục vụ Ngài, Hội Thánh Ngài.
 }
 
@@ -186,7 +194,7 @@ loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
   Noi gương Đức Ma -- ri -- a:
   Người đã khiêm nhường chỉ nhận là phận nữ tỳ,
-  xin để Chúa mau thực hiện những gì thiên sứ truyền tin
+  xin để Chúa mau thực hiện những gì Thiên sứ truyền tin,
   một niềm thành kính hiệp công cứu độ muôn người.
 }
 
@@ -207,7 +215,6 @@ loiPhienKhucHai = \lyricmode {
   print-page-number = #f
   %page-count = #2
   %systems-per-page = 5
-  ragged-last-bottom = ##t
 }
 
 TongNhip = {
@@ -216,35 +223,20 @@ TongNhip = {
   \set Timing.baseMoment = #(ly:make-moment 1/4)
 }
 
-% Đổi kích thước nốt cho bè phụ
-notBePhu =
-#(define-music-function (font-size music) (number? ly:music?)
-   (for-some-music
-     (lambda (m)
-       (if (music-is-of-type? m 'rhythmic-event)
-           (begin
-             (set! (ly:music-property m 'tweaks)
-                   (cons `(font-size . ,font-size)
-                         (ly:music-property m 'tweaks)))
-             #t)
-           #f))
-     music)
-   music)
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacDiepKhucSop
       }
-      <<
-      \new Voice \TongNhip \partCombine 
-        \nhacDiepKhucSop
-        \notBePhu -2 { \nhacDiepKhucAlto }
-      \new NullVoice = beSop \nhacDiepKhucSop
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
-      \new NullVoice = beAlto \nhacDiepKhucAlto
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacDiepKhucAlto
+      }
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
-      >>
+    >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {

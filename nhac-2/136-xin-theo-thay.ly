@@ -16,8 +16,8 @@ nhacPhienKhucSop = \relative c' {
   g4 g8 g |
   f4. f8 |
   bf bf bf bf |
-  g4. g8 |
-  c c c c |
+  g4. f8 |
+  c' c c c |
   a4. f8 |
   d' d4 bf8 |
   c c r a |
@@ -34,7 +34,7 @@ nhacPhienKhucSop = \relative c' {
   a2 ~ |
   a8 bf g g |
   c4. a16 (g) |
-  c,8 g' g16 (a) e8 |
+  c,8 g' g16 [(a) e8] |
   f2 ~ |
   f4 \bar "|." \break
   
@@ -90,9 +90,9 @@ nhacPhienKhucBas = \relative c' {
   d4 \slashedGrace { f16 ( } g8) f |
   c2 ~ |
   c ~ |
-  c4 bf8 bf |
+  c4 bf'8 bf |
   a4. a8 |
-  d d d d |
+  d, d d d |
   e4. f8 |
   e e e e |
   f4. d8 |
@@ -123,7 +123,7 @@ nhacPhienKhucBas = \relative c' {
   d4 r |
   r8 c d f |
   g f e c |
-  e (a) bf g |
+  g' (a) bf g |
   a2 ~ |
   a4 r
 }
@@ -132,17 +132,17 @@ nhacPhienKhucBas = \relative c' {
 loiPhienKhucSopMot = \lyricmode {
   Con đã trọn niềm xin vâng:
   Xin theo Thầy dù khi thân con đơn độc,
-  dù bao gian nguy vây bọc.
-  Thầy bước tới dìu con đi
-  con quyết son sắt niềm tin.
-  Xin theo Thầy, Thầy biết con đây yêu Thầy.
-  Dù đôi lần con yếu đuối
-  lòng chân thành xin thống hối con quyết theo Thầy.
+  dù bao gian nguy vây bọc,
+  Thầy bước tới dìu con đi,
+  con quyết sắt son niềm tin.
+  Xin theo Thầy, Thầy biết con đây yêu Thầy,
+  Dù đôi lần con yếu đuối,
+  lòng chân thành xin thống hối, con quyết theo Thầy.
   Chỉ mình Thầy có những lời ban phúc trường sinh.
   
   \set stanza = "1."
-  Con nghe Thầy dù đã thâu đêm lao nhọc,
-  con nghe Thầy vì Thầy con sẽ thả lưới.
+  Con nghe Thầy, dù đã thâu đêm lao nhọc,
+  con nghe Thầy, vì Thầy con sẽ thả lưới,
   Thầy khiến mắt con được vui sướng ngắm trông thuyền cá đầy khoang.
 }
 
@@ -151,7 +151,7 @@ loiPhienKhucSopHai = \lyricmode {
   \repeat unfold 68 { _ }
   \set stanza = "2."
   Con theo Thầy dù phải hy sinh thân mình,
-  con theo Thầy dù đường xa vắng mù tối.
+  con theo Thầy dù đường xa vắng mù tối,
   Thầy đến với con và nâng đỡ đức tin hèn yếu của con.
 }
 
@@ -160,7 +160,7 @@ loiPhienKhucSopBa = \lyricmode {
   \repeat unfold 68 { _ }
   \set stanza = "3."
   Con tin Thầy là Đấng muôn dân trông đợi,
-  con tin Thầy thật là Con Chúa hằng sống.
+  con tin Thầy thật là Con Chúa hằng sống,
   Thầy đã mến thương truyền con hãy tín trung gìn giữ đoàn chiên.
 }
 
@@ -169,46 +169,46 @@ loiPhienKhucSopBon = \lyricmode {
   \repeat unfold 68 { _ }
   \set stanza = "4."
   Con yêu Thầy dù biết thân con đơn hèn,
-  con yêu Thầy nguyện thề luôn mãi thành tín.
-  Gặp lúc khó nguy Thầy giơ sẵn cánh tay mà đỡ vực con.
+  con yêu Thầy nguyện thề luôn mãi thành tín,
+  Gặp lúc khó nguy, Thầy giơ sẵn cánh tay mà đỡ vực con.
 }
 
 
 loiPhienKhucBasMot = \lyricmode {
   Nghe tiếng Chúa kêu mời hãy theo Thầy.
   Xin theo Thầy dẫu khi thân con đơn độc,
-  dẫu bao gian nguy vây bọc.
+  dẫu bao gian nguy vây bọc,
   Thầy bước tới dắt con đi con nguyện sắt son đức tin.
   Xin theo Thầy, Thầy biết con đây yêu Thầy.
-  Con nguyện theo Thầy, con quyết theo Thầy
+  Con nguyện theo Thầy, con quyết theo Thầy,
   chỉ Thầy có những lời trường sinh.
   \set stanza = "1."
-  Con nghe Thầy thâu đêm lao nhọc,
-  con nghe Thầy con thả lưới khi nghe Thầy.
+  Con nghe Thầy thâu đêm lao nhọc.
+  Con nghe Thầy, con thả lưới khi nghe Thầy.
   Thầy cho con sướng vui trông được thuyền cá đầy khoang.
 }
 
 loiPhienKhucBasHai = \lyricmode {
   \repeat unfold 59 { _ }
   \set stanza = "2."
-  Con theo Thầy hy sinh thân mình,
-  con theo Thầy khi đường tối tăm mịt mù.
+  Con theo Thầy hy sinh thân mình.
+  Con theo Thầy khi đường tối tăm mịt mù.
   Thầy mau nâng đỡ đức tin thật hèn yếu của con.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \repeat unfold 59 { _ }
   \set stanza = "3."
-  Con tin Thầy muôn dân trông đợi,
-  con tin là Con Chúa Cả uy quyền.
+  Con tin Thầy muôn dân trông đợi.
+  Con tin Thầy Con Một Chúa Cả uy quyền.
   Thầy truyền con hãy tín trung mà chăn giữ đoàn chiên.
 }
 
 loiPhienKhucBasBon = \lyricmode {
   \repeat unfold 59 { _ }
   \set stanza = "4."
-  Con yêu Thầy dẫu con đơn hèn,
-  con yêu Thầy con nguyện sẽ luôn trung thành.
+  Con yêu Thầy dẫu con đơn hèn.
+  Con yêu Thầy con nguyện sẽ luôn trung thành.
   Thầy thương giơ sẵn cánh tay quyền uy đỡ vực con.
 }
 
@@ -268,6 +268,7 @@ notBePhu =
       \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
       \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
       \new Lyrics \lyricsto beSop \loiPhienKhucSopBa
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopBon
       >>
     \new Staff <<
         \clef "bass"
@@ -277,6 +278,7 @@ notBePhu =
       \new Lyrics \lyricsto beBas \loiPhienKhucBasMot
       \new Lyrics \lyricsto beBas \loiPhienKhucBasHai
       \new Lyrics \lyricsto beBas \loiPhienKhucBasBa
+      \new Lyrics \lyricsto beBas \loiPhienKhucBasBon
     >>
   >>
   \layout {
