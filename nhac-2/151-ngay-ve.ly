@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Ngày Về 3" }
+  title = \markup { \fontsize #3 "Ngày Về" }
   poet = "Tv. 125"
   composer = "Thơ dịch: Lm. Kim Long"
   arranger = "Phổ nhạc: Lm. Ngô Duy Linh"
@@ -18,7 +18,7 @@ nhacDiepKhucSop = \relative c' {
   e8 r e r |
   e r d c |
   e r d r |
-  c r c16 (e d) c |
+  c r c16 ([e d]) c |
   a2 ~ |
   a4 r8 g |
   e r g a16 c |
@@ -27,7 +27,7 @@ nhacDiepKhucSop = \relative c' {
   d r d r |
   d e e g |
   g r e r |
-  d r d16 (g e) d |
+  d r d16 ([g e]) d |
   c2 \bar "|."
 }
 
@@ -38,7 +38,7 @@ nhacDiepKhucAlto = \relative c' {
   a8 r g r |
   a g c a |
   d r c r |
-  g r g16 (c a) g |
+  g r g16 ([c a]) g |
   e8 e e16 (g) e8 |
   d2 ~ |
   d8 d c r |
@@ -47,7 +47,7 @@ nhacDiepKhucAlto = \relative c' {
   a g g c |
   c c c e |
   e r c r |
-  c r c16 (d c) a |
+  c r c16 ([d c]) a |
   g2
 }
 
@@ -55,11 +55,11 @@ nhacDiepKhucBas = \relative c {
   r8
   r4. a8 |
   c8 r c d16 e |
-  g4 d8 c |
+  e4 d8 c |
   e r e e |
   g g g g |
-  e r d16 (g e) d |
-  c8 c c16 (e d) c |
+  e r d16 ([g e]) d |
+  c8 c c16 ([e d]) c |
   g2 ~ |
   g8 r r c |
   g r g a16 c |
@@ -67,7 +67,7 @@ nhacDiepKhucBas = \relative c {
   e r e r |
   g g g g |
   a a c c |
-  g r g16 (e d) g |
+  g r g16 ([e d]) g |
   c,2
 }
 
@@ -85,8 +85,7 @@ nhacPhienKhuc = \relative c'' {
   #(define afterGraceFraction (cons 1 2))
   g4 \afterGrace a ({
     g16 a)}
-  b2 ~ |
-  b4. \bar "|."
+  b4 \fermata r8 \bar "|."
 }
 
 % Lời
@@ -106,35 +105,36 @@ loiDiepKhucAlto = \lyricmode {
 }
 
 loiDiepKhucBas = \lyricmode {
-  Người đi, đi trong nước mắt đem hạt giống,
+  Người đi, đi trong nước mắt,
+  Đem hạt giống,
   đem hạt giống gieo gieo gieo trên,
   trên nương đồng, gieo trên nương đồng.
-  Khi về, về miệng vui ca tay ôm bó lúa,
+  Khi về, về miệng vui ca, tay ôm bó lúa,
   bó lúa, tay ôm bó lúa, bó lúa lúa thơm,
   thơm hương nồng.
 }
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Khi Chúa dẫn lưu đồ Si -- on trở về.
+  Khi Chúa dẫn lưu đồ Si -- on trở về,
   Ta tưởng trong giấc mơ.
-  Tiếng cười đầy ứ trong miệng.
-  và làn môi đẹp lời ca hát.
+  Tiếng cười đầy ứ trong miệng,
+  Và làn môi đẹp lời ca hát.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
   Nghe tiếng nói dân ngoại hoang mang thán phục:
-  Bao kỳ công khắp nơi.
-  Chúa thực hiện giữa dân Người.
+  Bao kỳ công khắp nơi
+  Chúa thực hiện giữa dân Người,
   Lòng mừng vui tràn ngập ân phúc.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Ai bước xuống nương đồng gieo trong bóng sầu.
-  Sẽ gặt trong sướng vui.
-  Lúa vàng từng nhánh tươi mầu.
+  Ai bước xuống nương đồng gieo trong bóng sầu,
+  Sẽ gặt trong sướng vui,
+  Lúa vàng từng nhánh tươi mầu,
   Ngàn lời ca hòa nhịp chân bước.
 }
 

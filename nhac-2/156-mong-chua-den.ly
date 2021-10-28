@@ -20,8 +20,8 @@ nhacDiepKhucSop = \relative c'' {
   b2 ~ |
   b8 r r4 |
   r r8 b |
-  c8. b16 \once \stemUp d8
-  _\markup { \tiny \rest #"8" }
+  c8. b16 %{ \once \stemUp %} d8
+  %_\markup { \tiny \rest #"8" }
   ds |
   e e r e |
   c8. d16 b8 gs |
@@ -52,7 +52,7 @@ nhacDiepKhucBas = \relative c {
   c4. a8 |
   d8. d16 d8 f |
   e4 r8 e |
-  f8. e16 g8 gs |
+  f8. e16 g8 g |
   a a r4 |
   r r8 f |
   e e r e |
@@ -85,7 +85,7 @@ nhacPhienKhucAlto = \relative c'' {
   c8 a b a |
   e2 ~ |
   e4 r |
-  r a8 b16 (a) |
+  r a8 (b16 a) |
   gs8 gs gs gs |
   a e16 e a8 a |
   gs2 ~ |
@@ -110,65 +110,70 @@ nhacPhienKhucBas = \relative c' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Đêm lại đêm, tâm hồn con đây hằng yêu Chúa.
-  Tiếng con nức nở nài van.
-  Mòn mỏi từng giây mong Chúa đến.
-  Cứu con thoát cảnh lầm than.
+  Đêm lại đêm
+  Tâm hồn con đây hằng yêu Chúa,
+  Tiếng con nức nở nài van
+  Mòn mỏi từng giây mong Chúa đến
+  cứu con thoát cảnh lầm than.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  \override Lyrics.LyricText.font-shape = #'italic
-  \repeat unfold 16 { _ }
-  Mòn mỏi từng giây mong Chúa đến mong Chúa đến.
+  Đêm lại đêm
+  Tâm hồn con đây hằng yêu Chúa,
+  Tiếng con nức nở nài van
+  mòn mỏi từng giây mong Chúa đến mong Chúa đến
+  cứu con thoát cảnh lầm than.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Ngày lại ngày, đêm lại đêm.
-  Này tâm hồn con đây vẫn yêu Ngài.
-  Lời con nức nở van nài.
+  Ngày lại ngày, đêm lại đêm,
+  này tâm hồn con đây hằng yêu Ngài
+  lời con nức nở nài van,
   Mòn mỏi từng giây mong Chúa đến.
-  Mong Chúa đến cứu con thoát cảnh lầm than.
+  ngóng Chúa đến cứu con thoát cảnh lầm than.
 }
 
 loiPhienKhucSopMot = \lyricmode {
   \set stanza = "1."
-  Bóng tử thần. Lưới âm ty, chụp xuống trên mình.
+  Bóng tử thần. Lưới âm ty chụp xuống trên mình.
   Chúa ơi con kêu lên Chúa, xin Ngài thương tiếp cứu.
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = "2."
-  Chúa nhân từ xót thương con.
-  Từng phút giữu gìn.
-  Chúa ơi nương thân tay chúa con bình tâm tiến bước.
+  Chúa nhân từ xót thương con
+  từng phút giữu gìn
+  Chúa ơi nương thân tay chúa con bình an tiến bước.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \set stanza = "3."
-  Chúa dủ tình cứu thân con. Khỏi lưới tử thần.
+  Chúa dủ tình cứu thân con khỏi lưới tử thần
   Chúa ơi cho con đi trước nhan Ngài trong cõi sống.
 }
 
 loiPhienKhucBasMot = \lyricmode {
   \set stanza = "1."
-  Bóng tử thần bủa vây muôn lối.
+  Bóng tử thần bủa vây muôn lối
   Mạng lưới âm ty.
-  Giữa cảnh khốn cùng.
+  Giữa cảnh khốn cùng,
   Nguyện Chúa thương tiếp cứu.
 }
 
 loiPhienKhucBasHai = \lyricmode {
   \set stanza = "2."
-  Chúa nhân từ và luôn trung tín.
-  Nguyện xót thương con.
-  Bé bỏng yếu hèn. Lạy Chúa, con tiến bước.
+  Chúa nhân từ và luôn trung tín
+  nguyện xót thương con
+  bé bỏng yếu hèn,
+  lạy Chúa, con tiến bước.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \set stanza = "3."
-  Chúa dủ tình rộng ban ơn phúc.
-  Nguyện cứu thân con.
-  Mắt khỏi đẫm lệ. Nhịp bước trong cõi sống.
+  Chúa dủ tình rộng ban ơn phúc
+  nguyện cứu thân con,
+  mắt khỏi đẫm lệ,
+  nhịp bước trong cõi sống.
 }
 
 % Dàn trang
@@ -186,7 +191,7 @@ loiPhienKhucBasBa = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #1
+  page-count = #2
 }
 
 TongNhip = {
@@ -213,19 +218,18 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacDiepKhucSop
       }
-      <<
-      \new Voice \TongNhip \partCombine 
-        \nhacDiepKhucSop
-        \notBePhu -3 { \nhacDiepKhucAlto }
-      \new NullVoice = beSop \nhacDiepKhucSop
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
-      \new NullVoice = beAlto \nhacDiepKhucAlto
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacDiepKhucAlto
+      }
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
-      >>
+    >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
@@ -243,19 +247,24 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-      \new Voice \TongNhip \partCombine 
-        \nhacPhienKhucSop
-        \notBePhu -3 { \nhacPhienKhucAlto }
-      \new NullVoice = beSop \nhacPhienKhucSop
+    \new Staff <<
+        \clef treble
+        \new Voice = beSop {
+          \TongNhip \nhacPhienKhucSop
+        }
       \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
       \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
       \new Lyrics \lyricsto beSop \loiPhienKhucSopBa
-      >>
+    >>
+    \new Staff <<
+        \clef treble
+        \new Voice = beAlto {
+          \TongNhip \nhacPhienKhucAlto
+        }
+      \new Lyrics \lyricsto beAlto \loiPhienKhucSopMot
+      \new Lyrics \lyricsto beAlto \loiPhienKhucSopHai
+      \new Lyrics \lyricsto beAlto \loiPhienKhucSopBa
+    >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {

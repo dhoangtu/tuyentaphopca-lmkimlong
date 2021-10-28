@@ -20,8 +20,8 @@ nhacDiepKhucSop = \relative c'' {
   b2 ~ |
   b8 r r4 |
   r r8 b |
-  c8. b16 %{ \once \stemUp %} d8
-  %_\markup { \tiny \rest #"8" }
+  c8. b16 \once \stemUp d8
+  _\markup { \tiny \rest #"8" }
   ds |
   e e r e |
   c8. d16 b8 gs |
@@ -117,10 +117,9 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Đêm lại đêm, tâm hồn con đây hằng yêu Chúa.
-  Tiếng con nức nở nài van.
+  \override Lyrics.LyricText.font-shape = #'italic
+  \repeat unfold 16 { _ }
   Mòn mỏi từng giây mong Chúa đến mong Chúa đến.
-  Cứu con thoát cảnh lầm than.
 }
 
 loiDiepKhucBas = \lyricmode {
@@ -187,7 +186,7 @@ loiPhienKhucBasBa = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  page-count = #2
+  %page-count = #1
 }
 
 TongNhip = {
@@ -214,18 +213,19 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff <<
-      \new Voice = "beSop" {
-        \clef treble \TongNhip \nhacDiepKhucSop
+    \new Staff \with {
+        \consists "Merge_rests_engraver"
+        printPartCombineTexts = ##f
       }
+      <<
+      \new Voice \TongNhip \partCombine 
+        \nhacDiepKhucSop
+        \notBePhu -3 { \nhacDiepKhucAlto }
+      \new NullVoice = beSop \nhacDiepKhucSop
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
-    >>
-    \new Staff <<
-      \new Voice = "beAlto" {
-        \clef treble \TongNhip \nhacDiepKhucAlto
-      }
+      \new NullVoice = beAlto \nhacDiepKhucAlto
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
-    >>
+      >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
@@ -243,24 +243,19 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff <<
-        \clef treble
-        \new Voice = beSop {
-          \TongNhip \nhacPhienKhucSop
-        }
+    \new Staff \with {
+        \consists "Merge_rests_engraver"
+        printPartCombineTexts = ##f
+      }
+      <<
+      \new Voice \TongNhip \partCombine 
+        \nhacPhienKhucSop
+        \notBePhu -3 { \nhacPhienKhucAlto }
+      \new NullVoice = beSop \nhacPhienKhucSop
       \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
       \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
       \new Lyrics \lyricsto beSop \loiPhienKhucSopBa
-    >>
-    \new Staff <<
-        \clef treble
-        \new Voice = beAlto {
-          \TongNhip \nhacPhienKhucAlto
-        }
-      \new Lyrics \lyricsto beAlto \loiPhienKhucSopMot
-      \new Lyrics \lyricsto beAlto \loiPhienKhucSopHai
-      \new Lyrics \lyricsto beAlto \loiPhienKhucSopBa
-    >>
+      >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {

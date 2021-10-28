@@ -29,7 +29,7 @@ nhacDiepKhucAlto = \relative c'' {
   e2 ~ |
   e4 \tuplet 3/2 { g8 g f } |
   e2 |
-  f'8. f16 d8 e16 (d) |
+  r |
   a8. a16 f8 g16 (f) |
   e2 ~ |
   e4 \tuplet 3/2 { f8 e e } |
@@ -44,7 +44,7 @@ nhacDiepKhucBas = \relative c {
   c2 |
   R2
   f8. f16 d8 e16 (d) |
-  c2 |
+  c2 ~ |
   c4 \tuplet 3/2 { g'8 <c c,> <bf c,> } |
   <a f>2
 }
@@ -57,7 +57,8 @@ nhacPhienKhuc = \relative c' {
   g4 g8 g |
   d'8. d16 c (bf) c8 |
   g8. g16 e (d) b!8 |
-  c2 \bar "|."
+  c2 ~ |
+  c4 \bar "||"
 }
 
 % Lời
@@ -65,7 +66,7 @@ loiDiepKhucSop = \lyricmode {
   Nếu Chúa không xây nhà
   vất vả luống công.
   Nếu Chúa không giữ thành
-  thì thức trắng đêm canh phòng ích gì.
+  canh phòng ích gì.
 }
 
 loiDiepKhucAlto = \lyricmode {
@@ -75,20 +76,21 @@ loiDiepKhucAlto = \lyricmode {
 }
 
 loiDiepKhucBas = \lyricmode {
-  Nếu Chúa không xây nhà thợ nề tổn sức vất vả luống công.
+  Nếu Chúa không xây nhà
+  Thợ nề tổn sức vất vả luống công.
   Nếu Chúa không giữ thành canh phòng lợi chi.
 }
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Người uổng công thức khuya dậy sớm kiếm tìm của ăn.
+  Người uổng công thức khuya dậy sớm kiếm tìm của ăn,
   Còn bạn Chúa, Chúa ban dư đầy chính khi ngủ say.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
-  Đoàn tử tôn đó như hồng phúc Chúa Trời thưởng ban.
-  Người hạnh phúc ví trang anh hùng ống tên đầy luôn.
+  Đoàn tử tôn đó như hồng phúc Chúa Trời thưởng ban,
+  Người hạnh phúc ví trang anh hùng, ống tên đầy luôn.
 }
 
 % Dàn trang

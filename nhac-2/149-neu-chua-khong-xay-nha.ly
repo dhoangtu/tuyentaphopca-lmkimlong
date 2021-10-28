@@ -57,7 +57,8 @@ nhacPhienKhuc = \relative c' {
   g4 g8 g |
   d'8. d16 c (bf) c8 |
   g8. g16 e (d) b!8 |
-  c2 \bar "|."
+  c2 ~ |
+  c4 \bar "||"
 }
 
 % Lời
@@ -75,20 +76,21 @@ loiDiepKhucAlto = \lyricmode {
 }
 
 loiDiepKhucBas = \lyricmode {
-  Nếu Chúa không xây nhà thợ nề tổn sức vất vả luống công.
+  Nếu Chúa không xây nhà
+  Thợ nề tổn sức vất vả luống công.
   Nếu Chúa không giữ thành canh phòng lợi chi.
 }
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Người uổng công thức khuya dậy sớm kiếm tìm của ăn.
+  Người uổng công thức khuya dậy sớm kiếm tìm của ăn,
   Còn bạn Chúa, Chúa ban dư đầy chính khi ngủ say.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
-  Đoàn tử tôn đó như hồng phúc Chúa Trời thưởng ban.
-  Người hạnh phúc ví trang anh hùng ống tên đầy luôn.
+  Đoàn tử tôn đó như hồng phúc Chúa Trời thưởng ban,
+  Người hạnh phúc ví trang anh hùng, ống tên đầy luôn.
 }
 
 % Dàn trang

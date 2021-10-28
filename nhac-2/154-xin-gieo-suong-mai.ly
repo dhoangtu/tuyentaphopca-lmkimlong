@@ -12,7 +12,8 @@
 nhacDiepKhucSop = \relative c'' {
   r8 e16 e <f c a>8 <e c g> |
   r d16 d <e c g>8 <d b f> |
-  <c g e> r r4 |
+  <c g e> \bar "||"
+  r r4 |
   R2
   r8 a16 a b8 a |
   g4 r8 g |
@@ -80,7 +81,10 @@ nhacDiepKhucBas = \relative c {
 }
 
 nhacPhienKhucSop = \relative c'' {
-  \partial 8 c |
+  \partial 8
+  c
+  ^\markup { \halign #1 \fontsize #2 \bold "Solo" }
+  |
   b g e8. a16 |
   f8 d r c |
   f8. e16 a8 a |
@@ -90,7 +94,7 @@ nhacPhienKhucSop = \relative c'' {
   d e r e, |
   c' b4 gs8 |
   a2 ~ |
-  a8 \bar "||"
+  a8 \bar "|."
 }
 
 nhacPhienKhucAlto = \relative c'' {
@@ -138,10 +142,10 @@ nhacPhienKhucBas = \relative c {
 % Lời
 loiDiepKhucSop = \lyricmode {
   \repeat unfold 9 { _ }
-  Xin gieo rắc sương mai trời cao ơi,
+  Xin gieo rắc sương mai, trời cao ơi,
   trời cao xin gieo rắc sương mai,
-  mây ngàn hãy mưa xuống Đấng Công Bình.
-  Ước chi đất mở rộng để ân thiêng
+  Mây ngàn hãy mưa xuống Đấng Công Bình.
+  Ước chi đất mở rộng để ân thiêng,
   để ân thiêng cứu rỗi khai hoa,
   đồng thời chính trực sẽ trổ sinh.
 }
@@ -152,7 +156,7 @@ loiDiepKhucAlto = \lyricmode {
   mây ngàn hãy mưa Vị Công Bình.
   Ước chi đất mở rộng chi đất mở rộng
   để ân thiêng cứu rỗi
-  ân cứu rỗi khai hoa,
+  ân cứu rỗi khai hoa
   đồng thời chính trực sẽ trổ sinh.
 }
 
@@ -163,30 +167,31 @@ loiDiepKhucBas = \lyricmode {
   trời ơi xin gieo rắc sương mai
   và ngàn mây ơi hãy mưa xuống Vị Công Bình.
   Ước chi đất mở rộng, mở rộng ân thiêng cứu rỗi
-  ân cứu rỗi nở hoa, đồng thời chính trực sẽ trổ sinh.
+  ân cứu rỗi nở hoa đồng thời chính trực sẽ trổ sinh.
 }
 
 loiPhienKhucSopMot = \lyricmode {
   \set stanza = #"1."
-  Chúng con lưu lạc kiếp phong trần mòn mỏi
-  vì đau thương vấn vương,
+  Chúng con lưu lạc kiếp phong trần,
+  mòn mỏi vì đau thương vấn vương,
   ngày đêm mi hoen lệ kêu khấn:
   lạy Chúa xin dủ thương.
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = #"2."
-  Bóng đêm bao trùm khắp cõi đời
+  Bóng đêm bao trùm khắp cõi đời,
   cầu khẩn Ngài sai Ngôi Cứu Tinh,
-  từ nơi cao quang nào mau tới dọi chiếu lên Bình Minh.
+  từ nơi cao quang nào mau tới,
+  dọi chiếu lên Bình Minh.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \set stanza = #"3."
-  Chúng con nay tựa lá cây vàng
+  Chúng con nay tựa lá cây vàng,
   bị gió thổi tung bay khắp nơi,
-  sầu đau dâng cau cùng năm tháng
-  Ngài thấu chăng, Ngài ơi!
+  sầu đau dâng cau cùng năm tháng,
+  Ngài thấu chăng, Ngài ơi.
 }
 
 loiPhienKhucAltoMot = \lyricmode {
@@ -198,13 +203,13 @@ loiPhienKhucAltoMot = \lyricmode {
 loiPhienKhucAltoHai = \lyricmode {
   \repeat unfold 7 { _ }
   Cứu Tinh an bình
-  _ _ dọi chiếu lên bình minh.
+  _ _ dọi chiếu lên Bình Minh.
 }
 
 loiPhienKhucAltoBa = \lyricmode {
   \repeat unfold 7 { _ }
   khắp nơi trên đời
-  _ _ Ngài hay chăng, Chúa ơi!
+  _ _ Ngài hay chăng, Chúa ơi.
 }
 
 loiPhienKhucBasMot = \lyricmode {
@@ -330,7 +335,7 @@ notBePhu =
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricSpace.minimum-distance = #0.6
+    \override Lyrics.LyricSpace.minimum-distance = #0.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
