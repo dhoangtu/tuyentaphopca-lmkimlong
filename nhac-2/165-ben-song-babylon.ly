@@ -46,11 +46,14 @@ nhacDiepKhucSop = \relative c'' {
   c4 r8 c, |
   g'4. gs8 |
   a2 ~ |
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \tweak extra-offset #'(8 . 0)
+  \mark \markup { \musicglyph #"scripts.segno" }
   a4 \bar "||" \break
   
   \partial 8 c16 c |
   c4. bf8 |
-  b4 \tuplet 3/2 {  c8 bf a } |
+  bf4 \tuplet 3/2 {  c8 bf a } |
   a4 r8 f16 g |
   g4. f16 g |
   d4 r8 d16 g |
@@ -62,7 +65,10 @@ nhacDiepKhucSop = \relative c'' {
   g4 \tuplet 3/2 { e8 e g } |
   bf4. e,16 f |
   f2 ~ |
-  f4 \bar "||"
+  f4
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -88,7 +94,7 @@ nhacDiepKhucAlto = \relative c' {
   
   a'8 |
   a4. c16 b! |
-  bf4 r8 g |
+  bf?4 r8 g |
   g4. e16 f |
   f4. f16 e |
   d4 \tuplet 3/2 { c8 d bf } |
@@ -166,26 +172,29 @@ nhacDiepKhucBas = \relative c {
 
 % Lời
 loiPhienKhucSop = \lyricmode {
-  Bên sông Ba -- by -- lon ta ngồi héo hon
-  khóc nhớ Si -- on, ngồi khóc nhớ Si -- on.
+  Bên sông Ba -- by -- lon ta ngồi héo hon,
+  Khóc nhớ Si -- on,
+  Ngồi khóc nhớ Si -- on.
   Ta treo cây lục huyền cầm khóc nhớ Si -- on,
   ngồi khóc nhớ Si -- on.
   \set stanza = "1."
-  Nơi đây gió lay bay, nơi đây buồn heo may.
-  Nước sông sầu xuôi miền cổ độ
-  thuyền ai về buồm say gió viễn phương.
-  Tình ôi quê hương lòng ôi bi đát.
+  Nơi đây gió lay bay, nơi đây buồn heo may,
+  Nước sông sầu xuôi miền cổ độ,
+  Thuyền ai về buồm say gió viễn phương.
+  Tình ôi quê hương,
+  Lòng ôi bi đát.
   \set stanza = "2."
   Gia -- liêm ơi, Gia -- liêm nếu ta quên em
-  thì tay ta nên bất toại
-  và lưỡi ta nên cứng lại.
+  thì tay ta nên bất toại,
+  thì lưỡi ta nên cứng lại,
   Nếu ta không hoài niềm đến Gia -- liêm
   và đặt em làm nguồn vui nhất của con tim.
 }
 
 loiPhienKhucBas = \lyricmode {
   Bên sông Ba -- by -- lon ta ngồi héo hon
-  buồn nhớ Si -- on, ngồi khóc nhớ Si -- on.
+  buồn nhớ Si -- on,
+  Ngồi khóc nhớ Si -- on.
   Trên dương liễu âm thầm ta treo cây lục huyền cầm
   khóc nhớ Si -- on, ngồi buồn nhớ Si -- on.
 }
@@ -253,8 +262,8 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
-    \override LyricHyphen.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1
+    \override LyricHyphen.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

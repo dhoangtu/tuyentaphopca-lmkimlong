@@ -4,8 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Mầu Nhiệm Của Tình Thương" }
-  poet = "Thơ: Lm. Xuân Ly Băng"
-  composer = "Nhạc: Lm. Kim Long"
+  composer = "Thơ: Lm. Xuân Ly Băng"
+  arranger = "Nhạc: Lm. Kim Long"
   tagline = ##f
 }
 
@@ -61,7 +61,7 @@ nhacDiepKhucSop = \relative c'' {
     {
       a2 ~ |
       a4 r |
-      r g ^> (g8) g a b
+      r g ^> (g8) g [a b]
     }
     {
       a2 ~ |
@@ -134,22 +134,22 @@ nhacDiepKhucAlto = \relative c'' {
   \set Staff.printKeyCancellation = ##f
   \stemDown
   g2 ~
-  %\tweak extra-offset #'(0 . -1.7)
-  %^\markup { \rest #"2" } |
+  \tweak extra-offset #'(0 . -1.7)
+  ^\markup { \rest #"2" } |
   g4 e ~
-  %\tweak extra-offset #'(0 . -1.7)
-  %^\markup { \rest #"2" } |
+  \tweak extra-offset #'(0 . -1.7)
+  ^\markup { \rest #"2" } |
   e a ~
-  %\tweak extra-offset #'(0 . -1.7)
-  %^\markup { \rest #"2" } |
+  \tweak extra-offset #'(0 . -1.7)
+  ^\markup { \rest #"2" } |
   a b8
-  %\tweak extra-offset #'(0 . -1.7)
-  %^\markup { \rest #"2" }
+  \tweak extra-offset #'(0 . -1.7)
+  ^\markup { \rest #"2" }
   a |
   g2 ~ |
   g8 g fs e |
   %\stemNeutral
-  ds4 d!8 (c) |
+  ds4 d!8 c |
   b b4 d8 |
   g2 ~ |
   g4 r |
@@ -177,7 +177,7 @@ nhacDiepKhucAlto = \relative c'' {
   d2 ~ |
   d4 r |
   r g ~ |
-  g8 g a b |
+  g8 \tweak font-size 0 g [\tweak font-size 0 a \tweak font-size 0 b] |
   d,2 ~ |
   d4 r |
   R2
@@ -368,29 +368,14 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Hm __ \repeat unfold 5 { _ }
-  thời gian lá rụng cây tàn héo cô liêu
-  Mênh mông đến lạnh hồn tháng năm sầu đơn lẻ,
-  khóc dội rừng Si -- on
-  Mong vì sao Cứu Thế.
-  Gió hỏi gió cùng bay
-  Mây thủ thỉ cùng mây
-  Rừng thời gian lá
-  mây
-  Bỗng một đêm lạnh lùng, một đêm lạnh lùng
-  chồi Yes -- sé đâm bông,
-  một vì sao xuất hiện.
-  Trời Bê -- lem chớp sáng khắp trời Bê -- lem chớp sáng
-  đạo Thiên sứ hoan ca
-  cô đơn nơi đồng vắng
-  Chúa Cứu thế sinh ra
-  Mừng Thánh nhi xuất hiện
+  \override Lyrics.LyricText.font-shape = #'italic
+  \repeat unfold 86 { _ }
+  cô liêu nơi đồng vắng
+  \repeat unfold 10 { _ }
   xuất hiện
-  Phượng thờ Vua vinh hiển
-  Nhạc No -- el réo rắt khúc nhạc No -- el réo rắt
-  hòa trong gió đêm sương
+  \repeat unfold 21 { _ }
   ngươi ơi ngươi có hiểu
-  mầu nhiệm của tình thương.
+  \repeat unfold 5 { _ }
   Mầu nhiệm của tình thương.
 }
 
@@ -423,8 +408,8 @@ loiDiepKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20\mm
-  bottom-margin = 20\mm
+  top-margin = 15\mm
+  bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -435,8 +420,8 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #4
-  systems-per-page = 4
+  %page-count = #2
+  %systems-per-page = 5
 }
 
 TongNhip = {
@@ -447,18 +432,19 @@ TongNhip = {
 
 \score {
   \new ChoirStaff <<
-    \new Staff <<
-      \new Voice = "beSop" {
-        \clef treble \TongNhip \nhacDiepKhucSop
+    \new Staff \with {
+        \consists "Merge_rests_engraver"
+        printPartCombineTexts = ##f
       }
+      <<
+      \new Voice \TongNhip \partCombine 
+        \nhacDiepKhucSop
+        \notBePhu -2 { \nhacDiepKhucAlto }
+      \new NullVoice = beSop \nhacDiepKhucSop
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
-    >>
-    \new Staff <<
-      \new Voice = "beAlto" {
-        \clef treble \TongNhip \nhacDiepKhucAlto
-      }
+      \new NullVoice = beAlto \nhacDiepKhucAlto
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
-    >>
+      >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {

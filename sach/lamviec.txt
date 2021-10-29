@@ -7,6 +7,7 @@ hát lên mừng Chúa
 <>^\markup { \halign #-2 \fontsize #2 \bold "Tận" }
 \set Staff.explicitClefVisibility = #end-of-line-invisible
 \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+\set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
 
   <<
     {

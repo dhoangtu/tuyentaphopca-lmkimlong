@@ -28,7 +28,7 @@ notBePhu =
 nhacDiepKhucSop = \relative c'' {
   d2 ~ |
   d4 e8 d |
-  cs4 a ~ |
+  \once \stemDown cs4 a ~ |
   a8 g f e |
   d4 r8 d' |
   e e cs4 |
@@ -37,7 +37,7 @@ nhacDiepKhucSop = \relative c'' {
   a r |
   <<
     {
-      a2 ^( |
+      a2 ^\p ^( |
       a4)
     }
     \notBePhu -2 {
@@ -64,7 +64,8 @@ nhacDiepKhucSop = \relative c'' {
   a4 bf8 a16 (g) |
   e4. e8 |
   f g4 a8 |
-  d,2 \bar "|." \break
+  d,2 ~ |
+  \partial 4 d4 \bar "|." \break
   
   r4 a'8 a |
   d d a8. bf16 |
@@ -78,7 +79,7 @@ nhacDiepKhucSop = \relative c'' {
   e8. g16 a8 f16 (g) |
   a4. a8 |
   f8. g16 a8 e |
-  d2 \bar "|."
+  d2 \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -102,7 +103,8 @@ nhacDiepKhucAlto = \relative c' {
   a4 bf8 a16 (g) |
   e4. e8 |
   d d4 cs8 |
-  d2
+  d2 ~ |
+  d4
 }
 
 nhacDiepKhucBas = \relative c {
@@ -110,11 +112,11 @@ nhacDiepKhucBas = \relative c {
   f'8 f e e |
   a2 ~ |
   a4 r |
-  r8 bf d bf |
+  r8 bf ^> d ^> bf ^> |
   g4 a |
   r8 d, c d |
   e4 (d8 e) |
-  f4 r8 e |
+  f4 r8 e ^\f |
   a a a4 |
   d,4. c8 |
   f e f (g) |
@@ -122,16 +124,20 @@ nhacDiepKhucBas = \relative c {
   a4. bf8 |
   g g f (g) |
   a4 bf8 a16 (g) |
-  e4. e8 |
+  e4.
   <<
     {
-      a a4 g8 |
-      f2
+      a8 |
+      a e4 g8 |
+      fs2 ~ |
+      fs4
     }
-    {
-      a,8 a4 a8 |
-      d2
-    }
+    { \notBePhu -2 {
+      cs8 |
+      d bf4 a8 |
+      d2 ~ |
+      d4
+    }}
   >>
 }
 
@@ -139,16 +145,17 @@ nhacDiepKhucBas = \relative c {
 loiDiepKhucSop = \lyricmode {
   A __ \repeat unfold 3 { _ }
   Chúa đang ngự trên trời.
-  Như mắt những bầy tôi nhắm tay ông chủ hoài.
-  A __ Những ngước trông hoài.
+  Như mắt những bầy tôi ngắm tay ông chủ hoài.
+  A __ những ngước trông hoài,
   Mắt chúng con những luôn trông về Chúa
-  tới khi nào Ngài rủ thương đoái nhìn.
+  tới khi nào Ngài rủ thương đoái hoài.
   
-  Xin thương xót chúng con Chúa ơi.
-  Xin thương xót chúng con vì chúng con bao ê chề.
-  Linh hồn tủi sầu cay đắng
-  vì bọn an thân phỉ báng
-  lũ người kiêu hãnh khi thường.
+  Xin thương xót chúng con, Chúa ơi,
+  Xin thương xót chúng con
+  Vì chúng con bao ê chề,
+  Linh hồn tủi nhục cay đắng,
+  Vì bọn ác thân phỉ báng,
+  Lũ người kiêu hãnh khinh thường.
 }
 
 loiDiepKhucBas = \lyricmode {
@@ -156,7 +163,7 @@ loiDiepKhucBas = \lyricmode {
   Như mắt những bầy tôi trông bàn tay chủ mãi.
   Tựa mắt những nữ tỳ nhìn tay bà chủ mãi.
   Mắt chúng con những luôn trông về Chúa
-  tới khi nào Ngài rủ thương đoái nhìn.
+  tới khi nào Ngài rủ thương đoái hoài.
 }
 
 % Dàn trang

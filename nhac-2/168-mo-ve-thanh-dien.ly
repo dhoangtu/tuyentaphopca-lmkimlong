@@ -4,7 +4,6 @@
 
 \header {
   title = \markup { \fontsize #3 "Mơ Về Thánh Điện" }
-  poet = "Thơ: Lm. Xuân Ly Băng"
   composer = "Lm. Kim Long"
   tagline = ##f
 }
@@ -56,6 +55,7 @@ nhacDiepKhucSop = \relative c' {
   fs4 r8 \bar "||" \break
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key d \major
   fs16 fs
   \once \override Score.RehearsalMark.font-size = #0.1
@@ -72,7 +72,7 @@ nhacDiepKhucSop = \relative c' {
   d d cs (d) |
   e4. fs16 d |
   b4. cs8 |
-  a g4 cs8 |
+  a g'4 cs,8 |
   d2 ~ |
   d ~ |
   \partial 4 d4 \bar "|." \break
@@ -128,13 +128,14 @@ nhacDiepKhucAlto = \relative c' {
   cs2 ~ |
   cs4 \tuplet 3/2 { e8 ^> a, ^> a ^> } |
   f'4 d |
-  \tuplet 3/2 { a'8 ^> d, ^> d ^> } g8 b,!16 d |
+  \tuplet 3/2 { a'8 ^> d, ^> d ^> } g8 b,!16 (d) |
   cs4 \tuplet 3/2 { d8 d d } |
   b! cs4 cs8 |
   d2 ~ |
   d4 r8
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key d \major
   d16 d |
   d4 \tuplet 3/2 { d8 e d } |
@@ -192,6 +193,7 @@ nhacDiepKhucBas = \relative c {
   <a d,>4 r8
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key d \major
   d,16 d |
   d4 \tuplet 3/2 { d8 cs d } |
@@ -212,60 +214,69 @@ nhacDiepKhucBas = \relative c {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Ôm cây lục huyền cầm ta rung lên muôn cung sầu thảm.
-  Nước mây cùng ảm đạm trời đất chung đau thương.
-  Đàn ơi đàn, đàn khóc mãi quê hương.
-  Khóc thánh điện đã xa rồi một thuở.
-  Thương ôi sầu nhớ nước cũ thành xưa.
-  Hồn ta khóc hay đàn ta khóc.
+  Ôm cây lục huyền cầm
+  Ta rung lên muôn cung sầu thảm,
+  Nước mây cùng ảm đạm,
+  Trời đất chung đau thương.
+  Đàn ơi đàn, đàn khóc mãi quê hương,
+  Khóc thánh điện đã xa rồi một thuở,
+  Thương ôi sầu nhớ,
+  Nước cũ thành xưa.
+  Hồn ta khóc hay đàn ta khóc,
   Cả hai cùng lăn lóc chưa bưa.
-  Sầu ơi chín cả một mùa khi ta nhớ tới ngày xưa huy hoàng.
-  Ta bước hiên ngang giữa đoàn dân trong ngày lễ trọng.
+  Sầu ơi chín cả một mùa,
+  Khi ta nhớ tới ngày xưa huy hoàng.
+  Ta bước hiên ngang giữa đoàn dân trong ngày lễ trọng,
   Tiến lên đền thánh Chúa dân ta đầy trời hoan hỉ nhạc mê ly.
   Như nai kia bên suối canh thâu
-  khát nước trăng vàng một đêm hè rực nóng.
-  Hồn ta đây khao khát Chúa hằng sống.
-  Biết bao giờ thấy Mặt Chúa hồn ơi!
-  Ôm cây lục huyền cầm ta rung lên muôn cung ca ngợi.
-  Đưa mắt nhìn xa xăm
-  thánh đô khói sương mờ.
+  khát nước trăng vàng một đêm hè rực nóng,
+  Hồn ta đây khao khát Chúa hằng sống,
+  Biết bao giờ thấy mặt Chúa hồn ơi.
+  Ôm cây lục huyền cầm,
+  Ta rung lên muôn cung ca ngợi,
+  Đưa mắt nhìn xa xăm,
+  Thánh đô khói sương mờ.
   Như nai
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Ôm cây lục huyền cầm ta rung lên muôn cung sầu thảm.
-  Nước mây cùng ảm đạm trời đất chung đau thương.
-  Đàn ơi đàn, đàn khóc mãi quê hương.
-  Khóc thánh điện đã xa rồi một thuở.
-  Thương ôi sầu nhớ nước cũ thành xưa.
-  Hồn ta khóc hay đàn ta khóc.
+  Ôm cây lục huyền cầm
+  Ta rung lên muôn cung sầu thảm,
+  Nước mây cùng ảm đạm,
+  Trời đất chung đau thương.
+  Đàn ơi đàn, đàn khóc mãi quê hương,
+  Khóc thánh điện đã xa rồi một thuở,
+  Thương ôi sầu nhớ, nước cũ thành xưa.
+  Hồn ta khóc hay đàn ta khóc,
   Cả hai cùng lăn lóc chưa bưa.
-  Sầu ơi chín cả một mùa khi ta nhớ tới ngày xưa huy hoàng.
+  Sầu ơi chín cả một mùa,
+  Khi ta nhớ tới ngày xưa huy hoàng.
   Ta bước hiên ngang,
-  ta bước hiên ngang giữa đoàn dân trong lễ trọng.
-  Tiến về đền thánh cùng tiến về đền thánh của Chúa ta
+  Ta bước hiên ngang giữa đoàn dân trong lễ trọng,
+  tiến về đền thánh cùng tiến về đền thánh của ta
   đầy trời hoan hỉ nhạc mê ly.
   Như nai kia bên suối canh thâu
-  khát nước trăng vàng một đêm hè rực nóng.
-  Hồn ta đây khao khát Chúa hằng sống.
-  Biết bao giờ thấy Mặt Chúa hồn ơi!
-  Ôm cây lục huyền cầm ta rung lên muôn cung ca ngợi.
-  Đưa mắt nhìn xa xăm
-  thánh đô khói sương mờ.
+  khát nước trăng vàng một đêm hè rực nóng,
+  Hồn ta đây khao khát Chúa hằng sống,
+  Biết bao giờ thấy mặt Chúa hồn ơi.
+  Ôm cây lục huyền cầm,
+  Ta rung lên muôn cung ca ngợi,
+  Đưa mắt nhìn xa xăm,
+  Thành đô khói sương mờ.
   Như nai
 }
 
 loiDiepKhucBas = \lyricmode {
-  Đàn ơi đàn, đàn khóc mãi quê hương.
-  Khóc thánh điện đã xa rồi một thuở.
-  Thương ôi sầu nhớ thành cũ nước xưa.
+  Đàn ơi đàn, đàn khóc mãi quê hương,
+  Khóc thánh điện đã xa rồi một thuở,
+  Thương ôi sầu nhớ, thành cũ nước xưa.
   Ta bước hiên ngang, ta bước hiên ngang ngày lễ trọng.
-  Tiến về đền thánh đền thánh Chúa ta
+  Tiến về đền thánh, đền thánh của ta,
   đầy trời hoan hỉ hát mê ly.
   Như nai kia bên suối canh thâu khát nước trăng sáng
-  suốt đêm hè rực nóng.
-  Hồn ta đây khát khao Chúa vắng trông.
-  Thiệt ao ước thấy Mặt Ngài hồn ơi!
+  suốt đêm hè rực nóng,
+  Hồn ta đây khát khao Chúa vắng trông,
+  Thiệt bao nhớ thấy mặt Ngài hồn ơi.
 }
 
 % Dàn trang

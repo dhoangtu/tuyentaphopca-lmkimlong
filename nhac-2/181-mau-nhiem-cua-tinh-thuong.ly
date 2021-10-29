@@ -4,8 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Mầu Nhiệm Của Tình Thương" }
-  composer = "Thơ: Lm. Xuân Ly Băng"
-  arranger = "Nhạc: Lm. Kim Long"
+  poet = "Thơ: Lm. Xuân Ly Băng"
+  composer = "Nhạc: Lm. Kim Long"
   tagline = ##f
 }
 
@@ -38,8 +38,8 @@ nhacDiepKhucSop = \relative c'' {
     R2*2 \bar "||"
     
     \time 3/4
+    r2 bf4 \bar "||"
     \key bf \major
-    r4 r bf |
     bf4. c8 a4 |
     a2 bf4 |
     g4. fs8 g4 |
@@ -55,13 +55,13 @@ nhacDiepKhucSop = \relative c'' {
     d2 ~ |
     d4 r |
     R2
-    a8. fs16 fs8 \slashedGrace { fs16 ( } g8)
+    a8. fs16 fs8 g8
   }
   \alternative {
     {
       a2 ~ |
       a4 r |
-      r g ^> (g8) g [a b]
+      r g ^> (g8) g a b
     }
     {
       a2 ~ |
@@ -75,9 +75,9 @@ nhacDiepKhucSop = \relative c'' {
       \time 3/4
       ef4. c8 d g, |
       \set Score.repeatCommands = #'((volta #f))
-      g4. g8 a ^\pp g |
+      g4. g8 ^\pp a g |
       fs4 r2 |
-      r2 g4 |
+      r2 g4 ^\f |
       a bf4. c8 |
       c2. |
       bf4. bf8 c d |
@@ -88,6 +88,9 @@ nhacDiepKhucSop = \relative c'' {
   \time 2/4
   \key g \major
   \repeat volta 2 {
+    \once \override Score.RehearsalMark.font-size = #0.1
+    \tweak extra-offset #'(8 . 0)
+    \mark \markup { \musicglyph #"scripts.segno" }
     b8. c16 d8 e |
     e4. e8 |
     a,8. b16 c8 d |
@@ -132,36 +135,26 @@ nhacDiepKhucSop = \relative c'' {
 
 nhacDiepKhucAlto = \relative c'' {
   \set Staff.printKeyCancellation = ##f
-  \stemDown
   g2 ~
-  \tweak extra-offset #'(0 . -1.7)
-  ^\markup { \rest #"2" } |
   g4 e ~
-  \tweak extra-offset #'(0 . -1.7)
-  ^\markup { \rest #"2" } |
   e a ~
-  \tweak extra-offset #'(0 . -1.7)
-  ^\markup { \rest #"2" } |
   a b8
-  \tweak extra-offset #'(0 . -1.7)
-  ^\markup { \rest #"2" }
   a |
   g2 ~ |
   g8 g fs e |
-  %\stemNeutral
-  ds4 d!8 c |
+  ds4 d!8 (c) |
   b b4 d8 |
   g2 ~ |
   g4 r |
   R2*2
   
-  \key bf \major
   \time 3/4
-  r4 r g |
+  r2 g4 |
+  \key bf \major
   g4. a8 g4 |
-  fs2 g4 |
+  fs2 d4 |
   ef4. ef8 d4 |
-  d2 c4 |
+  c2 c4 |
   bf4. bf8 bf4 |
   d2. |
   c4. c8 g' g |
@@ -176,18 +169,18 @@ nhacDiepKhucAlto = \relative c'' {
   fs8. d16 c8 b |
   d2 ~ |
   d4 r |
-  r g ~ |
-  g8 \tweak font-size 0 g [\tweak font-size 0 a \tweak font-size 0 b] |
-  d,2 ~ |
+  r g ^> ~ |
+  g8 g fs e |
+  d2 ~ |
   d4 r |
   R2
   
   \key bf \major
   \time 3/4
   ef'4. c8 d g, |
-  g4. g8 ef ef |
+  g4. g8 ^\pp ef ef |
   d4 r2 |
-  r2 g4 |
+  r2 g4 ^\f |
   fs g4. a8 |
   a2. |
   g4. g8 g fs |
@@ -210,7 +203,7 @@ nhacDiepKhucAlto = \relative c'' {
   b a4 g8 |
   fs4. e8 |
   d4 r |
-  r r8 b |
+  r r8 c |
   b d4 e8 |
   c2 |
   R2
@@ -223,7 +216,7 @@ nhacDiepKhucAlto = \relative c'' {
   fs fs g (fs) |
   e4 r8 cs |
   d4 c8 c |
-  b2 ~ |
+  b2 |
   b4 b8 b |
   e4. c8 |
   d2 ~ |
@@ -245,7 +238,17 @@ nhacDiepKhucBas = \relative c' {
       a4. g8 |
     }
   >>
-  d'8 d4 c8 |
+  <<
+    {
+      \voiceOne
+      d'8 d4 c8 |
+    }
+    \new Voice = "splitpart" {
+      \voiceTwo
+      fs,4 e8 fs
+    }
+  >>
+  \oneVoice
   <b g>2 ~ |
   <b g>4 r |
   R2*2
@@ -265,9 +268,9 @@ nhacDiepKhucBas = \relative c' {
     }
   >>
   
-  \key bf \major
   \time 3/4
   <g g,>2. ~ |
+  \key bf \major
   <g g,>4 r c, |
   d4. d8 g,4 |
   c2 b!4 |
@@ -281,7 +284,7 @@ nhacDiepKhucBas = \relative c' {
   \time 2/4
   R2
   r4 r8 g |
-  fs a4 ^> b8 |
+  fs a4 b8 |
   d,2 ~ |
   d4 r |
   r4 r8 fs |
@@ -297,7 +300,7 @@ nhacDiepKhucBas = \relative c' {
   g4 r2 |
   r2 c,4 ^\f |
   d g4. a8 |
-  bf4. bf8 g ef |
+  bf4. bf8 ^\pp g ef |
   d2. ~ |
   d4 r8 d ^> c ^> d ^> |
   ef4 ef4. ^> d8 |
@@ -314,7 +317,7 @@ nhacDiepKhucBas = \relative c' {
   d8 c' c c |
   b (c) d4 |
   r8 d, e fs |
-  g2 \breathe |
+  g2 |
   e'8. c16 e8 c |
   d2 ~ |
   d |
@@ -325,7 +328,7 @@ nhacDiepKhucBas = \relative c' {
   a4. a'8 |
   d,8. d16 e8 fs |
   g4 r8 g |
-  c8. ^> a16 b8 ^> c ^> |
+  c8. ^> a16 ^> b8 ^> c ^> |
   d4. fs,8 |
   g8. g16 g8 g |
   e c4 cs8 |
@@ -342,10 +345,11 @@ nhacDiepKhucBas = \relative c' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Rừng thời gian lá rụng cây tàn héo cô liêu
-  Mênh mông đến lạnh hồn tháng năm sầu đơn lẻ,
-  khóc dội rừng Si -- on
-  Mong vì sao Cứu Thế.
+  Rừng thời gian lá rụng, cây tàn héo cô liêu
+  Mênh mông đến lạnh hồn,
+  Tháng năm buồn đơn lẻ,
+  Khóc dội rừng Si -- on,
+  Mong vì Sao Cứu Thế.
   Gió hỏi gió cùng bay
   Mây thủ thỉ cùng mây
   Rừng thời gian lá
@@ -354,44 +358,62 @@ loiDiepKhucSop = \lyricmode {
   (Đàn) _ _ _
   \revert Lyrics.LyricText.font-shape
   Bỗng một đêm lạnh lùng, một đêm lạnh lùng
-  chồi Yes -- sé đâm bông,
-  một vì sao xuất hiện.
-  Trời Bê -- lem chớp sáng khắp trời Bê -- lem chớp sáng
-  đạo Thiên sứ hoan ca ca vang,
-  Chúa Cứu thế sinh ra
-  Mừng Thánh nhi xuất hiện
+  Chồi Giê -- sê đâm bông,
+  Một vì sao xuất hiện.
+  Trời Bê -- lem chớp sáng, khắp trời Bê -- lem chớp sáng,
+  Đạo thiên sứ hoan ca ca vang,
+  Chúa Cứu thế sinh ra.
+  Mừng Thánh Nhi xuất hiện
   Phượng thờ Vua vinh hiển
-  Nhạc No -- el réo rắt khúc nhạc No -- el réo rắt
-  hòa trong gió đêm sương
-  mầu nhiệm của tình thương.
+  Nhạc No -- el réo rắt, khúc nhạc No -- el réo rắt
+  Hòa trong gió đêm sương
+  Mầu nhiệm của tình thương.
   thương.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  \override Lyrics.LyricText.font-shape = #'italic
-  \repeat unfold 86 { _ }
-  cô liêu nơi đồng vắng
-  \repeat unfold 10 { _ }
+  Hm __ \repeat unfold 5 { _ }
+  thời gian lá rụng, cây tàn tạ cô liêu
+  Mênh mông đến lạnh hồn,
+  Tháng năm buồn đơn lẻ,
+  Khóc dội rừng Si -- on,
+  Mong vì Sao Cứu Thế.
+  Gió hỏi gió cùng bay
+  Mây thủ thỉ cùng mây
+  Rừng thời gian lá
+  mây
+  Bỗng một đêm lạnh lùng, một đêm lạnh lùng
+  Chồi Giê -- sê đâm bông,
+  Một vì sao xuất hiện.
+  Trời Bê -- lem chớp sáng, khắp trời Bê -- lem chớp sáng,
+  Đạo thiên sứ hoan ca
+  cô đơn nơi đồng vắng
+  Chúa Cứu thế sinh ra.
+  Mừng Thánh Nhi xuất hiện
   xuất hiện
-  \repeat unfold 21 { _ }
+  Phượng thờ Vua vinh hiển
+  Nhạc No -- el réo rắt, khúc nhạc No -- el réo rắt
+  Hòa trong gió đêm sương
   ngươi ơi ngươi có hiểu
-  \repeat unfold 5 { _ }
   Mầu nhiệm của tình thương.
+  thương,
+  mầu nhiệm của tình thương.
 }
 
 loiDiepKhucBas = \lyricmode {
   Hm __ \repeat unfold 9 { _ }
-  Suối buồn ôm thung lũng rên siết nhạc căm hờn
-  Mênh mông đến lạnh hồn
-  năm tháng sầu lẻ loi
-  khóc dội rừng Si -- on mong vị Cứu Thế.
-  Bao giờ sao xuất hiện?
+  Suối buồn ôm thung lũng, rên siết nhạc căm hờn
+  Mênh mông đến lạnh hồn,
+  Năm tháng sầu lẻ loi,
+  Khóc dội rừng Si -- on,
+  Mong vị Cứu Thế.
+  Bao giờ Sao xuất hiện,
   Khi nào Người mới đến?
   Khi nào Người mới đến?
   Vòng thời gian viên mãn giữa đêm lạnh lùng
   Đây một vì sao đã hiển hiện
   Trời khắp Bê -- lem chớp sáng,
-  ngời sáng Bê -- lem các Thiên Thần hòa ca
+  ngời sáng Bê -- lem các Thiên thần hòa ca
   cô liêu nơi đồng vắng
   Ngài đã sinh ra.
   Gió bảo gió cùng đi
@@ -401,15 +423,15 @@ loiDiepKhucBas = \lyricmode {
   réo rắt No -- el giữa đêm trời đầy sương.
   Người ơi ngươi có hiểu
   Mầu nhiệm tình thương.
-  thương.
-  Mầu nhiệm của tình thương.
+  thương,
+  mầu nhiệm của tình thương.
 }
 
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 15\mm
+  top-margin = 20\mm
+  bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -420,8 +442,8 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #2
-  %systems-per-page = 5
+  %page-count = #4
+  systems-per-page = 4
 }
 
 TongNhip = {
@@ -432,19 +454,18 @@ TongNhip = {
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacDiepKhucSop
       }
-      <<
-      \new Voice \TongNhip \partCombine 
-        \nhacDiepKhucSop
-        \notBePhu -2 { \nhacDiepKhucAlto }
-      \new NullVoice = beSop \nhacDiepKhucSop
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
-      \new NullVoice = beAlto \nhacDiepKhucAlto
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacDiepKhucAlto
+      }
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
-      >>
+    >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
@@ -456,7 +477,7 @@ TongNhip = {
   \layout {
     \override Lyrics.LyricSpace.minimum-distance = #1
     \override LyricHyphen.minimum-distance = #1
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
 }

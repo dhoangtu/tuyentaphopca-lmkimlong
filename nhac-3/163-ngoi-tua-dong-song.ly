@@ -4,8 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Ngồi Tựa Dòng Sông" }
-  composer = "Tv. 136"
-  arranger = "Lm. Kim Long"
+  poet = "Ý: Tv. 136"
+  composer = "Lm. Kim Long"
   tagline = ##f
 }
 
@@ -15,15 +15,16 @@ nhacPhienKhucSopMot = \relative c' {
   \partial 4 r4 |
   R2
   r4 e8. e16 |
-  c'8 c a8. a16 |
-  b8 b4. ~ |
+  c'8 ^> c ^> a8. a16 |
+  b8 ^> b4. ^> ~ |
   b4 d8. c16 |
   d8 e a,16 (c) b (a) |
   e4 e8. e16 |
   b'8 b gs8. gs16 |
-  a8 a4. ~ |
-  a4 r |
-  R2*4 \bar "||"
+  a8 ^> a4. ^> ~ |
+  a4 \bar "|." \break
+  r |
+  R2*4
   
   \key a \major
   cs8. cs16 cs8 cs |
@@ -43,12 +44,12 @@ nhacPhienKhucAltoMot = \relative c' {
   R2
   r4 e8. e16 |
   e8 e a8. a16 |
-  a8 gs4. ~ |
-  gs4 d'8. c16 |
-  d8 e a,16 (c) b (a) |
-  e4 e8. e16 |
+  gs8 gs4. ~ |
+  gs4 r4 |
+  R2
+  r4 e8. e16 |
   f8 f e8. e16 |
-  c8 c4. ~ |
+  c8 ^> c4. ^> ~ |
   c4 r |
   R2*4
   
@@ -80,7 +81,7 @@ nhacPhienKhucBasMot = \relative c {
   f8. e16 a8 a |
   b4 c8 c |
   a8. b16 f'8 e |
-  e2
+  e2 \bar "||"
   
   \key a \major
   R2
@@ -96,8 +97,8 @@ nhacPhienKhucBasMot = \relative c {
 
 % Lời
 loiPhienKhucSopMot = \lyrics {
-  Lệ sầu lã chã vọng về Si -- on.
-  Trên hàng tơ liễu rủ não nề.
+  Lệ sầu lã chã, vọng về Si -- on,
+  Trên cành tơ liễu rủ não nề.
   Huyền cầm gác đó lòng buồn đê mê.
   
   \set stanza = "1."
@@ -106,6 +107,23 @@ loiPhienKhucSopMot = \lyrics {
 }
 
 loiPhienKhucSopHai = \lyrics {
+  \repeat unfold 23 { _ }
+  \set stanza = "2."
+  Giê -- ru -- sa -- lem hỡi,
+  lòng này nếu quên ngươi.
+  Nguyện tay ta tê bại,
+  lưỡi dính trong họng mãi.
+}
+loiPhienKhucAltoMot = \lyrics {
+  Lệ sầu lã chã, vọng về Si -- on,
+  Huyền cầm gác đó lòng buồn đê mê.
+  
+  \set stanza = "1."
+  Mau vui lên đi nhé, dạo đàn hát ta nghe.
+  Điệu Si -- on quen thuộc, vẫn xướng ca thuở trước.
+}
+
+loiPhienKhucAltoHai = \lyrics {
   \repeat unfold 23 { _ }
   \set stanza = "2."
   Giê -- ru -- sa -- lem hỡi,
@@ -127,6 +145,7 @@ loiPhienKhucBasMot = \lyrics {
 }
 
 loiPhienKhucBasHai = \lyrics {
+  \repeat unfold 23 { _ }
   \set stanza = "2."
   Nơi quê người làm sao ta hát,
   những khúc nhạc mừng Chúa dân ta.
@@ -138,8 +157,8 @@ loiPhienKhucBasHai = \lyrics {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20\mm
-  bottom-margin = 20\mm
+  top-margin = 5\mm
+  bottom-margin = 5\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -149,7 +168,7 @@ loiPhienKhucBasHai = \lyrics {
 			       "Deja Vu Serif Condensed"
 			       (/ 20 20)))
   print-page-number = ##f
-  %page-count = 3
+  page-count = 1
   %systems-per-page = 4
 }
 
@@ -176,6 +195,7 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
+    %{
     \new Staff \with {
         printPartCombineTexts = ##f
       }
@@ -187,19 +207,37 @@ notBePhu =
       \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
       \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
     >>
+    %}
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacPhienKhucSopMot
+      }
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacPhienKhucAltoMot
+      }
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoMot
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoHai
+    >>
     \new Staff <<
       \new Voice = "beBas" {
         \clef bass \TongNhip \nhacPhienKhucBasMot
       }
       \new Lyrics \lyricsto beBas \loiPhienKhucBasMot
+      \new Lyrics \lyricsto beBas \loiPhienKhucBasHai
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #0.6
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    
     \context {
       \Staff \RemoveEmptyStaves
       \override VerticalAxisGroup.remove-first = ##t
     }
+    
   } 
 }

@@ -22,19 +22,19 @@ nhacPhienKhucSop = \relative c'' {
   g,2 ~ |
   g4 r |
   R2
-  r8 d' g, b |
+  r8 d' ^\mp g, b |
   a2 ~ |
   a8 a g fs |
   g4 r |
   R2
-  r8 g a b |
+  r8 g ^> a ^> b ^> |
   c2 |
-  b8 d4 d8 |
+  b8 ^> d4 d8 |
   e c a4 ~ |
   a r8 a |
   fs g4 a8 |
   b4. a8 |
-  a d4 a8 |
+  a d,4 a'8 |
   g2 ~ |
   g4 \bar "|."
 }
@@ -77,9 +77,9 @@ nhacPhienKhucTenor = \relative c {
   d4 r |
   r8 b' g fs |
   g2 ~ |
-  g8 fs a d, |
+  g8 fs ^> a ^> d, ^> |
   e4 r |
-  r e'4 |
+  r e'4 ^\f |
   d b8 g |
   c c4 c8 |
   b2 |
@@ -88,10 +88,10 @@ nhacPhienKhucTenor = \relative c {
   b' a4 b8 |
   g2 ~ |
   g4 r4 |
-  r8 d e fs |
+  r8 d ^> e ^> fs ^> |
   g4 g |
-  c,4. ef8 |
-  d d a4 |
+  c,4. e8 |
+  d ^> d ^> a4 |
   r8 g g' (fs) |
   g4. g8 |
   fs4 fs |
@@ -120,7 +120,7 @@ nhacPhienKhucBas = \relative c {
   g4 r4 |
   r8 d' e fs |
   g4 g |
-  c,4. ef8 |
+  c,4. e8 |
   d d a4 |
   r8 g g' (fs) |
   g d b c |
@@ -131,23 +131,24 @@ nhacPhienKhucBas = \relative c {
 
 % Lời
 loiPhienKhucSopMot = \lyricmode {
-  Mục đồng hơi các anh đã thấy ai?
-  Hãy nói đi tin lại cho ta biết
+  Mục đồng hỡi các anh đã thấy chi?
+  Hãy nói đi, tin lại cho ta biết,
   trên dương gian ai vừa xuất hiện.
   \set stanza = "1."
   Thấy Vị Cứu Tinh với muôn đạo binh.
   Rạng danh Thiên Chúa, rạng danh Thiên Chúa trên trời.
-  Ai bình nơi dương thế cho nhân loại Chúa thương.
+  An bình nơi dương thế cho nhân loại Chúa thương.
 }
 
 loiPhienKhucSopHai = \lyricmode {
+  \repeat unfold 23 { _ }
   \set stanza = "2."
   Thấy một Nữ Trinh với một Hài Nhi.
 }
 
 loiPhienKhucAlto = \lyricmode {
   \override Lyrics.LyricText.font-shape = #'italic
-  Mục đồng ơi!
+  Mục đồng hỡi
   \repeat unfold 16 { _ }
   hiển
   \repeat unfold 24 { _ }
@@ -155,12 +156,12 @@ loiPhienKhucAlto = \lyricmode {
 }
 
 loiPhienKhucBasMot = \lyricmode {
-  Mục đồng ơi! Hãy nói đi.
-  Nói cho ta biết ngươi đã gặp ai?
+  Mục đồng hỡi, hãy nói đi.
+  Nói cho ta biết anh đã gặp ai?
   \set stanza = "1."
   Chúng tôi đã gặp thấy Đấng Cứu Tinh
   và đoàn Thiên Sứ hợp tiếng ca hát mừng.
-  Rạng danh Thiên Chúa, Chúa cả sáng danh trên trời
+  Rạng danh Thiên Chúa, Chúa Cả sáng danh trên trời
   và dưới thế
   \override Lyrics.LyricText.font-shape = #'italic
   (an bình)
@@ -168,10 +169,17 @@ loiPhienKhucBasMot = \lyricmode {
   cho ai Chúa thương.
 }
 
+loiPhienKhucBasHai = \lyricmode {
+  \repeat unfold 14 { _ }
+  \set stanza = "2."
+  Chúng tôi đã gặp thấy Đức Nữ Trinh
+  và một Hài Nhi là Đức Vua thái bình.
+}
+
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
+  top-margin = 10\mm
   bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -219,6 +227,7 @@ notBePhu =
         \notBePhu -2 { \nhacPhienKhucAlto }
       \new NullVoice = beSop \nhacPhienKhucSop
       \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
       \new NullVoice = beAlto \nhacPhienKhucAlto
       \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
       >>
@@ -233,6 +242,7 @@ notBePhu =
         \notBePhu -2 { \nhacPhienKhucBas }
       \new NullVoice = beBas \nhacPhienKhucBas
       \new Lyrics \lyricsto beBas \loiPhienKhucBasMot
+      \new Lyrics \lyricsto beBas \loiPhienKhucBasHai
     >>
   >>
   \layout {

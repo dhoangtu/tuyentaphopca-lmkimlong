@@ -69,7 +69,7 @@ nhacDiepKhucSop = \relative c'' {
       a2
     }}
   >>
-  \bar "||"
+  \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -127,30 +127,30 @@ nhacDiepKhucBas = \relative c' {
 
 % Lời
 loiPhienKhucSopMot = \lyricmode {
-  Xin Chúa quay trở về để chúng con được sống.
-  Để đoàn dân Chúa được luôn hoan hỉ trong Ngài.
+  Xin Chúa quay trở về để chúng con được sống
+  để đoàn dân Chúa được luôn hoan hỉ trong Ngài.
   \set stanza = "1."
-  Mọi điều ân oán mong Ngài quên đi.
+  Mọi điều ân oán mong Ngài quên đi
   Ban tặng phúc Cứu Độ đoàn con.
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \repeat unfold 20 { _ }
   \set stanza = #"2."
-  Hòa bình công lý (ơ) đà giao duyên.
+  Hòa bình công lý (ơ) đà giao duyên
   Công bình ngó xuống từ trời cao.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \repeat unfold 20 { _ }
   \set stanza = #"3."
-  Ruộng đồng nay sẽ trổ nụ đơm bông.
+  Ruộng đồng nay sẽ trổ nụ đơm bông
   Cứu độ dõi bước chân Ngài luôn.
 }
 
 loiPhienKhucAlto = \lyricmode {
   Xin Chúa quay trở về để chúng con được sống
-  để dân Ngãi hoan hỉ trong Ngài.
+  để dân Ngài mãi hoan hỉ trong Ngài.
 }
 
 loiPhienKhucBasMot = \lyricmode {
@@ -158,9 +158,9 @@ loiPhienKhucBasMot = \lyricmode {
   trở về để đoàn con lại được sống động,
   để dân Ngài được hoan hỉ trong Ngài.
   \set stanza = "1."
-  Xin Chúa dẫn đường chúng con trở về
+  Xin Chúa dẫn đường chúng con trở về,
   mong Ngài quên đi.
-  Xin Chúa tỏ ra lòng nhân ái
+  Xin Chúa tỏ ra lòng nhân ái,
   ban tặng cứu chúng con.
 }
 
@@ -169,16 +169,17 @@ loiPhienKhucBasHai = \lyricmode {
   \set stanza = #"2."
   Ân nghĩa tín thành (ơ) nay hội ngộ
   nay đà giao duyên.
-  Trung tín mọc lên từ đất thấp
-  công bình bởi chốn cao.
+  Trung tín mọc lên từ đất thấp,
+  Công bình bởi chốn cao.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \repeat unfold 22 { _ }
   \set stanza = #"3."
-  Đây những phúc lộc Chúa ban dồi dào trổ nụ đơm bông.
-  Công lý sẽ khai đường trước
-  Chúa cứu độ dõi bước luôn.
+  Đây những phúc lộc Chúa ban dồi dào,
+  trổ nụ đơm bông.
+  Công lý sẽ khai đường trước Chúa,
+  Cứu độ dõi bước luôn.
 }
 
 % Dàn trang

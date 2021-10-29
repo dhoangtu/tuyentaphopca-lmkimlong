@@ -5,7 +5,7 @@
 \header {
   title = \markup { \fontsize #3 "Đêm Giáng Sinh" }
   composer = "Thơ: Lm. Đỗ Xuân Quế"
-  arranger = "Lm. Kim Long"
+  arranger = "Nhạc: Lm. Kim Long"
   tagline = ##f
 }
 
@@ -27,20 +27,21 @@ notBePhu =
 % Nhạc
 nhacDiepKhucSop = \relative c' {
   \set Staff.printKeyCancellation = ##f
+\override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \partial 4
   <<
     {
-      f8 d16 f |
-      g4 bf8 g16 bf |
-      c4 a16 c a g |
+      f8 (d16 f |
+      g4) bf8 (g16 bf |
+      c4) a16 c a g |
       e4. f8 |
       <f a,>4
     }
     \\
     {
-      \skip 4
+      r4
       <f d>4 r |
-      <e c> f8. e16 |
+      <e c> f8. d16 |
       c4 bf |
       \skip 4
     }
@@ -110,10 +111,11 @@ nhacDiepKhucSop = \relative c' {
   g4. a8 |
   b!4 e8 e |
   cs4. d8 |
-  d2 ~ \bar "||"
+  d2 ~ |
+  d4 \bar "||"
   
   \key bf \major
-  d4 a
+  a |
   
   \time 3/4
   
@@ -131,7 +133,7 @@ nhacDiepKhucSop = \relative c' {
     d g,4. a8 |
     \time 2/4
     a2 ~ |
-    a8 r r4 |
+    a8 r r4 \bar "||"
     \key g \major
     R2
     r8 d16 e d8 c |
@@ -203,6 +205,7 @@ nhacDiepKhucSop = \relative c' {
 
 nhacDiepKhucAlto = \relative c'' {
   \set Staff.printKeyCancellation = ##f
+\override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   r4
   R2*3
   R2
@@ -239,9 +242,10 @@ nhacDiepKhucAlto = \relative c'' {
   g4 b!8 b |
   a4 g |
   fs2 ~ |
+  fs!4 
   
   \key bf \major
-  fs!4 fs
+  fs!
   \time 3/4
   g4 bf,4. bf8 |
   a2 d4 |
@@ -290,6 +294,7 @@ nhacDiepKhucAlto = \relative c'' {
 
 nhacDiepKhucBas = \relative c' {
   \set Staff.printKeyCancellation = ##f
+\override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   r4
   <<
     {
@@ -358,9 +363,10 @@ nhacDiepKhucBas = \relative c' {
   g4 g8 gs |
   a4 a, |
   d2 ~ |
+  d4
   
   \key bf \major
-  d4 d |
+  d |
   \time 3/4
   g4 g4. g8 |
   fs2 g4 |
@@ -376,7 +382,7 @@ nhacDiepKhucBas = \relative c' {
   d8 g16 a g8 e! |
   \key g \major
   d2 ~ |
-  d8 b'16 c bf8 a |
+  d8 b'16 c b8 a |
   g g16 a g8 fs |
   e4. b'8 |
   c (a) b g |
@@ -418,37 +424,37 @@ nhacDiepKhucBas = \relative c' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Đêm Giáng Sinh tưng bừng,
-  đêm Giáng Sinh tưng bừng đây đêm Giáng Sinh tưng bừng
+  Đêm giáng sinh tưng bừng,
+  đêm giáng sinh tưng bừng, đây đêm giáng sinh tưng bừng
   con thấy lòng lâng lâng, con thấy lòng lâng lâng.
-  Đêm bình an, đêm thánh đất với trời (mà) đất với trời,
+  Đêm bình an, đêm thánh, đất với trời (mà) đất với trời,
   đất với trời hân hoan.
   Nghe tiếng ca vang trời,
-  nghe tiếng ca vang trời con thấy lòng reo vui.
-  Đêm hồng ân, đêm thánh Chúa đến cùng nhân gian.
+  nghe tiếng ca vang trời, con thấy lòng reo vui.
+  Đêm hồng ân, đêm thánh, Chúa đến cùng nhân gian.
   Đêm
   \repeat volta 2 {
     <<
       {
-        Giáng Sinh âm thầm dâng tấc lòng tri ân.
-        Dâng tình yêu chan chứa hát kính bài vinh danh.
+        giáng sinh âm thầm, dâng tấc lòng tri ân,
+        dâng tình yêu chan chứa, hát kính bái vinh danh.
         Nghe tiếng ca vang trời,
-        nghe tiếng ca vang trời nay nghe tiếng ca vang trời
+        nghe tiếng ca vang trời nay nghe tiếng ca vang trời,
         con thấy lòng reo vui, con thấy lòng reo vui.
-        Đêm hồng ân, đêm thánh Chúa đến cùng (rầy) Chúa đến cùng,
+        Đêm hồng ân, đêm thánh, Chúa đến cùng (rầy) Chúa đến cùng,
         Chúa đến cùng nhân
       }
       \new Lyrics = "phienKhucSopHai"
         \with { alignBelowContext = "phienKhucSopMot" }
         {
 	        \set associatedVoice = "beSop"
-          xuống nơi cơ hàn chung sống cùng nhân gian.
-          Đem tình yêu chân lý Chúa đón mời muôn dân.
-          Đêm Giáng Sinh tưng bừng,
-          đêm Giáng Sinh tưng bừng đây
-          đêm Giáng Sinh tưng bừng con thấy lòng lâng lâng,
+          xuống nơi cơ hàn, chung sống cùng nhân gian,
+          đem tình yêu chân lý, Chúa đón mời muôn dân.
+          Đêm giáng sinh tưng bừng,
+          đêm giáng sinh tưng bừng đây
+          đêm giáng sinh tưng bừng, con thấy lòng lâng lâng,
           con thấy lòng lâng lâng.
-          Đêm bình an, đêm thánh đất với trời (mà)
+          Đêm bình an, đêm thánh, đất với trời (mà)
           đất với trời, đất với trời hân
         }
     >>
@@ -466,34 +472,34 @@ loiDiepKhucSop = \lyricmode {
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Đêm Giáng Sinh tưng bừng, tưng bừng
-  đêm Giáng Sinh tưng bừng đây đêm Giáng Sinh tưng bừng
+  Đêm giáng sinh tưng bừng, tưng bừng,
+  đêm giáng sinh tưng bừng, đây đêm giáng sinh tưng bừng,
   con đầy lòng lâng lâng, con thấy lòng lâng lâng.
   Đêm bình an, đêm lành dất với trời, đất trời hân hoan.
   La la la la la la la la la la la la la la la la.
-  Đêm muôn ân, đêm thánh Chúa đến cùng nhân gian.
+  Đêm muôn ân, đêm thánh, Chúa đến cùng nhân gian.
   Đêm
   \repeat volta 2 {
     <<
       {
-        Giáng Sinh âm thầm dâng tấc lòng tri ân.
-        Dâng tình yêu chan chứa hát kính bài vinh danh.
+        giáng sinh âm thầm, dâng tấc lòng tri ân,
+        dâng tình yêu chan chứa, hát kính bái vinh danh.
         Nghe tiếng ca vang trời, vang trời
-        nghe tiếng ca vang trời nay nghe tiếng ca vang trời
+        nghe tiếng ca vang trời nay nghe tiếng ca vang trời,
         con dậy lòng reo vui, con thấy lòng reo vui.
-        Đêm hồng ân, đêm lành Chúa đến cùng, đến cùng nhân
+        Đêm hồng ân, đêm lành, Chúa đến cùng, đến cùng nhân
       }
       \new Lyrics = "phienKhucAltoHai"
         \with { alignBelowContext = "phienKhucAltoMot" }
         {
 	        \set associatedVoice = "beAlto"
-	        xuống nơi cơ hàn chung sống cùng nhân gian.
-          Đem tình yêu chân lý Chúa đón mời muôn dân.
-          Đêm Giáng Sinh tưng bừng,
+	        xuống nơi cơ hàn, chung sống cùng nhân gian,
+          đem tình yêu chân lý, Chúa đón mời muôn dân.
+          Đêm giáng sinh tưng bừng,
           tưng bừng 
-          đêm Giáng Sinh tưng bừng đây đêm Giáng Sinh tưng bừng
+          đêm giáng sinh tưng bừng đây đêm giáng sinh tưng bừng,
           con đầy lòng lâng lâng, con thấy lòng lâng lâng.
-          Đêm bình an, đêm lành đất với trời, đất trời hân
+          Đêm bình an, đêm lành, đất với trời, đất trời hân
       }
     >>
   }
@@ -504,43 +510,43 @@ loiDiepKhucAlto = \lyricmode {
       Sinh
     }
     {
-      hoan đất với trời hân hoan.
+      hoan, đất với trời hân hoan.
     }
   }
 }
 
 loiDiepKhucBas = \lyricmode {
   \repeat unfold 6 { _ }
-  Đêm Giáng Sinh tưng bừng, đêm Giáng Sinh tưng bừng,
-  đêm Giáng Sinh tưng bừng, đêm Giáng Sinh tưng bừng,
-  tưng bừng con đầy lòng lâng lâng, lòng thấy lâng lâng.
+  Đêm giáng sinh tưng bừng, đêm giáng sinh tưng bừng,
+  đêm giáng sinh tưng bừng, đêm giáng sinh tưng bừng,
+  tưng bừng, con đầy lòng lâng lâng, lòng thấy lâng lâng.
   Đêm bình an, đêm lành đất với trời (mà) đất với trời,
   trời đất hân hoan, hân hoan.
   La la la la la la la la la la la la la la la la.
-  Đêm muôn ân, đêm thánh Chúa đến với trần gian.
+  Đêm muôn ân, đêm thánh, Chúa đến với trần gian.
   Đêm
   \repeat volta 2 {
   <<
     {
-      Giáng Sinh âm thầm dâng tấc lòng tri ân.
-      Dâng tình yêu chan hòa hát kính vài Ngài vinh danh.
+      giáng sinh âm thầm, dâng tấc lòng tri ân,
+      Dâng tình yêu chan hòa và kính bái Ngài vinh danh.
       Nghe tiếng ca vang trời, nghe tiếng ca vang trời,
       nghe tiếng ca vang trời, nghe tiếng ca vang trời,
       vang trời con dậy lòng reo vui, dậy lòng reo vui.
-      Đêm hồng ân, đêm lành Chúa đến cùng (rầy)
+      Đêm hồng ân, đêm lành, Chúa đến cùng (rầy)
       Chúa đến cùng (rầy) Chúa đến với trần
     }
     \new Lyrics = "phienKhucBasHai"
       \with { alignBelowContext = "phienKhucBasMot" }
       {
 	      \set associatedVoice = "beBas"
-	      xuống nơi cơ hàn chung sống cùng nhân gian.
-	      Đem tình yêu chân thật Ngài mong đón mời muôn dân.
-	      Đêm Giáng Sinh tưng bừng,
-	      đêm Giáng Sinh tưng bừng, đêm Giáng Sinh tưng bừng,
-	      đêm Giáng Sinh tưng bừng,
-	      tưng bừng con đầy lòng lâng lâng, đầy lòng lâng lâng.
-	      Đêm bình an, đêm lành đất với trời (mà)
+	      xuống nơi cơ hàn, chung sống cùng nhân gian,
+	      Đem tình yêu chân thật, Ngài mong đón mời muôn dân.
+	      Đêm giáng sinh tưng bừng,
+	      đêm giáng sinh tưng bừng, đêm giáng sinh tưng bừng,
+	      đêm giáng sinh tưng bừng,
+	      tưng bừng, con đầy lòng lâng lâng, đầy lòng lâng lâng.
+	      Đêm bình an, đêm lành, đất với trời (mà)
 	      đất với trời (mà) đất với trời hân
       }
   >>
@@ -560,8 +566,8 @@ loiDiepKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 20\mm
+  top-margin = 10\mm
+  bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -572,7 +578,7 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #4
+  page-count = #4
   %ragged-bottom = ##f
   systems-per-page = 4
 }
@@ -609,8 +615,8 @@ TongNhip = {
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    %\override Lyrics.LyricSpace.minimum-distance = #0.6
+    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \context {
       \Staff \RemoveEmptyStaves
