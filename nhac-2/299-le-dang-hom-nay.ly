@@ -4,6 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Lễ Dâng Hôm Nay" }
+  poet = "Ý: Dn 3,28-42"
   composer = "Lm. Kim Long"
   tagline = ##f
 }
@@ -43,9 +44,9 @@ nhacPhienKhuc = \relative c' {
 
 nhacDiepKhucSop = \relative c' {
   \key c \major
-  \time 3/4
-  e4. f8 e d |
-  
+  \time 23/4
+  \partial 2. e4. f8 e d |
+  \override Staff.TimeSignature.break-visibility = #all-invisible
   \time 2/4
   d4. e16 (d) |
   c8 c d e |
@@ -66,9 +67,9 @@ nhacDiepKhucSop = \relative c' {
 
 nhacDiepKhucAlto = \relative c' {
   \key c \major
-  \time 3/4
+  \time 23/4
   c4. d8 c c |
-  
+  \override Staff.TimeSignature.break-visibility = #all-invisible
   \time 2/4
   b4. b8 |
   c c b c |
@@ -89,9 +90,9 @@ nhacDiepKhucAlto = \relative c' {
 
 nhacDiepKhucBas = \relative c' {
   \key c \major
-  \time 3/4
-  R2.
-  
+  \time 23/4
+  r2 r4
+  \override Staff.TimeSignature.break-visibility = #all-invisible
   \time 2/4
   g4 g8 g |
   a8. g16 f8 e |
@@ -113,8 +114,8 @@ nhacDiepKhucBas = \relative c' {
 % Lời
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Lạy Chúa, Chúa công minh khi Ngài phân xét
-  vì chúng con đã phản nghịch Ngài.
+  Lạy Chúa, Chúa công minh khi Ngài soi xét
+  vì chúng con đã phản nghịch Ngài,
   Làm bao điều gian ác khi dám lìa bỏ Chúa,
   chúng con sai lỗi nặng nề, nhơ uế mọi bề.
 }
@@ -137,8 +138,8 @@ loiPhienKhucBa = \lyricmode {
 
 loiPhienKhucBon = \lyricmode {
   \set stanza = #"4."
-  Lạy Chúa, chúng con nay đoan nguyền theo Chúa
-  lòng trí luôn hướng về Ngài,
+  Lạy Chúa, chúng con nay đoan nguyền theo Chúa,
+  lòng trí luôn hướng trọn về Ngài,
   hằng trông tìm Nhan Thánh,
   xin Chúa đừng ẩn tránh,
   chiếu theo ân nghĩa ngàn trùng, thương chúng con cùng.
@@ -153,17 +154,8 @@ loiDiepKhucSop = \lyricmode {
 
 loiDiepKhucBas = \lyricmode {
   Nay mong chi lễ chúng con dâng lên sẽ làm đẹp lòng Ngài.
-  Vì lạy Chúa này những ai cậy tin Chúa
-  nào phải thất vọng
-  <<
-    { ê chề. }
-    \new Lyrics {
-	    \set associatedVoice = "beBas"
-	    \override Lyrics.LyricText.font-shape = #'italic
-	    thảm thê.
-	  }
-  >>
-      
+  Vì lạy Chúa này những ai tìm cậy Chúa
+  nào phải thất vọng ê chề.
 }
 
 % Dàn trang

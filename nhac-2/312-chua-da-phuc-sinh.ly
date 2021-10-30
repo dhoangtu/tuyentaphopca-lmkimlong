@@ -12,6 +12,7 @@
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
   \set Staff.printKeyCancellation = ##f
+\set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key g \major \time 2/4
   \partial 4. r4.
   \repeat volta 2 {
@@ -32,12 +33,12 @@ nhacDiepKhucSop = \relative c'' {
       d4 r
     }
     {
-      d2 ~ \bar "||"
+      d2 ~ |
       
-      \key bf \major
-      d4 r
+      d4 r \bar "||"
     }
   }
+  \key bf \major
   R2
   r8 bf c (bf) |
   a4 r |
@@ -54,6 +55,7 @@ nhacDiepKhucSop = \relative c'' {
 
 nhacDiepKhucAlto = \relative c' {
   \set Staff.printKeyCancellation = ##f
+\set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key g \major \time 2/4
   r4. |
   R2
@@ -70,8 +72,9 @@ nhacDiepKhucAlto = \relative c' {
   fs4 r |
   fs2 ~ |
   
-  \key bf \major
   fs4 r |
+
+  \key bf \major
   R2
   r8 g a (g) |
   fs4 r |
@@ -88,9 +91,10 @@ nhacDiepKhucAlto = \relative c' {
 
 nhacDiepKhucBas = \relative c' {
   \set Staff.printKeyCancellation = ##f
+\set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key g \major \time 2/4
   b8 b16 (c) b8 |
-  g4 b8 a |
+  a4 b8 a |
   g4. g8 |
   a4 fs |
   g8 e e c |
@@ -104,8 +108,9 @@ nhacDiepKhucBas = \relative c' {
   d8 b' b16 (c) b8 |
   d,2 ~ |
   
-  \key bf \major
   d8 d bf' \fermata g |
+  
+  \key bf \major
   a4 fs8 g16 (a) |
   d,2 ~ |
   d8 c ^> bf ^> a ^> |
@@ -135,12 +140,12 @@ nhacPhienKhucSop = \relative c' {
   r8. b'16 b8 b |
   c c4 a8 |
   d4 r8 d |
-  d8. d16 b8 r |
+  d8. d16 d8 r |
   r4. e8 |
   e8. e16 e8 e |
   fs fs4 d8 |
   g2 ~ |
-  g4 \bar "|."
+  g4 r \bar "|."
 }
 
 nhacPhienKhucAlto = \relative c'' {
@@ -164,13 +169,13 @@ nhacPhienKhucAlto = \relative c'' {
   c8. c16 c8 c |
   d a4 a8 |
   b2 ~ |
-  b4
+  b4 r
 }
 
 nhacPhienKhucTenor = \relative c' {
   \key g \major \time 3/4
   R2.
-  e8. c16 e8 fs d c |
+  e8. c16 e8 a, d c |
   b2 b4 |
   
   \time 2/4
@@ -188,7 +193,7 @@ nhacPhienKhucTenor = \relative c' {
   c8 a a8. a16 |
   d8 d4 d8 |
   g,2 ~ |
-  g4
+  g4 r
 }
 
 nhacPhienKhucBas = \relative c' {
@@ -216,19 +221,19 @@ nhacPhienKhucBas = \relative c' {
   c8 a a8. a16 |
   d8 d4 d8 |
   g,2 ~ |
-  g4
+  g4 r
 }
 
 % Lời
 loiDiepKhucSop = \lyricmode {
   Tinh tú đêm nay chói ngập trời.
   Sông Ngân vằng vặc ánh vàng trôi.
-  Trên bờ suối nhạc ai đã bắc cầu chuyển khối vui.
+  Trên bờ suối bạc ai đã bắc cầu chuyển khối vui.
   vui.
   Lệ ứ trào.
-  Gửi trời nao.
-  Tín Đồ mất Chúa ôi cô quạnh.
-  Mỏn đất trơ vơ cả huyệt sầu.
+  Gửi trời nao
+  Tín đồ mất Chúa ôi cô quạnh.
+  mỏm đá trơ vơ cả huyệt sầu.
   Bỗng đâu gió đẩy đất rung rinh.
   Thôn nữ sầu tan vội ngoảnh nhìn.
   reo vang Thiên Chúa đã phục sinh.
@@ -239,12 +244,12 @@ loiDiepKhucSop = \lyricmode {
 loiDiepKhucAlto = \lyricmode {
   Tinh tú đêm nay chói ngập trời.
   vằng vặc vàng trôi.
-  Trên bờ suối bạc cao lồng lộng cầu chuyển khối vui.
+  Trên bờ suối bạc ai đã bắc cầu chuyển khối vui.
   vui.
   Lệ ứ trào.
-  Gửi trời nao.
-  Tín Đồ mất Chúa ôi cô quạnh.
-  Mỏn đất trơ vơ cả huyệt sầu.
+  Gửi trời nao
+  Tín đồ mất Chúa ôi cô quạnh.
+  mỏm đá trơ vơ cả huyệt sầu.
 }
 
 loiDiepKhucBas = \lyricmode {
@@ -256,31 +261,31 @@ loiDiepKhucBas = \lyricmode {
   Buồn ngấm hàng mi lệ ứ trào.
   Hương lòng thờ kính gửi trời nao,
   gửi về trời nao.
-  Ôi cô quạnh mỏn đất trơ vơ cả huyệt sầu.
+  Ôi cô quạnh mỏm đá trơ vơ cả huyệt sầu.
 }
 
 loiPhienKhucSop = \lyricmode {
-  Bỗng đâu gió đẩy đất rung rinh.
+  Bỗng đâu gió đẩy đất rung rinh,
   Thôn nữ sầu tan vội ngoảnh nhìn.
-  Reo vang Thiên Chúa đã phục sinh.
+  reo vang Thiên Chúa đã phục sinh.
   Reo vang, reo vang
-  Reo vang, reo vang Thiên Chúa đã phục sinh.
+  Reo vang reo vang Thiên Chúa đã phục sinh.
 }
 
 loiPhienKhucAlto = \lyricmode {
-  Bỗng đâu gió đẩy đất rung rinh.
+  Bỗng đâu gió đẩy đất rung rinh,
   Thôn nữ sầu tan vội ngoảnh nhìn.
-  Reo vang, reo vang Thiên Chúa đã phục sinh.
+  reo vang, reo vang Thiên Chúa đã phục sinh.
   Reo vang, reo vang.
-  Reo vang, reo vang Thiên Chúa đã phục sinh.
+  Reo vang reo vang Thiên Chúa đã phục sinh.
 }
 
 loiPhienKhucTenor = \lyricmode {
-  Bỗng đâu gió đẩy đất rung rinh, rung rinh.
+  Bỗng đâu gió đẩy đất rung rinh, rung rinh,
   Hai chàng xiêm áo in mầu tuyết.
   Reo vang, reo vang.
-  Reo vang, reo vang Thiên Chúa đã phục sinh.
-  Reo avng Thiên Chúa cả thiên đình.
+  Reo vang, reo vang Thiên Chúa đã phục sinh,
+  reo avng Thiên Chúa cả thiên đình.
 }
 
 loiPhienKhucBas = \lyricmode {
@@ -288,8 +293,8 @@ loiPhienKhucBas = \lyricmode {
   bỗng đâu gió đẩy đất rung rinh.
   Hai chàng xiêm áo in mầu tuyết.
   Reo vang, reo vang.
-  Reo vang, reo vang Thiên Chúa đã phục sinh.
-  Reo vang Thiên Chúa cả thiên đình.
+  Reo vang, reo vang Thiên Chúa đã phục sinh,
+  reo vang Thiên Chúa cả thiên đình.
 }
 
 % Dàn trang
@@ -307,7 +312,7 @@ loiPhienKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #1
+  %page-count = #3
   %ragged-bottom = ##t
 }
 

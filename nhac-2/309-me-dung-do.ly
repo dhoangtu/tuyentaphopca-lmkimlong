@@ -131,9 +131,10 @@ nhacDiepKhucBas = \relative c {
   <a d,>4 r
 }
 
-nhacPhienKhuc = \relative c'' {
+nhacPhienKhucSolo = \relative c'' {
+  R2
   d4 bf8 a |
-  g4 a16 (a) bf8 |
+  g4 g16 (a) bf8 |
   a (g) f g |
   a4 a8 a |
   g4 f8 (e) |
@@ -147,65 +148,133 @@ nhacPhienKhuc = \relative c'' {
   a4 f |
   e8 g a e |
   d2 ~ |
-  d4 \bar "||"
+  d4 \bar "|."
+}
+
+nhacPhienKhucSop = \relative c'' {
+  d2 ~ |
+  d8 a d c |
+  bf4 d |
+  d bf |
+  a d8 d |
+  cs2 |
+  d ~ |
+  d8 bf d g, |
+  
+}
+
+nhacPhienKhucAlto = \relative c'' {
+
+}
+
+nhacPhienKhucBas = \relative c'' {
+
 }
 
 % Lời
 loiDiepKhucSop = \lyricmode {
   Nhạc thương trầm buông hắt hiu.
-  Đồi cao u hoài loang máu đàu.
-  Con Chúa đau thương treo trên Thập Giá
+  Đồi cao u hoài loang máu đào,
+  Con Chúa đau thương treo trên thập giá
   hiến thân vì nhân loại tội tình.
-  Đồng công cùng con dấu yêu.
-  Vì thương nhân loại bao khốn cùng.
-  Xin dẫn đưa bao tâm hồn lạc hướng về bên Mẹ.
+  Đồng công cùng con dấu yêu,
+  vì thương nhân loại bao khốn cùng,
+  xin dẫn đưa bao tâm hồn lạc hướng về bên Mẹ.
   Mẹ ơi.
 }
 
 loiDiepKhucAlto = \lyricmode {
   Nhạc thương trầm buông hắt hiu.
-  Đồi cao u hoài loang máu đàu.
-  Con Chúa đau thương treo trên Thập Giá
+  Đồi cao u hoài loang máu đào,
+  Con Chúa đau thương treo trên thập giá
   hiến thân vì nhân loại nhân loại tội tình.
-  Đồng công cùng con dấu yêu.
-  Vì thương nhân loại bao khốn cùng.
-  Xin dẫn đưa bao tâm hồn lạc hướng về bên Mẹ.
+  Đồng công cùng con dấu yêu,
+  vì thương nhân loại bao khốn cùng,
+  xin dẫn đưa bao tâm hồn lạc hướng về bên Mẹ.
   Mẹ ơi.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Mẹ đứng đó khi hoàng hôn tím màu.
-  Đồi cao u hoài loang máu đào.
-  Con Chúa đau thương treo trên Thập Giá
+  Mẹ đứng đó khi hoàng hôn tím mầu.
+  Đồi cao u hoài loang máu đào,
+  Con Chúa đau thương treo trên thập giá
   hiến thân vì nhân loại tội tình.
   Mẹ đứng đó tâm hồn tê tái sầu.
-  Vì thương nhân loại bao khốn cùng.
-  Xin dẫn đưa bao tâm hồn lạc hướng về bên Mẹ.
+  vì thương nhân loại bao khốn cùng,
+  xin dẫn đưa bao tâm hồn lạc hướng về bên Mẹ.
   Mẹ ơi.
 }
 
-loiPhienKhucMot = \lyricmode {
+loiPhienKhucSoloMot = \lyricmode {
   \set stanza = "1."
-  Hỡi ai qua đường dừng bước đây mà chiêm ngắm
-  Chúa chí tôn đang chịu muôn nỗi khổ đau.
-  Vì thương toàn nhân loại muôn chốn muôn đời.
-  Ngày đêm khóc than mong chờ vinh phúc quê trời.
+  Hỡi ai qua đường ngừng bước đây mà chiêm ngắm:
+  Chúa chí tôn cam chịu muôn nỗi khổ đau,
+  vì thương toàn nhân loại muôn chốn muôn đời,
+  ngày đêm khóc than trông chờ vinh phúc quê trời.
 }
 
-loiPhienKhucHai = \lyricmode {
+loiPhienKhucSoloHai = \lyricmode {
   \set stanza = "2."
-  Ngước trông Mẹ lành thành kính dâng lời kêu khấn
-  giữa thế nhân khổ sầu xin hãy ủi an.
-  Để con hằng trung thành theo Chúa trọng đời.
-  Ngày mai sáng tươi bên Mẹ ca khúc khải hoàn.
+  Ngước trông Mẹ lành thành kính dâng lời kêu khấn:
+  Giữa thế nhân khổ sầu xin hãy ủi an
+  để con hằng trung thành theo Chúa trọn đời,
+  ngày mai sáng tươi bên Mẹ ca khúc khải hoàn.
 }
 
-loiPhienKhucBa = \lyricmode {
+loiPhienKhucSoloBa = \lyricmode {
   \set stanza = "3."
   Bước đi trong đời ngàn khó nguy còn vương lối,
   mắt đắm say trông về Thánh Giá thần linh.
-  Lòng con bừng lên niềm tin mới cao vời.
-  Nguyện luôn nép thân bên Mẹ vui sống muôn đời.
+  Lòng con bừng lên niềm tin mới cao vời,
+  Nguyện xin náu thân bên Mẹ vui sống muôn đời.
+}
+
+loiPhienKhucSopMot = \lyricmode {
+  Hm __ \repeat unfold 8 { _ }
+  \set stanza = "1."
+  Chúa chí tôn chịu muôn nỗi khổ đau
+  muôn chốn muôn đời
+  ngày đêm trông đợi quê trời.
+}
+
+loiPhienKhucSopHai = \lyricmode {
+  \repeat unfold 9 { _ }
+  \set stanza = "2."
+  Giữa thế gian xin Mẹ hãy ủi an.
+  theo Chúa trọn đời,
+  ngày mai bên Mẹ khải hoàn.
+}
+
+loiPhienKhucSopBa = \lyricmode {
+  \repeat unfold 9 { _ }
+  \set stanza = "3."
+  Mắt đắm say trông Thập giá thần linh,
+  tin mới cao vời,
+  nguyện xin bên Mẹ muôn đời.
+}
+
+loiPhienKhucBasMot = \lyricmode {
+  Hm __ \repeat unfold 7 { _ }
+  \set stanza = "1."
+  Chúa chí tôn chịu muôn nỗi khổ đau,
+  muôn đời muôn nơi
+  ngày đêm trông đợi phúc quê trời.
+}
+
+loiPhienKhucBasHai = \lyricmode {
+  \repeat unfold 8 { _ }
+  \set stanza = "2."
+  Giữa thế gian xin Mẹ hãy ủi an
+  theo Ngài mọi nơi,
+  ngày đêm bên Mẹ hát khải hoàn.
+}
+
+loiPhienKhucBasBa = \lyricmode {
+  \repeat unfold 8 { _ }
+  \set stanza = "3."
+  Mắt đắm say trông Thập tự thần linh,
+  tin Mừng đổi mới
+  nguyện xin bên Mẹ sống muôn đời.
 }
 
 % Dàn trang
@@ -249,7 +318,6 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    
     \new Staff <<
       \new Voice = "beSop" {
         \clef treble \TongNhip \nhacDiepKhucSop
@@ -262,21 +330,6 @@ notBePhu =
       }
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
     >>
-    %{
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-      \new Voice \TongNhip \partCombine 
-        \nhacDiepKhucSop
-        \notBePhu -2 { \nhacDiepKhucAlto }
-      \new NullVoice = beSop \nhacDiepKhucSop
-      \new Lyrics \lyricsto beSop \loiDiepKhucSop
-      \new NullVoice = beAlto \nhacDiepKhucAlto
-      \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
-    >>
-    %}
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
@@ -296,13 +349,31 @@ notBePhu =
   \new ChoirStaff <<
     \new Staff
       <<
-      \new Voice = beSop {
-        \TongNhip \nhacPhienKhuc
+      \new Voice = beSolo {
+        \TongNhip \nhacPhienKhucSolo
       }
+      \new Lyrics \lyricsto beSolo \loiPhienKhucSoloMot
+      \new Lyrics \lyricsto beSolo \loiPhienKhucSoloHai
+      \new Lyrics \lyricsto beSolo \loiPhienKhucSoloBa
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
-    \new Lyrics \lyricsto beSop \loiPhienKhucHai
-    \new Lyrics \lyricsto beSop \loiPhienKhucBa
+    \new Staff <<
+      \new Voice \TongNhip \partCombine 
+        \nhacPhienKhucSop
+        \notBePhu -2 { \nhacPhienKhucAlto }
+        \new NullVoice = nhacThamChieu \nhacPhienKhucSop
+        \new Lyrics \lyricsto nhacThamChieu \loiPhienKhucSopMot
+        \new Lyrics \lyricsto nhacThamChieu \loiPhienKhucSopHai
+        \new Lyrics \lyricsto nhacThamChieu \loiPhienKhucSopBa
+    >>
+    \new Staff <<
+        \clef "bass"
+        \new Voice = beBas {
+          \TongNhip \nhacPhienKhucBas
+        }
+      \new Lyrics \lyricsto beBas \loiPhienKhucBasMot
+      \new Lyrics \lyricsto beBas \loiPhienKhucBasHai
+      \new Lyrics \lyricsto beBas \loiPhienKhucBasBa
+    >>
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t

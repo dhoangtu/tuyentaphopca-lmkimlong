@@ -14,11 +14,24 @@ nhacDiepKhucSop = \relative c'' {
   g,4. fs8 |
   g g e4 |
   d2 |
-  r8 c' c b |
-  a4. fs8 |
-  d b'4 a8 |
-  g2 ~ |
-  g8 \bar "|."
+  r8
+  <<
+    {
+      c' c b |
+      a4. fs8 |
+      d b'4 a8 |
+      g2 ~ |
+      g8
+    }
+    {
+      g8 g g |
+      fs4. d8 |
+      d g4 fs8 |
+      d2 ~ |
+      d8
+    }
+  >>
+  \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -76,7 +89,7 @@ loiPhienKhucMot = \lyricmode {
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = "2."
-  Bao mừng rỡ khi được Chúa rủ thương, nhiệt tâm vâng ý Chúa luôn.
+  Bao mừng rỡ khi được Chúa dủ thương, nhiệt tâm vâng ý Chúa luôn.
   Con sẽ dắt dìu tội nhân trở về lối đường thẳng ngay.
 }
 

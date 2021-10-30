@@ -4,7 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Ôi Thập Tự" }
-  poet = "Bản dịch: Các Lời Kinh Phụng Vụ"
+  poet = "Bản dịch: CGKPV"
   composer = "Lm. Kim Long"
   tagline = ##f
 }
@@ -14,12 +14,12 @@ nhacDiepKhucSop = \relative c'' {
   \partial 4 g8. d16 |
   d2 ~ |
   d8 a'16 (g) fs8 b |
-  d4 g,8. g16 |
+  b4 g8. g16 |
   c4. a16 a |
   c8 d d4 ~ |
   d8 fs,16 fs a8 b |
   b4. e,16 e |
-  b'8 c c e, |
+  g8 a a e |
   d2 ~ |
   d4 r |
   R2
@@ -34,6 +34,7 @@ nhacDiepKhucSop = \relative c'' {
   b4 \bar "||" \break
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
   r4 |
   R2
@@ -90,7 +91,7 @@ nhacDiepKhucAlto = \relative c'' {
   R2
   r8 d g16 (a) g8 |
   fs4. g8 |
-  d d d d |
+  d [d] d d |
   b4. e8 |
   d c b4 ~ |
   b8 b' a g |
@@ -113,7 +114,7 @@ nhacDiepKhucAlto = \relative c'' {
   bf2 ~ |
   bf4 r |
   r8 g'16 g c8 c |
-  bf8 ef,16 ef bf'8 bf |
+  bf8 d,16 d bf'8 bf |
   a4. a16 (g) |
   f4. g16 (ef) |
   d4. d16 d |
@@ -172,22 +173,23 @@ nhacDiepKhucBas = \relative c' {
   <g d g,>4
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
   d8 g |
-  ef4. d8 |
+  ef4. c8 |
   a c d4 ~ |
   d2 ~ |
   d4 r8 g |
   fs8. e!16 d8 bf' |
-  a16 (f) a8 g4 ~ |
+  a16 (bf) a8 g4 ~ |
   g8 fs g c, |
   d4. d16 ef |
   g8 g fs g |
   g2 ~ |
   g4 r |
   r8 bf16 bf a8 a |
-  ef ef16 ef g8 g |
-  <f d>4 a, |
+  g fs16 fs g8 g |
+  <fs d>4 a, |
   c g |
   g' fs8 (g) |
   ef8 ef4 g8 |
@@ -212,7 +214,7 @@ nhacDiepKhucBas = \relative c' {
       d2
     }
   >>
-  fs8 g4 g,8 |
+  <fs d>8 g4 g,8 |
   c4 cs |
   d r8 g, |
   c c c4 |
@@ -223,23 +225,24 @@ nhacDiepKhucBas = \relative c' {
     }
     {
       a,8 a d4 |
-      <d g,>2
+      g,2
     }
   >>
 }
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Ôi Thập tự phúc lành thế giới nguồn cậy trông
-  nguồn cậy trông cứu rỗi nguồn cậy trông cứu rỗi
+  Ôi Thập tự phúc lành thế giới, nguồn cậy trông
+  nguồn cậy trông cứu rỗi, nguồn cậy trông cứu rỗi,
   nguồn cậy trông cứu rỗi lan tràn.
-  Hình khổ nhục nhằn nay thành ngưỡng cửa thiên đang
-  ngưỡng cửa thiên đàng ngưỡng cửa thiên đang quang vinh
-  Tế phẩm trên mình ngươi trên mình ngươi đó đã giang tay quy tụ ngưởi trần
+  Hình khổ nhục nhằn, nay thành ngưỡng cửa thiên đang
+  ngưỡng cửa thiên đàng, ngưỡng cửa thiên đang quang vinh
+  Tế phẩm trên mình ngươi trên mình ngươi đó đã giang tay quy tụ người trần
   đã giang tay quy tụ người trần mặc cho thủ lãnh thế gian
   tấn công tấn công tấn công cũng chẳng được phần lợi chi.
-  Giê -- su hỡi con quỳ tạ Chúa và Thánh Thần Thánh Phụ cao tôn
-  Giúp con chiến đầu chẳng sờn theo cờ thập tự thiên môn khải hoàn.
+  Giê -- su hỡi con quỳ tạ Chúa và Thánh Thần,
+  Thánh Phụ cao tôn
+  Giúp con chiến đấu chẳng sờn theo cờ thập tự thiên môn khải hoàn.
 }
 
 loiDiepKhucAlto = \lyricmode {
@@ -250,14 +253,17 @@ loiDiepKhucAlto = \lyricmode {
 }
 
 loiDiepKhucBas = \lyricmode {
-  Ôi thập tự cứu đời chốn ước trông chốn ước trông cứu rỗi
-  cứu rỗi chốn ước trông cứu rỗi lan tràn
-  Xưa nên hình khổ nhục nhằn mà nay thành cửa hiển vang
-  nay nên ngưỡng cửa hiển vang ngưỡng cửa hiển vang quang vinh
+  Ôi thập tự cứu đời, chốn ước trông chốn ước trông cứu rỗi,
+  cứu rỗi, chốn ước trông cứu rỗi lan tràn
+  Xưa nên hình khổ nhục nhằn mà nay thành cửa hiển vang,
+  nay nên ngưỡng cửa hiển vang, ngưỡng cửa hiển vang quang vinh
   Này tế phẩm trên mình ngươi đó tế phẩm trên mình ngươi đã giang tay
   quy tụ người trần đã giang tay quy tụ người trần
   dẫu thủ lãnh thế gian mặc thủ lãnh thế gian chẳng được thì
   cũng chẳng được phần ích gì.
+  Giê -- su hỡi con quỳ ca hòa và Thánh Thần,
+  Thánh Phụ cao tôn
+  Giúp con tranh đấu chẳng sờn theo cờ thập tự thiên môn khải hoàn.
 }
 
 % Dàn trang

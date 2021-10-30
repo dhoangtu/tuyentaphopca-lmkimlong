@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Hãy Tỉnh Thức Luôn" }
+  title = \markup { \fontsize #3 "Hãy Tỉnh Thức" }
   composer = "Lm. Kim Long"
   tagline = ##f
 }
@@ -12,17 +12,17 @@
 nhacPhienKhuc = \relative c'' {
   c8. g16 b8 a ~ |
   a4 r8 f ~ |
-  f f f g |
+  f f fs g |
   d4 e8. e16 |
   c8 e g a ~ |
   a4 f8. f16 |
   e8 g a b |
-  c2 \bar "||"
+  c2 \bar "|."
 }
 
 nhacDiepKhucSop = \relative c'' {
   c8. c16 c8 c, |
-  e g4 g8 |
+  e g4 a8 |
   a2 |
   a8. f16 fs8 b ~ |
   b b g g |
@@ -47,7 +47,7 @@ nhacDiepKhucAlto = \relative c'' {
   b2 |
   a8. g16 d8 c ~ |
   c e f f |
-  d2
+  e2
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -55,38 +55,42 @@ nhacDiepKhucBas = \relative c' {
   c c4 c8 |
   f2 |
   c8. d16 c8 b ~ |
-  b e g g |
+  b d g g |
   a2 |
-  g8. g16 g8 a |
+  gs8. gs16 gs8 a |
   f d4 d8 |
   g2 |
   fs8. g16 gs8 a ~ |
-  a c, f g |
-  c2
+  a c f, g |
+  c,2
 }
 
 % Lời
 loiPhienKhucMot = \lyricmode {
   \set stanza = "1."
-  Hãy tỉnh thức luôn và cầu nguyện đêm ngày.
-  Hãy sẵn sàng như tôi tớ đợi chủ về là mở cửa ngay.
+  Hãy tỉnh thức luôn và cầu nguyện đêm ngày,
+  Hãy sẵn sàng như tôi tớ, 
+  Đợi chủ về là mở cửa ngay.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = "2."
-  Thắp đèn sáng lên và dự phòng thêm dầu.
-  Phút phút chờ Tình Quân đến hãy sẵn sàng dù trong đêm thâu.
+  Thắp đèn sáng lên và dự phòng thêm dầu,
+  Phút phút chờ Tình Quân đến,
+  Hãy sẵn sàng dù trong đêm thâu.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = "3."
-  Chớ tự trấn an: Đời còn dài, lo gì.
-  Kiếp sống phù du, ân oán thử hỏi rồi hồn mang theo chi?
+  Chớ tự trấn an: Đời còn dài lo gì,
+  Kiếp sống phù du, ân oán,
+  Thử hỏi rồi hồn mang theo chi?
 }
 
 loiPhienKhucBon = \lyricmode {
   \set stanza = "4."
-  Nấm mộ phế hoang cỏ phủ chưa xanh mầu đã biến lần trong quên lãng.
+  Nấm mộ phế hoang cỏ phủ chưa xanh mầu,
+  Đã biến lần trong quên lãng,
   Ảo ảnh cuộc đời con chi đâu.
 }
 
@@ -94,13 +98,13 @@ loiDiepKhucSop = \lyricmode {
   Chúa sẽ đến thình lình như tia chớp,
   như kẻ trộm nhắm lúc ta không ngờ.
   Chúa sẽ đến gọi vào cõi thiên thu.
-  Thức giấc đi thôi đừng mãi ngủ mê.
+  Thức giấc đi thôi, đừng mãi ngủ mê.
 }
 
 loiDiepKhucBas = \lyricmode {
   Chúa sẽ đến thình lình như tia chớp,
   như kẻ trộm nhắm lúc ta không nhớ.
-  Chúa sẽ gọi vào cõi thiên thu.
+  Chúa sẽ đến gọi vào cõi thiên thu.
   Thức giấc đi thôi chớ hoài ngủ mê.
 }
 
