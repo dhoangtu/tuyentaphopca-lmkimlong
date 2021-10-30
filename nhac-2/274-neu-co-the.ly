@@ -4,6 +4,12 @@
 
 \header {
   title = \markup { \fontsize #3 "Nếu Có Thể" }
+  poet = \markup {
+    \column {
+      \line { "Ý: Lc 22,42. 23,46. Mc 15,14" }
+      \line { "    Dt 10,8-9. Ga 5,30. 6,38"  }
+    }
+  }
   composer = "Lm. Kim Long"
   tagline = ##f
 }
@@ -22,7 +28,6 @@ nhacDiepKhucSop = \relative c'' {
   f f a (bf) |
   a g f (g) |
   a4 f |
-  d2 ~ |
   d4 \bar "|."
 }
 
@@ -39,7 +44,6 @@ nhacDiepKhucBas = \relative c {
   a4 r8 d, |
   f f a (bf) |
   a4 a, |
-  d2 ~ |
   d4
 }
 
@@ -62,31 +66,31 @@ nhacPhienKhuc = \relative c' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Lạy Cha nếu có thể được thì xin cho con khỏi uống chén này
+  Lạy Cha nếu có thể được thì xin cho con khỏi uống chén này.
   Đừng theo như ý con, một xin vâng ý Cha đã định trước muôn đời.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Lạy Cha nếu có thể được, thì xin cho con khỏi uống chén này.
+  Lạy Cha nếu có thể được thì xin cho con khỏi uống chén này,
   Đừng theo như ý con, một xin vâng ý Cha trọn đời.
 }
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = "1."
-  Cha không nhận lễ toàn thiêu, không ưng thuận chiên bò ky tế.
-  Thì nay con đến để làm theo ý Cha: hiến dâng trót cuộc _ đời.
+  Cha không nhận lễ toàn thiêu, không ưng thuận chiên bò ky tế
+  thì nay con đến để làm theo ý Cha: hiến dâng trót cuộc _ đời.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = "2."
-  Bao công việc vui lòng Cha, Con thi hành chu toàn mau mắn.
+  Bao công việc vui lòng Cha, Con thi hành vuông tròn mau mắn,
   Vì con không đến để làm theo ý Con, nhưng theo ý Cha vẹn toàn.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = "3."
-  Sao Cha đành chối bỏ Con, khi quân thù tứ bề xông đánh.
-  Này đây con phó dâng ở trong tay Cha, trót cả tấm linh _ hồn.
+  Sao Cha đành tâm bỏ Con, khi quân thù tứ bề xông đánh,
+  Này con xin phó dâng ở trong tay Cha, trót cả tấm linh _ hồn.
 }
 
 % Dàn trang

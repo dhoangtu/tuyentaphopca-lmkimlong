@@ -6,7 +6,7 @@
   title = \markup { \fontsize #3 "Từ Lòng Vực Thẳm" }
   poet = "Ý: Tv. 129"
   composer = "Thơ dịch: Lm. Xuân Ly Băng"
-  arranger = "Lm. Kim Long"
+  arranger = "Nhạc: Lm. Kim Long"
   tagline = ##f
 }
 
@@ -14,6 +14,7 @@
 nhacDiepKhucSop = \relative c'' {
   \autoPageBreaksOff
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \partial 4. r8 r4 |
   R2
   r8 g ^> g ^> g ^> |
@@ -27,17 +28,17 @@ nhacDiepKhucSop = \relative c'' {
   r r8 d' |
   c4 \tuplet 3/2 { c8 d bf } |
   a4 \tuplet 3/2 { f'8 ^> f ^> f ^> } |
-  d4 \tuplet 3/2 { e8 e e } |
+  d4 \tuplet 3/2 { e8 ^> e ^> e ^> } |
   cs2 |
   r8 b! ^> gs b |
   a2 ~ |
-  a4 r \bar "||" \break
+  a4 r \bar "|." \break
   
   \pageBreak
   
   \key d \major
   R2*2
-  d8 d16 a e'8 (d) |
+  b8 b16 a e'8 d |
   cs4 \tuplet 3/2 { b8 b cs } |
   d4 \tuplet 3/2 { g,8 g a } |
   b4 \tuplet 3/2 { e,8 e fs } |
@@ -47,7 +48,7 @@ nhacDiepKhucSop = \relative c'' {
   
   \key f \major
   R2
-  r8 e bf' bf |
+  r8 g bf bf |
   a4 \tuplet 3/2 { d8 bf bf } |
   bf4 \tuplet 3/2 { c8 a a } |
   a4 r8 a |
@@ -56,9 +57,9 @@ nhacDiepKhucSop = \relative c'' {
   
   g f f16 (g) f8 |
   e2 ~ |
-  e8 a g d' |
-  cs2 ~ |
-  cs4 r \bar "||" \break
+  e8 a g <d' bf> |
+  <cs a>2 ~ |
+  <cs a>4 r \bar "||" \break
   
   \key d \major
   R2*2
@@ -74,20 +75,21 @@ nhacDiepKhucSop = \relative c'' {
 
 nhacDiepKhucAlto = \relative c' {
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   a8 ^> a ^> a ^> |
   f'4. f8 |
   d2 ~ |
   d4 a'8 (g) |
   fs4 r8 f! |
   e4 \tuplet 3/2 { e8 d d } |
-  cs4 \tuplet 3/2 { d8 f f } |
+  c4 \tuplet 3/2 { d8 f f } |
   d4. d8 |
   cs2 ~ |
   cs4 r8 a' |
   g4 \tuplet 3/2 { g8 a f } |
   e4. g8 |
   f4 \tuplet 3/2 { a8 ^> a ^> a ^> } |
-  bf4 \tuplet 3/2 { bf8 bf bf } |
+  bf4 \tuplet 3/2 { bf8 ^> bf ^> bf ^> } |
   a2 |
   r8 gs ^> e d |
   cs2 ~ |
@@ -112,12 +114,12 @@ nhacDiepKhucAlto = \relative c' {
   c4 cs8 cs |
   d2 ~ |
   d8 d e d |
-  cs4 d8 (<bf' f>) |
-  <a d,>2 ~ |
-  <a d,>4 r |
+  cs4 d8 (f) |
+  d2 ~ |
+  d4 r |
   
   \key d \major
-  a8 g16 b e,8 g |
+  a'8 g16 b e,8 g |
   a4 fs8 (e) |
   d4. e16 (d) |
   cs4 \tuplet 3/2 { b8 cs d } |
@@ -131,6 +133,7 @@ nhacDiepKhucAlto = \relative c' {
 
 nhacDiepKhucBas = \relative c {
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   r8 r4 |
   r8 d ^> d ^> d ^> |
   bf'4 g8 g |
@@ -142,7 +145,7 @@ nhacDiepKhucBas = \relative c {
   a4 r8 a' |
   g4 \tuplet 3/2 { g8 a f } |
   e8. (d16) c8 (b!) |
-  c4 \tuplet 3/2 { c8 c cs } |
+  c4 \tuplet 3/2 { c8 c c } |
   d4 \tuplet 3/2 { d8 ^> d ^> d ^> } |
   g4 \tuplet 3/2 { g8 ^> g ^> g ^> } |
   a4. a8 ^> |
@@ -201,23 +204,25 @@ nhacDiepKhucBas = \relative c {
 loiDiepKhucSop = \lyricmode {
   Từ lòng vực thẳm kêu lên Chúa ơi nghe tiếng siết rên,
   nghe tiếng siết rên nghẹn ngào.
-  Lắng nghe bao tiếng kêu gào
-  nếu Chúa chấp tội, nếu Chúa chấp tội ai nào đứng yên.
-  Tôi trông cậy Chúa liên vì Ngài dung thứ,
+  Lắng nghe bao tiếng kêu gào.
+  Nếu Chúa chấp tội, nếu Chúa chấp tội ai nào đứng yên.
+  Tôi trông cậy Chúa tôi liên vì Ngài dung thứ,
   vì Ngài dung thứ,
   vì Ngài dung thứ tiền khiên muôn đời.
   Hồn tôi hy vọng, hy vọng vào Ngài, hy vọng vào Ngài.
   Tôi tin tưởng ở muôn lời, muôn lời Chúa ban.
-  Như tuần tráng vọng hừng đông hồn tôi trông Chúa,
+  Như tuần tráng vọng hừng đông,
+  Hồn tôi trông Chúa,
   hồn tôi trông Chúa,
   hồn tôi trông Chúa hết lòng Chúa ơi!
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Từ lòng vực thẳm Chúa ơi kêu lên Chúa ơi
+  Từ lòng vực thẳm, Chúa ơi, kêu lên Chúa ơi
   nghe tiếng siết rên, nghe tiếng siết rên nghẹn ngào.
   Lắng nghe bao tiếng kêu gào,
-  kêu gào nếu Chúa chấp tội,
+  kêu gào.
+  Nếu Chúa chấp tội,
   nếu Chúa chấp tội ai nào đứng yên.
   Tôi trông cậy Chúa tôi liên
   cậy Chúa liên vì Ngài dung thứ,
@@ -226,7 +231,8 @@ loiDiepKhucAlto = \lyricmode {
   hy vọng vào Ngài.
   Tôi tin tưởng tin tưởng muôn lời Chúa ban.
   Như tuần tráng vọng hừng đông Chúa ơi,
-  Chúa ơi! Hồn tôi trông Chúa, hồn tôi trông Chúa,
+  Chúa ơi
+  Hồn tôi trông Chúa, hồn tôi trông Chúa,
   hồn tôi trông Chúa hết lòng Chúa ơi!
 }
 
@@ -234,10 +240,12 @@ loiDiepKhucBas = \lyricmode {
   Từ lòng vực thẳm, từ vực thẳm kêu lên Ngài ơi
   nghe tiếng siết rên, nghe tiếng siết rên nghẹn ngào.
   Lắng nghe bao tiếng kêu gào nghẹn ngào,
-  bao lời nghẹn ngào nếu Chúa chấp lỗi,
+  bao lời nghẹn ngào.
+  Nếu Chúa chấp lỗi,
   nếu Chúa chấp lỗi ai nào đứng yên.
   Tôi trông cậy Chúa tôi liên
-  cậy liên vì Ngài dung thứ, vì Ngài dung thứ lỗi nhơ
+  cậy liên vì Ngài dung thứ,
+  vì Ngài dung thứ nhân từ
   <<
     { muôn }
     \new Lyrics {
@@ -250,7 +258,7 @@ loiDiepKhucBas = \lyricmode {
   Hồn tôi hy vọng, hy vọng, hy vọng vào Ngài,
   hy vọng vào ngài.
   Tôi tin tưởng ở muôn lời, muôn lời Chúa ban.
-  Như tuần tráng vọng hừng đông Chúa ơi!
+  Như tuần tráng vọng hừng đông Chúa ơi
   Hồn tôi trông Chúa hồn tôi trông Chúa hết lòng,
   hết lòng Chúa ơi!
 }

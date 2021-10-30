@@ -9,6 +9,13 @@ hát lên mừng Chúa
 \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
 \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
 
+  poet = \markup {
+    \column {
+      \line { "Ý: Lc 22,42. 23,46. Mc 15,14" }
+      \line { "    Dt 10,8-9. Ga 5,30. 6,38"  }
+    }
+  }
+  
 \set Score.currentBarNumber = #16
 
   <<
@@ -136,7 +143,7 @@ layout
 
   \afterGrace d4 ({
     \override Flag.stroke-style = #"grace"
-    e8)}
+    e16)}
   \revert Flag.stroke-style
 
   \set Staff.keyAlterations = #`(((0 . 6) . ,NATURAL)
