@@ -3,11 +3,26 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Trong Cánh Đồng Belem" }
+  title = \markup { \fontsize #3 "Trong Cánh Đồng Belem 2" }
   composer = "Lm. Kim Long"
   arranger = "Hòa âm: Viết Chung"
   tagline = ##f
 }
+
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
 
 % Nhạc
 nhacDiepKhucSolo = \relative c''' {
@@ -29,7 +44,7 @@ nhacDiepKhucSolo = \relative c''' {
     }
   >>
   \oneVoice
-  <cs a e a,>8 r <cs a e a,> r |
+  <cs a g e>8 r <cs a g e> r |
   d4 r |
   d4. c8 |
   bf4 g |
@@ -37,18 +52,20 @@ nhacDiepKhucSolo = \relative c''' {
   d2 ~ |
   d |
   
+  %\set Staff.shortInstrumentName = "Solo"
   g8
   ^\markup {
     \halign #1  \bold "Solo"
   }
-  a d, g |
+  a d, f |
   a4 a8 c |
   c bf a c |
   d2 ~ |
+  %\set Staff.shortInstrumentName = ""
   d4 d8 d |
   bf (d) bf16 (a) g8 |
   a4 g8 g |
-  d g a a |
+  d g a bf|
   a (d) e16 (d) cs8 |
   d2 |
   R2*3
@@ -81,7 +98,7 @@ nhacDiepKhucSop = \relative c' {
   g16 a g f e8 bf' |
   a g f e |
   a2 ~ |
-  a4 \tuplet 3/2 { f8 g a } |
+  a4 \tuplet 3/2 \notBePhu -2 { f8 g a } |
   d16 d d d d8 c |
   bf16 bf bf bf bf8 g |
   a8. g16 f g f e |
@@ -101,7 +118,7 @@ nhacDiepKhucSop = \relative c' {
   
   d |
   f8 g16 (f) c4 |
-  d8 f g c |
+  d8 f a c |
   g2 \bar "||" \break
   
   a4. (g8) |
@@ -123,7 +140,7 @@ nhacDiepKhucSop = \relative c' {
   c ~ |
   c8 d c bf |
   a4. a8 |
-  g a bf16 (a) f8 |
+  g (a) bf16 (a) f8 |
   g2 ~ |
   g4 c8 (d16 c) |
   a2 ~ |
@@ -138,10 +155,10 @@ nhacDiepKhucSop = \relative c' {
   f4 r \bar "||"
   \set Score.repeatCommands = #'((volta #f) (volta "2"))
   c4 r8 c |
-  \set Score.repeatCommands = #'((volta #f))
   d4 e |
   f2 ~ |
   f \bar "|."
+  \set Score.repeatCommands = #'((volta #f))
 }
 
 nhacDiepKhucAlto = \relative c'' {
@@ -182,7 +199,7 @@ nhacDiepKhucAlto = \relative c'' {
   r4
   d |
   f8 g16 (f) c4 |
-  d8 f g c |
+  d8 f a c |
   g2
   
   f4. (e8) |
@@ -241,7 +258,7 @@ nhacDiepKhucTenor = \relative c' {
   a2 |
   a4. bf8 |
   d4 cs |
-  d2 |
+  <d a>2 |
   a |
   g ~ |
   g |
@@ -334,11 +351,11 @@ nhacDiepKhucBas = \relative c {
   e4 c |
   d16 e d bf a8 g |
   a4 a |
-  <a' d,>2 |
+  d2 |
   <<
     {
       \voiceOne
-      a2 |
+      a'2 |
       g ~ |
       g
     }
@@ -402,8 +419,8 @@ nhacDiepKhucBas = \relative c {
   f4 r |
   c r8 c |
   c2 |
-  f ~ |
-  f
+  c ~ |
+  c
 }
 
 % Lời
@@ -414,11 +431,11 @@ loiDiepKhucSolo = \lyricmode {
       \set stanza = "1."
       Trong cánh đồng Bê -- lem
       một đêm đông lạnh lùng sương tuyết.
-      Lắng tiếng gió than tịch liêu
-      trăng sao buồn cô vắng khuất mờ phía trời xa.
+      lắng tiếng gió than tịch liêu,
+      Trăng sao buồn cô vắng khuất mờ phía trời xa.
       \set stanza = "1."
-      Đoàn mục đồng ngồi canh thức
-      bỗng thần sứ hiện ra báo tin vui mừng:
+      Đoàn mục đồng ngồi canh thức,
+      Bỗng thần sứ hiện ra báo tin vui mừng:
     }
     \new Lyrics \with {
       alignBelowContext = "loiDiepKhucSolo"
@@ -428,11 +445,11 @@ loiDiepKhucSolo = \lyricmode {
 	    \set stanza = "2."
 	    Đây tấm lòng tin mến
 	    đoàn con xin chân thành dâng tiến.
-	    Tiếng hát quyện theo lời kinh
-	    như hương trầm nghi ngút trước tòa Chúa huyền linh.
+	    tiếng hát quyện theo lời kinh
+	    Như hương trầm nghi ngút trước tòa Chúa huyền linh.
 	    \set stanza = "2."
 	    Từ cuộc đời ngàn nguy khó
-	    đón chờ Chúa dủ thương viếng thăm tâm hồn.
+	    Đón chờ Chúa dủ thương viếng thăm tâm hồn.
 	  }
   >>
 }
@@ -474,12 +491,12 @@ loiDiepKhucSop = \lyricmode {
       Này muôn tấm lòng cùng hợp tiếng hát ca:
     }
   >>
-  Sáng danh ngàn đời sáng danh,
+  Sáng danh, ngàn đời sáng danh,
   sáng danh Thiên Chúa trên trời.
   Ngàn đời sáng danh,
   trên các tầng trời.
   Hm __
-  A A A Cho ai người có lòng ngay.
+  A A A cho ai người có lòng ngay.
   An bình cho những ai cho ai có lòng ngay ở nơi dương thế.
   ngay ở nơi dương thế.
 }
@@ -492,7 +509,7 @@ loiDiepKhucAlto = \lyricmode {
   <<
     {
       \set stanza = "1."
-      Đoàn mục đồng ngồi canh thức.
+      Đoàn mục đồng ngồi thức.
     }
     \new Lyrics \with {
       alignBelowContext = "loiDiepKhucAlto"
@@ -500,10 +517,10 @@ loiDiepKhucAlto = \lyricmode {
     {
 	    \set associatedVoice = "beAlto"
       \set stanza = "2."
-      Từ cuộc đời ngàn nguy khó.
+      Từ cuộc đời ngàn khó.
     }
   >>
-  A __ _ _ _
+  A __ _ _ _ _
   <<
     {
       \set stanza = "1."
@@ -518,15 +535,15 @@ loiDiepKhucAlto = \lyricmode {
       Này muôn tấm lòng cùng hợp tiếng hát ca:
     }
   >>
-  Sáng danh ngàn đời sáng danh,
+  Sáng danh, ngàn đời sáng danh,
   sáng danh Thiên Chúa trên trời.
   Ngàn đời sáng danh, vinh danh, vinh danh
   trên các tầng trời.
   Hm __ _ _ _
-  A A A Cho ai người có lòng ngay.
+  A A A cho ai người có lòng ngay.
   muôn năm khang an
   cho ai
-  suốt đời bình an
+  suốt đời bình an,
   cho ai có lòng ngay ở nơi dương thế.
   ngay ở nơi dương thế.
 }
@@ -568,22 +585,22 @@ loiDiepKhucTenor = \lyricmode {
       đã thương nhân thế bao đời.
     }
   >>
-  Sáng danh ngàn đời sáng danh,
+  Sáng danh, ngàn đời sáng danh,
   ngàn đời rạng danh, ngàn đời sáng danh,
   sáng danh Thiên Chúa trên trời các tầng trời.
   An bình cho muôn người,
-  cho muôn người nơi thế gian.
-  Cho người lòng ngay.
-  Muôn năm khang an cho những ai suốt đời bình an.
-  Cho ai có lòng ngay cõi thế.
-  ngay ở cõi thế.
+  cho muôn người nơi thế gian
+  cho người lòng ngay.
+  muôn năm khang an cho những ai suốt đời bình an,
+  cho ai có lòng ngay cõi thế.
+  ngay ở nơi dương thế.
 }
 
 loiDiepKhucBas = \lyricmode {
   \repeat unfold 5 { _ }
   Hm __ \repeat unfold 3 { _ }
   Hm __ \repeat unfold 14 { _ }
-  Hm __ \repeat unfold 17 { _ }
+  Hm __ \repeat unfold 18 { _ }
   <<
     {
       \set stanza = "1."
@@ -598,7 +615,7 @@ loiDiepKhucBas = \lyricmode {
       Từ cuộc đời ngàn nguy khó.
     }
   >>
-  A __ _ _ _
+  A __ _ _
   <<
     {
       \set stanza = "1."
@@ -617,13 +634,13 @@ loiDiepKhucBas = \lyricmode {
       đã thương nhân thế bao đời.
     }
   >>
-  Rạng danh ngàn đời rạng danh
+  Rạng danh, ngàn đời rạng danh
   muôn đời rạng danh, muôn đời rạng danh,
   sáng danh Thiên Chúa trên trời trên cả tầng trời.
   An bình cho muôn người, cho muôn người nơi thế gian.
   Và cho ai ngay lành.
-  Muôn năm an bình, an bình, bình an ngàn đời bình an,
-  an bình, an bình những người trần thế.
+  muôn năm an bình, an bình, bình an ngàn đời bình an,
+  an bình, an bình lòng ngay trần thế.
   ngay ở trần thế.
 }
 
@@ -653,21 +670,6 @@ TongNhip = {
   \set Timing.beatStructure = #'(1 1)
 }
 
-% Đổi kích thước nốt cho bè phụ
-notBePhu =
-#(define-music-function (font-size music) (number? ly:music?)
-   (for-some-music
-     (lambda (m)
-       (if (music-is-of-type? m 'rhythmic-event)
-           (begin
-             (set! (ly:music-property m 'tweaks)
-                   (cons `(font-size . ,font-size)
-                         (ly:music-property m 'tweaks)))
-             #t)
-           #f))
-     music)
-   music)
-
 \score {
   \new ChoirStaff <<
     \new Staff <<
@@ -677,6 +679,7 @@ notBePhu =
         }
       \new Lyrics = "loiDiepKhucSolo" \lyricsto beSolo \loiDiepKhucSolo
     >>
+    %\new PianoStaff <<
     \new Staff <<
         \clef treble
         \new Voice = beSop {
@@ -705,6 +708,7 @@ notBePhu =
         }
       \new Lyrics = "loiDiepKhucBas" \lyricsto beBas \loiDiepKhucBas
     >>
+    %>>
   >>
   \layout {
     \override Lyrics.LyricSpace.minimum-distance = #0.5

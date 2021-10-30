@@ -25,31 +25,34 @@ notBePhu =
    music)
 
 nhacDiepKhucSop = \relative c'' {
-  \autoPageBreaksOff
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \tweak extra-offset #'(5 . 0)
+  \mark \markup { \musicglyph #"scripts.segno" }
   \partial 4 r4 |
   r8. c16 d8 c |
   b4 r |
-  r8 c16 a d (e) d8 |
+  r8 c16 a c (e) d8 |
   c2 ~ |
   c4 r |
   R2
   r4 e,8 ^> e ^> |
   c'4. b8 |
-  c a4 a8 |
+  e a,4 a8 |
   b2 ~ |
   b ~ |
   b4 r8 e |
   e8. f16 e8 c |
   d d4. |
-  R2*2 \bar ":|."
-  R2
+  R2*2
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar ":|." \break
+  \notBePhu -2 { g8. g16 e8 c } \bar ".|"
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
-  g,8. c16 c8 c |
-  d a a a |
-  
-  \pageBreak
-  
+  g8. c16 c8 c |
+  c a a a |
   d8. f16 f8 d |
   e2 ~ |
   e4 r |
@@ -62,7 +65,7 @@ nhacDiepKhucSop = \relative c'' {
   c4 r |
   R2*3
   e4. e8 |
-  f ^\ff (e) c4 |
+  f _> ^\ff (e) c4 |
   d d8 ^\p b |
   c4. a8 |
   a4 b8 c |
@@ -70,9 +73,6 @@ nhacDiepKhucSop = \relative c'' {
   g4 r |
   r8. c16 d8 c |
   b4 r |
-  
-  \pageBreak
-  
   r8 c16 a d (e) d8 |
   c4 r8 g |
   g g16 g e' (f) e8 |
@@ -84,17 +84,49 @@ nhacDiepKhucSop = \relative c'' {
   b b4 d8 |
   c2 ~ |
   c4 r8 \bar "|." \break
-  
   c8 |
   c d16 (c) a8 af |
-  g4. e'8 |
-  e f16 (e) c8 d |
-  d2 | \break
-  e8 c d16 (c) a8 |
-  a4. g8 |
-  d' d4 b8 |
-  c2 |
-  R2*2 \bar "||"
+  g4.
+  <<
+    {
+      e'8 |
+      e f16 (e) c8 d |
+      d2 | \break
+    }
+    {
+      c8 |
+      c d16 (c) a8 af |
+      g2 |
+    }
+  >>
+  e'8 c d16 (c) a8 |
+  a4. g8 |  
+  <<
+    {
+      d'8 d4 b8 |
+    }
+    {
+      f8 f4 d8 |
+    }
+  >>
+  <<
+    {
+      \voiceOne
+      <c' e,>2 |
+    }
+    \new Voice = "splitpart" \notBePhu -2 {
+      \voiceTwo
+      \tweak extra-offset #'(4 . 0)
+      e,4\rest e8\rest
+      g16
+      _\markup { \italic "(kèn)" }
+      g |
+      g'8. g16 e8 c 
+    }
+  >>
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -105,33 +137,32 @@ nhacDiepKhucAlto = \relative c' {
   e2 ~ |
   e4 r |
   R2
-  r4 e8 e |
+  r4 e8 ^> e ^> |
   a4. a8 |
-  g e4 a8 |
+  g e4 e8 |
   f2 ( |
   e) ~ |
   e4 r8 c' |
   c8. d16 c8 a |
-  a a4. |
-  R2*2
-  \notBePhu -2 { g'8. g16 e8 c } \bar "||"
+  b b4. |
+  R2*3
   
   e,8. e16 g8 g |
   f f f f |
-  g8. g16 af8 af |
+  g8. g16 a8 af |
   g2 ~ |
   g4 r |
   r4. a8 |
   g8. g16 fs8 fs |
-  \tweak font-size #0 g4 g8 [g] |
+  g4 g8 [g] |
   g2 |
   fs4 f!8 f |
   e2 ~ |
   e4 r |
   R2*3
   c'4. c8 |
-  d (c) e,4 |
-  g4 g8 f |
+  d _> ^\ff (c) e,4 |
+  g4 g8 ^\p f |
   e4. e8 |
   f4 f8 f |
   d2 ~ |
@@ -139,34 +170,16 @@ nhacDiepKhucAlto = \relative c' {
   r8. e16 f8 e |
   d4 r |
   r8 a'16 e f8 [f] |
-  e4 r8 \tweak font-size #0 g |
+  e4 r8 g |
   g [g16 g] g (a) g8 |
   fs4. f!8 |
   d d d8. c16 |
   b4. b8 |
-  c c e g |
+  c b e g |
   a4. a8 |
   g g4 f8 |
   e2 ~ |
   e4 r8
-  
-  \notBePhu 0 {
-    c' |
-    c d16 (c) a8 af |
-    g4.
-  }
-  c8 |
-  c d16 (c) a8 af |
-  g2 |
-  \notBePhu 0 {
-    e'8 c d16 (c) a8 |
-    a4. g8
-  }
-  f f4 d8 |
-  e2
-  
-  r4. g16 g |
-  g'8. g16 e8 c
 }
 
 nhacDiepKhucTenor = \relative c {
@@ -202,7 +215,7 @@ nhacDiepKhucTenor = \relative c {
   g4 r |
   R2*3
   r4 g8 g |
-  a4. ^\ff c8 |
+  a4. _> ^\ff c8 |
   b4 b8 ^\p d |
   c4. c8 |
   c4. c8 |
@@ -217,7 +230,7 @@ nhacDiepKhucTenor = \relative c {
   g g fs fs |
   g8. af16 ^> g8 ^> f ^> |
   e4 a8 g |
-  b ^> b4 ^> a8 |
+  g' ^> g4 ^> f8 |
   d d4 b8 |
   c2 ~ |
   c4 r8
@@ -235,8 +248,8 @@ nhacDiepKhucBas = \relative c {
   a4 f'8 ^> f ^> |
   d d c c |
   d2 ( |
-  c) ~ |
-  c4 r |
+  e) ~ |
+  e4 r |
   R2
   r4. d8 |
   e8. e16 e8 e |
@@ -249,7 +262,7 @@ nhacDiepKhucBas = \relative c {
   c2 ~ |
   c4 e8. c16 |
   f8 ^> f ^> d ^> d ^> |
-  g4 r |
+  f4 r |
   r g8 g |
   c,4 (b8 c) |
   d4 g,8 g |
@@ -259,7 +272,7 @@ nhacDiepKhucBas = \relative c {
   d4 c8 ^> c16 (d) |
   \slashedGrace { d16 (} g2) ~ |
   g4 c,8 c |
-  f4. ^\ff a8 |
+  f4. _> ^\ff a8 |
   g4 g8 ^\p gs |
   a4. a8 |
   d,4. d8 |
@@ -272,75 +285,90 @@ nhacDiepKhucBas = \relative c {
   f e16 d c8 cs |
   d4. d8 |
   g g d d |
-  e8. f16 ^> e8 ^> d ^> |
+  e8. f!?16 ^> e8 ^> d ^> |
   c4. b8 ^> |
-  c ^> d ^> e ^> (f) |
+  c ^> d ^> e ^> f ^> |
   g g4 g8 |
   <g c,>2 ~ |
   <g c,>4 r8
 }
 
 % Lời
-loiDiepKhucAlto = \lyricmode {
+loiDiepKhucSop = \lyricmode {
   Mơ cõi thiên đường trông đợi ánh thái dương.
   Này trần thế xin Chúa dủ tình thương.
-  Không trung hãy giao làn sương mai.
+  Không trung hãy gieo làn sương mai.
   \override Lyrics.LyricText.font-shape = #'italic
   (Kèn) _ _ _
   \revert Lyrics.LyricText.font-shape
   Đồng Be -- lem reo vui và ngàn vì sao chiếu sáng màn đêm.
-  Báo Tin Vui cho nhân trần:
+  Báo tin vui cho nhân trần:
   Một Vị Cứu Tinh vừa hạ sinh.
-  Mây ơi hãy ngừng trôi
-  đến quỳ đây thờ lạy Con Chúa Trời.
-  Tinh tú xôn xao náo động khắp đất trời.
-  Triều thần cùng hợp tiếng tung hô:
+  Mây ơi hãy ngừng trôi,
+  Đến quỳ đây thờ lạy Con Chúa Trời.
+  Tinh tú xôn xao náo động khắp đất trời,
+  triều thần cùng hợp tiếng tung hô:
   Sáng danh Thiên Chúa trên trời
-  \override Lyrics.LyricText.font-shape = #'italic
-  (bình an)
-  \revert Lyrics.LyricText.font-shape
   bình an dưới thế cho loài người Chúa thương.
   
-  \set stanza = "Nữ:"
   Ôi đêm phước lộc diệu huyền,
-  say sưa đất trời giao duyên.
-  \set stanza = "Nam:"
+  Say sưa đất trời giao duyên.
+
   Bốn ngàn năm đợi chờ Lời Thánh Ước nở hoa.
   \override Lyrics.LyricText.font-shape = #'italic
   (Kèn)
+}
+
+loiDiepKhucAlto = \lyricmode {
+  Mơ cõi thiên đường trông đợi ánh thái dương.
+  Này trần thế xin Chúa dủ tình thương.
+  Không trung hãy gieo làn sương mai.
+  Đồng Be -- lem reo vui và ngàn vì sao chiếu sáng màn đêm.
+  Báo tin vui cho nhân trần:
+  Một Vị Cứu Tinh vừa hạ sinh.
+  Mây ơi hãy ngừng trôi,
+  Đến quỳ đây thờ lạy Con Chúa Trời.
+  Tinh tú xôn xao náo động khắp đất trời,
+  triều thần cùng hợp tiếng tung hô:
+  Sáng danh Thiên Chúa trên trời
+  Bình an, bình an dưới thế cho loài người Chúa thương.
 }
 
 loiDiepKhucTenor = \lyricmode {
   Tựa tuần phiên ngóng ánh thái dương.
   Bao tháng năm sầu thương.
   Này trần thế xin dủ yêu thương.
-  Mây ơi hãy mưa Đấng Cứu Độ.
+  Mây ơi hãy mưa Đấng Cứu Đời.
   Đồng Be -- lem reo vui với các vì sao.
   Lớp lớp muôn thiên thần xướng ca
   loan tin cho nhân trần:
   Một Vị Cứu Tinh đã giáng sinh.
-  Mây ơi hãy ngừng trôi đến quỳ đây thờ lạy Chúa Trời.
-  Thơ tuôn trào nhạc vàng bay tỏa khắp đất trời.
-  Triều thần cùng hợp tiếng tung hô:
+  Mây ơi hãy ngừng trôi,
+  Đến quỳ đây thờ lạy Chúa Trời.
+  Thơ tuôn trào
+  Nhạc vàng bay tỏa khắp đất trời,
+  triều thần cùng hợp tiếng tung hô:
   Sáng danh Thiên Chúa trên trời,
-  sáng danh trên trời.
-  An bình dưới thế cho loài người Ngài thương.
+  sáng danh trên trời
+  an bình dưới thế cho loài người Ngài thương.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Tựa trần gian tựa tuần phiên ngóng ánh thái dương.
+  Từ trần gian
+  Tựa tuần phiên mong ánh thái dương.
   Bao tháng năm lần bước trong đêm trường.
   Khắp thế nhân xin dủ tình thương.
-  Mây ơi hãy mưa Đấng Cứu Độ.
+  Mây ơi hãy mưa Đấng Cứu Đời.
   Đồng Be -- lem reo vui và ngàn vì sao ngời rạng màn đêm.
   Thiên thần lớp lớp cùng hòa ca.
   Một Vị Cứu Tinh đà hạ sinh.
   Gió ơi đừng thổi nữa.
-  Mây ơi hãy ngừng trôi vào quỳ đây bái lạy Vua Trời.
+  Mây ơi hãy ngừng trôi,
+  Vào quỳ đây bái lạy Vua Trời.
   Nhạc vàng bay tỏa khắp đất trời.
-  Triều thần cùng hợp lời tung hô:
-  Sáng danh Thiên Chúa trên trời, sáng danh trên trời.
-  Bình an dưới thế cho ai Chúa thương.
+  triều thần cùng hợp lời tung hô:
+  Rạng danh Thiên Chúa trên trời, sáng danh trên trời,
+  Bình an dưới thế cho ai ơi Chúa thương.
 }
 
 % Dàn trang
@@ -384,17 +412,18 @@ notBePhu =
    music)
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacDiepKhucSop
       }
-      <<
-      \new Voice \TongNhip \partCombine 
-        \nhacDiepKhucSop
-        \notBePhu -2 { \nhacDiepKhucAlto }
-      \new NullVoice = beAlto \nhacDiepKhucAlto
+      \new Lyrics \lyricsto beSop \loiDiepKhucSop
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacDiepKhucAlto
+      }
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
-      >>
+    >>
     \new Staff <<
         \clef "violin_8"
         \new Voice = beTenor {
@@ -411,8 +440,8 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
-    \override LyricHyphen.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1
+    \override LyricHyphen.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

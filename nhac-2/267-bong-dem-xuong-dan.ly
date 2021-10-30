@@ -74,12 +74,12 @@ nhacDiepKhucAlto = \relative c'' {
   g4 g8 g g4 |
   g4 g8 g g4 |
   d2. |
-  ef4 fs g |
+  e!4 fs g |
   d2. |
   e!4 fs g |
   d2. |
   d2. |
-  d |
+  f |
   ef |
   d |
   d |
@@ -100,12 +100,12 @@ nhacDiepKhucTenor = \relative c' {
   ef ef8 ef ef4 |
   d d8 d d4 |
   d2. |
-  e! |
+  ef |
   f4 ef d |
   g8 (f) ef4 d |
   d ef8 ef d (c) |
   d4 d8 d d4 |
-  ef ef8 ef  g ef |
+  ef ef8 ef  f ef |
   d4 d8 d d4 |
   bf a8 bf g4 |
   bf a8 bf g4 |
@@ -125,7 +125,7 @@ nhacDiepKhucTenor = \relative c' {
 
 nhacDiepKhucBas = \relative c {
   R2.*12
-  ef4 ef8 d ef4 |
+  ef4 ef8 ef ef4 |
   g g8 g g4 |
   c c8 c c4 |
   g g8 g g4 |
@@ -160,51 +160,52 @@ loiDiepKhucSop = \lyricmode {
   Bóng mây lững lờ ánh sao khuất mờ.
   Bỗng đâu khắp trời ánh quang sáng ngời.
   Tiếng muôn sứ thần báo cho thế trần.
-  Phút vui đến rồi hát vang núi đồi:
+  Phút vui đến rồi hát vang núi đồi
   Chính con Chúa Trời giáng sinh cứu đời.
   Tấu vang khúc đàn quyến theo gió ngàn.
   Đến đây kính thờ Chúa đang đón chờ.
-  La la la la la la la la la la la la
+  la la la la la la la la la la la la
   la la la la la la la la la la la la la la
   la la la la la la la la la la
   Tấu vang khúc đàn quyến theo gió ngàn.
-  Tới đây kính thờ Chúa đang đón chờ.
-  La la la la Hãy mau đón mời
-  Hm Hm Hm Tán dương Chúa Trời.
+  Tới đây kính thờ, Chúa đang đón chờ
+  la la la la Hãy mau đón mời
+  Hm Hm Hm tán dương Chúa Trời.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  La la la la la la la la
-  Phút vui đến rồi hát vang núi đồi:
+  la la la la la la la la
+  Phút vui đến rồi hát vang núi đồi
   Chính con Chúa Trời giáng sinh cứu đời.
   Tấu vang khúc đàn quyến theo gió ngàn.
   Đến đây kính thờ Chúa đang đón chờ.
-  La la la la la la la la la la la la
+  la la la la la la la la la la la la
   la la la la la la la la la la la la
   Hm Hm Hm Hm Hm Hm Hm Hm
-  Tán dương Chúa Trời.
+  tán dương Chúa Trời.
 }
 
 loiDiepKhucTenor = \lyricmode {
-  La la la la
-  Phút vui đến rồi hát vang núi đồi:
+  la la la la
+  Phút vui đến rồi hát vang núi đồi
   Chính Con Chúa Trời giáng sinh cứu đời.
-  La la Đến đây thờ Chúa đang chờ.
-  La la la la la la la la la la la la la la la la la
-  Phút vui đến rồi hát vang núi đồi:
+  la la Đến đây thờ Chúa đang chờ.
+  la la la la la la la la la la la la la la la la la
+  Phút vui đến rồi hát vang núi đồi
   Chính Con Chúa Trời giáng sinh cứu đời.
   Hm Hm Hm Hm Hm Hm
   Khắp dân cõi đời. Hm
 }
 
 loiDiepKhucBas = \lyricmode {
-  Phút vui đến rồi hát vang núi đồi:
+  Phút vui đến rồi hát vang núi đồi
   Chính Con Chúa Trời giáng sinh cứu đời.
   Tấu vang khúc đàn quyến theo gió ngàn.
   Đến đây kính thờ Chúa đang đón chờ.
-  Ước mong tháng ngày giữa đêm thánh này.
+  Ước mong tháng ngày
+  Giữa đêm thánh này.
   Phúc thiêng thắm mầu xóa tan bóng sầu.
-  La la la la la
+  la la la la la
   Hm Hm Hm Hm Hm Hm Hm
   Đến đây kết lời.
 }
