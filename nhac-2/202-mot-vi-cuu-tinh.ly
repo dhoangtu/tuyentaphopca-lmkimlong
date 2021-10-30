@@ -50,6 +50,7 @@ nhacDiepKhucSop = \relative c'' {
   <<
     {
       \voiceOne
+      \once \override NoteColumn.force-hshift = #1
       fs4 fs8 a |
       g2 ~ |
       g4
@@ -78,8 +79,13 @@ nhacDiepKhucSop = \relative c'' {
     }
     \new Voice = "bePhuHoaSop" \notBePhu -2 {
 	    \voiceTwo
-      r4 r8 c |
-      b4 (a)
+      r4 r8 c
+      %_\markup { \italic "No -" }
+      |
+      b4
+      %\tweak extra-offset #'(-1 . -1)
+      %_\markup { \italic " el" }
+      (a)
     }
   >>
   \oneVoice
@@ -180,7 +186,7 @@ nhacDiepKhucBas = \relative c {
   <<
     {
       \voiceOne
-      d2 |
+      \once \stemDown d2 |
       f8\rest d e fs |
       g4 fs8 e
     }
@@ -198,9 +204,9 @@ nhacDiepKhucBas = \relative c {
   d e d4 |
   r4 r8 e |
   a b a4 |
-  a, a'8 g |
+  c, a'8 g |
   fs g a a |
-  d4 (d) |
+  d4 (c) |
   b c |
   d c |
   b b8 a |
@@ -213,16 +219,18 @@ nhacDiepKhucBas = \relative c {
 % Lời
 loiDiepKhucSopMot = \lyricmode {
   No -- el, No -- el
-  Một Vị Cứu Tinh cho thế trần vừa giáng sinh.
+  \set stanza = "1."
+  Một Vị Cứu Tinh cho thế trần vừa giáng sinh
   No -- el, No -- el Một Vị Cứu Tinh cho thế trần vừa giáng sinh.
-  Người ơi! Này Con Chúa Trời vì tình yêu muôn đời
-  đã hạ sinh cứu ngàn dân No -- el, No -- el
+  Người ơi này Con Chúa Trời vì tình yêu muôn đời
+  đã hạ sinh cứu ngàn dân _ _ _ _
   Một Vị Cứu Tinh cho thế trần vừa giáng sinh.
 }
 
 loiDiepKhucSopHai = \lyricmode {
   \repeat unfold 4 { _ }
-  Hòa bình Chúa ban như sống lộc tràn khắp nơi.
+  \set stanza = "2."
+  Hòa bình Chúa ban như sóng lộc tràn khắp nơi
   No -- el, No -- el Hòa bình Chúa ban như sóng lộc tràn khắp nơi.
   Trời cao kìa muôn sứ thần hòa lời ca chúc mừng:
   Ngàn đời danh Chúa hiển vinh No -- el, No -- el
@@ -231,10 +239,11 @@ loiDiepKhucSopHai = \lyricmode {
 
 loiDiepKhucSopBa = \lyricmode {
   \repeat unfold 4 { _ }
-  Ngàn đời khắp nơi theo đất trời cùng sướng vui.
+  \set stanza = "3."
+  Ngàn đời khắp nơi theo đất trời cùng sướng vui
   No -- el, No -- el Ngàn đời khắp nơi theo đất trời cùng sướng vui.
-  Thành tâm cùng dâng Chúa Trời một lòng yêu mến Ngài
-  đẹp tình bác ái mọi nơi No -- el, No -- el
+  Thành tâm cùng dâng Chúa Trời một lòng yêu mến Ngài,
+  đẹp tình bác ái mọi nơi _ _ _ _
   Ngàn đời khắp nơi theo đất trời cùng sướng vui.
 }
 
@@ -246,7 +255,19 @@ loiPhuHoaSop = \lyricmode {
 loiDiepKhucAltoMot = \lyricmode {
   Hm __ \repeat unfold 23 { _ }
   Hm __ \repeat unfold 15 { _ }
-  No -- el, No -- el, No -- el
+  <<
+    { No -- el, }
+    \new Lyrics \with {
+      alignAboveContext = #"2"
+    }
+    {
+	    \set associatedVoice = "beAlto"
+	    \override Lyrics.LyricText.font-shape = #'italic
+	    \override LyricText.extra-offset = #'(0 . 3)
+	    "No -" el,
+	  }
+  >>
+  No -- el, No -- el
   Một Vị Cứu Tinh cho thế trần vừa giáng sinh, đã hạ sinh.
 }
 
@@ -322,17 +343,17 @@ TongNhip = {
 
 \score {
   \new ChoirStaff <<
-    \new Staff <<
+    \new Staff = "1" <<
         \clef treble
         \new Voice = beSop {
           \TongNhip \nhacDiepKhucSop
         }
-      \new Lyrics \lyricsto beSop \loiDiepKhucSopMot
       %\new Lyrics \lyricsto bePhuHoaSop \loiPhuHoaSop
+      \new Lyrics \lyricsto beSop \loiDiepKhucSopMot
       \new Lyrics \lyricsto beSop \loiDiepKhucSopHai
       \new Lyrics \lyricsto beSop \loiDiepKhucSopBa
     >>
-    \new Staff <<
+    \new Staff = "2"  <<
         \clef treble
         \new Voice = beAlto {
           \TongNhip \nhacDiepKhucAlto
@@ -341,7 +362,7 @@ TongNhip = {
       \new Lyrics \lyricsto beAlto \loiDiepKhucAltoHai
       \new Lyrics \lyricsto beAlto \loiDiepKhucAltoBa
     >>
-    \new Staff <<
+    \new Staff = "3" <<
         \clef "violin_8"
         \new Voice = beTenor {
           \TongNhip \nhacDiepKhucTenor
@@ -350,7 +371,7 @@ TongNhip = {
       \new Lyrics \lyricsto beTenor \loiDiepKhucTenorHai
       \new Lyrics \lyricsto beTenor \loiDiepKhucTenorBa
     >>
-    \new Staff <<
+    \new Staff = "4" <<
         \clef "bass"
         \new Voice = beBas {
           \TongNhip \nhacDiepKhucBas

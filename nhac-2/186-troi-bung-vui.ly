@@ -5,7 +5,7 @@
 \header {
   title = \markup { \fontsize #3 "Trời Bừng Vui" }
   composer = "Nhạc: Adam"
-  composer = "Lời Việt: Lm. Kim Long"
+  arranger = "Lời Việt: Lm. Kim Long"
   tagline = ##f
 }
 
@@ -45,15 +45,15 @@ nhacPhienKhucSop = \relative c' {
   d2 ~ d8. a16 a8. a16 |
   c2 c4 r8 c |
   e2 (d4.) g,8 |
-  c2. (b8.) a16 |
-  g2 ~ g8. g16 a8. g16 |
+  c2 ^(c4 b8.) a16 |
+  g2 ^(g8.) g16 a8. g16 |
   g2. c4 |
   d2. r8 g, |
   e'2. d4 |
   c2 b4 c8. d16 |
   c2. r4 |
   d2. d4 |
-  g2 ~ (g8 f) e (d) |
+  g2 ~ g8 (f) e (d) |
   c2 b4 c8. d16 |
   c2. r4 \bar "|."
 }
@@ -78,8 +78,8 @@ nhacPhienKhucAlto = \relative c' {
   f2 ~ f8. f16 f8. f16 |
   e2 e4 r8 e |
   g2 ~ g4. g8 |
-  g2 ( a4 g8.) f16 |
-  e2 ~ e8. e16 e8. e16 |
+  g2 _(a4 g8.) f16 |
+  e2 _(f8.) f16 f8. f16 |
   e2. g4 |
   g2. r8 g |
   g2 (a4) a |
@@ -111,11 +111,11 @@ nhacPhienKhucTenor = \relative c' {
   a2 ~ a8. d16 d8. d16 |
   c2 c4 r8 c |
   c2 (b4.) b8 |
-  c2. ~ c8. c16 |
+  c2 ^(c4) ~ c8. c16 |
   c2 (b8.) b16 b8. b16 |
   c2. c4 |
   b2. r8 b |
-  c2. c8 (d) |
+  c2 ^(c4) c8 (d) |
   e2 d4 c8. [b16] |
   c2. r4 |
   b2. b4 |
@@ -144,11 +144,11 @@ nhacPhienKhucBas = \relative c {
   d2 ~ d8. d16 d8. d16 |
   a'2 a4 r8 a |
   g2 (f4.) f8 |
-  e2 (f4) ~ f8. f16 |
+  e2 _(f4) ~ f8. f16 |
   g2 (g,8.) g16 g8. g16 |
   c2. c4 |
   g'2. r8 f |
-  e2 (f4) f |
+  e2 _(f4) f |
   g2 g4 g8. [g,16] |
   c2. r4 |
   g'2. f4 |
@@ -166,19 +166,19 @@ loiPhienKhucSopMot = \lyricmode {
   Chúa bao từ ái đà thương đoái tiếng kêu cầu.
   Sai Ngôi Thánh Tử sinh xuống trong xác phàm thế nhân,
   đem muôn phúc lành cứu rỗi cho khắp ngàn dân.
-  \set stanza = "ĐK:"
-  Hãy vui mừng lên hợp tiếng cùng triều thần hát kính:
+  
+  Hãy vui mừng lên, hợp tiếng cùng triều thần hát kính:
   Này Chúa vì quá yêu ta nên đã sinh ra.
-  Rạng danh một Chúa trên trời
-  bình an khắp nơi danh Thiên Chúa trên trời
+  Rạng danh một Chúa trên trời,
+  bình an khắp nơi, danh Thiên Chúa trên trời,
   bình an khắp nơi.
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = "2."
   Nào cùng về đây theo ánh sáng vì sao dẫn đường
-  tới nơi hang lừa cùng nghiên gối để tôn thờ.
-  Thờ lạy Hài Nhi sinh xuống giữa mùa đông tuyết sương.
+  tới nơi hang lừa cùng nghiêng gối để tôn thờ.
+  Thờ lạy Hài Nhi sinh xuống giữa mùa đông tuyết sương,
   Đấng bao đời trước ngàn dân nước vẫn trông chờ.
   Ôi Vua đất trời cao sáng muôn thánh thần kính tôn,
   hôm nay giáng trần trong chốn hang đá lạnh đơn.
@@ -193,17 +193,17 @@ loiPhienKhucBasMot = \lyricmode {
   Chúa bao từ ái đà thương đoái tiếng kêu cầu.
   Sai Ngôi Thánh Tử sinh xuống trong xác phàm thế nhân,
   đem muôn phúc lành cứu rỗi cho khắp ngàn dân.
-  Hãy vui mừng lên hợp tiếng cùng triều thần hát kính:
+  Hãy vui mừng lên, hợp tiếng cùng triều thần hát kính:
   Này Chúa vì quá yêu ta nên đã sinh ra.
-  Rạng danh một Chúa trên trời bình an khắp nơi
-  danh Thiên Chúa trên trời binh an khắp nơi.
+  Rạng danh một Chúa trên trời, bình an khắp nơi,
+  danh Thiên Chúa trên trời, bình an khắp nơi.
 }
 
 loiPhienKhucBasHai = \lyricmode {
   \set stanza = "2."
   Nào cùng về đây theo ánh sáng vì sao dẫn đường
-  tới nơi hang lừa cùng nghiên gối để tôn thờ.
-  Thờ lạy Hài Nhi sinh xuống giữa mùa đông tuyết sương.
+  tới nơi hang lừa cùng nghiêng gối để tôn thờ.
+  Thờ lạy Hài Nhi sinh xuống giữa mùa đông tuyết sương,
   Đấng bao đời trước ngàn dân nước vẫn trông chờ.
   Ôi Vua đất trời cao sáng muôn thánh thần kính tôn,
   hôm nay giáng trần trong chốn hang đá lạnh đơn.
@@ -263,7 +263,7 @@ TongNhip = {
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

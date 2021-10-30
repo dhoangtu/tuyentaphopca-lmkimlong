@@ -9,6 +9,8 @@ hát lên mừng Chúa
 \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
 \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
 
+\set Score.currentBarNumber = #16
+
   <<
     {
       r8 c ^> c4 ~ |

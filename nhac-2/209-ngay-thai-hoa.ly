@@ -125,8 +125,8 @@ nhacDiepKhucAlto = \relative c'' {
   r2 fs4 |
   g r2 |
   r2 fs4 |
-  g r8 d' ([b]) g |
-  e'4 (c) e, |
+  g r2 |
+  r e4 |
   d2 c8. c16 |
   b2 r4 |
   
@@ -236,7 +236,7 @@ nhacDiepKhucTenor = \relative c' {
   a2 d8 (c) |
   b4 b a |
   g4. (fs8) e8. e16 |
-  b4 r d'8 (c) |
+  d4 r d'8 (c) |
   bf4 bf bf |
   bf2 g8. g16 |
   a2 r4 |
@@ -258,11 +258,11 @@ nhacDiepKhucTenor = \relative c' {
   d4. d8 d4 |
   d2 c8. c16 |
   b4 a8 (g) fs (e) |
-  d4 d b'8. b16 |
+  fs4 fs b8. b16 |
   b4 a8 (g) fs (e) |
   g2 a4 |
   b2 (a4) |
-  d r2 |
+  b r2 |
   r4 d2 |
   d4 r2 |
   r4 c4. c8 |
@@ -287,8 +287,8 @@ nhacDiepKhucBas = \relative c' {
   a4 (fs) d |
   g r8 d ([g]) b |
   a4 (fs) d |
-  g r8 d ([g]) b |
-  c4 (e) c, |
+  g r2 |
+  r c,4 |
   d2 d8. d16 |
   g,2 r4 |
   R2.*6
@@ -303,7 +303,7 @@ nhacDiepKhucBas = \relative c' {
   a4 r8 e' cs a |
   d4 r8 a' fs (d) |
   g,2 g4 |
-  fs2 ~ fs8. fs16 |
+  a2 ~ a8. a16 |
   fs2 r4 |
   r4 r8 a' fs (d) |
   a4 r8 e' cs a |
@@ -323,13 +323,13 @@ nhacDiepKhucBas = \relative c' {
   g d b' g d8. g16 |
   c,2 r4 |
   R2.
-  r4 r8 d, c' (b) |
+  r4 r8 d c' (b) |
   a4. fs8 g (a) |
   d,4 r8 d e fs |
   g4 a b |
   c (a fs) |
   d2 r4 |
-  g8. g16 g4 g8 g |
+  g,8. g16 g4 g8 g |
   g4 g g'8 g |
   g4. g8 fs (g) |
   d2 r4 |
@@ -357,8 +357,8 @@ loiDiepKhucSop = \lyricmode {
   ngày bóng đen tội lỗi trần thế mờ xóa.
   Bởi hôm nay đà xuất hiện.
   Con Chúa nay hạ sinh Vua Cứu Tinh nay đà hiển minh.
-  Đã sinh hiển vinh bởi rầy Đấng Cứu Tinh đà hạ sinh.
-  Hôm nay đây cả thế gian hân hoan
+  đã sinh hiển vinh bởi rầy Đấng Cứu Tinh đà hạ sinh.
+  Hôm nay đây cả thế gian hân hoan,
   lắng tiếng hát muôn muôn thiên thần đến reo vang.
   Vui lên đi hỡi muôn cơ binh, vui lên đi
   hát lên đi khắp cõi thiên đình.
@@ -370,7 +370,38 @@ loiDiepKhucSop = \lyricmode {
   Đây ngày thái hòa,
   ngày Đấng Cứu Độ thế trần đã ngự qua.
   Bởi hôm nay hãy vui mừng
-  hòa niềm hân hoan chung tiếng hát mừng.
+  Hòa niềm hân hoan chung tiếng hát mừng.
+  Nào trần đời hòa vang khắp nơi:
+  vinh danh Chúa trên cõi trời.
+  Nào trần đời hòa vang khắp nơi:
+  vinh danh Chúa trên cõi trời.
+  Khắp thế nhân chung lời hát kính,
+  hát kính Chúa luôn ngời sáng muôn hiển vinh
+  nhân thế vui an bình.
+}
+
+loiDiepKhucAlto = \lyricmode {
+  Đây ngày thái hòa,
+  ngày thế nhân từng ngóng đợi đã khai hoa.
+  Đây ngày thái hòa,
+  ngày bóng đen tội lỗi trần thế mờ xóa.
+  Bởi hôm nay đà xuất hiện.
+  Con Chúa nay hạ sinh Vua Cứu Tinh nay đà hiển minh.
+  đã sinh hiển vinh
+  Cứu Tinh đà hạ sinh.
+  Hôm nay đây cả thế gian hân hoan,
+  lắng tiếng hát muôn muôn thiên thần đến reo vang.
+  Vui lên đi hỡi muôn cơ binh, vui lên đi
+  hát lên đi khắp cõi thiên đình.
+  Vui lên đi hỡi muôn cơ binh, vui lên đi
+  hát lên đi hỡi muôn đạo binh.
+  Câu hoan ca tung bay gần xa.
+  Đây ngày thái hòa, ngày chính Con Một Chúa Trời
+  đã sinh ra.
+  Đây ngày thái hòa,
+  ngày Đấng Cứu Độ thế trần đã ngự qua.
+  Bởi hôm nay hãy vui mừng
+  Hòa niềm hân hoan chung tiếng hát mừng.
   Nào trần đời hòa vang khắp nơi:
   vinh danh Chúa trên cõi trời.
   Nào trần đời hòa vang khắp nơi:
@@ -387,8 +418,8 @@ loiDiepKhucTenor = \lyricmode {
   Vua Cứu Tinh nay đã hiển minh.
   Vị Cứu Tinh hạ sinh là Đức Vua hiển vinh
   thật đây Đấng Cứu Tinh đà hạ sinh.
-  Bao vang hỉ hoan chứa chan
-  muôn thiên thần cất tiếng reo vang,
+  Bao vang hỉ hoan chứa chan,
+  Muôn thiên thần cất tiếng reo vang,
   reo vang câu hoan ca nhịp nhàng.
   Vui lên đi hỡi muôn cơ binh, vui lên đi,
   hát lên đi khắp cõi thiên binh.
@@ -397,7 +428,7 @@ loiDiepKhucTenor = \lyricmode {
   Khắp dương gian muôn thiên thần vang hòa.
   Câu hoan ca tung bay khắp chốn xa.
   Đây ngày thái hòa, ngày Đấng Cứu Độ thế trần đã ngự qua.
-  Mọi chính nhân hãy vui mừng hòa niềm hân hoan
+  mọi chính nhân hãy vui mừng hòa niềm hân hoan
   chung tiếng hát mừng.
   Nào trần đời ca vang nơi nơi:
   vinh danh Chúa trên cõi trời.
@@ -411,11 +442,11 @@ loiDiepKhucBas = \lyricmode {
   ngày bóng đen tội lỗi trần thế mờ nhòa.
   Vị Cứu Tinh quyền uy thánh thiện Con Chúa nay đã sinh
   Vua Cứu Tinh nay đã hiển minh.
-  Vị Cứu Tinh hạ sinh là Đức Vua hiển vinh
-  thật đây Đấng Cứu Tinh đà hạ sinh.
-  Bao vang hỉ hoan chứa chan
-  muôn thiên thần cất tiếng reo vang,
-  reo vang cây hoan ca nhịp nhàng.
+  Vị Cứu Tinh hạ sinh là Đức Vua hiển minh
+  Cứu Tinh đà hạ sinh.
+  Bao vang hỉ hoan chứa chan,
+  Muôn thiên thần cất tiếng reo vang,
+  reo vang câu hoan ca nhịp nhàng.
   Hãy vui mừng hỡi muôn đạo binh,
   hãy vui mừng hỡi muôn thiên binh.
   Hãy vui mừng hỡi muôn đạo binh,
@@ -423,7 +454,7 @@ loiDiepKhucBas = \lyricmode {
   Khắp dương gian muôn thiên thần vang hòa.
   bay khắp chốn xa.
   Đây ngày thái hòa, ngày Đấng Cứu Độ thế trần đã ngự qua.
-  Mọi chính nhân hãy vui mừng
+  mọi chính nhân hãy vui mừng
   hòa niềm hân hoan chung tiếng hát mừng.
   Nào trần đời ca vang nơi nơi:
   vinh danh Chúa trên cõi trời.
@@ -489,7 +520,7 @@ notBePhu =
         \new Voice = beAlto {
           \TongNhip \nhacDiepKhucAlto
         }
-      \new Lyrics \lyricsto beAlto \loiDiepKhucSop
+      \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
     >>
     \new Staff <<
         \clef "violin_8"

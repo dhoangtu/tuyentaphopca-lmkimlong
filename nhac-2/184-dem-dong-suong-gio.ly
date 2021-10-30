@@ -46,7 +46,7 @@ nhacPhienKhucSop = \relative c'' {
   e4 cs8 cs |
   d2 ~ |
   d4 r |
-  r8 f, f e |
+  r8 f, f d |
   d a' g8. b!16 \bar "||"
   
   \key d \major
@@ -80,7 +80,7 @@ nhacPhienKhucAlto = \relative c'' {
   r4 r8 d' |
   a8. a16 g8 g |
   fs4. fs8 |
-  g bf4 g8 |
+  g b!4 g8 |
   fs4 a8 a |
   bf4 a8 g |
   fs2 ~ |
@@ -90,8 +90,8 @@ nhacPhienKhucAlto = \relative c'' {
   
   \key d \major
   a4 r8 d |
-  cs cs d [a] |
-  d,4. a'8 |
+  cs cs d [fs,] |
+  d4. a'8 |
   g8. g16 e8 d |
   cs2 ~ |
   cs4 cs8 e |
@@ -120,8 +120,8 @@ nhacPhienKhucTenor = \relative c' {
   f8 e d a' |
   a2 ~ |
   a4 a8 a |
-  b!4 cs8 (d) |
-  d d ([e]) cs |
+  b!4 (cs8) d |
+  d d _([e]) cs |
   d4 d8 d |
   e4 a,8 a |
   a2 ~ |
@@ -133,7 +133,7 @@ nhacPhienKhucTenor = \relative c' {
   a4 r8 d, |
   a' a a as |
   b4. fs8 |
-  g8. g16 g8 gs |
+  g8. g16 g8 g |
   a2 ~ |
   a4 r |
   r fs8 a |
@@ -174,7 +174,7 @@ nhacPhienKhucBas = \relative c {
   a4 r8 d, |
   a' a a as |
   b4. fs8 |
-  g8. g16 g8 gs |
+  g8. g16 g8 g |
   a2 ~ |
   a4 r |
   r fs8 a |
@@ -192,11 +192,11 @@ loiPhienKhucSopMot = \lyricmode {
   Đêm đông sương gió, trăng sao lu mờ, mây trôi lững lờ.
   \set stanza = "1."
   Bỗng đâu rực sáng khắp trên khung trời.
-  Lắng nghe đây mục đồng ơi:
+  Lắng nghe đây mục đồng ơi,
   Nơi hang đá cơ cùng Đấng Cứu Tinh vừa hạ sinh.
   Lớp lớp thiên thần chung lời xướng ca:
   Sáng danh Thiên Chúa trên trời,
-  sáng danh Thiên Chúa trên trời.
+  Sáng danh Thiên Chúa trên trời.
   Và bình an cho những người được Chúa thương.
 }
 
@@ -204,7 +204,7 @@ loiPhienKhucSopHai = \lyricmode {
   \repeat unfold 12 { _ }
   \set stanza = "2."
   Chính Con Một Chúa giáng sinh trên đời.
-  Bóng đêm nay đã tàn phai
+  Bóng đêm nay đã tàn phai,
   nơi nơi hết u hoài ánh sáng lên ngợp trần ai.
   Tiếp nối muôn người luôn cùng xướng ca:
 }
@@ -212,43 +212,52 @@ loiPhienKhucSopHai = \lyricmode {
 loiPhienKhucAltoMot = \lyricmode {
   Đêm đông sương gió, trăng sao lu mờ, mây trôi lững lờ.
   la la la la la la la la la
-  Lắng nghe đây mục đồng ơi:
+  Lắng nghe đây mục đồng ơi,
   Nơi hang đá cơ cùng Đấng Cứu Tinh vừa hạ sinh.
   Lớp lớp thiên thần chung lời xướng ca:
       
   Sáng danh Thiên Chúa trên trời,
-  sáng danh Thiên Chúa trên trời.
+  Sáng danh Thiên Chúa trên trời.
   Và bình an cho những người
-  vĩnh an cho những người được Chúa thương.
+  bình an cho những người được Chúa thương.
 }
 
 loiPhienKhucAltoHai = \lyricmode {
   \repeat unfold 21 { _ }
   Bóng đêm nay đã tàn phai
-  nơi nơi hết u hoài ánh sáng lên ngợp trần ai.
+  nơi nơi hết u hoài, ánh sáng lên ngợp trần ai.
   Tiếp nối muôn người luôn cùng xướng ca:
 }
 
 loiPhienKhucTenorMot = \lyricmode {
   Hm __ _ _ _ _
-  Canh khuya đoàn mục đồng ngồi đó bên nhau
-  chụm ngọn lửa sưởi ấm.
-  La la la la la la la la la
+  \set stanza = "1."
+  Canh khuya đoàn mục đồng ngồi đó, bên nhau
+  chụm ngọn lửa sưởi ấm
+  la la la la la la la la la
   Rộn ràng tiếng thiên thần loan tin:
-  Mục đồng ơi! (Nơi hang đá cơ cùng)
+  Mục đồng ơi
+  \override Lyrics.LyricText.font-shape = #'italic
+  nơi hang đá cơ cùng
+  \revert Lyrics.LyricText.font-shape
   Đấng Cứu Tinh đã hạ sinh.
   Rồi hàng hàng lớp lớp thiên thần chung lời xướng ca:
   Rạng danh Thiên Chúa trên trời,
-  rạng danh Thiên Chúa trên trời.
+  Rạng danh Thiên Chúa trên trời.
   Và bình an cho những người được Chúa thương.
 }
 
 loiPhienKhucTenorHai = \lyricmode {
   \repeat unfold 5 { _ }
-  Qua bao ngày đợi chờ thổn thức đêm nay về dạt dào hồng phúc.
-  La la la la la la la la la
-  Trời và đất giao hòa reo vui:
-  Đã tàn phai (nơi nơi hết u hoài) ánh sáng lên ngợp trần ai.
+  \set stanza = "2."
+  Qua bao ngày đợi chờ thổn thức, đêm nay về dạt dào hồng phúc
+  la la la la la la la la la
+  Trời và đất giao hòa reo vui
+  đã tàn phai
+  \override Lyrics.LyricText.font-shape = #'italic
+  nơi nơi hết u hoài,
+  \revert Lyrics.LyricText.font-shape
+  Ánh sáng lên ngợp trần ai.
   Đời lại đời tiếp nối muôn người luôn cùng xướng ca:
 }
 
@@ -268,7 +277,7 @@ loiPhienKhucTenorHai = \lyricmode {
       (/ 20 20)))
   print-page-number = #f
   %page-count = #2
-  %systems-per-page = 5
+  %systems-per-page = 4
 }
 
 TongNhip = {

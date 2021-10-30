@@ -123,39 +123,39 @@ loiDiepKhucBas = \lyricmode {
 
 loiPhienKhucSopMot = \lyricmode {
   \set stanza = "1."
-  Chính giữa đêm trường tuyết sương lạnh lùng.
+  Chính giữa đêm trường tuyết sương lạnh lùng
   \set stanza = "1-3."
-  Ngài đã ra đời cứu con dân Ngài
+  Chúa đã ra đời cứu con dân Ngài
   \override Lyrics.LyricText.font-shape = #'italic
   (chuộc con dân Ngài).
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = "2."
-  Thấy khắp gian trần chúng nhân khổ sầu.
+  Thấy khắp gian trần chúng nhân khổ sầu
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \set stanza = "3."
-  Hãy cât cao lời tán dương Vua Trời.
+  Hãy cât cao lời tán dương Vua Trời
 }
 
 loiPhienKhucAltoMot = \lyricmode {
   \set stanza = "1."
-  Tuyết sương lạnh lùng,
+  tuyết sương lạnh lùng,
   Chúa đã ra đời cứu con dân Chúa, cứu con dân Ngài.
 }
 
 loiPhienKhucAltoHai = \lyricmode {
   \set stanza = "2."
-  Chúng nhân khổ sầu,
-  %Chúa đã ra đời cứu con dân Chúa, cứu con dân Ngài.
+  chúng nhân khổ sầu,
+  Chúa đã ra đời cứu con dân Chúa, cứu con dân Ngài.
 }
 
 loiPhienKhucAltoBa = \lyricmode {
   \set stanza = "3."
-  Tán dương Vua Trời,
-  %Chúa đã ra đời cứu con dân Chúa, cứu con dân Ngài.
+  tán dương Vua Trời,
+  Chúa đã ra đời cứu con dân Chúa, cứu con dân Ngài.
 }
 
 loiPhienKhucBasMot = \lyricmode {
@@ -167,13 +167,13 @@ loiPhienKhucBasMot = \lyricmode {
 loiPhienKhucBasHai = \lyricmode {
   \set stanza = "2."
   Thấy khắp gian trần chúng nhân khổ sầu,
-  %Chúa đã ra đời cứu con dân Ngài.
+  Chúa đã ra đời cứu con dân Ngài.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \set stanza = "3."
   Hãy cất cao lời tán dương Vua Trời,
-  %Chúa đã ra đời cứu con dân Ngài.
+  Chúa đã ra đời cứu con dân Ngài.
 }
 
 % Dàn trang

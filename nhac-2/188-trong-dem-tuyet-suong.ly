@@ -18,7 +18,7 @@ nhacDiepKhucSop = \relative c'' {
   bf4 bf8 c bf4 f |
   bf c d2 |
   ef4 d8 c d4 bf |
-  c2 bf |
+  c2 bf | \break
   bf g4 c |
   bf a8 g f2 |
   bf4 bf c d8 c |
@@ -35,7 +35,7 @@ nhacDiepKhucAlto = \relative c' {
   bf2. r8 a |
   g f g a bf2 |
   f f4 f8 ef |
-  f g f2 f8 a |
+  f g f2 g8 a |
   bf c bf4 af8 g f4 |
   g2 (f) |
   f (g) |
@@ -83,59 +83,61 @@ nhacDiepKhucBas = \relative c' {
   bf d ef e! |
   f2 bf4 a8 g |
   f ef d c bf2 |
-  ef4 d bf2
+  ef4 f bf,2
 }
 
 % Lời
 loiDiepKhucSopMot = \lyricmode {
   \set stanza = "1."
-  Trong đêm tuyết sương mùa đông băng giá.
-  Bỗng âm vang tiếng nhạc Thiên Thần.
-  Loan tin Chúa sinh hạ nơi hang đá.
+  Trong đêm tuyết sương mùa đông băng giá
+  Bỗng âm vang tiếng nhạc Thiên Thần,
+  Loan tin Chúa sinh hạ nơi hang đá,
   Ánh quang nay chiếu dọi xa gần.
-  Sáng danh Chúa Cha trên cung trời.
-  Và rạng danh Chúa con vừa giáng sinh.
-  An bình khắp nơi cho cõi đời.
-  Người người vui đón Vua hiển vinh.
+  Sáng danh Chúa Cha trên cung trời
+  Và rạng danh Chúa con vừa giáng sinh,
+  An bình khắp nơi cho cõi đời,
+  người người vui đón Vua hiển vinh.
 }
 
 loiDiepKhucSopHai = \lyricmode {
   \set stanza = "2."
-  Mau theo ánh sao dọi lên soi lối.
-  Tới Be -- lem kính thờ Vua Trời.
-  Sinh ra giữa hang lừa bao tăm tối.
+  Mau theo ánh sao dọi lên soi lối,
+  Tới Be -- lem kính thờ Vua Trời
+  Sinh ra giữa hang lừa bao tăm tối,
   Đấng muôn dân ngóng chờ bao đời.
 }
 
 loiDiepKhucSopBa = \lyricmode {
   \set stanza = "3."
-  Hôm nay khắp nơi ngợp trong vui sướng.
+  Hôm nay khắp nơi ngợp trong vui sướng
   Hát lên đi thấu tận cung trời:
-  Vinh quang Chúa lan tràn qua muôn hướng.
+  Vinh quang Chúa lan tràn qua muôn hướng,
   Thế nhân nay đón hưởng an bình.
 }
 
 loiDiepKhucAlto = \lyricmode {
   A la la la la la la la la la la la la la la
   la la la la la la la la la la la
-  A Rạng danh trên trời Vinh danh Chúa Con vừa hạ sinh
-  để đem lại an bình. Tới cõi đời nơi nơi hiển vinh.
+  A! Rạng danh trên trời Vinh danh Chúa Con vừa hạ sinh
+  để đem lại an bình
+  tới cõi đời, nơi nơi hiển vinh.
 }
 
 loiDiepKhucTenor = \lyricmode {
   A la la la la la la la la la la la la la lala la 
   la la la la la la la la la
-  A Vang danh trên trời. Và sáng danh Chúa Con vừa hạ sinh
-  để đem lại an bình.
-  Tới cõi đời người hỡi đón Vua hiển vinh.
+  A! Vang danh trên trời
+  Và sáng danh Chúa Con vừa hạ sinh
+  để đem lại an bình
+  tới cõi đời, người hỡi đón Vua hiển vinh.
 }
 
 loiDiepKhucBas = \lyricmode {
   La la la la la la la la la la la la la la la la
   la la la la la la la la la
-  A Rạng danh Thiên Chúa Cha
-  sáng danh Chúa Con Đấng đã sinh ra đời,
-  ra đời đem lại bình an cho mọi nơi.
+  A! Rạng danh Thiên Chúa Cha
+  Sáng danh Chúa Con Đấng đã sinh ra đời,
+  ra đời đem lại bình an cho mọi nơi,
   Tới đây muôn người hân hoan đón mừng Vua hiển vinh.
 }
 
@@ -143,7 +145,7 @@ loiDiepKhucBas = \lyricmode {
 \paper {
   #(set-paper-size "a4")
   top-margin = 15\mm
-  bottom-margin = 20\mm
+  bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -154,7 +156,8 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  page-count = #2
+  %page-count = #2
+  systems-per-page = 3
   %ragged-bottom = ##f
 }
 
@@ -214,7 +217,7 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #0.4
+    \override Lyrics.LyricSpace.minimum-distance = #0.6
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \context {

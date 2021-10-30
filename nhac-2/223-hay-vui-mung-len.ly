@@ -26,8 +26,8 @@ nhacPhienKhucSop = \relative c'' {
   g8 g |
   \time 4/4
   a4. c8 b4 g8 f |
-  \time 2/4 a4 a8 d |
-  e,4. f8 |
+  \time 2/4 a4 a8 d, |
+  e4. f8 |
   \time 3/4
   g4. r8 f f |
   \time 2/4 g4 d8 d |
@@ -60,7 +60,7 @@ nhacPhienKhucAlto = \relative c' {
   \time 3/4
   ef4. r8 d c |
   \time 2/4
-  b4 a8 a |
+  b!?4 a8 a |
   \time 3/8
   b g' g |
   gs gs gs |
@@ -72,11 +72,11 @@ nhacPhienKhucTenor = \relative c' {
   \time 3/4
   g4 ef8 g a bf |
   \time 4/4
-  c c b4 r8 g g f |
+  c c b!?4 r8 g g f |
   \time 2/4
   g a c b |
   a4 r8 bf |
-  bf4 r8 bf |
+  b4 r8 b |
   \time 3/4
   a2
   b8 (c) |
@@ -120,7 +120,7 @@ nhacPhienKhucBas = \relative c {
   d4 ef8 ef |
   \time 3/8
   d g g |
-  e e e |
+  g!? g g |
   \time 2/4 g4 g
 }
 

@@ -11,7 +11,7 @@
 }
 
 % Nhạc
-nhacPhienKhucSopMot = \relative c'' {
+nhacPhienKhucSop = \relative c'' {
   \partial 8 g8 |
   b4 c |
   d4. d8 |
@@ -36,12 +36,9 @@ nhacPhienKhucSopMot = \relative c'' {
   a b c a |
   d8. e16 d8 c |
   b4 a |
-  g4. \bar "|."
-}
-
-nhacPhienKhucSopHai = \relative c'' {
-  \set Score.currentBarNumber = #25
-  \partial 8 g8 |
+  g4. \bar "||" \break
+  
+  g8 |
   b4 c |
   d4. d8 |
   e e e c |
@@ -65,12 +62,9 @@ nhacPhienKhucSopHai = \relative c'' {
   a b c a |
   d8. e16 d8 c |
   b4 a |
-  g4. \bar "|"
-}
-
-nhacPhienKhucSopBa = \relative c'' {
-  \set Score.currentBarNumber = #49
-  \partial 8 g8 |
+  g4. \bar "|" \break
+  
+  g8 |
   b4 c |
   d4. d8 |
   e e e c |
@@ -105,7 +99,7 @@ nhacPhienKhucSopBa = \relative c'' {
   g4 \bar "|."
 }
 
-nhacPhienKhucAltoMot = \relative c'' {
+nhacPhienKhucAlto = \relative c'' {
   g8 |
   g4 e |
   b'4. b8 |
@@ -131,10 +125,34 @@ nhacPhienKhucAltoMot = \relative c'' {
   g8. fs16 g8 e |
   d4 fs |
   g4.
-}
-
-nhacPhienKhucAltoBa = \relative c'' {
-  d,8 g4 g |
+  
+  g8 |
+  b4 c |
+  d4. d8 |
+  e e e c |
+  d4 d8 d |
+  e e e c |
+  d8. e16 d8 c |
+  b4 a |
+  g4. g8 |
+  a4 b |
+  a4. g8 |
+  a4 b |
+  a4. g8 |
+  a b c a |
+  d8. e16 d8 c |
+  b4 a |
+  g4. g8 |
+  a4 b |
+  a4. g8 |
+  a4 b |
+  a4. g8 |
+  a b c a |
+  d8. e16 d8 c |
+  b4 a |
+  g4.
+  
+  d8 g4 g |
   g8 fs g g |
   g4 g8 (a) |
   b (fs) g g |
@@ -167,7 +185,10 @@ nhacPhienKhucAltoBa = \relative c'' {
   b4
 }
 
-nhacPhienKhucTenorHai = \relative c' {
+nhacPhienKhucTenor = \relative c' {
+  r8 |
+  R2*23
+  r4.
   b8 |
   d4 e |
   d4. b8 |
@@ -193,9 +214,7 @@ nhacPhienKhucTenorHai = \relative c' {
   g8. g16 g8 e |
   d4 c |
   b4.
-}
-
-nhacPhienKhucTenorBa = \relative c' {
+  
   b8 |
   d4 c8 (e) |
   d4. b8 |
@@ -230,7 +249,10 @@ nhacPhienKhucTenorBa = \relative c' {
   d4
 }
 
-nhacPhienKhucBasHai = \relative c' {
+nhacPhienKhucBas = \relative c' {
+  r8 |
+  R2*23
+  r4.
   g8 |
   g4 g |
   g4. g8 |
@@ -256,9 +278,7 @@ nhacPhienKhucBasHai = \relative c' {
   b8. a16 b8 c |
   d4 d |
   <g g,>4.
-}
-
-nhacPhienKhucBasBa = \relative c' {
+  
   g8 |
   g (fs) e (c) |
   b a b g |
@@ -294,7 +314,7 @@ nhacPhienKhucBasBa = \relative c' {
 }
 
 % Lời
-loiPhienKhucSopMot = \lyricmode {
+loiPhienKhucSop = \lyricmode {
   Màn đêm tỏa lan, nhân thế khắp chốn còn miên man,
   Đây ánh sáng mới từ đâu chiếu soi điểm tô muôn màu.
   Đừng xao xuyến chi, cùng vui hát đi,
@@ -302,9 +322,7 @@ loiPhienKhucSopMot = \lyricmode {
   Này Vua Cứu Tinh vừa đây giáng sinh,
   Rạng danh Thiên Chúa quyền linh,
   thế nhân hưởng ơn an bình.
-}
-
-loiPhienKhucSopHai = \lyricmode {
+  
   Này nghe vẳng xa bao tiếng thánh thót lời hoan ca,
   muôn lớp lớp sứ thần vui hát ca cảm khen Vua Trời.
   Đừng xao xuyến chi cùng vui hát đi,
@@ -312,9 +330,7 @@ loiPhienKhucSopHai = \lyricmode {
   Này Vua Cứu Tinh giờ đây giáng sinh.
   Rạng danh Thiên Chúa quyền linh,
   thế nhân hưởng ơn an bình.
-}
-
-loiPhienKhucSopBa = \lyricmode {
+  
   Hài Nhi nhỏ xinh an giấc giữa máng lừa hôi tanh,
   Con Chúa phép tắc quyền linh
   giáng sinh tỏa ban ơn lành.
@@ -325,10 +341,9 @@ loiPhienKhucSopBa = \lyricmode {
   thế nhân hưởng ơn an bình.
   Mừng Chúa giáng sinh, mừng Chúa giáng sinh,
   Mừng Chúa giáng sinh.
-
 }
 
-loiPhienKhucAltoMot = \lyricmode {
+loiPhienKhucAlto = \lyricmode {
   Màn đêm tỏa lan, nhân thế khắp chốn còn miên man,
   Đây ánh sáng mới từ đâu chiếu soi điểm tô muôn màu.
   Đừng xao xuyến chi, cùng vui hát đi,
@@ -336,9 +351,15 @@ loiPhienKhucAltoMot = \lyricmode {
   Này Vua Cứu Tinh vừa đây giáng sinh,
   Rạng danh Thiên Chúa quyền linh,
   thế nhân hưởng ơn an bình.
-}
-
-loiPhienKhucAltoBa = \lyricmode {
+  
+  Này nghe vẳng xa bao tiếng thánh thót lời hoan ca,
+  muôn lớp lớp sứ thần vui hát ca cảm khen Vua Trời.
+  Đừng xao xuyến chi cùng vui hát đi,
+  vì đây ta báo một tin rất hoan hỉ cho muôn người:
+  Này Vua Cứu Tinh giờ đây giáng sinh.
+  Rạng danh Thiên Chúa quyền linh,
+  thế nhân hưởng ơn an bình.
+  
   Hài Nhi nhỏ xinh an giấc giữa máng lừa hôi tanh,
   Con Vua phép tắc quyền linh hạ sinh tỏa ban ơn lành.
   Đừng xao xuyến chi, cùng vui hát đi,
@@ -350,7 +371,7 @@ loiPhienKhucAltoBa = \lyricmode {
   nào ta mừng Chúa giáng sinh.
 }
 
-loiPhienKhucTenorHai = \lyricmode {
+loiPhienKhucTenor = \lyricmode {
   Này nghe vẳng xa bao tiếng thánh thót lời hoan ca,
   muôn lớp lớp sứ thần vui hòa ca cảm khen Vua Trời.
   Thôi xao xuyến chi mau vui ca đi,
@@ -358,9 +379,7 @@ loiPhienKhucTenorHai = \lyricmode {
   Đây Vua Cứu Tinh hôm nay giáng sinh.
   Rạng danh Thiên Chúa quyền linh,
   thế nhân hưởng ơn an bình.
-}
-
-loiPhienKhucTenorBa = \lyricmode {
+  
   Hài Nhi nhỏ xinh an giấc giữa máng lừa hôi tanh,
   Con Chúa phép tắc hiển linh hạ sinh tỏa ban ơn lành.
   Đừng xao xuyến chi, cùng vui hát đi
@@ -372,7 +391,7 @@ loiPhienKhucTenorBa = \lyricmode {
   nào ta hát Chúa giáng sinh.
 }
 
-loiPhienKhucBasHai = \lyricmode {
+loiPhienKhucBas = \lyricmode {
   Này nghe vang xa bao tiếng thánh thót lời hoan ca,
   muôn lớp lớp sứ thần vui hòa ca cảm khen Vua Trời.
   Thôi xao xuyến chi mau vui ca đi,
@@ -380,9 +399,6 @@ loiPhienKhucBasHai = \lyricmode {
   Đây Vua Cứu Tinh hôm nay giáng sinh.
   Sáng danh Thiên Chúa quyền linh,
   thế nhân hưởng ơn anh bình.
-}
-
-loiPhienKhucBasBa = \lyricmode {
   Hài Nhi nhỏ xinh an giấc giữa máng hôi tanh:
   Con của Chúa hiển linh hạ sinh tỏa ban ơn lành.
   Đừng xao xuyến chi, cùng vui hát đi
@@ -439,106 +455,36 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-        \clef treble
-        \new Voice = beSop {
-          \TongNhip 
-        }
-        \new Voice \TongNhip \partCombine 
-          \nhacPhienKhucSopMot
-          \notBePhu -2 { \nhacPhienKhucAltoMot }
-        \new NullVoice = nhacThamChieuHai \nhacPhienKhucSopMot
-        \new Lyrics \lyricsto nhacThamChieuHai \loiPhienKhucSopMot
-    >>
-  >>
-  \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #0.5
-    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
-    
-    \context {
-      \Staff \RemoveEmptyStaves
-      \override VerticalAxisGroup.remove-first = ##t
-    }
-    
-  }
-}
-
-\score {
-  \new ChoirStaff <<
     \new Staff <<
         \clef treble
         \new Voice = beSop {
-          \TongNhip \nhacPhienKhucSopHai
+          \TongNhip \nhacPhienKhucSop
         }
-      \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
-    >>
-    \new Staff <<
-        \clef "violin_8"
-        \new Voice = beTenor {
-          \TongNhip \nhacPhienKhucTenorHai
-        }
-      \new Lyrics \lyricsto beTenor \loiPhienKhucTenorHai
-    >>
-    \new Staff <<
-        \clef bass
-        \new Voice = beBas {
-          \TongNhip \nhacPhienKhucBasHai
-        }
-      \new Lyrics \lyricsto beBas \loiPhienKhucBasHai
-    >>
-  >>
-  \layout {
-    \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricSpace.minimum-distance = #0.5
-    %\override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
-    
-    \context {
-      \Staff \RemoveEmptyStaves
-      \override VerticalAxisGroup.remove-first = ##t
-    }
-    
-  }
-}
-
-\score {
-  \new ChoirStaff <<
-    \new Staff <<
-        \clef treble
-        \new Voice = beSop {
-          \TongNhip \nhacPhienKhucSopBa
-        }
-      \new Lyrics \lyricsto beSop \loiPhienKhucSopBa
+      \new Lyrics \lyricsto beSop \loiPhienKhucSop
     >>
     \new Staff <<
         \clef treble
         \new Voice = beAlto {
-          \TongNhip \nhacPhienKhucAltoBa
+          \TongNhip \nhacPhienKhucAlto
         }
-      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoBa
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
     >>
     \new Staff <<
         \clef "violin_8"
         \new Voice = beTenor {
-          \TongNhip \nhacPhienKhucTenorBa
+          \TongNhip \nhacPhienKhucTenor
         }
-      \new Lyrics \lyricsto beTenor \loiPhienKhucTenorBa
+      \new Lyrics \lyricsto beTenor \loiPhienKhucTenor
     >>
     \new Staff <<
         \clef bass
         \new Voice = beBas {
-          \TongNhip \nhacPhienKhucBasBa
+          \TongNhip \nhacPhienKhucBas
         }
-      \new Lyrics \lyricsto beBas \loiPhienKhucBasBa
+      \new Lyrics \lyricsto beBas \loiPhienKhucBas
     >>
   >>
   \layout {
-    \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricSpace.minimum-distance = #0.5
     %\override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
