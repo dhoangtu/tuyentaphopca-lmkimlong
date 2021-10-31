@@ -48,6 +48,19 @@ hát lên mừng Chúa
 \once \phrasingSlurDashed
 a \(g\)
 
+\new Staff \with {
+  \consists "Merge_rests_engraver"
+  printPartCombineTexts = ##f
+}
+<<
+  \clef bass
+\new Voice \TongNhip \partCombine 
+  \nhacDiepKhucBaBeTenor
+  \nhacDiepKhucBaBeBas
+\new NullVoice = beBas \nhacDiepKhucBaBeBas
+\new Lyrics \lyricsto beBas \loiDiepKhucBaBeBas
+>>
+
 \new Voice \TongNhip \partCombine
 { \partCombineChords \nhacDiepKhucSop }
 { \stemUp \notBePhu -3 \nhacDiepKhucBas }

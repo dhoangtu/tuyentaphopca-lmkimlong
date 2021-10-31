@@ -160,15 +160,55 @@ nhacPhienKhucSop = \relative c'' {
   cs2 |
   d ~ |
   d8 bf d g, |
-  
+  a2 ~ |
+  a4 r |
+  R2
+  r8 d e d |
+  cs r r4 |
+  r8 cs d d |
+  bf4 d8 (cs) |
+  d2 ~ |
+  d4
 }
 
-nhacPhienKhucAlto = \relative c'' {
-
+nhacPhienKhucAlto = \relative c' {
+  f4. g8 |
+  f [e] d4 |
+  d g |
+  f2 |
+  e4 f8 f |
+  e2 |
+  a ~ |
+  a8 g e d |
+  cs2 ~ |
+  cs4 r |
+  R2
+  r8 f g f |
+  e r r4 |
+  r8 e f f |
+  g4 f8 (g) |
+  f2 ~ |
+  f4
 }
 
-nhacPhienKhucBas = \relative c'' {
-
+nhacPhienKhucBas = \relative c {
+  d2 ~ |
+  d4 e8 f |
+  g2 |
+  d'4. e16 d |
+  cs4 d8 d |
+  a4. (g8) |
+  f2 ~ |
+  f8 g g bf |
+  a2 ~ |
+  a4 r |
+  R2
+  r8 d, cs d |
+  a' r r4 |
+  r8 a d d |
+  g, bf a4 |
+  d,2 ~ |
+  d4
 }
 
 % Lời
@@ -339,7 +379,7 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
+    \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -356,7 +396,11 @@ notBePhu =
       \new Lyrics \lyricsto beSolo \loiPhienKhucSoloHai
       \new Lyrics \lyricsto beSolo \loiPhienKhucSoloBa
     >>
-    \new Staff <<
+    \new Staff \with {
+        \consists "Merge_rests_engraver"
+        printPartCombineTexts = ##f
+      }
+      <<
       \new Voice \TongNhip \partCombine 
         \nhacPhienKhucSop
         \notBePhu -2 { \nhacPhienKhucAlto }
@@ -377,7 +421,7 @@ notBePhu =
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
+    \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   } 

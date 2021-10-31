@@ -39,7 +39,7 @@ nhacDiepKhucSop = \relative c' {
   a8 r4
   <<
     {
-      f'8 |
+      e'8 |
       f ^> f ^> c4 ~ |
       c
     }
@@ -88,7 +88,7 @@ nhacDiepKhucSop = \relative c' {
       a2 |
       g8 e4 g8 |
       f2 ~ |
-      f4.
+      \partial 4. f4.
     }
     { \notBePhu -2 {
       g4 \tuplet 3/2 { bf8 bf bf } |
@@ -99,7 +99,7 @@ nhacDiepKhucSop = \relative c' {
       a4.
     }}
   >>
-  r8 | \break
+  \bar "|." \break
   
   f'4 \tuplet 3/2 { f8 e g } |
   g4. g16 f |
@@ -215,7 +215,7 @@ nhacDiepKhucTenor = \relative c {
   c2 ~ |
   c4 r8 f, |
   bf4 g8 f |
-  e4 e8 e |
+  e4 e8 ^> e |
   f4 f8 a |
   c c d4 |
   c4 r8 a |
@@ -233,7 +233,7 @@ nhacDiepKhucBas = \relative c {
   c r8 c |
   bf ^> bf ^> r d |
   c ^> c4. ^> |
-  a8. ^> d16 c8 c |
+  a8. ^> bf16 c8 c |
   f2 ~ |
   f4 r8 f |
   bf8. ^> bf16 g8 ^> g ^> |
@@ -255,7 +255,7 @@ nhacDiepKhucBas = \relative c {
   c2 ~ |
   c4 r8 f |
   bf4 bf,8 b! |
-  c4 c8 c |
+  c4 c8 ^> c |
   f4 f8 d |
   c c b!4 |
   c r8 c |
@@ -268,82 +268,78 @@ nhacDiepKhucBas = \relative c {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  \set stanza = "ĐK:"
-  Hòa ca lên, chung lời hòa ca lên.
-  Mừng chiến thắng, mừng chiến thắng Đức Ki -- tô khải hoàn.
+  Hòa ca lên, chung lời hòa ca lên
+  mừng chiến thắng, mừng chiến thắng Đức Ki -- tô khải hoàn.
   Đánh bại thần chết đập tan gông cùm.
   Hòa ca lên, chung lời hòa ca lên.
   Mừng chiến thắng, mừng chiến thắng Đức Ki -- tô khải hoàn.
-  Chính khi bị treo trên thập tự và khai lối lên Quê Trời.
-  Hòa ca lên, chung lời hòa ca lên.
-  Mừng chiến thắng,
-  mừng chiến thắng đất trời ngợp trong vui sướng.
+  Chính khi bị treo trên thập tự và khai lối lên quê trời.
+  Hòa ca lên, chung lời hòa ca lên
+  mừng chiến thắng,
+  mừng chiến thắng.
+  Đất trời ngợp trong vui sướng.
   
   \set stanza = "1."
-  Nếu hạt lùa mì gieo trong lòng đất không hư thối đi
+  Nếu hạt lùa mì gieo trong lòng đất không hư thối đi,
   mãi mãi trơ trọi một mình.
   Nhưng nếu nó thối thân sẽ làm trổ sinh muôn nghìn bông hạt.
   
   \set stanza = "2."
-  Khi Ta bị treo lên Cây Thập Giá.
-  Ta sẽ kéo mọi người
-  <<
-    { đến với }
-    \new Lyrics {
-	    \set associatedVoice = "beBas"
-	    \override Lyrics.LyricText.font-shape = #'italic
-	    lại cùng
-	  }
-  >>
-  Ta. Để muôn muôn người dự phần sự chết của Ta
+  Khi Ta bị treo lên cây Thập giá.
+  Ta sẽ kéo mọi người đến với Ta,
+  Để muôn muôn người dự phần sự chết của Ta
   mà được sống lại.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Hòa ca lên, chung lời hòa ca lên.
-  Chúc chiến thắng,
+  Hòa ca lên, chung lời hòa ca lên
+  chúc chiến thắng,
   chúc chiến thắng Vị Ki -- tô khải hoàn.
   Đánh bại thần chết đập tan gông cùm.
   Hòa ca lên, chung lời hòa ca lên.
   Mừng chiến thắng, chúc chiến thắng
   Đức Ki -- tô khải hoàn.
   Chính khi bị treo trên thập tự
-  và khai lối lên Quê Trời, lên Quê Trời.
-  Hòa ca lên, chung lời hòa ca lên.
-  Chúc chiến thắng, chúc chiến thắng
-  đất trời ngợp trong vui sướng.
+  và khai lối lên quê trời, lên quê trời.
+  Hòa ca lên, chung lời hòa ca lên
+  chúc chiến thắng, chúc chiến thắng.
+  Đất trời ngợp trong vui sướng.
 }
 
 loiDiepKhucTenor = \lyricmode {
-  Hòa ca lên, chung lời ca hát lên.
-  Mừng chiến thắng,
+  Hòa ca lên, chung lời ca hát lên
+  mừng chiến thắng,
   mừng chiến thắng Vị Ki -- tô khải hoàn.
   Ngài đã đánh bại thần chết
   và đã đập tan gông cùm.
   Hòa ca lên, hòa ca lên, chung lời ca hát lên.
   Mừng chiến thắng, mừng chiến thắng
   Vị Ki -- tô khải hoàn.
-  Ngài đã xóa mọi tội lỗi.
-  Người ơi! Lên Quê Trời nào hát ca lên,
+  Ngài đã xóa mọi tội lỗi
+  người ơi lên quê trời.
+  Nào hòa ca lên,
   chung lời ca hát lên.
   Mừng chiến thắng,
-  mừng chiến thắng thật nơi nơi ngợp vui sướng.
+  mừng chiến thắng.
+  Thật nơi nơi ngợp vui sướng.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Hòa ca lên, chung lời ca hòa lên.
-  Chúc chiến thắng,
+  Hòa ca lên, chung lời ca hòa lên
+  chúc chiến thắng,
   chúc chiến thắng Vị Ki -- tô khải hoàn.
   Ngài đã đánh bại thần chết
   và đã đập tan gông cùm.
   Hòa ca lên, hòa ca lên, chung lời ca hòa lên.
   Chúc chiến thắng, chúc chiến thắng
   Vị Ki -- tô khải hoàn.
-  Ngài đã xóa mọi tội lỗi.
-  Người ơi! Lên Quê Trời nào hòa ca lên,
-  chung lời ca hát lên.
-  Chúc chiến thắng,
-  chúc chiến thắng thật nơi nơi ngợp vui sướng.
+  Ngài đã xóa mọi tội lỗi
+  người ơi lên quê trời.
+  Nào hòa ca lên,
+  chung lời ca hòa lên
+  chúc chiến thắng,
+  chúc chiến thắng.
+  Thật nơi nơi ngợp vui sướng.
 }
 
 % Dàn trang

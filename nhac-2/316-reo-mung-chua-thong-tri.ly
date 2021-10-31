@@ -4,8 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Reo Mừng Chúa Thống Trị" }
-  poet = "Nhạc: L. Deiss"
-  composer = "Lm. Kim Long"
+  composer = "Nhạc: L. Deiss"
+  arranger = "Lm. Kim Long"
   tagline = ##f
 }
 
@@ -23,7 +23,7 @@ nhacDiepKhucSop = \relative c'' {
   e4. ~ e4. ~ |
   e4 r8 e,4 g8 |
   a4. a |
-  e2. \bar "||" \break
+  e2. \bar "|." \break
   
   \partial 4. r4. |
   R2.*3
@@ -191,6 +191,7 @@ nhacDiepKhucBas = \relative c {
 % Lời
 loiDiepKhucSopMot = \lyricmode {
   Al -- le -- lu -- yah
+  \set stanza = "ĐK:"
   Al -- le -- lu -- yah
   Al -- le -- lu -- yah Al -- le -- lu -- yah
   Ngợi khen Đấng Cứu độ
@@ -210,6 +211,7 @@ loiDiepKhucSopHai = \lyricmode {
 }
 
 loiDiepKhucBasMot = \lyricmode {
+  \set stanza = "1."
   Ngàn dân cùng reo mừng Thiên Chúa đến thống trị
   Al -- le -- lu -- yah
   \set stanza = "1-2."
@@ -229,6 +231,7 @@ loiDiepKhucBasMot = \lyricmode {
 }
 
 loiDiepKhucBasHai = \lyricmode {
+  \set stanza = "2."
   Này đây ngày vui mừng Thiên Chúa đã tác thành
   \repeat unfold 35 { _ }
   \set stanza = "4."
@@ -255,9 +258,10 @@ loiDiepKhucBasHai = \lyricmode {
 }
 
 TongNhip = {
-  \key g \major \time 3/4
+  \key g \major \time 6/8
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1)
 }
 
 % Đổi kích thước nốt cho bè phụ
@@ -299,7 +303,7 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Staff.TimeSignature.transparent = ##t
+    %\override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricSpace.minimum-distance = #1.2
     \override LyricHyphen.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
