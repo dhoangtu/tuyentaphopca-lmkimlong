@@ -18,20 +18,20 @@ nhacDiepKhuc = \relative c'' {
 
 nhacCongDoan = \relative c'' {
   \partial 2 g8 g4 e8 |
-  d4 g8 a (b) a |
+  d4 g8 a ([b]) a |
   g4. \bar "|."
 }
 
 nhacCaDoanSop = \relative c'' {
   b8 d4 e8 |
   fs4 b,8 e4 e8 |
-  d4.
+  b4.
 }
 
 nhacCaDoanAlto = \relative c'' {
   g8 g4 g8 |
   a4 b8 c4 c8 |
-  b4.
+  d4.
 }
 
 nhacCaDoanTenor = \relative c' {
@@ -62,24 +62,25 @@ nhacPhienKhuc = \relative c' {
 
 % Lời
 loiDiepKhuc = \lyricmode {
-  Nào nhân thế hãy vang khúc hoan ca ngợi khen Chúa.
+  Nào trần thế hãy vang khúc hoan ca ngợi khen Chúa.
 }
 
 loiCongDoan = \lyricmode {
-  AL -- LE -- LU -- IA! AL -- LE -- LU -- IA!
+  AL -- LE -- LU -- IA, AL -- LE -- LU -- IA
 }
 
 loiCaDoanSop = \lyricmode {
-  AL -- LE -- LU -- IA! AL -- LE -- LU -- IA!
+  AL -- LE -- LU -- IA, AL -- LE -- LU -- IA
 }
 
 loiCaDoanBas = \lyricmode {
-  AL -- LE -- LU -- IA! AL -- LE -- LU -- IA!
+  AL -- LE -- LU -- IA, AL -- LE -- LU -- IA
 }
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = "1."
-  Ca mừng Thiên Chúa ngàn dân trên thế giới ngợi khen Chúa hiển vinh.
+  Ca mừng Thiên Chúa ngàn dân trên thế giới,
+  ngợi khen Chúa hiển vinh.
   Hòa lên muôn khúc thánh thi tán dương vì vinh quang Chúa sáng ngời.
 }
 
@@ -92,13 +93,14 @@ loiPhienKhucHai = \lyricmode {
 loiPhienKhucBa = \lyricmode {
   \set stanza = "3."
   Trong niềm tin kính mọi dân trên thế giới phục suy trước Thiên Nhan.
-  Ngợi khen Danh Chúa rất đáng ca tụng hòa vang muôn khúc thánh vịnh.
+  Ngợi khen Danh Chúa rất đáng ca tụng hòa vang muôn khúc Thánh Vịnh.
 }
 
 loiPhienKhucBon = \lyricmode {
   \set stanza = "4."
   Mau cùng nhau đến và hãy chiêm ngưỡng rõ kỳ công Chúa dựng nên.
-  Vì yêu con cái thế nhân biết bao việc uy dũng Chúa đã làm.
+  Vì yêu con cái thế nhân,
+  biết bao việc uy dũng Chúa đã làm.
 }
 
 % Dàn trang
