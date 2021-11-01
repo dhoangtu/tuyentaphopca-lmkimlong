@@ -13,7 +13,9 @@
 nhacPhienKhucSopMot = \relative c'' {
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \partial 4 r4
   r4. a8 |
   bf8. a16 g8 a |
@@ -81,7 +83,9 @@ nhacPhienKhucSopMot = \relative c'' {
 }
 
 nhacPhienKhucAltoMot = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \partial 4 r4
   r4. f8 |
   g8. f16 e8 f |
@@ -145,7 +149,9 @@ nhacPhienKhucAltoMot = \relative c' {
 }
 
 nhacPhienKhucBasMot = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \partial 4 a8 a |
   d2 ~ |
   d4 r |
