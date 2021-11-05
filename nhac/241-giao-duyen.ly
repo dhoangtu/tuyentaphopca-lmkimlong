@@ -136,7 +136,8 @@ nhacPhienKhucSop = \relative c'' {
   a2 ~ |
   a ~ |
   a4 r8
-  -\markup { \lower #3 \halign #-0.2  \bold "Solo:" }
+  %-\markup { \lower #3 \halign #-0.2  \bold "Solo:" }
+   \bar "||" \break
   %\bar "||"
   a |
   fs4. fs8 |
@@ -294,8 +295,8 @@ nhacPhienKhucAlto = \relative c' {
   r8 d4 d8 |
   cs2 ~ |
   cs ~ |
-  cs4 r
-  -\markup { \lower #3 \halign #-0.2  \bold "Ca đoàn:" }
+  cs4 r8 r
+  %-\markup { \lower #3 \halign #-0.2  \bold "Ca đoàn:" }
   |
   r8 <d' b> ^> <cs a> ^> r |
   r4 <d fs,>8 ^> r |
@@ -481,7 +482,7 @@ nhacPhienKhucBas = \relative c {
   b4 e,8 e |
   <a e a,>2 ~ |
   <a e a,> ~ |
-  <a e a,>4 r |
+  <a e a,>4 r8 r |
   r8 b ^> fs ^> r |
   r4 b8 ^> r |
   r b, cs d |
@@ -558,6 +559,7 @@ loiPhienKhucSop = \lyrics {
   có suối sữa thơm ứ vạn dòng
   ô ô kìa ô ô kìa ô ô ô kìa
   Muôn chim thánh thót vọng trên không.
+  \set stanza = "Solo:"
   Ai về thành đô xem ánh sáng.
   Ngập tràn khắp nẻo chốn hoàng vương,
   nghe dàn thiên nhạc qua năm tháng
@@ -602,6 +604,7 @@ loiPhienKhucAlto = \lyrics {
   có suối sữa thơm ứ vạn dòng
   ô ô kìa ô ô kìa
   ô ô ô kìa. Muôn chim thánh thót vọng trên không.
+  \set stanza = "Ca đoàn:"
   Ai về ai, ai về đô thành.
   păng păng păng păng.
   păng păng păng păng.

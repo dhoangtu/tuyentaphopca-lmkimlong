@@ -219,7 +219,7 @@ loiPhienKhucBasBa = \lyrics {
   này tôi cất cao vươn lụt trăng sao,
   Để tôi cao rao lòng yêu thương Thiên Chúa dạt dào,
   Lặng hồn vào
-  thắm thiết biết bao.
+  thắm thiết dường bao.
   Tôi
 }
 

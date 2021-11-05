@@ -446,7 +446,7 @@ loiDiepKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
+  top-margin = 10\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm

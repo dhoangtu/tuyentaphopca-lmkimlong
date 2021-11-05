@@ -346,7 +346,7 @@ loiPhienKhucBas = \lyrics {
   Hỡi vũ trụ bao la và huyền bí,
   Tự muôn đời sinh dựng bởi Muôn Cao
   Nào mau lên tiếng làm rung chuyển mọi phương nao
-  Ca hòa đi tuyên xưng danh hiền Chúa.
+  Ca hòa đi tuyên xưng danh hiển Chúa.
   Hỡi mặt trời oai hùng muôn ánh lửa rực soi muôn lối,
   Ngươi ngày ngày dẹp tan mọi âm u,
   Và quét đi tất cả lạnh sương mù

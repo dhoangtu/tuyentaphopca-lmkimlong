@@ -996,6 +996,7 @@ loiPhienKhucSolo = \lyrics {
 
 loiPhienKhucSop = \lyrics {
   \repeat unfold 14 { _ }
+  \set stanza = " Ca đoàn:"
   Ơ __ \repeat unfold 11 { _ }
   Ơ __ \repeat unfold 5 { _ }
   Ơ ơ

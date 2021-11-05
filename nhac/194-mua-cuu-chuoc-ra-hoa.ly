@@ -74,9 +74,11 @@ nhacPhienKhucSop = \relative c'' {
   e f4 g8 |
   c,2 \bar ":|."
   
+  \override NoteHead.font-size = #-2
   c16 d c d e f e f \bar "||"
   \key c \major
   <g f d b>8 \bar "" \break
+  \override NoteHead.font-size = #0
   
   \partial 4. r8 r4 |
   r8 c16 c c8 c |
@@ -290,7 +292,9 @@ nhacPhienKhucBas = \relative c {
   R2
   
   \key c \major
+  \override NoteHead.font-size = #-2
   <g g,>8
+  \override NoteHead.font-size = #0
   \partial 4 r8 r f16 f |
   f8 e e e16 e |
   f8 g16 g a4 |
