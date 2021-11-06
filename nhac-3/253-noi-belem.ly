@@ -10,6 +10,7 @@
 
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
+  \autoPageBreaksOff
   \partial 4 a8 a
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
@@ -19,9 +20,9 @@ nhacDiepKhucSop = \relative c'' {
   d2 a'8 a |
   a4 d8 bf g a |
   a2. |
-  a8 a d c d (e) |
+  a8 a d c d ^(e) |
   d4 d8 bf d bf |
-  a4 f'8 e f (e) \bar "||"
+  a4 f'8 e f ^(e) \bar "||"
   
   d2. \bar "|." \break
   
@@ -33,6 +34,9 @@ nhacDiepKhucSop = \relative c'' {
   a4 f8 g |
   a bf a16 (g) e8 |
   a2 |
+  
+  \pageBreak
+  
   g4 g16 (a) g8 |
   g4 g16 (a) g8 |
   g g a f |
@@ -50,8 +54,36 @@ nhacDiepKhucSop = \relative c'' {
   d2. \bar "|."
 }
 
-nhacDiepKhucAlto = \relative c' {
+nhacDiepKhucAlto = \relative c'' {
+  a8 a |  
+  a (g) f g a f |
+  d2 a'8 g |
+  f4 bf8 g e d |
+  cs2. |
+  d8 d f e f _(g) |
+  f4 g8 g g f |
+  e4 a8 bf a _(g) |
+  f2. |
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \time 2/4
+  d'4 d16 (f) e8 |
+  d4 a8 [g] |
+  f a bf g |
+  f4 d8 e |
+  f g d [d] |
+  cs2 |
+  g'4 g16 (a) g8 |
+  g4 g16 (f) e8 |
+  e e f d |
+  cs4 cs8 e |
+  f g d [cs] |
+  
+  \time 3/4
+  d2 a'8 a |
+  
+  f4 a8 bf a (g) |
+  fs2.
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -83,7 +115,7 @@ nhacDiepKhucBas = \relative c' {
   f2 r4 |
   
   d4 d8 g a4 |
-  d2.
+  d,2.
 }
 
 % Lời
@@ -101,7 +133,7 @@ loiPhienKhucSopMot = \lyricmode {
   vì yêu thương chúng nhân muôn đời.
   Nơi Be
   
-  \set stanza = "CODA:"
+  \set stanza = " CODA:"
   ia, Al -- le -- lu - -ia.
 }
 

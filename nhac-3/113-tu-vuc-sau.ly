@@ -162,21 +162,6 @@ notBePhu =
       }
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
     >>
-    %{
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-      \new Voice \TongNhip \partCombine 
-        \nhacDiepKhucSop
-        \notBePhu -2 { \nhacDiepKhucAlto }
-      \new NullVoice = beSop \nhacDiepKhucSop
-      \new Lyrics \lyricsto beSop \loiDiepKhucSop
-      \new NullVoice = beAlto \nhacDiepKhucAlto
-      \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
-      >>
-    %}
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
