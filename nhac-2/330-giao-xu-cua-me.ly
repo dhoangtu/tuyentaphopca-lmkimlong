@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Bước Theo Thần Khí" }
+  title = \markup { \fontsize #3 "Giáo Xứ Của Mẹ" }
   composer = "Lm. Kim Long"
   tagline = ##f
 }
