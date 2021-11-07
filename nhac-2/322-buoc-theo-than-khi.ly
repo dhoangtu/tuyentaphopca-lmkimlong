@@ -147,7 +147,18 @@ loiPhienKhucBasMot = \lyricmode {
   cho con thành tôi trung của Ngài,
   nay đã sai con bước theo Ngài
   Sai con đi gieo Tin Mừng
-  con xin trung kiên xuôi ngược gieo Tin Mừng.
+  con xin trung kiên xuôi
+  <<
+    {
+      bước
+    }
+    \new Lyrics {
+	    \set associatedVoice = "beSop"
+	    \override Lyrics.LyricText.font-shape = #'italic
+	    ngược
+	}
+  >>
+  gieo Tin Mừng.
   
   \set stanza = #"1."
   Con sống nhờ Thần Khí
@@ -176,7 +187,7 @@ loiPhienKhucBasBa = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20\mm
+  top-margin = 15\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
