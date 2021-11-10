@@ -24,7 +24,7 @@ hát lên mừng Chúa
       c4 r
     }
     {
-      \new Staff = "ossia" \with {
+      \new Staff = "oasis" \with {
         alignAboveContext = #"1"
         \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 6))
         \remove "Time_signature_engraver"
@@ -227,6 +227,10 @@ ragged-last = ##f
 
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
+  
+  \once \override Score.RehearsalMark.font-size = #2
+  \mark \markup { \musicglyph #"scripts.coda" }
+  <>^\markup { "Al" \bold " CODA" }
 
 
 %\markup { \vspace #0.5 }

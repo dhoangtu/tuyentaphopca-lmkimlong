@@ -156,13 +156,13 @@ nhacDiepKhucAlto = \relative c' {
       d4 r8 a' |
     }
     {
-      \new Staff = "ossia" \with {
+      \new Staff = "oasis" \with {
         alignAboveContext = #"1"
         \override VerticalAxisGroup.staff-staff-spacing =
           #'((basic-distance . 3))
         \remove "Time_signature_engraver"
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
+        fontSize = #-2
+        \override StaffSymbol.staff-space = #(magstep -2)
         firstClef = ##f
       } {
         \key d \major
@@ -197,13 +197,13 @@ nhacDiepKhucAlto = \relative c' {
       d4 r8 a'
     }
     {
-      \new Staff = "ossia" \with {
+      \new Staff = "oasis" \with {
         instrumentName = "Đàn"
         alignAboveContext = #"1"
         \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 6))
         \remove "Time_signature_engraver"
-        fontSize = #-3
-        \override StaffSymbol.staff-space = #(magstep -3)
+        fontSize = #-2
+        \override StaffSymbol.staff-space = #(magstep -2)
         firstClef = ##f
       } {
         \key d \major

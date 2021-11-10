@@ -24,7 +24,12 @@ nhacDiepKhucSop = \relative c' {
   
   a8 a e4 e8 b e d |
   e4 e8 a b g! g4 |
-  
+  a8 e g a c4 b8 g |
+  c b b2 r4 |
+  e,8 e a4 a8 g a b |
+  c4 b8 a b c d4 |
+  d8 g, a a e4 e8 g |
+  g f e2 r4 \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -37,7 +42,16 @@ nhacDiepKhucAlto = \relative c' {
   c2 r4 c' |
   b4 c8 b c g e e |
   f4. d8 c4. e8 |
-  f4 d8 d e4
+  f4 d8 d e4 
+  
+  r4 r a4. a8 |
+  gs4 r d e |
+  r c8 f e4 r |
+  a gs2 r4 |
+  r r f4. f8 |
+  e4 r g fs |
+  r d8 (c) b4 r |
+  R1
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -67,25 +81,23 @@ nhacDiepKhucBas = \relative c' {
   r4 r a'4. f8 |
   e4 r g8 (b) c4 |
   r4 e,8 d c4 r |
-  
+  e8 (d) e8. f16 e8 d c4 |
+  r4 r f4. d8 |
+  c4 r e d |
+  r f8 (a) gs4 r |
+  r c8 d c b a4
 }
 
 % Lời
 loiPhienKhucSopMot = \lyricmode {
   Kìa Bà nào đang tiến lên như rạng đông,
   Kìa Bà nào đang tiến lên như rạng đông,
-  \override Lyrics.LyricText.font-shape = #'italic
-  Bà
-  \revert Lyrics.LyricText.font-shape
   đẹp như mặt trăng,
-  \override Lyrics.LyricText.font-shape = #'italic
-  và
-  \revert Lyrics.LyricText.font-shape
   rực rỡ như mặt trời
   Oai hùng như đạo binh xếp hàng vào trận,
-  Bà là ai, là ai
   Bà là ai.
   
+  \set stanza = "1."
   Bà là ai, như huệ giữa chòm gai,
   như hồng thiêng mầu nhiệm,
   như Đền Vua vinh hiển,
@@ -109,11 +121,42 @@ loiPhienKhucSopHai = \lyricmode {
   hằng tiếp đón lời cầu.
 }
 
+loiPhienKhucAltoMot = \lyricmode {
+  Kìa Bà nào đang tiến lên như rạng đông,
+  Kìa Bà nào đang tiến lên như rạng đông,
+  Bà đẹp như mặt trăng,
+  và rực rỡ như mặt trời
+  Oai hùng như đạo binh xếp hàng vào trận,
+  là ai, là ai
+  Bà là ai.
+  
+  Như chòm gai
+  mầu nhiệm
+  Vua vinh hiển
+  thánh lem
+  Như thiên tòa
+  xuân mùa
+  sao rạng
+  Như chính cửa thiên đàng.
+}
+
+loiPhienKhucAltoHai = \lyricmode {
+  \repeat unfold 45 { _ }
+  Khi đầu thai
+  ngọc tuyền
+  ơn thiên tòa
+  vô biên nước khơi trong nguồn
+  Tay thơ bé
+  cứu độ
+  nhân hậu
+  Hằng tiếp đón lời cầu.
+}
+
 loiPhienKhucBasMot = \lyricmode {
   Tiến như rạng đông,
   Kìa bà nào đang hiện lên như rạng đông,
   Bà là ai như cung hằng
-  và rực rỡ nhơ mặt trời,
+  và rực rỡ như mặt trời,
   như chiến binh oai dũng
   xếp hàng đang vào trận, là ai.
   là ai Bà là ai.
@@ -125,12 +168,11 @@ loiPhienKhucBasMot = \lyricmode {
   Như thiên tòa
   xuân mùa
   sao rạng
-  Như chính của thiên đàng.
+  Như chính cửa thiên đàng.
 }
 
 loiPhienKhucBasHai = \lyricmode {
-  \repeat unfold 21 { _ }
-  \set stanza = "2."
+  \repeat unfold 42 { _ }
   Khi đầu thai
   ngọc tuyền
   ơn thiên tòa
@@ -145,8 +187,8 @@ loiPhienKhucBasHai = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20\mm
-  bottom-margin = 20\mm
+  top-margin = 12\mm
+  bottom-margin = 12\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -157,7 +199,7 @@ loiPhienKhucBasHai = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #1
+  page-count = #2
 }
 
 TongNhip = {
@@ -184,18 +226,22 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-      \new Voice \TongNhip \partCombine 
-        \nhacDiepKhucSop
-        \notBePhu -2 { \nhacDiepKhucAlto }
-      \new NullVoice = beSop \nhacDiepKhucAlto
+    \new Staff <<
+        \clef treble
+        \new Voice = beSop {
+          \TongNhip \nhacDiepKhucSop
+        }
       \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
       \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
-      >>
+    >>
+    \new Staff <<
+        \clef treble
+        \new Voice = beAlto {
+          \TongNhip \nhacDiepKhucAlto
+        }
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoMot
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoHai
+    >>
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
@@ -206,8 +252,8 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1
-    \override LyricHyphen.minimum-distance = #1
+    \override Lyrics.LyricSpace.minimum-distance = #0.6
+    \override LyricHyphen.minimum-distance = #0.6
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
