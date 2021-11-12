@@ -15,7 +15,9 @@ hát lên mừng Chúa
       \line { "    Dt 10,8-9. Ga 5,30. 6,38"  }
     }
   }
-  
+
+c8 \repeatTie
+
 \set Score.currentBarNumber = #16
 
   <<

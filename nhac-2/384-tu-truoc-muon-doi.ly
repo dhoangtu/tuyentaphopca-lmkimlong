@@ -9,240 +9,347 @@
 }
 
 % Nhạc
-% Đổi kích thước nốt cho bè phụ
-notBePhu =
-#(define-music-function (font-size music) (number? ly:music?)
-   (for-some-music
-     (lambda (m)
-       (if (music-is-of-type? m 'rhythmic-event)
-           (begin
-             (set! (ly:music-property m 'tweaks)
-                   (cons `(font-size . ,font-size)
-                         (ly:music-property m 'tweaks)))
-             #t)
-           #f))
-     music)
-   music)
-
-nhacDiepKhucSop = \relative c' {
-  c8 (d) |
-  g4. g8 |
-  g8. g16 e8 d |
-  g8 g a (c |
-  g4) c8 e |
-  d d16 (c) a8 g |
-  a4 a8 c |
-  a8 a16 (g) e8 d |
-  e4. e16 (d) |
-  c8. d16 e8 d |
-  g4. a16 (g) |
-  e8. g16 a8 g |
-  c4
+nhacPhienKhucSop = \relative c'' {
+  \key bf \major
+  R2*4
+  g8 bf a (g) | \break
+  fs4 g8 (a) |
+  fs8 d g bf |
+  a2 ~ |
+  a4 d8 bf |
+  c d c (bf) |
+  a4. a8 |
+  c c bf a |
+  d2 |
+  r8 ef ef ef |
+  d4 c8. c16 |
+  c8 c d bf |
+  a4 a8 bf |
+  d d a bf16 (a) |
+  g2 ~ |
+  g4 \bar "||"
 }
 
-nhacDiepKhucAlto = \relative c'' {
-  %\autoPageBreaksOff
-  \partial 4 r4 |
-  r8 c b4 |
-  c2 ~ |
-  c4 r8 c16 c |
-  b8. b16 c8 r |
-  r8. c16 c8 (b) |
-  a4 r |
-  r8. g16 g8 (f) |
-  e4 r |
-  r r8 a |
-  g d' b b |
-  c4 c8 (g) c4 \bar "||" 
-  %\pageBreak
-  
-  e8 g |
-  e4 d |
-  c8 c d (c) |
-  g4 g8 g |
-  e4 a |
-  a8 a g4 |
-  c4. c8 |
-  b (c) d e |
+nhacPhienKhucAlto = \relative c'' {
+  \key bf \major
+  r4
+  \set fontSize = #-2
+  <<
+    {
+      d8 bf |
+      c4 c8 a |
+      bf8. c16 bf8 a
+    }
+    {
+      bf8 g |
+      ef4 a8 ef |
+      d8. ef16 <g ef>8 <fs c>
+    }
+  >>
+  <<
+    \new Voice = "splitpart" {
+      \voiceTwo
+      \set fontSize = #-2
+      <g d bf>2 ^( |
+      <g d bf>4)
+    }
+    {
+      \set fontSize = #0
+      \voiceOne
+      r4 ef |
+      \once \override NoteColumn.force-hshift = #1.2
+      d2 _(
+    }
+  >>
+  \oneVoice
+  d8) c bf4 |
+  a4 r8 d |
+  ef4 ef8 g |
+  fs4 r |
+  r8 g g4 |
+  fs2 ~ |
+  fs8 a g a |
+  bf2 |
+  r8 g g g |
+  fs4 g8. g16 |
+  fs8 a g g |
+  ef4 ef8 c |
+  bf bf c c |
+  bf2 ~ |
+  bf4
+}
+
+nhacPhienKhucTenor = \relative c' {
+  \key bf \major
+  \skip 2*3
+  g2 ( |
+  g4) fs8 g |
   d2 ~ |
-  d4 e8 g |
-  e4 d |
-  c8 c d (c) |
-  g4 g8 g |
-  e4 a |
-  a8 a g4 |
-  c4. c8 |
-  b (c) d e |
-  c2 ~ |
-  c4 \bar "|."
+  d4 r8 g |
+  g4 g8 c |
+  a4 r |
+  r8 d
+  \once \override Stem.length = #9
+  \stemDown
+  ef4 |
+  d2 ~ |
+  d4 r |
+  r8 d g, bf |
+  c8. c16 c8 c |
+  a4 g8. g16 |
+  a8 fs g g |
+  a4 a8 a |
+  g g fs fs |
+  g2 ~ |
+  g4
+}
+
+nhacPhienKhucBas = \relative c' {
+  \key bf \major
+  \set fontSize =-2
+  g2 |
+  c, |
+  d |
+  <<
+    {
+      \voiceTwo
+      g2 ^( |
+      g4)
+    }
+    %{
+    \new Voice = "splitpart" {
+      \voiceOne
+      <g g,>2 ~ |
+      <g g,>4
+    }
+    %}
+  >>
+  \oneVoice
+  fs8 g |
+  d2 ~ |
+  d4 r8 bf |
+  c4 c8 ef |
+  d4 r |
+  r8 bf c4 |
+  d2 ~ |
+  d4 r |
+  r8 g ef d |
+  c8. c16 c8 c |
+  d4 ef8. ef16 |
+  d8 c bf bf |
+  c4 c8 c |
+  d d d d |
+  g,2 ~ |
+  g4
+}
+
+nhacDiepKhucSop = \relative c'' {
+  \key g \major
+  \partial 4 r4 |
+  r b8 b16 b |
+  c8 b d e |
+  e4. e8 |
+  c c d16 (e) d8 |
+  b4. b8 |
+  d, d b'16 (c) b8 |
+  a2 ~ |
+  a4 r |
+  r b8 b16 b |
+  c8 a d e |
+  e4. e8 |
+  c c d16 (e) d8 |
+  b4. b8 |
+  d, d a'16 (b) a8 |
+  g2 ~ |
+  g4 \bar "|."
+}
+
+nhacDiepKhucAlto = \relative c' {
+  \key g \major
+  r4 |
+  d8 d16 d g4 ~ |
+  g8 g fs g |
+  c4. b8 |
+  g g g16 (b) a8 |
+  g4. d8 |
+  d c b g' |
+  fs2 ~ |
+  fs4 r |
+  d8 d16 d g4 ~ |
+  g8 g fs g |
+  c4. b8 |
+  g g g16 (b) a8 |
+  g4. d8 |
+  c b e c |
+  b2 ~ |
+  b4
 }
 
 nhacDiepKhucTenor = \relative c' {
+  \key g \major
   r4 |
-  r8 e d4 |
-  e2 ~ |
-  e4 r8 e16 e |
-  d8. d16 e8 r |
-  r8. e16 f8 (g) |
-  f4 r |
-  r8. b,16 c8 (d) |
+  r g8 g16 g |
   c4 r |
-  r r8 f |
-  c a' g g |
-  g4 f |
-  e
-  
-  g8 g |
-  g4 f |
-  e8 e e4 |
-  d d8 d |
-  c4 c |
-  f8 f f4 |
-  e4. a8 |
-  g4 a8 c |
-  b2 ~ |
-  b4 c8 d |
-  g,4 f |
-  e8 e e4 |
-  d d8 d |
-  c4 c |
-  f8 f f4 |
-  e4. f8 |
-  g (e) f g |
-  e2 ~ |
-  e4
+  r8 c d e |
+  e4. e8 |
+  d g, b16 (c) b8 |
+  a a d16 (c) d8 |
+  d2 ~ |
+  d4 r |
+  r g,8 g16 g |
+  c2 |
+  r8 c d e |
+  e4. d8 |
+  d g, b16 (c) b8 |
+  a g g fs |
+  g2 ~ |
+  g4
 }
 
-nhacDiepKhucBas = \relative c {
-  r4 |
-  r8 c g4 |
-  c2 ~ |
-  c4 r8 c16 c |
-  g'8. f16 e8 r |
-  r8. c16 d8 (e) |
-  f4 r |
-  r8. g,16 a8 (b) |
-  c4 r |
-  r r8 f |
-  e f
-  \autoBeamOff
-  g g, |
-  \autoBeamOn
-  c e d4 |
-  c
-  
-  c8 b |
-  c4 d |
-  a'8 a a,4 |
-  b b8 b |
-  c4 f |
-  d8 d d4 |
-  c e8 (f) |
-  g4 fs |
-  g8. d16 g8 f |
-  e d c b |
-  c4 d8 d |
-  a' a a,4 |
-  g g8 g |
-  c4 f |
-  d8 d d4 |
-  c a |
-  g g |
-  c2 ~ |
-  c4
+nhacDiepKhucBas = \relative c' {
+  \key g \major
+  g8 g16 g |
+  fs4 (e) |
+  a r |
+  r8 g a b |
+  c4. fs,8 |
+  g d g16 (a) g8 |
+  fs fs g g |
+  d2 ~ |
+  d8 d g g16 g |
+  fs4 (e) |
+  a2 |
+  r8 g a b |
+  c4. fs,8 |
+  g d g16 (a) g8 |
+  fs g c, d |
+  g,2 ~ |
+  g4
 }
 
 % Lời
-loiDiepKhucSopMot = \lyricmode {
+loiPhienKhucSopMot = \lyricmode {
   \set stanza = "1."
-  Tình yêu, ôi cao siêu là tình yêu Thiên Chúa
-  đã đoái thương thân phận mòn hèn
-  mà mến thương con tự ngàn đời
-  luôn hằng chan tưới hồng ân
-  dẫn lần con tới bàn thánh.
+  Từ trước muôn đời Chúa rủ tình thương mến con.
+  Chúa gọi con giữa muôn người,
+  chọn con nên bạn tâm phúc.
+  Chúa thánh hiến con sai con đi gieo rắc Tin Mừng
+  loan báo mùa hồng ân khắp nơi.
 }
 
-loiDiepKhucSopHai = \lyricmode {
+loiPhienKhucSopHai = \lyricmode {
   \set stanza = "2."
-  Bụi tro, ôi thân con là bụi tr đâu đáng
-  mà Chúa cao siêu ngợp tầng trời
-  đà khắc tên con vào lòng Ngài
-  nên bạn tâm phúc từ đây
-  giữa hàng vinh phúc quyền uy.
+  Từ chốn tro bụi Chúa đã gọi con bước lên,
+  Dẫu đời con rất đơn hèn mà nay ơn Ngài thương đến
+  Chúa thánh hiến con
+  cho con nên nhân chứng Nước Trời
+  luôn chiếu rọi tình thương khắp nơi.
 }
 
-loiDiepKhucSopBa = \lyricmode {
+loiPhienKhucSopBa = \lyricmode {
   \set stanza = "3."
-  Đời con, con xin dâng trọn đời con cho Chúa
-  thành ánh quang chiếu rọi cuộc đời,
-  thành muối thiêng ướp mặn lòng người,
-  luôn tìm vinh phúc trường sinh,
-  vững niềm tin Chúa quyền linh.
+  Ngài lấy than hồng thanh tẩy hồn con trắng trong,
+  Phú vào con Thánh Linh Ngài
+  và ban dư đầy ân phúc.
+  Chúa thánh hiến con
+  cho con nên quang ánh gian trần,
+  nên muối mặn nồng ướp thế nhân.
 }
 
-loiDiepKhucAltoMot = \lyricmode {
+loiPhienKhucAltoMot = \lyricmode {
+  \markup { \bold "Intr." }
+  \repeat unfold 8 { _ }
+  \set stanza = "Ca đoàn:"
+  Hm __ _ _ _ _
   \set stanza = "1."
-  Ôi tình yêu
-  cao siêu là tình yêu
-  thân mọn hèn
-  tự ngàn đời
-  ban hồng ân
-  dẫn con tới bàn thánh.
-  
-  Muôn tiếng ca vang hòa lời chúc tụng:
-  Con Linh mục Chúa vui lên bàn thánh
-  đáp tình Chúa mến thương.
-  Xin tiến dâng Cha trọn vẹn xác hồn
-  nên như của lễ thay cho trần thế ca tụng yêu mến Ngài.
-
+  Rủ tình thương mến con giữa muôn người,
+  nên bạn tâm phúc.
+  Chúa thánh hiến con
+  sai con đi gieo rắc Tin Mừng
+  loan báo mùa hông ân khắp nơi.
 }
 
-loiDiepKhucAltoHai = \lyricmode {
+loiPhienKhucAltoHai = \lyricmode {
+  \repeat unfold 14 { _ }
   \set stanza = "2."
-  Ôi bụi tro thân con là bụi tro,
-  ngợp tầng trời
-  vào lòng Ngài
-  nên bạn thân
-  giữa hàng vinh quyền uy.
+  đà gọi con bước lên
+  rất đơn hèn mà nay ơn Ngài thương đến
+  Chúa thánh hiến
+  con cho con nên nhân chứng Nước Trời
+  luôn chiếu rọi tình thương khắp nơi.
 }
 
-loiDiepKhucAltoBa = \lyricmode {
+loiPhienKhucAltoBa = \lyricmode {
+  \repeat unfold 14 { _ }
   \set stanza = "3."
-  Đây đời con,
-  xin dâng trọn đời con
-  soi trần đời
-  mặn lòng người,
-  phúc trường sinh,
-  vững tin Chúa quyền linh.
+  tẩy hồn con trắng trong
+  Thánh Linh Ngài và ban dư đầy ân phúc.
+  Chúa thánh hiến con cho con nên quang ánh gian trần,
+  nên muối mặn nồng ướp thế nhân.
 }
 
-loiDiepKhucBasMot = \lyricmode {
+loiPhienKhucBasMot = \lyricmode {
+  \repeat unfold 3 { _ }
+  Hm __ _ _ _
   \set stanza = "1."
-  Ôi tình yêu cao siêu là tình yêu
-  phận mòn hèn
-  tự ngàn đời
-  ban hồng ân dẫn lần con tới bàn thánh.
-  
-  Muôn tiếng ca vang xa tới phục tụng: Con Linh mục Chúa
-  vui lên bàn thánh để đáp mến thương,
-  tình Chúa mến thương muôn đời.
-  Nguyện dâng Cha này trót xác hồn con nên như của lễ
-  thay cho trần thế ca tụng tình Ngài.
-
+  Rủ tình thương mến con
+  giữa muôn người
+  Chúa đã dủ tình mà thánh hiến con
+  sai con đi gieo rắc Tin Mừng,
+  loan báo mùa hông ân khắp nơi.
 }
-loiDiepKhucBasHai = \lyricmode {
+loiPhienKhucBasHai = \lyricmode {
+  \repeat unfold 7 { _ }
   \set stanza = "2."
-  Ôi bụi tro, thân con là bụi tro,
-  ngợp tầng trời,
-  vào lòng Ngài,
-  nên bạn thân giữa hàng vinh phúc quyền uy.
+  đà gọi con bước lên
+  rất đơn hèn.
+  Chúa đã dủ tình mà thánh hiến con,
+  cho con nên nhân chứng Nước Trời
+  luôn chiếu rọi tình thương khắp nơi.
 }
 
-loiDiepKhucBasBa = \lyricmode {
+loiPhienKhucBasBa = \lyricmode {
+  \repeat unfold 7 { _ }
   \set stanza = "3."
-  Đây đời con xin dâng trọn đời con.
-  dọi trần đời mặn lòng người,
-  phúc trường sinh vững lòng tin Chúa quyền linh.
+  tẩy hồn con trắng trong
+  Thánh Linh Ngài.
+  Chúa đã dủ tình mà thánh hiến con,
+  cho con nên quang ánh gian trần,
+  nên muối mặn nồng ướp thế nhân.
+}
+
+loiDiepKhucSop = \lyricmode {
+  Đây con xin đến thực thi ý Chúa,
+  Trót cả hồn xác con
+  này quyết phụng sự Chúa trung kiên.
+  Xin cho con sớm chiều nương bóng Chúa,
+  nép mình ở thánh cung Ngài,
+  nếm ngọt tình Chúa vô biên.
+}
+
+loiDiepKhucAlto = \lyricmode {
+  Đây con xin đến thực thi ý Chúa
+  Trót cả hồn xác con
+  này quyết phụng sự Chúa trung kiên.
+  Xin cho con sớm chiều nương bóng Chúa
+  nép mình ở thánh cung Ngài,
+  nếm ngọt tình Chúa vô biên.
+}
+
+loiDiepKhucTenor = \lyricmode {
+  Đây con xin đến thực thi ý Chúa
+  từ nay hồn xác quyết phụng sự Chúa trung kiên
+  Xin cho con sớm
+  được nương bóng Chúa chẳng ngơi
+  và mãi nếm ngọt tình Ngài vô biên.
+}
+
+loiDiepKhucBas = \lyricmode {
+  Đây con xin nguyện đến thực thi ý Chúa
+  từ nay hồn xác quyết phụng sự Chúa trung kiên
+  Nguyện xin cho con chiều sớm
+  được nương bóng Chúa chẳng ngơi
+  và mãi nếm ngọt tình Ngài vô biên.
 }
 
 % Dàn trang
@@ -260,12 +367,12 @@ loiDiepKhucBasBa = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #2
+  page-count = #3
   %systems-per-page = 5
 }
 
 TongNhip = {
-  \key c \major \time 2/4
+  \time 2/4
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
 }
@@ -284,48 +391,84 @@ notBePhu =
            #f))
      music)
    music)
+
 \score {
   \new ChoirStaff <<
-    \new Staff = "1" <<
+    \new Staff <<
         \clef treble
-        \new Voice = solo {
-          \TongNhip \nhacDiepKhucSop
+        \new Voice = beSop {
+          \TongNhip \nhacPhienKhucSop
         }
-      \new Lyrics \lyricsto solo \loiDiepKhucSopMot
-      \new Lyrics \lyricsto solo \loiDiepKhucSopHai
-      \new Lyrics \lyricsto solo \loiDiepKhucSopBa
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopBa
     >>
-    \new Staff = "2" <<
+    \new Staff <<
         \clef treble
-        \new Voice = solo {
-          \TongNhip \nhacDiepKhucAlto
+        \new Voice = beAlto {
+          \TongNhip \nhacPhienKhucAlto
         }
-      \new Lyrics \lyricsto solo \loiDiepKhucAltoMot
-      \new Lyrics \lyricsto solo \loiDiepKhucAltoHai
-      \new Lyrics \lyricsto solo \loiDiepKhucAltoBa
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoMot
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoHai
+      \new Lyrics \lyricsto beAlto \loiPhienKhucAltoBa
     >>
-    \new Staff = "2" \with {
+    \new Staff \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f
       }
       <<
         \clef bass
         \new Voice \TongNhip \partCombine 
-          \nhacDiepKhucTenor
-          \notBePhu -2 { \nhacDiepKhucBas }
-        \new NullVoice = beSop \nhacDiepKhucBas
-        \new Lyrics \lyricsto beSop \loiDiepKhucBasMot
-        \new Lyrics \lyricsto beSop \loiDiepKhucBasHai
-        \new Lyrics \lyricsto beSop \loiDiepKhucBasBa
+          \nhacPhienKhucTenor
+          \nhacPhienKhucBas
+        \new NullVoice = beBas \nhacPhienKhucBas
+        \new Lyrics \lyricsto beBas \loiPhienKhucBasMot
+        \new Lyrics \lyricsto beBas \loiPhienKhucBasHai
+        \new Lyrics \lyricsto beBas \loiPhienKhucBasBa
       >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1
+    \override Lyrics.LyricSpace.minimum-distance = #0.6
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
-    \context {
-      \Staff \RemoveEmptyStaves
-      \override VerticalAxisGroup.remove-first = ##t
-    }
   }
 }
+
+\score {
+  \new ChoirStaff <<
+    \new Staff <<
+        \clef treble
+        \new Voice = beSop {
+          \TongNhip \nhacDiepKhucSop
+        }
+      \new Lyrics \lyricsto beSop \loiDiepKhucSop
+    >>
+    \new Staff <<
+        \clef treble
+        \new Voice = beAlto {
+          \TongNhip \nhacDiepKhucAlto
+        }
+      \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
+    >>
+    \new Staff <<
+        \clef "violin_8"
+        \new Voice = beTenor {
+          \TongNhip \nhacDiepKhucTenor
+        }
+      \new Lyrics \lyricsto beTenor \loiDiepKhucTenor
+    >>
+    \new Staff <<
+        \clef bass
+        \new Voice = beBas {
+          \TongNhip \nhacDiepKhucBas
+        }
+        \new Lyrics \lyricsto beBas \loiDiepKhucBas
+    >>
+  >>
+  \layout {
+    %\override Lyrics.LyricSpace.minimum-distance = #0.8
+    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override Score.SpacingSpanner.uniform-stretching = ##t
+  }
+}
+
