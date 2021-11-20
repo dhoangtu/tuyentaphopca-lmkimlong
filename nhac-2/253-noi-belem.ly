@@ -22,7 +22,9 @@ nhacDiepKhucSop = \relative c'' {
   a2. |
   a8 a d c d ^(e) |
   d4 d8 bf d bf |
-  a4 f'8 e f ^(e) \bar "||"
+  a4 f'8 e f ^(e) 
+  ^\markup { \halign #-1.5 \bold "al CODA" }
+  \bar "||"
   
   d2. \bar "|." \break
   
@@ -50,7 +52,10 @@ nhacDiepKhucSop = \relative c'' {
   \mark \markup { \musicglyph #"scripts.segno" }
   \bar "||" \break
   
-  d4 f8 e d (cs) |
+  d4
+  \tweak extra-offset #'(-9 . 0)
+  ^\markup { \bold "CODA" }
+  f8 [e] d ^([cs]) |
   d2. \bar "|."
 }
 
@@ -82,7 +87,7 @@ nhacDiepKhucAlto = \relative c'' {
   \time 3/4
   d2 a'8 a |
   
-  f4 a8 bf a (g) |
+  f4 a8 [bf] a _([g]) |
   fs2.
 }
 
@@ -127,13 +132,12 @@ loiPhienKhucSopMot = \lyricmode {
   Al -- le -- lu -- ia.
   
   \set stanza = "1."
-  Trong bóng đêm thây gió vi vu sương tuyết lạnh lùng
+  Trong bóng đêm thâu gió vi vu sương tuyết lạnh lùng
   nào ai có thấu chăng, người ơi?
   Con Chúa cao quang giáng sinh nơi hang đá cơ cùng
   vì yêu thương chúng nhân muôn đời.
   Nơi Be
   
-  \set stanza = " CODA:"
   ia, Al -- le -- lu - -ia.
 }
 

@@ -38,16 +38,16 @@ nhacDiepKhucAlto = \relative c' {
   r4 d g |
   g b8 g g4 |
   g g (fs) |
-  e8 (d) e (fs) g (a) |
+  e8 ([d]) e ([fs]) g ([a]) |
   g4 fs8 (e) d4 |
-  b'8 (a) g (fs) g (d) |
+  b'8 ([a]) g ([fs]) g ([d]) |
   a' (g) fs4 r |
   R2.
   r4 d g |
-  g b8 a g fs |
+  g b8 [a] g [fs] |
   e2 g4 |
   a b e,8 (fs) |
-  d fs fs (e) d g |
+  d [fs] fs ([e]) d [g] |
   g4 fs4. g8 |
   g2 r4
 }
@@ -142,7 +142,7 @@ loiPhienKhucSopMot = \lyricmode {
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = #"2."
-  Mau ngắm trông đây, loài người oi ư,
+  Mau ngắm trông đây, loài người ơi,
   Nơi máng lừa chiên nực hôi
   Hài Nhi nằm an giấc mĩ miều,
   thật đã là Con Chúa thiên triều.
@@ -258,7 +258,7 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Staff.TimeSignature.transparent = ##t
+    %\override Staff.TimeSignature.transparent = ##t
     %\override Lyrics.LyricText.font-size = #+2.2
     \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)

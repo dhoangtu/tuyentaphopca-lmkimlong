@@ -82,13 +82,13 @@ nhacDiepKhucTenor = \relative c {
   d''8. d16 d,8 d |
   g4. g8 |
   a8. a16 a8 g |
-  f f g g |
+  fs fs g g |
   d d'16 (c) b8 a |
   g4 r |
   d'8. d16 d,8 d |
   g4. g8 |
-  a8. a16 g8 c |
-  d,8 d16 d d8 d |
+  a8. a16 g8 c, |
+  d8 d16 d d8 d |
   <g g,>2
 }
 
