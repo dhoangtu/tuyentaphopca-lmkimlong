@@ -82,7 +82,7 @@ nhacPhienKhucSop = \relative c'' {
   bf4. g8 |
   c e,4 g8 |
   f2 |
-  g8 c a16 (g) f8
+  g8 c a16 (g) f8 \bar "||"
 }
 
 nhacPhienKhucBas = \relative c' {
@@ -103,7 +103,7 @@ nhacPhienKhucBas = \relative c' {
 loiDiepKhucSop = \lyricmode {
   Chúa đã chọn con phục vụ Dân thánh Ngài,
   Này con xin đến,
-  Xin tình yêu Chúa thúc bách con,
+  xin tình yêu Chúa thúc bách con,
   cho con hiệp thông với Chúa,
   hiệp nhất cùng anh em,
   Sống trọn đời hiến dâng phục vụ Chúa trong muôn người.
@@ -154,7 +154,7 @@ loiPhienKhucBasMot = \lyricmode {
 
 loiPhienKhucBasHai = \lyricmode {
   \set stanza = #"2."
-  Chúa biết là con hẹn mọn tại lực chi,
+  Chúa biết là con hẹn mọn tài lực chi,
   nhưng vẫn gọi mời và dẫn đưa
   từng bước mãi song hành, luôn mãi song hành.
 }
@@ -260,7 +260,7 @@ notBePhu =
     >>
   >>
   \layout {
-    %\override Staff.TimeSignature.transparent = ##t
+    \override Staff.TimeSignature.transparent = ##t
     %\override Lyrics.LyricText.font-size = #+2.2
     \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)

@@ -71,9 +71,9 @@ nhacPhienKhucSop = \relative c' {
   a4. bf8 |
   bf bf bf (a) |
   g4. c8 |
-  f g d16 (f) d8 |
+  f, g d16 (f) d8 |
   c4. c8 |
-  g g f e |
+  g' g f e |
   f4 \bar "||"
 }
 
@@ -85,7 +85,7 @@ nhacPhienKhucBas = \relative c' {
   f f f ef |
   d4 r |
   r8 f e cs |
-  d e bf b! |
+  d c bf b! |
   c4 e8 (f) |
   bf, g bf c |
   a4
@@ -149,7 +149,7 @@ loiPhienKhucBasBa = \lyricmode {
   Ngày đêm vui sống bên Ngài,
   ngụp sâu trong ân tình Ngài,
   khắp nơi vẫy gọi thức tỉnh mọi người
-  ước nguyện thánh tâm nghỉ ngơi.
+  ước nguyện thành tâm nghỉ ngơi.
 }
 
 
@@ -247,7 +247,7 @@ notBePhu =
     >>
   >>
   \layout {
-    %\override Staff.TimeSignature.transparent = ##t
+    \override Staff.TimeSignature.transparent = ##t
     %\override Lyrics.LyricText.font-size = #+2.2
     \override Lyrics.LyricSpace.minimum-distance = #0.8
     \override Score.BarNumber.break-visibility = ##(#f #f #f)

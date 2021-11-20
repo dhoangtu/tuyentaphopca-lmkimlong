@@ -92,21 +92,26 @@ loiDiepKhucBas = \lyricmode {
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Khi Chúa nhìn xét tội tình nào ai người đứng vững,
-  Chúa ôi. Nhưng nơi Chúa giầu lòng từ bi
+  Khi Chúa nhìn xét tội tình,
+  Nào ai người đứng vững,
+  Chúa ôi. Nhưng nơi Chúa giầu lòng từ bi,
   nên muôn người vẫn phụng thờ.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
-  Con vẫn bền vững đợi chờ vì tin lời Chúa phán hứa xưa.
-  Như quân lính đợi chờ hừng đông con trông đợi Chúa mỏi mòn.
+  Con vẫn bền vững đợi chờ,
+  Vì tin lời Chúa phán hứa xưa.
+  Như quân lính đợi chờ hừng đông,
+  con trông đợi Chúa mỏi mòn.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Như những người lính tuần hàng đợi trông hừng đông mau sáng lên.
-  Đây dân Chúa miệt mài đợi trông ân thiêng giải thoát tội tình.
+  Như những người lính tuần hàng
+  Đợi trông hừng đông mau sáng lên.
+  Đây dân Chúa miệt mài đợi trông
+  Ân thiêng giải thoát tội tình.
 }
 
 % Dàn trang

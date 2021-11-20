@@ -40,8 +40,11 @@ nhacDiepKhucAlto = \relative c' {
   b4 b8 a |
   g16 (a) g8 e e |
   d4. r8 |
-  R2*5
-  r8 e a a |
+  R2*2
+  r4 e8 e |
+  c f f d |
+  g2 ~ |
+  g8 e a a |
   g2 |
   f8 [f] d g |
   f2 |
@@ -92,6 +95,13 @@ loiDiepKhucSop = \lyricmode {
   Ánh mắt đầy yêu thương của Chúa
   tỏ cho chúng ta dung nhan của Chúa Cha trên trời,
   hoán cải biết bao tâm hồn.
+  Ánh mắt đầy yêu thương của Chúa
+  dạy dỗ chúng ta phải có lòng thương xót như Chúa Cha trên trời.
+}
+
+loiDiepKhucAlo = \lyricmode {
+  Ánh mắt đầy yêu thương của Chúa
+  tỏ cho chúng ta dung nhan của Chúa Cha trên trời,
   Ánh mắt đầy yêu thương của Chúa
   dạy dỗ chúng ta phải có lòng thương xót như Chúa Cha trên trời.
 }
@@ -175,7 +185,7 @@ notBePhu =
         \new Voice = beAlto {
           \TongNhip \nhacDiepKhucAlto
         }
-      \new Lyrics \lyricsto beAlto \loiDiepKhucSop
+      \new Lyrics \lyricsto beAlto \loiDiepKhucAlo
     >>
     \new Staff <<
         \clef "bass"
@@ -209,7 +219,7 @@ notBePhu =
       >>
   >>
   \layout {
-    %\override Staff.TimeSignature.transparent = ##t
+    \override Staff.TimeSignature.transparent = ##t
     %\override Lyrics.LyricText.font-size = #+2.2
     \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)

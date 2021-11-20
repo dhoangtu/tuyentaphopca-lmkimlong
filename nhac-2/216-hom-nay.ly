@@ -48,18 +48,9 @@ nhacDiepKhucAlto = \relative c'' {
   c8. a16 a8 a ~ |
   a a c c |
   b2 ~ |
-  b4
-  b ^\markup { \rest #"4" }
-  |
-  b ^\markup { \rest #"4" }
-  \tweak font-size #0
-  g8
-  \tweak font-size #0
-  a |
-  \tweak font-size #0
-  b
-  \tweak font-size #0
-  b e,16 (g) e8 |
+  b4 b |
+  b g8 a |
+  b b e,16 (g) e8 |
   d4. a'8 |
   b4 b8. g16 |
   d8 g ~ g4 |

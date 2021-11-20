@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Ngồi Tựa Dòng Sông" }
+  title = \markup { \fontsize #3 "Ngồi Tựa Dòng Sông Babylon" }
   poet = "Ý: Tv. 136"
   composer = "Lm. Kim Long"
   tagline = ##f
@@ -26,6 +26,7 @@ nhacPhienKhucSopMot = \relative c' {
   r |
   R2*4
   
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key a \major
   cs8. cs16 cs8 cs |
   d4. b8 |
@@ -35,7 +36,7 @@ nhacPhienKhucSopMot = \relative c' {
   gs4. d'8 |
   d cs4 b8 |
   e2 ~ |
-  e4 \bar "|."
+  e4 r \bar "||"
 }
 
 nhacPhienKhucAltoMot = \relative c' {
@@ -43,16 +44,17 @@ nhacPhienKhucAltoMot = \relative c' {
   r4
   R2
   r4 e8. e16 |
-  e8 e a8. a16 |
-  gs8 gs4. ~ |
+  e8 ^> e ^> a8. a16 |
+  gs8 ^> gs4. ^> ~ |
   gs4 r4 |
   R2
   r4 e8. e16 |
-  f8 f e8. e16 |
+  f8 _> f _> e8. e16 |
   c8 ^> c4. ^> ~ |
   c4 r |
   R2*4
   
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key a \major
   a'8. a16 a8 a |
   b4. a8 |
@@ -62,7 +64,7 @@ nhacPhienKhucAltoMot = \relative c' {
   e4. fs8 |
   b a4 a8 |
   gs2 ~ |
-  gs4
+  gs4 r
 }
 
 nhacPhienKhucBasMot = \relative c {
@@ -70,53 +72,54 @@ nhacPhienKhucBasMot = \relative c {
   a8. g16 |
   a8 d e e |
   e4 e8. e16 |
-  a,8 a f'8. f16 |
-  e8 e4. ~ |
+  a,8 ^> a ^> f'8. f16 |
+  e8 ^> e4. ^> ~ |
   e4 r |
   R2
   r4 e8. e16 |
-  d8 d e8. e16 |
-  a,8 a4. ~ |
+  d8 ^> d ^> e8. e16 |
+  a,8 ^> a4. ^> ~ |
   a4 a'8 a |
   f8. e16 a8 a |
   b4 c8 c |
   a8. b16 f'8 e |
   e2 \bar "||"
   
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key a \major
   R2
-  b,8. b16 b8 b |
+  b,8. b16 a8 b |
   e4. e8 |
   a, a4 a8 |
   d2 |
   e8. e16 e8 d |
   b4 fs'8 fs |
   e2 ~ |
-  e4
+  e4 a,8. g!16
 }
 
 % Lời
 loiPhienKhucSopMot = \lyrics {
   Lệ sầu lã chã, vọng về Si -- on,
-  Trên cành tơ liễu rủ não nề.
-  Huyền cầm gác đó lòng buồn đê mê.
+  Trên cành tơ liễu rủ não nề,
+  Huyền cầm gác đó, lòng buồn tê mê.
   
   \set stanza = "1."
-  Mau vui lên đi nhé, dạo đàn hát ta nghe.
+  Mau vui lên đi nhé, dạo đàn hát ta nghe
   Điệu Si -- on quen thuộc, vẫn xướng ca thuở trước.
 }
 
 loiPhienKhucSopHai = \lyrics {
   \repeat unfold 23 { _ }
   \set stanza = "2."
-  Giê -- ru -- sa -- lem hỡi,
-  lòng này nếu quên ngươi.
+  Giê -- ru -- sa -- lem hỡi
+  lòng này nếu quên ngươi
   Nguyện tay ta tê bại,
   lưỡi dính trong họng mãi.
 }
 loiPhienKhucAltoMot = \lyrics {
   Lệ sầu lã chã, vọng về Si -- on,
-  Huyền cầm gác đó lòng buồn đê mê.
+  Huyền cầm gác đó, lòng buồn tê mê.
   
   \set stanza = "1."
   Mau vui lên đi nhé, dạo đàn hát ta nghe.
@@ -124,7 +127,7 @@ loiPhienKhucAltoMot = \lyrics {
 }
 
 loiPhienKhucAltoHai = \lyrics {
-  \repeat unfold 23 { _ }
+  \repeat unfold 16 { _ }
   \set stanza = "2."
   Giê -- ru -- sa -- lem hỡi,
   lòng này nếu quên ngươi.
@@ -134,24 +137,26 @@ loiPhienKhucAltoHai = \lyrics {
 
 loiPhienKhucBasMot = \lyrics {
   Ngồi tựa dòng sông Ba -- by -- lon.
-  Lệ sầu lã chã vọng về Si -- on.
-  Huyền cầm gác đó lòng buồn đê mê.
+  Lệ sầu lã chã, vọng về Si -- on.
+  Huyền cầm gác đó, lòng buồn tê mê.
   \set stanza = "1."
-  Quân canh tù đòi ta ca xướng,
-  lũ lý hình giục rán vui lên:
+  Quân canh tù nài ta ca xướng,
+  lũ lý hình giục rán vui lên
   Mau vui lên đi nhé,
-  hãy dạo đàn mà nghe.
+  hãy dạo đàn mà nghe,
   Cung Si -- on quen thuộc hát thuở trước.
+  Ngồi tựa
 }
 
 loiPhienKhucBasHai = \lyrics {
   \repeat unfold 23 { _ }
   \set stanza = "2."
-  Nơi quê người làm sao ta hát,
+  Nơi quê người làm sao ta hát
   những khúc nhạc mừng Chúa dân ta.
   Giê -- ru -- sa -- lem hỡi,
-  nếu lòng này mà quên.
-  Tay ta ra tê bại lưỡi dính mãi.
+  nếu lòng này mà quên,
+  tay ta ra tê bại, lưỡi dính mãi.
+  Ngồi tựa
 }
 
 % Dàn trang

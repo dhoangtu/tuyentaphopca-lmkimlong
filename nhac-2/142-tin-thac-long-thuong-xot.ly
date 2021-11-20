@@ -73,7 +73,7 @@ nhacDiepKhucBas = \relative c {
   a,2 ~ |
   a8 f f d |
   g4 gs8 gs |
-  a a g f |
+  a a g!? f |
   e4 r8 e |
   e f e e |
   d2 ~ |

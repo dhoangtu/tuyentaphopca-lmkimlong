@@ -62,7 +62,7 @@ nhacDiepKhucSop = \relative c'' {
   r8 \once \stemUp e'4
   \tweak extra-offset #'(0 . 2.2)
   _\markup { \rest #"2" }
-  c8 |
+  \once \stemUp c8 |
   d2 ~ |
   d4 r8 c16 c |
   c8 c16 c c8 c |
@@ -112,6 +112,8 @@ nhacDiepKhucSop = \relative c'' {
       c8 (d)
     }
   >>
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
   \bar "||"
 }
 
@@ -134,8 +136,11 @@ nhacDiepKhucAlto = \relative c'' {
   
   r4 |
   R2
-  r8 c4 _\markup { "hay" } c8 _\markup { "chim" } |
-  d4 _\markup { "ơi" } r8 g16 g |
+  r8 c'4 _\markup { "hay" }
+  c8
+  \tweak extra-offset #'(-0.5 . -0.5)
+  _\markup { "chim" } |
+  b4 _\markup { "ơi" } r8 g16 g |
   a8 a16 a a8 a |
   g a ([f]) e |
   d4 r8 a'16 a |
@@ -151,7 +156,7 @@ nhacDiepKhucAlto = \relative c'' {
   d4 r8 b'16 b |
   a8 a16 a a8 a |
   b8 g4 f8 |
-  d4 r8 d ~ |
+  e4 r8 d ~ |
   d c c c |
   f2 |
   r8 d4 d8 |
@@ -185,15 +190,16 @@ nhacDiepKhucBas = \relative c {
   <<
     {
       \voiceOne
-      f ([a]) c |
+      f ([a])
     }
     \new Voice = "splitpart" {
       \voiceTwo
       \once \override NoteColumn.force-hshift = #1
-      f,4 fs8 |
+      f4
     }
   >>
   \oneVoice
+  <c' fs,>8
   <b g>4 r8 f16 f |
   g8 g16 g g8 g |
   d8
@@ -297,11 +303,11 @@ loiDiepKhucBas = \lyricmode {
       Ý thơ tình thương.
 	  }
   >>
-  Hồn ơi hay chim ơ
+  Hồn ơi hay chim ơi
   Tung cao lên, tung cao lên cao vụt đến tận trời,
   Tung cao lên, tung cao lên cao vụt đến tận trời
   Nhạc say sưa trong lòng chim kính mến.
-  Cho âm thanh, cho âm thanh đến muôn đời nguyên vẹn,
+  Cho âm thanh, cho âm thanh đến muôn đời nguyên vẹn.
   Cho âm thanh, cho âm thanh đến muôn đời nguyên vẹn
   Khúc thương ca Tình dài diệu huyền thay.
 }

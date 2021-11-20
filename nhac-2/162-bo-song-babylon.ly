@@ -12,11 +12,14 @@
 
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
-  \partial 8 r8 |
+  \partial 8 r8
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
   R2
   r4.
   d16 d |
-  c4. d16 d |
+  cs4. d16 d |
   bf4. d8 |
   \slashedGrace { g,16 (bf } a2) ~ |
   a8 [a] a (d) |
@@ -74,7 +77,7 @@ nhacDiepKhucBas = \relative c {
 
 nhacPhienKhucSop = \relative c' {
   \partial 8 a16 f' |
-  d4 \tuplet 3/2 { d8 g a } |
+  e4 \tuplet 3/2 { d8 g a } |
   a4 r8 bf16 bf |
   e,4 \tuplet 3/2 { a,8 d g } |
   g4 r8 d' |
@@ -90,9 +93,10 @@ nhacPhienKhucSop = \relative c' {
   \slashedGrace { e16 (f } e4.) g8 |
   bf bf4 a8 |
   d,4 r8 d
-  %\once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
-  %\once \override Score.RehearsalMark.font-size = #0.1
-  %\mark \markup { \musicglyph #"scripts.segno" }
+  
+  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
   \bar "|." \break
   
   a'8. a16 a8 a |
@@ -111,14 +115,15 @@ nhacPhienKhucSop = \relative c' {
   g f4 e8 |
   d2 ~ |
   d4 r8 d
-  %\once \override Score.RehearsalMark.font-size = #0.1
-  %\mark \markup { \musicglyph #"scripts.segno" }
+  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
   \bar "|."
 }
 
 nhacPhienKhucAlto = \relative c' {
   \partial 8 a16 f' |
-  d4 \tuplet 3/2 { d8 g a } |
+  e4 \tuplet 3/2 { d8 g a } |
   a4 r8 bf16 bf |
   e,4 \tuplet 3/2 { a,8 d g } |
   g4 r8 bf |

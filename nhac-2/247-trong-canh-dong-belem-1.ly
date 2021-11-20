@@ -16,7 +16,7 @@ nhacDiepKhucSop = \relative c'' {
   a4 a8 c |
   c bf a c |
   d4 d8 d |
-  bf (c) bf16 (a) g8 |
+  bf (d) bf16 (a) g8 |
   a4 g8 g |
   d g a bf |
   a (d) e16 (d) cs8 |
@@ -40,7 +40,7 @@ nhacDiepKhucSop = \relative c'' {
   \time 6/8
   d4. ~ d4 \bar "||"
   c8 |
-  f4 f8 g (f) e |
+  f4 f8 g (f) d |
   c4 c8
   <<
     {
@@ -171,7 +171,7 @@ nhacDiepKhucBas = \relative c' {
   R2*5
   
   c4 (d8 e) |
-  g4 d8 d |
+  f4 d8 d |
   bf4 (g8 bf) |
   c4 r |
   R2*2
@@ -215,7 +215,7 @@ loiDiepKhucSopMot = \lyricmode {
   Con Chúa thiên tòa hạ sinh trong chốn hang lừa.
   
   \set stanza = "(Nam)"
-  Rồi muôn sứ thần cũng hợp tiếng hát vang.
+  Rồi muôn sứ thần cùng hợp tiếng hát vang.
   
   Sáng danh, ngàn đời sáng danh,
   sáng danh Thiên Chúa trên trời.
