@@ -30,7 +30,7 @@ nhacPhienKhucSop = \relative c'' {
     {
       \voiceOne
       a8 b gs4 |
-      d'8\rest e c16 b a8 |
+      d'8\rest e, c'16 b a8 |
       b4 d8\rest d16 d |
       c8 d e4 |
       d8\rest e, b'16 a gs8 |
@@ -55,11 +55,12 @@ nhacPhienKhucSop = \relative c'' {
   a8 a g16 (a) b8 |
   e,4. e16 e |
   b'8 d c16 (b) gs8 |
-  a2 ~ \bar "||"
+  a2 ~ |
   
+  \partial 4 a4 \bar "||" \break
+  
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key a \major
-  a4 r | \break
-  
   cs8. cs16 cs8 cs |
   d e4 cs16 cs |
   fs8 e d cs |
@@ -83,9 +84,10 @@ nhacPhienKhucAlto = \relative c'' {
   f8 f e [d] |
   cs2 ~ |
   
-  \key a \major
-  cs4 r |
+  cs4 |
   
+  \key a \major
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   e8. e16 e8 e |
   fs b4 a16 a |
   a8 a fs a |
@@ -115,9 +117,10 @@ nhacPhienKhucBas = \relative c {
   d4 e |
   a,2 ~ |
   
-  \key a \major
-  a4 r |
+  a4 |
   
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
+  \key a \major
   a'8. a16 a8 a |
   a gs4 a16 a |
   d,8 cs d ds |
@@ -132,11 +135,10 @@ nhacPhienKhucBas = \relative c {
 loiPhienKhucSopMot = \lyricmode {
   \repeat unfold 20 { _ }
   \set stanza = "1."
-  Suốt bao năm qua trong thiên chức Linh mục.
+  Suốt bao năm qua trong thiên chức Linh mục
   Dẫn đưa con trên mọi bước đường
   cuộc đời con chứa chan tình thương.
   
-  \set stanza = "ĐK:"
   Nay con xin dâng lên Chúa lời cảm mến tri ân trọn niềm.
   Xin cho đời sống con đây thành của lễ hiến dâng ngày đêm.
 }
@@ -144,7 +146,7 @@ loiPhienKhucSopMot = \lyricmode {
 loiPhienKhucSopHai = \lyricmode {
   \repeat unfold 20 { _ }
   \set stanza = "2."
-  Suốt bao năm qua kinh qua những thăng trầm.
+  Suốt bao năm qua kinh qua những thăng trầm
   Phút trung tinh hay giờ lỗi lầm
   tình Ngài con khắc ghi thẳm sâu.
 }
@@ -152,7 +154,7 @@ loiPhienKhucSopHai = \lyricmode {
 loiPhienKhucSopBa = \lyricmode {
   \repeat unfold 20 { _ }
   \set stanza = "3."
-  Suốt bao năm qua ơn Thiên Chúa hộ phù.
+  Suốt bao năm qua ơn Thiên Chúa hộ phù
   Lấy yêu thương xua dịu oán thù
   và truyền rao phúc ân bình an.
 }
@@ -160,15 +162,18 @@ loiPhienKhucSopBa = \lyricmode {
 loiPhienKhucBasMot = \lyricmode {
   \repeat unfold 14 { _ }
   \set stanza = "1."
-  Suốt bao năm qua trong thiên chức Linh mục
+  Suốt bao năm qua trong thiên chức Linh mục,
   bàn tay Chúa luôn độ trì con
   dẫn đưa con trên đường suốt cả cuộc đời mến thương.
+  
+  Nay con xin dâng lên Chúa lời cảm mến tri ân trọn niềm.
+  Xin cho đời sống con đây thành của lễ hiến dâng ngày đêm.
 }
 
 loiPhienKhucBasHai = \lyricmode {
   \repeat unfold 14 { _ }
   \set stanza = "2."
-  Suốt bao năm qua kinh qua những thăng trầm
+  Suốt bao năm qua kinh qua những thăng trầm,
   từng khi sướng vui khi khổ đau
   và từng khi lỗi lầm vẫn ghi ân tình thẳm sâu.
 }
@@ -176,7 +181,7 @@ loiPhienKhucBasHai = \lyricmode {
 loiPhienKhucBasBa = \lyricmode {
   \repeat unfold 14 { _ }
   \set stanza = "3."
-  Suốt bao năm qua ơn Thiên Chúa hộ phù
+  Suốt bao năm qua ơn Thiên Chúa hộ phù,
   cùng con ruổi rong giữa trần gian
   làm dịu đi hận thù
   phúc ân rao truyền vĩnh an.
@@ -247,7 +252,7 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
+    \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \context {

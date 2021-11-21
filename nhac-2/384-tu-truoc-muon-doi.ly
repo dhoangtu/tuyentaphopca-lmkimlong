@@ -19,13 +19,13 @@ nhacPhienKhucSop = \relative c'' {
   a4 d8 bf |
   c d c (bf) |
   a4. a8 |
-  c c bf a |
+  c c bf c |
   d2 |
   r8 ef ef ef |
   d4 c8. c16 |
   c8 c d bf |
   a4 a8 bf |
-  d d a bf16 (a) |
+  d, d a' bf16 (a) |
   g2 ~ |
   g4 \bar "||"
 }
@@ -147,7 +147,7 @@ nhacDiepKhucSop = \relative c'' {
   \key g \major
   \partial 4 r4 |
   r b8 b16 b |
-  c8 b d e |
+  c8 a d e |
   e4. e8 |
   c c d16 (e) d8 |
   b4. b8 |
@@ -193,7 +193,7 @@ nhacDiepKhucTenor = \relative c' {
   r8 c d e |
   e4. e8 |
   d g, b16 (c) b8 |
-  a a d16 (c) d8 |
+  a a d16 (e) d8 |
   d2 ~ |
   d4 r |
   r g,8 g16 g |
@@ -466,6 +466,7 @@ notBePhu =
     >>
   >>
   \layout {
+    \override Staff.TimeSignature.transparent = ##t
     %\override Lyrics.LyricSpace.minimum-distance = #0.8
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t

@@ -38,7 +38,7 @@ nhacPhienKhucSop = \relative c'' {
       <ef c> r <d c>4
     }
   >>
-  <g d bf>4 r8 \bar "||"
+  <g d bf>4 r8 \bar "|"
   
   fs16 g |
   d4 \tuplet 3/2 { a'8 g bf } |
@@ -66,8 +66,8 @@ nhacPhienKhucAlto = \relative c'' {
   fs2 ~ |
   fs4 r8 g |
   ef ef g4 |
-  fs4 r |
-  d \tuplet 3/2 { g8 ef d } |
+  fs4 r8 fs16 g |
+  d4 \tuplet 3/2 { g8 ef d } |
   ef4 \tuplet 3/2 { g8 g g } |
   fs4. g16 a |
   bf8 a g16 (f) d8 |
@@ -100,7 +100,7 @@ nhacPhienKhucBas = \relative c {
 nhacDiepKhucSop = \relative c'' {
   \key g \major
   b8. b16 b8 a |
-  f! c'4 a8 |
+  g c4 a8 |
   d8. d16 e (d) cs8 |
   d4. a8 |
   b8. b16 c (b) g8 |
@@ -111,6 +111,22 @@ nhacDiepKhucSop = \relative c'' {
   d4. d,8 |
   a'8. a16 b (a) fs8 |
   g2 \bar "|."
+}
+
+nhacDiepKhucAlto = \relative c' {
+  \key g \major
+  d8. d16 d8 d |
+  f! e4 g8 |
+  fs8. a16 b8 a |
+  a4. d,8 |
+  d8. d16 e8 e |
+  fs2 |
+  d8. d16 d8 d |
+  f! e4 e8 |
+  a8. c16 b8 a16 (g) |
+  fs4. d8 |
+  e8. e16 d8 c |
+  b2
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -134,92 +150,104 @@ loiPhienKhucSopMot = \lyricmode {
   \repeat unfold 3 { _ }
   \set stanza = "1."
   Tự muôn đời Chúa đã đoái trông,
-  Chúa đã mến thương gọi con giữa thế nhân ngàn muôn.
-  Dù con này có trổi hơn ai vẫn thường đơn sai
+  Chúa đã mến thương gọi con giữa thế nhân ngàn muôn
+  Dù con này có trổi hơn ai,
+  Vẫn thường đơn sai,
   mà ân phúc Chúa luôn phủ đầy.
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \repeat unfold 3 { _ }
   \set stanza = "2."
-  Ngày qua ngày sứ mạng đã mang biết rằng vẻ vang
-  mà sao lắm lúc con trở trăn.
-  Bàn tay Ngài đỡ vực con lên
-  xuống hồng ân thêm để con có phút vinh hạnh này.
+  Ngày qua ngày sứ mạng đã mang biết rằng vẻ vang,
+  mà sao lắm lúc con trở trăn
+  Bàn tay Ngài đỡ vực con lên,
+  Xuống hồng ân thêm để con có phút vinh hạnh này.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \repeat unfold 3 { _ }
   \set stanza = "3."
-  Tình yêu Ngài vẫn dìu dắt con vững niềm sắt son
-  làm nhân chứng Chúa cho mọi nơi.
-  Đường theo Ngài dẫu nhiều chông gai
-  hướng về tương lai nguyện trung tín dõi theo trọn đời.
+  Tình yêu Ngài vẫn dìu dắt con, vững niềm sắt son,
+  làm nhân chứng Chúa cho mọi nơi
+  Đường theo Ngài dẫu nhiều chông gai,
+  Hướng về tương lai, nguyện trung tín dõi theo trọn đời.
 }
 
 loiPhienKhucAltoMot = \lyricmode {
-  Hm __ _ _ Chúa đã mến thương giữa muôn muôn thế nhân.
-  này có trổi hơn ai vẫn thường đơn sai
+  Hm __ _ _
+  \set stanza = "1."
+  Chúa đã mến thương giữa muôn muôn thế nhân
+  Dù con này có trổi hơn ai,
+  Vẫn thường đơn sai,
   mà ân phúc Chúa luôn phủ đầy.
 }
 
 loiPhienKhucAltoHai = \lyricmode {
   _ _ _
-  Biết rõ vẻ vang
-  lắm khi con trơ trăn.
-  Ngài đỡ vực con lên
-  xuống hồng ân thêm để con có phút vinh hạnh này.
+  \set stanza = "2."
+  Biết rõ vẻ vang,
+  lắm khi con trở trăn
+  Bàn tay Ngài đỡ vực con lên
+  Xuống hồng ân thêm để con có phút vinh hạnh này.
 }
 
 loiPhienKhucAltoBa = \lyricmode {
   _ _ _
-  Vững chí sắt son chứng nhân cho khắp nơi.
-  Ngài dẫu nhiều chông gai
-  hướng về tương lai nguyện trung tín dõi theo trọn đời.
+  \set stanza = "3."
+  Vững chí sắt son, chứng nhân cho khắp nơi
+  Đường theo Ngài dẫu nhiều chông gai,
+  Hướng về tương lai, nguyện trung tín dõi theo trọn đời.
 }
 
 loiPhienKhucBasMot = \lyricmode {
   \repeat unfold 6 { _ }
-  Hm __ _ _ Ngài đã rủ thương giữa muôn muôn phàm nhân.
-  Nào trổi hơn ai vẫn thường đơn sai ân phúc luôn phủ đầy.
-  \set stanza = "ĐK:"
+  Hm __ _ _
+  \set stanza = "1."
+  Ngài đã dủ thương giữa muôn muôn phàm nhân
+  Nào trổi hơn ai,
+  Vẫn thường đơn sai, ân phúc luôn phủ đầy.
   Giờ đây con
 }
 
 loiPhienKhucBasHai = \lyricmode {
   \repeat unfold 9 { _ }
-  Thật rõ vẻ vang lắm khi con trở trăn.
+  \set stanza = "2."
+  Thật rõ vẻ vang lắm khi con trở trăn
   Đỡ vực con lên
-  xuống hồng ân thêm
+  Xuống hồng ân thêm
   còn phút vinh hạnh này.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \repeat unfold 9 { _ }
-  Bền vững lòng son chứng nhân cho mọi nơi.
-  Dẫu nhiều chông gai hướng về tương lai
+  \set stanza = "3."
+  Bền vững lòng son chứng nhân cho mọi nơi
+  Dẫu nhiều chông gai,
+  Hướng về tương lai,
   trung tín theo cuộc đời.
 }
 
 loiDiepKhucSop = \lyricmode {
-  Xin dâng muôn câu cảm mến ngàn ân thiêng Chúa rộng ban
+  Xin dâng muôn câu cảm mến ngàn ân thiêng Chúa rộng ban,
   ngày đêm nâng đỡ ủi an.
   Hai mươi lăm năm hồng phúc nguyện dâng lên xác hồn đây
-  để nên hy lễ từng giây.
+  Để nên hy lễ từng giây.
 }
 
 loiDiepKhucBas = \lyricmode {
   xin dâng muôn câu cảm mến ngàn ân thiêng
   Chúa khấng ban ngày đêm nâng đỡ ủi an.
   Rầy lần qua hai mươi lăm năm ân lộc
-  tiến dâng lên hồn xác nầy để nên hy lễ từng giây.
+  tiến dâng lên hồn xác này
+  Để nên hy lễ từng giây.
 }
 
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 15\mm
+  top-margin = 10\mm
+  bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -230,7 +258,7 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #2
+  page-count = #2
 }
 
 TongNhip = {
@@ -286,6 +314,13 @@ TongNhip = {
           \TongNhip \nhacDiepKhucSop
         }
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
+    >>
+    \new Staff <<
+        \clef treble
+        \new Voice = beAlto {
+          \TongNhip \nhacDiepKhucAlto
+        }
+      \new Lyrics \lyricsto beAlto \loiDiepKhucSop
     >>
     \new Staff <<
         \clef bass
