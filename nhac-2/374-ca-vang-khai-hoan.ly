@@ -10,9 +10,11 @@
 
 % Nhạc
 nhacDiepKhucSop = \relative c' {
-  \partial 4. c8 c <a'f c> ^> |
-  <a f c> f16 f f8 <bf f bf,> |
-  <bf f bf,> g16 g g8 <c g e> ^> |
+  \partial 4. c8
+  _\markup { \halign #-0.3 \bold "Intr." }
+  c <a'f c> ^> |
+  <a f c> ^> f16 f f8 <bf f bf,> ^> |
+  <bf f bf,> ^> g16 g g8 <c g e> ^> |
   <<
     {
       c4. ^> c8 |
@@ -24,10 +26,10 @@ nhacDiepKhucSop = \relative c' {
       <g d>4 <e c bf>
     }
   >>
-  <f c a>2 \bar "||" \break
+  <f c a>2 |
   
-  c8 c4. |
-  a'8 a4. |
+  c8 ^> c4. ^> |
+  a'8 ^> a4. ^> |
   r8 f f bf |
   bf g16 g g8 c |
   c4. c8 ^> |
@@ -55,10 +57,11 @@ nhacDiepKhucSop = \relative c' {
   g4 g8 g |
   bf8 c4 e,8 |
   f2 ~ |
-  f4 r \bar "|."
+  f4 r \bar "|." \break
+  
   R2*2
   r4. c'8 |
-  g'4 \tuplet 3/2 { bf,8 d c } |
+  f4 \tuplet 3/2 { bf,8 d c } |
   a4 \tuplet 3/2 { f8 bf a } |
   g4 \tuplet 3/2 { e8 f g } |
   \slashedGrace { c,16 (d } c4) c8 c |
@@ -84,6 +87,7 @@ nhacDiepKhucSop = \relative c' {
     }
   >>
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 3/4
   a'4 a f |
   e2 d4 |
@@ -106,17 +110,17 @@ nhacDiepKhucSop = \relative c' {
   bf2 bf4 |
   g g g |
   d'4. d8 b!4 |
-  c2. \bar "||"
+  c2. \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c' {
   r4. |
   R2*5
-  c8 c4. |
+  c8 ^> c4. ^> |
   c8 ^> c4. ^> |
   r8 c c g' |
   f d16 d d8 a' |
-  g e ^> e4 |
+  g e ^> e4 ^> |
   r8 a a8. a16 |
   b!8 c r <c a> |
   <b! g>8. <b g>16 <b f>8 <b f> |
@@ -163,6 +167,7 @@ nhacDiepKhucAlto = \relative c' {
   d8 c4 bf8 |
   a2 |
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 3/4
   d4 e d |
   cs2 d4 |
@@ -190,13 +195,13 @@ nhacDiepKhucAlto = \relative c' {
 
 nhacDiepKhucBas = \relative c {
   r4 <f f,>8 ^> |
-  <f f,> ^> r4 <d d,>8 |
-  <d d,> r4 <c c,>8 ^> |
-  <c c,>8. ^> <d d,>16 ^> <e e,>8 ^> <f f,>8 |
-  <g g,> r4 <c, c,>8 |
+  <f f,> ^> r4 <d d,>8 ^> |
+  <d d,> ^> r4 <c c,>8 ^> |
+  <c c,>8. ^> <d d,>16 ^> <e e,>8 ^> <f f,>8 ^> |
+  <g g,> ^> r4 <c, c,>8 |
   <f f,>2 |
   
-  c8 c4. f8 ^> f4. ^> |
+  c8 ^> c4. ^> f8 ^> f4. ^> |
   r8 f ef ef |
   d g16 g f8 f |
   e c ^> c4 ^> |
@@ -204,9 +209,9 @@ nhacDiepKhucBas = \relative c {
   g8 a r f |
   g8. g16 g8 g, |
   c8. e16 d8 c |
-  g4 r |
+  g'4 r |
   R2
-  f'8 d d f |
+  f8 d d f |
   g4 g8 <g c,> |
   <f d>4 <f g,> |
   <e c>2 |
@@ -217,8 +222,8 @@ nhacDiepKhucBas = \relative c {
   a f d8. d'16 |
   g,8 a r f |
   g8. g16 g8 g |
-  c,8. e16 d8 e |
-  g4 r |
+  c,8. e16 d8 c |
+  g'4 r |
   R2
   f8 d d f |
   g (f) e e |
@@ -256,6 +261,7 @@ nhacDiepKhucBas = \relative c {
   g8 c4 c8 |
   f,2 |
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 3/4
   f'4 e f |
   g (a) bf |
@@ -289,107 +295,123 @@ nhacDiepKhucBas = \relative c {
 % Lời
 loiDiepKhucSopMot = \lyricmode {
   \repeat unfold 14 { _ }
-  Hàng hàng lớp lớp hàng hàng lớp lớp kìa hàng hàng lớp lớp.
-  Hàng hàng lớp lớp các chứng nhân tiến lên ca vang khải hoàn.
+  Hàng hàng lớp lớp hàng hàng lớp lớp kìa hàng hàng lớp lớp
+  Hàng hàng lớp lớp các chứng nhân tiến lên ca vang khải hoàn
   Tay cầm cành thiên tuế tiến lên,
   tiến lên điệp trùng xa muôn ngàn.
-  Lớp lớp lớp lớp kìa hàng hàng lớp lớp
-  hàng hàng lớp lớp từ khắp nơi tiến lên vinh quang Nước Trời.
+  Lớp lớp, lớp lớp kìa hàng hàng lớp lớp
+  hàng hàng lớp lớp từ khắp nơi tiến lên vinh quang nước trời.
   Tâm thần đầy hỉ hoan tiến lên,
   tiến lên nhận triều thiên Chúa tặng ban.
   
-  Họ tới từ kiếp đọa đày thịt nát xương bay đầu rơi máu chảy.
-  Họ giặt áo trong máu Con Chiên.
-  Chính là Cha Ông chúng ta cùng một nòi giống,
-  cùng một quê hương vì niềm tin tử sinh coi thường.
+  \set stanza = "1."
+  Họ tới từ kiếp đọa đầy thịt nát xương bay,
+  đầu rơi máu chảy,
+  Họ giặt áo trong Máu Con Chiên
+  Chính là Cha Ông chúng ta, cùng một nòi giống,
+  cùng một quê hương, vì niềm tin tử sinh coi thường.
   Thắp nén hương trầm đoàn con nay chắp tay
-  cầu khấn xin nung thêm chí hùng
+  cầu khấn: Xin nung thêm chí hùng,
   trong gian nan khốn cùng hằng tiến bước kiên trung.
   Xin cho từng giọt máu
-  quý Ngài rắc gieo xưa trên mảnh đất quê này.
-  Khai hoa kết trái thắm đẹp một mùa lúa chín vàng tươi.
+  quý ngài rắc gieo xưa trên mảnh đất quê này.
+  Khai hoa kết trái
+  Thắm đẹp một mùa lúa chín vàng tươi.
 }
 
 loiDiepKhucSopHai = \lyricmode {
   \repeat unfold 91 { _ }
-  Từ chốn cực khốn trăm bề trần thế khinh chê đời hoen máu lệ.
-  Ngậm sầu đắng đem giống đi gieo.
-  Chín là Anh Em chúng ta thuộc mọi tầng lớp nghèo hèn,
-  vinh sang từng ngược xuôi khắp giang sơn này.
+  \set stanza = "2."
+  Từ chốn cực khốn trăm bề, trần thế khinh chê,
+  đời hoen máu lệ,
+  Ngậm sầu đắng đem giống đi gieo
+  Chính là Anh Em chúng ta thuộc mọi tầng lớp,
+  nghèo hèn vinh sang từng ngược xuôi khắp giang sơn này.
 }
 
 loiDiepKhucAltoMot = \lyricmode {
   Hàng hàng lớp lớp hàng hàng lớp lớp kìa hàng hàng lớp lớp
   hàng hàng
-  Lớp lớp các chứng nhân tiến lên ca vang khải hoàn.
-  Tay cầm cành thiên tuế tiến lên điệp trùng xa muôn ngàn.
-  Hàng hàng hàng hàng hàng hàng lớp lớp
-  hàng hàng lớp lớp từ mọi nơi tiến lên vinh quang Nước Trời.
+  lớp lớp các chứng nhân tiến lên ca vang khải hoàn
+  Tay cầm cành thiên tuế tiến lên điệp trùng xa muôn ngàn
+  hàng hàng hàng hàng hàng hàng lớp lớp,
+  hàng hàng lớp lớp từ mọi nơi tiến lên vinh quang nước trời.
   Tâm thần đầy hỉ hoan tiến lên nhận triều thiên Chúa trao ban.
-  Họ tới từ kiếp đọa đày thịt nát xương bay đầu rơi máu chảy.
-  Họ giặt áo trong máu con chiên.
-  Chính là Cha Ông của ta cùng một nòi giống,
+  
+  \set stanza = "1."
+  Họ tới từ kiếp đọa đầy thịt nát xương bay,
+  đầu rơi máu chảy
+  Họ giặt áo trong Máu Con Chiên
+  Chính là Cha Ông của ta, cùng một nòi giống,
   cùng một quê hương vì niềm tin tử sinh coi thường.
-  Thắp nén hương trầm chúng con nay chắp tay cầu khấn
-  xin nung thêm chí hùng trong gian nan khốn cùng
+  Thắp nén hương trầm chúng con nay chắp tay cầu khấn:
+  Xin nung thêm chí hùng, trong gian nan khốn cùng
   hằng tiến bước kiên trung.
-  Xin cho từng giọt máu quý Ngài rắc gieo xưa
+  Xin cho từng giọt máu quý ngài rắc gieo xưa
   trên mảnh đồng quê này.
-  Khai hoa kết trái thắm đẹp một mùa lúa vàng tươi.
+  Khai hoa kết trái,
+  Thắm đẹp một mùa lúa vàng tươi.
 }
 
 loiDiepKhucAltoHai = \lyricmode {
   \repeat unfold 72 { _ }
-  Từ chốn cực khốn trăm bề trần thế khinh chê đời hoen máu lệ.
-  Ngậm sầu đắng đem giống đi gieo.
-  Chính là Anh em của ta thuộc mọi tầng lớp nghèo hèn,
-  vinh sang từng ngượi xuôi khắp giang sơn này.
+  \set stanza = "2."
+  Từ chốn cực khốn trăm bề,
+  trần thế khinh chê,
+  đời hoen máu lệ,
+  Ngậm sầu đắng đem giống đi gieo
+  Chính là Anh Em của ta thuộc mọi tầng lớp,
+  nghèo hèn vinh sang từng ngược xuôi khắp giang sơn này.
 }
 
 loiDiepKhucBasMot = \lyricmode {
   \repeat unfold 12 { _ }
-  Hàng hàng lớp lớp, lớp lớp tập hợp kia lớp lớp
+  Hàng hàng lớp lớp
+  lớp lớp tập hợp kìa lớp lớp
   tập hợp hàng hang.
-  Hàng hàng các chứng nhân hiện lên ca vang khải hoàn
+  hàng hàng các chứng nhân hiện lên ca vang khải hoàn,
   tiến lên hùng anh.
   Tay cầm cành thiên tuế điệp trùng xa muôn ngàn.
-  Lớp lớp lớp lớp kìa lớp lớp tập hợp lớp lớp
-  kìa lớp hàng ở mọi nơi cùng lên vinh quang Nước Trời
+  lớp lớp lớp lớp kia lớp lớp tập hợp lớp lớp
+  kia lớp hàng ở mọi nơi cùng lên vinh quang nước trời,
   tiến lên hỷ hoan.
   Tâm thần đầy hỉ hoan nhận triều thiên tặng ban.
   
   \set stanza = "1."
-  Họ từ đâu tới, họ từ đâu tới?
-  Từ cuộc đọa đày nát thịt xương bay đầu rơi máu chảy.
-  Họ giặt áo trong máu Con Chiên.
-  Họ là ai đó, họ là ai đó?
-  Cha Ông của ta chung một giống dòng
+  Họ từ đâu tới, họ từ đâu tới
+  từ cuộc đọa đầy nát thịt xương bay,
+  đầu rơi máu chảy
+  Họ giặt áo trong Máu Con Chiên
+  Họ là ai đó, họ là ai đó
+  Cha Ông của ta chung một giống dòng,
   cùng một quê hương vì niềm tin tử sinh coi thường.
-  Thắp làn hương thơm chúng con nay chắp tay cầu khấn
-  xin nung thêm chí hùng trong gian nan khốn cùng
+  Thắp làn hương thơm chúng con nay chắp tay cầu khẩn:
+  Xin nung thêm chí hùng, trong gian nan khốn cùng
   những nguyện được kiên trung.
-  Xin cho từng giọt máu vì Ngài rắc gieo xưa
+  Xin cho từng giọt máu vì ngài rắc gieo xưa
   trên mảnh đồng quê này.
-  Khai hoa kết trái làm đẹp một mùa lúa sáng tươi.
+  Khai hoa kết trái
+  Làm đẹp một mùa lúa sáng tươi.
 }
 
 
 loiDiepKhucBasHai = \lyricmode {
   \repeat unfold 89 { _ }
   \set stanza = "2."
-  Họ từ đâu tới, họ từ đâu tới?
-  Cực khổ trăm bề thế trần khinh chê đời hoen máu lệ.
-  Ngậm sầu đắng đem giống đi gieo.
-  Họ là ai đó, họ là ai đó?
-  Anh Em của ta thuộc mọi tầng lớp nghèo hàn,
-  vinh sang từng ngược xuôi cả giang sơn này.
+  Họ từ đâu tới, họ từ đâu tới
+  cực khổ trăm bề, thế trần khinh chê,
+  đời hoen máu lệ,
+  Ngậm sầu đắng đem giống đi gieo
+  Họ là ai đó, họ là ai đó
+  Anh Em của ta thuộc mọi tầng lớp,
+  nghèo hèn vinh sang từng ngược xuôi cả giang sơn này.
 }
 
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
+  top-margin = 8\mm
+  bottom-margin = 8\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -400,7 +422,7 @@ loiDiepKhucBasHai = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  page-count = #4
+  %page-count = #4
   systems-per-page = 4
 }
 

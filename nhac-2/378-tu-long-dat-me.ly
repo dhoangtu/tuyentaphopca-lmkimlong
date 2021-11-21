@@ -33,16 +33,17 @@ nhacDiepKhucSop = \relative c'' {
   e8 e4 d8 |
   g2 ~ |
   g4 r8 d' |
-  a (d b) a |
+  a ([d b]) a |
   fs g4 a8 |
   \slashedGrace { d,16 (e } d4.) g8 |
   a2 ~ |
   a8 c d e16 (d) |
   a8 (d) b16 (a) fs8 |
   g2 ~ |
-  g4 r \break
+  g4 r \bar "||" \break
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
   \repeat volta 2 {
     r8 bf a r |
@@ -50,10 +51,10 @@ nhacDiepKhucSop = \relative c'' {
     r4 r8 d |
     bf4. g8 |
     g4. a16 a |
-    d2 ~ |
+    d,2 ~ |
     d4 r |
     R2*2
-    c4. bf16 g |
+    c'4. bf16 g |
     a4. a16 f
   }
   \alternative {
@@ -61,10 +62,10 @@ nhacDiepKhucSop = \relative c'' {
       g2
     }
     {
-      \key g \major
-      g2      
+      g2 \bar "||"    
     }
   }
+  \key g \major
   r8 d d' d |
   g,4 c8 d |
   g,2 ~ |
@@ -77,11 +78,11 @@ nhacDiepKhucSop = \relative c'' {
   a4 r8 g16 (a) |
   bf4 r8 a16 d |
   g,4. e16 a |
-  d4. a8 |
+  d,4. a'8 |
   b b4 a8 |
   g2 ~ |
   g ~ |
-  g4 \bar "|."
+  g4 \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c'' {
@@ -102,6 +103,7 @@ nhacDiepKhucAlto = \relative c'' {
   b4 r
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
   r8 g' f r |
   r a g r |
@@ -115,8 +117,8 @@ nhacDiepKhucAlto = \relative c'' {
   ef4. c16 c |
   bf2 |
   
-  \key g \major
   b2 ~ |
+  \key g \major
   b4 r8 b |
   c c16 (b) a4 |
   r8 e'16 (d) c8 c |
@@ -128,7 +130,7 @@ nhacDiepKhucAlto = \relative c'' {
   fs4 r8 d |
   ef4 r8 d |
   g4 r8 fs16 fs |
-  e4. c16 c |
+  e!?4. c16 c |
   b4. c8 |
   d d4 c8 |
   b4. d8 |
@@ -158,16 +160,19 @@ nhacDiepKhucBas = \relative c {
     }
     \new Voice = "splitpart" \notBePhu -2 {
       \voiceTwo
-      g8. g16 f!8 ef
+      g8.
+      _\markup { \lower #3.5 \italic "(đàn)" }
+      g16 f!8 ef
     }
   >>
   \oneVoice
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
   d4. d16 g |
   c,4. g'16 g |
-  \slashedGrace { f16 (g } a2) |
+  \slashedGrace { fs16 (g } a2) |
   r8 d, ef r |
   r c d r |
   r4 r8 d |
@@ -183,13 +188,15 @@ nhacDiepKhucBas = \relative c {
     }
     \new Voice = "splitpart" \notBePhu -2 {
       \voiceTwo
-      g8. g16 f8 ef
+      g8.
+      _\markup { \halign #-2 \italic "(đàn)" }
+      g16 f8 ef
     }
   >>
   \oneVoice
   
-  \key g \major
   g2 ~ |
+  \key g \major
   g4 r8 g |
   a a16 (g) fs4 |
   r8 g16 (fs) e8 e |
@@ -222,46 +229,51 @@ nhacDiepKhucBas = \relative c {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Giáo Hội năm châu mừng chư vị anh hùng Tử Đạo tại Việt Nam.
-  Đau khổ muôn trùng ba thế kỷ đầu rơi,
-  đầu rơi máu đổ vẫn bền gan.
+  Giáo Hội năm châu mừng chư vị Anh hùng Tử Đạo tại Việt Nam
+  Đau khổ muôn trùng ba thế kỷ
+  Đầu rơi, đầu rơi máu đổ vẫn bền gan.
   Hm __ _ _ _
   Tiếng chuông tuyệt mệnh mới dứt hồi.
   Trong bụi mù bay chiếc đầu rơi.
   rơi.
   Hạt giống thối rồi cây đã mọc
-  từ lòng đất mẹ mùa bao la,
+  Từ lòng đất mẹ mùa bao la,
   bao la mùa bao la.
-  Vừa gieo vừa khóc ngày trở về,
+  vừa gieo vừa khóc,
+  Ngày trở về,
   ngày trở về ôm bó lúa hoan ca.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Giáo Hội năm châu mừng chư vị anh Hùng Tử Đạo tại Việt Nam.
-  Cực khổ muôn trùng ba thế kỷ đầu rơi,
-  đầu rơi máu đổ vẫn bền gan.
+  Giáo Hội năm châu mừng chư vị Anh hùng Tử Đạo tại Việt Nam
+  Cực khổ muôn trùng ba thế kỷ
+  Đầu rơi, đầu rơi máu đổ vẫn bền gan.
   Hm __ _ _ _
   Tiếng chuông tuyệt mệnh mới dứt hồi.
   Trong bụi mù bay chiếc đầu rơi.
   rơi.
   Hạt giống thối rồi cây nay đã mọc
-  từ lòng đất mẹ mùa bao la, bao la.
-  Vừa gieo vừa khóc ngày trở về,
+  Từ lòng đất mẹ mùa bao la, bao la.
+  vừa gieo vừa khóc,
+  Ngày trở về,
   ngày trở về ôm bó lúa hoan ca,
   ôm bó lúa hoan ca.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Mừng vui hát kính chư vị tuần giáo tại Việt Nam.
-  Ngàn trung ba thế kỷ ôi đau khổ muôn trùng
-  đầu rơi máu đổ vẫn bền gan.
-  Trời miệt pháp trường mây loang lổ hồi chuông tuyệt mệnh.
+  Mừng vui hát kính chư vị tuẫn giáo tại Việt Nam
+  Ngàn trung ba thế kỷ,
+  ôi đau khổ muôn trùng
+  Đầu rơi máu đổ vẫn bền gan.
+  Trời miệt pháp trường mây loang lổ, hồi chuông tuyệt mệnh
   Ngọc thể anh hùng như cây đổ trong bụi mù bay đầu rơi.
   rơi.
-  Hạt giống thối rồi cây nay đã mọc
-  từ lòng đất mẹ bao la, bao la.
-  Ngày đi gieo vừa gieo vừa khóc ngày trở về,
+  Hạt giống thối rồi, cây nay đã mọc
+  Từ lòng đất mẹ bao la, bao la.
+  Ngày đi gieo vừa gieo vừa khóc,
+  Ngày trở về
   ngày trở về ôm bó lúa hoan ca,
+  \override Lyrics.LyricText.font-shape = #'italic
   ôm bó lúa hoan ca.
 }
 
