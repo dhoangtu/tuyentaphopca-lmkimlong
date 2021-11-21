@@ -66,13 +66,13 @@ nhacPhienKhuc = \relative c' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Kính chào Nữ Vương Mẹ nhân ái
-  là nguồn sống niềm vui suối ngọt ngào.
+  Kính chào Nữ Vương Mẹ nhân ái,
+  là nguồn sống, niềm vui suối ngọt ngào.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Kính chào Nữ Vương Mẹ nhân ái
-  là nguồn sống niềm vui suối ngọt ngào.
+  Kính chào Nữ Vương Mẹ nhân ái,
+  là nguồn sống, niềm vui suối ngọt ngào.
 }
 
 loiPhienKhucMot = \lyricmode {
@@ -83,13 +83,13 @@ loiPhienKhucMot = \lyricmode {
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
-  Chúng con trong vũng lệ sầu
-  ngày thánh cơ cầu ngước trông xin Mẹ chữa bầu.
+  Chúng con trong vũng lệ sầu,
+  ngày thành cơ cầu, ngước trông xin Mẹ chữa bầu.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Đến sau qua kiếp lưu đày
+  Đến sau qua kiếp lưu đày,
   Mẹ dẫn lên trời ngắm trông Con Mẹ suốt đời.
 }
 

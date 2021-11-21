@@ -54,7 +54,7 @@ nhacDiepKhucSop = \relative c'' {
   c4 r8 c, |
   a'8. bf16 g8 g |
   f2 ~ |
-  f4 r \bar "|."
+  f4 \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c'' {
@@ -74,7 +74,7 @@ nhacDiepKhucAlto = \relative c'' {
   b4 g8 g |
   a4. g8 |
   f4 e8 e 
-  f2 |
+  f2 ~ |
   f4 r |
   r8 g16 (f) d8 d |
   e4. f8 |
@@ -88,7 +88,7 @@ nhacDiepKhucAlto = \relative c'' {
   c4 r8 c, |
   c8. d16 e8 e |
   f2 ~ |
-  f4 r
+  f4
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -122,7 +122,7 @@ nhacDiepKhucBas = \relative c' {
   c4 r8 e, |
   f8. <f bf,>16 <c' c,>8 <bf c,> |
   <a f f,>2 ~ |
-  <a f f,>4 r
+  <a f f,>4
 }
 
 nhacPhienKhuc = \relative c'' {
@@ -138,28 +138,31 @@ nhacPhienKhuc = \relative c'' {
       f8 g |
       a4. g8 |
       d'8. d16 b!8 b |
-      c2
+      c2 ~ |
+      c4 r
     }
     {
-      bf,8 c |
+      a,8 c |
       f4. e8 |
       f8. f16 g8 g |
-      e2
+      e2 ~ |
+      e4 r
     }
   >>
+  \bar "|."
 }
 
 % Lời
 loiDiepKhucSop = \lyricmode {
   Tôi hớn hở mừng vui
-  Mừng vui trong Chúa
-  Trong Thiên Chúa tôi
+  mừng vui trong Chúa
+  trong Thiên Chúa tôi
   Vì Ngài đã mặc cho tôi áo phần rỗi
-  Và choàng áo công chính cho tôi.
-  Như tân nương trang sức bằng ngọc bảo
+  và choàng áo công chính cho tôi.
+  Như tân nương trang sức bằng ngọc bảo.
   Tôi hớn hở mừng vui
   mừng vui trong Chúa
-  Trong Thiên Chúa tôi
+  trong Thiên Chúa tôi
   Vì Ngài đã làm cho tôi những kiệt tác
   vì danh thánh cao quang Ngài.
 }
@@ -167,12 +170,12 @@ loiDiepKhucSop = \lyricmode {
 loiDiepKhucAlto = \lyricmode {
   hớn hở mừng vui
   trong Chúa
-  Trong Thiên Chúa tôi
+  trong Thiên Chúa tôi
   Vì Ngài đã mặc cho tôi áo phần rỗi
-  Và choàng áo công chính cho tôi.
-  Như tân nương trang sức bằng ngọc bảo
-  Tôi hớn hở mừng vui trong Chúa
-  Trong Thiên Chúa tôi
+  và choàng áo công chính cho tôi.
+  Như tân nương trang sức bằng ngọc bảo.
+  hớn hở mừng vui trong Chúa
+  trong Thiên Chúa tôi
   Vì Ngài đã làm cho tôi những kiệt tác
   vì danh thánh cao quang Ngài.
 }
@@ -190,24 +193,27 @@ loiDiepKhucBas = \lyricmode {
 }
 
 loiPhienKhucMot = \lyricmode {
-  Như đất làm nẩy bông đâm nhánh
+  \set stanza = "1."
+  Như đất làm nẩy bông đâm nhánh,
   Như vườn cho kết hạt sinh mầm
   Chúa khiến ngươi trổ hoa công chính
-  Rạng rỡ trước mặt ngàn dân.
+  rạng rỡ trước mặt ngàn dân.
 }
 
 loiPhienKhucHai = \lyricmode {
-  Đây tới ngày trổ sinh công chính
+  \set stanza = "2."
+  Đây tới ngày trổ sinh Công Chính,
   Như hừng đông xuât hiện huy hoàng
   Đấng Cứu tinh của ngươi đi tới
-  Tựa đuốc sáng rực mọi nơi.
+  Tựa ánh đuốc rực mọi nơi.
 }
 
 loiPhienKhucBa = \lyricmode {
-  Muôn nước được hỷ hoan chiêm ngưỡng
+  \set stanza = "3."
+  Muôn nước được hỷ hoan chiêm ngắm,
   Muôn vị vương đế cùng trông nhìn
-  Đức chính trung của ngươi cao sáng
-  Ngàn kiếp vẫn còn hiển vang.
+  Đức chính trung của ngươi cao sáng,
+  Vạn kiếp vẫn còn hiển vang.
 }
 
 % Dàn trang
@@ -294,7 +300,7 @@ notBePhu =
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricSpace.minimum-distance = #1
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   } 

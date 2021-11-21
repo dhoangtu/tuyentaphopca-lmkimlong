@@ -4,7 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Thần Trí Tôi Mừng Vui" }
-  poet = "Lc. 1: 46-49"
+  poet = "Ý: Lc. 1: 46-49"
   composer = "Thơ dịch: Lm. Xuân Ly Băng"
   arranger = "Lm. Kim Long"
   tagline = ##f
@@ -24,7 +24,9 @@ nhacDiepKhucSop = \relative c'' {
   g4. g8 |
   f' e4 c8 |
   d16 (c) b8 b4 ~ |
-  b \bar "|." \break
+  b
+  ^\markup { \huge \bold "Tận" }
+  \bar "|." \break
   
   g8 g |
   d' (e) b16 (c) d8 |
@@ -37,13 +39,17 @@ nhacDiepKhucSop = \relative c'' {
   d4. d8 |
   g, d' c (b) |
   c2 ~ |
-  c4 \bar "||" \break
+  c4
+  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||" \break
   
   r4
   R2*2
-  e8. e16 a,8 a |
+  e8. ^> e16 a,8 a |
   a2 |
-  d8. d16 g,8 g |
+  d8. ^> d16 g,8 g |
   g2 ~ |
   g8 g e e |
   a8. a16 g8 g |
@@ -79,14 +85,14 @@ nhacDiepKhucAlto = \relative c' {
   e4
   r
   R2*2
-  g8. g16 f8 e |
+  g8. ^> g16 f8 e |
   f2 |
-  f8. f16 e8 d |
+  f8. ^> f16 e8 d |
   e2 ~ |
   e8 d c c |
   f8. e16 d8 e |
-  a2 ~ |
-  a4 r
+  a2 ( |
+  g4) r
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -97,7 +103,7 @@ nhacDiepKhucBas = \relative c' {
   c8. e16 d8 c |
   g'4. g8 |
   a (c) a16 (g) e8 |
-  f4 f8 e |
+  f4 f8 ^> e |
   f4 (a) |
   g f8 e |
   d4 c8 e |
@@ -111,46 +117,50 @@ nhacDiepKhucBas = \relative c' {
   b4 a8 a |
   a4 a16 (b) g8 |
   c4. c8 |
-  b g a b |
+  b g ^> a ^> b ^> |
   c f, g4 |
   c,2 ~ |
   c4
   
   g8 c |
   d4 e16 (d) c8 |
-  f4 g8. g16 |
+  f4 g8. ^> g16 |
   c,4 r |
-  r8 c f8. e16 |
+  r8 c f8. ^> e16 |
   d4 r |
   r8 d c c |
   g'4 r |
   r8 a b c |
-  f,2 ~ |
-  f4 r
+  f,2 ( |
+  e4) r
 }
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Chúa là Đấng hồn tôi muôn ca ngợi.
-  Này thần trí tôi mừng vui trong Đấng Cứu Chuộc tôi,
-  thần trí tôi mừng vui vời vợi.
+  Chúa là Đấng hồn tôi muôn ca ngợi
+  Này thần trí tôi mừng vui
+  Trong Đấng Cứu Chuộc tôi,
+  Thần trí tôi mừng vui vời vợi.
   \set stanza = "1."
   Phận bồ liễu của Nữ Tỳ
   Mọi đời sẽ gọi tôi có hồng phúc vô biên.
-  Đã tác thành kỳ diệu, đã tác thành kỳ diệu.
-  Danh Người là thánh, Danh Người là thánh.
+  Đã tác thành kỳ diệu,
+  Đã tác thành kỳ diệu
+  Danh Ngài là Thánh, Danh Ngài là Thánh.
 }
 
 loiDiepKhucAlto = \lyricmode {
   Chúa là Đấng hồn tôi muôn ca ngợi
-  là Chúa hồn tôi muôn ca ngợi.
-  Này thần trí tôi mừng vui trong Đấng Cứu Chuộc tôi,
-  thần trí tôi mừng vui vời vợi.
+  là Chúa hồn tôi muôn ca ngợi
+  Này thần trí tôi mừng vui
+  Trong Đấng Cứu Chuộc tôi,
+  Thần trí tôi mừng vui vời vợi.
 
   Chúa đã ghé mắt thương xem.
   Mọi đời sẽ gọi tôi có hồng phúc vô biên.
-  Đã tác thành kỳ diệu, đã tác thành kỳ diệu.
-  Danh Người là thánh, Danh Người là thánh.
+  Đã tác thành kỳ diệu,
+  Đã tác thành kỳ diệu
+  Danh Ngài là Thánh, Danh Ngài là Thánh.
 }
 
 loiDiepKhucBas = \lyricmode {
@@ -158,19 +168,21 @@ loiDiepKhucBas = \lyricmode {
   Này thần trí tôi mừng vui,
   thần trí tôi mừng vui trong Vị Cứu tôi
   sướng vui vời vợi, sướng vui vời vợi.
-  Chúa đã ghé mắt thương xem và mọi đời sẽ gọi tôi,
+  Chúa đã ghé mắt thương xem,
+  Và mọi đời sẽ gọi tôi,
   sẽ gọi rằng tôi có phúc thực vô biên.
   \set stanza = "2."
-  Vì trong tôi Đấng vạn năng đã tác thành,
-  Người đã tác thành.
-  Danh Người là thánh Người đã tác thành.
+  Vì trong tôi Đấng vạn năng
+  Đã tác thành,
+  Ngài đã tác thành,
+  Danh Ngài là Thánh Ngài đã tác thành.
 }
 
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20\mm
-  bottom-margin = 20\mm
+  top-margin = 10\mm
+  bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
