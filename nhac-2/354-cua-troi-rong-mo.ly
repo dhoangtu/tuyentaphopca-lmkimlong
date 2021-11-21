@@ -4,9 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Cửa Trời Rộng Mở" }
-  poet = "Thánh thi: Kinh chiều"
-  meter = "Lễ: Đức Maria thân mẫu Chúa Giêsu"
-  composer = "Lời: PV giờ kinh"
+  composer = "Lời: Thánh thi CGKPV"
   arranger = "Lm. Kim Long"
   tagline = ##f
 }
@@ -29,7 +27,10 @@ notBePhu =
 
 nhacDiepKhucSop = \relative c'' {
   \autoPageBreaksOff
-  \partial 4 r4 |
+  \partial 4 r4
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar ".|"
   r8 d d e |
   c2 ~ |
   c8 c c d |
@@ -45,13 +46,14 @@ nhacDiepKhucSop = \relative c'' {
   b4 r8 g16 (a) |
   fs8 g \slashedGrace { a16 (b } a4) ~ |
   a8 d d c |
-  b2 \bar "|."
-  R2
-  
+  b2
+  ^\markup { \halign #-2.2 \huge \bold "Tận" }
+  \bar "|."
   \pageBreak
-  
+
+  R2  
   R2
-  r4 c8. b16 |
+  r4 d8. b16 |
   a8 c e d |
   d2 ~ |
   d4 r8 a |
@@ -64,7 +66,10 @@ nhacDiepKhucSop = \relative c'' {
   c4. b8 |
   b4 a8 (g) |
   fs2 ~ |
-  fs4 r \bar "|."
+  fs4 r
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -90,7 +95,7 @@ nhacDiepKhucAlto = \relative c' {
   fs8 a c c |
   b2 ~ |
   b4 r8 d, |
-  e8. fs16 fs8 e ~ |
+  d8. fs16 fs8 e ~ |
   e8. e16 e8 d ~ |
   d c a4 |
   g8 e' e16 (d) cs8 |
@@ -106,7 +111,7 @@ nhacDiepKhucBas = \relative c' {
   g8 g |
   g2 ~ |
   g8 a16 (g) fs8 g |
-  \slashedGrace { g16 ( } a4) a8 d, |
+  a4 a8 d, |
   e4. d8 |
   c b a d |
   g,8. b16 c4 ~ |
@@ -122,11 +127,12 @@ nhacDiepKhucBas = \relative c' {
   <g g,>2 |
   d'8 b b4 ~ |
   b8 g a a16 (g) |
-  \slashedGrace { b,16 ( } d2) ~ |
+  \slashedGrace { 
+    \once \stemDown b,16 ^( } d2) ~ |
   d4 r8 d |
   g8. d16 b8 d |
-  g16 (a) g8 fs4 |
-  r8 d d8. e16 |
+  g16 (a) g8 fs4 ~ |
+  fs8 d d8. e16 |
   e8 c r a |
   d4 d8 c |
   b2 ~ |
@@ -142,47 +148,48 @@ nhacDiepKhucBas = \relative c' {
 loiDiepKhucSop = \lyricmode {
   Ôi Ma -- ri -- a
   Ôi Ma -- ri -- a cửa trời rộng mở cho hồng ân
-  cho hồng ân tuôn đổ chan hòa
-  hương gió thoảng qua hương gió thoảng qua
-  Cửa cài then đóng tinh hoa muôn đời.
-  Đã bởi lòng Trinh nữ sinh ra
+  cho hồng ân tuôn đổ chan hòa.
+  Hương gió thoảng qua hương gió thoảng qua
+  cửa cài then đóng tinh hoa muôn đời.
+  Đã bởi lòng Trinh Nữ sinh ra
   Người là Đấng Cứu độ Đấng Cứu độ
   Đấng Cứu độ ta
-  Giáo hội âu ca âu ca muôn lời.
+  Giáo hội âu ca, âu ca muôn đời.
 }
 
 loiDiepKhucAlto = \lyricmode {
   Ôi Ma -- ri -- a
   Ôi Ma -- ri -- a cửa trời rộng mở cho hồng ân
-  cho hồng ân tuôn đổ chan hòa
-  hương gió thoảng qua hương gió thoảng qua
-  Cửa cài then đóng tinh hoa muôn đời.
-  Đã bởi lòng Trinh nữ sinh ra
-  Người là Đấng Cứu độ Đấng Cứu độ
+  cho hồng ân tuôn đổ chan hòa.
+  Hương gió thoảng qua hương gió thoảng qua
+  cửa cài then đóng tinh hoa muôn đời.
+  Đã bởi lòng Trinh Nữ sinh ra
+  Người là Đấng Cứu Độ Đấng Cứu độ
   Đấng Cứu ta Đấng Cứu độ ta
-  Giáo hội âu ca âu ca muôn lời.
+  Giáo hội âu ca, âu ca muôn đời.
 }
 
 loiDiepKhucBas = \lyricmode {
   Ma -- ri -- a Cửa trời rộng mở
-  Ma -- ri -- a rộng mở cửa trời chan hòa hồng ân
-  tuôn đổ tràn hòa
-  Vườn là vườn xuân
-  Vườn là vườn xuân thoáng qua
+  Ma -- ri -- a rộng mở cửa trời chan hòa hồng ân,
+  tuôn đổ tràn hòa.
+  Vườn (là) vườn xuân
+  Vườn (là) vườn xuân thoảng qua
   Cửa cài then đóng then đóng muôn đời
-  Chúa Giê -- su ở ngôi thiên tử
+  Chúa Giê -- su ở ngôi Thiên Tử
   Người đã bởi lòng trinh nữ sinh ra
   Người là Đấng Cứu độ
   Là Đấng Cứu độ ta
   Bạn hiền Giáo hội
-  Bạn hiền Giáo hội tấu ca muôn lời Ma -- ri
+  Bạn hiền Giáo hội tấu ca muôn đời.
+  Ma -- ri
 }
 
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
   top-margin = 15\mm
-  bottom-margin = 20\mm
+  bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0

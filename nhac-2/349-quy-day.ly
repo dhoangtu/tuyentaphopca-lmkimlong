@@ -34,19 +34,15 @@ nhacDiepKhucSop = \relative c'' {
   a4 a16 (bf a bf) |
   g4. d'8 |
   cs2 ~ |
-  cs8 d b! e \bar "||" \break
+  cs8 d b! e \bar "||"
   
   \set Staff.printKeyCancellation = ##f
   \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key d \major
-  a,2 ~ |
-  a8 d cs d |
-  a4. b8 |
-  a4 g |
   <<
     {
-      fs2 ~ |
-      fs4 r |
+      a,2 ~ |
+      a8 d cs d |
     }
     {
       \new Staff = "oasis" \with {
@@ -66,9 +62,21 @@ nhacDiepKhucSop = \relative c'' {
     }
   >>
   \break
+  a,4. b8 |
+  a4 g |
+  <<
+    {
+      fs2 ~ |
+      fs4 r |
+    }
+    {
+      
+    }
+  >>
+  \break
   
   R2*2
-  r8 d, e cs |
+  r8 d' e cs |
   d4 a |
   b8 b16 (a) fs8 fs |
   \slashedGrace { fs16 ( } a4.) fs16 (e) |
@@ -85,8 +93,8 @@ nhacDiepKhucSop = \relative c'' {
     \once \stemDown b16)}
   \revert Flag.stroke-style
   b2 ~ |
-  b8 b g4 ~ |
-  g8 fs a a |
+  b8 b e4 ~ |
+  e8 d a a |
   \slashedGrace { \once \stemDown a16 ^( } b4.) g8 \bar "||"
   
   \set Score.repeatCommands = #'((volta "1"))
@@ -112,7 +120,7 @@ nhacDiepKhucSop = \relative c'' {
   
   \key c \major
   R2*2
-  r8 b c d |
+  r8 g c d |
   e4. c8 |
   d4 c8 (d16 c) |
   b2 ~ |
@@ -138,7 +146,7 @@ nhacDiepKhucSop = \relative c'' {
         \override StaffSymbol.staff-space = #(magstep -2)
         firstClef = ##f
       } {
-        \key d \major
+        \key c \major
         a8
         _\markup { \fontsize #2 \italic "Đàn" }
         cs g a16 cs
@@ -188,7 +196,7 @@ nhacDiepKhucAlto = \relative c' {
   cs2 ~ |
   cs8 r r4 |
   r8 cs d d |
-  fs4 e8 cs |
+  fs4 e8 (cs) |
   d2 ~ |
   d4 r |
   r fs16 (g fs g) |
@@ -334,8 +342,8 @@ nhacDiepKhucBas = \relative c {
       g4
     }
   >>
-  r8 d |
-  d4 e8 (g) |
+  r8 d' |
+  d4 e,8 (g) |
   a4 g16 (a g d) |
   e4. d8 |
   d4 c8 (e) |
@@ -375,9 +383,9 @@ nhacDiepKhucBas = \relative c {
     {
       f |
       e e |
-      d2 ~ |
-      d4 r |
-      a'4. a8 |
+      f2 ~ |
+      f4 r |
+      a4. a8 |
       b4 b |
       a
     }
@@ -427,7 +435,7 @@ loiDiepKhucAlto = \lyricmode {
   hy vọng giữa ngang trái đời.
   Quỳ đây
   Con đến quỳ đây Mẹ ơi
-  mắt hòa lệ khổ sáng ngời niềm tin
+  hòa lệ khổ sáng ngời niềm tin
   sáng niềm tin.
   Dâng chén sầu phiền
   quỳ đây Mẹ ơi

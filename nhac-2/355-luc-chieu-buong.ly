@@ -17,9 +17,12 @@ nhacDiepKhucSop = \relative c'' {
   bf2 ~ |
   bf4 \tuplet 3/2 { f8 f g } |
   e4 \tuplet 3/2 { a8 c, e } |
-  d2 \fermata \bar "|." \break
+  d2 \break
   
-  \partial 4 r4 \bar "||"
+  \partial 4 r4
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar ".|"
   r4 r8 e a8. g16 g8 g |
   c4. f8 |
   e r16 d cs8 d |
@@ -29,7 +32,7 @@ nhacDiepKhucSop = \relative c'' {
   cs4 r8 d \bar "||"
   
   \key d \major
-  b8 b \slashedGrace { b16 ( } d8) b |
+  b8 b d b |
   a2 ~ |
   a8 a cs d |
   e4. fs8 |
@@ -131,26 +134,26 @@ nhacPhienKhuc = \relative c'' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Lúc chiều buông nhẹ nơi nơi
+  Lúc chiều buông nhẹ nơi nơi,
   Tìm về bên Mẹ cất lời kính thân.
-  Tụng ca Mẹ đầy hồng ân phúc ân
-  thiên đường suy phục thế trần hỷ hoan
+  Tụng ca Mẹ đầy hồng ân, phúc ân,
+  thiên đường suy phục, thế trần hỷ hoan.
   Thái dương nên áo lung linh
   Vầng trăng lấp lánh
-  Kính tôn nâng gót vàng Nữ trinh.
+  kính tôn nâng gót vàng Nữ trinh.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Tụng ca Mẹ đầy hồng ân
-  lạy phục thế trần hỷ hoan
+  Tụng ca Mẹ đầy hồng ân,
+  lạy phục, thế trần hỷ hoan.
   nên như áo lung linh
-  Kính tôn nâng gót vàng Nữ trinh.
+  kính tôn nâng gót vàng Nữ trinh.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Tụng ca Mẹ đầy hồng ân
+  Tụng ca Mẹ đầy hồng ân,
   Hát ca hồng ân
-  lạy phục thế trần hỷ hoan
+  lạy phục, thế trần hỷ hoan.
   Nên như áo lung linh
   Vầng trăng suy tôn nâng gót Nữ trinh
 }
@@ -232,7 +235,7 @@ TongNhip = {
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1
+    \override Lyrics.LyricSpace.minimum-distance = #0.8
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \context {

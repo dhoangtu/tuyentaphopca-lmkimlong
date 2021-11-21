@@ -66,8 +66,8 @@ nhacDiepKhucAlto = \relative c' {
   f f f f |
   e2 ~ |
   e8 e e d |
-  cs2 ~ |
-  cs4 r
+  c2 ~ |
+  c4 r
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -127,11 +127,11 @@ loiPhienKhucSopHai = \lyricmode {
   \repeat unfold 43 { _ }
   \set stanza = "2."
   Cùng về đây bên Mẹ,
-  Hòa chugn câu ca,
+  Hòa chung câu ca,
   ngày đêm vang xa vọng ngân bao la
   Vinh chúc Mẹ đời lại đời
   luôn diễm lệ và rạng ngời,
-  Nơi khắp nơi nơi và cõi trời.
+  Nơi khắp nơi và cõi trời.
 }
 
 loiPhienKhucSopBa = \lyricmode {
