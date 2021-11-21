@@ -11,9 +11,15 @@
 
 % Nhạc
 nhacDiepKhucSop = \relative c' {
-  r8 e16 e a8 b |
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \tweak extra-offset #'(7 . 0)
+  \mark \markup { \musicglyph #"scripts.segno" }
+  r8
+  \tweak extra-offset #'(3 . -1)
+  _\markup { \bold "Intr." }
+  e16 e a8 b |
   <gs e>8 e16 e c'8 d |
-  <b f>8. b16 <e b e,>16 d c b | \break
+  <b f>8. b16 <e b e,>16 d c b |
   r8 e,16 e a8 b16 (a) |
   gs4. gs8 |
   a4 e8 c' |
@@ -31,7 +37,10 @@ nhacDiepKhucSop = \relative c' {
   e4. b8 |
   b d4 b8 |
   a2 ~ |
-  a4 r \bar "|." \break
+  a4
+  <>^\markup { \huge \bold "Tận" }
+  r
+  \bar "|." \break
   
   a8 g g e |
   c'4. b8 |
@@ -49,7 +58,7 @@ nhacDiepKhucSop = \relative c' {
   e,4. b'8 |
   a d4 c8 |
   b2 |
-  a8 b a16 (g) e8 |
+  a8 g a16 (g) e8 |
   c'4. b8 |
   e4 c8 b |
   \once \override Score.RehearsalMark.font-size = #0.1
@@ -57,7 +66,7 @@ nhacDiepKhucSop = \relative c' {
   \mark \markup { \musicglyph #"scripts.segno" }
   a2 \bar "||" \break
   
-  d8 g, a16 (g) d8 |
+  a8 g a16 (g) d8 |
   e4. b'8 |
   b d4 c8 |
   b2 |
@@ -146,55 +155,60 @@ nhacDiepKhucBas = \relative c' {
 % Lời
 loiDiepKhucSop = \lyricmode {
   \repeat unfold 15 { _ }
-  \set stanza = "ĐK:"
   Đoàn người đông diễm lệ vừa đi vừa hát ca.
   Tay cầm cành thiên tuế áo trắng như tuyết pha.
-  Từ đau khổ bao la tôn vinh Con Thiên Chúa
+  Từ đau khổ bao la
+  Tôn vinh Con Thiên Chúa
   tề tựu trước ngai tòa.
   
-  \set stanza = "1."
-  Chúng con nơi trần thế xin hợp tiếng hoan ca,
-  kính mừng chư quí vị Tử Đạo Việt Nam nhà.
+  \set stanza = " 1."
+  Chúng con nơi trần thế xin hợp tiếng hoan ca
+  Kính mừng chư quí vị Tử Đạo Việt Nam nhà.
   
   \set stanza = "2."
-  Suốt gần ba thế kỷ gian khổ dám xông pha,
-  nay triều thiên hùng vĩ rạng rỡ khắp sơn hà.
+  Suốt gần ba thế kỷ gian khổ dám xông pha
+  Nay triều thiên hùng vĩ rạng rỡ khắp sơn hà.
   
   \set stanza = "3."
-  Xin cầu cho hậu duệ noi gương sáng cha ông,
+  Xin cầu cho hậu duệ,
+  Noi gương sáng cha ông.
   Đức Tin quyết bảo vệ Đức Ai tỏa sáng ra.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  _ Đoàn người đông diễm lệ vừa đi vừa hát ca.
-  Tay cầm cành thiên tuế áo như tuyết pha.
-  Từ đau khổ bao la tôn vinh Con Thiên Chúa
+  _ Đoàn người đông diễm lệ vừa đi vừa hát ca
+  tay cầm cành thiên tuế,
+  áo như tuyết pha.
+  Từ đau khổ bao la
+  Tôn vinh Con Thiên Chúa
   tề tựu trước ngai tòa.
 }
 
 loiDiepKhucBas = \lyricmode {
   \repeat unfold 7 { _ }
-  Đoàn người đông, đoàn người đông diễm lệ
-  vừa đi vừa hòa ca.
-  Tay cầm cành, tay cầm cành thiên tuế tuyết pha.
-  Từ khắp miền huyết lệ, từ trong đau khổ bao la
-  tôn vinh Con Thiên Chúa trước ngai tòa.
+  Đoàn người đông đoàn người đông diễm lệ
+  vừa đi vừa hòa ca
+  tay cầm cành
+  tay cầm cành thiên tuế tuyết pha.
+  Từ khắp miền huyết lệ.
+  Từ trong đau khổ bao la
+  Tôn vinh Con Thiên Chúa trước ngai tòa.
   
-  Chúng con nơi trần thế hoan ca,
-  kính mừng chư quí vị Việt Nam ta.
+  Chúng con nơi trần thế hoan ca
+  Kính mừng chư quí vị Việt Nam ta.
   
-  Suốt gần ba thế kỷ xông pha,
-  nay triều thiên rạng rỡ cả sơn hà.
+  Suốt gần ba thế kỷ xông pha
+  Nay triều thiên rạng rỡ cả sơn hà.
   
-  Xin cầu cho hậu duệ cha ông,
+  Xin cầu cho hậu duệ cha ông.
   Đức Tin quyết bảo vệ tỏa rạng ra.
 }
 
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 20\mm
+  top-margin = 10\mm
+  bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -205,7 +219,7 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #2
+  page-count = #2
 }
 
 TongNhip = {
@@ -255,7 +269,7 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #0.6
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

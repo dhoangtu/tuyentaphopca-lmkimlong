@@ -22,7 +22,7 @@ nhacDiepKhucSop = \relative c' {
   d2 |
   d8 ^> e16 d b8 c |
   d b g a |
-  g4 c8 b |
+  b4 c8 b |
   a4. c8 |
   c c4 e8 |
   e4. a,8 |
@@ -37,7 +37,7 @@ nhacDiepKhucSop = \relative c' {
   e4. e8 |
   c' c4 b8 |
   a2 |
-  fs8 g a e |
+  g8 g a e |
   d4 cs8 d |
   g4. as8 |
   b2 |
@@ -51,6 +51,7 @@ nhacDiepKhucSop = \relative c' {
   g2 \bar "||" \break
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
   R2*2
   c8. c16 c8 c |
@@ -67,7 +68,7 @@ nhacDiepKhucSop = \relative c' {
   c4 c |
   a8. a16 c8 c |
   b4 b |
-  fs8 g a c, |
+  fs8 g a e |
   d4 c'8 c |
   a4. a8 |
   g2 ~ |
@@ -75,7 +76,7 @@ nhacDiepKhucSop = \relative c' {
   \once \override Score.RehearsalMark.font-size = #0.1
   \tweak extra-offset #'(10 . 0)
   \mark \markup { \musicglyph #"scripts.segno" }
-  r \bar "|." \break
+  r \bar "||" \break
   
   R2
   r8 b ^> b ^> b ^> |
@@ -95,7 +96,7 @@ nhacDiepKhucSop = \relative c' {
   g4 r
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
-  \bar "|."
+  \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -122,7 +123,7 @@ nhacDiepKhucAlto = \relative c' {
   e4. e8 |
   c' c4 b8 |
   a2 |
-  fs8 g a e |
+  g8 g a e |
   d4 cs8 d |
   g4. as8 |
   b2 |
@@ -136,6 +137,7 @@ nhacDiepKhucAlto = \relative c' {
   g2 |
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
   g8. g16 g8 g |
   d4 g ~ |
@@ -213,6 +215,8 @@ nhacDiepKhucBas = \relative c {
   d4 d, |
   g2 |
   
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
   R2
   bf8. bf16 bf8 bf |
@@ -314,7 +318,7 @@ loiDiepKhucAlto = \lyricmode {
 
 loiDiepKhucBas = \lyricmode {
   Nhạc chiến thắng vang dậy rền trời
-  Dòng máu lưu danh ngàn thu lưu danh ngàn thu
+  dòng máu lưu danh ngàn thu lưu danh ngàn thu
   Đây những anh hùng Việt Nam trung thành theo Chúa Giê -- su
   gươm đao thêm kiên trì dũng chí
   tử sinh nguyện can cường
@@ -325,19 +329,19 @@ loiDiepKhucBas = \lyricmode {
   dẫu tan xương thịt.
   khốn khó
   quang vinh
-  triều thiên lấp lanh chói hiển vinh.
+  triều thiên lấp lánh chói hiển vinh.
   Đi gieo trong châu lệ thảm thê
   trở về bao sướng vui.
   Từng hạt giống chôn vùi rầy trổ sinh hoa trái.
   Bao con dân nay biết Chúa
   Bởi máu đào đã gieo xưa
-  Khải hoàn ca sẽ tiếp nối vang xa.
+  khải hoàn ca sẽ tiếp nối vang xa.
   Nhạc chiến
   
-  \set stanza = "2."
   Ôi cha ông kiêu hùng dù chết vẫn kiên trung,
   Rầy trên chốn cửu trùng phù trợ cho con cháu
-  theo gương xưa luôn tiến bước nguyện hy sinh
+  theo gương xưa luôn tiến bước,
+  nguyện hy sinh
   Để tông giống anh hùng làm rạng quê hương mình.
   Nhạc chiến
   

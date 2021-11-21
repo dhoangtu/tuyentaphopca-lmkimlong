@@ -33,9 +33,10 @@ nhacPhienKhucSop = \relative c' {
   f8. e16 f8 g |
   a4. g8 |
   c c4 e,8 |
-  f4 r8 \bar "|" \break
+  \partial 4. f4 \bar "||"
+  \break
   
-  a |
+  a8 |
   a4. f8 |
   bf4 b!8 b |
   c2 |
@@ -44,7 +45,7 @@ nhacPhienKhucSop = \relative c' {
   
   d8 c a bf |
   c4. g8 |
-  g4 r8 bf |
+  a4 r8 bf |
   g4 e8 g |
   f4. g8 |
   a2 |
@@ -55,7 +56,7 @@ nhacPhienKhucSop = \relative c' {
 
 nhacPhienKhucAlto = \relative c' {
   \repeat unfold 7 { \skip 2 }
-  \skip 4 r8 f |
+  \skip 4 f8 |
   f4. ef8 |
   d4 g8 f |
   e2 |
@@ -74,7 +75,7 @@ nhacPhienKhucBas = \relative c {
   R2
   f8. e16 f8 g |
   d4 bf8 bf |
-  a4 (b!8 a) |
+  c4 (b!8 c) |
   d4. c8 |
   f8. e16 d8 f |
   <<
@@ -98,9 +99,8 @@ nhacPhienKhucBas = \relative c {
       f4
     }
   >>
-  r8
   
-  f |
+  f8 |
   f4. c'8 |
   bf4 g |
   c8 c c bf |
@@ -130,17 +130,17 @@ loiPhienKhucSopMot = \lyricmode {
   \set stanza = "1."
   Đây đoàn người anh dũng hiên ngang ra pháp trường.
   Dâng cuộc đời cho Chúa làm hiến lễ tình thương.
-  \set stanza = "ĐK:"
+
   Các thánh giờ đây trong Đất Hứa
   góp chung lời hát khúc trường ca.
-  Chúng ta lòng sướng vui chan chứa
-  cùng hát vang ca khúc thái hòa.
+  Chúng ta lòng sướng vui chan chứa.
+  Cùng hát vang ca khúc thái hòa.
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = "2."
   Đây đoàn người nắm chắc vinh quang trên Nước Trời.
-  Đem niềm tin gieo rắc rọi chiếu khắp mọi nơi.
+  Đem niềm tin gieo rắc dọi chiếu khắp mọi nơi.
 }
 
 loiPhienKhucSopBa = \lyricmode {
@@ -158,8 +158,8 @@ loiPhienKhucSopBon = \lyricmode {
 loiPhienKhucAltoMot = \lyricmode {
   Các thánh giờ đây trong Đất Hứa
   góp chung lời hát khúc trường ca.
-  Chúng ta lòng sướng vui chan chứa
-  cùng hát vang ca khúc thái hòa.
+  Chúng ta lòng sướng vui chan chứa.
+  Cùng hát vang ca khúc thái hòa.
 }
 
 loiPhienKhucBasMot = \lyricmode {
@@ -174,7 +174,7 @@ loiPhienKhucBasMot = \lyricmode {
 loiPhienKhucBasHai = \lyricmode {
   \set stanza = "2."
   Đây đoàn người vinh quang trên Nước Trời.
-  Đem (là) đem Đức Tin chói rọi ở mọi nơi.
+  Đem (là) đem Đức Tin chói dọi ở mọi nơi.
 }
 
 loiPhienKhucBasBa = \lyricmode {
