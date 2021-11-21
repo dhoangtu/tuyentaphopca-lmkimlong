@@ -29,17 +29,17 @@ nhacPhienKhucSop = \relative c' {
   d4 r8 |
   R4. |
   c8 c g |
-  c4 f,16 (g) |
+  c4 a16 (g) |
   f8. d16 f8 |
   g4. ~ |
   g4 r8 |
   R4.*2
   a8 g a16 (bf) |
-  c8. (d16) g,8 |
+  c8. (bf16) g8 |
   g8. g16 a8 |
   a4. ~ |
   a8 r8 d |
-  f (e) f |
+  f (e) d |
   d4 r8 |
   R4.*2
   r4 bf8 |
@@ -111,8 +111,8 @@ nhacPhienKhucAlto = \relative c' {
   e4 f8 |
   f8. (d16) a'8 |
   a8. (c16) bf8 |
-  a4. ~ |
-  a4 r8 |
+  a4. ( |
+  f4) r8 |
   R4.
   f8 f f |
   e4 f16 (e) |
@@ -165,7 +165,8 @@ nhacPhienKhucTenor = \relative c' {
   a4 bf8 ~ |
   bf bf ([c]) |
   a4 a16 (c) |
-  b!4 (c8 |
+  b!4 (
+  \once \stemDown a8 |
   b!) r a |
   d8. d16 d8 |
   e4. ~ |
@@ -224,7 +225,7 @@ nhacPhienKhucBas = \relative c {
   f4. ~ |
   f4 f8 |
   d8. d16 e8 |
-  f r \slashedGrace { \once \stemDown c16 ^( } d8) |
+  f r \slashedGrace { \once \stemDown cs16 ^( } d8) |
   a r \slashedGrace { \once \stemDown a16 ^( } d8) |
   \slashedGrace { \once \stemDown f16 ^( } e8) r d |
   a4 a8 |
@@ -237,7 +238,7 @@ nhacPhienKhucBas = \relative c {
   c ~ |
   c4 c'8 |
   \slashedGrace { \stemDown c16 ^(df } \stemNeutral c4) f,16 (g) |
-  \slashedGrace { \once \stemDown f16 ^( } g4) a!16 (g) |
+  \slashedGrace { \once \stemDown a16 ^( } g4) a!16 (g) |
   f4. |
   df4. |
   c4. ~ |
@@ -256,7 +257,6 @@ loiPhienKhucSop = \lyricmode {
   Quê trời, hồn ước tới quê trời
   mắt khơi lệ mừng.
   
-  \set stanza = "1-3."
   Đoàn con nay hợp tiếng mọi nơi
   cùng hát ca danh Mẹ muôn đời.
   
@@ -302,7 +302,7 @@ loiPhienKhucAlto = \lyricmode {
   ân tình đầy vơi,
   Hồn con ước vọng quê trời,
   hồn con mong tới quê trời
-  mặt khơi lệ mừng.
+  mắt khơi lệ mừng.
 }
 
 loiPhienKhucTenor = \lyricmode {
@@ -326,7 +326,7 @@ loiPhienKhucBas = \lyricmode {
   đẹp tựa bình minh.
   ánh bình minh ngợp trời,
   lời kinh vang cung trời,
-  như trăng dọi sáng (la) nơi nơi
+  như trăng dọi sáng (là) nơi nơi
   Uy danh Mẹ, uy danh Mẹ vẫn muôn đời tôn cao.
   sâu nhiệm (là) làm sao,
   Con hèn biết lấy lời nào (mà) tôn vinh.

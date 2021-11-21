@@ -29,7 +29,7 @@ nhacDiepKhucSop = \relative c'' {
   fs g g e |
   d4 r8 g |
   fs4. g8 |
-  g b b16 (a) g8 |
+  g b b16 [(a) g8] |
   a4. a16 g |
   c4. cs8 |
   d4 r8 b |

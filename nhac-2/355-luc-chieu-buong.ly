@@ -12,14 +12,15 @@
 nhacDiepKhucSop = \relative c'' {
   \autoPageBreaksOff
   \set Staff.printKeyCancellation = ##f
-  \partial 4 r8 a |
-  d4 \tuplet 3/2 { a8 g a } |
-  bf2 ~ |
-  bf4 \tuplet 3/2 { f8 f g } |
+  \partial 8 a8 |
+  d,4 \tuplet 3/2 { a'8 g a } |
+  a2 ~ |
+  a4 \tuplet 3/2 { f8 f g } |
   e4 \tuplet 3/2 { a8 c, e } |
-  d2 \break
+  d2 ~
+  \break
   
-  \partial 4 r4
+  d4 r4
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
   \bar ".|"
@@ -47,13 +48,11 @@ nhacDiepKhucSop = \relative c'' {
 
 nhacDiepKhucAlto = \relative c' {
   \set Staff.printKeyCancellation = ##f
-  r4
-  R2*5
-  r4
-  R2
+  r8
+  R2*7
   r4 r8 d |
   g8. f16 f8 f |
-  bf4. a8 |
+  bf4. g8 |
   a4 a8 (bf) |
   g4 g8 (f) |
   e2 ~ |
@@ -65,16 +64,27 @@ nhacDiepKhucAlto = \relative c' {
   e4 r |
   r r8 a |
   g g a (g) |
-  e4 e8 (g) |
-  fs2 ~ |
-  fs4 r
+  <fs d>4
+  <<
+    {
+      \voiceOne
+      e8 (g) |
+    }
+    \new Voice = "splitpart" {
+      \voiceTwo
+      cs,4
+    }
+  >>
+  \oneVoice
+  <fs d>2 ~ |
+  <fs d>4 r
 }
 
 nhacDiepKhucBas = \relative c {
   \set Staff.printKeyCancellation = ##f
-  r4 |
+  r8 |
   R2*5
-  r8 a |
+  r4 r8 a |
   d8. c16 c8 c |
   f4. f8 |
   e4 d |
@@ -89,10 +99,10 @@ nhacDiepKhucBas = \relative c {
   r8 d16 d e8 d |
   <cs a>4 r8 fs, |
   g (fs) e (d) |
-  <d' g,>4. <d e,>8 |
-  <cs a>4 <cs a,> |
-  <d a d,>2 ~ |
-  <d a d,>4 r
+  e4. e8 |
+  a4 a, |
+  d2 ~ |
+  d4 r
 }
 
 nhacPhienKhuc = \relative c'' {
@@ -114,7 +124,7 @@ nhacPhienKhuc = \relative c'' {
   >>
   a8. bf16 a8 d |
   e e r e |
-  cs8. d16 bf8 a |
+  c8. d16 bf8 a |
   g
   <<
     {
@@ -123,7 +133,7 @@ nhacPhienKhuc = \relative c'' {
     }
     {
       d4 d8 |
-      e cs4 cs8 |
+      e c4 c8 |
     }
   >>
   d4 c8\rest
@@ -160,32 +170,33 @@ loiDiepKhucBas = \lyricmode {
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Khi bóng đê buông chập chùng
-  Từ trong đớn đau cơ cùng trông lên Mẹ cất tiếng van
-  Dù hiểm nghèo luôn vướng lối
-  Có Mẹ luôn chở che rồi
-  Đời lặng trôi trong yên hàn.
+  Khi bóng đêm buông chập chùng,
+  từ trong đớn đau cơ cùng,
+  trông lên Mẹ cất tiếng van
+  Dù hiểm nghèo luôn vướng lối,
+  có Mẹ luôn chở che rồi,
+  đời lặng trôi trong yên hàn.
   Tụng
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
-  Con chắp đôi tay nguyện cầu
-  Đời như bóng đêm vương sầu
-  Luôn trôi dạt biết tới đâu
-  Mòn mỏi tìm đâu thấy hướng
-  Giữa ngàn nguy hiểm khôn lường
-  Nguyện Mẹ thương xin soi đường.
+  Con chắp đôi tay nguyện cầu,
+  đời như bóng đêm vương sầu,
+  luôn trôi dạt biết tới đâu
+  Mòn mỏi tìm đâu thấy hướng,
+  giữa ngàn nguy hiểm khôn lường,
+  nguyện Mẹ thương xin soi đường.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Con vững tin nơi Mẹ lành
-  Mẹ chê chối con sao đành
-  Khi con cầu nỡ nín thinh
+  Con vững tin nơi Mẹ lành,
+  Mẹ chê chối con sao đành,
+  khi con cầu nỡ nín thinh
   Chiều thuở nào trên thánh giá
   Chúa đã trao gửi cho Mẹ
-  Một đoàn con xin thương tình.
+  một đoàn con xin thương tình.
 }
 
 % Dàn trang

@@ -50,6 +50,7 @@ nhacDiepKhucSop = \relative c'' {
   <<
     {
       \voiceOne
+      \once \override NoteColumn.force-hshift = #1.5
       d'8 c d16 (c) a8
     }
     \new Voice = "splitpart" \notBePhu -2 {
@@ -67,7 +68,7 @@ nhacDiepKhucSop = \relative c'' {
   r8 d c d |
   a4 a |
   f'8 ^> f ^> e f16 (e) |
-  d4 d8 d |
+  d4 d8 ^\pp d |
   cs4. cs8 |
   d2 ~ |
   d4 r |
@@ -111,7 +112,7 @@ nhacDiepKhucAlto = \relative c'' {
   f4 f |
   c'8 c d16 (c) g8 |
   a4. e8 |
-  f f g g |
+  f f d g |
   f4. e8 |
   f4 a8 (g) |
   f2 ~ |
@@ -119,6 +120,7 @@ nhacDiepKhucAlto = \relative c'' {
 }
 
 nhacDiepKhucBas = \relative c' {
+  \set fontSize = #-2
   <<
     {
       d2 ~ |
@@ -130,22 +132,24 @@ nhacDiepKhucBas = \relative c' {
     }
   >>
   <c a>4 <d d,> r |
+  
+  \set fontSize = #0
   f,8 e f16 (e) c8 |
   c2 ~ |
   c4 r8 a |
   d c d (e) |
   f4 d8 (f) |
   g a16 (g) f8 g16 (f) |
-  d8 f e d |
+  d8 f f bf, |
   c4 cs |
   d8 ^> d ^> g g |
-  f f g f16 (g) |
+  f r16 f ^\f g8 f16 (g) |
   a8 a \slashedGrace { f16 ( } e8) a, |
   d2 ~ |
   d4 g8 f |
   g4 a8 (g16 f) |
   \slashedGrace { c16 ( }d4) d8 ^> d ^> |
-  g4. gs8 |
+  g4. g8 |
   a4 a,8 ^> a ^> |
   bf4. bf8 |
   bf4. r8 |
@@ -176,7 +180,7 @@ nhacPhienKhucSop = \relative c'' {
   d4 f8 (e) |
   d (g) bf g |
   a2 ~ |
-  a4 a8 (c) |
+  a4 g8 (c) |
   d d16 (c) d8 c |
   g4 g |
   e8 e e g |
@@ -210,7 +214,7 @@ nhacPhienKhucBas = \relative c' {
 % Lời
 loiDiepKhucSop = \lyricmode {
   Đây bài ca ngàn trùng hiệp dâng về Thiên Chúa.
-  Thắm nhuộm máu hồng từng lớp lớp đang tiến lên
+  thắm nhuộm máu hồng từng lớp lớp đang tiến lên
   hy sinh vì tình yêu.
   Ánh Đức Tin kiên trung chiếu sáng khi gươm vung.
   Đây bài ca vang hòa đất trời
@@ -219,7 +223,7 @@ loiDiepKhucSop = \lyricmode {
 
 loiDiepKhucAlto = \lyricmode {
   Đây bài ca ngàn trùng hiệp dâng về Thiên Chúa.
-  Thắm nhuộm máu hồng từng lớp lớp đang tiến lên
+  thắm nhuộm máu hồng từng lớp lớp đang tiến lên
   hy sinh vì tình yêu.
   Ánh Đức Tin kiên trung chiếu sáng khi gươm vung.
   Bài ca vinh thắng hòa ca,
@@ -228,7 +232,7 @@ loiDiepKhucAlto = \lyricmode {
 
 loiDiepKhucBas = \lyricmode {
   _ _ _
-  Đây bài ca ngàn trùng hiệp dâng về Thiên Chúa
+  Đây bài ca ngàn trùng hiệp dâng về Thiên Chúa,
   bài ca thắm nhuộm máu hồng,
   thắm nhuộm máu hồng
   từng lớp lớp đang tiến lên
@@ -249,8 +253,9 @@ loiDiepKhucBas = \lyricmode {
 
 loiPhienKhucSopMot = \lyricmode {
   \set stanza = "1."
-  Không có tình yêu nào trọng đại bằng chết vì yêu.
-  Ngắm nhìn Chúa đẫm máu trên đồi cao
+  Không có tình yêu nào trọng đại
+  cho bằng chết vì yêu.
+  Nhìn Chúa đẫm máu trên đồi cao
   từng đoàn người anh dũng tiến lên pháp trường.
 }
 
@@ -263,30 +268,31 @@ loiPhienKhucSopHai = \lyricmode {
 
 loiPhienKhucSopBa = \lyricmode {
   \set stanza = "3."
-  Tay Chúa hằng che chở phù hộ quân thù sẽ phải lui.
+  Tay Chúa hằng che chở phù trợ quân thù sẽ phải lui.
   Họ chiến thắng hát ca mừng vui
-  dù người trần chê trách lãng quên tức thời.
+  dù người trần chê trách lãng quên suốt đời.
 }
 
 loiPhienKhucBasMot = \lyricmode {
   \set stanza = "1."
-  Không có tình yêu nào trọng đại bằng chết vì yêu.
-  Ngắm nhìn Chúa đẫm máu trên đồi cao
+  Không có tình yêu nào trọng đại bằng chết vì yêu
+  ngắm nhìn Chúa đẫm máu trên đồi cao
   tiến lên pháp trường.
 }
 
 loiPhienKhucBasHai = \lyricmode {
   \set stanza = "2."
-  Ai chối từ xác phàm trần lụy được sống hiển vinh.
-  Bởi vì Đấng phát xét trong quyền linh
+  Ai chối từ xác phàm trần lụy được sống hiển vinh
+  bởi vì Đấng phát xét trong quyền linh
   đớn đau khổ hình.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \set stanza = "3."
-  Tay Chúa hằng che chở phù hộ địch sẽ phải lui.
-  Khiến họ chiến thắng hát ca mừng vui
-  trách chê tức thời.
+  Tay Chúa hằng che chở phù trợ
+  địch sẽ phải lui
+  khiến họ chiến thắng hát ca mừng vui,
+  trách chê trọn đời.
 }
 
 % Dàn trang

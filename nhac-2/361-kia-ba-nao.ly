@@ -22,8 +22,8 @@ nhacDiepKhucSop = \relative c' {
   a4 g8 g a2 ~ |
   \partial 2. a ~ a4 \bar "|." \break
   
-  a8 a e4 e8 b e d |
-  e4 e8 a b g! g4 |
+  a8 a e'4 e8 b e d |
+  e4 e8 a, b g! g4 |
   a8 e g a c4 b8 g |
   c b b2 r4 |
   e,8 e a4 a8 g a b |
@@ -145,7 +145,7 @@ loiPhienKhucAltoHai = \lyricmode {
   Khi đầu thai
   ngọc tuyền
   ơn thiên tòa
-  vô biên nước khơi trong nguồn
+  vô biên
   Tay thơ bé
   cứu độ
   nhân hậu
