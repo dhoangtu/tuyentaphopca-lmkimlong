@@ -53,7 +53,7 @@ nhacDiepKhucSop = \relative c'' {
   e4 r |
   r r8 a |
   g d' b b |
-  c4 c8 (g) c4 \bar "||" \pageBreak
+  c4 c8 (b) c4 \bar "||" \pageBreak
   
   e8 g |
   e4 d |
@@ -142,7 +142,7 @@ nhacDiepKhucBas = \relative c {
   e d c b |
   c4 d8 d |
   a' a a,4 |
-  g g8 g |
+  b b8 b |
   c4 f |
   d8 d d4 |
   c a |
@@ -155,7 +155,7 @@ nhacDiepKhucBas = \relative c {
 loiPhienKhucSoloMot = \lyricmode {
   \set stanza = "1."
   Tình yêu, ôi cao siêu là tình yêu Thiên Chúa
-  đã đoái thương thân phận mòn hèn
+  đã đoái trông thân phận mòn hèn
   mà mến thương con tự ngàn đời
   luôn hằng chan tưới hồng ân
   dẫn lần con tới bàn thánh.
@@ -163,7 +163,7 @@ loiPhienKhucSoloMot = \lyricmode {
 
 loiPhienKhucSoloHai = \lyricmode {
   \set stanza = "2."
-  Bụi tro, ôi thân con là bụi tr đâu đáng
+  Bụi tro, ôi thân con là bụi tro đâu đáng
   mà Chúa cao siêu ngợp tầng trời
   đà khắc tên con vào lòng Ngài
   nên bạn tâm phúc từ đây
@@ -222,7 +222,7 @@ loiDiepKhucBasMot = \lyricmode {
   tự ngàn đời
   ban hồng ân dẫn lần con tới bàn thánh.
   
-  Muôn tiếng ca vang xa tới phục tụng: Con Linh mục Chúa
+  Muôn lời ca vang xa tới phục tụng: Con Linh mục Chúa
   vui lên bàn thánh để đáp mến thương,
   tình Chúa mến thương muôn đời.
   Nguyện dâng Cha này trót xác hồn con nên như của lễ
@@ -240,7 +240,7 @@ loiDiepKhucBasHai = \lyricmode {
 loiDiepKhucBasBa = \lyricmode {
   \set stanza = "3."
   Đây đời con xin dâng trọn đời con.
-  dọi trần đời mặn lòng người,
+  soi trần đời mặn lòng người,
   phúc trường sinh vững lòng tin Chúa quyền linh.
 }
 

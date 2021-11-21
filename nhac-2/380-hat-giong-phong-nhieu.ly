@@ -26,6 +26,7 @@ notBePhu =
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   r8
   <<
     {
@@ -65,7 +66,8 @@ nhacDiepKhucSop = \relative c'' {
   a4 a16 (g) c8 |
   f,4. f8 |
   e8 f4 <g \tweak font-size -2 e>8 |
-  <a \tweak font-size -2 f>4 r8 \bar "||" \break
+  <a \tweak font-size -2 f>4 r8 \bar "|"
+  \break
   
   f16 f |
   bf4. bf8 |
@@ -97,11 +99,12 @@ nhacDiepKhucSop = \relative c'' {
   a4. e'8 |
   e e cs4 |
   d2 ~ |
-  d4 r \bar "|."
+  d4 r \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   R2*6
   r8 f f e |
   r f \tuplet 3/2 { d8 e c } |
@@ -137,8 +140,9 @@ nhacDiepKhucAlto = \relative c' {
 
 nhacDiepKhucBas = \relative c {
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   <c c,>4 r |
-  r8 e d c16 (bf) |
+  r8 e d c16 bf |
   f'4 <g e>8 <a f> |
   <bf g c,>4 r |
   r8 bf a a |
@@ -178,16 +182,16 @@ nhacDiepKhucBas = \relative c {
 % Lời
 loiDiepKhucSop = \lyricmode {
   \repeat unfold 8 { _ }
-  Hạt giống thối rồi chim nhỏ ơi!
+  Hạt giống thối rồi chim nhỏ ơi,
   Hát lên bài ca hùng vĩ.
   Hạt giống thối rồi
   gieo nắng vàng trên mọi đường thiên lý.
-  Vì từ đây chim trời mặc sức ăn
-  và mặt trời thừa lá cành nhảy múa.
-  Đất mẹ từ đây hết khô cằn
-  và núi và sông thừa ơn Chúa.
-  Con kính chào hạt giống rất phong nhiêu
-  sinh trong đêm khuya chết nửa chiều.
+  Vì từ đây chim trời mặc sức ăn,
+  Và mặt trời thừa lá cành nhảy múa.
+  Đất mẹ từ đây hết khô cằn,
+  Và núi và sông thừa ơn Chúa.
+  Con kính chào hạt giống rất phong nhiêu,
+  Sinh trong đêm khuya, chết nửa chiều.
   Rồi phục hoạt khi đất trời ngái ngủ
   cho lòng con hát mãi khúc tình yêu.
 }
@@ -197,21 +201,23 @@ loiDiepKhucAlto = \lyricmode {
   Hạt giống thối rồi gieo ánh nắng vàng
   trên mọi đường thiên lý.
   
-  Con kính chào rất phong nhiêu
-  sinh trong đêm khuya chết nửa chiều.
-  Rồi phục hoạt khi đất trời ngái ngủ
+  Con kính chào rất phong nhiêu,
+  Sinh trong đêm khuya, chết nửa chiều.
+  rồi phục hoạt khi đất trời ngái ngủ
   để lòng con hát mãi khúc tình yêu.
 }
 
 loiDiepKhucBas = \lyricmode {
-  \repeat unfold 8 { _ }
-  Hỡi chim nhỏ ơi! Hãy hát lên hòa lên hùng vĩ.
-  Hạt giống thối rồi mặt trời ơi! Hạt giống thối rồi
+  \repeat unfold 9 { _ }
+  Hỡi chim nhỏ ơi
+  Hãy hát lên hòa lên hùng vĩ.
+  Hạt giống thối rồi mặt trời ơi,
+  Hạt giống thối rồi
   gieo ánh nắng vàng trên mọi hướng thiên lý.
   
-  Con kính chào thật phong nhiêu
-  sinh trong đêm khuya chết nửa chiều.
-  Rồi phục hoạt khi đất trời mãi ngủ
+  Con kính chào thật phong nhiêu,
+  Sinh trong đêm khuya, chết nửa chiều.
+  rồi phục hoạt khi đất trời mải ngủ
   để con hòa mãi khúc kính yêu.
 }
 
