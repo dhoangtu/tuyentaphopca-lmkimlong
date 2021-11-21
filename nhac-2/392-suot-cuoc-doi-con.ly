@@ -45,7 +45,7 @@ nhacPhienKhucSop = \relative c'' {
   c8. c16 c8 d |
   bf a4 d,8 |
   a'4 fs |
-  g2
+  g2 \bar "||"
 }
 
 nhacPhienKhucBas = \relative c'' {
@@ -113,8 +113,8 @@ nhacDiepKhucBas = \relative c' {
   g8. g16 g8 d |
   e e r c |
   a8. a16 a8 d |
-  g2 |
-  r4 g8. fs16 |
+  g,2 |
+  r4 g'8. fs16 |
   g8 g d4 |
   r a8. e'16 |
   d8 d g4 |
@@ -130,7 +130,7 @@ nhacDiepKhucBas = \relative c' {
     }
   >>
   g8. g16 f!8 e |
-  e d4 d16 c |
+  g d4 d16 c |
   b8. a16 d8 d |
   <g g,>2
 }
@@ -138,44 +138,50 @@ nhacDiepKhucBas = \relative c' {
 % Lời
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Suốt cuộc đời con bàn tay Chúa luôn luôn dắt dìu
-  tình yêu Chúa dõi theo từng bước.
-  Ngài đã gọi con từ trong lòng mẹ.
-  Ngài thánh hiến con dù con thấp hèn.
-  Sai con đi làm nhân chứng của tình yêu Chúa.
+  Suốt cuộc đời con
+  Bàn tay Chúa luôn luôn dắt dìu,
+  Tình yêu Chúa dõi theo từng bước,
+  Ngài đã gọi con từ trong lòng mẹ,
+  Ngài thánh hiến con dù con thấp hèn,
+  Sai con đi làm nhân chứng của Tình yêu Chúa,
   Sai con loan báo Tin Mừng vọng thấu mọi nơi.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
-  Suốt cuộc đời con dù đôi lúc tim con yếu mềm,
-  dù đôi lúc tim con mờ tối.
+  Suốt cuộc đời con,
+  Dù đôi lúc tim con yếu mềm,
+  Dù đôi lúc tim con mờ tối,
   Ngài vẫn gần con chắng khi nào rời,
-  Ngài giúp sức con vượt qua biển đời.
-  Cho con nên bạn tâm phúc ngàn muôn thương mến.
+  Ngài giúp sức con vượt qua biển đời
+  Cho con nên bạn tâm phúc ngàn muôn thương mến
   Cho con thiên chức Linh Mục nhuần thấm hồng ân.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Suốt cuộc đời con còn bao tháng năm con ước nguyện,
-  nguyện luôn mãi sắt son tình mến.
-  Từng phút từng giây thực thi Lời Ngài
-  và khắp đó đây truyền rao Ý Ngài.
-  Bao gian truân dù vương lối nguyện luôn đi tới.
-  Khi an vui lúc khổ cực nhịp bước thảnh thơi.
+  Suốt cuộc đời con,
+  Còn bao tháng năm con ước nguyện,
+  Nguyện luôn mãi sắt son tình mến,
+  Từng phút từng giây thực thi Lời Ngài,
+  Và khắp đó đây truyền rao ý Ngài,
+  Bao gian truân dù vương lối, nguyện luôn đi tới,
+  Khi an vui lúc khổ cực, nhịp bước thảnh thơi.
 }
 
 loiDiepKhucSop = \lyricmode {
-  Qua bao năm con miệt mài quyết dõi bước Chúa nào ngơi.
-  Đem tình yêu đến muôn người nhờ ơn Thiên Chúa ở trong con,
-  trong người tôi tớ vô dụng này.
+  Qua bao năm con miệt mài
+  Quyết dõi bước Chúa nào ngơi.
+  Đem tình yêu đến muôn người
+  Nhờ ơn Thiên Chúa ở trong con,
+  Trong người tôi tớ vô dụng này.
   Hồn con nay chỉ biết dâng lên lời cảm mến tri ân thành tâm.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Qua bao năm con miệt mài quyết dõi đường Ngài chẳng ngơi.
-  Đem tình yêu muôn người nhờ Chúa ở trong con
+  Qua bao năm con miệt mài
+  Quyết dõi đường Ngài chẳng ngơi.
+  Đem tình yêu muôn người Nhờ Chúa ở trong con
   người tôi tớ vô dụng này.
   Hồn con nay chỉ nguyện dâng lên lời cảm mến tri ân thành tâm.
 }

@@ -50,11 +50,11 @@ nhacPhienKhucSop = \relative c'' {
   fs2 |
   g8. g16 g8 a |
   bf4. d8 |
-  ef (d) bf16 (a) d8 |
+  ef (d) bf16 [(a) d8] |
   d4. bf8 |
   g4 bf8 bf |
   a2 |
-  bf8. bf16 bf8 c |
+  bf8. bf16 a8 c |
   d4.
   <bf \tweak font-size #-2 g>8
   c8. c16 d8 bf |
@@ -62,11 +62,12 @@ nhacPhienKhucSop = \relative c'' {
   a4. g16 a |
   fs2 |
   g8 d bf' a |
-  g2 | \break
+  g2 \bar "||" \break
   
   %\pageBreak
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key g \major
   b8. b16 b8 b |
   a g4 c8 |
@@ -90,13 +91,13 @@ nhacPhienKhucAlto = \relative c'' {
   bf8 |
   a4. g16 ef |
   d2 |
-  d8. d16 d8 e |
+  d8. d16 d8 ef |
   g4. fs8 |
   g4 g8 fs |
   g4. f8 |
   ef4 d8 d |
   d2 |
-  g8. g16 g8 a |
+  g8. g16 fs8 a |
   bf4.
   \once \override NoteColumn.force-hshift = #-2
   <\tweak font-size #0 bf g>16
@@ -108,6 +109,8 @@ nhacPhienKhucAlto = \relative c'' {
   d8 bf g' fs |
   g2 |
   
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key g \major
   d8. d16 d8 d |
   cs e4 e8 |
@@ -150,6 +153,7 @@ nhacPhienKhucBas = \relative c' {
   g2 |
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key g \major
   g8. g16 g8 g |
   fs e4 c8 |
@@ -170,14 +174,14 @@ nhacPhienKhucBas = \relative c' {
 loiPhienKhucSopMot = \lyricmode {
   \repeat unfold 15 { _ }
   \set stanza = "1."
-  Chúa ơi! Con nhớ lại hai mươi lăm năm trước
-  Chúa đã dủ thương con xức dầu thánh hiến con.
-  Sai đi làm nhân chứng và đi gieo rắc Tin Mừng.
-  Chúa ơi! Con đã nguyện trung thành với Chúa liên.
+  Chúa ơi con nhớ lại hai mươi lăm năm trước
+  Chúa đã dủ thương con
+  Xức dầu thánh hiến con
+  Sai đi làm nhân chứng và đi gieo rắc Tin Mừng
+  Chúa ơi con đã nguyện trung thành với Chúa liên.
   
-  \set stanza = "ĐK:"
   Hai mươi lăm năm Linh Mục Chúa vẫn dắt dìu con
-  khứng ban đầy dư ân phúc.
+  khứng ban đầy dư ân phúc
   Nay con xin dâng lên Ngài hiến lễ chính đời con
   với niềm cảm mến, Chúa ơi!
 }
@@ -185,81 +189,89 @@ loiPhienKhucSopMot = \lyricmode {
 loiPhienKhucSopHai = \lyricmode {
   \repeat unfold 15 { _ }
   \set stanza = "2."
-  Chúa ơi! Theo bước Ngài khi hân hoan vui sướng
-  hay lúc gặp đau thương con tìm Chúa náu nương.
-  Bao danh vọng không vướng và bao lư luyến coi thường.
+  Chúa ơi theo bước Ngài khi hân hoan vui sướng
+  hay lúc gặp đau thương,
+  Con tìm Chúa náu nương
+  Bao danh vọng không vương và bao lư luyến coi thường
   Ước mong nên muối đời, mong rọi sáng nơi nơi.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \repeat unfold 15 { _ }
   \set stanza = "3."
-  Chúa ơi! Qua tháng ngày đôi phen con yếu đuối
-  đôi lúc chẳng trung trinh nhưng lòng vẫn vững tin.
+  Chúa ơi qua tháng ngày đôi phen con yếu đuối
+  đôi lúc chẳng trung trinh,
+  Nhưng lòng vẫn vững tin
   Nơi đâu ngập tội lỗi 
   \override Lyrics.LyricText.font-shape = #'italic
   "thì hồng"
   \revert Lyrics.LyricText.font-shape
-  ân Thiên Chúa phủ đầy.
-  Chúa nâng con chỗi dậy xin lại chắp cánh bay.
+  ân Thiên Chúa phủ đầy
+  Chúa nâng con chỗi dậy,
+  xin lại chắp cánh bay.
 }
 
 loiPhienKhucSopBon = \lyricmode {
-  \repeat unfold 20 { _ }
+  \repeat unfold 15 { _ }
   \set stanza = "4."
-  Phút đây khi nhớ lại hay mươi lăm năm cũ
-  xin hướng về tương lai tuổi đời dẫu trĩu vai.
-  Luôn băng mình đi tới nhờ muôn ân phúc bởi trời.
-  Nhất tâm theo bước Ngài mong tình mến khôn vơi.
+  Phút đây khi nhớ lại
+  hai mươi lăm năm cũ
+  xin hướng về tương lai,
+  Tuổi đời dẫu trĩu vai
+  Luôn băng mình đi tới nhờ muôn ân phúc bởi trời
+  Nhất tâm theo bước Ngài,
+  Mong tình mến khôn vơi.
 }
 
 loiPhienKhucBasMot = \lyricmode {
   \repeat unfold 9 { _ }
   \set stanza = "1."
-  Ngài ơi! Hai mươi lăm năm rồi Chúa đã khấng rủ tình
-  thương con một niềm yêu dấu thánh hiến con.
-  Sai đi làm nhân chứng gieo Tin Mừng.
-  Chúa ơi! Con đã nguyện trung thành cùng Ngài liên.
+  Ngài ơi hai mươi lăm năm rồi Chúa đã khấng rủ tình
+  thương con một niềm yêu dấu thánh hiến con
+  Sai đi làm nhân chứng gieo Tin Mừng
+  Chúa ơi con đã nguyện trung thành cùng Ngài liên.
   
-  Hai mươi lăm năm Linh Mục Chúa vẫn dìu dắt con
-  rộng ban đầy dư ân lộc.
-  Nay con nguyện dâng lên Ngài hiến lễ chính với con
+  Hai mươi lăm năm Linh Mục, Chúa vẫn dìu dắt con
+  rộng ban đầy dư ân lộc
+  Nay con nguyện dâng lên Ngài hiến lễ chính đời con
   và niềm cảm mến, Chúa ơi!
 }
 
 loiPhienKhucBasHai = \lyricmode {
   \repeat unfold 9 { _ }
   \set stanza = "2."
-  Ngài ơi! Khi hân hoan vui cười hay là lúc phải gặp đau thương
-  tìm Ngài con xin mãi náu nương.
-  Bao danh vọng không vương vấn coi thường.
-  Ước mong nên muối đời mong chói rạng mọi nơi.
+  Ngài ơi khi hân hoan vui cười hay là lúc phải gặp đau thương
+  tìm Ngài con xin mãi náu nương
+  Bao danh vọng không vương vấn coi thường
+  Ước mong nên muối đời,
+  mong chói rạng mọi nơi.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \repeat unfold 9 { _ }
   \set stanza = "3."
-  Ngài ơi! Đôi phen con yếu hèn đôi lần cũng chẳng trọn trung trinh
-  mà lòng thầm mong vẫn vững tin.
-  Nơi đâu ngập tội lỗi Chúa phủ đầy.
-  Chúa nâng con chỗi dậy chắp cánh lại nhẹ bay.
+  Ngài ơi đôi phen con yếu hèn đôi lần cũng chẳng trọn trung trinh
+  mà lòng thầm mong vẫn vững tin
+  Nơi đâu ngập tội lỗi Chúa phủ đầy
+  Chúa nâng con chỗi dậy,
+  chắp cánh lại nhẹ bay.
 }
 
 loiPhienKhucBasBon = \lyricmode {
-  \repeat unfold 14 { _ }
+  \repeat unfold 9 { _ }
   \set stanza = "4."
   Giờ đây hai mươi lăm năm rồi
   xin cùng ngước trông về tương lai
-  tuổi đời tuy tới lúc trĩu vai.
-  Luôn băng mình đi tới phúc bởi trời.
-  Nhất tâm theo bước Ngài mong sinh lực chẳng vơi.
+  tuổi đời tuy tới lúc trĩu vai
+  luôn băng mình đi tới phúc bởi trời,
+  Nhất tâm theo bước Ngài, mong sinh lực chẳng vơi.
 }
 
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20\mm
-  bottom-margin = 20\mm
+  top-margin = 10\mm
+  bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -309,6 +321,7 @@ notBePhu =
       \new Lyrics \lyricsto beSop \loiPhienKhucSopMot
       \new Lyrics \lyricsto beSop \loiPhienKhucSopHai
       \new Lyrics \lyricsto beSop \loiPhienKhucSopBa
+      \new Lyrics \lyricsto beSop \loiPhienKhucSopBon
       >>
     \new Staff <<
         \clef "bass"
@@ -318,10 +331,11 @@ notBePhu =
       \new Lyrics \lyricsto beBas \loiPhienKhucBasMot
       \new Lyrics \lyricsto beBas \loiPhienKhucBasHai
       \new Lyrics \lyricsto beBas \loiPhienKhucBasBa
+      \new Lyrics \lyricsto beBas \loiPhienKhucBasBon
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1
+    \override Lyrics.LyricSpace.minimum-distance = #0.8
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \context {

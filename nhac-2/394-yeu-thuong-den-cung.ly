@@ -36,11 +36,8 @@ nhacPhienKhucSop = \relative c' {
   a (g) f (g) |
   d4. d8 |
   bf' a a d |
-  g,2 ~ \bar "||"
-  
-  \set Staff.printKeyCancellation = ##f
-  \key g \major
-  g4 \bar "|"
+  g,2 ~ |
+  g4 \bar "||"
 }
 
 nhacPhienKhucBas = \relative c' {
@@ -56,9 +53,6 @@ nhacPhienKhucBas = \relative c' {
   bf'8 (c bf) a |
   g g fs fs |
   g2 ~ |
-  
-  \set Staff.printKeyCancellation = ##f
-  \key g \major
   g4
 }
 
@@ -120,57 +114,57 @@ nhacDiepKhucBas = \relative c' {
 loiPhienKhucSopMot = \lyricmode {
   \set stanza = #"1."
   Vì thương mến nhân gian
-  Chúa trao ban chính Con một dấu yêu.
-  Nhận gánh muôn tội tình
-  vì Chúa yêu thương đến cùng.
+  Chúa trao ban chính Con một dấu yêu
+  nhận gánh muôn tội tình,
+  Vì Chúa yêu thương đến cùng.
 }
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = #"2."
   Vì thương mến nhân gian
-  Chúa Con xin đến tuân hành ý Cha.
-  Nhận lãnh muôn khổ hình:
+  Chúa Con xin đến tuân hành ý Cha,
+  nhận lãnh muôn khổ hình:
   Người đã yêu đến cùng.
 }
 
 loiPhienKhucSopBa = \lyricmode {
   \set stanza = #"3."
   Vì thương mến nhân gian
-  Thánh Linh ban xuống muôn vàn phúc ân.
-  Hằng sáng soi giữ gìn
+  Thánh Linh ban xuống muôn vàn phúc ân,
+  hằng sáng soi giữ gìn
   nhịp bước đi lên tới cùng.
 }
 
 loiPhienKhucBasMot = \lyricmode {
   \set stanza = #"1."
   Vì thương mến nhân gian
-  Chúa trao ban Con Một Ngài dấu yêu.
-  Nhận gánh tội tình yêu thương đến cùng.
+  Chúa trao ban Con Một Ngài dấu yêu,
+  nhận gánh tội tình yêu thương đến cùng.
 }
 
 loiPhienKhucBasHai = \lyricmode {
   \set stanza = #"2."
   Vì thương mến nhân gian
-  Chúa Con xin đến thực hiện ý Cha.
-  Nhận lãnh khổ hình yêu thương đến cùng.
+  Chúa Con xin đến thực hiện ý Cha,
+  nhận lãnh khổ hình yêu thương đến cùng.
 }
 
 loiPhienKhucBasBa = \lyricmode {
   \set stanza = #"3."
   Vì thương mến nhân gian
-  Thánh Linh ban xuống muôn muôn phúc ân.
-  Hằng sáng soi bước đi lên tới cùng.
+  Thánh Linh ban xuống muôn muôn phúc ân
+  hằng sáng soi bước đi lên tới cùng.
 }
 
 loiDiepKhucSop = \lyricmode {
-  Nay con muốn đáp đền tình Chúa không bờ không bến.
-  Xin là tấm bánh bẻ ra để muôn người bổ dưỡng.
+  Nay con muốn đáp đền tình Chúa không bờ không bến
+  Xin là tấm bánh bẻ ra để muôn người bổ dưỡng
   Xin là đầy tớ trung kiên phục vụ Chúa và anh em.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Nay con muốn đáp đền tình Ngài không bờ không bến.
-  Xin là tấm bánh bẻ ra để muôn người bổ dưỡng.
+  Nay con muốn đáp đền tình Ngài không bờ không bến,
+  Xin là tấm bánh bẻ ra để muôn người bổ dưỡng,
   Xin là đầy tớ trung kiên phục vụ Chúa và anh em.
 }
 

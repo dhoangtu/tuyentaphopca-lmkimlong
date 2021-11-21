@@ -119,8 +119,8 @@ nhacDiepKhucBas = \relative c' {
   b4. g16 g |
   d'8 d b a |
   g4 \tuplet 3/2 { d'8 c b } |
-  a4 \tuplet 3/2 { d8 d d } |
-  <b' g>2 ~ |
+  a4 \tuplet 3/2 { d8 <a' d,> <c d,> } |
+  <b g>2 ~ |
   <b g>4 r |
   
   g8 g4 e8 |
@@ -190,6 +190,33 @@ loiDiepKhucBas = \lyricmode {
   Đã năm mươi năm Thánh Thần soi rồi
   con hăng say truyền rao Chân Lý,
   Xin cất tiếng mà trọn niềm cảm tạ.
+  
+  <<
+    {
+      \set stanza = "1."
+      Năm mươi Linh mục bao buồn vui đưa tới,
+      Ân thiêng Chúa vẫn dắt dìu con,
+      Tin cậy mến luôn vuông tròn.
+      Trong Thánh Thần và Chân Lý
+      mong luôn trọn vẹn tấm lòng son.
+    }
+    \new Lyrics {
+      \set stanza = "2."
+      Năm mươi Linh mục, chan hòa muôn ân phúc,
+      Con mong chiếu ánh sáng mọi nơi,
+      mong làm muối men cho đời.
+      Trong Thánh Thần và Chân Lý
+      luôn theo Ngài nhịp bước thảnh thơi.
+    }
+    \new Lyrics {
+      \set stanza = "3."
+      Năm mươi Linh mục, ân tình luôn thôi thúc,
+      Con theo Chúa dẫn dắt đoàn chiên,
+      ân cần thiết tha nhân hiền.
+      Trong Thánh Thần và Chân Lý,
+      xin dâng lời cảm mến triền miên.
+    }
+  >>
 }
 
 % Dàn trang

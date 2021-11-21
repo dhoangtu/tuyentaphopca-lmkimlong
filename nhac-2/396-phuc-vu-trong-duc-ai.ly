@@ -25,7 +25,11 @@ notBePhu =
    music)
 
 nhacDiepKhucSop = \relative c'' {
-  \partial 4. c8 a a |
+  \partial 4.
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \tweak extra-offset #'(5 . 0)
+  \mark \markup { \musicglyph #"scripts.segno" }
+  c8 a a |
   a4 f8 g16 (f) |
   d2 ~ |
   d8 d e16 (d) c8 |
@@ -63,7 +67,10 @@ nhacDiepKhucSop = \relative c'' {
   c8 c4 bf8 |
   g c a16 (g) e8 |
   f2 ~ |
-  f8 \bar "||"
+  f8
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c'' {
@@ -116,7 +123,7 @@ nhacDiepKhucBas = \relative c' {
   r8 f e e |
   d4 c8 c |
   bf4 d8 d |
-  c8. c16 f8 g |
+  c8. c16 d8 e |
   f4 r |
   c8. c16 c8 c |
   g'2 |
@@ -169,7 +176,7 @@ loiDiepKhucSop = \lyricmode {
       Thân phận con bé nhỏ
       đâu có tài năng gì,
       đôi việc con khởi công là do ơn Chúa ở trong con,
-      bời Ngài vẫn bang trợ con.
+      bởi Ngài vẫn bang trợ con.
     }
     \new Lyrics \with {
       alignAboveContext = #"2"
@@ -178,7 +185,7 @@ loiDiepKhucSop = \lyricmode {
       Đâu ngại chi thống khổ
       đâu khiếp sợ cơ cùng,
       Ơn Ngài luôn phủ che,
-      ngày đêm nuôi dưỡng bằng Đức Aia,
+      ngày đêm nuôi dưỡng bằng Đức Ái,
       sẵn sàng dấn thân phục vụ.
     }
     \new Lyrics \with {
@@ -225,7 +232,7 @@ loiDiepKhucBas = \lyricmode {
       Nên khí cụ luôn rắc gieo tình thương,
       cầu mong khắp nhân loại mau cảm thông
       chung nhau vun đắp tình Bác Ái
-      để chung sống trong bình an.
+      để chung đồng trong bình an.
     }
   >>
 }
