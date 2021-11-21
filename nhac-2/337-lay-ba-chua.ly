@@ -11,7 +11,10 @@
 
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
-  \partial 4 r4 |
+  \partial 4 r4
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar ".|"
   R2.
   b8 b c4 b8 b16 (a) |
   g8 g d'2 ~ |
@@ -21,6 +24,7 @@ nhacDiepKhucSop = \relative c'' {
   g2 g8 g |
   b (c) d (e) d4 ~ |
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 2/4
   d4 b8. e16 |
   e4 c8. f16 |
@@ -46,8 +50,11 @@ nhacDiepKhucSop = \relative c'' {
   g8 ^> g e'8. d16 ^> |
   d2 ^> |
   r8 b4 b8 |
-  c2 ~ |
-  c4 \bar "||"
+  d2 ( |
+  c4) r
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c'' {
@@ -61,6 +68,7 @@ nhacDiepKhucAlto = \relative c'' {
   r e16 (f) e8 d4 ~ |
   d8 e g gs a (c) |
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 2/4
   b8. a16 g8. b16 |
   c8. b16 a8. c16 |
@@ -87,7 +95,7 @@ nhacDiepKhucAlto = \relative c'' {
   a2 ^> |
   r8 d,4 d8 |
   f2 ( |
-  e4)
+  e4) r
 }
 
 nhacDiepKhucBas = \relative c {
@@ -101,6 +109,7 @@ nhacDiepKhucBas = \relative c {
   e4 c'16 (d) c8 b4 ~ |
   b8 a b e, f fs |
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 2/4
   g4 g8. e16 |
   c4 a'8. f16 |
@@ -127,47 +136,49 @@ nhacDiepKhucBas = \relative c {
   f2 ^> |
   r8 g4 g8 |
   c,2 ~ |
-  c4
+  c4 e8 e
 }
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Ôi Trinh Nữ khoác anh hồng rực sáng
-  mười hai sao là mũ ngọc tinh tuyền.
+  Ôi Trinh Nữ khoác ánh hồng rực sáng
+  mười hai sao là mũ ngọc tinh tuyền,
   Mảnh trăng ngà làm bệ đặt gót sen
-  rực rỡ quá, rực rỡ quá vinh quang Ngài chói lọi.
-  Chiến thắng, chiến thắng lên ngự ngai vàng
-  cạnh Đức Ki -- tô.
+  Rực rỡ quá, rực rỡ quá vinh quang Ngài chói lọi.
+  chiến thắng, chiến thắng lên ngự ngai vàng
+  cạnh Đức Ki -- tô,
   Làm trạng sư cho chúng tử cậy nhờ.
   Tung hô trời đất tung hô,
-  trời đất tung hô lạy Bà Chúa.
+  trời đất tung hô: Lạy Bà Chúa.
 }
 
 loiDiepKhucAlto = \lyricmode {
   Ôi Trinh Nữ khoác ánh hồng rực sáng,
-  rực sáng mười hai sao mười hai sao
-  là mũ ngọc tinh tuyền.
-  Mảnh trăng ngà làm bệ đặt gót sen
-  ôi rực rỡ quá, ôi rực rỡ quá
+  rực sáng mười hai sao, mười hai sao
+  là mũ ngọc tinh tuyền,
+  Mảnh trăng ngà làm bệ đặt gót sen,
+  Ôi rực rỡ quá, ôi rực rỡ quá
   rực rỡ vinh quang Ngài chói lọi.
-  Chiến thắng, chiến thắng lên ngự ngai vàng
-  cạnh Đức Ki -- tô.
+  chiến thắng, chiến thắng lên ngự ngai vàng
+  cạnh Đức Ki -- tô,
   Làm trạng sư cho chúng tử cậy nhờ.
   Tung hô trời đất tung hô,
-  trời đất tung hô lạy Bà Chúa.
+  trời đất tung hô: Lạy Bà Chúa.
 }
 
 loiDiepKhucBas = \lyricmode {
   Ôi Trinh Nữ khoác ánh hồng rực sáng,
-  ánh hồng rực sáng mười hai sao là mũ ngọc tinh tuyền,
-  là mũ tinh tuyền.
-  Mảnh trăng ngà làm bệ, làm bệ gót sen
-  rực rỡ lạ, rực rỡ lạ vinh quang Ngài dọi chới.
+  ánh hồng rực sáng mười hai sao là mũ ngọc tinh tuyền
+  là mũ tinh tuyền,
+  Mảnh trăng ngà làm bệ, làm bệ gót sen,
+  Rực rỡ lạ, rực rỡ lạ vinh quang Ngài dọi chới.
   Ngài chiến thắng tử thần và tội lỗi
-  vẻ vang lên ngự ngai vàng với Chúa Ki -- tô.
+  Vẻ vang lên ngự ngai vàng với Vua Ki -- tô,
   Làm trạng sư cho chúng tử cậy nhờ.
   Trời cùng đất, trời cùng đất,
-  đất trời tung hô tấu Chúa Bà.
+  đất trời tung hô: Tấu Chúa Bà.
+  
+  Ôi Trinh
 }
 
 % Dàn trang

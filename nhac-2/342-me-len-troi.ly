@@ -51,15 +51,15 @@ nhacDiepKhucAlto = \relative c'' {
   g4. g8 |
   g4 \tuplet 3/2 { a8 d c } |
   b4. g8 |
-  c,4 \tuplet 3/2 { e8 e f } |
+  f4 \tuplet 3/2 { e8 e f } |
   c c c b |
   c4 r |
   r g'8 ([f]) |
   e4 \tuplet 3/2 { e8 f e } |
   g4. g8 |
-  g4 \tuplet 3/2 { a8 d c } |
+  g4 \tuplet 3/2 { a8 d b } |
   b4. g8 |
-  c,4 \tuplet 3/2 { e8 e f } |
+  f4 \tuplet 3/2 { e8 e f } |
   c c f f |
   e2
 }
@@ -81,7 +81,7 @@ nhacDiepKhucBas = \relative c' {
   g e ^> f ^> g ^> |
   a4 \tuplet 3/2 { g8 a f } |
   e e d g |
-  <g c,>2
+  c,2
 }
 
 nhacPhienKhucSop = \relative c'' {
@@ -118,9 +118,11 @@ nhacPhienKhucBas = \relative c'' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Đẹp như trăng vàng trong sáng chói lói tựa ánh thái dương.
+  Đẹp như trăng vàng trong sáng
+  Chói lói tựa ánh thái dương
   Uy hùng như những binh đoàn xếp hàng vào trận.
-  Trần gian nghiêng mình cung kính khắp chốn hợp tiếng tôn vinh.
+  Trần gian nghiêng mình cung kính,
+  Khắp chốn hợp tiếng tôn vinh,
   Thiên đình nao nức ca mừng Mẹ rất hiển vinh.
 }
 
@@ -135,26 +137,29 @@ loiDiepKhucBas = \lyricmode {
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Chúng con xin kết lời hợp tiếng với thế trần nơi nơi
-  tán tụng Mẹ hiển vinh về trời.
-  Ánh tôn nhan sáng ngời tà áo lấp lánh tựa trăng sao
+  Chúng con xin kết lời, hợp tiếng với thế trần nơi nơi
+  Tán tụng Mẹ hiển vinh về trời
+  Ánh tôn nhan sáng ngời
+  Tà áo lấp lánh tựa trăng sao,
   Mẹ tiến bước lên trời cao.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
   Chúa yêu thương giữ gìn hồn xác thánh khiết Mẹ tươi xinh
-  suốt đời chẳng nhiễm vương tội tình.
-  Với cung lòng tinh tuyền Mẹ đón chính Chúa Trời quang lâm
-  mặc lấy xác thân phàm nhân.
+  Suốt đời chẳng nhiễm vương tội tình,
+  Với cung lòng tinh tuyền,
+  Mẹ đón chính Chúa Trời quang lâm
+  Mặc lấy xác thân phàm nhân.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
   Chắp đôi tay khấn cầu từ giữa kiếp sống đầy thương đau
-  ước nguyện Mẹ xuống ơn nhiệm mầu.
-  Giúp chúng con vững lòng gìn giữ mãi xác hồn trinh trong
-  về tới bến bờ chờ mong.
+  Ước nguyện Mẹ xuống ơn nhiệm mầu,
+  Giúp chúng con vững lòng
+  Gìn giữ mãi xác hồn trinh trong
+  Về tới bến bờ chờ mong.
 }
 
 % Dàn trang

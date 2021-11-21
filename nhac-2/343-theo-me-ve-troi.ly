@@ -11,14 +11,17 @@
 
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
-  \partial 8 c16 c |
   <<
     {
+      \partial 8 c16
+      _\markup { \bold "Intr." }
+      c |
       c8 ^> a a ^> d16 d |
       d8 ^> b
     }
     \\
     {
+      r8
       <g e>8 r <f c> r |
       <a f> r
     }
@@ -33,8 +36,9 @@ nhacDiepKhucSop = \relative c'' {
       r4 <f d>
     }
   >>
+  \once \autoBeamOff
   <c' g e>8 ^>
-  
+  \once \override NoteColumn.X-offset = 2
   c b c |
   e,4 (g) ~ |
   g8 f d e |
@@ -59,7 +63,8 @@ nhacDiepKhucSop = \relative c'' {
   g'4. g8 |
   d' d4 d8 |
   c2 ~ |
-  c4 r8 c16 d |
+  c4 r8 \bar "||"
+  c16 d |
   b2 ~ |
   b4 r |
   g8. g16 f'8 f |
@@ -75,8 +80,9 @@ nhacDiepKhucSop = \relative c'' {
   R2*2
   r8 c a c |
   b2 ~ |
-  b4 r |
-  r r8 d,16 df |
+  b4 r8 \bar "||"
+  r
+  r4 r8 d,16 df |
   c4 r |
   g'8. g16 a8 g |
   r e' e c |
@@ -155,8 +161,8 @@ nhacDiepKhucAlto = \relative c' {
   R2*2
   r8 e c e |
   d2 ~ |
-  d4 r |
-  r r8 d16 df |
+  d4 r8 r |
+  r4 r8 d16 df |
   c4 r |
   g'8. g16 f8 e |
   r8 g gs a |
@@ -172,8 +178,8 @@ nhacDiepKhucAlto = \relative c' {
   a4 r8 af |
   g g4 f8 |
   e2 ~ |
-  e4 e' ~ |
-  e8 e, d e |
+  e4 r |
+  r8 e d e |
   c4 (b) ~ |
   b8 d b c |
   c4 r8 e16 e |
@@ -233,10 +239,10 @@ nhacDiepKhucBas = \relative c {
   g'4. e8 |
   f g4 g8 |
   c,2 ~ |
-  c4 r |
-  r r8 a'16 af |
+  c4 r8 r |
+  r4 r8 a'16 af |
   g4 r |
-  a8. a16
+  g8. g16
   <<
     {
       c8 c |
@@ -324,7 +330,7 @@ nhacDiepKhucBas = \relative c {
     }
     {
       c,4. c8 |
-      f f4 f8 |
+      f f4 e8 |
       c2 ~ |
       c4
     }
@@ -334,87 +340,96 @@ nhacDiepKhucBas = \relative c {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  \repeat unfold 4 { _ }
-  Chim bồ câu nhỏ của lòng ta ơi!
+  _ _
+  Chim bồ câu nhỏ của lòng ta ơi
   Bay cao lên trong ánh sáng trời,
   bay cao lên trong ánh sáng trời.
   Giữa một chiều vàng thu lộng lẫy
-  chim bồ cây nhỏ của lòng ta ơi!
+  Chim bồ câu nhỏ của lòng ta ơi
   Ca vang lên trong ánh sáng trời,
-  ca vang lên trong ánh sáng trời
+  Ca vang lên trong ánh sáng trời
   Cõi thiên không chiều nay, chiều nay reo hoa lệ.
-  Em thấy chi một Bà áo trắng
-  lẫm liệt uy nghi tỏa sáng từ bi.
+  Em thấy chi
+  Một Bà áo trắng
+  lẫm liệt uy nghi
+  Tỏa sáng từ bi.
   Lên trong hương trời nhạc dồn chơi vơi,
-  lên trong hương trời nhạc dồn chơi vơi.
-  Bay lượn bên Người em nghe gì
+  lên trong hương trời nhạc dồn chơi vơi
+  bay lượn bên Người
+  Em nghe gì
   Vầng nguyệt huy hoàng dưới đóa trà mi
-  chín tầng trời mở rộng.
+  Chín tầng trời mở rộng.
   Chín phẩm thần náo động.
-  Tung hô nhạc tung hô
-  nồng nhiệt biết chừng mô.
-  Hỡi chim bồ câu nhỏ của lòng ta ơi!
+  Tung hô, nhạc tung hô
+  Nồng nhiệt biết chừng mô.
+  Hỡi chim bồ câu nhỏ của lòng ta ơi
   Bay đi em theo Mẹ về trời,
   bay đi em theo Mẹ về trời.
-  cõi thiên cung một mùa Xuân,
-  một mùa Xuân bao xán lạn.
+  Cõi thiên cung một mùa xuân,
+  một mùa xuân bao xán lạn.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Chim bồ câu nhỏ của lòng ta ơi!
+  Chim bồ câu nhỏ của lòng ta ơi
   bay cao lên trong ánh sáng trời,
   bay cao lên trong ánh sáng trời.
   Giữa một chiều vàng thu lộng lẫy
-  chim bồ cây nhỏ bồ câu nhỏ lòng ta ơi!
+  chim bồ câu nhỏ bồ câu nhỏ lòng ta ơi
   Ca vang lên trong ánh sáng trời,
-  ca vang lên trong ánh sáng trời.
+  Ca vang lên trong ánh sáng trời
   Cõi thiên không chiều nay, chiều nay reo hoa lệ.
-  Em thấy chi một Bà áo trắng
-  lẫm liệt uy nghi tỏa sáng từ bi.
+  Em thấy chi 
+  Một Bà áo trắng
+  lẫm liệt uy nghi
+  Tỏa sáng từ bi.
   Lên trong hương trời nhạc dồn chơi vơi,
-  lên trong hương trời nhạc dồn chơi vơi.
-  Bay lượn bên Người em nghe gì
+  lên trong hương trời nhạc dồn chơi vơi
+  bay lượn bên Người
+  Em nghe gì
   Vầng nguyệt huy hoàng dưới đóa trà mi
-  chín tầng trời mở rộng.
+  Chín tầng trời mở rộng.
   Chín phẩm thần náo động
-  tung hô nhạc tung hô.
   Tung hô nhạc tung hô
-  nồng nhiệt biết chừng mô.
-  Hỡi chim bồ câu nhỏ của lòng ta ơi!
+  Tung hô, nhạc tung hô
+  Nồng nhiệt biết chừng mô.
+  chim bồ câu nhỏ của lòng ta ơi
   Bay đi em theo Mẹ về trời,
   bay đi em theo Mẹ về trời.
   Chiều hôm nay thu trần gian ảm đạm
-  cõi thiên cung một mùa Xuân,
-  một mùa Xuân bao xán lạn mua Xuân bao xán lạn.
+  Cõi thiên cung một mùa xuân,
+  một mùa xuân bao xán lạn,
+  Mùa Xuân bao xán lạn.
 }
 
 loiDiepKhucBas = \lyricmode {
   \repeat unfold 8 { _ }
-  Chim bồ câu nhỏ của ta ơi!
+  Chim bồ câu nhỏ của ta ơi,
   Bay cao lên trong ánh sáng trời,
   bay cao lên trong ánh sáng trời.
   Giữa một chiều vàng thu lộng lẫy.
-  Chim bồ câu nhỏ chim bồ câu nhỏ của ta ơi!
+  Chim bồ câu nhỏ, chim bồ câu nhỏ của ta ơi
   Ca vang lên trong ánh sáng trời,
-  ca vang lên trong ánh sáng trời.
+  Ca vang lên trong ánh sáng trời
   Cõi thiên không chiều nay, chiều nay reo hoa lệ.
-  Em nghe gì một Bà áo trắng
-  lẫm liệt uy nghi tỏa rạng từ bi.
+  Em nghe gì
+  Một Bà áo trắng
+  lẫm liệt uy nghi
+  Tỏa rạng từ bi.
   Lên trong hương trời nhạc dồn chơi vơi,
-  lên trong hương trời nhạc dồn chơi vơi.
-  Mười hai tinh đẩu bay lượng bên Người bên Người.
-  Em thấy chi
+  lên trong hương trời nhạc dồn chơi vơi
+  Mười hai tinh đẩu bay lượn bên Người, bên Người.
+  Em thấy chi,
   Vầng Nguyệt huy hoàng kìa hoa trà mi
-  chín phẩm thần náo động.
-  Tung hô nhạc tung hô,
+  Chín phẩm thần náo động.
+  Tung hô, nhạc tung hô
   tung hô nồng nhiệt biết chừng mô.
-  Chim bồ câu nhỏ của ta ơi!
+  Chim bồ câu nhỏ của ta ơi
   Bay đi em theo Mẹ về trời,
   bay đi em theo Mẹ về trời.
-  Nay trần gian ảm đạm
-  cõi thiên cung một mùa Xuân,
-  một mùa Xuân bao xán lạn,
-  mùa Xuân bao xán lạn.
+  nay trần gian ảm đạm
+  Cõi thiên cung một mùa xuân,
+  một mùa xuân bao xán lạn,
+  Mùa Xuân bao xán lạn.
 }
 
 % Dàn trang

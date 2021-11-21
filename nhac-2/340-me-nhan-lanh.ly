@@ -24,7 +24,7 @@ nhacDiepKhucSop = \relative c' {
   a4 r |
   r a8 (g) |
   f e16 (f) g8 a |
-  a4 r8 f |
+  a4 r8 a |
   a g f g16 (f) |
   e4. e8 |
   f4 a8 (bf16 a) |
@@ -46,7 +46,7 @@ nhacDiepKhucSop = \relative c' {
   r8. a16 a8 b |
   a2 ~ |
   a4 r8 d |
-  d cs cs r |
+  d cs d r |
   r4 a8 (g) |
   fs2 ~ |
   fs ~ |
@@ -63,7 +63,7 @@ nhacDiepKhucSop = \relative c' {
   a a d4 ~ |
   d cs |
   d2 ~ |
-  d4 \bar "|."
+  d4 \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -89,7 +89,7 @@ nhacDiepKhucAlto = \relative c' {
   cs2 ~ |
   cs4 r |
   r8 e4 f16 (e) |
-  d8 a4 a8 |
+  d8 a4 f'16 (e) |
   bf2 ( |
   a4) f'8 g16 (f) |
   e8 d e d |
@@ -181,30 +181,30 @@ nhacDiepKhucBas = \relative c {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Lạy Nữ Vương Mẹ nhân lành được sống,
+  Lạy Nữ Vương Mẹ nhân lành, được sống,
   được vui, được cậy.
-  Thân lạy Mẹ, lạy Mẹ chúng con ở nơi khóc lóc,
+  Thân lạy Mẹ, lạy Mẹ Chúng con ở nơi khóc lóc,
   khóc lóc than thở kêu khẩn Bà thương.
-  Hỡi ôi, hỡi ôi, hỡi ôi!
-  Xin ghé mặt, xin ghé mặt,
+  Hỡi ôi, hỡi ôi, hỡi ôi,
+  xin ghé mặt, xin ghé mặt,
   xin ghé mặt thương xem chúng con.
   Xin cho chúng con thấy Chúa Giê -- su phúc lạ.
-  Dịu thay, ôi khoan thay, ôi dịu thay.
+  dịu thay, ôi khoan thay, ôi dịu thay
   Thánh Ma -- ri -- a trọn đời đồng trinh.
   A -- men.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Lạy Nữ Vương Mẹ nhân lành được sống,
+  Lạy Nữ Vương Mẹ nhân lành, được sống,
   được vui, được cậy.
-  Thân lạy Mẹ, lạy Mẹ chúng con ở nơi khóc lóc,
+  Thân lạy Mẹ, lạy Mẹ Chúng con ở nơi khóc lóc,
   khóc lóc than thở kêu khẩn Bà thương.
-  Hỡi ôi, hỡi ôi, hỡi ôi!
-  Xin ghé mặt, xin ghé mặt,
+  Hỡi ôi, hỡi ôi, hỡi ôi,
+  xin ghé mặt, xin ghé mặt,
   xin ghé mặt thương xem chúng con.
   Xin cho chúng con
   thấy Chúa Giê -- su thực lạ.
-  Nhân thay dịu thay, ôi nhân thay, ôi dịu thay.
+  nhân thay dịu thay, ôi nhân thay, ôi dịu thay
   Thánh Ma -- ri -- a.
   A -- men.
 }
@@ -213,16 +213,16 @@ loiDiepKhucBas = \lyricmode {
   Làm cho chúng con sống vui cậy trông.
   Chúng con thân lạy Mẹ, lạy Mẹ.
   Chúng con con cháu E -- và ở chốn khách đầy
-  kêu đến cùng Bà.
-  Khóc lóc than thở kêu khẩn,
+  kêu đến cùng Bà
+  Khóc lóc than thở kêu khẩn
   kêu khẩn Bà thương.
-  Hỡi ôi, hỡi ôi, hỡi ôi!
+  Hỡi ôi, hỡi ôi, hỡi ôi.
   Lạy Bà chữa bầu chúng con.
-  Xin ghé mặt, xin ghé mặt thương xem chúng con, đoàn con.
+  Xin ghé mặt xin ghé mặt thương xem chúng con, đoàn con.
   Đến sau qua khỏi đời này được thấy Đức Chúa Giê -- su
   Con lòng Bà gồm phúc lạ.
   Ôi khoan thay, nhân thay, dịu thay,
-  ôi nhân thay, ôi dịu thay.
+  ôi nhân thay, ôi dịu thay,
   Thánh Ma -- ri -- a trọn đời,
   trọn đời. 
   A -- men.

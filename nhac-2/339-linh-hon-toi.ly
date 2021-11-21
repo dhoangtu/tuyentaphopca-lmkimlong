@@ -4,7 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Linh Hồn Tôi" }
-  poet = "Thánh ca Magnificat"
+  poet = "Lc. 1, 46 - 46"
   composer = "Lm. Kim Long"
   tagline = ##f
 }
@@ -18,7 +18,7 @@ nhacDiepKhucSop = \relative c'' {
   c4. c8 |
   d8. d16 bf (a) g8 |
   a2 ~ |
-  a4 g8 f |
+  a4 g8 f!? |
   g4. f8 |
   d8. d16 g8 a |
   bf4 g8 g |
@@ -28,14 +28,15 @@ nhacDiepKhucSop = \relative c'' {
     {
       \voiceOne
       a'8 bf16 (a) |
-      g2
     }
     \new Voice = "splitpart" {
 	    \voiceTwo
       a16 (g) fs8 |
-      g2
     }
   >>
+  \oneVoice
+  g2 ~ |
+  g4
   \bar "|."
 }
 
@@ -52,8 +53,9 @@ nhacDiepKhucAlto = \relative c' {
   r4 d8 c |
   d4. f8 |
   ef8. d16 ef8 g |
-  fs8. (g16) ef8 c |
-  bf2
+  fs8. g16 ef8 c |
+  bf2 ~ |
+  bf4
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -70,32 +72,33 @@ nhacDiepKhucBas = \relative c' {
   g8. f16 ef8 (d) |
   c4. bf8 |
   a8. bf16 c8 d |
-  g,2
+  g,2 ~ |
+  g4
 }
 
 nhacPhienKhucSop = \relative c'' {
-  r4 d8 ef16 c |
+  \partial 4 d8 ef16 c |
   d8 bf g bf |
   c a16 (g) fs8 d |
   d4. g8 |
   f f bf4 ~ |
   bf r8 g |
   g g16 (bf) c c d8 |
-  a4 fs8. a16 |
+  fs,4 fs8. a16 |
   a8 c d bf16 (a) |
   g2 ~ |
   g4 \bar "|."
 }
 
 nhacPhienKhucBas = \relative c'' {
-  r4 bf8 c16 a |
+  bf8 c16 a |
   bf8 g d g |
   ef [c] d [d] |
   d4. g8 |
   f [ef] d4 ~ |
   d r8 g |
   g g16 (bf) a a g8 |
-  fs4 d8. c16 |
+  d4 d8. cs16 |
   d8 a' fs [fs] |
   g2 ~ |
   g4
@@ -104,46 +107,46 @@ nhacPhienKhucBas = \relative c'' {
 % Lời
 loiDiepKhucSop = \lyricmode {
   Linh hồn tôi dâng lời ngợi khen Thiên Chúa,
-  lòng mừng vui trong Chúa Đấng Cứu Độ tôi.
+  lòng mừng vui trong Chúa, Đấng Cứu Độ tôi.
   Ôi từ đây muôn đời gọi tôi diễm phúc,
-  vì Người thương trông đến phận tôi tá này.
+  vì Ngài thương trông đến phận tôi tớ này.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Linh hồn tôi dâng lời ngợi khen Thiên Chúa,
+  Linh hồn tôi dâng lời ngợi khen Thiên Chúa
   Đấng Cứu Độ tôi.
-  Ôi từ đây tán dương vì Người trông đến tôi tá này.
+  Ôi từ đây tán dương vì Ngài trông đến phận tôi tớ này.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Linh hồn tôi dâng lời ca ngợi,
-  lòng vui mừng vì Đấng Cứu Độ tôi.
+  Linh hồn tôi dâng lời xin ca
+  ngợi thiên tòa vì Đấng Cứu Độ tôi.
   Ôi từ đây tán dương tôi
-  bởi Người trông nhìn phận tôi tá này.
+  khôn lường trông nhìn phận tôi tớ này.
 }
 
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Ôi Đấng Toàn Năng đã làm cho tôi muôn điều kỳ diệu,
-  danh Người là Thánh.
-  Tình Người trải qua muôn thế hệ
-  dành cho ai luôn kính sợ Người.
+  Ôi Đấng toàn năng đã làm cho tôi muôn điều kỳ diệu,
+  danh Ngài là Thánh
+  Tình Ngài trải qua muôn thế hệ
+  dành cho ai luôn kính sợ Ngài.
 }
 
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
-  Tay Cháu biểu dương sức mạnh uy phong tiêu diệt bọn người
-  kiêu ngạo tự mãn.
+  Tay Chúa biểu dương sức mạnh uy phong tiêu diệt bọn người
+  kiêu ngạo tự mãn
   Triệt hạ kẻ cao sang thế lực
   và nâng cao ai biết khiêm nhường.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Bao lũ giàu sang đuổi về tay không bao kẻ nghèo hèn
-  ban đầy hồng phúc.
+  Bao lũ giầu sang đuổi về tay không bao người nghèo hèn
+  ban đầy hồng phúc
   Lời nguyền thuở xưa xin nhớ lại
-  mà ra tay nâng đỡ dân Người.
+  mà ra tay bênh đỡ dân Ngài.
 }
 
 % Dàn trang
