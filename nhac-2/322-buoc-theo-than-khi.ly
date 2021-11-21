@@ -78,8 +78,8 @@ nhacPhienKhucBas = \relative c' {
   d2 ~ |
   d8 c e f |
   g4 f |
-  e d8 bf |
-  bf4 d8 e |
+  e d8 bf' |
+  bf4 d,8 e |
   f8. g16 f8 e |
   d4 g8 f |
   e4 a8 a |
@@ -89,7 +89,7 @@ nhacPhienKhucBas = \relative c' {
   d4 r |
   g8 g16 g f8 ef |
   d2 |
-  a8 a16 a a8 <f' d> |
+  c8 c16 c c8 <f d> |
   <g bf,>4 <c c,>8 <bf c,> |
   <a f f,>2 |
   
@@ -110,7 +110,7 @@ loiPhienKhucSopMot = \lyricmode {
   đưa bước theo Thần Khí
   Thần Khí Chúa ngự xuống trên con,
   xức dầu thánh hiến con,
-  cho con thành tôi trung của Ngài,
+  cho con thành Tôi Trung của Ngài,
   Lạy Chúa
   Sai con đi làm nhân chứng,
   Con xin đoan nguyền kiên vững
@@ -126,7 +126,7 @@ loiPhienKhucSopMot = \lyricmode {
 loiPhienKhucSopHai = \lyricmode {
   \repeat unfold 56 { _ }
   \set stanza = #"2."
-  Hoa trái của Thần Khí là bác ái và binh an,
+  Hoa trái của Thần Khí là bác ái và bình an,
   khoan hậu nhẫn nhục từ tâm,
   tiết độ, tín trung an hòa.
 }
@@ -144,7 +144,7 @@ loiPhienKhucBasMot = \lyricmode {
   Này con đưa bước theo 
   khi Thần Khí Chúa ngự trên con
   đã thương xức dầu thánh hiến con
-  cho con thành tôi trung của Ngài,
+  cho con thành Tôi Trung của Ngài,
   nay đã sai con bước theo Ngài
   Sai con đi gieo Tin Mừng
   con xin trung kiên xuôi
@@ -170,7 +170,7 @@ loiPhienKhucBasHai = \lyricmode {
   \repeat unfold 55 { _ }
   \set stanza = #"2."
   Hoa trái của Thấn Khí là bác ái và bình an
-  từ tâm khoan hậu tiết độ,
+  từ tâm khoan hậu tiết độ
   cùng an hòa.
 }
 

@@ -14,18 +14,18 @@ nhacDiepKhucSop = \relative c'' {
   \partial 8 r8 |
   R2.*2
   g4 g8 a4 bf8 |
-  d c d f (e) d |
+  d c d f ([e]) d |
   c4. ~ c4 r8 |
   R2.
   r4 c8 c4. |
-  a8 f' e f (e) d |
+  a8 f' e f ([e]) d |
   c4. ~ c8 d d |
-  g, c a bf (a) g |
+  g, c a bf ([a]) g |
   f4. \bar "||" \break
   
   c4 c8 |
   af' (g) e f4. |
-  af8 c bf g (af) g |
+  af8 c bf g ([af]) g |
   f4. df8 f df |
   ef (f) df c4. ~ |
   
@@ -50,10 +50,10 @@ nhacDiepKhucSop = \relative c'' {
   R2*2
   c8. bf16 af8 f |
   f4 r8 f |
-  c d4 af'8 |
+  c df4 af'8 |
   g4 r8 af |
   c g4 f8 |
-  f2 |
+  f2 \bar "||"
   
   \set Timing.beatStructure = #'(1 1 1)
   \time 6/8
@@ -63,8 +63,8 @@ nhacDiepKhucSop = \relative c'' {
   c4. ~ c4 c8 |
   d (d a) f4 a8 |
   g4. ~ g4 r8 |
-  e (d) g c4 a16 (g) |
-  f4. ~ f4 r8 |
+  e (d) g c,4 a'16 (g) |
+  \slashedGrace { e16 ( }f4.) ~ f4 r8 |
   
   \set Timing.beatStructure = #'(1 1)
   \time 2/4
@@ -79,14 +79,15 @@ nhacDiepKhucSop = \relative c'' {
   e4 d8 e |
   f (e) d4 |
   c2 ~ |
-  c4 r | \break
+  c4 r \bar "||" \break
   
   \set Timing.beatStructure = #'(1 1 1)
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 6/8
   a4 g8 a4 bf8 |
   c4. r4 a8 |
   d (c) bf a4 a8 |
-  e' (f) g, d' (c) bf |
+  e' (d) g, d' (c) bf |
   a4. f4 g8 |
   a4 a8 c (bf) a |
   g4. ~ g4 r8 \bar "||"
@@ -101,18 +102,18 @@ nhacDiepKhucAlto = \relative c' {
   r8 |
   R2.*2
   e4 e8 f4 e8 |
-  f f f d (g) f |
+  f f f d ([g]) f |
   e4. ~ e4 r8 |
   R2.
   r4 f8 e4. |
-  f8 a c d (c) a |
+  f8 a c d ([c]) a |
   g4. ~ g8 f f |
   e g f f4 e8 |
   f4.
   
   c4 c8 |
   af' (g) e f4. |
-  af8 c bf g (af) g |
+  af8 c bf g ([af]) g |
   f4. df8 f df |
   ef (f) df c4. ~ |
   
@@ -136,7 +137,7 @@ nhacDiepKhucAlto = \relative c' {
   R2
   af8. g16 f8 c |
   c4. c8 |
-  a4 r8 f' |
+  af4 r8 f' |
   c df4 f8 |
   e4 r8 f |
   f e4 f8 |
@@ -166,6 +167,7 @@ nhacDiepKhucAlto = \relative c' {
   e2 ~ |
   e4 r |
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 6/8
   f4 e8 f4 g8 |
   a4 a8 g (a) f |
@@ -226,21 +228,21 @@ nhacDiepKhucBas = \relative c' {
   f2 |
   
   \time 6/8
-  e8 f a g4 bf8 |
+  c8 f a g4 bf8 |
   a4. ~ a4. |
   f4 f8 g (a) b! |
   c4. ~ c4 a8 |
   f (e f) g (a) f |
   c4. ~ c4 r8 |
   g'4 g8 a4 c,8 |
-  f4. ~ f4 f16 (g) |
+  \slashedGrace { c16 ( } f4.) ~ f4 f16 (g) |
   
   \time 2/4
   c8 c af (g) |
   f4 r |
   R2
   r4 r8 g |
-  g8. g16 f8 b! |
+  g8. g16 a8 b! |
   c4. g16 (f) |
   e4 d4 |
   c f8 f |
@@ -249,6 +251,7 @@ nhacDiepKhucBas = \relative c' {
   c,2 ~ |
   c4 r |
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 6/8
   R2.*7
   r4. c8 (d e) |
@@ -260,13 +263,13 @@ nhacDiepKhucBas = \relative c' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Từ trời cao gửi xuống một tia ánh sáng Người.
+  Từ trời cao gửi xuống một tia ánh sáng Ngài.
   Hãy đến lạy Đấng ban phát muôn ơn
   hãy đến lạy Đấng soi sáng tâm hồn.
   Người là Đấng ủi an,
   là khách vỗ về tâm hồn,
   là Đấng bổ dưỡng dịu hiền.
-  Người là an nghỉ trong lao khổ,
+  Ngài là an nghỉ trong lao khổ,
   là mát dịu trong cơn nóng sốt,
   là an ủi trong lệ sầu.
   
@@ -276,7 +279,7 @@ loiDiepKhucSop = \lyricmode {
   Nếu không ơn thần lực con người chẳng có chi,
   chẳng có chi vẹn sạch.
   Xin Chúa rửa chỗ nhơ nhớp,
-  xin tưới chỗ khô khan,
+  Xin tưới chỗ khô khan,
   xin chữa lành vết thương,
   xin uốn lòng cứng cỏi.
   Nắn lại những sai lệch.
@@ -284,20 +287,20 @@ loiDiepKhucSop = \lyricmode {
   bảy hơn thánh của Ngài.
   
   Xin thưởng công nhân đức, xin dẫn họ về,
-  về bến, về bến cứu độ
+  về bến về bến cứu độ
   và ban cho muôn kiếp hân hoan.
   A -- men, Al -- le -- lu -- ia.
   A -- men, Al -- le -- lu -- ia.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Từ trời cao gửi xuống một tia ánh sáng Người.
+  Từ trời cao gửi xuống một tia ánh sáng Ngài.
   Hãy đến lạy Đấng ban phát muôn ơn
   hãy đến lạy Đấng soi sáng tâm hồn.
   Người là Đấng ủi an,
   là khách vỗ về tâm hồn,
   là Đấng bổ dưỡng dịu hiền.
-  Người là an nghỉ trong lao khổ,
+  Ngài là an nghỉ trong lao khổ,
   là mát dịu trong cơn nóng sốt,
   là an ủi trong lệ sầu.
   
@@ -307,7 +310,7 @@ loiDiepKhucAlto = \lyricmode {
   con người chẳng có chi,
   chẳng có chi vẹn sạch.
   Xin Chúa rửa chỗ nhơ nhớp,
-  xin tưới chỗ khô khan,
+  Xin tưới chỗ khô khan,
   xin chữa lành vết thương,
   xin uốn lòng cứng cỏi.
   Nắn lại những sai lệch.
@@ -315,7 +318,7 @@ loiDiepKhucAlto = \lyricmode {
   bảy ơn thánh của Ngài.
   Xin thưởng công nhân đức,
   xin dẫn họ, dẫn họ về,
-  về bến, về bến cứu độ
+  về bến về bến cứu độ
   và ban cho muôn kiếp hân hoan.
   A -- men, Al -- le -- lu -- ia.
   A -- men, Al -- le -- lu -- ia.
@@ -323,7 +326,7 @@ loiDiepKhucAlto = \lyricmode {
 
 loiDiepKhucBas = \lyricmode {
   Xin Chúa Thánh Thần ngự đến.
-  Từ trời cao gửi xuống một tia ánh sáng Người.
+  Từ trời cao gửi xuống một tia ánh sáng Ngài.
   Nguyện xin Cha kẻ cơ bần hãy đến,
   nguyện hãy đến ban phát muôn ơn,
   hãy đến soi sáng tâm hồn.
@@ -332,7 +335,7 @@ loiDiepKhucBas = \lyricmode {
   Nếu không ơn thần lực, ơn thần lực
   con người chẳng có gì, chẳng gì vẹn sạch.
   Xin Chúa rửa chỗ nhơ nhớp,
-  xin dội chỗ khô khan,
+  Xin dội chỗ khô khan,
   xin chữa lành vết thương,
   xin uốn lòng cứng cỏi,
   sưởi ấm chỗ lạnh lùng.

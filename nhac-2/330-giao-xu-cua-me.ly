@@ -79,9 +79,14 @@ nhacDiepKhucAlto = \relative c'' {
   e4. bf'8 |
   bf (g) d e |
   f4 f8 g |
-  f4 f |
+  f4
+  \tweak font-size #0
+  f |
   e2 |
-  f8 f e e |
+  \tweak font-size #0
+  f8
+  \tweak font-size #0
+  f e e |
   f2 |
   bf,8 bf f' f |
   e4 f8 g |
@@ -89,7 +94,10 @@ nhacDiepKhucAlto = \relative c'' {
   d d8 d |
   d4 g |
   f2 |
-  f8 f e e |
+  \tweak font-size #0
+  f8
+  \tweak font-size #0
+  f e e |
   f2 |
   bf,8 bf f' f |
   e4 f8 g |
@@ -253,7 +261,7 @@ loiDiepKhucBas = \lyricmode {
     {
       \set stanza = "1."
       Bao ân thiêng Chúa ban qua tay Mẹ
-      Người người luôn tăng triền bên lòng tin cậy mến
+      Người người luôn tăng triển bên lòng tin cậy mến
       Sẽ ca
     }
     \new Lyrics \with {

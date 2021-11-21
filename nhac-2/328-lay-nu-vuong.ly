@@ -11,7 +11,7 @@
 % Nhạc
 nhacDiepKhucSop = \relative c' {
   \set Staff.printKeyCancellation = ##f
-  \partial 4. e8 a (bf16 a) |
+  \partial 4. d8 a' (bf16 a) |
   g4. g8 |
   f4. d16 d |
   e8 g f e |
@@ -60,7 +60,7 @@ nhacDiepKhucSop = \relative c' {
 
 nhacDiepKhucAlto = \relative c' {
   \set Staff.printKeyCancellation = ##f
-  \partial 4. e8 a (bf16 a) |
+  \partial 4. d8 a' (bf16 a) |
   g4. g8 |
   f4. d16 d |
   e8 e d d |
@@ -129,7 +129,7 @@ nhacDiepKhucBas = \relative c {
   e4. d8 |
   cs8. d16 bf (a) g8 |
   
-  \key g \major
+  \key d \major
   a2 ~ |
   a4 r |
   R2
@@ -166,28 +166,28 @@ nhacDiepKhucBas = \relative c {
 loiDiepKhucSop = \lyricmode {
   Lạy Nữ Vương nhân lành,
   Mẹ làm cho chúng con được sống,
-  được vui (i a) được cậy thân lạy Mẹ.
+  được vui (i a) được cậy, thân lạy Mẹ.
   Chúng con con cháu E -- và ở chốn khách đày
   kêu đến cùng Bà.
-  Hỡi ôi! Bà là chữa bầu chúng con,
+  Hỡi ơi, Bà là Chúa bầu chúng con,
   xin ghé mắt nhân từ, xin ghé mắt nhân từ,
   ghé mắt nhân từ thương xem chúng con.
   Thấy Chúa Giê -- su Con lòng Mẹ gồm phúc lạ.
-  Ôi khoan thay, nhân thay, dịu thay.
+  Ôi khoan thay, nhân thay, dịu thay,
   Thánh Ma -- ri -- a trọn đời đồng trinh.
   A -- men. A -- men.
 }
 
 loiDiepKhucBas = \lyricmode {
   Mẹ nhân lành, Mẹ làm cho chúng con được sống,
-  được vui (i a) được cậy thân lạy Mẹ.
-  Con cháu E -- va ở đây kêu lên Bà.
+  được vui (i a) được cậy, thân lạy Mẹ.
+  Con cháu E -- và ở đây kêu lên Bà.
   Chúng con ở nơi khóc lóc than thở kêu khẩn Bà thương.
-  Hỡi ôi! Xin ghé mắt hỡi ôi!
+  Hỡi ơi, Xin ghé mặt hỡi ơi
   Xin tỏ mặt nhân từ, ghé mắt nhân từ thương xem đoàn con.
-  Đến sau khỏi đày xin cho chúng con được thấy.
+  Đến sau khỏi đày xin cho chúng con được thấy,
   Thấy Chúa Giê -- su thực lạ.
-  Ôi khoan thay, nhân thay, dịu thay.
+  Ôi khoan thay, nhân thay, dịu thay,
   Thánh Ma -- ri -- a trọn đời đồng trinh.
   A -- men. A -- men.
 }
@@ -195,7 +195,7 @@ loiDiepKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20\mm
+  top-margin = 15\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm

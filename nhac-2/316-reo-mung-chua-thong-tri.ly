@@ -17,7 +17,7 @@ nhacDiepKhucSop = \relative c'' {
   e4. (e4) r8 | \break
   R2.*3
   e,8 g a b _([a g] |
-  b4.) a8 cs d |
+  b4.) b8 cs d |
   cs ([a cs] b4.) |
   e4 e8 d ([b d]) |
   e4. ~ e4. ~ |
@@ -27,15 +27,16 @@ nhacDiepKhucSop = \relative c'' {
   
   \partial 4. r4. |
   R2.*3
-  e'4 e8 d ^(b d) |
+  e'4 e8 d ^([b d]) |
   e4. ~ e |
-  g,8 g g a4 a8 |
+  g,8 g g b4 a8 |
   e'4 e8 d4 (c8) |
-  b4 a8 a (g fs) |
+  b4 a8 a ([g fs]) |
+  e2.
+  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
   \once \override Score.RehearsalMark.font-size = #0.1
-  \tweak extra-offset #'(7 . 0)
   \mark \markup { \musicglyph #"scripts.segno" }
-  e2. \break
+  \break
   
   \partial 4. e8 d e |
   g g a b4 b8 |
@@ -65,11 +66,11 @@ nhacDiepKhucAlto = \relative c'' {
   
   r4.
   R2.*3
-  g4 a8 b _(g fs) |
+  g4 a8 b _([g fs]) |
   g4. ~ g |
-  g8 g g a4 a8 |
+  g8 g g b4 a8 |
   e'4 e8 d4 (c8) |
-  b4 a8 a (g fs) |
+  b4 a8 a ([g fs]) |
   e2. |
   e8 d e |
   g g a b4 b8 |
@@ -96,7 +97,7 @@ nhacDiepKhucBas = \relative c {
     }
   >>
   \oneVoice
-  <b e>4. ~ <b e>4 b8 |
+  <b e,>4. ~ <b e,>4 b8 |
   d d d b4 a8 |
   g4 g8 a a a |
   e4 d8 e4. \bar "||" \break
@@ -108,7 +109,7 @@ nhacDiepKhucBas = \relative c {
   <<
     {
       b8 cs d |
-      cs (b cs b4.) |
+      cs (a cs b4.) |
       b4 b8 a4.
     }
     {
@@ -152,7 +153,7 @@ nhacDiepKhucBas = \relative c {
   <<
     {
       \voiceOne
-      e8 ([d c])
+      fs8 ([e d])
     }
     \new Voice = "splitpart" {
 	    \voiceTwo
@@ -163,7 +164,7 @@ nhacDiepKhucBas = \relative c {
   <b e,>4. ~ <b e,>4. |
   e8 e e d4 d8 |
   c4 c8 b4 (a8) |
-  g4 d'8 c4. |
+  g4 c8 c4. |
   b2. |
   \partial 4. b8 a b |
   d8 d e d4 d8 |
@@ -172,7 +173,7 @@ nhacDiepKhucBas = \relative c {
   <<
     {
       \voiceOne
-      fs8 (e d)
+      fs8 ([e d])
     }
     \new Voice = "splitpart" {
 	    \voiceTwo
@@ -181,7 +182,7 @@ nhacDiepKhucBas = \relative c {
   >>
   \oneVoice
   <b\=1^( e,\=2_(>4. <b\=1) e,\=2)>4. b8 b b |
-  d (b) b b (a g) |
+  d (b) b b ([a g]) |
   e4. d4 e8 |
   g4 b8 a4.
   \once \override Score.RehearsalMark.font-size = #0.1
@@ -190,44 +191,45 @@ nhacDiepKhucBas = \relative c {
 
 % Lời
 loiDiepKhucSopMot = \lyricmode {
-  Al -- le -- lu -- yah
+  Al -- le -- lu -- ia.
   \set stanza = "ĐK:"
-  Al -- le -- lu -- yah
-  Al -- le -- lu -- yah Al -- le -- lu -- yah
+  Al -- le -- lu -- ia,
+  Al -- le -- lu -- ia, Al -- le -- lu -- ia.
   Ngợi khen Đấng Cứu độ
-  Al -- le -- lu -- yah
+  Al -- le -- lu -- ia.
   \set stanza = "3-4."
   Giê -- su Ki -- tô tình mến rất cao trọng cho nhân trần
   \set stanza = "5."
   Đây Ngài đem thịt mình trao hiến
-  nuôi dưỡng hết những ai được giải thoát
-  Al -- le -- lu -- yah
+  nuôi dưỡng hết những ai được giải thoát,
+  Al -- le -- lu -- ia.
 }
 
 loiDiepKhucSopHai = \lyricmode {
   \repeat unfold 37 { _ }
   \set stanza = "6."
-  Cho đoàn con được phần vui sướng liên kết với lễ chiên vượt qua mãi
+  Cho đoàn con được phần vui sướng liên kết với lễ chiên vượt qua mãi.
 }
 
 loiDiepKhucBasMot = \lyricmode {
   \set stanza = "1."
   Ngàn dân cùng reo mừng Thiên Chúa đến thống trị
-  Al -- le -- lu -- yah
+  Al -- le -- lu -- ia.
   \set stanza = "1-2."
   Sự sống đã thắng vinh tử thần
   Thập giá đã đánh bại hỏa ngục.
-  Al -- le -- lu -- yah Al -- le -- lu -- yah
-  Al -- le -- lu -- yah Ngợi khen Đấng Cứu độ
+  Al -- le -- lu -- ia, Al -- le -- lu -- ia,
+  Al -- le -- lu -- ia.
+  Ngợi khen Đấng Cứu độ
   \set stanza = "3."
   Này là hòn đá quân thù xưa những khinh khi từ chối
-  Rầy đã nên tuyệt luân
-  Al -- le -- lu -- yah
+  rầy đã nên tuyệt luân
+  Al -- le -- lu -- ia.
   \set stanza = "3-4."
   Giê -- su Ki -- tô tình mến rất cao trọng cho nhân trần
   \repeat unfold 19 { _ }
   \set stanza = "5-6."
-  Tô đôi môi chúng con thắm hồn Ngài đã đổ máu chiên.
+  Tô đôi môi chúng con thắm hồn Ngài đã đổ máu thiêng.
 }
 
 loiDiepKhucBasHai = \lyricmode {
@@ -235,7 +237,7 @@ loiDiepKhucBasHai = \lyricmode {
   Này đây ngày vui mừng Thiên Chúa đã tác thành
   \repeat unfold 35 { _ }
   \set stanza = "4."
-  Việc kỳ diệu quá thương đoàn con Chúa nay đã hoàn tất
+  Việc kỳ diệu quá thương đoàn con Chúa nay đã hoàn tất.
   Nguyện Chúa luôn hiển danh
 }
 

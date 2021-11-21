@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Lạy Nữ Vương" }
+  title = \markup { \fontsize #3 "Maria" }
   composer = "Thơ: Lm. Xuân Ly Băng"
   arranger = "Nhạc: Lm. Kim Long"
   tagline = ##f
@@ -23,11 +23,14 @@ nhacDiepKhucSop = \relative c'' {
   g ef4 d8 |
   c2 |
   r4 \tuplet 3/2 { c'8 b c } |
-  d4 \slashedGrace { b16 ( } a8) [d] |
+  d4 \slashedGrace { b16
+  \tweak extra-offset #'(0 . 0.3)
+  _( } a8) [d] |
   g,4. fs8 |
   g2 ~ |
   g4 r8 \bar "||" \break
   
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key ef \major
   g16 g |
   g4. f8 |
@@ -45,7 +48,9 @@ nhacDiepKhucSop = \relative c'' {
   g2 ~ |
   
   \key c \major
-  g4 c8. b16 |
+  g4 \bar "||" \break
+  
+  c8. b16 |
   c4 c8 g |
   a (g4) e8 |
   e4 f8. f16 |
@@ -61,6 +66,8 @@ nhacDiepKhucSop = \relative c'' {
   g2 ~ |
   g4 r \bar "||" \break
   
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
   e'8. e16 e8 f ~ |
   f d b c |
   g2 |
@@ -72,7 +79,10 @@ nhacDiepKhucSop = \relative c'' {
   g,4. a8 |
   a8. a16 g8 g |
   g d'4 b8 |
-  c2 \bar "|." \break
+  c2
+  ^\markup { \halign #-4 \fontsize #2 \bold "Tận" }
+  \bar "|."
+  \break
   
   e4. e16 e |
   e4. d8 |
@@ -87,7 +97,10 @@ nhacDiepKhucSop = \relative c'' {
   g,4 r8 g |
   e a4 a8 |
   g g a4 |
-  c2 \bar "|."
+  c2
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -200,6 +213,7 @@ nhacDiepKhucBas = \relative c {
   >>
   r8
   
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key ef \major
   r8
   R2*13
@@ -213,7 +227,7 @@ nhacDiepKhucBas = \relative c {
   c e c c |
   f2 |
   d8. d16 d8 d |
-  d f4 fs8 |
+  c f4 fs8 |
   g4. d8 |
   cs8. c!16 b8 b |
   c f ([d]) <g g,> |
@@ -222,34 +236,34 @@ nhacDiepKhucBas = \relative c {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Hay suối nhạc, hay một cõi thiên hương.
+  hay suối nhạc hay một cõi thiên hương.
   Yêu mến thay cặp mắt Mẹ thiên đường.
   Ôi huyền diệu quá như ý trời mầu nhiệm.
-  Ma -- ri -- a! Linh hồn con mơ xao xuyến.
+  Ma -- ri -- a Linh hồn con mơ xao xuyến.
   Say ngất ngư trong sóng gió tình yêu.
-  Ma -- ri -- a! Con mến Mẹ rất nhiều,
+  Ma -- ri -- a con mến Mẹ rất nhiều,
   mến cặp mắt huyền tươi ngàn nhân ái.
   Đang nhìn con trong tình yêu vời vợi,
-  đang nghe con ca ngọi ngàn lời kinh.
-  Đang xem con mơ giấc mộng thiên đường
-  và đang phủ hồn con ngàn tia sáng.
-  Vang muôn cung hỡi âm nhạc thiên đàng.
-  Múa muôn điệu hỡi nhạc công trần thế.
-  Để tung hô và khong khen Đức Mẹ cao sang thay
+  đang nghe con ca ngợi ngàn lời kinh.
+  Đang xem con mơ giấc mộng thiên đường,
+  Và đang phủ hồn con ngàn tia sáng.
+  Vang muôn cung hỡi âm nhạc thiên đàng,
+  Múa muôn điệu hỡi nhạc công trần thế,
+  Để tung hô và khong khen Đức Mẹ, cao sang thay
   và hiền hậu quá bồ câu.
-  Ôi Ma -- ri -- a! Danh Thánh Mẹ nhiệm mầu.
+  Ôi Ma -- ri -- a, Danh Thánh Mẹ nhiệm mầu,
   Bút ca tụng mà tâm hồn say ngây ngất.
   Mẹ cho con trong chiều nay tím nhạt
-  Muôn lời thơ ca tụng Mẹ, Mẹ ơi.
+  muôn lời thơ ca tụng Mẹ, Mẹ ơi.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Là vườn thơ, là trời trăng thiên đường.
-  Yêu mến thay cặp mắt Mẹ thiên đường.
+  Là vườn thơ, là trời trăng thiên hương,
+  Yêu mến thay cặp mắt Mẹ thiên đường,
   Huyền diệu quá tựa như ý trời mầu nhiệm.
-  Vang muôn cung hỡi âm nhạc thiên đàng.
-  Múa nhịp yêu hỡi các lòng trần thế.
-  Để tung hô và khong khen Đức Mẹ cao sang thay
+  Vang muôn cung hỡi âm nhạc thiên đàng,
+  Múa nhịp yêu hỡi các lòng trần thế,
+  Để tung hô và khong khen Đức Mẹ, cao sang thay
   và hiền hậu tựa bồ câu.
 }
 

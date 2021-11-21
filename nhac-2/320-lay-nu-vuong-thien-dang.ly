@@ -41,7 +41,8 @@ nhacDiepKhucSop = \relative c'' {
   c2 ~ |
   c4 r |
   R2
-  r8 e d c |
+  g8 e' e c |
+  d4 c16 (d) c8 |
   b4 c8 b |
   a4. c16 (a) |
   g4 r8 g |
@@ -77,8 +78,8 @@ nhacDiepKhucAlto = \relative c'' {
   a4 e8 (d) |
   cs4 r8 fs |
   d4 a'8 (f) |
-  d2 ~ |
-  d4 r |
+  e2 ~ |
+  e4 r |
   r8 g c b16 a |
   g4. g8 |
   c,4 g'8 g |
@@ -93,7 +94,8 @@ nhacDiepKhucAlto = \relative c'' {
   a2 ~ |
   a4 r |
   R2
-  r8 c b a |
+  g8 c c g |
+  a4 a16 (b) a8 |
   g4 g8 g |
   c,4. c8 |
   b4 r8 e |
@@ -141,7 +143,8 @@ nhacDiepKhucBas = \relative c {
   a2 |
   a8 d d b |
   c4 a16 (b) a8 |
-  g2 ~ |
+  g4. e8 |
+  f4 fs8 fs |
   g4 e8 e |
   f4 fs |
   g r8 c |
@@ -161,56 +164,59 @@ nhacDiepKhucBas = \relative c {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Lạy Nữ Vương Thiên Đàng hãy vui mừng.
-  Al -- le -- lu -- ia!
+  Lạy Nữ vương Thiên đàng hãy vui mừng,
+  Al -- le -- lu -- ia.
   Vì Đấng Mẹ đã đáng cưu mang trong lòng.
-  Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia.
   Người đã sống lại thật như lời đã phán hứa.
-  Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia.
   Xin cầu cùng Chúa cho chúng con.
-  Al -- le -- lu -- ia!
-  Thánh Ma -- ri -- a hãy hỉ hoan khoái lạc.
-  Al -- le -- lu -- ia!
-  Vì Chúa đã sống lại thật.
-  Al -- le -- lu -- ia!
-  Al -- le -- lu -- ia!
-  Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia
+  Lạy Thánh Nữ đồng trinh Ma -- ri -- a
+  hãy hỉ hoan khoái lạc,
+  Al -- le -- lu -- ia.
+  Vì Chúa đã sống lại thật,
+  Al -- le -- lu -- ia,
+  Al -- le -- lu -- ia,
+  Al -- le -- lu -- ia.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Lạy Nữ Vương Thiên Đàng hãy vui mừng.
-  Al -- le -- lu -- ia!
+  Lạy Nữ vương Thiên đàng hãy vui mừng,
+  Al -- le -- lu -- ia.
   Vì Đấng Mẹ đã đáng cưu mang trong
   Mẹ đáng cưu mang trong lòng.
-  Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia.
   Người đã sống lại thật như lời đã phán hứa.
-  Al -- le -- lu -- ia!
-  cầu cho chúng con.
-  Al -- le -- lu -- ia!
-  Thánh Ma -- ri -- a hãy hỉ hoan khoái lạc.
-  Al -- le -- lu -- ia!
-  Vì Chúa đã sống lại thật, sống lại thật.
-  Al -- le -- lu -- ia!
-  Al -- le -- lu -- ia!
-  Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia.
+  Cầu cho chúng con,
+  Al -- le -- lu -- ia
+  Lạy Thánh Nữ đồng trinh Ma -- ri -- a
+  hãy hỉ hoan khoái lạc,
+  Al -- le -- lu -- ia.
+  Vì Chúa đã sống lại thật, sống lại thật,
+  Al -- le -- lu -- ia,
+  Al -- le -- lu -- ia,
+  Al -- le -- lu -- ia.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Lạy Nữ Vương Thiên Đàng hãy vui mừng.
-  Al -- le -- lu -- ia!
-  Vì Đấng Mẹ đã đáng, Đấng Mẹ cưu mang trong lòng.
-  Al -- le -- lu -- ia!
+  Lạy Nữ vương Thiên đàng hãy vui mừng,
+  Al -- le -- lu -- ia.
+  Vì Đấng Mẹ đã đáng Đấng Mẹ cưu mang trong lòng.
+  Al -- le -- lu -- ia.
   Người đã sống lại thật như lời đã phán xưa.
-  Al -- le -- lu -- ia!
-  Cầu cho chúng con.
-  Al -- le -- lu -- ia!
-  Lạy Thánh Nữ đồng trinh Ma -- ri -- a!
-  Hãy hỉ hoan khoái lạc.
-  Al -- le -- lu -- ia!
-  Vì Chúa đã sống lại thật, vì Chúa sống lại thật.
-  Al -- le -- lu -- ia!
-  Al -- le -- lu -- ia!
-  Al -- le -- lu -- ia!
+  Al -- le -- lu -- ia.
+  Cầu cho chúng con,
+  Al -- le -- lu -- ia.
+  Lạy Thánh Nữ đồng trinh Ma -- ri -- a
+  đồng trinh Ma -- ri -- a
+  hãy hỉ hoan khoái lạc,
+  Al -- le -- lu -- ia.
+  Vì Chúa đã sống lại thật, vì Chúa sống lại thật,
+  Al -- le -- lu -- ia,
+  Al -- le -- lu -- ia,
+  Al -- le -- lu -- ia.
 }
 
 % Dàn trang
@@ -275,8 +281,8 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
-    \override LyricHyphen.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1
+    \override LyricHyphen.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
