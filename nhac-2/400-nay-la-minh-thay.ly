@@ -98,10 +98,10 @@ nhacDiepKhucBas = \relative c' {
   d d d4 |
   e4. d8 |
   cs d e4 |
-  a2 |
+  a,2 |
   
   \key c \major
-  a8 a g a |
+  a'8 a g a |
   e2 |
   r8 a a a |
   gs2 |
@@ -109,7 +109,7 @@ nhacDiepKhucBas = \relative c' {
   e2 |
   r8 d d f |
   e4. a8 |
-  d e4 cs8 |
+  d, e4 cs8 |
   e2
 }
 
@@ -145,7 +145,7 @@ loiDiepKhucBasMot = \lyricmode {
   Nên trong đêm bị trao nộp Chúa đã trao ban mình
   chính mình, nên Ngài cầm bánh trao cho môn đệ mà nói:
   Vì Này là Mình Thầy sẽ hiến tế vì các con
-  vì Này là Mình Thầy hãy nhận lấy mà ăn.
+  Vì Này là Mình Thầy hãy nhận lấy mà ăn.
   
   \set stanza = "1."
   Đây Tin Mừng cao trọng khai nguyên sự sống.
@@ -158,13 +158,13 @@ loiDiepKhucBasHai = \lyricmode {
   \set stanza = "2."
   Đây lương thực Thiên Thần ban cho người thế.
   Con xin được thông phần
-  chia cho các dân liên hiệp trong Đức ái.
+  chia cho các dân liên hiệp trong Đức Ái.
 }
 
 loiDiepKhucBasBa = \lyricmode {
   \repeat unfold 55 { _ }
   \set stanza = "2."
-  Muôn tâm hồn nên một luôn trong Hội Thánh.
+  Muôn tâm hồn nên một luôn trong Hội Thánh
   Hân hoan nhận lương thần
   yêu thương Chúa ban: Đây lộc ân cứu rỗi.
 }

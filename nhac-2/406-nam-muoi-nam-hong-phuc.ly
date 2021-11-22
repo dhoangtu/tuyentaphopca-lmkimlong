@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Từ Vực Sâu" }
+  title = \markup { \fontsize #3 "Năm Mươi Năm Hồng Phúc" }
   composer = "Lm. Kim Long"
   tagline = ##f
 }
@@ -37,14 +37,14 @@ nhacDiepKhucSop = \relative c'' {
   b a fs g16 (a) |
   d,4. d8 |
   b'8. b16 b8 c |
-  b a4 d8 |
-  a8. a16 a8 b |
+  b a4 d,8 |
+  a'8. a16 a8 b |
   a g ~ g4 \bar "|." \break
   
   \key bf \major
   g8. f16 g8 d |
-  bf'4. d8 |
-  bf8. bf16 a8 g |
+  bf'4. d,8 |
+  bf'8. bf16 a8 g |
   a4. a8 |
   c8 bf a c |
   d4. c8 |

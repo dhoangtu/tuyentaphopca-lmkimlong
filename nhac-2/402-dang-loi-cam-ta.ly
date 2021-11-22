@@ -14,7 +14,7 @@ nhacDiepKhucSop = \relative c'' {
   r8 bf bf bf |
   a4. d8 |
   g,4 r8 g |
-  e!8 g e!16 (d) c8 |
+  e!8 g e16 (d) c8 |
   d4. g8 |
   e!8 g e16 (d) c8 |
   d4 r8 c |
@@ -103,7 +103,7 @@ loiDiepKhucSop = \lyricmode {
   Chứa chan phúc ân ngàn muôn,
   Chúa thương mến luôn trào tuôn.
   Ngài gọi con, Ngài nâng con lên
-  trao ban thiên chúc Linh mục quyền linh.
+  trao ban thiên chức Linh mục quyền linh.
   Dầu con đây thật bất xứng.
   Năm mươi năm vút qua,
   nay xin dâng lời cảm tạ.

@@ -49,9 +49,10 @@ nhacPhienKhucSop = \relative c'' {
   bf4 a |
   g4 c,8 c |
   g'4 e |
-  f2 ~ \bar "|."
+  f2 ~ |
+  f4 r8 \bar "|." \break
   
-  f4 r |
+  r |
   R2
   r4 r8 a |
   a bf f g |
@@ -67,7 +68,7 @@ nhacPhienKhucSop = \relative c'' {
   c4 bf |
   g c8 a |
   g4 e |
-  f r8 \bar "||"
+  f r8 \bar "|."
 }
 
 nhacPhienKhucAlto = \relative c' {
@@ -97,7 +98,7 @@ nhacPhienKhucAlto = \relative c' {
   bf4 bf |
   a2 ~ |
   
-  a4 r |
+  a4 r8 r |
   R2
   r4 r8 f' |
   f g c, d |
@@ -132,7 +133,7 @@ nhacPhienKhucBas = \relative c {
   c r8 f |
   e8. f16 bf8 (a) |
   g4. f8 |
-  e (c d) e |
+  e ([c d]) e |
   f4. f8 |
   d g c,4 ~ |
   c r8 d |
@@ -164,7 +165,7 @@ nhacPhienKhucBas = \relative c {
 
 % Lời
 loiPhienKhucSopMot = \lyricmode {
-  Yêu thương con từ xa trước
+  Yêu thương con từ xa trước,
   Chúa nâng con lên hàng tâm phúc.
   Bao nhiêu năm qua, bao nhiêu năm qua
   trong thiên chức Linh Mục.
@@ -176,7 +177,7 @@ loiPhienKhucSopMot = \lyricmode {
   \set stanza = "1."
   Nhưng ơn Chúa dìu con lên
   là lúc Chúa nổi bật lên.
-  Sức mạnh Chúa tỏ hiện ra:
+  Sức mạnh Chúa tỏ hiện rõ:
   Mấy mươi tuổi đời bấy nhiêu năm hồng ân.
 }
 
@@ -199,7 +200,7 @@ loiPhienKhucSopBa = \lyricmode {
 loiPhienKhucBasMot = \lyricmode {
   Tình yêu Chúa nhiệm mầu
   Ngài đã dìu nâng lên.
-  Ôi tình yêu Chúa nhiệm mầu đà qua bao năm,
+  Ôi tình yêu Chúa nhiệm mầu, đà qua bao năm,
   đà qua bao năm trong đời Linh Mục.
   Ơn Ngài đà hiến con những gì Ngài muốn,
   ơn Ngài thấm nhuần.
@@ -215,7 +216,7 @@ loiPhienKhucBasMot = \lyricmode {
 }
 
 loiPhienKhucBasHai = \lyricmode {
-  \repeat unfold 40 { _ }
+  \repeat unfold 59 { _ }
   \set stanza = "2."
   Con làm sao đáp đền chỉ xin dâng Ngài đời con lễ mến yêu.
   Xin được suốt đời ngợi ca và cảm mến:
@@ -223,7 +224,7 @@ loiPhienKhucBasHai = \lyricmode {
 }
 
 loiPhienKhucBasBa = \lyricmode {
-  \repeat unfold 40 { _ }
+  \repeat unfold 59 { _ }
   \set stanza = "3."
   Bao ngày qua tháng lại
   hành trang luôn là tình yêu và thực thi.
@@ -234,7 +235,7 @@ loiPhienKhucBasBa = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20\mm
+  top-margin = 15\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -271,6 +272,7 @@ notBePhu =
            #f))
      music)
    music)
+
 \score {
   \new ChoirStaff <<
     \new Staff \with {

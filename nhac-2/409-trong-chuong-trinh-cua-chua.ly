@@ -45,9 +45,11 @@ nhacDiepKhucSop = \relative c' {
   a2 |
   r8 fs b b |
   b4. a8 |
-  a a a d |
+  a [a] a [\slashedGrace { a16 
+  \tweak extra-offset #'(0 . 0.5)
+  _( } d8)] |
   cs4. b8 |
-  b b b16 (e) d8 |
+  b b b16 [(e) d8] |
   a4. a8 |
   g4 e8 (a) |
   d,2 ~ |
@@ -57,6 +59,8 @@ nhacDiepKhucSop = \relative c' {
     d8 b a d16 cs |
     d8 e fs16 e fs g
   }
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
   \bar "||"
   
   a8. a16 fs8 d |
@@ -101,7 +105,11 @@ nhacDiepKhucSop = \relative c' {
   cs4. cs16 d |
   a8 g e a |
   d,2 ~ |
-  d4 r8 a' \bar "||"
+  d4 r8 a'
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \tweak extra-offset #'(0 . -7.5)
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 nhacDiepKhucAlto = \relative c' {
@@ -217,7 +225,7 @@ nhacDiepKhucAlto = \relative c' {
 }
 
 nhacDiepKhucBas = \relative c {
-  d8 f16 f |
+  d8 f16 e |
   d8 bf' bf g |
   a4. a16 a |
   d2 ~ |
@@ -280,26 +288,30 @@ nhacDiepKhucBas = \relative c {
 % Lời
 loiPhienKhucSopMot = \lyricmode {
   Từ thuở ban đầu Chúa đã dựng nên và một người nữ.
-  Cho họ chung sống có đôi
+  Cho họ chung sống có đôi,
   họ không còn là hai nhưng đã nên một.
   Chính Chúa đã kết hợp và chính Chúa đã chúc phúc.
   Lời chúc phúc đó dù hình phạt tội tổ tông,
-  dù lụt hồng thủy tuôn tràn cũng không xóa được.
+  Dù lụt hồng thủy tuôn tràn cũng không xóa được.
   \override Lyrics.LyricText.font-shape = #'italic
   (Đàn) __ \repeat unfold 12 { _ }
   \revert Lyrics.LyricText.font-shape
-  Trong chương trình của Chúa đôi bạn trẻ đã gặp nhau,
+  Trong chương trình của Chúa,
+  đôi bạn trẻ đã gặp nhau,
   đã quen nhau, đã yêu nhau, đã trao nhau lời hẹn ước.
   Và cùng dìu nhau lên bàn thờ Chúa
   xin Người niêm ấn tình yêu.
   Hứa bên nhau, hứa thương nhau,
   hứa thủy chung suốt đời.
-  Ngày tháng sẽ lần qua cuộc đời lắm thăng trầm.
-  Nhưng hai người vẫn dìu nhau đi từng lúc hoen lệ mi,
+  Ngày tháng sẽ lần qua,
+  cuộc đời lắm thăng trầm,
+  nhưng hai người vẫn dìu nhau đi,
+  từng lúc hoen lệ mi,
   từng lúc tươi miệng cười.
   Luôn chung lời nguyện cầu Thiên Cháu cho ân tình
   ngày thêm chan chứa xóa hết oán sầu
-  luôn luôn tâm đầu chung sức xây gia đình phục hậu.
+  luôn luôn tâm đầu,
+  chung sức xây gia đình phúc hậu.
   <<
   { Mong }
   \new Lyrics {
@@ -312,10 +324,11 @@ loiPhienKhucSopMot = \lyricmode {
 
 loiPhienKhucSopHai = \lyricmode {
   \repeat unfold 71 { _ }
-  qua bao nhiêu ngày tháng luôn trọn vẹn nghĩa thủy chung
+  Qua bao nhiêu ngày tháng,
+  luôn trọn vẹn nghĩa thủy chung,
   mãi bên nhau, mãi yêu nhau, mãi trong ân tình của Chúa.
   Hiệp từng lời kinh bên bàn thờ Chúa cho tình yêu mãi đẹp xinh.
-  Chúa yêu thương xuống muôn ơn dẫn đưa từng bước đường.
+  Chúa yêu thương xuống muôn ơn, dẫn đưa từng bước đường.
 }
 
 loiPhienKhucSopBa = \lyricmode {
@@ -323,16 +336,16 @@ loiPhienKhucSopBa = \lyricmode {
   \repeat unfold 71 { _ }
   (mươi lăm năm rồi đó)
   \repeat unfold 18 { _ }
-  (Rầy cùng dìu nhau lên bàn thờ Chúa dâng lời cám mến hồng ân).
+  (Rầy cùng dìu nhau lên bàn thờ Chúa dâng lời cảm mến hồng ân).
 }
 
 loiPhienKhucBasMot = \lyricmode {
   Từ thuở ban đầu Chúa đã dựng nên một người nam.
-  Cho họ chung đẹp đôi
+  Cho họ chung đẹp đôi,
   họ không còn là hai nhưng đã nên một.
   Chính Chúa đã kết hợp và chính Chúa đã chúc phúc.
   Lời chúc phúc đó dù hình phạt tội tổ tông,
-  dù lụt hồng thủy tuôn tràn cũng không xóa được.
+  Dù lụt hồng thủy tuôn tràn cũng không xóa được.
   Trong chương trình của Chúa đôi bạn trẻ gặp nhau,
   đã quen nhau, đã yêu nhau, đã trao nhau lời hẹn ước.
   Và cùng dìu nhau lên bàn thờ Chúa
@@ -353,7 +366,7 @@ loiPhienKhucBasBa = \lyricmode {
   \repeat unfold 56 { _ }
   (mươi lăm năm rồi đó)
   \repeat unfold 17 { _ }
-  (Rầy cùng dìu nhau lên bàn thờ Chúa dâng lời cám hồng ân).
+  (Rầy cùng dìu nhau lên bàn thờ Chúa dâng lời cảm hồng ân).
 }
 
 
