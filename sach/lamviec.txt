@@ -1,3 +1,63 @@
+\markup {
+  \fill-line {
+    \hspace #1
+    \column {
+      \line { O sacrum convivium }
+      \line { in quo Christus sumitur, }
+      \line { recolitur memoria passionis ejus, }
+      \line { mens impletur gratia, }
+      \line { futurae gloriae nobis pignus datur. }
+      \line { Amen. }
+    }
+    \hspace #2
+    \column \italic {
+      \line { O sacred feast }
+      \line { in which Christ is received, }
+      \line { the memory of His Passion is renewed, }
+      \line { the mind is filled with grace, }
+      \line { and a pledge of future glory is given to us. }
+      \line { Amen. }
+    }
+    \hspace #1
+  }
+}
+
+\markup {
+  \fill-line {
+    \column {
+      \huge \line { \bold "chú ý:" \normal-text " dịp Ngân Khánh Hôn Phối, lần trở lại," }
+      \huge \line { "xin hát với những chưữ in nghiêng ở dòng thứ ba." }
+    }
+    \hspace #2
+    \column \italic {
+    }
+  }
+}
+
+
+#(define-markup-list-command (paragraph layout props args) (markup-list?)
+  (interpret-markup-list layout props
+   (make-justified-lines-markup-list (cons (make-hspace-markup 2) args))))
+
+% Candide, Voltaire
+\markuplist {
+  \override-lines #'(baseline-skip . 2.5) {
+    \paragraph {
+      Monsieur le baron était un des plus puissants seigneurs de la
+    }
+  }
+}
+
+ \markup {
+   "A simple tune"
+   \footnote "*" \italic "* By me"
+   "is shown below.  It is a recent"
+   \footnote \super &dagger; \concat {
+     \super &dagger; \italic " Aug 2012"
+   }
+   "composition."
+ }
+
 ===tách bè
 Tù sion được dẫn về
 hát lên mừng Chúa
