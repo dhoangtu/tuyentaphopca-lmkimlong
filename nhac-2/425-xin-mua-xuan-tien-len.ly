@@ -40,7 +40,7 @@ nhacPhienKhucSop = \relative c'' {
   a (g) f fs |
   g2 ~ |
   g4 r |
-  r e'8 e |
+  r e'8 ^\p e |
   d4 d8 d |
   b (a) g g |
   a4. a8 |
@@ -50,22 +50,22 @@ nhacPhienKhucSop = \relative c'' {
   c,8. c16 c8 (d) |
   g8. e16 e8 g |
   a4 a8 d |
-  d4. (d8) |
+  d4. (e8) |
   d4 d8 d |
   d (c) b4 |
   c2 \bar "|." \break
   
   \partial 4 a8. g16 |
   a8 a c (d16 c) |
-  a4. g8 |
+  a4. (g8) |
   f a g16 (a g f) |
   d8 f c (e16 f) |
   g4 a8. g16 |
   a8 a c (d16 c) |
-  a4. g8 |
-  f a d (f) |
+  a4. (g8) |
+  f a d, (f) |
   g8 a16 (g) e (g e d) |
-  c4 \bar "|."
+  c4 \bar "||"
 }
 
 nhacPhienKhucAlto = \relative c'' {
@@ -76,15 +76,15 @@ nhacPhienKhucAlto = \relative c'' {
   g4 d8 d |
   c4 c8 c |
   b2 ~ |
-  b8 r16 g' e8 g |
-  c, c c8. [c16] |
+  b8 r16 b c8 c |
+  c c c8. [c16] |
   f8 r16 f f8 f |
   g [c,] c8. [c16] |
   b8 (d) e g |
   c,4 d8 d |
   d2 ~ |
   d4 r |
-  r g8 g |
+  r g8 ^\p g |
   fs4 fs8 fs |
   g (d) e d |
   cs4. cs8 |
@@ -114,7 +114,7 @@ nhacPhienKhucBas = \relative c' {
   c c f8. f16 |
   g8 (f) e e |
   f (e) d c |
-  b4. b8 |
+  b4. b8 ^\f |
   c d e d16 c |
   g8 c a (c) |
   d4 d8 d |
@@ -128,50 +128,53 @@ nhacPhienKhucBas = \relative c' {
   f4 e8 d |
   cs2 |
   d4 d8 d |
-  g4 g, |
+  g4 d8 (g,) |
   c2
 }
 
 % Lời
 loiPhienKhucSop = \lyricmode {
-  Nắng mới tỏa howng ngàn nơi
+  Nắng mới tỏa hương ngàn nơi,
   Hãy đứng lên bạn tình ơi
-  Xin mùa xuân tới cho hoa nở tươi
+  Xin mùa xuân tới cho hoa nở tươi.
   đàn chim tung cánh líu lo vang trời
-  hãy tiến lên bạn tình ơi
-  Hãy tiến lên hãy tiến lên bạn tình ơi
+  hãy tiến lên Bạn tình ơi.
+  Hãy tiến lên hãy tiến lên Bạn tình ơi.
   Hỡi bạn là vườn khép kín
   là suối niêm phong
   hỡi bạn là mùa xuân tuyệt vời hương sắc
-  Bạn hãy tiến lên tiến đến với lòng tôi.
+  Bạn hãy tiến lên, tiến đến với lòng tôi.
   
   <<
     {
+      \set stanza = "1."
       Xin mùa xuân mau tiến lên
-      để những cây hồng mau trổ bông
+      Để những cây hồng mau trổ bông
       Xin mùa xuân mau tiến lên
-      để khóm huệ tươi thắm hương nồng.
+      Để khóm huệ tươi thắm hương nồng.
     }
     \new Lyrics {
 	    \set associatedVoice = "beSop"
+	    \set stanza = "2."
 	    Xin mùa xuân mau tiến lên
-      và hát vang bài ca tình yêu
+      Và hát vang bài ca tình yêu
       Xin mùa xuân mau tiến lên
-      dòng máu về tìm sẽ tươi mầu.
+      Dòng máu về tìm sẽ tươi mầu.
 	  }
   >>
 }
 
 loiPhienKhucBas = \lyricmode {
-  Đông qua rồi mưa đã thôi
-  Hãy đứng lên bạn tình ơi
+  Đông qua rồi, mưa đã thôi
+  Hãy đứng lên bạn tình ơi.
   Nắng tỏa sáng ngời mùa xuân tới cho hoa nở tươi
   đàn chim tung cánh líu lo vang trời.
-  Hãy tiến lên bạn tình ơi
-  lòng bạn tinh trắng như bông huệ trên đồi nương
-  hãy tiếng lên bạn tình ơi bạn diễm lệ
+  Hãy tiến lên Bạn tình ơi.
+  Lòng bạn tinh trắng như bông huệ trên đồi nương.
+  Hãy tiến lên Bạn tình ơi.
+  Bạn diễm lệ
   suối niêm phong bạn yêu kiều
-  tuyệt vời hương sắc bạn hãy tiến lên
+  tuyệt vời hương sắc Bạn hãy tiến lên,
   tiến lên với lòng tôi.
 }
 
@@ -179,7 +182,7 @@ loiPhienKhucBas = \lyricmode {
 \paper {
   #(set-paper-size "a4")
   top-margin = 15\mm
-  bottom-margin = 20\mm
+  bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0

@@ -4,26 +4,27 @@
 
 \header {
   title = \markup { \fontsize #3 "Mùa Xuân Đến" }
-  poet = "Thơ: Lm. Xuân Ly Băng"
-  composer = "Lm. Kim Long"
+  composer = "Thơ: Lm. Xuân Ly Băng"
+  arranger = "Lm. Kim Long"
   tagline = ##f
 }
 
 % Nhạc
 nhacDiepKhucSop = \relative c' {
-  \partial 4 d
+  \partial 4 d \bar ".|"
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
   |
   g4. fs8 g4 |
   a2 e4 |
   e e8 (fs) a4 |
-  d2 \slashedGrace { b16 ( } c4) |
+  d,2 \slashedGrace { b'16 ( } c4) |
   b a g |
   e'2 d4 |
   c a4. fs8 |
   g2 r4 \bar "|." \break
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 2/4
   R2*2
   d'8. cs16 d8 b |
@@ -32,36 +33,36 @@ nhacDiepKhucSop = \relative c' {
   d4 r8 d, |
   ef4. d16 g |
   a4. a16 c |
-  d4 d16 (ef) d (c) |
+  d4 d16 ([ef]) d (c) |
   a4. c8 |
   d2 ~ |
-  d4
-  \once \override Score.RehearsalMark.extra-offset = #'(3 . 0)
+  d4 d, 
   \once \override Score.RehearsalMark.font-size = #0.1
+  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
   \mark \markup { \musicglyph #"scripts.segno" }
-  d, \bar "||" \break
+  \bar "||" \break
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
   \partial 8 r8 |
   R2*4
   b'!8. d16 b8 a |
   e!4. d8 |
-  g fs4 g8 |
+  g f4 g8 |
   a2 |
-  R2*4 \break
+  R2*4 \bar "||" \break
   
   \key g \major
-  b8. g16 c8 d |
+  b8. g16 c8 b |
   a4. \slashedGrace { fs16 ( } e8) |
   a d,4 g16 (a) |
   
   \time 3/4
-  b2
-  \once \override Score.RehearsalMark.extra-offset = #'(2 . 0)
+  b2 d,4
+  \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
-  d,4
   \bar "||" \break
   
   \time 2/4
@@ -82,24 +83,25 @@ nhacDiepKhucSop = \relative c' {
   \bar "||"
 }
 
-nhacDiepKhucAlto = \relative c'' {
+nhacDiepKhucAlto = \relative c' {
   d4 |
   g4. fs8 g4 |
   a2 e8 (d) |
   cs4 cs cs |
-  a2 g4 |
+  a2 g'4 |
   g fs f! |
   e (g) g |
   g fs4. d8 |
   d2 r4 |
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 2/4
   g8. fs16 g8 e |
   d4. e8 |
   a4 a8 g |
   fs4. fs8 |
   g c4 ^> b8 |
-  b4 a ~ |
+  b4 a ^> ~ |
   a g ~ |
   g g8 ^> g ^> |
   fs4 g8 g |
@@ -108,6 +110,7 @@ nhacDiepKhucAlto = \relative c'' {
   fs4 d |
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
   r8
   R2*4
@@ -130,10 +133,10 @@ nhacDiepKhucAlto = \relative c'' {
   d8 d e d16 (c) |
   b4. b8 |
   a4 b |
-  d8 b d cs |
-  cs4. cs8 |
+  d8 b d c |
+  c4. c8 |
   b4 d |
-  e4. ef8 |
+  e4. e8 |
   d g4 g8 |
   fs2 ~ |
   fs4 d
@@ -156,7 +159,7 @@ nhacDiepKhucBas = \relative c {
       a a, a |
       d2 d4 |
       g, d' d |
-      c2 d4
+      b2 b4
     }
   >>
   
@@ -164,24 +167,26 @@ nhacDiepKhucBas = \relative c {
     \new Voice = "splitpart" {
       \voiceTwo
       \stemUp
-      c' c4. c8 |
+      c'
     }
     {
       \voiceOne
       \stemDown
-      a,8 a d4. d8
+      a,8 a
     }
   >>
   \oneVoice
-  <b' g g,>2 r4 |
+  <c' d,>4. <c d,>8 |
+  <b g g,>2 r4 |
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 2/4
   R2
   b8. as16 b8 g |
   fs4. g8 |
   d d'4 c8 |
   b8. a16 c8 d |
-  g,4 fs ~ |
+  g,4 fs ^> ~ |
   fs g |
   ef ef8 ^> ef ^> |
   d4 bf8 bf |
@@ -190,6 +195,7 @@ nhacDiepKhucBas = \relative c {
   d4 d |
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
   g8 |
   ef d4 fs8 |
@@ -226,7 +232,7 @@ nhacDiepKhucBas = \relative c {
   d4 fs8 g |
   a8. a16 g8 (fs) |
   g4 d8 (e) |
-  c8. c'16 a8 g |
+  c8. c'16 a8 fs |
   fs (e) a a, |
   d2 ~ |
   d4 d
@@ -234,34 +240,40 @@ nhacDiepKhucBas = \relative c {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  \set stanza = "ĐK:"
-  Mẹ ơi! Mùa xuân đến nhộn nhịp cả phố phường.
+  Mẹ ơi Mùa xuân đến nhộn nhịp cả phố phường,
   Thắp lên hai hàng nến con xin Mẹ tình thương.
   
-  Xuân về trên đại lộ hòa nở suốt công viên.
-  Ngoài kia trời giông tố, trời giông tố
+  \set stanza = "1."
+  Xuân về trên đại lộ hoa nở suốt công viên
+  ngoài kia trời giông tố, trời giông tố,
   con xin Mẹ bình yên.
   Mẹ
+  
+  \set stanza = "2."
   Ôi Đức Tin diễm kiều về ương lòng năm tháng.
-  Dâng Mẹ khối băng tâm sầu chín rồi xin hái.
+  Dâng Mẹ khối băng tâm,
+  Sầu chín rồi xin hái.
   Mẹ
-  Chim xuân hót trên cành
-  kìa chim xuân hót trên cành
+  Chim xuân hót trên cành,
+  kìa chim xuân hót trên cành,
   và đây mùa hoa đào nở
   bao giờ trời lên xanh nhạc buồn thôi thương nhớ.
   Mẹ
 }
 
 loiDiepKhucAlto = \lyricmode {
-  Mẹ ơi! Mùa xuân đến nhộn nhịp cả phố phường.
+  Mẹ ơi Mùa xuân đến nhộn nhịp cả phố phường,
   Thắp lên hai hàng nến con xin Mẹ tình thương.
   \set stanza = "1."
-  Xuân về trên đại lộ mùa xuân trên đại lộ
-  hòa nở suốt công viên.
+  Xuân về trên đại lộ, mùa xuân trên đại lộ,
+  hoa nở suốt công viên
   Hm __ _ con xin Mẹ, con xin Mẹ vĩnh yên.
   Mẹ
+  
+  \set stanza = "2."
   Ôi Đức Tin diễm kiều về ươm lòng năm tháng.
-  Dâng Mẹ khối băng tâm sầu chín rồi xin hái.
+  Dâng Mẹ khối băng tâm,
+  Sầu chín rồi xin hái.
   Mẹ
   Chim xuân hót trên cành, trên cành
   và đây mùa hoa đào nở
@@ -270,22 +282,26 @@ loiDiepKhucAlto = \lyricmode {
 }
 
 loiDiepKhucBas = \lyricmode {
-  Mẹ ơi! Mùa xuân đến nhộn nhịp cả mười phương.
-  Thắp lên hai hàng đèn con xin Mẹ ghé tình thương.
-  Xuân về trên đại lộ
-  hoa nở suốt công viên nở suốt công viên.
+  Mẹ ơi Mùa xuân đến nhộn nhịp cả mười phường,
+  Thắp lên hai hàng nến con xin Mẹ ghé tình thương.
+  
+  \set stanza = "1."
+  Xuân về trên đại lộ,
+  hoa nở suốt công viên nở suốt công viên
   Hm __ _ _ con xin Mẹ, con xin Mẹ vĩnh yên.
   Mẹ
   \set stanza = "2."
-  Mây bỏ trời cô liêu thuyền đi trơ bến vắng
+  Mây bỏ trời cô liêu,
+  Thuyền đi trơ bến vắng
   Đức Tin diễm kiều.
-  Dòng thơ lệ đầu năm héo hon tình Do Thái.
-  Băng tâm sầu chín rồi, chín rồi xin hái.
+  Dòng thơ lệ đầu năm,
+  Héo hon tình Do thái.
+  băng tâm sầu chín rồi, chín rồi xin hái.
   Mẹ
   \set stanza = "3."
   Chim xuân hót trên cành kìa chim xuân,
-  kìa chim xuân trên cành mùa hoa đào nở
-  mùa hoa nở đây hoa nở thắm xanh,
+  kìa chim xuân trên cành mùa hoa đào nở,
+  mùa hoa nở, đây hoa nở thắm xanh,
   thắm xanh nhạc buồn hết sầu nhớ.
   Mẹ
 }
@@ -293,8 +309,8 @@ loiDiepKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 20\mm
+  top-margin = 12\mm
+  bottom-margin = 12\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
