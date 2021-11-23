@@ -291,3 +291,24 @@ notBePhu =
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
 }
+
+\markup {
+  \column {
+    \left-align {
+      \null
+      \line {
+        \huge \bold "Chú ý:"
+        "Những bài về Linh mục ở đây, khi hát vào dịp kỷ"
+      }
+      \line {
+        "niệm ngày thụ phong, có thể tùy nghi thay đổi thời gian:"
+      }
+      \line {
+        \bold "hai mươi lăm năm, ba mươi năm, năm mươi năm, ..."
+      }
+      \line {
+        "cho thích hợp."
+      }
+    }
+  }
+}

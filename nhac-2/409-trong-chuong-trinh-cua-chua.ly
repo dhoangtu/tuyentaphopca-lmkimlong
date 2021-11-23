@@ -373,8 +373,8 @@ loiPhienKhucBasBa = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin =15\mm
-  bottom-margin = 15\mm
+  top-margin =20\mm
+  bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -385,11 +385,11 @@ loiPhienKhucBasBa = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  %page-count = #1
+  page-count = #3
   ragged-last-bottom = ##t
-  %ragged-bottom = ##t
+  ragged-bottom = ##t
   %ragged-last = ##t
-  systems-per-page = 5
+  %systems-per-page = 5
 }
 
 TongNhip = {
@@ -431,6 +431,21 @@ TongNhip = {
     \context {
       \Staff \RemoveEmptyStaves
       \override VerticalAxisGroup.remove-first = ##t
+    }
+  }
+}
+
+\markup {
+  \column {
+    \left-align {
+      \null \null \null
+      \line {
+        \huge \bold "chú ý:"
+        "dịp Ngân Khánh Hôn Phối, lần trở lại,"
+      }
+      \line {
+        "xin hát với những chữ in nghiêng ở dòng thứ ba."
+      }
     }
   }
 }
