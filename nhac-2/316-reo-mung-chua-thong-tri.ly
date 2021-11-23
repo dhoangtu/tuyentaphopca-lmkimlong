@@ -29,10 +29,18 @@ nhacDiepKhucSop = \relative c'' {
   R2.*3
   e'4 e8 d ^([b d]) |
   e4. ~ e |
-  g,8 g g b4 a8 |
-  e'4 e8 d4 (c8) |
-  b4 a8 a ([g fs]) |
+  \stemUp
+  g,8 g g
+  _\markup { \rest #"2" }
+  b4 a8 |
+  e'4 e8
+  _\markup { \rest #"2" }
+  d4 (c8) |
+  b4 a8
+  _\markup { \rest #"2" }
+  a ([g fs]) |
   e2.
+  _\markup { \rest #"2" }
   \once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
@@ -42,6 +50,8 @@ nhacDiepKhucSop = \relative c'' {
   g g a b4 b8 |
   cs cs cs a g a |
   b4.
+  
+  \stemNeutral
   e4 e8 |
   d ([b d]) e4. ~ |
   e4.
@@ -162,14 +172,42 @@ nhacDiepKhucBas = \relative c {
   >>
   \oneVoice
   <b e,>4. ~ <b e,>4. |
-  e8 e e d4 d8 |
-  c4 c8 b4 (a8) |
-  g4 c8 c4. |
-  b2. |
-  \partial 4. b8 a b |
-  d8 d e d4 d8 |
-  e e e d d c |
-  b4. <e c>4 <e c>8 |
+  
+  \stemUp
+  e8 e e
+  \tweak extra-offset #'(0 . 2)
+  _\markup { \rest #"2" }
+  d4 d8 |
+  c4 c8
+  \tweak extra-offset #'(0 . 2)
+  _\markup { \rest #"2" }
+  b4 (a8) |
+  g4 c8
+  \tweak extra-offset #'(0 . 2)
+  _\markup { \rest #"2" }
+  c4. |
+  b2.
+  \tweak extra-offset #'(0 . 2)
+  _\markup { \rest #"2" }
+  |
+  \partial 4. b8 a
+  \tweak extra-offset #'(0 . 3)
+  _\markup { \rest #"4." }
+  b |
+  d8 d e
+  \tweak extra-offset #'(0 . 2)
+  _\markup { \rest #"2" }
+  d4 d8 |
+  e e e
+  \tweak extra-offset #'(0 . 2)
+  _\markup { \rest #"2" }
+  d d c |
+  b4.
+  \tweak extra-offset #'(0 . 3)
+  _\markup { \rest #"4." }
+  
+  \stemNeutral
+  <e c>4 <e c>8 |
   <<
     {
       \voiceOne
@@ -181,7 +219,10 @@ nhacDiepKhucBas = \relative c {
     }
   >>
   \oneVoice
-  <b\=1^( e,\=2_(>4. <b\=1) e,\=2)>4. b8 b b |
+  <b\=1^( e,\=2_(>4. <b\=1) e,\=2)>4.
+  
+  \stemDown
+  b8 b b |
   d (b) b b ([a g]) |
   e4. d4 e8 |
   g4 b8 a4.
@@ -208,7 +249,8 @@ loiDiepKhucSopMot = \lyricmode {
 loiDiepKhucSopHai = \lyricmode {
   \repeat unfold 37 { _ }
   \set stanza = "6."
-  Cho đoàn con được phần vui sướng liên kết với lễ chiên vượt qua mãi.
+  Cho đoàn con được phần vui sướng
+  liên kết với lễ chiên vượt qua mãi.
 }
 
 loiDiepKhucBasMot = \lyricmode {
@@ -227,7 +269,11 @@ loiDiepKhucBasMot = \lyricmode {
   Al -- le -- lu -- ia.
   \set stanza = "3-4."
   Giê -- su Ki -- tô tình mến rất cao trọng cho nhân trần
-  \repeat unfold 19 { _ }
+  \set stanza = "5."
+  Đây Ngài đem thịt mình trao hiến
+  nuôi dưỡng hết những ai được giải thoát,
+  Al -- le -- lu -- ia.
+  %\repeat unfold 19 { _ }
   \set stanza = "5-6."
   Tô đôi môi chúng con thắm hồn Ngài đã đổ máu thiêng.
 }
@@ -239,6 +285,10 @@ loiDiepKhucBasHai = \lyricmode {
   \set stanza = "4."
   Việc kỳ diệu quá thương đoàn con Chúa nay đã hoàn tất.
   Nguyện Chúa luôn hiển danh
+  \repeat unfold 16 { _ }
+  \set stanza = "6."
+  Cho đoàn con được phần vui sướng
+  liên kết với lễ chiên vượt qua mãi.
 }
 
 % Dàn trang

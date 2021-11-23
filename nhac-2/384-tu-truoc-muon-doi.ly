@@ -82,15 +82,22 @@ nhacPhienKhucAlto = \relative c'' {
 nhacPhienKhucTenor = \relative c' {
   \key bf \major
   \skip 2*3
-  g2 ( |
-  g4) fs8 g |
+  \set fontSize =-2
+  g2 
+  \once \hide
+  ~ |
+  g4
+  \set fontSize =0
+  fs8 g |
   d2 ~ |
   d4 r8 g |
   g4 g8 c |
   a4 r |
-  r8 d
-  \once \override Stem.length = #9
+  r8
+  \once \override Stem.visible = ##f
+  d
   \stemDown
+  \once \override Stem.length = #10
   ef4 |
   d2 ~ |
   d4 r |
@@ -112,17 +119,20 @@ nhacPhienKhucBas = \relative c' {
   d |
   <<
     {
-      \voiceTwo
-      g2 ^( |
-      g4)
-    }
-    %{
-    \new Voice = "splitpart" {
       \voiceOne
-      <g g,>2 ~ |
-      <g g,>4
+      \set fontSize =-2
+      <g \once \hide \=1^( g, \=2_( >2 |
+      <g \=1^) g, \=2_) >4
     }
-    %}
+    
+    \new Voice {
+      \voiceOne
+      \once \override NoteColumn.force-hshift = #1.5
+      g2 _~ |
+      \once \override NoteColumn.force-hshift = #1.5
+      g4
+    }
+    
   >>
   \oneVoice
   fs8 g |
@@ -130,7 +140,10 @@ nhacPhienKhucBas = \relative c' {
   d4 r8 bf |
   c4 c8 ef |
   d4 r |
-  r8 bf c4 |
+  r8
+  \once \override Stem.length = #15
+  bf
+  \once \stemDown c4 |
   d2 ~ |
   d4 r |
   r8 g ef d |
