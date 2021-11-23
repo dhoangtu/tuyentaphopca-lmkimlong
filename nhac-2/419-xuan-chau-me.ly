@@ -38,13 +38,13 @@ nhacDiepKhucSop = \relative c'' {
   d4. b16 (a) |
   g8 b16 a g8 a |
   \slashedGrace { a16 ( } d4.) d8 |
-  d b16 (a) g4 ~ |
+  d b16 (a) g4 \fermata ~ |
   g g8 g |
   a4. a8 |
   a4. a8 |
   c c4 cs8 |
   d4. d8 |
-  d d b16 (d) b (a) |
+  d d b16 ([d b]) a |
   g4 c8 c |
   b2 ~ |
   b4 r \bar "|."
@@ -59,7 +59,7 @@ nhacDiepKhucSop = \relative c'' {
   \revert Flag.stroke-style
   |
   b8. (a16) e8 g |
-  \slashedGrace { a16 (g } a4.) fs8 |
+  \slashedGrace { a16 (b } a4.) fs8 |
   g2 ~ |
   g4. g8 |
   \repeat volta 2 {
@@ -72,7 +72,7 @@ nhacDiepKhucSop = \relative c'' {
   a2 ~ |
   a8 d e16 (d) a8 |
   d4. b16 (a) |
-  g8 g a16 (b a) g |
+  g8 g a16 ([b a]) g |
   a4 e16 (g a b) |
   }
   \alternative {
@@ -127,12 +127,12 @@ nhacDiepKhucAlto = \relative c'' {
   \revert Flag.stroke-style
   |
   b8. (a16) e8 g |
-  \slashedGrace { a16 (g } a4.) fs8 |
+  \slashedGrace { a16 (b } a4.) fs8 |
   g2 ~ |
   g4. g8 |
   g e4 g8 |
   a4. e8 |
-  e c4 g'8 |
+  d c4 g'8 |
   fs2 ~ |
   fs4 r |
   r b,8 (d) |
@@ -148,7 +148,7 @@ nhacDiepKhucAlto = \relative c'' {
 
 nhacDiepKhucBas = \relative c' {
   g8. g16 e8 d |
-  d4. e8 |
+  d4. g8 |
   a a, d4 |
   e8 e d e |
   g4. g8 |
@@ -179,7 +179,7 @@ nhacDiepKhucBas = \relative c' {
       g8
     }
   >>
-  r r ef |
+  r r \fermata ef ^\f ^> |
   <<
     {
       \voiceOne
@@ -189,7 +189,7 @@ nhacDiepKhucBas = \relative c' {
     \new Voice = "splitpart" {
       \voiceTwo
       d2 ~ |
-      d4 e8 ^> e
+      d4 c8 ^> c
     }
   >>
   \oneVoice
@@ -224,7 +224,7 @@ nhacDiepKhucBas = \relative c' {
   <b g>4 r8 g |
   g e4 g8 |
   a4. a8 |
-  a a (g) e |
+  a a ([g]) e |
   d2 ~ |
   d4 r |
   r g |
@@ -241,14 +241,14 @@ nhacDiepKhucBas = \relative c' {
 % Lời
 loiDiepKhucSop = \lyricmode {
   Thắp nến bên tòa Mẹ con đợi mùa xuân,
-  con đợi mùa xuân về.
-  Để ngâm bài thơ lệ khi thức dận hồn quê.
+  con đợi mùa xuân về
+  để ngâm bài thơ lệ khi thức dận hồn quê.
   quê.
-  Tiếng pháo giao thừ, pháo giao thừ đang nổ
-  tiếng pháo giao thừa lạnh lùng trong đêm khuya
+  Tiếng pháo giao thừa, pháo giao thừa đang nổ,
+  Tiếng pháo giao thừa lạnh lùng trong đêm khuya,
   hồn con như sóng vỗ, sóng vỗ,
   sóng vỗ vào bờ bến năm xưa.
-  Xuân về trên quê cũ vường nhà nở muôn hoa.
+  Xuân về trên quê cũ, Vườn nhà nở muôn hoa.
   Lòng con cũng chớm nở một mùa xuân đậm đà.
   Con xin Mẹ năm nay cho con mùa gặt mới.
   Để con hái vần say, con hái vần say
@@ -259,36 +259,37 @@ loiDiepKhucSop = \lyricmode {
 
 loiDiepKhucAlto = \lyricmode {
   Thắp nến bên tòa Mẹ, bên tòa Mẹ
-  con đợi mùa xuân, con đợi mùa xuân về.
-  Con đợi xuân về ngâm thơ lệ khi thức dận hồn quê.
+  con đợi mùa xuân, con đợi mùa xuân về,
+  con đợi xuân về ngâm thơ lệ khi thức dận hồn quê.
   quê.
-  Păng păng păng păng păng păng păng păng
+  păng păng păng păng păng păng păng păng
   păng păng păng păng păng păng
   lạnh lùng trong đêm khuya hồn con như sóng vỗ,
   sóng vỗ vào bờ, vào bờ bến năm xưa.
-  Xuân về trên quê cũ vườn nhà nở muôn hoa.
+  Xuân về trên quê cũ, vườn nhà nở muôn hoa.
   Lòng con cũng chớm nở một mùa xuân đậm đà.
   Con xin Mẹ năm nay cho con mùa gặt mới.
-  Để con hái vần say, vần thơ say trong tình yêu,
+  để con hái vần say vần thơ say trong tình yêu,
   tình yêu vời vợi.
   vợi.
 }
 
 loiDiepKhucBas = \lyricmode {
   Thắp nến bên tòa Mẹ, thắp nến ở tòa Mẹ.
-  Con đợi mùa xuân, con đợi mùa xuân sẽ trở về.
-  Con đợi xuân về ngâm thơ lệ khi thức dận hồn quê.
+  Con đợi mùa xuân
+  con đợi mùa xuân sẽ trở về,
+  con đợi xuân về ngâm thơ lệ khi thức dận hồn quê.
   Thắp nến bên tòa
   quê.
-  Păng păng păng păng păng păng păng păng
+  păng păng păng păng păng păng păng păng
   păng păng păng păng păng păng 
   lạnh lạnh lùng trong đêm khuya hồn con như sóng vỗ,
   sóng vỗ vào bờ, vào bờ bến năm xưa.
   Xuân về trên quê cũ vườn nhà nở muôn hoa.
   Lòng con cũng chớm nở mùa xuân đậm đà.
   Con xin Mẹ năm nay cho con mùa gặt mới.
-  Để con hái vần say hái thơ say trong tình yêu
-  trong tình vời vợi.
+  Để con hái vần say hái thơ say trong tình yêu,
+  mến yêu vời vợi.
   Con
   vợi.
 }
@@ -362,7 +363,7 @@ notBePhu =
     >>
   >>
   \layout {
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1.2
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
