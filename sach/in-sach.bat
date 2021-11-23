@@ -20,7 +20,7 @@ pdftk %GEN%\*.pdf cat output nhac.pdf
 
 pdflatex so-trang-chan-le.tex
 
-pdftk bia-truoc.pdf blank-a4.pdf so-trang-chan-le.pdf cat output tuyentaphopca-lmkimlong.pdf
+pdftk bia-truoc.pdf loi-ngo.pdf blank-a4.pdf so-trang-chan-le.pdf cat output tuyentaphopca-lmkimlong.pdf
 
 del /s /f /q %GEN% nhac.pdf *.aux *.log so-trang-chan-le.pdf
 rmdir /s/q %GEN%

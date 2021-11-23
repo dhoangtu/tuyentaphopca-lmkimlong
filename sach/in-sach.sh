@@ -50,6 +50,6 @@ qpdf --empty --pages "${filelist[@]}" -- nhac.pdf
 
 pdflatex so-trang-chan-le.tex
 
-qpdf --empty --pages  bia-truoc.pdf blank-a4.pdf so-trang-chan-le.pdf bia-sau-trong.pdf -- tuyentaphopca-lmkimlong.pdf
+qpdf --empty --pages  bia-truoc.pdf loi-ngo.pdf blank-a4.pdf so-trang-chan-le.pdf bia-sau-trong.pdf -- tuyentaphopca-lmkimlong.pdf
 
 rm -rf ${GEN} so-trang-chan-le.pdf nhac.pdf *.aux *.log
