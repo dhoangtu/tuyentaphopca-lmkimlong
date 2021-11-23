@@ -86,29 +86,33 @@ nhacDiepKhucSop = \relative c' {
   g2 ~ |
   g ~ |
   g ~ |
+  
+  \time 3/4
   \partial 4 g4 \bar "|." \break
   
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
-  \time 3/4
   r4 d'4. ^> c8 |
   bf4 c4. ^> bf8 |
   a4 ef'4. ^> c8 |
   d2 r4 |
-  r4 \tuplet 3/2 { d8 d c } bf4 |
+  r4 \tuplet 3/2 { d8 d d } bf4 |
   r \tuplet 3/2 { ef8 ef d } c4 |
   b!2 r4 |
   ef2. |
-  d2 a8 bf |
+  d4 g, a8 bf |
   cs2 r4 |
   r \tuplet 3/2 { d8 d c } bf r |
   r4 \tuplet 3/2 { c8 c bf } a8. a16 |
   b!2 r8 \bar "||" \break
   
   \key g \major
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 2/4
-  \partial 8*4 r4 r8 d, |
-  g8. g16 a8 d |
-  g,4 r8 bf |
+  \partial 8 d,8 |
+  b'8. b16 a8 d |
+  g,4 r8 b |
   fs g a4 ~ |
   a8 g g e |
   d4 r8 c' |
@@ -175,10 +179,13 @@ nhacDiepKhucAlto = \relative c' {
   b4 r8 g' |
   e4 c8 (e) |
   d2 ~ |
+  
+  \time 3/4
   d4 |
   
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
-  \time 3/4
   r4 <a' fs>2 |
   <g d>2. |
   <<
@@ -191,8 +198,8 @@ nhacDiepKhucAlto = \relative c' {
     }
   >>
   <a fs>2 r4 |
-  r \tuplet 3/2 { <a f>8 <a f> <a f> } g4 |
-  r \tuplet 3/2 { <c g>8 <c g> <a d,> } <a d,>4 |
+  r \tuplet 3/2 { <a fs>8 <a fs> <a fs> } g4 |
+  r \tuplet 3/2 { <c g>8 <c g> <a ef> } <a d,>4 |
   <g d>2 r4 |
   <c g>2. |
   g2 f4 |
@@ -202,8 +209,9 @@ nhacDiepKhucAlto = \relative c' {
   <g d>2 r8
   
   \key g \major
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 2/4
-  r4 r8 d |
+  d8 |
   g8. g16 fs8 f! |
   e4 r8 e |
   ds e c4 ~ |
@@ -211,7 +219,7 @@ nhacDiepKhucAlto = \relative c' {
   d4 r8 a' |a8. c16 g8 g |
   fs4 r8 fs |
   e ef d4 ~ |
-  d8 cs d c! |
+  d8 c c c |
   b4 r8 d
 }
 
@@ -267,10 +275,13 @@ nhacDiepKhucBas = \relative c' {
   <d g,>4 r8 <d' b,> |
   <c c,>4 <a c,> |
   <b g g,>2 ~ |
+  
+  \time 3/4
   <b g g,>4 |
   
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
-  \time 3/4
   r4 r d,8 (ef16 d) |
   g2 fs8 (g) |
   a4. g16 (a) d8 ef |
@@ -279,16 +290,17 @@ nhacDiepKhucBas = \relative c' {
   g4. fs8 e! fs |
   g2 d8 (ef16 d) |
   c4. c8 ef g |
-  bf2 a8 (g) |
+  bf2
+  \slashedGrace { a16 (bf } a8) (g) |
   a2 \tuplet 3/2 { a8 a fs } |
   fs2 \tuplet 3/2 { g8 g ef } |
   ef4. g8 d bf'16 (a) |
   \partial 8*5 g2 r8
   
   \key g \major
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 2/4
   R2
-  
 }
 
 % Lời
@@ -311,14 +323,13 @@ loiDiepKhucSop = \lyricmode {
   Lại đây ơ, lại đây ơ lại đây ơ bạn tình ta.
   
   Hm __ \repeat unfold 8 { _ }
-  Ta đi tìm bạn. Ta đi tìm bạn yêu.
-  Hm __ \repeat unfold 4 { _ }
-  Sương gieo nặng hạt.
-  Sương gieo nặng hạt còn chi.
+  ta đi tìm bạn, ta đi tìm bạn yêu.
+  Hm __ \repeat unfold 5 { _ }
+  sương rơi nặng hạt
+  sương rơi nặng hạt còn chi.
   
-  \set stanza = "Duo Nữ:"
-  Bồ câu ta ẩn chốn nào.
-  Dấu mình hang đá, non cao xa vời?
+  Bồ câu ta ẩn chốn nào
+  Giấu mình hang đá non cao xa vời,
   Cho ta thấy ánh mặt trời, cho nghe dìu dịu đôi lời của em.
 }
 
@@ -340,13 +351,13 @@ loiDiepKhucAlto = \lyricmode {
   Ơ bạn tình ta.
   
   Hm __ \repeat unfold 2 { _ }
-  Ta đi tìm bạn. Ta đi tìm bạn yêu.
+  ta đi tìm bạn, ta đi tìm bạn yêu.
   Hm __ \repeat unfold 3 { _ }
-  Sương gieo nặng hạt.
-  Sương gieo nặng hạt còn chi.
+  sương rơi nặng hạt
+  sương rơi nặng hạt còn chi.
   
-  Bồ câu ta ẩn chốn nào.
-  Dấu mình hang đá, non cao xa vời?
+  Bồ câu ta ẩn chốn nào
+  Giấu mình hang đá non cao xa vời,
   Cho ta thấy ánh mặt trời, cho nghe dìu dịu đôi lời của em.
   
   Lại
@@ -370,18 +381,19 @@ loiDiepKhucBas = \lyricmode {
   Ơ bạn tình ta.
   
   \set stanza = "Solo Nam:"
-  Phòng khuya lạnh giá, lạnh giá nhớ nhung.
-  Ta đi tìm bạn.
-  Ta đi tìm bạn, ôi lòng ta yêu.
-  Một vùng, một vùng non nước cô liêu.
-  Sương gieo nặng hạt. Sương gieo nặng hạt.
-  Tiêu điều thấy chi.
+  Phòng khuya lạnh giá, lạnh giá nhớ thương
+  Ta đi tìm bạn,
+  ta đi tìm bạn ôi lòng ta yêu.
+  Một vùng, một vùng non nước cô liêu
+  sương rơi nặng hạt,
+  sương rơi nặng hạt,
+  tiêu điều thấy chi.
 }
 
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
+  top-margin = 20\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm

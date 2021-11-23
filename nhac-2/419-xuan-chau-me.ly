@@ -4,8 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Xuân Chầu Mẹ" }
-  poet = "Thơ: Lm. Xuân Ly Băng"
-  composer = "Lm. Kim Long"
+  composer = "Thơ: Lm. Xuân Ly Băng"
+  arranger = "Lm. Kim Long"
   tagline = ##f
 }
 
@@ -297,7 +297,7 @@ loiDiepKhucBas = \lyricmode {
 \paper {
   #(set-paper-size "a4")
   top-margin = 15\mm
-  bottom-margin = 20\mm
+  bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0

@@ -12,8 +12,8 @@
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
   \partial 8 c8 |
-  c c d16 f d8 |
-  c8. d16 b8 a |
+  c c d16 f c8 |
+  c8. d16 bf8 a |
   <g e c>4 r |
   R2 \break
   
@@ -35,7 +35,7 @@ nhacDiepKhucSop = \relative c'' {
   d16 (f) d (c) g8 bf |
   c a16 (g) c,8 e |
   f2 ~ |
-  f4 r8 \bar "||" \break
+  f4 r8 \bar "|." \break
   
   c' |
   a (g) r8 a |
@@ -106,7 +106,7 @@ nhacDiepKhucAlto = \relative c' {
   \slashedGrace { f16 (e } f4.) \slashedGrace { c16 (} e8) |
   f8 g c (bf16 g) |
   \slashedGrace { f16 (e } f2) ~ |
-  f4 \bar "|."
+  f4 r \bar "||"
 }
 
 nhacDiepKhucTenor = \relative c' {
@@ -138,7 +138,7 @@ nhacDiepKhucTenor = \relative c' {
   d4. c8 |
   c f e4 |
   c2 ~ |
-  c4
+  c4 r
 }
 
 nhacDiepKhucBas = \relative c {
@@ -165,7 +165,7 @@ nhacDiepKhucBas = \relative c {
   f4. <g d>8 |
   <a c,> <f c> <e c> <g c,> |
   <f c f,>2 ~ |
-  <f c f,>4 r |
+  <f c f,>4 r8 r |
   r8 c16 c f8 r |
   R2
   r8 a16 a c8 c, |
@@ -191,7 +191,7 @@ nhacDiepKhucBas = \relative c {
   d4. a'8 |
   <a a,> <bf d,> <c c,>4 |
   <a f>2 ~ |
-  <a f>4
+  <a f>4 r
 }
 
 % Lời
@@ -199,10 +199,10 @@ loiDiepKhucSop = \lyricmode {
   \override Lyrics.LyricText.font-series = #'bold
   Intr. \repeat unfold 10 { _ }
   \revert Lyrics.LyricText.font-series
-  Đọng thắm cười duyên, chim câu đã gáy.
+  Đọng thắm cười duyên, chim câu đã gáy,
   Chim câu đã gáy bên hiên, bên hiên rộn ràng.
-  Ánh sáng thiều quang ô kìa xuân đến.
-  Xuân đến dâng ngàn hương thơm,
+  Ánh sáng thiều quang ô kìa xuân đến,
+  xuân đến dâng ngàn hương thơm,
   dâng ngàn hương thơm.
   Sáng nay tiếng nhạc ca dồn,
   buồn ly hương lắng trong hồn mênh mang.
@@ -214,7 +214,7 @@ loiDiepKhucAlto = \lyricmode {
   Đọng thắm cười duyên, thắm duyên
   ơ chim câu đã gáy, ơ chim câu đã gáy bên hiên,
   bên hiên rộn ràng, đã gáy rộn ràng.
-  Ánh sáng thiều quang, ánh quang
+  Ánh sáng thiều quang, ánh quang.
   ô kìa xuân đến, ô kìa xuân đến dâng ngàn hương thơm,
   dâng ngàn hương thơm.
   tinh tinh tang
@@ -257,7 +257,7 @@ loiDiepKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
+  top-margin = 20\mm
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
