@@ -29,7 +29,7 @@ nhacDiepKhucAlto = \relative c'' {
   e2 ~ |
   e4 \tuplet 3/2 { g8 g f } |
   e2 |
-  f'8. f16 d8 e16 (d) |
+  r |
   a8. a16 f8 g16 (f) |
   e2 ~ |
   e4 \tuplet 3/2 { f8 e e } |
@@ -44,7 +44,7 @@ nhacDiepKhucBas = \relative c {
   c2 |
   R2
   f8. f16 d8 e16 (d) |
-  c2 |
+  c2 ~ |
   c4 \tuplet 3/2 { g'8 <c c,> <bf c,> } |
   <a f>2
 }
@@ -66,7 +66,7 @@ loiDiepKhucSop = \lyricmode {
   Nếu Chúa không xây nhà
   vất vả luống công.
   Nếu Chúa không giữ thành
-  thì thức trắng đêm canh phòng ích gì.
+  canh phòng ích gì.
 }
 
 loiDiepKhucAlto = \lyricmode {
@@ -134,20 +134,6 @@ notBePhu =
    music)
 \score {
   \new ChoirStaff <<
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        printPartCombineTexts = ##f
-      }
-      <<
-      \new Voice \TongNhip \partCombine 
-        \nhacDiepKhucSop
-        \notBePhu -2 { \nhacDiepKhucAlto }
-      \new NullVoice = beSop \nhacDiepKhucSop
-      \new Lyrics \lyricsto beSop \loiDiepKhucSop
-      \new NullVoice = beAlto \nhacDiepKhucAlto
-      \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
-      >>
-    %{
     \new Staff <<
       \new Voice = "beSop" {
         \clef treble \TongNhip \nhacDiepKhucSop
@@ -158,9 +144,8 @@ notBePhu =
       \new Voice = "beAlto" {
         \clef treble \TongNhip \nhacDiepKhucAlto
       }
-      \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
+      \new Lyrics \lyricsto beAlto \loiDiepKhucSop
     >>
-    %}
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
