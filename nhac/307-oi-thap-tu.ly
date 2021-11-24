@@ -31,7 +31,7 @@ nhacDiepKhucSop = \relative c'' {
   d8 d' c b |
   a4. b8 |
   b2 ~ |
-  b4 \bar "||" \break
+  b4 \bar "|." \break
   
   \set Staff.printKeyCancellation = ##f
   \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
@@ -91,7 +91,7 @@ nhacDiepKhucAlto = \relative c'' {
   R2
   r8 d g16 (a) g8 |
   fs4. g8 |
-  d [d] d d |
+  d d d d |
   b4. e8 |
   d c b4 ~ |
   b8 b' a g |
@@ -100,6 +100,7 @@ nhacDiepKhucAlto = \relative c'' {
   g4
   
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major
   r4 |
   R2
@@ -116,7 +117,7 @@ nhacDiepKhucAlto = \relative c'' {
   r8 g'16 g c8 c |
   bf8 d,16 d bf'8 bf |
   a4. a16 (g) |
-  f4. g16 (ef) |
+  fs4. g16 (ef) |
   d4. d16 d |
   c8 bf4 ef8 |
   d2 ~ |
@@ -216,7 +217,7 @@ nhacDiepKhucBas = \relative c' {
   >>
   <fs d>8 g4 g,8 |
   c4 cs |
-  d r8 g, |
+  d r8 b |
   c c c4 |
   <<
     {
@@ -232,37 +233,42 @@ nhacDiepKhucBas = \relative c' {
 
 % Lời
 loiDiepKhucSop = \lyricmode {
-  Ôi Thập tự phúc lành thế giới, nguồn cậy trông
+  Ôi Thập tự phúc lành thế giới, nguồn cậy trông,
   nguồn cậy trông cứu rỗi, nguồn cậy trông cứu rỗi,
   nguồn cậy trông cứu rỗi lan tràn.
-  Hình khổ nhục nhằn, nay thành ngưỡng cửa thiên đang
-  ngưỡng cửa thiên đàng, ngưỡng cửa thiên đang quang vinh
-  Tế phẩm trên mình ngươi trên mình ngươi đó đã giang tay quy tụ người trần
+  Hình khổ nhục nhằn nay thành ngưỡng cửa thiên đàng,
+  ngưỡng cửa thiên đàng ngưỡng cửa thiên đang quang vinh
+  Tế phẩm trên mình ngươi trên mình ngươi đó đã giang tay quy tụ người trần,
   đã giang tay quy tụ người trần mặc cho thủ lãnh thế gian
   tấn công tấn công tấn công cũng chẳng được phần lợi chi.
-  Giê -- su hỡi con quỳ tạ Chúa và Thánh Thần,
-  Thánh Phụ cao tôn
+  Giê -- su hỡi con quỳ tạ Chúa và Thánh Thần, Thánh Phụ cao tôn
   Giúp con chiến đấu chẳng sờn theo cờ thập tự thiên môn khải hoàn.
 }
 
 loiDiepKhucAlto = \lyricmode {
-  \override Lyrics.LyricText.font-shape = #'italic
-  \repeat unfold 70 { _ }
+  Ôi Thập tự phúc lành thế giới, nguồn cậy trông,
+  nguồn cậy trông cứu rỗi, nguồn cậy trông cứu rỗi,
+  nguồn cậy trông cứu rỗi lan tràn.
+  Hình khổ nhục nhằn nay thành ngưỡng cửa thiên đàng,
+  ngưỡng cửa thiên đàng ngưỡng cửa thiên đang quang vinh
+  Tế phẩm trên mình ngươi trên mình ngươi đó đã giang tay quy tụ người trần,
+  đã giang tay quy tụ người trần
   mặc thủ lãnh thế gian mặc thủ lãnh thế gian
-  chẳng được chẳng được cũng chẳng được phần lợi chi
+  chẳng được, chẳng được cũng chẳng được phần lợi chi.
+  Giê -- su hỡi con quỳ tạ Chúa và Thánh Thần, Thánh Phụ cao tôn
+  Giúp con chiến đấu chẳng sờn theo cờ thập tự thiên môn khải hoàn.
 }
 
 loiDiepKhucBas = \lyricmode {
-  Ôi thập tự cứu đời, chốn ước trông chốn ước trông cứu rỗi,
-  cứu rỗi, chốn ước trông cứu rỗi lan tràn
+  Ôi thập tự cứu đời, chốn ước trông, chốn ước trông cứu rỗi,
+  cứu rỗi, chốn ước trông cứu rỗi lan tràn.
   Xưa nên hình khổ nhục nhằn mà nay thành cửa hiển vang,
   nay nên ngưỡng cửa hiển vang, ngưỡng cửa hiển vang quang vinh
   Này tế phẩm trên mình ngươi đó tế phẩm trên mình ngươi đã giang tay
-  quy tụ người trần đã giang tay quy tụ người trần
+  quy tụ người trần, đã giang tay quy tụ người trần
   dẫu thủ lãnh thế gian mặc thủ lãnh thế gian chẳng được thì
   cũng chẳng được phần ích gì.
-  Giê -- su hỡi con quỳ ca hòa và Thánh Thần,
-  Thánh Phụ cao tôn
+  Giê -- su hỡi con quỳ ca hòa và Thánh Thần, Thánh Phụ cao tôn
   Giúp con tranh đấu chẳng sờn theo cờ thập tự thiên môn khải hoàn.
 }
 
@@ -281,7 +287,7 @@ loiDiepKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  page-count = #2
+  %page-count = #2
 }
 
 TongNhip = {
@@ -307,6 +313,19 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
+    \new Staff <<
+      \new Voice = "beSop" {
+        \clef treble \TongNhip \nhacDiepKhucSop
+      }
+      \new Lyrics \lyricsto beSop \loiDiepKhucSop
+    >>
+    \new Staff <<
+      \new Voice = "beAlto" {
+        \clef treble \TongNhip \nhacDiepKhucAlto
+      }
+      \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
+    >>
+    %{
     \new Staff \with {
         \consists "Merge_rests_engraver"
         printPartCombineTexts = ##f
@@ -320,6 +339,7 @@ notBePhu =
       \new NullVoice = beAlto \nhacDiepKhucAlto
       \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
     >>
+    %}
     \new Staff <<
         \clef "bass"
         \new Voice = beBas {
@@ -330,7 +350,7 @@ notBePhu =
   >>
   \layout {
     %\override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricSpace.minimum-distance = #1
+    \override Lyrics.LyricSpace.minimum-distance = #0.8
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
