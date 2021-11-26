@@ -11,6 +11,14 @@
 
 % Nhạc
 nhacPhienKhucSop = \relative c'' {
+  <c a f>8 ^> <c a f> ~ <c a f>4 |
+  bf8 a16 g f8 f |
+  <d' bf f>8 ^> <d bf f> ^> ~ <d bf f>4 |
+  c8 bf16 a g8 g |
+  <e' c g> ^> <e c g> r <e c g> |
+  <d bf f> ^> <c g e> ^> r4 |
+  <f c a f>8 ^> <f c a f> r4 \bar "||" \break
+  
   c8 ^> c ^> ~ c4 |
   d8 ^> c16 bf g8 f |
   f2 ~ |
@@ -160,6 +168,8 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c'' {
+  R2*7
+  
   <a f>8 ^> <a f> ~ <a f>4 |
   r8 f ^> d r |
   R2*2
@@ -285,6 +295,8 @@ nhacPhienKhucAlto = \relative c'' {
 }
 
 nhacPhienKhucTenor = \relative c {
+  R2*7
+  
   R2*42
   
   \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
@@ -327,6 +339,14 @@ nhacPhienKhucTenor = \relative c {
 }
 
 nhacPhienKhucBas = \relative c {
+  <f f,>8 ^> <f f,> ^> ~ <f f,>4 |
+  R2
+  <bf bf,>8 ^> <bf bf,> ^> ~ <bf bf,>4 |
+  R2
+  <c c,>8 ^> <c c,> ^> r <a a,> |
+  <bf bf,> ^> <c c,> ^> r4 |
+  <f, c f,>8 ^> <f c f,> ^> r4 |
+  
   f8 ^> f ~ ^> f4 |
   r8 f ^> bf r |
   r4 r8 c, |
@@ -486,6 +506,7 @@ nhacPhienKhucBas = \relative c {
 
 % Lời
 loiPhienKhucSop = \lyricmode {
+  \repeat unfold 21 { _ }
   No -- el Chúa đâu ở trong đền thờ.
   Cao quá đối với Ngài
   Sang quá đối với Ngài,
@@ -576,6 +597,7 @@ loiPhienKhucTenor = \lyricmode {
 }
 
 loiPhienKhucBas = \lyricmode {
+  \repeat unfold 11 { _ }
   No -- el, No -- el Ngài nằm nơi cửa đền thánh
   Vì Ngài đâu bằng viên đá thấp nhất.
   Vì tất cả Ngài giá không bằng một vòng xích sắt.
@@ -624,7 +646,7 @@ loiPhienKhucBas = \lyricmode {
       "Deja Vu Serif Condensed"
       (/ 20 20)))
   print-page-number = #f
-  page-count = #7
+  %page-count = #7
 }
 
 TongNhip = {
