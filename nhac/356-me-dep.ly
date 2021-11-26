@@ -338,11 +338,6 @@ loiPhienKhucBas = \lyricmode {
   Tâm tư thổn thức mắt khơi lệ mừng.
 }
 
-loiPhienKhucSolo = \lyricmode {
-  \set stanza = "Solo Nữ:"
-  Xin ân phúc cho bốn trời sương gió
-}
-
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
