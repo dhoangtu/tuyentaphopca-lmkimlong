@@ -134,6 +134,8 @@ nhacPhienKhucSop = \relative c'' {
   a bf4 a8 |
   a2 \bar "||" \break
   
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key d \major
   fs8 (a) fs e |
   d g4 b8 |
@@ -356,6 +358,8 @@ nhacPhienKhucAlto = \relative c' {
   f d4 e8 |
   cs2
   
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key d \major
   fs8 (a) d, cs |
   b b4 g'8 |
@@ -497,6 +501,8 @@ nhacPhienKhucBas = \relative c' {
   d g4 f8 |
   a2
   
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
   \key d \major
   d,4 d8 fs |

@@ -26,6 +26,9 @@ notBePhu =
 
 % Nhạc
 nhacPhienKhucSolo = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key f \major \time 2/4
   r4
   R2*7
@@ -206,6 +209,9 @@ nhacPhienKhucSolo = \relative c' {
 }
 
 nhacPhienKhucSop = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   <>^\markup { \fontsize #6 \box \bold A }
   \key f \major \time 2/4
   \partial 4 r8 d |
@@ -483,6 +489,9 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key f \major \time 2/4
   r4
   R2*3
@@ -697,6 +706,9 @@ nhacPhienKhucAlto = \relative c'' {
 }
 
 nhacPhienKhucBas = \relative c {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key f \major \time 2/4
   r4 |
   <d' a d,>8 r r4 |

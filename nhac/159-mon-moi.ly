@@ -27,7 +27,9 @@ notBePhu =
 
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
   a2 |
@@ -166,7 +168,9 @@ nhacDiepKhucSop = \relative c'' {
 }
 
 nhacDiepKhucAlto = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   f2 |
   d2 ~ |
   d4 cs |
@@ -234,7 +238,9 @@ nhacDiepKhucAlto = \relative c' {
 }
 
 nhacDiepKhucTenor = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   d4 c8 bf |
   a d4 a8 |
   bf4 a ~ |
@@ -301,7 +307,9 @@ nhacDiepKhucTenor = \relative c' {
 }
 
 nhacDiepKhucBas = \relative c {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   d2 ~ |
   d |
   g |

@@ -89,6 +89,7 @@ nhacPhienKhucSopMot = \relative c'' {
   a,4 b |
   c e, | \break
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 3/4
   f4. e8 d4 |
   g2 e4 |
@@ -293,6 +294,7 @@ nhacPhienKhucAltoMot = \relative c' {
   f4 g8 (f) |
   e4 e | \break
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 3/4
   f4. e8 d4 |
   g2 e4 |
@@ -488,6 +490,7 @@ nhacPhienKhucBasMot = \relative c' {
   d4 g, |
   c r |
   
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \time 3/4
   R2. |
   r2 c,4 |

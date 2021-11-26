@@ -10,7 +10,9 @@
 }
 
 nhacPhienKhucSop = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key f \major \time 2/4
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
@@ -178,7 +180,9 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key f \major \time 2/4
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)
@@ -343,7 +347,9 @@ nhacPhienKhucAlto = \relative c' {
 }
 
 nhacPhienKhucBas = \relative c {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key f \major \time 2/4
   \set Timing.beamExceptions = #'()
   \set Timing.baseMoment = #(ly:make-moment 1/4)

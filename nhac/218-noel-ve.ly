@@ -26,7 +26,9 @@ notBePhu =
 
 % Nhạc phiên khúc
 nhacPhienKhucSop = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \partial 4 r4 |
   <g' d b>8 ^> <e c a> ^> r4 |
   r <f c f,>8 ^> <d g, f> ^> |
@@ -162,6 +164,9 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   r4
   R2*4
   r4 e8 e |
@@ -297,6 +302,9 @@ nhacPhienKhucAlto = \relative c' {
 }
 
 nhacPhienKhucBas = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   g8.
   ^\markup { \raise #1.5 \halign #-0.3 \bold "Intr." }
   g16 |

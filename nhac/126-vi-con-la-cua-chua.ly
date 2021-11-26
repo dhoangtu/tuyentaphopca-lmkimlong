@@ -12,6 +12,9 @@
 
 % Nhạc
 nhacPhienKhucSolo = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   r8
   R2*5
   r4
@@ -44,7 +47,9 @@ nhacPhienKhucSolo = \relative c'' {
 }
 
 nhacPhienKhucSop = \relative c'' {
-  \set Staff.explicitClefVisibility = #end-of-line-invisible
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   <<
     {
       \voiceOne
@@ -146,7 +151,9 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c'' {
-  \set Staff.explicitClefVisibility = #end-of-line-invisible
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   r8
   R2*5
   r4
@@ -214,7 +221,9 @@ nhacPhienKhucAlto = \relative c'' {
 }
 
 nhacPhienKhucBas = \relative c {
-  \set Staff.explicitClefVisibility = #end-of-line-invisible
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   r8 |
   r d g g |
   r4 r8 c, |

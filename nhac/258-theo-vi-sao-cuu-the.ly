@@ -11,6 +11,9 @@
 
 % Nhạc
 nhacPhienKhucSopMot = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   R2*5
   r8
   
@@ -111,6 +114,9 @@ nhacPhienKhucSopMot = \relative c'' {
 }
 
 nhacPhienKhucAltoMot = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   R2*5
   r8 f g g |
   f2 ~ |
@@ -202,6 +208,9 @@ nhacPhienKhucAltoMot = \relative c' {
 }
 
 nhacPhienKhucTenorMot = \relative c {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   R2
   r8 d16 d g8 e16 e |
   <<
@@ -312,6 +321,9 @@ nhacPhienKhucTenorMot = \relative c {
 }
 
 nhacPhienKhucBasMot = \relative c {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   r8 c16
   ^\markup { \raise #2 \bold "Intr." }
   c f8 d16 d |

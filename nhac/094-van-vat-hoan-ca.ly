@@ -34,6 +34,9 @@ nhacIntroBas = \relative c {
 
 % Nhạc phiên khúc
 nhacPhienKhucSolo = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \time 2/4
   R2*81
   r4
@@ -92,7 +95,9 @@ nhacPhienKhucSolo = \relative c'' {
 }
 
 nhacPhienKhucSop = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key c \major \time 2/4
   \once \hide Staff.TimeSignature
   \set Timing.beamExceptions = #'()
@@ -445,7 +450,9 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key c \major \time 2/4
   \once \hide Staff.TimeSignature
   \set Timing.beamExceptions = #'()
@@ -710,7 +717,9 @@ nhacPhienKhucAlto = \relative c'' {
 }
 
 nhacPhienKhucBas = \relative c' {
+\override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key c \major \time 2/4
   \once \hide Staff.TimeSignature
   \set Timing.beamExceptions = #'()

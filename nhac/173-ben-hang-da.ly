@@ -11,7 +11,9 @@
 
 % Nhạc
 nhacPhienKhucSop = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key f \major \time 2/4
   \partial 4 r8 <c e,>8 |
   <a f> <f d>16 <f d> <g b,!>8 <g b,> \bar "|."
@@ -189,7 +191,9 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key f \major \time 2/4
   r4
   R2*2
@@ -279,7 +283,9 @@ nhacPhienKhucAlto = \relative c' {
 }
 
 nhacPhienKhucBas = \relative c {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key f \major \time 2/4
   r4 |
   R2

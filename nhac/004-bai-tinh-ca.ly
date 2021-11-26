@@ -215,6 +215,9 @@ nhacPhienKhucBasMot = \relative c' {
 }
 
 nhacPhienKhucSolo = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key f \major
   r4
   R2*16

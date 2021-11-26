@@ -61,7 +61,8 @@ nhacIntroBas = \relative c {
 
 % Nhạc phiên khúc
 nhacPhienKhucSop = \relative c' {
-  \set Staff.printKeyCancellation = ##f
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f\set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major \time 2/4
   \once \omit Staff.TimeSignature
   \partial 4 \tuplet 3/2 { d8 f f } |
@@ -372,7 +373,8 @@ nhacPhienKhucSop = \relative c' {
 }
 
 nhacPhienKhucAlto = \relative c'' {
-  \set Staff.printKeyCancellation = ##f
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f\set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major \time 2/4
   r4 R2*13
   
@@ -539,7 +541,9 @@ nhacPhienKhucAlto = \relative c'' {
 }
 
 nhacPhienKhucBas = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key bf \major \time 2/4
   r4 R2*13
   

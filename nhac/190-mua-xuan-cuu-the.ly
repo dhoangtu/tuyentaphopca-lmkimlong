@@ -11,6 +11,9 @@
 
 % Nhạc phiên khúc
 nhacPhienKhucSop = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \partial 4 \tuplet 3/2 { c8 e g } |
   \tuplet 3/2 { e g c } \tuplet 3/2 { <g e>8 <c g> <e c> } |
   <<
@@ -165,6 +168,9 @@ nhacPhienKhucSop = \relative c' {
 }
 
 nhacPhienKhucAlto = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   r4
   R2*4
   r8 r r4 |
@@ -267,6 +273,9 @@ nhacPhienKhucAlto = \relative c' {
 }
 
 nhacPhienKhucBas = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   r4 |
   \tuplet 3/2 { c8 g e } \tuplet 3/2 { g e c } |
   f4 g |

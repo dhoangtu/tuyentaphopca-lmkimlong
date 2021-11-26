@@ -11,7 +11,9 @@
 
 % Nhạc phiên khúc
 nhacPhienKhucSop = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   R2 \bar ".|:"
   R2
   d4. ^> a8 |
@@ -209,7 +211,9 @@ nhacPhienKhucSop = \relative c'' {
 }
 
 nhacPhienKhucAlto = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   R2
   bf4. ^> g8 |
   a2 ~ |
@@ -356,7 +360,9 @@ nhacPhienKhucAlto = \relative c'' {
 }
 
 nhacPhienKhucBas = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   a4. ^> f8 |
   g2 ~ |
   g4 f |

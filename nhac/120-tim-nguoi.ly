@@ -11,8 +11,9 @@
 
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
-  \set Staff.explicitClefVisibility = #end-of-line-invisible
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \once \override Score.RehearsalMark.font-size = #0.1
   \mark \markup { \musicglyph #"scripts.segno" }
   g8. g16 g8 a |
@@ -54,8 +55,9 @@ nhacDiepKhucSop = \relative c'' {
 }
 
 nhacDiepKhucAlto = \relative c'' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
-  \set Staff.explicitClefVisibility = #end-of-line-invisible
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   g8. g16 g8 a |
   \slashedGrace { a16 ( } b4.) d,8 |
   g a4 g8 |
@@ -92,8 +94,9 @@ nhacDiepKhucAlto = \relative c'' {
 }
 
 nhacDiepKhucBas = \relative c' {
+  \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
-  \set Staff.explicitClefVisibility = #end-of-line-invisible
+  \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   R2
   g8. g16 g8 a |
   \slashedGrace { a16 ( } b4) cs |
