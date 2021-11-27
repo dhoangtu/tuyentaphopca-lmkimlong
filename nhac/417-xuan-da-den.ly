@@ -75,7 +75,8 @@ nhacDiepKhucAlto = \relative c' {
   r c g f |
   e2 ~ |
   e4 r |
-  R2*2
+  R2
+  r8 e d d |
   e8. d16 c8 b |
   r g' g e |
   e8. f16 e8 d |
@@ -88,7 +89,7 @@ nhacDiepKhucAlto = \relative c' {
   f4 f8 (a) |
   gs2 ~ |
   gs4 r8 gs |
-  a8. g16 c (d) c8 |
+  a8. b16 c (d) c8 |
   b2 |
   r8 a b a |
   gs4. a8 |
@@ -102,7 +103,7 @@ nhacDiepKhucAlto = \relative c' {
   e8 |
   fs4 \tuplet 3/2 { fs8 fs a } |
   gs4 r8 gs |
-  a4 \tuplet 3/2 { fs8 gs a } |
+  a4 \tuplet 3/2 { fs8 b a } |
   gs4 \tuplet 3/2 { a8 e d } |
   cs8. a16 b8 cs |
   d4 d |
@@ -121,15 +122,15 @@ nhacDiepKhucBas = \relative c {
   d8. d16 e8 e |
   r e g g |
   c,2 |
-  c8 c4 g8 |
-  ef'4 d |
+  c8 c4 g'8 |
+  ef4 d |
   g2 ~ |
   g8 f e d |
   c4 b |
   c4. g'8 |
   f4 d8 (g) |
   c,4 r8 g' |
-  e d g e16 (f) |
+  e d g e16 (d) |
   c2 ~ |
   c4 r8 g |
   c d e4 |
@@ -174,8 +175,8 @@ nhacPhienKhucSop = \relative c'' {
   \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \key c \major
   e |
-  a4 \tuplet 3/2 { a8 a cs } |
-  b4 \tuplet 3/2 { b8 b <fs' a,> } |
+  a4 \tuplet 3/2 { a8 a c } |
+  b4 \tuplet 3/2 { b8 b <f' a,> } |
   <<
     {
       e2 ~ |
@@ -235,7 +236,7 @@ loiDiepKhucAlto = \lyricmode {
   Lặng nghe lòng đất đêm nay,
   lòng đất đêm nay,
   Rộn ràng tiếng pháo báo ngày xuân sang.
-  gian đã tàn rồi,
+  Trong huyệt thời gian đã tàn rồi,
   Hoa niên của một (i) tuổi vàng,
   tuổi vàng Mẹ ơi.
   Xuân đã đến rồi,

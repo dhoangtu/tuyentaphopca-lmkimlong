@@ -57,7 +57,7 @@ nhacPhienKhucSop = \relative c'' {
   a8 g16 f g8 a |
   bf2 ~ |
   bf4 r |
-  r8 b! \tuplet 3/2 { a8 a f } |
+  r8 b! \tuplet 3/2 { c8 c f, } |
   e4. d8 |
   d c4 f8 |
   f2 \bar "||" \break
@@ -74,7 +74,7 @@ nhacPhienKhucSop = \relative c'' {
   af4 r8 c ^> |
   c4 ^> \tuplet 3/2 { af8 f g } |
   g4. c,8 |
-  d8. f16 d8 c |
+  df8. f16 df8 c |
   f2 ~ |
   f8 f af bf |
   g2 ~ |
@@ -114,7 +114,7 @@ nhacPhienKhucSop = \relative c'' {
   c4 r \bar "||" \break
   
   \key f \major
-  a8 ^> a ~ a4 |
+  a8 ^> a ^> ~ a4 |
   a8 g16 f g (f) d8 |
   c2 |
   R2*2
@@ -134,11 +134,11 @@ nhacPhienKhucSop = \relative c'' {
   f8 af4 bf8 |
   c2 ~ |
   c4 r8 g |
-  c g (a) g |
+  c, g' (a) g |
   f2 ~ |
   f4 r \bar "||" \break
   
-  a8 ^> a ^> ~ a4 |
+  c'8 ^> c ^> ~ c4 |
   d8 c16 bf g8 f |
   f4 r |
   R2*2
@@ -158,7 +158,7 @@ nhacPhienKhucSop = \relative c'' {
   c2 ~ |
   c ~ |
   c4 r |
-  f8. f16 bf8 ^> bf |
+  f8. f16 bf8 ^> bf ^> |
   r4 g8. g16 |
   c8 ^> c ^> r a |
   bf d,4 c8 |
@@ -236,14 +236,14 @@ nhacPhienKhucAlto = \relative c'' {
   c4 r |
   
   \key f \major
-  e8 ^> e ^> ~ e4 |
+  e,8 ^> e ^> ~ e4 |
   f8 c16 a c8 f |
   g2 ~ |
   g4 r |
   R2*5
   R2*19
   
-  f,8 ^> f ^> ~ f4
+  f8 ^> f ^> ~ f4
   f8 c16 d b!8 b |
   c2 |
   R2*2
@@ -309,8 +309,8 @@ nhacPhienKhucTenor = \relative c {
   e!4 g8 e |
   f4 r |
   f e! |
-  f r8 ef ^> |
-  ef4 ^> r |
+  f r8 <g ef> ^> |
+  <g ef>4 ^> r |
   \tuplet 3/2 { df8 bf c } c4 |
   r r8 g' |
   af8. c16 af (g) f8 |
@@ -401,8 +401,8 @@ nhacPhienKhucBas = \relative c {
   f4 r |
   bf, c |
   f r8 <c' c,> ^> |
-  <c c,>4 r |
-  \tuplet 3/2 { df,8 f f } e!4 |
+  <c c,>4 ^> r |
+  \tuplet 3/2 { bf,8 f' f } e!4 |
   r r8 g |
   af8. c16 af (g) f8 |
   bf4 r |
@@ -431,7 +431,7 @@ nhacPhienKhucBas = \relative c {
   f'8 ^> f ^> ~ f4 |
   R2
   r4 r8 c |
-  \slashedGrace { d16 ( } f8) e16 c e8 f |
+  \slashedGrace { d16 ( } f8) d16 c e8 f |
   g2 ( |
   f4) r |
   r8 df4 df8 |
@@ -516,13 +516,13 @@ loiPhienKhucSop = \lyricmode {
   No -- el Ngài đang nằm ngoài hè phố
   mưa gió bơ vơ nghe nhạc rượu say sưa.
   No -- el Chúa đâu ở trong hang đá
-  ở dưới đây nhà thờ bên anh và bên tôi.
+  ở dưới đáy nhà thờ bên anh và bên tôi.
   Ngài đang úp mặt ở nghĩa trang dưới chân thánh giá
   khi chiều buông khóc thét khỏi cần ai thương
   Vì chỉ có một người thương thì đã chết rồi
   để lại bảy đứa trẻ mồ côi
   sau một phát súng nổ.
-  No -- el, Chúa ở đâu trong hang đá
+  No -- el, Chúa đâu ở trong hang đá
   Hay Ngài đang nằm dài trên chõng,
   mỗi chuyển dịch đều nhờ đứa con côi,
   Mẹ nó sang sông đã hơn một mùa thu rồi.
@@ -559,7 +559,7 @@ loiPhienKhucAlto = \lyricmode {
   nằm ngoài hè phố mưa gió bơ vơ
   nghe nhạc rượu say sưa.
   No -- el Chúa đâu ở trong hang đá
-  ở dưới đây nhà thờ bên anh và bên tôi.
+  ở dưới đáy nhà thờ bên anh và bên tôi.
   No -- el Chúa đâu ở trong hang đá
   Hm __ _ _ _ _
   khóc thét khỏi cần ai thương
