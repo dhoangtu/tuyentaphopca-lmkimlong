@@ -62,7 +62,7 @@ nhacPhienKhucSop = \relative c'' {
   \slashedGrace { f,16 ( } g2) |
   r8 bf c d |
   \slashedGrace { g,16 ( } a2) ~ |
-  a4 a16 (bf) a (bf) |
+  a4 a16 ([bf]) a (bf) |
   c4. d8 |
   d4 bf8 d |
   f4. d8 |
@@ -165,7 +165,7 @@ nhacPhienKhucAlto = \relative c' {
   \slashedGrace { d16 ( } e2) |
   r8 d f d |
   \slashedGrace { c16 ( } f2) ~ |
-  f4 f16 (g) f (g) |
+  f4 f16 ([g]) f (g) |
   a4. bf8 |
   bf4 g8 bf |
   a4. f8 |
@@ -277,7 +277,7 @@ nhacPhienKhucBas = \relative c {
   c ~ |
   c8 c' c c |
   f,2 ~ |
-  f4 c16 (d) c (d) |
+  f4 c16 ([d]) c (d) |
   f2 ~ |
   f8 f f f |
   bf4 r |
