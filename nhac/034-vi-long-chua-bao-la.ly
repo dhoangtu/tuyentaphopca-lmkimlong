@@ -4,8 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Vì Lòng Chúa Bao La" }
-  composer = " "
-  %arranger = "Lm. Kim Long"
+  composer = "Lm. Kim Long"
   tagline = ##f
 }
 

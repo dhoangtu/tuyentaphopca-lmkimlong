@@ -4,7 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Ca Mừng Thiên Chúa" }
-  composer = "Nhạc và Lời: Lm. Kim Long"
+  poet = "Ý: Tv. 116"
+  composer = "Lm. Kim Long"
   %arranger = " "
   tagline = ##f
 }

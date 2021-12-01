@@ -4,7 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Lạy Bà Chúa" }
-  poet = "Thánh thi Các Giờ Kinh Phụng Vụ"
+  poet = "Lời: Thánh thi CGKPV"
   composer = "Lm. Kim Long"
   tagline = ##f
 }

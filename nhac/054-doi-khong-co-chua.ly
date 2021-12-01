@@ -4,9 +4,9 @@
 
 \header {
   title = \markup { \fontsize #3 "Đời Không Có Chúa" }
-  poet = "Thơ: Terasa Cả"
-  arranger = "Dịch: Lm. Đỗ xuân Quế"
-  composer = "Nhạc: Lm. Kim Long"
+  poet = "Lời: Thánh Têrêsa Giêsu"
+  composer = "Thơ dịch: Lm. Đỗ xuân Quế"
+  arranger = "Nhạc: Lm. Kim Long"
   tagline = ##f
 }
 

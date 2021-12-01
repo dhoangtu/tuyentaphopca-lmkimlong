@@ -105,12 +105,15 @@ nhacPhienKhucAltoMot = \relative c' {
   fs2 ~ |
   fs4
   
+  \set Staff.Indent  = #5
   \key d \major
+  %\set Staff.shortInstrumentName = \markup { \bold \huge "Coro" }
   r |
   e2 |
   d4 fs8 a |
   b4 b8 b |
   a4 r |
+  %\set Staff.shortInstrumentName = ""
   r fs8 g |
   fs4 r |
   r d8 ^> cs |
@@ -375,13 +378,14 @@ notBePhu =
    music)
 
 \score {
-  \new ChoirStaff <<
+  <<
     \new Staff <<
       \new Voice = "solo" {
         \clef treble \TongNhip \nhacPhienKhucSolo
       }
       \new Lyrics \lyricsto solo \loiPhienKhucSolo
     >>
+  \new ChoirStaff <<
     \new Staff <<
       \new Voice = "beSop" {
         \clef treble \TongNhip \nhacPhienKhucSopMot
@@ -401,6 +405,7 @@ notBePhu =
       }
       \new Lyrics \lyricsto beBas \loiPhienKhucBasMot
     >>
+  >>
   >>
   \layout {
     \override Lyrics.LyricSpace.minimum-distance = #0.6

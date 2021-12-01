@@ -671,7 +671,7 @@ TongNhip = {
 }
 
 \score {
-  \new ChoirStaff <<
+  <<
     \new Staff <<
         \clef treble
         \new Voice = beSolo {
@@ -679,36 +679,36 @@ TongNhip = {
         }
       \new Lyrics = "loiDiepKhucSolo" \lyricsto beSolo \loiDiepKhucSolo
     >>
-    %\new PianoStaff <<
-    \new Staff <<
-        \clef treble
-        \new Voice = beSop {
-          \TongNhip \nhacDiepKhucSop
-        }
-      \new Lyrics = "loiDiepKhucSop" \lyricsto beSop \loiDiepKhucSop
+    \new ChoirStaff <<
+      \new Staff <<
+          \clef treble
+          \new Voice = beSop {
+            \TongNhip \nhacDiepKhucSop
+          }
+        \new Lyrics = "loiDiepKhucSop" \lyricsto beSop \loiDiepKhucSop
+      >>
+      \new Staff <<
+          \clef treble
+          \new Voice = beAlto {
+            \TongNhip \nhacDiepKhucAlto
+          }
+        \new Lyrics = "loiDiepKhucAlto" \lyricsto beAlto \loiDiepKhucAlto
+      >>
+      \new Staff <<
+          \clef "violin_8"
+          \new Voice = beTenor {
+            \TongNhip \nhacDiepKhucTenor
+          }
+        \new Lyrics = "loiDiepKhucTenor" \lyricsto beTenor \loiDiepKhucTenor
+      >>
+      \new Staff <<
+          \clef "bass"
+          \new Voice = beBas {
+            \TongNhip \nhacDiepKhucBas
+          }
+        \new Lyrics = "loiDiepKhucBas" \lyricsto beBas \loiDiepKhucBas
+      >>
     >>
-    \new Staff <<
-        \clef treble
-        \new Voice = beAlto {
-          \TongNhip \nhacDiepKhucAlto
-        }
-      \new Lyrics = "loiDiepKhucAlto" \lyricsto beAlto \loiDiepKhucAlto
-    >>
-    \new Staff <<
-        \clef "violin_8"
-        \new Voice = beTenor {
-          \TongNhip \nhacDiepKhucTenor
-        }
-      \new Lyrics = "loiDiepKhucTenor" \lyricsto beTenor \loiDiepKhucTenor
-    >>
-    \new Staff <<
-        \clef "bass"
-        \new Voice = beBas {
-          \TongNhip \nhacDiepKhucBas
-        }
-      \new Lyrics = "loiDiepKhucBas" \lyricsto beBas \loiDiepKhucBas
-    >>
-    %>>
   >>
   \layout {
     \override Lyrics.LyricSpace.minimum-distance = #0.5

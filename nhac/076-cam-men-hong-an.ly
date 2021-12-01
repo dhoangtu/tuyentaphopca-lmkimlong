@@ -13,9 +13,9 @@
 nhacDiepKhucSop = \relative c'' {
   \partial 4. r8 r4
   r8 b c a |
-  e4 c8 (d) |
+  e4 c8 (d) \bar ".|:"
   e4 r8 a |
-  c8. c16 a8 a \bar ".|:"
+  c8. c16 a8 a |
   b4. g8 |
   a4 r |
   r8 a a a |

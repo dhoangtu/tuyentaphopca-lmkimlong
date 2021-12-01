@@ -4,8 +4,8 @@
 
 \header {
   title = \markup { \fontsize #3 "Con Muốn Trọn Đời" }
-  composer = "Thơ: Đỗ Xuân Quế"
-  %arranger = "Lm. Kim Long"
+  poet = "Thơ: Lm. Đỗ Xuân Quế"
+  composer = "Lm. Kim Long"
   tagline = ##f
 }
 

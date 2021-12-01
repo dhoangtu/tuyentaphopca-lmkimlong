@@ -1240,31 +1240,33 @@ TongNhip = {
 }
 
 \score {
-  \new ChoirStaff <<
-    \set Score.connectArpeggios = ##t
-    \new Staff <<
-      \new Voice = "solo" {
-        \clef treble \nhacPhienKhucSolo
-      }
-      \new Lyrics \lyricsto solo \loiPhienKhucSolo
-    >>
-    \new Staff <<
-      \new Voice = "beSop" {
-        \clef treble \nhacPhienKhucSop
-      }
-      \new Lyrics \lyricsto beSop \loiPhienKhucSop
-    >>
-    \new Staff <<
-      \new Voice = "beAlto" {
-        \clef treble \nhacPhienKhucAlto
-      }
-      \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
-    >>
-    \new Staff <<
-      \new Voice = "beBas" {
-        \clef bass \nhacPhienKhucBas
-      }
-      \new Lyrics \lyricsto beBas \loiPhienKhucBas
+  <<
+      \new Staff <<
+        \new Voice = "solo" {
+          \clef treble \nhacPhienKhucSolo
+        }
+        \new Lyrics \lyricsto solo \loiPhienKhucSolo
+      >>
+    \new ChoirStaff <<
+      \set Score.connectArpeggios = ##t
+      \new Staff <<
+        \new Voice = "beSop" {
+          \clef treble \nhacPhienKhucSop
+        }
+        \new Lyrics \lyricsto beSop \loiPhienKhucSop
+      >>
+      \new Staff <<
+        \new Voice = "beAlto" {
+          \clef treble \nhacPhienKhucAlto
+        }
+        \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
+      >>
+      \new Staff <<
+        \new Voice = "beBas" {
+          \clef bass \nhacPhienKhucBas
+        }
+        \new Lyrics \lyricsto beBas \loiPhienKhucBas
+      >>
     >>
   >>
   \layout {

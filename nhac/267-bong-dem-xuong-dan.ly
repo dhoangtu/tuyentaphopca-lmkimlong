@@ -4,7 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Bóng Đêm Xuống Dần" }
-  composer = "Cổ điệu: Ukraina"
+  composer = "Cổ điệu: Ukraine"
   arranger = "Lm. Kim Long"
   tagline = ##f
 }
