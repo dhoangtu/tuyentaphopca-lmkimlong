@@ -150,7 +150,7 @@ loiPhienKhucBasMot = \lyricmode {
   nhân trần nên xa hút rồi ngày tháng điêu linh
   hãy ca lên này
   Hãy cất lời hòa ca lên
-  thiên thấn xin ca tụng ngàn đời Chúa hiển vinh.
+  thiên thần xin ca tụng ngàn đời Chúa hiển vinh.
 }
 
 loiPhienKhucBasHai = \lyricmode {
