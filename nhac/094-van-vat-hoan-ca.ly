@@ -38,13 +38,13 @@ nhacPhienKhucSolo = \relative c'' {
   \set Staff.printKeyCancellation = ##f
   \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
   \time 2/4
-  R2*81
   r4
+  R2*80
   \time 3/4
   R2.*15
   
   \time 2/4
-  R2*26
+  R2*27
   \key f \major
   c4. (a16 g) |
   f8. (e16 f8 g) |
@@ -222,7 +222,6 @@ nhacPhienKhucSop = \relative c'' {
     c4. d16 c |
     \slashedGrace { g16 (af } g2 ~) |
     g8
-    %\once \override NoteColumn.X-offset =  <>
     ef'16 c ef8 c |
     d4. d16 b! |
     d8 b! c4 |
@@ -246,8 +245,6 @@ nhacPhienKhucSop = \relative c'' {
   \set Staff.printKeyCancellation = ##f
   \key c \major \time 3/4
   \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/4)
-  \set Timing.beatStructure = #'(1 1 1)
   <>^\markup {
     \raise #3 \halign #-0.3
     \fontsize #2 \bold "Chị Nước Mênh Mông"
@@ -547,8 +544,6 @@ nhacPhienKhucAlto = \relative c'' {
   \set Staff.printKeyCancellation = ##f
   \key c \major \time 3/4
   \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/4)
-  \set Timing.beatStructure = #'(1 1 1 1)
   R2.
   r4 r8 g' c8. b16 |
   b4 g8 e f8. e16 |
@@ -816,10 +811,15 @@ nhacPhienKhucBas = \relative c' {
   c4 r
   
   \set Staff.printKeyCancellation = ##f
-  \key c \major \time 3/4
+  \key c \major
   \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/4)
   \set Timing.beatStructure = #'(1 1 1)
+  \overrideTimeSignatureSettings
+      #'(3 . 4)  % timeSignatureFraction
+      #'(1 . 4)  % baseMomentFraction
+      #'(1 1 1)  % beatStructure
+      #'()       % beamExceptions
+  \time 3/4
   c'4. e,8 c' a |
   g2. ~ |
   g4 r8 e d g |
@@ -1379,9 +1379,11 @@ notBePhu =
         #'((basic-distance . 8)
 	   (minimum-distance . 8)
 	   (padding . 1))
+        
     \context {
       \Staff \RemoveEmptyStaves
       \override VerticalAxisGroup.remove-first = ##t
     }
+        
   }
 }
