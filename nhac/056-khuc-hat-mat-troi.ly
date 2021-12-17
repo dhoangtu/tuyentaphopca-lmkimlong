@@ -4,7 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Khúc Hát Mặt Trời" }
-  composer = "Thơ: Xuân Ly Băng"
+  composer = "Thơ: Lm. Xuân Ly Băng"
   arranger = "Lm. Kim Long"
   tagline = ##f
 }

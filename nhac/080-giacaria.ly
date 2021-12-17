@@ -4,7 +4,7 @@
 
 \header {
   title = \markup { \fontsize #3 "Giacaria" }
-  composer = "Thơ: Xuân Ly Băng"
+  composer = "Thơ: Lm. Xuân Ly Băng"
   poet = "Lời: Lc. 1, 5-25"
   arranger = "Lm. Kim Long"
   tagline = ##f
