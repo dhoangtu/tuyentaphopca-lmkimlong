@@ -543,7 +543,7 @@ nhacPhienKhucBasMot = \relative c' {
   c e, f4 |
   e8 (d) c c |
   e4 (d8 e) |
-  f2 |
+  f2 ~ |
   f2 ~ |
   f4 e |
   f f |
@@ -636,7 +636,7 @@ loiPhienKhucSopMot = \lyrics {
   Chúa đặt các anh là vật quý để giữ gìn nuôi dưỡng sinh linh.
   Lạy vạn lạy Chúa,
   lạy vạn lạy Chúa tôi, tôi ngợi khen Chúa
-  vì Chúa đã dựng nên dòng nước chị chúng tôi.
+  vì Chúa đã dựng nên giòng nước chị chúng tôi.
   Nước cần (mà) nước quý,
   nước trong trắng đầy vơi
   Chúa tôi, tôi ngợi khen Chúa.
@@ -683,7 +683,7 @@ loiPhienKhucAltoMot = \lyrics {
   Chúa đặt các anh là vật quý để giữ gìn nuôi dưỡng sinh linh.
   Lạy vạn lạy Chúa,
   lạy vạn lạy Chúa tôi, tôi ngợi khen Chúa
-  vì Chúa đã dựng nên dòng nước chị chúng tôi.
+  vì Chúa đã dựng nên giòng nước chị chúng tôi.
   Nước cần,
   nước cần (mà) nước quý,
   nước đầy vơi.
@@ -731,7 +731,7 @@ loiPhienKhucBasMot = \lyrics {
   Anh Trời quang và anh Không Khí,
   Chúa đặt các anh là vật quý để giữ gìn nuôi dưỡng sinh linh.
   Tôi ngợi khen Chúa,
-  tôi ngợi khen Chúa tôi, tôi tới khen Chúa dòng Nước chị chúng tôi.
+  tôi ngợi khen Chúa tôi, tôi tới khen Chúa giòng Nước chị chúng tôi.
   Nước cần nước quý nước đầy vơi.
   Lạy Chúa, lạy Chúa tôi, tôi ngợi khen Chúa
   vì Anh Lửa giữa đêm tối sáng soi.
@@ -739,7 +739,7 @@ loiPhienKhucBasMot = \lyrics {
   Mẹ bồng bế, mẹ dưỡng nuôi.
   Và bốn mùa sinh trái tốt tươi.
   Ngợi khen Thiên Chúa vì bao người một lòng mến Chúa.
-  Hằng tha thứ cho nhau
+  tha thứ cho nhau
   Và bao người nhận cực khổ đớn đau.
   Vẫn một lòng và vui chịu,
   vẫn một lòng vui trước sau.

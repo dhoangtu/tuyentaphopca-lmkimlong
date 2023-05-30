@@ -169,7 +169,7 @@ loiPhienKhucSopMot = \lyricmode {
 
 loiPhienKhucSopHai = \lyricmode {
   \set stanza = #"2."
-  Nguyện Giê -- ru -- sa -- lem và lớp lớp lũy thành
+  Cầu Giê -- ru -- sa -- lem và lớp lớp lũy thành
   đều được bình an.
   Anh em sống trong niềm hạnh phúc,
   Các lâu đài trong khắp thành,

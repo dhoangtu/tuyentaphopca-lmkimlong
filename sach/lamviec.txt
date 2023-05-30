@@ -1,3 +1,59 @@
+Hướng dẫn sử dụng Lilypond
+
+Lilypond là phần mềm soạn nhạc, tương tự như những phần mềm soạn nhạc khác như Encore, Sibelius, ...
+Nhưng không giống như những phần mềm soạn nhạc khác đòi hỏi phí bản quyền sử dụng, Lilpyond hoàn toàn miễn phí
+
+Được hỗ trợ bởi cộng đồng Lilypond trên toàn thế giới, email lilypond-user@gnu.org
+Không giống những tập tin nhạc soạn thảo bởi những phần mềm khác, file .ly soạn thảo bởi Lilypond rất nhẹ, và là tập tin thuần văn bản đơn giản,
+chỉ chứa những ký tự người có thể đọc được và chỉnh sửa dễ dàng.
+
+Phiên bản mới nhất của Lilypond được sử dụng trong bộ CA LÊN ĐI, Lilypond 2.22.1
+
+Ưu điểm của Lilypond:
+- Miễn phí, không cần phí bản quyền
+- Tập tin dung lượng rất nhẹ, dễ chia sẻ và lưu trữ
+- Khả năng tùy chỉnh rất cao, có thể tùy chỉnh gần như tất cả những yếu tố của bản nhạc như ...
+
+Nhược điểm của Lilypond:
+- Khó sử dụng cho người mới bắt đầu, cần thời gian học cách dùng
+- 
+
+Frescobaldi
+
+
+
+===
+double quote
+“”
+
+phien khuc truoc
+<> \tweak extra-offset #'(-5.5 . -2.5) _\markup { \bold "ĐK:" }
+  
+
+diep khuc truoc
+<> \tweak extra-offset #'(-6.5 . -2.5) _\markup { \bold "ĐK:" }
+
+dịch chuyển nốt sáng trái sang phải
+\once \override NoteColumn.force-hshift = #-1.3
+hoặc
+\once \override NoteColumn.X-offset = 1 <>
+ 
+  
+  \markup { \fontsize #1 
+
+  top-margin = 3\mm
+  bottom-margin = 3\mm
+  left-margin = 3\mm
+  right-margin = 3\mm
+  
+  system-system-spacing = #'((basic-distance . 0.1) (padding . 2.5))
+
+  \notBePhu -1
+  
+  \autoPageBreaksOff
+  \pageBreak
+
+===markup with fill line
 \markup {
   \fill-line {
     \column {
@@ -6,6 +62,24 @@
     }
     \hspace #2
     \column \italic {
+    }
+  }
+}
+
+===markup between 2 songs with left align
+\markup {
+  \vspace #2
+  \column {
+    \left-align {
+      \line {
+        \bold "Khi kiệu Thánh Thể"
+      }
+      \line {
+        \normal-text \italic "Hát lại 4 câu trên khi cuộc rước còn tiếp diễn."
+      }
+      \line {
+        \normal-text \italic "Khi linh mục đã đặt Mình Thánh lên bàn thờ, hát câu 5 & 6:"
+      }
     }
   }
 }
@@ -35,11 +109,11 @@ staff group 319-tran-the-vang-khuc-hoan-ca.ly
    "composition."
  }
 
-===tách bè
-Tù sion được dẫn về
-hát lên mừng Chúa
-
 ====
+\numericTimeSignature
+
+system-system-spacing = #'((basic-distance . 0.1) (padding . 3))
+
 <>^\markup { \fontsize #6 \box \bold A }
 <>^\markup { \halign #-2 \fontsize #2 \bold "Tận" }
 \set Staff.explicitClefVisibility = #end-of-line-invisible
@@ -47,6 +121,40 @@ hát lên mừng Chúa
 \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
 \set Staff.printKeyCancellation = ##f
 
+Một nốt chính và hai nốt phụ (nốt hát với từ được đánh dấu)
+  <<
+    {
+      \voiceOne
+      g8
+    }
+    \new Voice = "splitpart" {
+      \voiceTwo
+      \once \override NoteColumn.force-hshift = #-1.6
+      \tweak font-size #-2
+      \parenthesize
+      g16
+      \once \override NoteColumn.force-hshift = #-1.3
+      \tweak font-size #-2
+      \parenthesize
+      g
+    }
+  >>
+
+Một nốt chính và một nốt phụ (nốt hát với từ được đánh dấu)
+  <<
+    {
+      \voiceOne
+      g8
+    }
+    \new Voice = "splitpart" {
+      \voiceTwo
+      \once \override NoteColumn.force-hshift = #-1
+      \parenthesize
+      f8
+    }
+  >>
+
+Tác giả in trên nhiều dòng
   poet = \markup {
     \column {
       \line { "Ý: Lc 22,42. 23,46. Mc 15,14" }
@@ -54,10 +162,13 @@ hát lên mừng Chúa
     }
   }
 
+Dấu nối sau ký hiệu tái đoạn
 c8 \repeatTie
 
+Đặt số cho ô nhạc hiện tại
 \set Score.currentBarNumber = #16
 
+Khuông nhạc phụ bên trên khuông nhạc chính
   <<
     {
       r8 c ^> c4 ~ |
@@ -81,6 +192,7 @@ c8 \repeatTie
       }
     }
   >>
+
 
 \autoPageBreaksOff
 \pageBreak
@@ -181,15 +293,19 @@ layout
     }
   >>
   \oneVoice
-  
+
+Không in các dấu bình khi chuyển tông
 \set Staff.printKeyCancellation = ##f
 
 ^\tweak control-points #'((-2 . 3) (-1 . 3.1) (0 . 3.2) (1 . 2.4)) ( <> )
 
+Dịch chuyển nốt theo chiều ngang cùng với lời
 \once \override NoteColumn.X-offset = 5 <>
 
+Thêm Đánh Dấu
 <>^\markup { \fontsize #6 \box \bold A }
 
+In nghiêng cho lời
 \override Lyrics.LyricText.font-shape = #'italic
 
 #(define afterGraceFraction (cons 1 4))
@@ -245,15 +361,26 @@ raiseLyrics =
     \override LyricText.extra-offset = #'(0 . 8.6)
     \override LyricExtender.extra-offset = #'(0 . 8.6)
     \override LyricHyphen.extra-offset = #'(0 . 8.6)
-	
+    
+
 \once \override NoteColumn.X-offset = 3
-  
+
+Thiết lập khoảng cách tối thiểu giữa 2 từ ở hai bên dấu gạch nối
 \override LyricHyphen.minimum-distance = #2.0
 
+Không in Nhịp ở đầu khuông nhạc
 \override Staff.TimeSignature.transparent = ##t
+
+
 %\override Lyrics.LyricText.font-size = #+2
+
+Thiết lập khoảng cách tối thiểu giữa 2 từ của Lời bài hát
 \override Lyrics.LyricSpace.minimum-distance = #3
+
+Không in số ô nhịp
 \override Score.BarNumber.break-visibility = ##(#f #f #f)
+
+
 \override Score.SpacingSpanner.uniform-stretching = ##t
 %\override Score.SpacingSpanner packed-spacing = ##t
 \set Score.defaultBarType = ""
@@ -456,36 +583,3 @@ git config core.sshCommand "'C:\\Program Files\\Git\\usr\\bin\\ssh.exe' -i C:/Ho
 
 - pdf page size
     pdfinfo song-odd-even.pdf | grep "Page size" | grep -Eo '[-+]?[0-9]*\.?[0-9]+' | awk -v x=0.3528 '{print $1*x}'
-
-============================================
-088 cung cao len
-134 hiệp thông và phục vụ
-138 bên lòng Chúa
-142 tín thác lòng thương xót
-144 hãy xót thương
-145 như Cha trên trời
-162 bờ sông babylon
-216 hôm nay
-247 trong cánh đồng belem 1 (3 bè)
-253 nơi belem
-254 bên máng cỏ
-256-Say-Noel-Kim-Long.pdf                          #2
-270 này con Thiên Chúa
-305 bờ sông babylong (ko tìm đc)
-322 bước theo Thần Khí
-330 giáo xứ của Mẹ
-349 quỳ đây
-352 ca mừng Mẹ vô nhiễm nguyên tội
-356 Mẹ đẹp
-359 Ave Maria
-361 kìa Bà nào
-363 kính chào Đức Mẹ Tàpao
-382 tình yêu Thiên Chúa
-384 từ trước muôn đời
-396 phục vụ trong đức ái
-398 trong Thánh Thần và chân lý
-402 dâng lời cảm tạ
-406 năm mươi năm hồng phúc
-
-
-/d/download/qpdf-10.1.0/bin/qpdf --empty --pages  086-Nen-nhu-be-tho.pdf 090-turangdong-kl.pdf 093-xin-bieu-duong-uy-phong-lm-kim-long.pdf 106-Bai-ca-moi.pdf 107-Tu-Sion-duoc-chua-dan-ve-Thanh-vinh-125.pdf 109-tinhyeumanhliet.pdf 110-Chua-xet-do-con-Thanh-vinh-138.pdf 111-Cứ-dấu-này-Kim-Long-MPS.pdf 112-Hat-len-mung-Chua-hop-xuong.pdf 113-Tu-vuc-sau-Kim-Long.pdf 113-Xin-Chua-la-ngon-duoc-thieng-thanh-vinh-17.pdf 115-Loi-ca-vien-khach.pdf 117-Khuc-nhac-toi-ca.pdf 119-di-tim-nguoi-yeu.pdf 120-TimNguoi.pdf 126-Vi-con-la-cua-Chua.pdf 129-huongveChua.pdf 132-Khiêm-nhường-phục-vụ-Linh-mục-Kim-Long-TH.pdf 136-xin-theo-thay-kim-long.pdf 140-connayselaygi.pdf 149-neuchuakhongxaynha_kl.pdf 151-ngayve3_kl.pdf 154-XIn-gieo-suong-mai-hop-xuong.pdf "156-MongChuaDen(Tv114)_kl.pdf" 158-Hoa-binh-vien-man.pdf 163-Ngoi-tua-dong-song-Thanh-vinh-36.pdf -- in20210903.pdf

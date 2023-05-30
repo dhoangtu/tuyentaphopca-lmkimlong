@@ -885,7 +885,7 @@ loiPhienKhucBas = \lyrics {
   Ngài đã thương thăm viếng,
   Qua việc này Ngài đã làm cho tôi,
   Ngài đã làm cho tôi hết khổ nhục,
-  hết khổ nhục trước mặt muôn người.
+  hết khổ nhục ở mặt muôn người.
   Ngài đã
   người.
 }
