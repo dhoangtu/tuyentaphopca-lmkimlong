@@ -108,7 +108,7 @@ loiPhienKhucHai = \lyricmode {
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Như những người lính tuần hàng
+  Như những người lính tuần hành
   Đợi trông hừng đông mau sáng lên.
   Đây dân Chúa miệt mài đợi trông
   Ân thiêng giải thoát tội tình.
