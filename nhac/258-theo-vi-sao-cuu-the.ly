@@ -373,7 +373,7 @@ nhacPhienKhucBasMot = \relative c {
   % Kết thúc solo, bè Bas trở lại dòng 4
   \set Staff.shortInstrumentName = "B"
   af'8. af16 af8 g |
-  f4. \slashedGrace { d16 ( } c8) |
+  f4. \slashedGrace { df16 ( } c8) |
   f f4 g8 |
   \slashedGrace { bf,16 ( } c2 ~ ) |
   % chỉ cần hiển thị 1 lần, ẩn đi từ đây
