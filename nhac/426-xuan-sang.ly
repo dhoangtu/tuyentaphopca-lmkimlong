@@ -218,14 +218,14 @@ nhacPhienKhucBas = \relative c' {
 
 % Lời
 loiPhienKhucSop = \lyricmode {
-  Suốt một dòng thơ Kinh sầu ngân viễn xứ,
+  Suốt một giòng thơ Kinh sầu ngân viễn xứ,
   Khóc đôi bờ tư lự,
-  Dòng nước tìm về đâu
+  Giòng nước tím về đâu
   
   Xuân Sang Xuân sang,
   Lòng đất lên hương
   Bóng thời gian chuyển độ đường trăng sao,
-  chín dòng tâm sự xôn xao
+  chín giòng tâm sự xôn xao
   Ô xôn xao tâm sự,
   Hồn thơ xuân đến cũng nao nao buồn.
   Thắp nến lên cho nhạc thơ sầu vạn thuở

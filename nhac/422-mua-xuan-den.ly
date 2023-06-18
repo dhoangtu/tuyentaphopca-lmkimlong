@@ -283,7 +283,17 @@ loiDiepKhucAlto = \lyricmode {
 
 loiDiepKhucBas = \lyricmode {
   Mẹ ơi Mùa xuân đến nhộn nhịp cả mười phường,
-  Thắp lên hai hàng nến con xin Mẹ ghé tình thương.
+  Thắp lên hai hàng
+  <<
+  { nến }
+  \new Lyrics {
+	  \set associatedVoice = "beBas"
+	  \override Lyrics.LyricText.font-shape = #'italic
+	  đèn
+	}
+  >>
+  
+  con xin Mẹ ghé tình thương.
   
   \set stanza = "1."
   Xuân về trên đại lộ,
