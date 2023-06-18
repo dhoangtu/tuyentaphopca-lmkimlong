@@ -112,7 +112,7 @@ nhacDiepKhucAlto = \relative c' {
   d4 r |
   r8 d g g |
   e2 |
-  e4 f8 e |
+  e4. e8 |
   d4. d8 |
   c a4 c8 |
   \slashedGrace { c16 (d } c4) r8
@@ -198,7 +198,7 @@ loiDiepKhucSop = \lyricmode {
 
 loiDiepKhucAlto = \lyricmode {
   Hãy hát lên, hát bài ca hùng vĩ.
-  Hạt giống thối rồi gieo ánh nắng vàng
+  Hạt giống thối rồi gieo nắng vàng
   trên mọi đường thiên lý.
   
   Con kính chào rất phong nhiêu,

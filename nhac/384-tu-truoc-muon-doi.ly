@@ -210,7 +210,7 @@ nhacDiepKhucTenor = \relative c' {
   d2 ~ |
   d4 r |
   r g,8 g16 g |
-  c2 |
+  c4 r |
   r8 c d e |
   e4. d8 |
   d g, b16 (c) b8 |
@@ -231,7 +231,7 @@ nhacDiepKhucBas = \relative c' {
   d2 ~ |
   d8 d g g16 g |
   fs4 (e) |
-  a2 |
+  a4 r |
   r8 g a b |
   c4. fs,8 |
   g d g16 (a) g8 |

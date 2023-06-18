@@ -233,7 +233,7 @@ loiPhienKhucBasMot = \lyricmode {
   
   Hai mươi lăm năm Linh Mục, Chúa vẫn dìu dắt con
   rộng ban đầy dư ân lộc
-  Nay con nguyện dâng lên Ngài hiến lễ chính đời con
+  Nay con nguyện dâng lên Ngài hiến lễ chính với con
   và niềm cảm mến, Chúa ơi!
 }
 

@@ -10,7 +10,7 @@
 
 % Nhạc
 nhacDiepKhucSop = \relative c'' {
-  \partial 4. r4. |
+  \partial 4. r8 r4 |
   r8 bf bf bf |
   a4. d8 |
   g,4 r8 g |
@@ -54,7 +54,7 @@ nhacDiepKhucBas = \relative c' {
   g4 r8 a |
   fs fs g r |
   r4 r8 a |
-  fs fs a4 |
+  fs fs a8 r |
   r4 r8 d, |
   f g ~ g4 |
   r r8 c, |

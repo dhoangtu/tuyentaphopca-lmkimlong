@@ -311,7 +311,7 @@ loiPhienKhucTenor = \lyricmode {
   như trăng sáng chiếu soi (là) nơi nơi
   Uy danh Mẹ vẫn, vẫn muôn đời tôn cao,
   mầu nhiệm (là) làm sao
-  biết đâu tôn vinh.
+  biết đây tôn vinh.
   Lặng nhìn phút giây
   nghẹn lời chẳng nói
   ân tình đầy vơi.

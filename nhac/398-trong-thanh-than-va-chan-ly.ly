@@ -123,7 +123,7 @@ nhacDiepKhucBas = \relative c' {
   <b g>2 ~ |
   <b g>4 r |
   
-  g8 g4 e8 |
+  g8 g g e |
   d4. c8 |
   d b4 g8 |
   g4. g16 g |
@@ -194,7 +194,7 @@ loiDiepKhucBas = \lyricmode {
   <<
     {
       \set stanza = "1."
-      Năm mươi Linh mục bao buồn vui đưa tới,
+      Năm mươi năm Linh mục bao buồn vui đưa tới,
       Ân thiêng Chúa vẫn dắt dìu con,
       Tin cậy mến luôn vuông tròn.
       Trong Thánh Thần và Chân Lý
@@ -202,7 +202,7 @@ loiDiepKhucBas = \lyricmode {
     }
     \new Lyrics {
       \set stanza = "2."
-      Năm mươi Linh mục, chan hòa muôn ân phúc,
+      Năm mươi năm Linh mục, chan hòa muôn ân phúc,
       Con mong chiếu ánh sáng mọi nơi,
       mong làm muối men cho đời.
       Trong Thánh Thần và Chân Lý
@@ -210,7 +210,7 @@ loiDiepKhucBas = \lyricmode {
     }
     \new Lyrics {
       \set stanza = "3."
-      Năm mươi Linh mục, ân tình luôn thôi thúc,
+      Năm mươi năm Linh mục, ân tình luôn thôi thúc,
       Con theo Chúa dẫn dắt đoàn chiên,
       ân cần thiết tha nhân hiền.
       Trong Thánh Thần và Chân Lý,
