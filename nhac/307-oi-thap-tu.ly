@@ -269,7 +269,7 @@ loiDiepKhucBas = \lyricmode {
   dẫu thủ lãnh thế gian mặc thủ lãnh thế gian chẳng được thì
   cũng chẳng được phần ích gì.
   Giê -- su hỡi con quỳ ca hòa và Thánh Thần, Thánh Phụ cao tôn
-  Giúp con tranh đấu chẳng sờn theo cờ thập tự thiên môn khải hoàn.
+  Phù con tranh đấu chẳng sờn theo cờ thập tự thiên môn khải hoàn.
 }
 
 % Dàn trang

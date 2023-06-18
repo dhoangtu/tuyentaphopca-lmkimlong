@@ -100,7 +100,7 @@ nhacPhienKhucBas = \relative c' {
   bf'4 r8 a |
   bf bf a g |
   f4 d8 f |
-  r4
+  e4
 }
 
 % Lời
@@ -180,7 +180,7 @@ loiPhienKhucBasBa = \lyricmode {
   Theo lối đường Thần Khí
   là biết chấp nhận thập giá,
   đam mê thắng vượt,
-  xin vì quên thân.
+  xin vì quên thân mình.
 }
 
 
