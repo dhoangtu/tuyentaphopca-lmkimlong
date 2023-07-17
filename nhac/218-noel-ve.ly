@@ -220,7 +220,7 @@ nhacPhienKhucAlto = \relative c' {
   d4 d8 d |
   c g' g4 |
   fs2 ~ |
-  fs!8 fs g g |
+  fs8 fs g g |
   f4 e8 (d) |
   d4 r8 c' \bar ":|."
   b4. a16 a |

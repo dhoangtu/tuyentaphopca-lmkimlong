@@ -253,7 +253,7 @@ nhacPhienKhucBas = \relative c {
   g4 \tuplet 3/2 { f8 e d } |
   c2 |
   c4 df8 df ~ |
-  df! bf bf4 ~ |
+  df bf bf4 ~ |
   bf bf |
   bf8 c f r |
   e8. e16 g8 g ~ |

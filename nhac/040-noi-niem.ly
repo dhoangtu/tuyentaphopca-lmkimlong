@@ -775,10 +775,10 @@ notBePhu =
       \new Lyrics \lyricsto beAlto \loiPhienKhucAlto
     >>
     \new Staff <<
-      \new Voice = "beBas" {
-        \clef bass \TongNhip \nhacPhienKhucBas
+      \new Voice = "beTenor" {
+        \clef "violin_8" \TongNhip \nhacPhienKhucBas
       }
-      \new Lyrics \lyricsto beBas \loiPhienKhucBas
+      \new Lyrics \lyricsto beTenor \loiPhienKhucBas
     >>
   >>
   \layout {

@@ -63,7 +63,7 @@ nhacDiepKhucAlto = \relative c'' {
   b2
 }
 
-nhacDiepKhucTenor = \relative c {
+nhacDiepKhucTenor = \relative c'' {
   R2*3
   r8 d bf a |
   g r8 r4 |
@@ -92,7 +92,7 @@ nhacDiepKhucTenor = \relative c {
   <g g,>2
 }
 
-nhacDiepKhucBas = \relative c {
+nhacDiepKhucBas = \relative c'' {
   R2*3
   r8 bf g fs |
   g r r4 |
@@ -230,7 +230,7 @@ notBePhu =
         printPartCombineTexts = ##f
       }
       <<
-        \clef bass
+        \clef treble
         \new Voice \TongNhip \partCombine 
           \nhacDiepKhucTenor
           \nhacDiepKhucBas
