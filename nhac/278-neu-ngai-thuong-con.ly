@@ -157,7 +157,7 @@ nhacPhienKhucTenor = \relative c' {
   a! d4) c8 bf d c4 |
   c8( g') d4( d8) ef16( d) c8 ef |
   a,!4 bf8 c d2 |
-  r4 d8 g f ef8. d16 c8 |
+  r8 d8 [g f] e!8. d16 c4 |
   r2 r4 r8 bf8 |
   ef4. ef8 d4.( ef16 d |
   c4.) c8 bf bf a!( g) |

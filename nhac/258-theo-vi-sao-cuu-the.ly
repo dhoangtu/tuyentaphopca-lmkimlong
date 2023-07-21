@@ -207,7 +207,7 @@ nhacPhienKhucAltoMot = \relative c' {
   <c f,>4
 }
 
-nhacPhienKhucTenorMot = \relative c {
+nhacPhienKhucTenorMot = \relative c' {
   \override Staff.TimeSignature.break-visibility = #end-of-line-invisible
   \set Staff.printKeyCancellation = ##f
   \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
@@ -585,7 +585,7 @@ notBePhu =
       \new Lyrics \lyricsto beAlto \loiPhienKhucAltoMot
     >>
     \new Staff <<
-      \new Voice = "beTenor" { \clef "violin_8" \TongNhip \nhacPhienKhucTenorMot }
+      \new Voice = "beTenor" { \clef treble \TongNhip \nhacPhienKhucTenorMot }
       \new Lyrics \lyricsto beTenor \loiPhienKhucTenorMot
     >>
     \new Staff <<

@@ -81,7 +81,7 @@ nhacDiepKhucSop = \relative c'' {
       g4 r8 g |
     }
     {
-      g2 \bar "|."
+      g4. r8 \bar "|."
     }
   }
 }
@@ -143,7 +143,7 @@ nhacDiepKhucAlto = \relative c'' {
   d c |
   b2 ~ |
   b4 r |
-  b2
+  b4. r8
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -235,7 +235,7 @@ nhacDiepKhucBas = \relative c' {
   <fs d>4. <fs d>8 |
   <g d g,>2 ~ |
   <g d g,>4 r8 g |
-  <g d g,>2
+  <g d g,>4. r8
 }
 
 % Lời
