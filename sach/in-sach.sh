@@ -8,8 +8,8 @@ lilypondcmd='lilypond.exe'
 export PATH=$PATH:/d/download/qpdf-10.1.0/bin:'/c/Program Files (x86)/LilyPond-2.22.1/usr/bin'
 
 GEN=../nhac
-rm -rf ${GEN}
-mkdir ${GEN}
+#rm -rf ${GEN}
+#mkdir ${GEN}
 
 CONTENT=./content-table.csv
 rm ${CONTENT}
