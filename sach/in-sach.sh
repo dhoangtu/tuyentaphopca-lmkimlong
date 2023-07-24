@@ -2,12 +2,12 @@
 
 set -x
 
-FOLDERS="/d/01.lilypond/01.github/tuyentaphopca-lmkimlong/test"
+FOLDERS="/d/01.lilypond/01.github/tuyentaphopca-lmkimlong/nhac/"
 lilypondcmd='lilypond.exe'
 
 export PATH=$PATH:/d/download/qpdf-10.1.0/bin:'/c/Program Files (x86)/LilyPond-2.22.1/usr/bin'
 
-GEN=./pdf-generated
+GEN=../nhac
 rm -rf ${GEN}
 mkdir ${GEN}
 
@@ -52,4 +52,4 @@ pdflatex so-trang-chan-le.tex
 
 qpdf --empty --pages  bia-truoc.pdf loi-ngo.pdf blank-a4.pdf so-trang-chan-le.pdf bia-sau-trong.pdf -- tuyentaphopca-lmkimlong.pdf
 
-rm -rf ${GEN} so-trang-chan-le.pdf nhac.pdf *.aux *.log
+#rm -rf ${GEN} so-trang-chan-le.pdf nhac.pdf *.aux *.log

@@ -77,9 +77,11 @@ nhacDiepKhucTenor = \relative c'' {
   
   \set Staff.printKeyCancellation = ##f
   \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
+  \set Staff.explicitClefVisibility = #end-of-line-invisible
   \key g \major
+  \clef bass
   R2
-  d''8. d16 d,8 d |
+  d8. d16 d,8 d |
   g4. g8 |
   a8. a16 a8 g |
   fs fs g g |
@@ -149,8 +151,8 @@ loiPhienKhucBasMot = \lyricmode {
   Đất với trời hợp duyên
   nhân trần nên xa hút rồi ngày tháng điêu linh
   hãy ca lên này
-  Hãy cất lời hòa ca lên
-  thiên thần xin ca tụng ngàn đời Chúa hiển vinh.
+  Hãy cất lời hòa lên
+  thiên thần khấn xin ca tụng ngàn đời Chúa hiển vinh.
 }
 
 loiPhienKhucBasHai = \lyricmode {
