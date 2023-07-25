@@ -14,9 +14,8 @@ GEN=../nhac
 CONTENT=./content-table.csv
 rm ${CONTENT}
 
-# create a list of folders to scan for .ly files
 IFS=' '
-# scan .ly files
+# scan .ly files in folder, generate PDF and build file list
 pagecounter=1
 filelist=()
 for fullname in ${FOLDERS}/*.ly
