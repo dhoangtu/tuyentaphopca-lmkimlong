@@ -31,7 +31,7 @@ do
     #echo "title: ${title}"
 
     # generate pdf files
-    ${lilypondcmd} --output="${GEN}/${shortname}" -dno-point-and-click --pdf "$fullname"
+    #${lilypondcmd} --output="${GEN}/${shortname}" -dno-point-and-click --pdf "$fullname"
     
     #page counter
     echo "${title};${pagecounter}" >> ${CONTENT}
@@ -49,6 +49,7 @@ qpdf --empty --pages "${filelist[@]}" -- nhac.pdf
 
 pdflatex so-trang-chan-le.tex
 
-qpdf --empty --pages  bia-truoc.pdf loi-ngo.pdf blank-a4.pdf so-trang-chan-le.pdf bia-sau-trong.pdf -- tuyentaphopca-lmkimlong.pdf
+qpdf --empty --pages  bia-truoc.pdf loi-ngo.pdf blank-a4.pdf so-trang-chan-le.pdf blank-a4.pdf muc-luc.pdf bia-sau-trong.pdf bia-sau.pdf -- tuyentaphopca-lmkimlong.pdf
 
-#rm -rf ${GEN} so-trang-chan-le.pdf nhac.pdf *.aux *.log
+#rm -rf ${GEN}
+rm -rf so-trang-chan-le.pdf nhac.pdf *.aux *.log
